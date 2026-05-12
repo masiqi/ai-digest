@@ -423,6 +423,125 @@
   </div>
 </div>
 
+<div class="topic">
+  <div class="topic-title">📌 Codex OpenAI Developers 插件：从密钥到上线的闭环</div>
+  <div class="section"><div class="section-label event">事件</div><p>Codex发布OpenAI Developers插件，包含1个App（OpenAI Platform）和5个Skill（API Key Setup、API Troubleshooting、Agents SDK、Build ChatGPT App、ChatGPT App Submission），让Codex能在一个会话里完成「拿到密钥→写应用/Agent→排查API错误→准备ChatGPT Apps提审」的完整闭环。@shao__meng做了详细解读。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个插件的价值不在于某个单独的Skill，而在于把分散在OpenAI平台上的多条开发链路打包进了一个统一的Agent工作流。之前开发者需要在不同页面之间来回切换——Dashboard生成API Key、文档查SDK用法、社区搜报错方案——现在全部在Codex一个会话里完成。三个核心动词：build（直接产出可运行应用）、create（生成API Key并配线）、diagnose（错误码→含义→该改哪行代码）。这本质上是把OpenAI平台变成了Codex的"后端服务"，进一步强化了Codex作为AI编程操作系统而非单纯代码工具的定位。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速原型开发：从零开始在Codex里创建API Key→用Agents SDK写一个多Agent应用→排查调试→直接提交ChatGPT Apps审核，全程不离开Codex界面</li>
+    <li>API错误诊断：遇到API报错时，Codex直接读取错误码，给出含义解释和修复建议，不用再去社区搜索</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对开发者，大幅降低了OpenAI生态的入门门槛——新手不用搞清楚Dashboard在哪、SDK怎么装；对OpenAI，通过Codex把开发者更深地绑定在自己的生态里，形成"用Codex→用OpenAI API→用ChatGPT Apps"的正循环。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2054000315612147766" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIFFMFEbAAAntVe?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIFFMFEbAAAntVe?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIEDgFqawAA5hUJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIEDgFqawAA5hUJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Cursor集成Microsoft Teams：AI编程工具的企业化渗透</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cursor正式支持Microsoft Teams集成，此前已有Slack和Linear集成。@shao__meng推荐在用微软产品体系的公司使用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Cursor集成Teams的意义不只是"多了一个通知渠道"，而是AI编程工具正在深入企业协作流程。Teams集成意味着：代码审查通知、PR更新、CI/CD状态可以直达企业沟通工具，团队成员在聊天的上下文中就能了解项目进展。Cursor之前已有Slack和Linear，加上Teams基本覆盖了主流企业协作工具链。这反映出AI编程工具的竞争已从"模型能力"扩展到"企业集成深度"——谁能更好地嵌入企业现有工作流，谁就更容易被采购。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>企业团队协作：PR审查通知直接发到Teams频道，团队成员在聊天中讨论代码变更，不需要打开GitHub/GitLab再切回Teams</li>
+    <li>CI/CD监控：构建失败自动通知Teams，指定负责人直接从通知进入Cursor查看和修复</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI编程工具正在从个人开发者工具变成团队/企业工具。Cursor的集成策略比Claude Code更激进——后者目前仍是CLI工具，企业集成路径更长。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2053998536711405978" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIFEJo3aIAARqTS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIFEJo3aIAARqTS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2053938897919631360/img/RK98i3JqKv0HMU0k?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2053938897919631360/img/RK98i3JqKv0HMU0k?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Claude Platform on AWS：两条并行的Claude产品线</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Platform on AWS正式上线，与已有的Claude on Amazon Bedrock并行存在。两者并非升级关系，而是两条不同定位的产品线：Claude Platform by Anthropic（数据离开AWS边界，Anthropic运营，功能与原生Claude API完全对齐）vs Claude on Bedrock（数据保持在AWS边界内，AWS运营）。@shao__meng做了对比分析。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个双产品线策略很聪明——满足了两种不同需求的客户。注重功能完整度和最新特性的选Anthropic直营；注重数据主权和合规的选AWS托管。数据是否离开AWS边界是企业采购的硬性门槛，尤其在金融、医疗、政府等强监管行业。Anthropic通过这种策略既最大化了覆盖面，又不会因为数据合规问题丢失大客户。值得注意的信号：Claude Platform的"功能完全对齐"意味着Anthropic在用自己的基础设施做交付，不再完全依赖云厂商。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>强监管行业（金融/医疗）：选Claude on Bedrock，数据不出AWS边界，满足合规审计要求</li>
+    <li>追求最新功能的开发者：选Claude Platform by Anthropic，第一时间获取新模型和新功能，不受AWS发布节奏限制</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这种双轨制模式可能成为AI模型厂商的标准做法——既借力云厂商的销售渠道，又保留直营的灵活性。对AWS来说也利好，两种Claude产品都运行在AWS基础设施上。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2053994211117269280" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIFAxCTacAAAfun?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIFAxCTacAAAfun?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIDIVDAXoAAjPvW?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIDIVDAXoAAjPvW?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 OpenAI DeployCo：从模型供应商走向企业落地服务商</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI成立"部署公司"（DeployCo），初期配备150名"前线部署工程师"（Forward Deployed Engineers），深入客户团队内部协助重新设计工作流程并构建安全的AI系统。还包括收购英国公司Tomoro（150名专家，曾服务Tesco和Virgin Atlantic）。@shao industry解读指出这是OpenAI学智谱加大B2B业务的信号。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>OpenAI从"卖API"走向"卖解决方案"的标志性一步。150名前线部署工程师的模式直接借鉴了Palantir——派团队驻场，帮企业从头到尾改造工作流。这说明单纯的API/模型服务已经无法满足企业需求，客户需要的是"谁来帮我把AI用起来"。B2C的钱确实不好挣（大家都只想白嫖），B2B的合同金额大、续约率高、护城河深。@seclink指出过往成功案例包括BBVA用AI赋能12万员工、John Deere帮农民削减70%化学品使用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>大型企业AI转型：DeployCo团队进驻，从流程诊断到AI系统搭建到员工培训，端到端服务，企业不需要自己养AI团队</li>
+    <li>传统行业AI落地：如制造业、零售业，DeployCo工程师理解行业痛点后定制AI方案</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对AI创业公司，OpenAI亲自下场做企业服务会挤压垂直AI服务商的生存空间；对OpenAI，这是从"模型公司"转型为"AI服务公司"的关键一步，收入结构将更加多元化。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2053838874582085992" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2054030826254340549" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Google SEO FAQ下线：AI Overview直接替代搜索结果</div>
+  <div class="section"><div class="section-label event">事件</div><p>@CoderJeffLee发现Google的SEO SERP FAQ搜索结果已经下线，因为AI Overview直接在搜索结果页面上包含了这些答案，不再需要了。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一个标志性事件——Google自己的AI功能正在替代传统搜索结果页面元素。FAQ rich snippet曾经是SEO优化的重要手段，现在被AI Overview取代。这意味着SEO行业的规则正在被重写：不再是如何让你的FAQ出现在搜索结果中，而是如何让你的内容成为AI Overview的信息源。对内容创作者和SEO从业者影响直接。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>SEO策略转型：从优化FAQ markup转向优化内容的结构化和权威性，让AI更可能引用你的内容</li>
+    <li>内容策略调整：不再投入资源做FAQ页面优化，转而确保核心内容被AI正确理解和引用</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>传统SEO行业的又一次重大洗牌，AI搜索正在系统性地改变信息获取的方式。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2054106044931125496" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIGmOhyaIAAVhcT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIGmOhyaIAAVhcT?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 @dotey：AI创业的残酷真相</div>
+  <div class="section"><div class="section-label event">事件</div><p>@dotey发推说"一般赚钱的不发推，闷声发大财才是最优解；赔钱的也不发推，丢人；发的可能是卖课的卖流量的"。结合@fankaishuoai的观点"AI打开了能力天花板，但天花板打开不等于收入天花板也跟着打开"。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>两条推文放在一起看特别有意思——@dotey揭示了AI信息圈的信息不对称问题（发声的可能不是最成功的），@fankaishuoai则指出真正的差异不在能力而在切入点。同样会搭Claude智能体的两个人，一个在上海对标几十家竞争者，一个在成都给传统贸易公司解决真实痛点，收入差一个数量级。这对所有想靠AI赚钱的人都是清醒剂。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>AI创业者选择赛道：不要去竞争最热的方向（上海AI智能体），去找传统行业的真实痛点（成都贸易公司），竞争少、付费意愿强</li>
+    <li>信息消费者保持清醒：Twitter上看到的大V分享不一定是最佳实践，真正赚钱的人可能根本不在社交媒体上发声</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对AI社区的信息消费习惯有警示意义——要区分"知识分享"和"流量变现"的边界。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2053987620732944869" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2054055758443201010" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
 <div class="opportunities">
   <h2>⚡ 新机会</h2>
   <ul class="opp-list">
