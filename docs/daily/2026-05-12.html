@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>📡 AI 资讯日报 | 2026-05-12</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 15px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 15px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 20px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 14.5px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 14px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 11px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 12px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 14px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-12</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>AI从"单工具"向"多Agent调度"全面跃迁。无论是Claude Code的Agent View、Codex的插件生态野心、还是Thinking Machines的原生交互模型，都在指向同一个方向：AI不再是"你问我答"的单线程工具，而是多Agent并行、人机实时协作、能力可插拔扩展的操作系统级平台。同时，安全（Daybreak）和端侧（MiniCPM-V 4.6）两条暗线正在从"能力竞赛"转向"治理与落地"。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">📌 Claude Code Agent View：多Agent调度面板</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Code发布Agent View功能，将散落在多个终端标签页的Agent会话收拢到统一管理界面，支持状态总览、内联回复、后台化运行。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是简单的UI优化，而是CLI工具从"单会话REPL"向"多Agent调度中心"的范式跳变。Agent View解决的核心问题不是"能不能多开"，而是"能不能管住"。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>大型重构任务拆分：一个Agent改后端API，一个Agent同步前端调用，一个Agent跑测试</li>
+    <li>PR Babysitter模式：提交PR后启动一个后台Agent持续监控CI反馈</li>
+    <li>多仓库联调：微服务架构下同时派Agent到5个仓库做兼容性修改</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开发者端，CLI派AI工具首次在多任务管理上追平甚至超越GUI IDE。长期趋势。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2054024888567070925" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2054005092190462394" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2053986292481056790" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 OpenAI Daybreak：AI安全从政策问题变产品问题</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI发布Daybreak——面向网络安全的整体战略与产品矩阵，包含三层访问体系，搭配Codex Security agent和安全生态飞轮。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是AI安全领域最关键的路线分叉时刻。Anthropic选择"默认锁死"，OpenAI选择"分层释放+身份即权限"。Daybreak把dual-use的伦理问题转化为"verified access + 收数据"的商业飞轮。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>安全待办清偿：帮团队清理积压6个月的CVE和安全债务</li>
+    <li>开源维护者减负：给维护者免费安全扫描+API额度</li>
+    <li>合规驱动的安全审计：金融/医疗企业用TAC层级模型做安全代码审查</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI+安全赛道从"研究课题"变成"可卖产品"。OpenAI和Anthropic的安全哲学分歧将在未来三年AI政策辩论中反复出现。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2054000468804927680" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2053997193565192644" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2054030826254340549" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Thinking Machines交互模型：把"交互"训练进模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>前OpenAI CTO Mira的Thinking Machines发布"交互模型"——原生多模态、持续在线、可实时打断的统一模型，前台200ms节拍交互+后台推理模型处理重度任务。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是今天最具架构创新的消息。交互本身就是一种能力，应该训练进模型参数。前台200ms+后台推理的双层架构，本质上是在模型层面实现"系统1快思考/系统2慢思考"的分工。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>实时协作编程：你边写代码边跟AI讨论，AI看着屏幕实时建议，随时打断</li>
+    <li>客户服务：AI客服能实时感知客户语气变化和犹豫，主动调整话术</li>
+    <li>手术/检修辅助：技术人员手上有活，AI通过视频持续理解场景并实时指导</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果交互模型路线跑通，当前所有"语音+推理+TTS"串联架构的AI产品都将面临架构级淘汰。长期趋势，距大规模商用还需1-2年。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2054023602874491326" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Codex插件生态：Agent版App Store</div>
+  <div class="section"><div class="section-label event">事件</div><p>宝玉长文分析Codex方向——从三栏布局收敛到Skill商业化困境，最终指向Agent插件市场。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>核心矛盾是Agent能生成但用户无法在Agent内完成二次编辑。插件机制是唯一可扩展的解法。更关键的是插件能解决Skill无法商业化的死结。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>垂直编辑器插件：设计插件让Codex直接编辑Figma，写作插件做Markdown精细排版</li>
+    <li>Skill开发者变现：通过插件市场收费而非靠GitHub Star精神激励</li>
+    <li>企业内部插件：把审批流、CRM、部署系统封装成Codex插件</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>谁先跑通Agent插件生态谁就锁定开发者心智，窗口期3-6个月。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2053940091970580736" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 豆包RAG被黑灰产攻陷：AI搜索可信度危机</div>
+  <div class="section"><div class="section-label event">事件</div><p>黑灰产通过GEO操纵豆包搜索结果——在媒体发文章将非法公司与权威机构并列，让AI把骗子公司输出为可信机构。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是传统SEO，是专门针对AI RAG的攻击范式。传统SEO骗排名，GEO骗AI的"事实判断"。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>AI搜索需要增加溯源验证层：对RAG返回的关键事实做交叉验证</li>
+    <li>金融/医疗AI产品需要独立知识库：不能依赖开放网络RAG</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI搜索结果可信度正在被系统性侵蚀。可能催生AI事实核查工具新赛道。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2054035841073164333" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2054036663567786489" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 MiniCPM-V 4.6：1.3B端侧多模态突破</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenBMB发布1.3B多模态模型，视觉编码成本砍55%，超越Gemma4-E2B和Qwen3.5-0.8B，全平台部署开源。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>端侧AI的核心瓶颈从来不是"能不能跑"而是"跑起来够不够快、够不够省"。1.3B模型在RTX 4090上首token 75.7ms。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>手机端实时视觉理解：拍照即识别/翻译，全离线</li>
+    <li>工业质检：产线边缘设备实时检测缺陷</li>
+    <li>无障碍辅助：视障用户手机端实时场景描述</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>端侧多模态可能比云端大模型更快触达普通用户。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2054003492835201218" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 AI超算成为可出租重资产</div>
+  <div class="section"><div class="section-label event">事件</div><p>SpaceX将Colossus 1（约20万颗GPU，300兆瓦）整体租给Anthropic。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>上一代GPU集群正在进入"闲置资产找出租"的阶段。GPU折旧速度远快于房产，18-24个月就可能算力过时。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>AI创业公司可以通过租赁获取算力，降低创业门槛</li>
+    <li>GPU持有方需要最大化利用率</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI基础设施从"军备竞赛"走向"资产运营"的早期信号。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2054004656297460094" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Google Veo 4：视频生成进入"全能参考"时代</div>
+  <div class="section"><div class="section-label event">事件</div><p>谷歌即将发布Veo 4，支持类似Seedance 2.0的全能参考——对视频进行修改参考和内容替换。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>视频生成模型竞争焦点从"能不能生成"转向"能不能精准控制"。全能参考意味着视频生成从"一次性出片"走向"可迭代修改"。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>广告迭代：生成一条品牌广告后只替换产品镜头或slogan文字</li>
+    <li>教育培训视频：同一个教学动画模板替换不同语言的字幕</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>视频生成赛道从"够不够逼真"进入"够不够可控"的新阶段。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2054030953039921548" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>⚡ 新机会</h2>
+  <ul class="opp-list">
+    <li>Agent插件市场先发者：在Codex/Cursor生态起步期做垂直编辑器插件，拿冷启动红利</li>
+    <li>AI事实核查/溯源工具：针对GEO攻击做搜索结果交叉验证，金融医疗刚需</li>
+    <li>端侧多模态应用：基于1-2B级模型做离线视觉理解应用，2C空间大</li>
+    <li>GPU资产运营：上一代GPU集群闲置算力整合转租</li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>交互模型路线：Thinking Machines如果被验证，将颠覆当前所有Agent串联架构</li>
+    <li>Agent插件生态竞赛：Codex vs Cursor谁先跑通收费插件市场</li>
+    <li>AI搜索可信度：GEO攻击会指数级增长，防御方案是确定性需求</li>
+    <li>端侧模型+统一内存：Apple设备+小模型今年可能催生"手机原生AI应用"</li>
+    <li>AI安全产品化：Daybreak把安全从研究话题变成产品品类</li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

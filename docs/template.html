@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>📡 AI 资讯日报 | {{DATE}}</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text2: #8b949e;
+    --accent: #58a6ff;
+    --accent2: #f78166;
+    --green: #3fb950;
+    --purple: #bc8cff;
+    --yellow: #d29922;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 0 30px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .header .date {
+    font-size: 15px;
+    color: var(--text2);
+  }
+  .header .main-thesis {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1));
+    border: 1px solid rgba(88,166,255,0.2);
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.8;
+  }
+  .header .main-thesis .label {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  /* Topic Card */
+  .topic {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .topic-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .topic-title .emoji { font-size: 22px; }
+
+  .section { margin-bottom: 14px; }
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+
+  .section p {
+    font-size: 14.5px;
+    color: var(--text);
+    line-height: 1.8;
+  }
+
+  .usecase-list {
+    list-style: none;
+    padding: 0;
+  }
+  .usecase-list li {
+    font-size: 14px;
+    padding: 6px 0 6px 20px;
+    position: relative;
+    line-height: 1.7;
+  }
+  .usecase-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: bold;
+  }
+
+  /* Source tweets */
+  .sources {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .sources .label {
+    font-size: 11px;
+    color: var(--text2);
+    margin-bottom: 4px;
+  }
+  .source-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    background: rgba(88,166,255,0.08);
+    border: 1px solid rgba(88,166,255,0.15);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--accent);
+    transition: background 0.2s;
+  }
+  .source-link:hover {
+    background: rgba(88,166,255,0.18);
+    text-decoration: none;
+  }
+  .source-link .handle { font-weight: 600; }
+
+  /* Images */
+  .tweet-images {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .tweet-images img {
+    max-height: 180px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+
+  /* Opportunities & Watch */
+  .opportunities, .watchlist {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .opportunities h2, .watchlist h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .opp-list, .watch-list {
+    list-style: none;
+    padding: 0;
+  }
+  .opp-list li, .watch-list li {
+    font-size: 14px;
+    padding: 8px 0 8px 16px;
+    position: relative;
+    line-height: 1.7;
+    border-bottom: 1px solid rgba(48,54,61,0.5);
+  }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .opp-list li::before {
+    content: "⚡";
+    position: absolute;
+    left: -2px;
+  }
+  .watch-list li::before {
+    content: "🎯";
+    position: absolute;
+    left: -2px;
+  }
+
+  /* Navigation */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+  .nav .brand {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .nav .brand a { color: var(--text); }
+
+  /* Footer */
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 12px;
+    color: var(--text2);
+  }
+
+  /* Index page */
+  .day-list { list-style: none; padding: 0; }
+  .day-list li {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: var(--card);
+    transition: border-color 0.2s;
+  }
+  .day-list li:hover { border-color: var(--accent); }
+  .day-list a { font-size: 16px; font-weight: 600; }
+  .day-list .summary { font-size: 13px; color: var(--text2); margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="brand"><a href="index.html">📡 AI 资讯日报</a></div>
+</div>
+
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">{{DATE}}</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    {{MAIN_THESIS}}
+  </div>
+</div>
+
+{{TOPICS}}
+
+{{OPPORTUNITIES}}
+
+{{WATCHLIST}}
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+
+</body>
+</html>
