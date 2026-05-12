@@ -68,25 +68,26 @@
   <div class="date">2026-05-12</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>AI从"单工具"向"多Agent调度"全面跃迁。无论是Claude Code的Agent View、Codex的插件生态野心、还是Thinking Machines的原生交互模型，都在指向同一个方向：AI不再是"你问我答"的单线程工具，而是多Agent并行、人机实时协作、能力可插拔扩展的操作系统级平台。同时，安全（Daybreak）和端侧（MiniCPM-V 4.6）两条暗线正在从"能力竞赛"转向"治理与落地"。</p>
+    <p>AI正从"单工具"向"多Agent调度平台"全面跃迁——Claude Code的Agent View、Codex的插件生态、Thinking Machines的交互模型都在指向同一方向：AI不再是问答工具，而是多Agent并行、人机实时协作的操作系统。同时，Daybreak把安全从伦理问题变成产品问题，MiniCPM-V把端侧多模态推到实用拐点，豆包RAG被黑产攻陷则暴露了AI搜索的系统性脆弱。</p>
   </div>
 </div>
 <div class="topic">
   <div class="topic-title">📌 Claude Code Agent View：多Agent调度面板</div>
-  <div class="section"><div class="section-label event">事件</div><p>Claude Code发布Agent View功能，将散落在多个终端标签页的Agent会话收拢到统一管理界面，支持状态总览、内联回复、后台化运行。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这不是简单的UI优化，而是CLI工具从"单会话REPL"向"多Agent调度中心"的范式跳变。Agent View解决的核心问题不是"能不能多开"，而是"能不能管住"。</p></div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Code发布Agent View功能，将散落在多个终端标签页的Agent会话收拢到统一管理界面。用户可在任意会话按左箭头或运行claude agents打开，支持状态总览（已完成/需要输入/正在进行）、内联回复（不离开列表即可响应Agent）、后台化运行（/bg命令将现有会话丢到后台或用claude --bg新建后台会话）。@op7418 @shao__meng @xiaohu 三人均做了详细解读。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是简单的UI优化，而是CLI工具从"单会话REPL"向"多Agent调度中心"的范式跳变。此前跑多个Agent需要开N个终端窗口，认知负载极高——你根本记不住哪个Agent在等你、哪个已经挂了。Agent View解决的核心问题不是"能不能多开"，而是"能不能管住"：当Agent能独立完成子任务时，人只需要做"断点续传"式的决策介入，类似操作系统任务栏从DOS到Windows的进化。Anthropic提到典型用法包括PR babysitter（后台Agent持续监控CI反馈）、dashboard updater、多Agent配合不同skill生成PR。这背后是AI工程工作流从串行走向并行的必然要求。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>大型重构任务拆分：一个Agent改后端API，一个Agent同步前端调用，一个Agent跑测试</li>
-    <li>PR Babysitter模式：提交PR后启动一个后台Agent持续监控CI反馈</li>
-    <li>多仓库联调：微服务架构下同时派Agent到5个仓库做兼容性修改</li>
+    <li>大型重构任务拆分：同时派3个Agent——一个改后端API接口，一个同步更新前端调用代码，一个跑测试套件。你只在Agent View里审批每个Agent的关键决策点，不用在5个终端之间来回切换</li>
+    <li>PR Babysitter模式：提交PR后启动一个后台Agent持续监控CI反馈，测试失败自动修复并推送，完成后通知你review，真正实现"提交即走"</li>
+    <li>多仓库联调：微服务架构下同时派Agent到5个仓库做兼容性修改，统一界面追踪进度，避免遗漏</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>开发者端，CLI派AI工具首次在多任务管理上追平甚至超越GUI IDE。长期趋势。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开发者端，这是CLI派AI工具首次在多任务管理上追平甚至超越GUI IDE；行业端，说明Agent应用的瓶颈已从"模型能力"转向"人机协同效率"，谁能降低管理N个Agent的心智负担，谁就占据下一代开发工具入口。长期趋势，将深刻影响AI编程工具的竞争格局。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
       <a class="source-link" href="https://x.com/op7418/status/2054024888567070925" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/shao__meng/status/2054005092190462394" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/xiaohu/status/2053986292481056790" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2053986543703031885" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
@@ -100,14 +101,14 @@
 
 <div class="topic">
   <div class="topic-title">📌 OpenAI Daybreak：AI安全从政策问题变产品问题</div>
-  <div class="section"><div class="section-label event">事件</div><p>OpenAI发布Daybreak——面向网络安全的整体战略与产品矩阵，包含三层访问体系，搭配Codex Security agent和安全生态飞轮。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这是AI安全领域最关键的路线分叉时刻。Anthropic选择"默认锁死"，OpenAI选择"分层释放+身份即权限"。Daybreak把dual-use的伦理问题转化为"verified access + 收数据"的商业飞轮。</p></div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI发布Daybreak——面向网络安全的整体战略与产品矩阵，包含三层访问体系（GPT-5.5默认/TAC验证/Cyber专版），搭配Codex Security agent、开源维护者免费安全扫描和安全生态飞轮。@elliotchen100 发了长达数千字的深度分析，@shao__meng 和 @seclink 也分别解读。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是AI安全领域最关键的路线分叉时刻。过去两年Anthropic反复强调cyber能力的dual use风险，是他们frontier模型里最克制释放的部分。OpenAI这次的回答是"我打包成一个面向防御方的产品给企业"。评论区有人戏仿："Anthropic关门做研究说能力太强不能放，OpenAI已经发布了一整套verified access的产品线让你扫repo找bug。"两种处理方式都站得住：Anthropic派默认锁死，dual use没法验意图；OpenAI派默认放出，用verified tier加监管验身份。但Daybreak真正的精妙在于：它把dual-use这个无解的伦理问题，转化为"verified access + 收数据"的商业飞轮——每个让Daybreak扫描代码库的企业，都在无意识地向OpenAI贡献最稀缺的攻防训练数据（vulnerability pattern和patch pair）。OpenAI用产品包装解决了一个政策死结，同时顺手建了护城河。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>安全待办清偿：帮团队清理积压6个月的CVE和安全债务</li>
-    <li>开源维护者减负：给维护者免费安全扫描+API额度</li>
-    <li>合规驱动的安全审计：金融/医疗企业用TAC层级模型做安全代码审查</li>
+    <li>安全待办清偿：每个开发团队都有积压6个月的CVE和安全债务——CVE一大堆、依赖升级拖了半年、配置漂移没人查。Daybreak不是"帮你防黑客"，而是"帮你清那堆没人管的破事"。每个security team的PM看到"burning down backlogs"这句话的瞬间，预算就开始动了</li>
+    <li>开源维护者减负：Codex for Open Source直接给维护者提供免费安全扫描+API额度，从上游堵住漏洞扩散，解决了开源项目"没人管安全"的老问题</li>
+    <li>合规驱动的安全审计：金融/医疗企业用TAC层级模型做安全代码审查，满足监管要求同时不暴露攻击性能力，实现了合规与安全的平衡</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>AI+安全赛道从"研究课题"变成"可卖产品"。OpenAI和Anthropic的安全哲学分歧将在未来三年AI政策辩论中反复出现。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对行业，AI+安全赛道从"研究课题"变成"可卖产品"，今年会有大量安全创业公司围绕Daybreak生态做垂直插件；对开发者，Codex Security让安全修复从"人肉grep"变成Agent自动提PR；对用户，短期影响有限但长期意味更安全的软件供应链。OpenAI和Anthropic的安全哲学分歧将在未来三年的AI政策辩论中反复出现，这是确定性的长期议题。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -124,14 +125,14 @@
 
 <div class="topic">
   <div class="topic-title">📌 Thinking Machines交互模型：把"交互"训练进模型</div>
-  <div class="section"><div class="section-label event">事件</div><p>前OpenAI CTO Mira的Thinking Machines发布"交互模型"——原生多模态、持续在线、可实时打断的统一模型，前台200ms节拍交互+后台推理模型处理重度任务。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这是今天最具架构创新的消息。交互本身就是一种能力，应该训练进模型参数。前台200ms+后台推理的双层架构，本质上是在模型层面实现"系统1快思考/系统2慢思考"的分工。</p></div>
+  <div class="section"><div class="section-label event">事件</div><p>前OpenAI CTO Mira的Thinking Machines公司发布"交互模型"——一个原生多模态、持续在线、可实时打断的统一模型。架构分两层：前台交互模型每200ms作为一个节点，同时处理输入并产出一小段输出，负责用户的在场感、支持打断插话、对屏幕和视频内容做出反应；后台推理模型处理需要持续推理、工具调用和长上下文规划的任务。前台会在合适的时候将后台推理结果放回对话。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是今天最具架构创新的消息。当前主流Agent方案是把多个单模态模型用脚手架串起来（语音模型+视觉模型+推理模型+TTS），延迟高、上下文断裂、无法打断。Thinking Machines的思路是：交互本身就是一种能力，应该训练进模型参数，而不是用工程拼装模拟出来。前台200ms节拍+后台推理的双层架构，本质上是在模型层面实现了"系统1快思考/系统2慢思考"的分工——快思考负责在场感和实时响应，慢思考负责深度推理和长程规划。如果这条路跑通，所有"语音+推理+TTS"串联架构的AI产品都将面临架构级淘汰。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>实时协作编程：你边写代码边跟AI讨论，AI看着屏幕实时建议，随时打断</li>
-    <li>客户服务：AI客服能实时感知客户语气变化和犹豫，主动调整话术</li>
-    <li>手术/检修辅助：技术人员手上有活，AI通过视频持续理解场景并实时指导</li>
+    <li>实时协作编程：你边写代码边跟AI讨论，AI看着你的屏幕实时建议，你随时打断切换话题，不用等它"说完"才能说话，交互延迟从秒级降到200ms级</li>
+    <li>客户服务与销售：AI客服能实时感知客户语气变化和犹豫，主动调整话术，不是等客户说完才回复。在复杂的B2B销售场景中，AI可以辅助销售判断客户真实意图</li>
+    <li>手术与设备检修辅助：技术人员双手占着、眼睛看着设备，AI通过视频持续理解场景并实时给出指导。200ms延迟意味着指令反馈几乎是即时的，这在紧急场景下至关重要</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果交互模型路线跑通，当前所有"语音+推理+TTS"串联架构的AI产品都将面临架构级淘汰。长期趋势，距大规模商用还需1-2年。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果交互模型路线被验证，将从底层重新定义"AI助手"的交互范式。当前所有基于串联架构的产品（包括大部分语音助手和客服机器人）都将面临架构级淘汰风险。但这距离大规模商用可能还需1-2年——需要大量训练数据和算力来训练这种新型交互模型。长期趋势，但非常值得关注。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -146,18 +147,19 @@
 
 <div class="topic">
   <div class="topic-title">📌 Codex插件生态：Agent版App Store</div>
-  <div class="section"><div class="section-label event">事件</div><p>宝玉长文分析Codex方向——从三栏布局收敛到Skill商业化困境，最终指向Agent插件市场。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>核心矛盾是Agent能生成但用户无法在Agent内完成二次编辑。插件机制是唯一可扩展的解法。更关键的是插件能解决Skill无法商业化的死结。</p></div>
+  <div class="section"><div class="section-label event">事件</div><p>@dotey 发长文分析Codex的产品方向——从三栏布局收敛、右侧工作区升级，到Skill商业化困境，最终指向"Agent插件市场"作为Codex的终极野心。核心观点：MCP解决连接、Skill解决能力，但"最后一公里"的用户二次编辑始终是缺口，插件机制是唯一可扩展的解法。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>文章精准抓住了当前Agent产品的核心矛盾：Agent能生成内容，但用户无法在Agent内完成最后的二次编辑。你让AI写完一篇文章，最后还是要自己打开编辑器改几处——毕竟很多时候最后5%的精准度，只有自己动手才能到位。插件机制是唯一可扩展的解法——VSCode和Chrome已验证这条路。更关键的是，插件能解决Skill无法商业化的死结：Skill是透明的、复刻成本极低（@dotey自己的baoyu-skills近2万Star但收入$0），但插件可以收费、可以有版权保护。这是Agent生态从"开源工具"走向"商业平台"的关键一步。Codex现在已经有了一个非常原始的插件市场，从这里到成熟的收费插件生态还有很长的路，但方向是对的。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>垂直编辑器插件：设计插件让Codex直接编辑Figma，写作插件做Markdown精细排版</li>
-    <li>Skill开发者变现：通过插件市场收费而非靠GitHub Star精神激励</li>
-    <li>企业内部插件：把审批流、CRM、部署系统封装成Codex插件</li>
+    <li>垂直领域编辑器插件：设计插件让Codex直接编辑Figma文件，写作插件做Markdown精细排版和导出，数据分析插件直接在Codex里做可视化——用户不用在Agent和专业工具之间来回切换</li>
+    <li>Skill开发者变现：开发高质量Agent Skill的作者通过插件市场收费，而非靠GitHub Star的精神激励。有收费才有持续打磨的动力，生态才能正循环</li>
+    <li>企业内部插件：公司把内部工具（审批流、CRM、部署系统）封装成Codex插件，Agent一键调用，省去了MCP接入的定制开发成本</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>谁先跑通Agent插件生态谁就锁定开发者心智，窗口期3-6个月。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对中小团队，这是比"自建垂直Agent"更轻量的参与方式——做插件而非做平台；对行业，谁先跑通Agent插件生态谁就锁定开发者心智，类似当年VSCode对Atom的胜出。窗口期可能在3-6个月。@dotey还提到Cursor能看到类似的产品影子，唯独Claude Code和Cowork目前没有这个方向的产品迹象。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
       <a class="source-link" href="https://x.com/dotey/status/2053940091970580736" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2053943794165318109" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
@@ -167,13 +169,13 @@
 
 <div class="topic">
   <div class="topic-title">📌 豆包RAG被黑灰产攻陷：AI搜索可信度危机</div>
-  <div class="section"><div class="section-label event">事件</div><p>黑灰产通过GEO操纵豆包搜索结果——在媒体发文章将非法公司与权威机构并列，让AI把骗子公司输出为可信机构。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这不是传统SEO，是专门针对AI RAG的攻击范式。传统SEO骗排名，GEO骗AI的"事实判断"。</p></div>
+  <div class="section"><div class="section-label event">事件</div><p>@seclink 连发两条推揭露针对豆包RAG（网络搜索）的黑灰产——非法集资公司搞GEO（Generative Engine Optimization），在各大媒体发文章将非法公司与权威机构并列，利用大模型RAG无法判断"非"、"不是"、"没有"等否定词的漏洞，让AI把骗子公司输出为可信机构。金融和健康领域风险尤大。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是传统SEO，是专门针对AI RAG的攻击范式。传统SEO骗的是排名，GEO骗的是AI的"事实判断"——因为AI从多源信息中做综合判断时，"被多家权威媒体提及并与权威机构并列"就是一个强信号。本质上是利用了AI缺乏"事实溯源验证"能力的漏洞。@seclink指出大模型RAG在切词时判断不了"与"、"或"、"非"这种逻辑词，导致"【非】国企公司"中的否定词被忽略。当AI搜索成为用户获取信息的主要入口时，这种攻击的影响远超传统SEO污染——因为用户倾向于信任AI的"综合判断"而非搜索排名。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>AI搜索需要增加溯源验证层：对RAG返回的关键事实做交叉验证</li>
-    <li>金融/医疗AI产品需要独立知识库：不能依赖开放网络RAG</li>
+    <li>AI搜索需要增加溯源验证层：对RAG返回的关键事实做交叉验证，标注信息来源可信度，对包含否定词的上下文做特殊处理，避免逻辑词被切词器丢失</li>
+    <li>金融/医疗AI产品必须用独立知识库：不能依赖开放网络RAG，必须用受控知识源（监管白名单、权威数据库），否则在高利害领域可能误导用户做出重大决策</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>AI搜索结果可信度正在被系统性侵蚀。可能催生AI事实核查工具新赛道。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对用户，AI搜索结果的可信度正在被系统性侵蚀，尤其是金融、医疗等高利害领域；对行业，AI搜索产品需要从"多源聚合"转向"可信溯源"，这可能催生新的AI事实核查工具赛道。短期风险极高、长期必须解决。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -185,14 +187,14 @@
 
 <div class="topic">
   <div class="topic-title">📌 MiniCPM-V 4.6：1.3B端侧多模态突破</div>
-  <div class="section"><div class="section-label event">事件</div><p>OpenBMB发布1.3B多模态模型，视觉编码成本砍55%，超越Gemma4-E2B和Qwen3.5-0.8B，全平台部署开源。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>端侧AI的核心瓶颈从来不是"能不能跑"而是"跑起来够不够快、够不够省"。1.3B模型在RTX 4090上首token 75.7ms。</p></div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenBMB发布MiniCPM-V 4.6，1.3B参数多模态模型，采用LLaVA-UHD v4新技术将视觉编码成本砍55%，在多模态基准上超越Gemma4-E2B和Qwen3.5-0.8B，token用量仅后者2.5%。RTX 4090上处理3136分辨率首token 75.7ms，比Qwen3.5-0.8B快2.2倍。iOS/Android/HarmonyOS部署代码全开源，支持各种量化格式和推理框架。@berryxia 做了详细解读。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>端侧AI的核心瓶颈从来不是"模型能不能跑"而是"跑起来够不够快、够不够省"。MiniCPM-V 4.6的真正意义在于把高分辨率视觉处理的成本曲线拉平了——Intra-ViT早期压缩+混合4x/16x视觉压缩，让1.3B小模型在消费级硬件上跑出超越2B模型的效果。配合Apple统一内存架构（内存即显存），端侧多模态的体验拐点可能就在今年。对开发者特别友好：全平台部署代码+各种量化格式+原生SGLang/vLLM/llama.cpp/Ollama支持，几步就能跑起来。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>手机端实时视觉理解：拍照即识别/翻译，全离线</li>
-    <li>工业质检：产线边缘设备实时检测缺陷</li>
-    <li>无障碍辅助：视障用户手机端实时场景描述</li>
+    <li>手机端实时视觉理解：拍照即识别菜品卡路里、拍照即翻译菜单、拍照即识别零件型号，全离线运行无需云端，隐私和延迟都最优</li>
+    <li>工业质检：在产线边缘设备上部署，实时检测产品缺陷，不依赖云端意味着零网络延迟，产线不停顿</li>
+    <li>无障碍辅助：视障用户手机端实时场景描述，75.7ms的首token延迟意味着描述几乎是即时的，只有延迟足够低才有实用价值</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>端侧多模态可能比云端大模型更快触达普通用户。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对Apple生态是利好——统一内存架构正是端侧模型的天然温床；对开发者，1.3B模型+全平台部署代码+各种量化格式支持，部署门槛极低；对行业，端侧多模态可能比云端大模型更快触达普通用户，"手机原生AI应用"可能是今年的新赛道。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -206,31 +208,14 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📌 AI超算成为可出租重资产</div>
-  <div class="section"><div class="section-label event">事件</div><p>SpaceX将Colossus 1（约20万颗GPU，300兆瓦）整体租给Anthropic。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>上一代GPU集群正在进入"闲置资产找出租"的阶段。GPU折旧速度远快于房产，18-24个月就可能算力过时。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>AI创业公司可以通过租赁获取算力，降低创业门槛</li>
-    <li>GPU持有方需要最大化利用率</li>
-  </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>AI基础设施从"军备竞赛"走向"资产运营"的早期信号。</p></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/fankaishuoai/status/2054004656297460094" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
   <div class="topic-title">📌 Google Veo 4：视频生成进入"全能参考"时代</div>
-  <div class="section"><div class="section-label event">事件</div><p>谷歌即将发布Veo 4，支持类似Seedance 2.0的全能参考——对视频进行修改参考和内容替换。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>视频生成模型竞争焦点从"能不能生成"转向"能不能精准控制"。全能参考意味着视频生成从"一次性出片"走向"可迭代修改"。</p></div>
+  <div class="section"><div class="section-label event">事件</div><p>@op7418 透露谷歌即将发布Veo 4（可能更名），支持类似Seedance 2.0的全能参考——对视频进行修改参考和内容替换，文字生成质量略优于Seedance 2.0。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>视频生成模型的竞争焦点已经从"能不能生成"转向"能不能精准控制"。全能参考意味着视频生成从"一次性出片"走向"可迭代修改"——生成一条视频后，只替换产品镜头或修改slogan文字，不用重新生成整条视频。这是从玩具到工具的关键一步。文字渲染质量提升也说明视频模型正在啃最硬的骨头——精准的文字生成是商业可用性的硬门槛，广告、教育等场景对文字准确度要求极高。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>广告迭代：生成一条品牌广告后只替换产品镜头或slogan文字</li>
-    <li>教育培训视频：同一个教学动画模板替换不同语言的字幕</li>
+    <li>广告迭代：生成一条品牌广告后，只替换产品镜头或slogan文字，不用重新生成整条视频。大幅降低广告A/B测试的制作成本</li>
+    <li>教育培训视频：同一个教学动画模板，替换不同语言的字幕和关键信息，实现教育内容的低成本多语言适配</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>视频生成赛道从"够不够逼真"进入"够不够可控"的新阶段。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>视频生成赛道从"够不够逼真"进入"够不够可控"的新阶段。短期看Google和字节（Seedance）在这一维度领跑，长期看视频编辑工作流将被AI重写——从Premiere/After Effects等专业工具转向AI原生编辑。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -243,24 +228,223 @@
   </div>
 </div>
 
+<div class="topic">
+  <div class="topic-title">📌 AI超算成为可出租重资产</div>
+  <div class="section"><div class="section-label event">事件</div><p>SpaceX将Colossus 1（约20万颗GPU，300兆瓦供电）整体租给Anthropic。@fankaishuoai指出这背后是结构性变化：AI超算集群正在变成可出租的重资产，就像写字楼和厂房一样。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>上一代GPU集群（H100为主）正在进入"闲置资产找出租"的阶段，而下一代（B200/GB200）正在被各家公司拼命建设。这和写字楼/厂房的经济逻辑一样——建设期加杠杆，运营期收租金。但关键区别在于：GPU折旧速度远快于房产，18-24个月就可能算力过时。所以出租窗口期极短，谁先建谁先租谁先回血。@fankaishuoai还指出另一面：AI打开了个人能力的天花板，但天花板打开不等于收入天花板也跟着打开——同样会搭Claude智能体的两个人，切入点不同收入差一个数量级。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>AI创业公司通过租赁获取算力：不用自建数据中心，按需租用H100集群，降低创业门槛和资金压力</li>
+    <li>GPU持有方需要最大化利用率：闲置算力是纯粹的成本，需要开发类似WeWork的GPU共享平台来匹配供需</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对AI行业，算力获取方式从"自建"增加了一条"租赁"选项，降低了AI创业的启动资金门槛；对GPU持有方，如何最大化GPU利用率成为核心经营问题。这是AI基础设施从"军备竞赛"走向"资产运营"的早期信号。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2054004656297460094" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2054055758443201010" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Tanka AI：AI-Native企业操作系统</div>
+  <div class="section"><div class="section-label event">事件</div><p>@lxfater 连发三条推介绍Tanka AI——主打数据自主+长期记忆+Agent架构的企业协同工具，基于MSA稀疏注意力论文团队的技术。小于50人团队基础功能免费，超过50人按工作区收费。支持100+办公应用连接，数据随时可导出。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>核心差异化在于"企业级长期记忆"——不是聊天记录的简单存储，而是从IM、邮件、CRM、文档中自动沉淀结构化的机构记忆，员工离职后知识不流失。技术底层来自MSA（稀疏注意力长记忆）团队，说明这不是产品噱头而是有论文支撑的技术路线。但挑战在于：企业协同是极度依赖网络效应的市场，Slack/飞书的替换成本极高。"数据自主"这个卖点能打动多少付费用户？@lxfater的推荐动机可能与其关注AI应用落地有关，但产品是否真正好用还需验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>新员工入职：直接问AI"这个客户当初为什么没签约"，AI从历史对话/邮件/CRM中拼出完整上下文，不用翻几千条聊天记录</li>
+    <li>知识连续性：关键员工离职后，其决策逻辑和项目历史可通过机构记忆继续被团队调用，避免"人才走了知识也走了"的问题</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业协同+AI记忆是刚需但慢赛道，短期难撼动飞书/Slack基本盘，但"数据自主"在监管趋严环境下可能成为差异化突破口。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2054085673574138175" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2054085676979929326" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2054085668738134260" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2054085313400819712/img/ImbNujssitmnsVio.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2054085313400819712/img/ImbNujssitmnsVio.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Claude-Mem：解决Claude Token消耗过大问题</div>
+  <div class="section"><div class="section-label event">事件</div><p>@lxfater推荐Claude-Mem项目（75k star），功能包括持久化内存（上下文跨会话保留）、渐进式披露（分层内存检索+token成本可见性）、基于技能的搜索、Web查看器界面、隐私控制等。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Token消耗是Claude Code等Agent工具的核心痛点。Claude-Mem通过将对话历史结构化存储和分层检索，避免每次会话都重新加载完整上下文，直接降低token使用量和成本。75k star说明这个需求是刚需，社区认可度极高。类似方案可能成为Agent工具的标配功能。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长期项目开发：Claude Code用户不用每次新会话都重新解释项目背景，Claude-Mem自动检索相关历史上下文注入</li>
+    <li>多人协作场景：团队成员共享项目记忆，新加入的人不需要从零开始理解项目状态</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种记忆方案成为标配，将大幅降低AI编程工具的使用成本，进一步推动Agent工具的普及。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2054110958851953145" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 豆包语音输入法 vs Typeless：语音输入的设计博弈</div>
+  <div class="section"><div class="section-label event">事件</div><p>@op7418 和 @yetone 分别讨论了语音输入法的设计选择：移动端必须带全键盘（Typeless犯了错），桌面端语音输入应与输入法解耦（豆包犯了错）。@yetone评价豆包语音输入法的句子修复和系统音量处理做得很好，但识别不了Kitty Terminal。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>语音输入法的设计博弈本质上是"一体化vs解耦"的取舍。移动端屏幕小，必须集成全键盘以应对语音识别不准的场景；桌面端已经有成熟的输入法生态，语音输入作为独立工具反而更灵活。豆包的句子修复能力说明大模型正在深入改造传统输入法，但与系统输入法的耦合度还需要打磨。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发者场景：在终端中用语音输入命令和注释，但需要识别终端应用（Kitty等），这是目前的短板</li>
+    <li>日常办公：语音输入长文本（邮件、文档），句子修复让输出更接近书面语言</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>语音输入法是大模型落地的高频场景，豆包和Typeless的设计取舍反映了不同产品哲学。随着识别准确度和句子修复能力提升，语音输入可能成为开发者工具链的重要一环。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2054109822912692656" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2054111096852939248" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yetone/status/2054091446568079657" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 解字计划：资助大学生获取AI Token</div>
+  <div class="section"><div class="section-label event">事件</div><p>@yan5xu发起"解字计划"——取自《说文解字》，字是语言最小单位，token是大模型最小单位。第一年个人出资13万+，预计资助600名大学生获得AI token。计划草案已在GitHub公开征求意见，预计5.15定稿。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>AI能力的不平等不只是算力和模型，还有使用成本。很多大学生想用AI但买不起token，这个项目直接解决了"用不起"的问题。13万/600人≈217元/人/年，虽然不多但足以让一个学生用上基础AI工具。项目的开放性（GitHub公开征求意见）也值得称道。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>大学生AI入门：获得token资助后，学生可以用Claude/GPT等工具辅助学习和研究，降低AI使用的经济门槛</li>
+    <li>社区驱动模式：GitHub公开征求意见和筛选标准，让资助过程透明，避免暗箱操作</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果跑通，可能催生更多类似的教育资助项目，帮助缩小AI使用的数字鸿沟。短期规模有限，但模式可复制。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yan5xu/status/2054035387321065732" target="_blank"><span class="handle">@yan5xu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Markdown Viewer与AI写作工作流</div>
+  <div class="section"><div class="section-label event">事件</div><p>@xicilion分享了自己写Markdown Viewer的原因：开始用AI写文档后一发不可收拾，但转docx太丑，于是自己写了一个。还提到TUI终于进化到1989年的水平。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>AI写作正在催生新的工具需求。AI生成Markdown很自然，但转成可交付格式（docx、PDF）始终是痛点。@xicilion的Markdown Viewer本质上是解决"AI生成→人工微调→交付"链路中的格式问题。这和@dotey分析的Codex插件生态方向一致——AI能生成，但"最后一公里"的编辑和交付需要专门工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>AI辅助文档写作：用AI生成Markdown初稿，在Viewer中预览和微调，最终导出为专业格式</li>
+    <li>技术文档交付：开发团队用AI写文档后，直接在Viewer中审查格式和内容，省去Word排版的繁琐步骤</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Markdown工具正在因AI写作而复兴，这可能催生一批"AI原生文档编辑器"产品。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xicilion/status/2054101044943319085" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xicilion/status/2054118030595199477" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HH7iVW9acAEm8x_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HH7iVW9acAEm8x_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 语音交互学习语言：tuwa的创新学习路径</div>
+  <div class="section"><div class="section-label event">事件</div><p>@turingou分享做tuwa衍生产品的经验：复杂的点不在于接入实时语音模型，而在于创造全新的学习路径——使用语音会话（甚至是凭空创造的语音会话）在不背单词表的情况下学习语言，是很大的设计挑战。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>AI+教育的真正机会不是"AI替代老师"，而是"AI创造全新的学习方式"。tuwa试图用实时语音交互创造沉浸式语言学习场景，比传统背单词更接近自然语言习得。但设计挑战在于：如何让AI生成的对话既有教育价值又自然流畅？</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>沉浸式语言学习：与AI进行模拟场景对话（如餐厅点餐、商务谈判），在真实语境中学习而非背单词</li>
+    <li>个性化学习路径：AI根据学习者的水平和兴趣动态调整对话内容和难度</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI+教育是巨大市场，语音交互可能是突破口，但设计挑战不小。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/turingou/status/2054118440764662006" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIGxRwLawAANZ4G?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIGxRwLawAANZ4G?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Google降智信号：可能要有大的发布</div>
+  <div class="section"><div class="section-label event">事件</div><p>@berryxia观察到Google最近疯狂降智，回忆Gemini3.1发布前也有类似现象，认为这波可能也要搞点东西出来了。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>大模型"降智"通常是新版本发布前的常见信号——公司可能在用现有流量做A/B测试或为新模型预热。Gemini3.1之前的"鬼佬疯狂吹捧"但"过后没多少人真正使用"说明产品成功不只靠模型能力，还看用户体验和生态。如果Google这次真的要发新模型，端到端的体验整合才是关键。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Google的下一代模型可能近期发布，值得持续关注。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2054072866266911048" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIEBEBuWwAAk1a2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIEBEBuWwAAk1a2?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIEBEByWsAAdADH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIEBEByWsAAdADH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 WorldSeed：使用Agent的新方式</div>
+  <div class="section"><div class="section-label event">事件</div><p>@lxfater推荐WorldSeed，称其为"新的使用Agent的方式"，并写了技术文章分析开源代码，认为任何想理解这种新方式并提高生产力的朋友都值得花时间读。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>虽然具体内容需要阅读原文，但@lxfater的技术分析能力值得信赖。如果WorldSeed确实代表了一种新的Agent编排模式，可能与Thinking Machines的交互模型、Claude Code的Agent View形成互补——不同层次的Agent能力释放方式。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2054114267818062236" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIGtkvrb0AACadV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIGtkvrb0AACadV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 大模型Serverless冷启动优化</div>
+  <div class="section"><div class="section-label event">事件</div><p>@yetone分享大模型serverless部署优化经验：8GB冷启动不到20秒（16G也只需20秒），远优于2.5GB冷启动2分钟的方案。冷启动时间从远端image registry到完全加载到GPU memory。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>冷启动时间是AI模型服务化的关键瓶颈。@yetone的经验说明优化空间很大——从2分钟到20秒是6倍的提升，主要靠镜像分层、模型预热和容器优化。这对AI创业公司选择部署方案有直接参考价值。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2054061474675609849" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yetone/status/2054081325846724747" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Open Design开源项目进展</div>
+  <div class="section"><div class="section-label event">事件</div><p>@tuturetom分享open-design项目动态：新增Maintainer，更新入选标准（公开、无名额限制），感谢社区贡献者在Windows兼容性、daemon、i18n等不性感但关键的活儿上的贡献。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>开源项目的可持续性依赖于Maintainer制度。open-design的公开入选标准值得其他项目学习——透明化降低了参与门槛，也提高了社区信任度。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2054088338831757643" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2054088261652385960" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIGTeV2XYAABTIH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIGTeV2XYAABTIH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
 <div class="opportunities">
   <h2>⚡ 新机会</h2>
   <ul class="opp-list">
-    <li>Agent插件市场先发者：在Codex/Cursor生态起步期做垂直编辑器插件，拿冷启动红利</li>
-    <li>AI事实核查/溯源工具：针对GEO攻击做搜索结果交叉验证，金融医疗刚需</li>
-    <li>端侧多模态应用：基于1-2B级模型做离线视觉理解应用，2C空间大</li>
-    <li>GPU资产运营：上一代GPU集群闲置算力整合转租</li>
+    <li>Agent插件市场先发者：在Codex/Cursor生态起步期做垂直编辑器插件（设计、写作、数据分析），拿冷启动红利，窗口期3-6个月</li>
+    <li>AI事实核查/溯源工具：针对GEO攻击做AI搜索结果的交叉验证和可信度评分，金融/医疗领域刚需，短期风险高但需求确定</li>
+    <li>端侧多模态应用开发：基于MiniCPM-V 4.6等1-2B级模型，在iOS/Android上做离线视觉理解应用，2C场景空间大，部署门槛低</li>
+    <li>GPU资产运营平台：上一代GPU集群的闲置算力整合与转租，类似GPU版的WeWork，但窗口期只有18-24个月</li>
+    <li>AI原生Markdown编辑器：解决AI生成→人工微调→交付的格式问题，市场需求正在因AI写作爆发而快速上升</li>
+    <li>语音交互语言学习：基于实时语音模型的沉浸式语言学习产品，设计挑战大但差异化明显</li>
   </ul>
 </div>
 
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>交互模型路线：Thinking Machines如果被验证，将颠覆当前所有Agent串联架构</li>
-    <li>Agent插件生态竞赛：Codex vs Cursor谁先跑通收费插件市场</li>
-    <li>AI搜索可信度：GEO攻击会指数级增长，防御方案是确定性需求</li>
-    <li>端侧模型+统一内存：Apple设备+小模型今年可能催生"手机原生AI应用"</li>
-    <li>AI安全产品化：Daybreak把安全从研究话题变成产品品类</li>
+    <li>交互模型路线：Thinking Machines的"交互训练进模型"如果被验证，将颠覆当前所有Agent串联架构，密切关注后续论文和开源</li>
+    <li>Agent插件生态竞赛：Codex vs Cursor谁先跑通收费插件市场，决定了中小团队的生态站位</li>
+    <li>AI搜索可信度：豆包RAG被攻陷只是开始，随着AI搜索渗透率提升，GEO攻击会指数级增长，防御方案是确定性需求</li>
+    <li>端侧模型+统一内存：Apple设备+小模型的组合可能在今年催生一批"手机原生AI应用"，区别于云端套壳</li>
+    <li>AI安全产品化：Daybreak把安全从研究话题变成产品品类，关注围绕Daybreak生态的垂直安全工具创业</li>
+    <li>Google下一代模型：降智信号可能预示近期重大发布，关注Gemini后续版本</li>
+    <li>语音输入法进化：大模型正在改造输入法，豆包/Typeless的设计博弈结果将影响下一代输入工具的方向</li>
   </ul>
 </div>
 
