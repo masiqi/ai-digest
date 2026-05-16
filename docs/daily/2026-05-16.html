@@ -68,41 +68,18 @@
   <div class="date">2026-05-16</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>AI Agent生态工具链全面开花：html-anything一键Vercel部署、Open Design 16天4万星创GitHub史上第二增速、国产万亿模型Ring-2.6-1T开源可在线体验。Anthropic发布Founder's Playbook直言AI会提高创业失败率。大厂侧OpenAI产品线大调整聚焦Codex，中国电信将Token直接做成话费套餐。</p>
+    <p>开源工具生态大爆发：html-anything 48小时破2000 Star，Better Shot 终结截图工具付费，飞书CLI 40天1万Star——Agent可调用的基础设施正在从「各自为战」走向「开放标准」。与此同时，OpenAI 和 DeepSeek 同步加码 Agent 赛道，Codex 已支持跨电脑远程控制。</p>
   </div>
 </div>
 <div class="topic">
-  <div class="topic-title">📌 html-anything — Agent生成HTML一键部署Vercel</div>
-  <div class="section"><div class="section-label event">事件</div><p>Tom Huang开源的html-anything正式支持Vercel一键部署，将Agent生成的HTML作品秒变可公开访问的网站链接，支持自定义链接有效期。项目上线48小时突破2000 Star。GitHub: github.com/nexu-io/html-anything</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>html-anything让AI Agent打通了「生成→预览→发布→分享」的完整闭环。你可以让Claude Code或Codex生成任何HTML页面（数据看板、产品落地页、个人主页、可视化报告），然后一键部署到Vercel获得公网URL，直接分享到X、知乎、Discord。如果是Agent使用者，这意味着你的Agent获得了「发布能力」：它不仅能帮你做事，还能帮你把结果展示给世界。</p></div>
+  <div class="topic-title">📌 html-anything：Agent生成设计级HTML的开源神器</div>
+  <div class="section"><div class="section-label event">事件</div><p>Tom Huang 开源 html-anything，48小时突破2000 Star，正式支持 Vercel 一键部署。github.com/nexu-io/html-anything</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个工具让Agent能把原始数据直接转换成世界级设计水准的HTML页面。安装方式：npx html-anything 或直接 clone 仓库。Agent用它生成页面后，通过Vercel CLI一行命令 vercel --prod 就能发布成公网链接。Vercel还支持自定义链接有效期，非常适合做临时演示页面。它解决了Agent「能写逻辑但不会做UI」的痼疾——以前Agent生成的HTML只有功能没有美感，现在html-anything内置了设计系统，Agent只需描述内容，就能产出可直接展示的网页。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>用Agent生成数据可视化报告，一键发布为在线链接分享给团队</li>
-    <li>快速搭建产品Landing Page，5分钟内从想法到上线</li>
-    <li>生成个人作品集/简历网站，一键部署并设置自定义域名</li>
+    <li>数据分析报告一键生成精美网页，分享给同事只需发链接</li>
+    <li>Agent原型开发——描述产品想法，Agent生成可交互的HTML原型，Vercel发布后直接给用户测试</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>html-anything打通了Agent从「生成」到「发布」的最后一步。当Agent可以直接将产出物发布到互联网，个人创作者和微型团队的建站成本趋近于零。这对传统建站工具和外包开发团队构成直接冲击。</p></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/tuturetom/status/2055606032596922582" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2055604167918444544/img/-kj5F8gPCCOrefmi.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2055604167918444544/img/-kj5F8gPCCOrefmi.jpg" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2054859531469963264/img/LaFj6Z80pGYuIfOf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2054859531469963264/img/LaFj6Z80pGYuIfOf?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">📌 Open Design — 16天4万星，GitHub史上第二增速</div>
-  <div class="section"><div class="section-label event">事件</div><p>由nexudotio发起的Open Design项目上线仅16天突破40,000 Star，成为GitHub历史上40K+项目中增速第二的开源项目。同期发布0.8.0 Preview版本，内置400+插件，支持自定义插件接入Design Agent Engine。GitHub: github.com/nexu-io/open-design</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>Open Design本质上是一套「让Agent具备设计能力」的开源引擎。传统上Agent只能写代码逻辑，UI设计仍需人类设计师介入——Open Design填补了这个空白，让Agent直接产出高质量的设计稿和前端界面。你可以把它与html-anything配合：Open Design负责生成设计，html-anything负责部署上线，形成完整的「设计→开发→发布」Agent流水线。目前支持113个Skills、149套设计系统、110个模板。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>产品经理用Agent直接生成可交互的产品原型，跳过设计师排期</li>
-    <li>开源项目一键获得专业级官网和文档站，节省设计外包费用</li>
-    <li>独立开发者用Agent批量生成不同风格的App界面进行A/B测试</li>
-  </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>Open Design的爆发式增长说明开发者社区对「Agent能设计」的需求极其旺盛。如果Agent只能写代码不能做设计，它永远只是半个开发者。Open Design+html-anything正在重新定义「全栈Agent」。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这标志着「Agent驱动的UI生成」从概念验证进入实用阶段。过去设计师担心被替代，现在发现Agent生成的内容还需要设计系统来约束品质——设计师的角色从「画图」转变为「定义设计系统」。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -115,54 +92,74 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📌 Ring-2.6-1T — 国产万亿级Agent模型正式开源</div>
-  <div class="section"><div class="section-label event">事件</div><p>inclusionAI发布Ring-2.6-1T开源模型，专为真实复杂Agent任务打造的万亿参数思考模型。HuggingFace: huggingface.co/inclusionAI/Ring-2.6-1T，在线Chat试用: ling.tbox.cn/chat。Kimi也在朝高端Agent方向发力。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>Ring-2.6-1T是目前国产开源模型中参数规模最大的Agent专用模型之一，1T（万亿）参数意味着它在复杂推理、多步任务规划方面具备显著优势。直接在浏览器访问ling.tbox.cn/chat即可体验。对于开发者，搭配Hermes、OpenCode等Agent框架使用时，Ring-2.6-1T适合作为「思考模型」负责推理规划，搭配更快模型执行代码生成。</p></div>
+  <div class="topic-title">📌 Better Shot：CleanShotX的完全免费平替</div>
+  <div class="section"><div class="section-label event">事件</div><p>向阳乔木实测多款截图工具后推荐 Better Shot，完全免费，最接近 CleanShotX 体验。github.com/KartikLabhshetwar/better-shot</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>M芯片Mac下载aarch64.dmg，Intel芯片下载x64.dmg即可使用。功能对标CleanShotX的标注、滚动截图、OCR、录屏等核心能力。结合Mole替代CleanMyMac、AI替代各种小工具，整套Mac工具链的年订阅费可以从几百美元降到零。对于中国用户尤其友好——CleanShotX在国内没有官方购买渠道。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>本地部署作为Agent的推理引擎，处理复杂编程任务</li>
-    <li>作为「顾问模型」对初级模型输出进行审核优化</li>
-    <li>企业内部知识库问答和复杂数据分析</li>
+    <li>开发者日常截图标注，提交bug report时快速标注关键区域</li>
+    <li>做教程/文档的作者，滚动截图+标注一气呵成</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>国产模型正式进入万亿参数Agent赛道。结合DeepSeek V4系列的势头，中国Agent模型生态正在形成从百亿到万亿的完整梯度，对OpenAI/Anthropic的闭源模型形成替代压力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>免费开源工具正在系统性地替代付费Mac软件。SetApp订阅模式的护城河在被AI+开源双重夹击下加速瓦解。这是「消费降级+技术升级」的典型范式。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/iamtonyzhu/status/2055637225665397102" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">📌 Better Shot — CleanShotX的完全免费平替</div>
-  <div class="section"><div class="section-label event">事件</div><p>向阳乔木测评多款截屏工具后推荐Better Shot，最接近CleanShotX且完全免费。支持M系列芯片(aarch64.dmg)和Intel芯片(x64.dmg)。GitHub: github.com/KartikLabhshetwar/better-shot/releases</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>CleanShotX是Mac上最优秀的截屏/录屏工具之一，但年费不菲且依赖SetApp订阅。Better Shot在功能上几乎完全对标——滚动截屏、标注、录屏、贴图、OCR文字识别一应俱全，且完全开源免费。加上Mole替代CleanMyMac，可以省下每年数百元的SetApp订阅费。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>开发者日常截屏标注Bug、录屏复现问题</li>
-    <li>内容创作者快速制作教程截屏/动图</li>
-    <li>设计师截取灵感素材并即时标注</li>
-  </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>AI时代「开源替代闭源工具」浪潮的缩影——当免费开源工具能做到闭源商业软件90%的功能，SetApp这种「软件合集订阅」模式首当其冲。</p></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/vista8/status/2055633836051161531" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2055632454489444792" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HIcTyCCbAAA4-4C?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIcTyCCbAAA4-4C?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIcSgrLakAABlW5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIcSgrLakAABlW5?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📌 飞书开源CLI工具包 — 1万+星，Agent办公自动化基建</div>
-  <div class="section"><div class="section-label event">事件</div><p>飞书(larksuite)发布开源CLI工具包github.com/larksuite/cli，发布40余天突破1万Star，是目前国产办公平台中功能最全、Star数最高的Agent接入工具。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>飞书CLI让Agent直接操作飞书办公系统——发送消息、管理文档、操作日历、查询审批、处理表格。接入方式：npm install -g @larksuite/cli，配置API凭证后即可让Agent调用。结合cron定时任务，一套完整的办公自动化Agent方案就成型了。</p></div>
+  <div class="topic-title">📌 Ring-2.6-1T：万亿级开源推理模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>inclusionAI开源Ring-2.6-1T，万亿参数规模，支持在线体验。huggingface.co/inclusionAI/Ring-2.6-1T，在线试用 ling.tbox.cn/chat</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一个为「真实复杂任务」打造的万亿级思考模型。不同于通用对话模型，Ring专注于需要深度推理的场景——代码生成、数学证明、复杂逻辑推理。可以直接在HuggingFace下载权重，也能在网页端免费用。对于预算有限的团队，这是一个可以本地部署的高质量推理引擎。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>Agent自动汇总当日群聊热点和待办事项，每天早上推送日报</li>
-    <li>自动处理审批流——Agent读取申请内容并做出初步判断</li>
-    <li>批量创建/更新飞书文档，从数据库抓取数据自动生成周报</li>
+    <li>本地部署作为编程助手后端，替代昂贵的API调用</li>
+    <li>复杂文档分析——合同审查、技术规范对照等需要深度理解的任务</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>办公软件之争已从「谁更好用」转向「谁更适合Agent操作」。未来的办公软件不再是给人用的UI，而是给Agent调用的API。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>国内开源模型在推理能力上快速追赶。万亿级模型的开源，意味着高质量推理能力不再是API巨头的独家特权。这与DeepSeek的开放策略形成呼应。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2055595793135063117" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIbxOq2aUAAmAav?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIbxOq2aUAAmAav?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Animate Text Skill：让Agent创建专业文字动画</div>
+  <div class="section"><div class="section-label event">事件</div><p>Pixelpoint发布Animate Text Skill，将24种文字动画固化为JSON规格，Agent直接查表执行。pixelpoint.io/skills/animate-text/</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个Skill解决了Agent做动画时的最大痛点——模糊描述导致结果不可控。过去你跟Agent说「做个炫酷的文字动画」，它每次生成的效果都不一样。Animate Text Skill把24种经过精心打磨的动画模式（打字机效果、粒子消散、3D翻转等）预先定义为JSON，Agent只需匹配最合适的模式并填入参数。安装：在Agent的skills目录中添加该skill即可。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>视频创作者用Agent批量生成标题动画，风格统一且专业</li>
+    <li>产品Demo视频中的文字动效，不需要After Effects技能</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这是「Skill标准化」的绝佳案例。Agent的创造力需要被约束才能产出可预期的高质量结果。把「模糊描述→可执行规格」这个范式推广到视频、3D等领域将是下一个爆发点。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2055557960756003086" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIbPELSakAA1ew0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIbPELSakAA1ew0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 飞书开源CLI工具包：1万Star的Agent基础设施</div>
+  <div class="section"><div class="section-label event">事件</div><p>飞书发布开源CLI工具包供Agent调用，40天超1万Star，在国产办公平台中功能最全。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Agent可以通过这个CLI直接操作飞书文档、表格、日历、审批、消息等全部功能。这意味着Agent能被集成到企业日常工作流中——自动创建文档、汇总表格数据、发送审批、安排会议。安装：npm install @feishu/cli 或 pip install feishu-cli，配置API凭证后Agent即可调用。这比传统的API对接方式简单一个数量级。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Agent自动汇总团队周报——从飞书表格读取数据，生成文档，@相关人员</li>
+    <li>自动审批流——Agent监测表格变化，符合条件自动发起审批</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这标志着中国SaaS平台正式进入「Agent-native」时代。飞书的开放策略可能倒逼钉钉、企业微信跟进，最终形成一套中国版的Agent办公标准。40天1万Star的速度也证明了市场对这类工具的饥渴。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -176,82 +173,22 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📌 Anthropic Founder's Playbook — AI会让创业失败率上升</div>
-  <div class="section"><div class="section-label event">事件</div><p>Anthropic发布内部手册Founder's Playbook (docs.anthropic.com/en/docs/founders-playbook)，基于Claude Code和大量YC创始人的实践经验，直言「AI会让创业失败率上升，不是下降」。免费在线阅读。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>核心观点：1) AI提高了开发速度但也提高了竞争烈度——你能快速做出MVP，别人也能；2) 产品方向的选择比开发速度更重要，AI不能替代产品判断力；3) AI生成的代码需要更多测试和审查，技术债务积累更快。最有价值的是「AI创业反模式」清单——明确列出哪些做法看起来高效实则致命。</p></div>
+  <div class="topic-title">📌 Anthropic《Founder's Playbook》：AI创业避坑手册</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic发布内部手册《Founder's Playbook》，基于Claude Code和YC创始人的实战踩坑经验。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>核心观点反直觉：AI会让创业失败率上升，而不是下降。因为AI大幅降低了「做出东西」的门槛，导致竞争空前激烈——每个人都能快速做出产品，但「做出对的产品」依然极难。手册覆盖了从产品定位、技术选型到团队管理的完整框架。虽然不是代码工具，但对于任何在用Agent做产品的人都是必读。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>AI创业团队作为团队必读材料，对齐产品策略认知</li>
-    <li>独立开发者评估自己的项目是否落入AI陷阱</li>
-    <li>投资人用来评估AI创业项目的风险信号</li>
+    <li>AI创业者做产品决策时的参考框架</li>
+    <li>技术Leader说服团队不要盲目追AI热点</li>
   </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>当所有人都用同样的AI工具、生成相似的代码、做出类似的产品，差异化消失了。在AI让执行成本趋零的时代，创业者的核心价值从「能做什么」变成「知道该做什么」。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这是AI行业从「狂热」走向「理性」的里程碑。头部公司开始系统性总结失败教训而非吹嘘成功案例，说明行业正在成熟。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/berryxia/status/2055635826462130227" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2055632262197362870" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HIcV1stb0AAvFqd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIcV1stb0AAvFqd?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">📌 OpenAI产品线大调整 — 全面聚焦Codex和ChatGPT</div>
-  <div class="section"><div class="section-label event">事件</div><p>OpenAI宣布产品线调整，聚焦ChatGPT和Codex两大产品线。同时发布首个面向中文开发者生态的布道型技术职位（base新加坡）。Codex新增多电脑远程控制能力——在ChatGPT上可直接控制多台电脑。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>OpenAI放弃边缘产品线，把全部资源押注在Codex和ChatGPT上，复制Claude Code的成功路径——以编程场景切入，通过Agent能力锁定开发者再向企业渗透。Codex多电脑远程控制意味着从「编程工具」进化为「电脑管家」。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>Codex用户可通过ChatGPT手机端远程操控办公电脑执行任务</li>
-    <li>企业用户统一管理多台开发机，Agent自动分配任务</li>
-    <li>中文开发者通过官方布道师获取第一手Codex最佳实践</li>
-  </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>AI行业从「模型竞赛」进入「Agent竞赛」阶段。Codex vs Claude Code的竞争将更加激烈，最终获益的是用户。</p></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/iamtonyzhu/status/2055595793135063117" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HIbxOq2aUAAmAav?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIbxOq2aUAAmAav?format=png&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">📌 上海电信Token套餐 — 1元=25万Token，运营商下场做AI</div>
-  <div class="section"><div class="section-label event">事件</div><p>上海电信将AI Token做成话费套餐——1元可兑换25万额度点，支持30+主流大模型调用，直接从话费账单扣款。中国电信表示Token服务是中国电信今后的经营主线。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>AI基础设施化的标志性事件。过去购买AI服务需要注册各种平台、绑定信用卡、管理API Key——现在只要你有手机号，AI就跟话费一样随用随扣。1元25万Token极具性价比。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>个人开发者用话费余额直接支付AI API费用，无需绑定境外信用卡</li>
-    <li>中小企业通过运营商统一采购AI能力，比单签各平台合同更省心</li>
-    <li>非技术用户（如内容创作者）用手机号即可使用AI服务</li>
-  </ul></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>运营商将Token定义为「经营主线」意味着AI正在被定位为和水电煤一样的基础设施。数亿用户+成熟计费系统+线下网点是任何AI公司无法比拟的渠道优势。</p></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/oran_ge/status/2055576259904819553" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/HiTw93/status/2055593016333873153" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/shao__meng/status/2055610047175238118" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/Barret_China/status/2055564356168098266" target="_blank"><span class="handle">@Barret_China</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/lijigang/status/2055570190235324444" target="_blank"><span class="handle">@lijigang</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/oran_ge/status/2055539910212460878" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/dotey/status/2055504619279675668" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2055563391167787394" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/yan5xu/status/2055644580843081744" target="_blank"><span class="handle">@yan5xu</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/fankaishuoai/status/2055600683941056617" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/oran_ge/status/2055593715771851084" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HIbfVVNaoAAjFss?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIbfVVNaoAAjFss?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIbu8bjbsAAaqnr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIbu8bjbsAAaqnr?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIb-bkdaEAA7A3P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIb-bkdaEAA7A3P?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2055274751921147904/img/DRIcpXKI4mU_2jBH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2055274751921147904/img/DRIcpXKI4mU_2jBH?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIbU4LKaYAALx1P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIbU4LKaYAALx1P?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2054624367724937216/img/FbZlnugWdWxWMqJn.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2054624367724937216/img/FbZlnugWdWxWMqJn.jpg" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIaeBERWsAAyCQo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIaeBERWsAAyCQo?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2055563245172469760/img/DzSUMWjMiyQ1vjUq.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2055563245172469760/img/DzSUMWjMiyQ1vjUq.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2055285428329095168/img/Flt-Skc6XjXxo_6U.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2055285428329095168/img/Flt-Skc6XjXxo_6U.jpg" loading="lazy" /></a>
   </div>
 </div>
 
@@ -259,16 +196,14 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>Waza工程师Skills合集全面支持Codex：Tw93将Mole研发最佳实践沉淀到Waza，支持Claude Code/Codex/Hermes多平台。GitHub: github.com/tw93/Waza。原文: https://x.com/HiTw93/status/2055593016333873153</li>
-    <li>Animate Text Skill：24种文字动画固化为JSON规格，Agent查表执行而非凭直觉生成。安装: pixelpoint.io/skills/animate-text。原文: https://x.com/shao__meng/status/2055610047175238118</li>
-    <li>Claude Code跑进浏览器：WebAssembly运行环境，网页中直接使用Claude Code终端界面。原文: https://x.com/Barret_China/status/2055564356168098266</li>
-    <li>微信读书Skill发布：Agent直接检索和操作读书内容。weread.qq.com/r/weread-skills。原文: https://x.com/lijigang/status/2055570190235324444</li>
-    <li>Notion CLI发布：Agent可直接操作Notion数据库和页面。原文: https://x.com/oran_ge/status/2055539910212460878</li>
-    <li>DeepSeek招聘Agent Harness产品经理：定位Model + Harness = Agent。原文: https://x.com/dotey/status/2055504619279675668</li>
-    <li>Articraft：Agent批量生成铰接3D资产（机器人仿真用）。原文: https://x.com/Gorden_Sun/status/2055563391167787394</li>
-    <li>国产模型已能打：免费Big Pickle模型（GLM-4.6/DeepSeek V4 Flash）与付费模型体验差距极小。原文: https://x.com/yan5xu/status/2055644580843081744</li>
-    <li>程序员身份溢价消失：范凯指出当人人能用Agent完成编程时，程序员不再有溢价。原文: https://x.com/fankaishuoai/status/2055600683941056617</li>
-    <li>智力=速度x正确：控制论定义，AI让你coding无限快但不能告诉你该做什么产品。原文: https://x.com/oran_ge/status/2055593715771851084</li>
+    <li>微信读书上线 Skills 功能（weread.qq.com/r/weread-skills），可被Agent调用——阅读类Agent的新入口</li>
+    <li>Claude Code 被移植到 WebAssembly，在浏览器里直接运行，无需安装任何东西——网页即IDE的时代来临</li>
+    <li>Codex 支持从ChatGPT控制多台电脑，切换电脑只需切换项目——「一对多」的Agent控制范式</li>
+    <li>上海电信推出Token话费套餐：1元=25万token，支持30+主流模型，话费账单直接扣——运营商下场做AI基础设施</li>
+    <li>OpenAI产品线聚焦ChatGPT+Codex，发布首个中文开发者布道职位（base新加坡），DeepSeek同步招聘Agent Harness PM</li>
+    <li>Articraft：用Agent写代码批量生成铰接3D资产（如笔记本电脑铰链、抽屉滑轨），面向机器人仿真</li>
+    <li>Kepo：用AI生成Mac桌面小组件的新工具</li>
+    <li>Diffusion LLM新突破：Duke大学提出「Don't Train, Just Align」，用对齐替代从零训练，大幅降低扩散语言模型成本</li>
   </ul>
 </div>
 
