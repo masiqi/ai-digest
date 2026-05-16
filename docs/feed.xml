@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>📡 AI 资讯日报</title>
+    <link>https://masiqi.github.io/ai-digest/</link>
+    <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 16 May 2026 18:08:02 GMT</lastBuildDate>
+    <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/05/17 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-17.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-17.html</guid>
+      <description>开源工具生态大爆发：html-anything 48小时破2000 Star，Better Shot 终结截图工具付费，飞书CLI 40天1万Star——Agent可调用的基础设施正在从「各自为战」走向「开放标准」。与此同时，OpenAI 和 DeepSeek 同步加码 Agent 赛道，Codex 已支持跨电脑远程控制。</description>
+      <pubDate>2026-05-17T08:30:00+08:00</pubDate>
+    </item>
+    <item>
+      <title>📡 2026/05/16 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-16.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-16.html</guid>
+      <description>开源工具生态大爆发：html-anything 48小时破2000 Star，Better Shot 终结截图工具付费，飞书CLI 40天1万Star——Agent可调用的基础设施正在从「各自为战」走向「开放标准」。与此同时，OpenAI 和 DeepSeek 同步加码 Agent 赛道，Codex 已支持跨电脑远程控制。</description>
+      <pubDate>2026-05-16T08:30:00+08:00</pubDate>
+    </item>
+    <item>
+      <title>📡 2026/05/14 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-14.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-14.html</guid>
+      <description>Claude Code额度大战白热化：Anthropic提额50%同时封堵SDK共享漏洞，OpenAI Codex以企业免费策略反击；Google则以Gemini Intelligence重塑Android为"主动型AI系统"，发布专属硬件Googlebook，三巨头从不同维度争夺AI入口。</description>
+      <pubDate>2026-05-14T08:30:00+08:00</pubDate>
+    </item>
+    <item>
+      <title>📡 2026/05/13 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-13.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-13.html</guid>
+      <description>Google I/O 2026 发布 Gemini Intelligence 系统级AI、Googlebook 笔记本；OpenAI Codex 升级 Computer Use 成为桌面Agent；Claude Code 发布 Agent View 多Agent面板和 /goal 功能；宇树发布 GD01 载人机甲——AI从软件全面向硬件和系统层渗透。</description>
+      <pubDate>2026-05-13T08:30:00+08:00</pubDate>
+    </item>
+    <item>
+      <title>📡 2026/05/12 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-12.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-12.html</guid>
+      <description>AI正从"单工具"向"多Agent调度平台"全面跃迁——Claude Code的Agent View、Codex的插件生态、Thinking Machines的交互模型都在指向同一方向：AI不再是问答工具，而是多Agent并行、人机实时协作的操作系统。同时，Daybreak把安全从伦理问题变成产品问题，MiniCPM-V把端侧多模态推到实用拐点，豆包RAG被黑产攻陷则暴露了AI搜索的系统性脆弱。</description>
+      <pubDate>2026-05-12T08:30:00+08:00</pubDate>
+    </item>
+  </channel>
+</rss>

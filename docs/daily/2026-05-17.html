@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-17</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-17</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>开源工具生态大爆发：html-anything 48小时破2000 Star，Better Shot 终结截图工具付费，飞书CLI 40天1万Star——Agent可调用的基础设施正在从「各自为战」走向「开放标准」。与此同时，OpenAI 和 DeepSeek 同步加码 Agent 赛道，Codex 已支持跨电脑远程控制。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">📌 html-anything：Agent生成设计级HTML的开源神器</div>
+  <div class="section"><div class="section-label event">事件</div><p>Tom Huang 开源 html-anything，48小时突破2000 Star，正式支持 Vercel 一键部署。github.com/nexu-io/html-anything</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个工具让Agent能把原始数据直接转换成世界级设计水准的HTML页面。安装方式：npx html-anything 或直接 clone 仓库。Agent用它生成页面后，通过Vercel CLI一行命令 vercel --prod 就能发布成公网链接。Vercel还支持自定义链接有效期，非常适合做临时演示页面。它解决了Agent「能写逻辑但不会做UI」的痼疾——以前Agent生成的HTML只有功能没有美感，现在html-anything内置了设计系统，Agent只需描述内容，就能产出可直接展示的网页。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>数据分析报告一键生成精美网页，分享给同事只需发链接</li>
+    <li>Agent原型开发——描述产品想法，Agent生成可交互的HTML原型，Vercel发布后直接给用户测试</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这标志着「Agent驱动的UI生成」从概念验证进入实用阶段。过去设计师担心被替代，现在发现Agent生成的内容还需要设计系统来约束品质——设计师的角色从「画图」转变为「定义设计系统」。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2055490500598079732" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HISR1CyXcAE027d?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HISR1CyXcAE027d?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Better Shot：CleanShotX的完全免费平替</div>
+  <div class="section"><div class="section-label event">事件</div><p>向阳乔木实测多款截图工具后推荐 Better Shot，完全免费，最接近 CleanShotX 体验。github.com/KartikLabhshetwar/better-shot</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>M芯片Mac下载aarch64.dmg，Intel芯片下载x64.dmg即可使用。功能对标CleanShotX的标注、滚动截图、OCR、录屏等核心能力。结合Mole替代CleanMyMac、AI替代各种小工具，整套Mac工具链的年订阅费可以从几百美元降到零。对于中国用户尤其友好——CleanShotX在国内没有官方购买渠道。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发者日常截图标注，提交bug report时快速标注关键区域</li>
+    <li>做教程/文档的作者，滚动截图+标注一气呵成</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>免费开源工具正在系统性地替代付费Mac软件。SetApp订阅模式的护城河在被AI+开源双重夹击下加速瓦解。这是「消费降级+技术升级」的典型范式。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2055632454489444792" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIcSgrLakAABlW5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIcSgrLakAABlW5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Ring-2.6-1T：万亿级开源推理模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>inclusionAI开源Ring-2.6-1T，万亿参数规模，支持在线体验。huggingface.co/inclusionAI/Ring-2.6-1T，在线试用 ling.tbox.cn/chat</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一个为「真实复杂任务」打造的万亿级思考模型。不同于通用对话模型，Ring专注于需要深度推理的场景——代码生成、数学证明、复杂逻辑推理。可以直接在HuggingFace下载权重，也能在网页端免费用。对于预算有限的团队，这是一个可以本地部署的高质量推理引擎。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地部署作为编程助手后端，替代昂贵的API调用</li>
+    <li>复杂文档分析——合同审查、技术规范对照等需要深度理解的任务</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>国内开源模型在推理能力上快速追赶。万亿级模型的开源，意味着高质量推理能力不再是API巨头的独家特权。这与DeepSeek的开放策略形成呼应。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2055595793135063117" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIbxOq2aUAAmAav?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIbxOq2aUAAmAav?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Animate Text Skill：让Agent创建专业文字动画</div>
+  <div class="section"><div class="section-label event">事件</div><p>Pixelpoint发布Animate Text Skill，将24种文字动画固化为JSON规格，Agent直接查表执行。pixelpoint.io/skills/animate-text/</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个Skill解决了Agent做动画时的最大痛点——模糊描述导致结果不可控。过去你跟Agent说「做个炫酷的文字动画」，它每次生成的效果都不一样。Animate Text Skill把24种经过精心打磨的动画模式（打字机效果、粒子消散、3D翻转等）预先定义为JSON，Agent只需匹配最合适的模式并填入参数。安装：在Agent的skills目录中添加该skill即可。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>视频创作者用Agent批量生成标题动画，风格统一且专业</li>
+    <li>产品Demo视频中的文字动效，不需要After Effects技能</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这是「Skill标准化」的绝佳案例。Agent的创造力需要被约束才能产出可预期的高质量结果。把「模糊描述→可执行规格」这个范式推广到视频、3D等领域将是下一个爆发点。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2055557960756003086" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIbPELSakAA1ew0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIbPELSakAA1ew0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 飞书开源CLI工具包：1万Star的Agent基础设施</div>
+  <div class="section"><div class="section-label event">事件</div><p>飞书发布开源CLI工具包供Agent调用，40天超1万Star，在国产办公平台中功能最全。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Agent可以通过这个CLI直接操作飞书文档、表格、日历、审批、消息等全部功能。这意味着Agent能被集成到企业日常工作流中——自动创建文档、汇总表格数据、发送审批、安排会议。安装：npm install @feishu/cli 或 pip install feishu-cli，配置API凭证后Agent即可调用。这比传统的API对接方式简单一个数量级。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Agent自动汇总团队周报——从飞书表格读取数据，生成文档，@相关人员</li>
+    <li>自动审批流——Agent监测表格变化，符合条件自动发起审批</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这标志着中国SaaS平台正式进入「Agent-native」时代。飞书的开放策略可能倒逼钉钉、企业微信跟进，最终形成一套中国版的Agent办公标准。40天1万Star的速度也证明了市场对这类工具的饥渴。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ruanyf/status/2055492363448172999" target="_blank"><span class="handle">@ruanyf</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIaTUteaAAAjeCt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIaTUteaAAAjeCt?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIaTV9CbYAAxi0T?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIaTV9CbYAAxi0T?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Anthropic《Founder's Playbook》：AI创业避坑手册</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic发布内部手册《Founder's Playbook》，基于Claude Code和YC创始人的实战踩坑经验。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>核心观点反直觉：AI会让创业失败率上升，而不是下降。因为AI大幅降低了「做出东西」的门槛，导致竞争空前激烈——每个人都能快速做出产品，但「做出对的产品」依然极难。手册覆盖了从产品定位、技术选型到团队管理的完整框架。虽然不是代码工具，但对于任何在用Agent做产品的人都是必读。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>AI创业者做产品决策时的参考框架</li>
+    <li>技术Leader说服团队不要盲目追AI热点</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这是AI行业从「狂热」走向「理性」的里程碑。头部公司开始系统性总结失败教训而非吹嘘成功案例，说明行业正在成熟。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2055632262197362870" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2055285428329095168/img/Flt-Skc6XjXxo_6U.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2055285428329095168/img/Flt-Skc6XjXxo_6U.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>微信读书上线 Skills 功能（weread.qq.com/r/weread-skills），可被Agent调用——阅读类Agent的新入口</li>
+    <li>Claude Code 被移植到 WebAssembly，在浏览器里直接运行，无需安装任何东西——网页即IDE的时代来临</li>
+    <li>Codex 支持从ChatGPT控制多台电脑，切换电脑只需切换项目——「一对多」的Agent控制范式</li>
+    <li>上海电信推出Token话费套餐：1元=25万token，支持30+主流模型，话费账单直接扣——运营商下场做AI基础设施</li>
+    <li>OpenAI产品线聚焦ChatGPT+Codex，发布首个中文开发者布道职位（base新加坡），DeepSeek同步招聘Agent Harness PM</li>
+    <li>Articraft：用Agent写代码批量生成铰接3D资产（如笔记本电脑铰链、抽屉滑轨），面向机器人仿真</li>
+    <li>Kepo：用AI生成Mac桌面小组件的新工具</li>
+    <li>Diffusion LLM新突破：Duke大学提出「Don't Train, Just Align」，用对齐替代从零训练，大幅降低扩散语言模型成本</li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
