@@ -66,10 +66,310 @@
 <div class="header">
   <h1>📡 AI 资讯日报</h1>
   <div class="date">2026-05-16</div>
-
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>OpenAI宣布将ChatGPT与Codex合并为统一产品体验，Greg Brockman正式接管公司产品战略。这是继上周Claude Cowork发布后，AI Agent领域的又一次战略级整合。与此同时，Claude Code首次主动重置用户rate limit——正面回应Codex的竞争。ChatGPT+Codex vs Claude Code+Cowork的Agent双极格局正在加速形成。Google Gemini Spark内部截图泄露，暴露Agent+Chat双模式但缺Browser/Computer Use，显示Google在落地Agent时的谨慎节奏。三大巨头（OpenAI、Anthropic、Google）的Agent路线图在同一周密集曝光，Agent时代不再是"即将到来"，而是已经发生。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">📌 OpenAI组织重组：ChatGPT与Codex合并为统一产品</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI联合创始人兼总裁Greg Brockman正式接管公司产品战略，旗下ChatGPT、编程智能体Codex以及API业务整合进同一个核心产品团队。Brockman在内部备忘录中明确表示"将ChatGPT和Codex合并成一个统一的体验"。此前代理产品主管的AGI部署CEO Fidji Simo仍在病休中，这次调整方案是她与Brockman共同敲定。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是OpenAI产品架构史上最重要的一次整合。ChatGPT（对话+知识助手）和Codex（编程+Agent执行）各自代表了AI的两个核心能力维度：理解和行动。合并意味着用户不再需要在两个产品之间切换——同一界面内既能对话思考、又能让AI直接操作电脑完成任务。从组织层面看，Brockman作为OpenAI联合创始人亲自下场管产品，说明Sam Altman已将Agent落地视为公司最高优先级。这次整合的时间点也非常关键：Claude Code+Cowork刚发布，Anthropic在Agent可用性上已领先半个身位。OpenAI的回应不是小修小补，而是架构级重组——这在大型科技公司中极为罕见，通常意味着"不成功便成仁"的决心。更深一层看，将API业务也并入同一团队，说明OpenAI希望打造"从API到终端用户"的完整闭环，而这正是微软+GitHub Copilot一直想做但始终隔着一层的事。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发者日常：同一对话中先用ChatGPT分析需求文档，再让Codex自动实现代码、跑测试、部署，全程不切换工具。</li>
+    <li>非技术用户：口述业务需求（"帮我分析上季度销售数据并生成报告"），AI自动操作Excel/数据库/网页完成全流程。</li>
+    <li>企业场景：员工用一个统一的OpenAI入口完成从文档写作、数据分析到自动化脚本的全部工作，降低多工具切换成本。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果合并顺利落地，OpenAI将拥有业界首个"全谱系AI产品"——从聊天到编码到系统控制一站式覆盖。这对VS Code+GitHub Copilot生态是降维打击，因为Copilot始终受限于编辑器边界，而统一的ChatGPT+Codex可以在任何桌面应用中自由行动。对Anthropic而言压力巨大：Claude Code+Cowork虽然体验领先，但用户基数远不如ChatGPT。但这也带来风险：功能越复杂，用户学习成本越高，AI出错的影响面也越大。此外，这次重组发出了一个清晰的产业信号：Agent不再是"附加功能"，而是下一代AI产品的默认形态。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2055449510805946397" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
 </div>
 
+<div class="topic">
+  <div class="topic-title">📌 OpenAI ChatGPT接入银行账户：AI成为个人金融中枢</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI向美国Pro用户开放新功能：在ChatGPT内直接绑定银行、投资、信用卡账户，基于Plaid接入的12000+金融机构数据，展示统一资产dashboard，用户可以基于真实财务数据向ChatGPT提问。功能支持网页和iOS端，后续将下放至Plus用户。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这步棋的战略意义远超表面上的"又一个数据源接入"。ChatGPT正在从信息工具变为行动代理——不仅能回答"什么是好的理财策略"，还能告诉你"以你现在的现金流，下个月是否应该调整定投金额"。金融数据是个人数字生活中最敏感、最不愿分享的数据类别，OpenAI选择首发绑定银行账户，说明它对自己在隐私和信任方面的品牌势能有足够自信。技术底层依赖Plaid（美国最大的金融数据聚合平台），这说明OpenAI采用了"连接器"策略而非自建金融基础设施，走得轻且快。结合同一天宣布ChatGPT+Codex合并来看，一个更宏大的图景浮现：ChatGPT正在成为用户所有数字生活的统一入口——聊天、编码、金融、日历、邮件——一切都在一个对话界面中完成。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>个人理财：用户问"我这个月花了多少钱在餐饮上？和上个月比有什么变化？"，ChatGPT直接读取银行流水并回答。</li>
+    <li>投资决策辅助：用户持有谷歌和亚马逊股票，ChatGPT基于账户持仓+公开市场数据给出个性化分析（"你的GOOG仓位占60%，建议考虑适当分散"）。</li>
+    <li>账单管理：ChatGPT自动扫描信用卡账单，标记异常消费，提醒即将到期的订阅费用。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期内最大的冲击是对Mint/Personal Capital等传统个人理财App——当ChatGPT能同时看你的账单、做预算、写分析报告，单一功能的理财工具有被"平台化吞噬"的风险。中期看，这标志着AI从"聊天搭子"进化为"数字管家"，用户授权AI接触越来越多的人生数据。长期看可能引发监管关注：AI能否被视为"金融顾问"？当AI基于你的账户数据推荐了一笔糟糕的投资，责任在哪里？OpenAI显然在赌——先用Pro用户（付费意愿强、对AI信任度高）试水，跑通模型后再推向大众。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2055359274486104433" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
 
+<div class="topic">
+  <div class="topic-title">📌 Claude Code与Codex竞争升级：Anthropic首次重置Rate Limit</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Code本周主动重置了用户的五小时和每周额度限制，这是Claude Code产品历史上首次出现这样的行为。同时归藏和meng shao等KOL注意到，Codex也会做类似的重置操作。此前大家普遍认为Codex在"无限使用"体验上领先，Anthropic此举被解读为正面迎战。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Rate Limit重置看似是个小功能调整，实则折射出AI Agent商业化竞争的核心矛盾。Agent型产品（Codex/Claude Code/Claude Cowork）与传统AI聊天产品不同：一次Agent任务可能持续数十分钟、消耗大量token。如果严格按token计费，用户不敢让Agent放手去做；如果无限使用，厂商扛不住成本。Anthropic此前选择保守策略（严格限制），Codex选择激进策略（几乎无感限制）。现在Anthropic开始向Codex靠拢——通过动态重置额度来模拟"接近无限使用"的体验。这本质上是一场"谁更敢烧钱换用户习惯"的消耗战。更深层看，两家公司对Agent产品的定价哲学开始趋同：都意识到Agent不是工具而是平台，需要先用慷慨的免费额度培养用户依赖，未来再通过企业订阅/增值服务变现。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发者周末密集编程：以往担心额度用尽不敢启动大任务，现在可以放心让Claude Code执行完整的重构+测试+部署流程。</li>
+    <li>对比测试：用户可以在同一任务上分别使用Claude Code和Codex，比较两者的代码质量、速度和成本效益。</li>
+    <li>Agent产品经理决策参考：如何设计合理的额度策略以平衡用户体验和成本。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期利好用户——无论用哪家产品都能享受更宽松的使用体验。中期将加速"编程Agent大众化"：当用户不再被token额度绑住手脚，Agent的使用频率和场景将爆发式增长。长期看，如果两家最终都烧不起钱转向收费，早期积累的用户习惯会面临"断奶"阵痛，可能出现反弹。此外，这次竞争给其他Agent产品（如Cline/Cursor/Windsurf）带来巨大压力——小厂无法同时拼模型质量和额度慷慨度。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2055344683702030472" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2055335680078995651" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2055334794703593620" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Google Gemini Spark泄露：Agent+Chat双模式但缺Computer Use</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google Gemini Spark内部截图曝光，新模型同时支持Agent模式和Chat模式，重点强调高级工具使用和Skills创建流程。但截图中暴露了两个明显限制：Skills只能通过复制粘贴MD文件创建（无可视化导入），目前没有任何Browser或Computer Use的痕迹（无法直接控制用户电脑）。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Google在Agent落地上的节奏比OpenAI和Anthropic至少慢半个身位。Gemini Spark的双模式设计（Agent/Chat切换）说明Google对Agent的定位仍然保守——Agent是Chat的"增强模式"，而非独立主形态。这与Codex"Agent优先"和Claude Code"终端原生Agent"的哲学形成鲜明对比。Skills通过MD文件创建暴露了Google的开发者优先思维：他们假设Skills的创作者是写代码的人，而非直接面向普通用户。没有Browser/Computer Use则是最关键的缺失——Control（控制电脑）是Agent最具颠覆性的能力，缺少它就只是一个"会调工具"的聊天机器人。但Google的步步为营也有其合理性：作为拥有数十亿用户的平台，任何安全翻车都是灾难性的。他们选择先打磨核心工具链，再逐步开放激进能力，是典型的"Google式产品方法"——宁可慢，不能错。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发者创建Skills：写好MD格式的Skill描述文件，粘贴到Gemini中创建自定义工具。</li>
+    <li>Agent模式：在Gemini对话中切换为Agent模式，让AI调用日历/邮件/文档等Google Workspace工具。</li>
+    <li>Chat模式增强：在普通对话中使用Skill扩展（如"用我的PPT Skill帮我美化这页截图"）。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对于已经深度使用Claude Code/Codex的用户，Gemini Spark目前没有足够吸引力切换。但对于Google生态内的用户（尤其是使用Google Workspace的企业），一旦Gemini的Agent能力成熟，其与Gmail/Drive/Calendar/Meet的原生集成将具有巨大优势。此外，Gemini 3.5 Pro的Three.js构建效果图，暗示Google在模型端有强劲储备。综合判断：Google是"慢热型选手"，短期不被看好，但中长期一旦其Agent能力与生态整合到位，会是OpenAI/Anthropic的最强对手。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2055249426019885262" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2055243964973838589" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2055332484706181338" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 飞书开源CLI破万Star：国产办公Agent化的里程碑</div>
+  <div class="section"><div class="section-label event">事件</div><p>字节跳动飞书团队开源CLI工具包（github.com/larksuite/cli），发布40余天即突破1万Star，成为国内办公套件中第一个开源破万Star的项目。阮一峰撰文介绍使用该CLI接入Agent实现办公自动化，铁锤人指出同期其他国产办公平台开源的CLI仍在2k Star水平，飞书领先五倍。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>飞书CLI的爆发式增长有三个关键背景：一是"Agent接入办公系统"已成共识——所有主流Agent产品（Claude Code/Codex/Hermes/Codepilot）都需要操作文档、日历、消息、审批等办公数据；二是飞书的开放策略在国内协同办公赛道独树一帜——字节选择了"工具赋能Agent生态"而非"自己做一个Agent"的路线，这与飞书一贯的"做平台不做垂直"理念一致；三是MCP（Model Context Protocol）协议的兴起让"Agent调CLI"这件事变得标准化，飞书CLI本质上就是飞书的MCP Server实现。1万Star在40天内实现，说明市场需求极其旺盛——不是大家"想试试"，而是"真的在用"。同期竞品只有2k Star，差距不在技术而在产品定位：飞书想清楚了"Agent生态需要什么"，竞品更多是"我们也做个开源项目"的跟风。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发者用Claude Code/Codex操作飞书：让AI自动读取飞书文档、创建审批、发送消息、拉取日历等。</li>
+    <li>自动化日报：每天AI自动汇总飞书群聊消息和历史文档，生成工作总结。</li>
+    <li>企业流程自动化：AI根据飞书审批单数据自动生成报告、更新项目看板、通知相关人。</li>
+    <li>个人效率：通过自然语言让AI帮你整理飞书文档、搜索历史消息"上周老张发的那个方案"。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>飞书CLI的1万Star将成为国内办公Agent化的里程碑事件。微观上，飞书在企业AI应用生态中建立了先发优势——当Agent产品都需要MCP Server时，飞书已经有了最好的开源实现。宏观上，这件事刺激了国内办公软件的"Agent基础设施"竞争：钉钉、企业微信、有道云、石墨等必然加速跟进。对普通用户而言，办公Agent化不再是概念——你现在就能用Claude Code直接操作飞书完成日常工作。归藏已经在Codepilot中接入飞书CLI，实践已验证可行。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ruanyf/status/2055339978127896686" target="_blank"><span class="handle">@ruanyf</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2055265915499855900" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2055233604240572606" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Anthropic Mythos攻破Apple M5硬件内存安全防线：5天vs 50亿</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究人员使用Anthropic的Mythos Preview模型，仅用5天时间就找到了macOS内核内存损坏漏洞的利用程序，成功攻破了Apple耗资数十亿美元、历时5年为M5芯片打造的Memory Integrity Enforcement（MIE）硬件内存安全系统。研究团队已亲自前往Apple Park，将55页完整技术报告递交给苹果。Apple打补丁后才会公开完整报告。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这可能是AI安全研究史上最具象征意义的一次攻防战。Apple的MIE系统代表的是传统安全思路的巅峰：从硬件层面杜绝内存破坏类漏洞——为此投入了5年时间和数十亿美元，专门定制了M5芯片的硬件安全模块。而Anthropic的Mythos Preview——一款前沿AI模型——仅用5天就完成了突破。5天 vs 5年，几百万美金训练成本 vs 数十亿美元硬件投入，这个对比令人心惊。技术本质是：硬件安全防线是静态的、基于已知攻击面设计的；而AI驱动的漏洞发现是动态的、能够在庞大的攻击面空间中高效搜索。不是说Mythos比MIE的设计者更聪明，而是AI的"蛮力+模式识别"能力在安全领域天然碾压人类专家的"逻辑推理"。这并非AI安全研究的终点，反而是一个起点——未来所有硬件和软件安全防线，都必须假设攻击者也拥有同等甚至更强的AI能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>安全研究：安全团队使用AI辅助进行漏洞挖掘，大幅缩短发现周期。</li>
+    <li>防御升级：安全产品引入AI对抗性测试，在产品发布前模拟AI攻击者的视角。</li>
+    <li>保险定价：网络安全保险行业需要重新评估基于AI威胁的风险模型。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期看，Apple面临着巨大的公关和信任压力——"我们花了50亿但AI只用了5天"。中期看，整个科技行业的安全范式需要重构：不能假设攻击者只是人类研究员，而必须是"人类+AI"的协作体。长期看，AI安全能力将引发新的军备竞赛——攻击方和防御方都会武装AI。对于普通用户而言，macOS/iOS的安全性并未实质性下降（漏洞已被Apple堵上），但信心的裂痕已然出现。对投资者来说，这可能加速"AI安全"赛道的资本流入。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2055251106715373849" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 WIRobotics人形机器人获6800万美元融资：手部灵巧度突破</div>
+  <div class="section"><div class="section-label event">事件</div><p>韩国WIRobotics获得6800万美元融资，展示ALLEX人形机器人。核心技术数据：0.3mm指尖重复精度、15自由度仿生手、100gf以下力觉感知、高度反向驱动。视频中机器人能轻柔抓取电路板微小元件，也能举起30kg哑铃，还能与人握手时控制力道不伤人。目标2027年底实现初步商业化。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>人形机器人最难的不是"会走"（Boston Dynamics已经解决了），而是"会用手"。人类手的灵巧度源于百万年进化——22个自由度、指尖每平方厘米数千个触觉感受器、从握住鸡蛋到捏起针的精度跨度。WIRobotics的突破在于三点：一是从WIM可穿戴机器人中积累的海量真实人类运动数据，让ALLEX的手部动作有"人的味道"而非机械感；二是力觉感知做到100gf以下，意味着能感知到"纸张的重量"级别；三是0.3mm重复精度已经接近工业级CNC机床的水平，但成本远低于工业机器人。有意思的是，这支韩国团队选择先做"手"再做"全身"——这个产品路线选择非常聪明，因为市场对"能干活的手"的需求远大于"会走的腿"。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>精密制造：电子厂中抓取和安装微小元件（芯片、电阻、传感器），替代重复性人工作业。</li>
+    <li>物流拣选：从杂乱的物料箱中精准抓取不同形状、重量、脆度的物品。</li>
+    <li>医疗辅助：手术器械传递、药品分拣——需要极高精度和力觉反馈的场景。</li>
+    <li>实验室自动化：操作移液器、培养皿、试管，处理危险或敏感试剂。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>WIRobotics的融资和Demo为人形机器人赛道注入一剂强心针。从投资角度看，手部模块可能是人形机器人产业链中最有价值的细分环节——堪比电动车电池之于整车。对竞争对手Figure、Tesla Optimus、1X Technologies来说，WIRobotics的手部技术指标已经设定了可以量化的对标基准。对中国机器人企业而言，核心挑战在于力觉传感器和精密减速器的国产化——这在当前制裁环境下尤为紧迫。2027年商业化目标虽然乐观，但即使推迟到2028年，对整个人形机器人产业也是极大的加速。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2055340422199378314" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Cambridge Articraft：Agentic Coding生成可交互3D资产</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cambridge大学助理教授Elliott Wu（前Stanford/Oxford）团队发布Articraft——一个Agentic Coding系统，让AI Agent自主写代码、自己执行、自己接收物理验证反馈、不断迭代，最终输出带零件、关节、真实运动的可交互3D资产。同时开源了Articraft-10K数据集（超过1万组articulated asset）。传统制作一套高质量articulated asset需几天到几周，现在Agent全自动跑通。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Articraft的颠覆性不在"AI生成3D"，而在于"Agentic Coding"这个方法论。以往3D生成是端到端的（输入描述→输出模型），结果是"看起来像"但"动起来假"。Articraft则是"AI写代码→代码定义物理属性→物理引擎验证→反馈调整代码"——这是一个闭环的、自我验证的过程。背后的洞见是：3D资产不只是几何形状，而是物理规则的外化——关节角度、力矩范围、碰撞体积、表面摩擦力——这些都必须通过"可执行代码"来表达，单纯神经生成难以保证物理正确性。这套方法论可以外推到机器人仿真、游戏开发、影视特效等所有需要"物理正确"的数字资产场景。开源的Articraft-10K数据集也是巨大贡献——研究者现在有了标准化的articulated asset基准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>机器人训练仿真：自动生成成千上万种不同结构、不同物理参数的机械臂/机械手/行走机构，大幅降低仿真场景搭建成本。</li>
+    <li>游戏开发：策划描述"一个可以开门的柜子"，Agent自动生成带铰链、碰撞体、可交互脚本的完整资产。</li>
+    <li>工业设计：设计师输入"折叠椅"，Agent生成多个带关节参数化模型，可直接导入物理仿真验证承重和折叠机制。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Articraft将"Agentic Coding"方法论带入了3D领域，这是继SWE-Bench代码修复、Computer Use窗口操作之后，Agent能力的第三个验证战场。对Roblox、Unity、Unreal等引擎而言，如果能集成此类Agent，将极大降低内容创作门槛。对机器人行业，仿真的"数据饥渴"问题将得到部分缓解——毕竟真实物理世界的数据采集成本极高。长期看，Agentic Coding+物理仿真=数字世界的"自我建造能力"，这是迈向通用人工智能（AGI）在物理世界落地的重要一步。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2055339035971522804" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Codex橙皮书开源：揭秘GPT-5.5硬伤与Codex真实表现</div>
+  <div class="section"><div class="section-label event">事件</div><p>花叔发布中英双语《Codex橙皮书》，公开了大量用户实测数据和内部问题。核心发现：GPT-5.5在SWE-Bench Pro上仍输给Opus 4.7（58.6 vs 64.3）；标称100万token上下文实际可用仅25.8万；Full Access功能在Windows上真实删除了用户370/700/240GB数据；MultiAgentV2存在3个未修复的GitHub Bug。花叔同时分享了Codex使用经验：让Agents.md读取Claude.md实现工作区记忆继承、纠正Codex不知自己能生图的认知缺陷。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一份极其珍贵的"真话报告"——在厂商宣传满天飞的AI行业，独立第三方的硬核测试是稀缺品。GPT-5.5不敌Opus 4.7的事实说明：模型能力不等于Agent能力，Benchmark分数不等于真实体验。Codex的集成质量、Prompt工程、工具链设计同样重要。100万token上下文被砍到25.8万——这是操作系统的"虚拟内存"骗局翻版：理论上支持，实际一用就崩。最严重的是Windows上删除用户数据的Bug——如果在企业环境发生，后果是灾难性的。这提醒所有人：Agent产品目前仍是"高速公路上跑实验车"，需要用户保持警觉。花叔的实用技巧（Agents.md读Claude.md、生图认知纠正）则展示了早期Power User如何"驯服"这些不完美的Agent。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>工具选型参考：企业选Agent产品时，基于真实测试数据而非厂商Benchmark做决策。</li>
+    <li>Codex用户避坑：了解Full Access风险、MultiAgentV2 Bug，避免踩坑。</li>
+    <li>Prompt工程学习：花叔的技巧（Agents.md继承Claude.md配置）可以直接复用。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>橙皮书对OpenAI形成了舆论压力——用户真正担心的不是"GPT-5.5不如Opus"，而是"Windows上会删我文件"。对Anthropic而言反而是利好，证明Opus 4.7在真实场景中的竞争力。对整个AI Agent行业，这份报告树立了一个重要先例：需要更多独立第三方来做"拆台测试"而非"站台评测"。花叔也坦言自己遇到"知识的诅咒"——能力越强越难帮助普通人，这提醒所有AI内容创作者：内容价值不在于"多专业"，而在于"帮用户解决什么问题"。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2055316744165073162" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2055314740538077543" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2055332369893630388" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 马斯克开源X推荐算法：普通人如何从中获益？</div>
+  <div class="section"><div class="section-label event">事件</div><p>马斯克领导的xAI团队将𝕏（Twitter）的最新推荐算法开源到GitHub（github.com/xai-org/x-algorithm）。此前X算法经过多次迭代，这次是最新版本的全量公开。Berryxia已用Opus 4.7模型对代码做了分析验证。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>开源推荐算法在社交媒体行业是一个"核弹级"事件。几乎所有主流平台（Meta、TikTok、YouTube、LinkedIn）的推荐算法都是最高商业机密——它们在信息分发效率上的差距决定了用户增长和广告收入。马斯克这次开源的逻辑：与其让外界猜测"算法在刻意打压谁"，不如完全透明化。技术上，推荐算法本质是排序问题，X的算法可能包含图神经网络（用户关系图）、实时信号处理（点赞/回复/停留时间）、个性化排序三个核心模块的代码。但算法开源≠算法可解释——理解大规模推荐系统的行为还需要看训练数据分布、A/B测试参数、工程实现细节。对普通创作者来说，了解算法的排序逻辑确实有助于优化内容策略，但"迎合算法"本身就是一个陷阱——算法本身也会不断迭代。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>内容创作者研究：了解X算法如何排序推文，优化发布策略（时间、互动模式、内容形式）。</li>
+    <li>推荐系统学习：开源代码是推荐系统工程实践的最佳学习材料。</li>
+    <li>第三方工具开发：基于算法逻辑开发X数据分析、A/B测试工具。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期看，X平台的创作者会涌入"算法研究"热潮，但真正的效果变化取决于算法本身的质量而非透明度。中长期最大的影响可能是倒逼其他平台——如果X的算法透明持续带来用户信任和增长，Meta/TikTok将面临"不开源就是心虚"的舆论压力。对推荐系统研究社区，这是继Reddit开源之后又一个重量级数据集和代码库。但也有担忧：完全开源可能被恶意利用来刷量、操纵信息流、甚至扩大错误信息的传播效率。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2055237156894920720" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 DeepSeek招聘Agent Harness产品经理：国产Agent操作系统的信号</div>
+  <div class="section"><div class="section-label event">事件</div><p>DeepSeek通过宝玉发布招聘信息：招募Agent Harness产品经理，加入Agent Harness团队。团队使命定义为"Model + Harness = Agent"，即"除模型本身以外的所有工作都属于Harness范畴"。产品经理将参与DeepSeek桌面端Agent产品的全过程，定义DeepSeek对Harness的理解。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>"Harness"这个词用得非常精准。在Agent架构中，Model是大脑（推理/规划/决策），Harness是骨骼和肌肉（工具调用/环境交互/记忆管理/安全边界）。DeepSeek单独为Harness组建团队并招PM，说明他们已经意识到：模型能力只是Agent的必要条件，不是充分条件。比照行业现状：Codex的Harness是桌面端操作系统级集成、Claude Code的Harness是终端+MCP协议、Cursor的Harness是IDE插件——每个产品对Harness的理解不同，产品形态也因此不同。DeepSeek选择桌面端Agent作为切入点，意味着他们要做的是"中国版Codex"——直接控制用户电脑执行任务。这是一个极其大胆的选择：国内桌面端生态比海外碎片得多（Windows/Mac/统信/麒麟），安全策略也更复杂，但一旦做成，将填补巨大的市场空白。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>DeepSeek桌面端Agent产品：用户在桌面端通过自然语言让AI操作文件、浏览器、办公软件、终端。</li>
+    <li>企业场景：员工用DeepSeek Agent自动完成报表整理、文档归档、审批流程等。</li>
+    <li>开发者场景：Agent辅助编写、调试、部署代码，与国产IDE/开发工具链集成。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>DeepSeek入局Agent标志着中国AI行业从"模型竞赛"进入"产品竞赛"阶段。此前国内Agent产品主要是Cline的国产化、AutoGLM的实验版、淘宝星辰等——没有一个真正的桌面端Agent操作系统。DeepSeek的品牌势能（开源第一梯队）+ 模型能力 + 这次明确的Harness招聘，让人对其Agent产品抱有较高期待。但挑战同样巨大：桌面端Agent的工程复杂度远超Web应用，需要深厚的安全、兼容性、用户体验积累——这些都是DeepSeek此前作为模型公司不擅长的。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2055343078450491635" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 智能体最低门槛消失：Codex移动端让非技术用户几分钟上手</div>
+  <div class="section"><div class="section-label event">事件</div><p>范凯在试用Codex移动端后发出感叹：一个毫无编程背景的办公白领，现在要学会用智能体操控电脑，所需时间从"数周学习"缩短到"几分钟"。只需要装个App、连上去、开始对话，不需要配守护进程、选模型、装Plugin。同时花叔也反思自己因"知识的诅咒"而失去对普通人需求的感知，坦言AI Coding能力越强，做内容反而越脱离普通人。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是AI Agent领域"工具vs产品"之争的终局信号。此前Agent工具链（OpenClaw/Cline/Pi Agent）的学习曲线极陡——选模型、配守护进程、装MCP Server、写Prompt模板——本质上是"开发者玩具"。Codex移动端用一个App抹平了所有门槛，实现"安装即用"。这让范凯之前的担忧变成现实：你花了几个月钻研的工具配置知识，在一夜之间被产品化贬值到零。花叔的"知识诅咒"反思同样深刻：当KOL的能力远超用户一个数量级时，他们生产的内容自然偏向"进阶技巧"而不再是"入门指南"——但后者才是大多数用户真正需要的。这也解释了为什么"零基础AI入门"类内容在流量上反而碾压"高级AI技巧"。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>非技术白领：打开手机App对AI说"帮我把这季度销售数据做成图表发到群里"，AI自动操作电脑完成。</li>
+    <li>中小企业主：无需IT团队，用口语指令让AI完成合同起草、发票整理、客户跟进。</li>
+    <li>学生群体：让AI辅助完成论文格式排版、数据可视化、文献整理——连编程是什么都不知道也能用。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI Agent的大众化速度远超行业预期。当技术门槛被产品化抹平后，竞争的焦点从"谁的工具更强"转移到"谁的体验更顺"——这是典型的"消费级产品"逻辑。对OpenAI/Anthropic而言，移动端是兵家必争之地：谁先占领手机屏幕，谁就拥有了通往10亿用户的入口。对传统SaaS公司，这意味着护城河可能在几年内被Agent填平——当任何白领都能用AI自动操作Excel/Salesforce/SAP，这些工具的品牌粘性将大幅下降。对内容创作者：KOL需要重新思考定位——是做"专业用户的小圈子"，还是做"普通人的引路人"？</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2055542897222279240" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2055323672401846591" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Figma Q1 2026财报：AI生成设计工具威胁下实现46%增长</div>
+  <div class="section"><div class="section-label event">事件</div><p>Figma创始人发布Q1 2026财报：营收$333M，YoY +46%（Q4为40%，Q3为38%，连续两季加速）。meng shao在推文中提出尖锐问题："v0、lovable都能AI生成网站，Claude Design这么强，Figma还活着吗？"——答案用财报数据来回答：活着，而且活得很好。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Figma的46%增长在v0/Lovable/Claude Design等AI设计工具的围攻下显得尤为难得。这背后有几个关键因素：一是AI生成工具目前主要替代的是"从0到1"的快速原型，而Figma的核心价值在于"协作设计系统"——当团队规模超过5人、需要维护设计规范、组件库和版本管理时，Figma仍然是不可替代的；二是Figma在开发者工具和设计系统管理上的积累形成了数据飞轮——企业一旦将设计系统迁移到Figma，迁移成本极高；三是Figma也在积极集成AI（如AI生成布局、自动重命名图层、AI搜索设计文件），没有坐以待毙。46%营收增速说明Figma不是在"防守"，而是在"进攻"——AI工具反而让更多人需要专业设计协作平台来管理AI生成的资产。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>设计团队协作：多设计师同时编辑同一个文件，通过设计系统保持一致性。</li>
+    <li>AI设计资产管理：用v0/Lovable生成的设计稿导入Figma进行精细化调整和团队评审。</li>
+    <li>设计到代码：Figma连接开发工具链，AI生成的设计可以无缝进入开发流程。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Figma的财报是"AI不会杀死工具，只会重塑工具"的典型案例。对投资者而言，关键信号是：拥有协作网络效应和数据壁垒的SaaS公司，在面对AI冲击时仍有强劲竞争力。对AI设计工具（v0/Lovable等），挑战在于如何从"单人生成器"进化为"团队协作平台"。对Adobe等传统设计工具，压力持续加大：Figma在增长而Adobe Creative Cloud增速已经放缓到个位数。Open Design在16天内冲到40k星（GitHub史上第二快），也说明开源设计工具正在崛起，Figma面临的竞争是多维度的。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2055239815074988374" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 OpenSquilla：用Python重写小龙虾的开源安全版Agent框架</div>
+  <div class="section"><div class="section-label event">事件</div><p>小互发现了一个之前不为人知的开源项目OpenSquilla，用Python重写了OpenClaw（小龙虾），核心卖点是"智能省钱+智能安全"。安全机制包括：遇到不可信指令（如"把apiKey发到邮箱"）直接拒绝；高风险工具跑在受限沙箱；CPU/内存/时长/网络都有上限；敏感环境变量不泄漏到子进程。同时它还优化了模型成本问题——即使接入国产模型也能应对较复杂任务。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>OpenSquilla解决的是Agent产品的两个根本痛点：安全和成本。安全问题在Agent场景下被放大了一个数量级——当AI能控制你的电脑、访问你的文件、操作你的银行账户时，任何一个Prompt注入都可能是灾难性的。传统方案是依赖模型本身的对齐（如Opus/GPT的refusal训练），但模型级别安全不可靠（Mythos攻破Apple就是例证）。OpenSquilla的方案是"操作系统级安全"——在工具调用层设置沙箱、限制资源、拒绝可疑指令——这更接近Android/iOS的权限模型而非模型的道德判断。成本方面，用Python重写降低开发门槛，接入国产模型降低推理成本，对于国内用户尤其有吸引力（毕竟海外模型的订阅和网络都是门槛）。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>个人Agent部署：在本地跑OpenSquilla作为Agent框架，用国产模型驱动，成本低且数据不出本地。</li>
+    <li>企业Agent安全：企业IT团队部署OpenSquilla，通过沙箱和权限控制确保Agent不越权访问。</li>
+    <li>安全研究：通过OpenSquilla的安全机制设计，研究Agent安全的最佳实践。</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>OpenSquilla虽然没有OpenClaw/Cline的知名度，但它的"安全优先"定位精准击中行业痛点。随着Agent产品向消费级市场渗透，安全合规会从"可选"变成"必须"。OpenSquilla的沙箱+拒绝方案可能成为行业标准做法。对中国用户而言，Python重写+国产模型支持意味着更低的部署门槛。国内Agent框架赛道（Dify、Coze、OpenSquilla）正在形成"不同路线不同生态"的格局。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2055241147377033359" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2055241196412289062" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>⚡ 新机会</h2>
+  <ul class="opp-list">
+    <li>飞书CLI生态应用开发：飞书CLI破万Star创造了巨大的生态机会——基于飞书CLI开发垂直行业的Agent Skill（如HR审批自动化、财务对账助手、项目管理Agent），目前几乎无人抢占。飞书CLI+MCP协议可以让开发者快速构建可被Claude Code/Codex调用的飞书工具链。</li>
+    <li>开源模型评测平台免费Token自动轮换：实践哥提出的idea：利用模型评测网站（如OpenRouter/Chatbot Arena/OpenCode等）上免费提供的开源模型Token，通过一个Skill自动检测新上线的模型并轮换使用。1T参数级别的推理模型完全免费，适合做资讯收集、报表整理等非实时任务。可以开发一个Agent Skill定期爬取评测平台、提取免费模型endpoint、自动更新配置。</li>
+    <li>Agent Skill市场开发：从归藏的PPT Skills和花叔的Agents.md配置技巧来看，Agent产品正在形成类似App Store的Skill生态。目前Skill分发还很原始（MD文件复制粘贴），但Google Gemini和Raycast都在做Skill创建工具。早期进入者可以建立Skill模板库、Skill评测平台、Skill自动生成工具。</li>
+    <li>HTML Anything + Obsidian知识管理：SilicoVille展示了将HTML Anything与Obsidian结合，用本地Codex将Markdown文档自动转为精美HTML页面。这个工作流可以标准化为Skill——用户只要在Obsidian中写好内容，Agent自动生成可部署的网页版本。适合个人博客、知识库发布、项目文档展示等场景。</li>
+    <li>LoRa通信网的AI集成：阮一峰提到的LoRa自建通信网（百元成本覆盖城区），如果结合本地运行的Agent模型，可以在断网环境下维持AI Agent的部分功能（如本地文档处理、离线任务调度）。虽然是小众场景，但在应急通信和边缘计算领域有独特价值。</li>
+    <li>Qwen3-ASR替代Whisper的中文语音Agent：Feiteng指出Whisper幻觉多、限制30秒片段，而Qwen3-ASR支持最长20分钟音频、中文识别更准。配合Qwen3-ForcedAligner做文字时间轴对齐，可以构建中文语音到文档的完整Agent链路——从会议录音到会议纪要+时间轴标记+行动项提取的全自动化。</li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Raycast 2.0 Beta：加入Agent+Skill生态，Beta期间免费使用顶级模型。向阳乔木实测发现Bug不少（不支持Cloud同步、快捷键需重设），但方向正确——效率工具集成Agent是大势所趋。下载地址：raycast.com/new</li>
+    <li>Anthropic官方Claude Code 101教程：9节课从入门到专家。归藏推荐安装沉浸式翻译插件直接阅读。课程涵盖Claude Code基础到高级技巧，代表了Anthropic对开发者培训的重视。</li>
+    <li>Open Design 40k Star：16天成为GitHub史上第二快增长项目。发布0.8.0 preview，支持插件系统、400+插件、16种Coding Agent CLI自动检测。开源设计工具正在形成生态级竞争。</li>
+    <li>Kami 1.5排版引擎：AI时代的排版工具能构建着陆页。Tw93开发，支持通过Claude直接生成精美页面。与Mole（Mac系统优化工具，买断$9）同为独立开发精品，代表"AI辅助+个人开发者"的产品范式。</li>
+    <li>Zed编辑器获宝玉推荐：内存占用小、可登录OpenAI和GitHub共用Token。在AI Coding工具满天飞的今天，轻量级编辑器反而因Agent接管了代码编写而重现价值。</li>
+    <li>长上下文压缩方案：Jeffery Kaneda提出"高内聚MD文档+框架引用"模式。将长上下文拆成多个&lt;500行MD文档，Agent按需访问细节。这个思路与Obsidian的双向链接理念一致，适合构建Agent友好的知识库。</li>
+    <li>Virushuo开源最快BM25搜索引擎：从20年前的NLP搜索到今天的神经网络搜索、从给人用换成给Agent用，搜索始终是核心。开源BM25引擎是Agent基础设施的重要拼图。</li>
+    <li>Gemini 3.5 Pro下周可能发布：Tony出海和Berryxia都在关注。如果Gemini能同时发布Agent能力，将是Google在AI Agent赛道的首次正面出击。</li>
+    <li>Practice哥Codex Windows配置方法：两行配置（remote_connections=true, remote_control=true）让手机App直连Windows Codex——这是目前最简单的Windows Agent部署方案。</li>
+    <li>Laper.ai剧本创作工具：赵纯想发布，类比剪映降低视频创作门槛，Laper.ai要降低剧本创作门槛。AI创作工具正在从"通用聊天"走向"垂直专业"。</li>
+    <li>FDE（Full-stack Development Engineer）在AI时代重新流行：宝玉指出，AI降低了写代码门槛但放大了对"懂客户+懂产品+能落地"的人才需求。这解释了为什么"全栈"概念在AI时代反而更重要。</li>
+    <li>Pi Agent配置稳定版发布：九原客放出全量带注释的Pi Agent配置。强调"如果需要开箱即用请用Claude Code/Codex"——这再次印证了Agent产品的两极分化：极客折腾配置 vs 大众一键安装。</li>
+    <li>TasteVerse味迹开源：将饮食体验变成3D宇宙中的星星。代表"Memory+可视化"的新交互范式——不只记数据，更记体验。</li>
+    <li>Yann LeCun观点：LLM在数学和代码领域最强，但不是创造性的数学家或软件架构师。他的角色是"增强智能"而非"替代智能"。</li>
+    <li>Sub2API bug修复中：yetone fork了项目修bug，Response API仍有严重bug待修。提醒Agent生态的基础设施仍在快速迭代中，稳定性是大问题。</li>
+    <li>almma Computer Use实测：yetone测试发现目前只有Alma和Codex能真正在后台执行"打开网易云音乐播放今日推荐"。Computer Use仍是Agent最难啃的骨头。</li>
+    <li>X推出全新推荐算法：Tony出海反馈"之前很多关注的都刷不到了，期待新算法改善"。算法开源是好事，但算法效果才是用户真正关心的。</li>
+    <li>实践哥0编程复刻视频教程预告：看到DilumSanjaya的酷炫视频后，实践哥打算做零编程教程——让粉丝也能复刻。这代表了AI时代内容创作的门槛下移。</li>
+  </ul>
+</div>
 
 <div class="footer">
   由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
