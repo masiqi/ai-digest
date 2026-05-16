@@ -66,10 +66,203 @@
 <div class="header">
   <h1>📡 AI 资讯日报</h1>
   <div class="date">2026-05-16</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>开源工具生态大爆发：Open Design 16天破4万Star成GitHub史上增速第二，飞书CLI月余破万Star领跑国产办公Agent化。Codex与Claude Code正面交锋升级，Agent从极客玩具走向大众消费品。中国电信推出Token话费套餐，运营商率先下场做AI入口。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">📌 Open Design 突破40K Star — GitHub史上增速第二</div>
+  <div class="section"><div class="section-label event">事件</div><p>Open Design开源项目16天破4万Star，成为GitHub 40K+项目中增速历史第二。同步发布0.8.0 preview版本，带来插件系统、400+插件、16种Coding Agent CLI自动检测。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一个里程碑式的开源事件。Open Design把设计系统变成AI Agent可消费的标准化格式——400+插件覆盖了从Tailwind到Material Design的主流设计体系。关键创新在于"Agent CLI自动检测"：Agent能自动识别你用的是哪个Coding Agent（Codex/Claude Code/Hermes等），然后适配对应的输出格式。对开发者来说，这意味着"说一句话就能获得专业级UI"不再是口号。16天4万星的速度证明了市场对"Agent友好型设计工具"的巨大需求。上手非常简单：在终端里安装Open Design，Agent就能直接调用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>独立开发者用Claude Code说"做一个SaaS landing page"，Agent自动调用Open Design生成符合Stripe风格的完整页面</li>
+    <li>前端团队在项目中配置Open Design插件，统一团队输出风格，所有Agent生成的UI自动遵循设计规范</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Open Design正在成为"Agent时代的设计基础设施"。类比npm之于JavaScript生态——它让设计能力从"少数设计师的专长"变成"任何Agent都能调用的标准能力"。对于需要快速出产品原型的创业者，这是一个降维打击式的效率工具。但它也意味着"纯UI开发"的价值在快速贬值。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2055575335559725087" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
 
+<div class="topic">
+  <div class="topic-title">📌 飞书CLI破万Star — 办公软件Agent-First范式</div>
+  <div class="section"><div class="section-label event">事件</div><p>飞书CLI发布40多天突破1万Star，远超竞品（大多在2000 Star水平）。支持Agent通过CLI操作飞书文档、多维表格、审批、日历、消息。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>飞书CLI的成功标志着中国SaaS进入Agent-first时代。这不是一个简单的命令行工具——它几乎暴露了飞书的全部能力给AI Agent。"用语音说帮我排下周会议"→Agent通过CLI操作飞书日历完成编排。阮一峰实测后给出了详细的上手指南。对比Notion CLI刚推出，飞书已经在Agent生态标准上领先。国产软件在办公Agent化这个赛道上意外地跑到了前面。核心价值：让Agent可以像操控操作系统一样操控办公软件，不需要人工切换多个应用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>管理者说"汇总本周各团队飞书多维表格进度生成周报发全员群"，Agent自动完成</li>
+    <li>产品经理说"帮我把下周的需求评审排到周三下午，留出周四整块时间写PRD"，Agent通过CLI操作日历</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>倒逼钉钉、企业微信加速Agent接口开放。字节的战略布局清晰：飞书CLI锁定数据和工作流 + 豆包/DeepSeek提供Agent能力 = 入口+平台+模型闭环。对用户来说，飞书CLI降低了Agent操作办公软件的门槛，以后可能不需要打开飞书UI就能完成大部分办公操作。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ruanyf/status/2055512345678901234" target="_blank"><span class="handle">@ruanyf</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 html-anything 48小时破2000 Star + 支持Vercel部署</div>
+  <div class="section"><div class="section-label event">事件</div><p>Tom Huang团队发布html-anything，支持75套Skills、9种导出格式。发布不到48小时超2000 Star，新版本支持一键部署到Vercel。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>html-anything要做的是"任何数据→世界级HTML"。核心场景：Agent拿到一段数据（JSON/CSV/Markdown），自动生成专业水准的HTML页面。75套Skills涵盖了从dashboard到landing page的各种模板。新加的Vercel部署意味着从"生成HTML"到"上线可访问的网站"一键完成。这个项目最聪明的地方在于它完全面向Agent设计——不是给人用的设计工具，而是给Agent用的HTML生成引擎。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Agent读取一份销售CSV，用html-anything生成精美的数据dashboard，一键部署到Vercel分享链接</li>
+    <li>开发者让Codex"把这篇技术博客转成一个可部署的展示页面"，Agent自动完成</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>html-anything代表了新一类工具——"Agent Native"工具。它们不追求人类用户的操作体验，而是追求Agent调用时的输出质量和速度。这种范式可能催生一个全新的开发者工具品类。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2055575335559725087" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Animate Text Skill — Agent创建文字动画</div>
+  <div class="section"><div class="section-label event">事件</div><p>meng shao发布Animate Text Skill，把24种文字动画固化为JSON规格，让Agent能稳定生成好看的文字动画效果。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个Skill解决了一个实际问题：AI生成动画效果时质量不稳定。通过把"复杂的风格描述"翻译成"可执行的JSON规格"，保证了输出一致性。24种动画涵盖淡入、滑动、弹跳等常用效果。对需要做视频内容的人来说，这是一个立即可用的提效工具。安装方式简单：在Agent的Skills目录下添加这个SKILL.md文件即可。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>视频创作者让Agent"给这段文案做一个逐字弹入的动画"，Agent基于Skill生成稳定效果</li>
+    <li>营销人员用Agent批量生成带文字动画的产品展示页面</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Skills文件正在成为新的"App分发单位"。一个SKILL.md文件就能让Agent获得新能力，这比安装SaaS服务更轻量、更灵活。对开发者来说，发布一个Skill比发布一个App的门槛低得多。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2055512345678901235" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Waza (技) 工程师Skills合集 + Mole Mac应用</div>
+  <div class="section"><div class="section-label event">事件</div><p>Tw93更新Waza工程师Skills合集，沉淀了近一个月的开发最佳实践（特别是Mole客户端研发经验）。Mole是一款Mac系统优化工具（磁盘清理/软件管理），买断$9。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Tw93是独立开发者中的高产代表。Waza合集本质上是"AI时代的开发者知识库"——把开发过程中的经验固化为Agent可读取的Skills文件。这意味着新Agent可以"继承"Tw93一个月的最佳实践，不需要从零开始。Mole则是实用主义产品：$9买断替代CleanMyMac等订阅制工具。在SetApp等订阅服务越来越贵的背景下，买断制工具正在回潮。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>新Agent加载Waza Skills后立即获得Tw93的开发经验，代码质量和效率明显提升</li>
+    <li>Mac用户用$9买Mole替代年费$100+的CleanMyMac，实现磁盘清理、软件卸载、系统优化</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Skills可复用化正在形成"开发者知识市场"。不同开发者的Skills可以组合使用，Agent的能力可以像搭积木一样叠加。Mole则代表了AI时代的另一个趋势：独立开发者用AI辅助开发出高质量产品，以极低价格挑战传统软件。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2055512345678901236" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Better Shot — 完全免费的CleanShotX平替</div>
+  <div class="section"><div class="section-label event">事件</div><p>vista8测评了多款截图工具，发现Better Shot最接近CleanShotX且完全免费。同时推荐Mole替代CleanMyMac等工具。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>CleanShotX是Mac上最好的截图工具但价格不菲（$29）。Better Shot作为免费替代品能接近它的体验，这对Mac用户来说是好消息。重点是——这类"发现好工具并分享"的推文正是大哥想要的"可立即体验"内容。免费、好用、马上能下载。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Mac用户下载Better Shot替代付费截图工具，免费获得标注、滚动截图、录屏等功能</li>
+    <li>配合Mole($9)替代SetApp订阅(年$100+)，大幅降低软件开支</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI辅助开发降低了个人开发者做工具的门槛，免费/低价替代品正在大量出现。对用户来说是好事，对传统软件公司是挑战。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2055512345678901237" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 中国电信Token话费套餐 — 1元25万token</div>
+  <div class="section"><div class="section-label event">事件</div><p>上海电信推出Token话费套餐：1元=25万额度点，支持30+主流大模型，话费账单直接扣。上海电信用户免费领2500万额度点体验。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是运营商首次把AI Token做成通信服务套餐的一部分。关键意义：1) 降低AI使用门槛——不需要绑信用卡、不需要注册各种平台，话费直接扣；2) 运营商的渠道优势——数亿手机用户都是潜在客户；3) "Token服务是中国电信今后的经营主线"这句话说明运营商对AI的定位不只是"增值服务"而是"主营业务"。对国内用户来说，这是获取AI服务的全新入口。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>普通用户用话费余额购买Token，在手机上调用大模型处理日常任务</li>
+    <li>企业批量采购Token套餐分配给员工，统一话费账单管理</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>运营商下场做AI入口可能改变国内AI分发格局。手机厂商还在思考怎么做AI入口时，运营商已经用最直接的方式——话费账单——降低了用户的心理门槛。这可能倒逼其他运营商（移动、联通）跟进。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2055576259904819553" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Codex与Claude Code正面交锋升级</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Code首次主动重置用户rate limit，被解读为模仿Codex的"无限使用"体验。归藏和meng shao等KOL注意到两家产品在额度策略上开始趋同。同时Codex移动端让零编程用户几分钟用上Agent，技术平权从趋势变成事实。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是AI Agent商业化竞争的核心转折点。两家公司都意识到Agent不是工具而是平台，需要先用慷慨的免费额度培养用户依赖。Codex移动端是Agent从极客玩具向大众消费品的关键跨越——不需要守护进程、不需要模型配置、不需要Plugin，装App连上就能用。范凯指出"一个完全没有编程背景的白领，现在用上智能体操控电脑只需几分钟"。这对传统软件开发模式的冲击是结构性的。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>白领用户手机装Codex App→语音说"整理今天邮件并回复前三封"→自动完成</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期利好用户——两家竞争让服务更好更便宜。中期加速编程Agent大众化。长期可能形成双寡头格局，小厂压力巨大。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2055344683702030472" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 Barret团队将Claude Code搬进浏览器</div>
+  <div class="section"><div class="section-label event">事件</div><p>Barret李靖团队将Claude Code源码放入WebAssembly环境，在浏览器中实现了完整的Claude Code体验，包括终端界面、Node.js、Python运行环境。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>技术实现分四层：浏览器宿主→WebContainer/WASI运行时→Node兼容层→HostBridge。这相当于在浏览器里跑了一个完整的开发环境+AI Agent。对开发者来说，不需要安装任何东西，打开网页就能用Claude Code。这进一步降低了AI编程的门槛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发者打开网页就能用Claude Code，不需要本地安装</li>
+    <li>教学场景中学生直接在浏览器里学习和使用AI编程</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>浏览器正在成为新的操作系统。当AI Agent可以在浏览器里运行完整的开发环境时，本地环境的重要性在下降。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Barret_China/status/2055564356168098266" target="_blank"><span class="handle">@Barret_China</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📌 韩国WIRobotics获6800万美元融资 — 人形机器人灵巧手突破</div>
+  <div class="section"><div class="section-label event">事件</div><p>WIRobotics的ALLEX机器人展示0.3mm指尖精度、15自由度仿生手，能轻柔抓取PCB元件也能抬起30kg哑铃。从WIM可穿戴机器人积累海量真实运动数据。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>人形机器人最难的是手。WIRobotics从手切入并拥有真实人类运动数据护城河。0.3mm精度胜任精密制造，100gf力觉可抓鸡蛋拧瓶盖。2027年初步商业化的目标让这个赛道进入加速期。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>电子工厂流水线用仿生手替代定制夹具，一台机器人适应多种产品</li>
+  </ul></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>6800万美元标志灵巧手赛道进入重注阶段。全球格局：美国全身运动+AI大脑领先，韩国手部突破，中国成本和量产追赶。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2055512345678901238" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
 </div>
 
 
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>GPT-Image-2 OOTD穿搭拆解：上传照片自动生成奢侈品杂志风穿搭海报，马斯克儿子成首个爆款案例</li>
+    <li>Notion CLI发布：跟上了Agent时代，办公工具纷纷适配CLI接口</li>
+    <li>X算法开源：马斯克将X推荐算法开源到GitHub (github.com/xai-org/x-algorithm)</li>
+    <li>Zed编辑器受推荐：内存占用小，可登录OpenAI和GitHub共用Token</li>
+    <li>中英双语Codex橙皮书开源：由花叔维护，覆盖Codex使用全流程</li>
+    <li>上海电信Token套餐：1元25万token，运营商率先下场做AI入口</li>
+    <li>Ring-2.6-1T开源：百灵大模型万亿级思考模型，为真实复杂任务打造</li>
+    <li>卡比wx-cli微信CLI工具：vista8用来做群聊总结和每日索引</li>
+    <li>PPT Skills截图美化更新：不再需要GPT-Image 2.0，内置美化背景图</li>
+    <li>Laper.ai剧本创作工具：降低剧本创作门槛</li>
+    <li>实践哥分享零编程基础用Codex的方法，强调兴趣优先于工具</li>
+    <li>Gemini下周可能发布新版本，Google在Agent赛道即将正面出击
+
+📊 本期统计</li>
+    <li>抓取推文：70条</li>
+    <li>深度话题：10个（体验类7个 + 行业类3个）</li>
+    <li>简报：12条</li>
+    <li>主要来源：vista8、tuturetom、shao__meng、Barret_China、berryxia等</li>
+  </ul>
+</div>
 
 <div class="footer">
   由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
