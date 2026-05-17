@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 16 May 2026 18:08:02 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 00:46:15 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/05/17 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-17.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-17.html</guid>
-      <description>开源工具生态大爆发：html-anything 48小时破2000 Star，Better Shot 终结截图工具付费，飞书CLI 40天1万Star——Agent可调用的基础设施正在从「各自为战」走向「开放标准」。与此同时，OpenAI 和 DeepSeek 同步加码 Agent 赛道，Codex 已支持跨电脑远程控制。</description>
+      <description>Agent 生态大爆发：Codex 远程设备网络正式铺开，html-anything 48 小时破 2000 Star，Vercel 扔出专为 AI Agent 设计的编程语言 Zero——工具链正在从「给人用」向「给 Agent 用」全面转型。</description>
       <pubDate>2026-05-17T08:30:00+08:00</pubDate>
     </item>
     <item>
