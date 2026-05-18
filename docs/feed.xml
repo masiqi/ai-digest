@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 17 May 2026 00:46:15 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 01:04:17 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/05/18 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-18.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-18.html</guid>
+      <description>AI Coding Agent 生态全面升温：Vercel 发布专为 Agent 设计的编程语言 Zero，OpenAI Codex 远程控制能力大幅扩展，GitHub Copilot 独立 App 即将上线；微信读书官方 Skills 发布引爆「Agent+个人数据」新范式。</description>
+      <pubDate>2026-05-18T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/05/17 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-17.html</link>

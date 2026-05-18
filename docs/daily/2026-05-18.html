@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-18</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-18</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>AI Coding Agent 生态全面升温：Vercel 发布专为 Agent 设计的编程语言 Zero，OpenAI Codex 远程控制能力大幅扩展，GitHub Copilot 独立 App 即将上线；微信读书官方 Skills 发布引爆「Agent+个人数据」新范式。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ optillm —— 零微调提升 LLM 推理能力的开源代理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 OpenAI API 兼容的代理层，内置 20+ 种推理优化技术，不训练不微调就能显著提升 LLM 推理精度</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/codelion/optillm" target="_blank">https://github.com/codelion/optillm ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>pip install optillm 后启动代理服务，将原有调用 OpenAI API 的代码中的 base_url 指向 optillm 的本地端口即可。它会在后端自动应用 Best-of-N 采样、自一致性检查、思维链优化、多数投票等 20 多种技术，一次用户请求在后台拆成多次模型调用来提升结果质量。支持接入任何 OpenAI 兼容 API（OpenAI、Groq、本地 vLLM 等），适合已经在用 LLM 做推理/分类/评估任务的开发者直接插拔试用，无需改模型、不用标注数据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>LLM 推理优化领域长期依赖提示工程或昂贵微调，optillm 给出了一个「中间件」式解法，把学术界验证有效的推理增强技术工程化封装成即插即用的代理层。对做 benchmark 评估、RAG 检索质量提升、代码审查等任务尤其有价值，且完全开源。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>代码 review / bug 检测：多轮推理交叉验证减少误判</li>
+    <li>RAG 检索结果排序：多数投票提升检索准确性</li>
+    <li>模型评估 benchmark：自动应用增强技术得到更稳定的评分</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2056002415464534235" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIhjTRYakAAImq2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIhjTRYakAAImq2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Vercel Zero —— 专门为 AI Agent 设计的编程语言</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Vercel 发布的新语言 Zero，人类不用看、Agent 原生理解，专为 AI 编程场景设计</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/vercel-labs/zero" target="_blank">https://github.com/vercel-labs/zero ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆 GitHub 仓库后阅读文档即可开始，Zero 的设计哲学是让 AI Agent 能更高效地生成、理解和执行代码。可以让 Claude Code 或 Codex 用 Zero 来构建和部署应用，安装 Vercel CLI 后可直接在项目中引入。Vercel 官方表示这是面向「Agent-First」编程范式的实验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是第一个由主流平台发布的「Agent-Native」编程语言，代表了 AI Coding 工具链从「辅助人类写代码」到「Agent 自己写代码」的范式跃迁。Zero 去掉了人类可读性包袱，专注于让 AI 生成正确、高效、可部署的代码。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Agent 自动生成可部署的 Web 应用</li>
+    <li>替代传统脚手架，AI 直接输出生产级代码</li>
+    <li>研究 AI-Native 编程语言设计的参考实现</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2055841699755327590" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIZeYmsWwAAaxnC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIZeYmsWwAAaxnC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ GTA-6 Single Prompt</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用 AI 一个 prompt 生成的 GTA-6 风格游戏，浏览器打开就能玩</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接在浏览器中打开上面地址，进入后用键盘控制角色在城市中移动、驾驶车辆，体验 AI 生成开放世界的效果。WASD 移动、鼠标控制视角，在城市中自由探索。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>展示了 AI 游戏生成从概念验证到可玩的质变，不是渲染图而是真的交互体验。单一 prompt 生成完整 3D 城市的管线如果成熟，独立游戏开发门槛将被彻底拉低。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速原型：游戏策划一个 prompt 得到可玩 demo</li>
+    <li>AI 游戏生成管线研究</li>
+    <li>展示 AI 代码生成能力上限的案例</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2056165430700790146" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Z-Anime</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 Z-Image Base 微调的动漫图片生成模型，效果出色且支持本地部署</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/SeeSee21/Z-Anime" target="_blank">https://huggingface.co/SeeSee21/Z-Anime ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 HuggingFace 页面下载模型权重，使用 diffusers 库加载后即可本地生成动漫图片。显存不足可用 GGUF 量化版在 CPU 上运行，也支持 ComfyUI 加载。显存要求适中（8GB+ 推荐）。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Z-Image 系列正在形成完整生态矩阵，从通用图片生成到专门的动漫风格微调，全部支持本地运行。对二次元创作者来说是无需付费、无审查限制的高质量方案。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>同人/二次元创作：角色立绘、插画生成</li>
+    <li>游戏素材：本地批量生成动漫风格资产</li>
+    <li>与 ComfyUI 工作流集成</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2056039129767612455" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIiErVqbMAAMUxO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIiErVqbMAAMUxO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 微信读书官方 Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>微信读书发布官方 Skill，Agent 可以查阅书架、阅读统计、笔记划线、搜索书籍，把你的阅读数据变成 AI 可用的知识库</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://weread.qq.com/r/weread-skills" target="_blank">https://weread.qq.com/r/weread-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>两种方式安装：(1) 下载官方 Skill 包在 Claude Code 或 Codex 中安装；(2) 使用社区优化版 npx skills add jerlinn/jerlin-weread。安装后在 weread.qq.com/r/weread-skills 获取 API Key 配置。可以让 Agent：分析阅读偏好推荐新书、找出阅读盲区补全知识结构、基于笔记和划线生成读书报告、分析阅读时长和思维结构等。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是第一个由国民级应用官方发布的 AI Agent Skill，代表了「个人数据 Agent 化」的里程碑。微信读书的笔记、划线、书评是高质量的个人知识图谱，Agent 接入后等于拥有了一个懂你阅读品味和研究方向的私人图书馆员。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>年度阅读报告自动生成</li>
+    <li>基于阅读盲区制定个性化学习计划</li>
+    <li>将读书笔记自动整理为知识库/第二大脑</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2055992093882122727" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIhZsZTaoAAzwPZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIhZsZTaoAAzwPZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIhZvZabUAAmNAp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIhZvZabUAAmNAp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ TabulaBili</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一键清空 B 站个性化推荐，让算法重新认识你，或彻底告别信息茧房</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Chrome 应用商店搜索 TabulaBili 安装，点击扩展图标即可一键清除 B 站所有个性化推荐数据，包括观看历史、搜索记录、互动行为等。清除后 B 站首页回归出厂设置，推荐算法不再基于你的历史行为。完全本地操作，不上传数据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>内容平台的推荐算法越来越强势地决定我们看什么，TabulaBili 提供了一个数字自主权工具——用户可以主动重置算法对自己的认知。在 AI 推荐越来越精准的时代，这种反推荐工具反而成了刚需。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>重置 B 站推荐，探索新领域内容</li>
+    <li>研究 B 站推荐算法行为的实验工具</li>
+    <li>送给被算法困在单一信息流的亲友</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2055988715244188037" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google Gemini Spark Agent 代码泄露</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究者从 Google App 代码中逆向出 Gemini Intelligence 的下一代 Agent——代号 Spark，具备技能系统（Skills）和任务调度器</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Forbes、Android Authority、Yahoo News 等多家媒体报道了此次代码泄露。Spark 的核心架构包含技能系统——Agent 可以学习和调用离散技能，以及一个任务调度器来协调多个技能的执行。这意味着 Google 正在构建一个类似 Claude Code Skills / Codex Skills 的 Agent 平台，且深度集成在 Google App 中。泄露代码显示 Spark 可以访问 Gmail、Calendar、Drive 等 Google 生态内的数据。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Google 拥有全球最大的个人数据生态（Gmail 20亿用户、Android 30亿设备），如果 Spark Agent 能无缝接入这些数据，其 Agent 的能力边界将远超竞品。但隐私问题也将成为最大的争议焦点。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2055978789587288129" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI Coding Agent 实测对比：OpenClaw vs Hermes</div>
+  <div class="section"><div class="section-label event">事件</div><p>Atomic Bot 使用本地 Qwen 35B 模型跑真实编程任务（抓取 GitHub star 历史、分析增长、构建实时仪表盘），对比 OpenClaw 和 Hermes Agent，引发创始人级别公开辩论</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>视频任务是在本地环境抓取 GitHub 两个仓库的 star 历史数据、分析增长 spike 原因、构建浏览器实时仪表盘。OpenClaw 创始人 @steipete 亲自转发并参与讨论。整个 AI Coding Agent 赛道正在经历真刀真枪的 benchmark 阶段，空洞营销文正在让位于实测视频。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>本地模型（Qwen 35B）已经能完成较复杂的多步骤编程任务，这对云端 API 定价和闭源模型构成了实质性威胁。Agent 框架之间的竞争从功能列表比拼进入了实测完成率的硬核阶段。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2055812741890510899" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIe2yBRaIAAu4KH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIe2yBRaIAAu4KH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Codex 远程控制大升级 + GitHub Copilot App</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 正在将 Codex 远程控制从手机控自己电脑推向手机控任意电脑，同时 GitHub Copilot 独立 App 开放 waitlist 申请</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>5月14日 ChatGPT App 新增功能：手机端可以实时查看 Mac 上 Codex 的工作状态、审批命令、切换模型、派发新任务，目前限于同一 Apple ID。但正在向手机控任意电脑方向推进。同时 GitHub Copilot 的独立原生 App 已开放 waitlist（gh.io/github-copilot-app）。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>当 AI 编程工具从 IDE/终端扩展到手机端，编程不再是坐在电脑前的专属活动——可以在通勤时审查 PR、在咖啡厅用手机给 AI 派发开发任务。对开发者工作形态的影响不亚于 Slack 替代 Email。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2055808836074979576" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2055997730623717568" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2055997728585355383" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2055948549792075986" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2055905834249359777" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/LandingAI/status/2055904076672749640" target="_blank"><span class="handle">@LandingAI</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2056051338652606877" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2055950816301691262" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xicilion/status/2055958266262507579" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2055950614560203110" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2056048680290103504" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2056159302948413777" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2056030057412583722" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIevIFea0AAkwRE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIevIFea0AAkwRE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2055903840701136896/img/iNRPJ75st7XXvklW.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2055903840701136896/img/iNRPJ75st7XXvklW.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIg0X2OW8AAYkek?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIg0X2OW8AAYkek?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIg6_ODa8AE1OsQ?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIg6_ODa8AE1OsQ?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIg0LzcbMAA-Q1D?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIg0LzcbMAA-Q1D?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIiND94bMAAtSzx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIiND94bMAAtSzx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056159068138700800/img/-n4FC5FoqVH3Hbrt.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056159068138700800/img/-n4FC5FoqVH3Hbrt.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2055671409074921472/img/Xgt07hoGetQ9VvZe?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2055671409074921472/img/Xgt07hoGetQ9VvZe?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>iStart：为 macOS 26 打造的轻量级开始菜单与应用启动器，开源 <a href="https://x.com/appinn/status/2055997730623717568" target="_blank">→</a></li>
+    <li>SnapIt-Plus：高度可自定义拖拽布局的 macOS 窗口管理软件 <a href="https://x.com/appinn/status/2055997728585355383" target="_blank">→</a></li>
+    <li>TraceMind：让 AI Coding 产品看懂真实用户行为的分析工具 <a href="https://x.com/appinn/status/2055948549792075986" target="_blank">→</a></li>
+    <li>图片翻译浏览器插件：完全本地运行、不依赖云服务的图片内文字翻译 <a href="https://x.com/appinn/status/2055905834249359777" target="_blank">→</a></li>
+    <li>LandingAI RAG on Complex Documents：解决扫描件/嵌套表格/不规则排版的 RAG 检索难题 <a href="https://x.com/LandingAI/status/2055904076672749640" target="_blank">→</a></li>
+    <li>Tanka：用图谱+稀疏注意力打造的 AI 企业记忆系统 <a href="https://x.com/berryxia/status/2056051338652606877" target="_blank">→</a></li>
+    <li>Lumara：手机上实时观看 NASA 太阳和月亮直播 <a href="https://x.com/appinn/status/2055950816301691262" target="_blank">→</a></li>
+    <li>docu.md：文档工具 Chrome 单平台周活破万，全平台破三万 <a href="https://x.com/xicilion/status/2055958266262507579" target="_blank">→</a></li>
+    <li>Claude 团队发布 AI-Native 初创团队操作手册 <a href="https://x.com/shao__meng/status/2055950614560203110" target="_blank">→</a></li>
+    <li>Anthropic 官方 Skill 构建指南发布（有双语翻译版） <a href="https://x.com/op7418/status/2056048680290103504" target="_blank">→</a></li>
+    <li>Yann LeCun 预测：12-18个月内将有通用方法训练分层规划 AI 系统 <a href="https://x.com/berryxia/status/2056159302948413777" target="_blank">→</a></li>
+    <li>Hermes Agent 蓝 V 接入教程：5分钟让 X Premium 订阅变身全能 AI 助手 <a href="https://x.com/berryxia/status/2056030057412583722" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
