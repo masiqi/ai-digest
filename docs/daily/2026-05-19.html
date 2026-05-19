@@ -70,107 +70,43 @@
   <div class="date">2026-05-19</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>开源工具井喷日——从科研假设生成到桌面启动器、从AI阅读助手到在线格斗游戏，今天的X List几乎全是到手就能玩的硬货。MiroMind开源了跨学科科研假设生成模型，Cursor自研编程模型Composer 2.5上线，Anthropic收购Stainless并翻倍token限额。</p>
+    <p>终端工具+Agent IDE密集更新日：Pake/Mole/Wox三连发，ORCA开源Agent IDE首次亮相；Open Design正式接入Codex，设计-代码-视频一条龙工作流成型。Anthropic token翻倍+Cursor Composer 2.5推出，Agent工具链进入军备竞赛期。</p>
   </div>
 </div>
 <div class="topic">
-  <div class="topic-title">🛠️ MiroMind-M1</div>
-  <div class="section"><div class="section-label event">一句话</div><p>盛大旗下开源的科研假设自动生成模型，跨物理化学生物学科自动提出研究假说，ICML 2026收录</p></div>
+  <div class="topic-title">🛠️ Pake v3.11.5 "Ironclad"</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一行命令把任意网页打包成桌面App，Rust/Tauri构建，体积仅~5MB，支持macOS/Windows/Linux。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/MiroMindAI/MiroMind-M1" target="_blank">https://github.com/MiroMindAI/MiroMind-M1 ↗</a></p>
+    <p><a href="https://github.com/tw93/Pake" target="_blank">https://github.com/tw93/Pake ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>git clone后pip install，从HuggingFace下载权重。输入学科文献摘要即可自动生成多个可验证的科研假设并附带置信度评分。支持物理化学生物三领域zero-shot推理，也可在自有数据上微调。命令行 `python inference.py --domain biology --input "query"` 即可出结果。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>post-training方向从「让模型更强」进化到「让模型做科学发现」，范式级跨越。不只是文献综述，是真正生成可验证的新假设。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>npm install -g pake-cli &amp;&amp; pake https://example.com 即可生成一个原生桌面应用。本次更新修复了Linux Wayland白屏、macOS新窗口崩溃等14个问题，稳定性大幅提升。支持自定义窗口大小、菜单栏、沉浸式边框，适合把Notion/Linear/微信读书等常用网页工具一键转化为独立App。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>用Rust+Tauri替代Electron，5MB的体积对比动辄200MB的Electron App是降维打击。v3.11.5修复了该版本最影响体验的几个崩溃Bug，在Wayland和macOS上的稳定性已接近生产可用。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>科研人员输入前沿文献自动brainstorm研究方向</li>
-    <li>药企在海量生物靶点中筛选候选假设</li>
+    <li>将内部工具/看板网页一键打包成桌面App分发给团队</li>
+    <li>把微信读书、Notion等高频网页工具独立出来，避免浏览器标签页混乱</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/elliotchen100/status/2056530139710930985" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ zread — AI代码仓库阅读助手</div>
-  <div class="section"><div class="section-label event">一句话</div><p>基于CLI和MCP协议的AI代码仓库阅读工具，终端里用自然语言理解GitHub项目</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/ejfkdev/zread" target="_blank">https://github.com/ejfkdev/zread ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>npm install -g zread 全局安装，zread init 配置GitHub token。核心命令 zread ask "这个项目的认证逻辑怎么实现的？" 即可让AI分析整个代码仓库。支持MCP协议，可集成到Claude Desktop或Codex中作为代码理解后端。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>解决「拿到陌生开源项目不知从何读起」的经典痛点。MCP支持让它可嵌入更大AI工作流——Codex写代码时可调zread理解依赖库实现细节。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>接手新项目时快速理解架构和核心逻辑</li>
-    <li>Codex/Claude Code集成后写代码时实时参考依赖库源码</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/appinn/status/2056516039047782483" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ 萃猫大战阿迪王</div>
-  <div class="section"><div class="section-label event">一句话</div><p>致敬经典格斗的在线对战页游，用AI视频模型做核心引擎</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://gordensun.github.io/CuiMao-VS-AdiWang/" target="_blank">https://gordensun.github.io/CuiMao-VS-AdiWang/ ↗</a></p>
-    <p><a href="https://github.com/GordenSun/CuiMao-VS-AdiWang" target="_blank">https://github.com/GordenSun/CuiMao-VS-AdiWang ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>浏览器直接打开在线地址即可游戏，无需安装。方向键移动、ASD键攻击，用连招打败AI对手。核心渲染用AI视频模型做帧生成和打击特效，代码完全开源。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>第一个公开声称用「AI视频模型作为游戏引擎」的可玩作品。传统引擎靠物理引擎+渲染管线，这个直接用AI生成每一帧，等于把游戏逻辑到画面的整个管线都交给模型。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>午休打开网页搓两把</li>
-    <li>Fork代码学习AI视频模型实时渲染技术路线</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2056417658866999762" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/HiTw93/status/2056531371817095605" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2056417322538328065/img/afTu1UvpygKhn054.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056417322538328065/img/afTu1UvpygKhn054.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HIpELMmacAAgQPy.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HIpELMmacAAgQPy.jpg" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ AutoTTS — 自动Test-Time Scaling优化</div>
-  <div class="section"><div class="section-label event">一句话</div><p>让coding agent自动搜索最优推理策略，替代人工设计的test-time scaling方案</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/zhengkid/AutoTTS" target="_blank">https://github.com/zhengkid/AutoTTS ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>clone后pip install，python main.py --task gsm8k --model deepseek-v3 启动自动搜索。会尝试chain-of-thought、tree-of-thought、self-consistency等策略组合，通过coding agent编写测试代码评估效果，最终输出最优配置。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>test-time scaling是提升LLM推理能力成本最低的路径，但策略组合空间太大。AutoTTS把过程自动化，用coding agent写评测代码——可适配任意任务。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在自有评测集上自动搜索最优推理策略</li>
-    <li>配合微调，先找到最优策略再蒸馏到训练中</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2056325769962696996" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HImJYkAaAAATXVw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HImJYkAaAAATXVw?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ Open Design — Codex里的AI设计引擎</div>
-  <div class="section"><div class="section-label event">一句话</div><p>开源设计到代码工作流工具，直接在Codex里看着canvas改设计，近400套模板开箱即用</p></div>
+  <div class="topic-title">🛠️ Open Design + Codex 工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AI驱动的设计工具Open Design正式接入Codex CLI，从设计稿到代码到视频一条龙，Agent可「看着画布改设计」。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>需先装Codex CLI。git clone后在项目目录运行codex即可使用。核心功能：设计意图保持（agent看着canvas改设计无需反复描述）、模板系统（集成html-anything近400套推特爆款模板）、设计到代码到视频全链路输出。配合Codex就是Figma的完全替代。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI设计最大痛点不是生成漂亮页面，而是「设计意图在迭代中丢失」。Open Design用agent看着canvas改的方式解决了上下文丢失，加上400套模板弹药库。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>git clone https://github.com/nexu-io/open-design &amp;&amp; cd open-design &amp;&amp; npm install &amp;&amp; npm run dev 启动本地服务，然后在Codex中直接引用Open Design进行设计迭代。已集成近400套开箱即用的模板/Skill/设计系统，包括html-anything全部模板。Codex Agent可以读取canvas状态、理解设计意图、生成对应代码。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>解决了AI设计最大的痛点——设计意图在迭代中丢失。传统流程是设计→截图→喂给AI→代码→发现不对→再来一次。Open Design+Codex让Agent可以直接看到canvas并进行修改，设计意图不再通过截图这个「窄带宽」传递。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>Codex+Open Design从零搭建产品官网</li>
-    <li>设计稿一键转remotion视频做宣传片</li>
+    <li>用Codex一句话描述需求→Open Design生成设计稿→Agent直接转代码</li>
+    <li>产品迭代时AI同步更新设计和代码，保持一致性</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -184,62 +120,88 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ 微信公众号文章一键抓取</div>
-  <div class="section"><div class="section-label event">一句话</div><p>在线工具，微信扫码后把任意公众号全量文章抓取导出为本地Markdown</p></div>
+  <div class="topic-title">🛠️ ORCA - 开源Agent IDE</div>
+  <div class="section"><div class="section-label event">一句话</div><p>支持多Agent并行、多账号切换的开源IDE，自带iOS/Android客户端，自动检测电脑里装的各类CLI Agent。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://down.mptext.top" target="_blank">https://down.mptext.top ↗</a></p>
+    <p><a href="https://github.com/stablyai/orca" target="_blank">https://github.com/stablyai/orca ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开网站→微信扫码登录→公众号管理→添加→搜索公众号名添加（不需是自己的号）→选择文章范围→点击导出。文章以清晰Markdown格式保存本地，图片一并下载。适合个人知识库、内容备份或喂给AI做RAG数据源。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>打破微信内容壁垒——搜索引擎索引不到、RSS没有、API不对开发者开放。让公众号文章可像普通网页一样被保存、检索、喂给AI。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后本地运行，支持拖拽文件/目录直接对话。完全基于你自己的API订阅运行——可以同时接入Claude Code CLI、Codex CLI、Gemini CLI、Hermes等多个Agent。自带iOS和Android移动端。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>第一个把Agent舰队管理做成IDE的开源项目。传统IDE一次只能用一个Agent，ORCA让你同时开多个Agent并行干活——一个debug、一个写测试、一个重构。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>把关注的优质公众号全量文章导入Obsidian做知识库</li>
-    <li>抓取行业公众号历史文章作为RAG数据源</li>
+    <li>多Agent并行：Codex写代码、Claude做code review、Gemini写文档</li>
+    <li>移动端远程指挥Agent，碎片化时间review进度</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/vista8/status/2056269639852937485" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2056271703203033118" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HIlR5a-aEAAbHcc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlR5a-aEAAbHcc?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIlVAVObQAA6YCK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlVAVObQAA6YCK?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIlVL4mbMAAmvwE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlVL4mbMAAmvwE?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIlVTxEboAABJRA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlVTxEboAABJRA?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIlWjrkbUAAhdPO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlWjrkbUAAhdPO?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIlW7oFaAAAihyT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlW7oFaAAAihyT?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIlXd5paUAAcaWt?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlXd5paUAAcaWt?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIlXi8Ma4AAVSCl?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlXi8Ma4AAVSCl?format=png&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ react-bits-video — AI视频生成Skill</div>
-  <div class="section"><div class="section-label event">一句话</div><p>整合React-bits、remotion和hyperframe的AI视频生成Skill，用React组件渲染水墨风格视频</p></div>
+  <div class="topic-title">🛠️ AutoTTS - LLM自主优化推理策略</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让Coding Agent自己搜索最优的test-time scaling推理策略，替代人工设计的prompt和推理路径。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/GordenSun/react-bits-video" target="_blank">https://github.com/GordenSun/react-bits-video ↗</a></p>
+    <p><a href="https://github.com/zhengkid/AutoTTS" target="_blank">https://github.com/zhengkid/AutoTTS ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>需Node.js环境，clone后npm install。这是Codex/Claude Code的Skill，安装后对agent说「用水墨风格生成产品介绍视频」即可自动生成。底层链路：React-bits提供UI组件→remotion逐帧渲染→hyperframe视频编码字幕。支持模板优先和风格探索模式。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>把React组件直接当视频素材用，思路巧妙。让前端开发者用自己熟悉的React做视频，用写代码替代拖时间轴。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆项目后配置LLM API，Agent会自动针对你的推理任务（数学、编程、逻辑等）搜索最优的test-time scaling策略——包括分步推理、自我验证、多路径投票等各种技巧的组合。输出的是可直接用于生产环境的推理配置。类似AutoML的思路但针对LLM推理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>test-time scaling是2026年LLM的核心优化方向，但一直靠人工设计prompt策略。AutoTTS把这个问题变成了搜索问题，让Coding Agent自己找最优组合，结果往往比人工设计的好。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>快速生成产品Demo视频（水墨风适合中国品牌）</li>
-    <li>批量生成短视频配合自动化pipeline做社媒运营</li>
+    <li>为特定领域的推理任务自动发现最优prompt策略</li>
+    <li>替代手工调参的test-time compute分配方案</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2056209998884331645" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2056325769962696996" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
     </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HImJYkAaAAATXVw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HImJYkAaAAATXVw?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Wox v2.1.0 — 老牌开源桌面启动器</div>
-  <div class="section"><div class="section-label event">一句话</div><p>历经十年迭代的跨平台桌面启动器发布2.1版本，不止快速启动，还能截图、翻译、调用AI</p></div>
+  <div class="topic-title">🛠️ Mole 1.4.1 - macOS系统监控工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>原生macOS菜单栏系统监控，实时CPU/RAM/网速+自动发现App更新，支持电池健康、磁盘压力等多维度状态。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="http://mole.fit" target="_blank">http://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接下载安装，菜单栏出现实时HUD——CPU、RAM、网络速度一目了然。亮点是自动检测已安装App的新版本（支持App Store、Sparkle、Electron三类更新源），未更新App会显示badge提醒。状态面板覆盖电池健康、磁盘压力颜色标识、双网络监控。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>macOS原生+菜单栏HUD的设计非常克制，不像iStat Menus那么重。自动发现App Store/Sparkle/Electron三类更新源并统一提醒的功能是杀手锵。磁盘压力用颜色标识（绿/黄/红）比看数字直观太多。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>菜单栏常驻系统健康监控，替代iStat Menus</li>
+    <li>统一管理所有App的版本更新，不再遗漏安全补丁</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2056172775291973758" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIj-M17bIAAQnAl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIj-M17bIAAQnAl?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Wox v2.1.0 - 桌面启动器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>老牌跨平台桌面启动器，v2.1.0加入截图、翻译、AI调用等功能，开源跨平台。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://appinn.com/wox-v2-1-0/" target="_blank">https://appinn.com/wox-v2-1-0/ ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>GitHub Releases下载安装包（Windows/macOS/Linux），默认Alt+Space呼出搜索框。2.1新增：截图插件、翻译插件（DeepL+Google）、AI对话插件（可配置OpenAI/Claude API key）。插件市场几百个社区插件，JSON配置文件可调主题和快捷键。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>开源版Alfred/Raycast，完全免费生态开放。2.1加入AI调用后升级为一站式终端入口——搜索、执行、查询、AI对话都在一个框里完成。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载安装后Alt+Space唤起，输入关键词快速启动应用、搜索文件、执行计算。新增AI集成——可以直接在启动器里调用AI翻译、问答、总结。内置截图功能无需额外工具。支持插件扩展，社区生态成熟（Wox有近10年历史）。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>10年老牌项目持续迭代，v2.1.0是近年来最大的功能更新。加入AI能力后从单纯的启动器升级为桌面上的一站式入口。跨平台一致体验对于多设备用户很实用。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>替代Spotlight/Alfred，一个快捷键搞定启动翻译截图</li>
-    <li>配置AI插件后随时Alt+Space跟Claude/GPT对话</li>
+    <li>替换macOS Spotlight，获得更强的搜索+AI能力</li>
+    <li>Windows用户获得Alfred级别的启动体验</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -253,23 +215,110 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Anthropic收购Stainless</div>
-  <div class="section"><div class="section-label event">事件</div><p>Anthropic正式收购了长期为其编写SDK和MCP server的Stainless团队</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>Stainless已替Anthropic写了几乎所有官方SDK并负责MCP server开发。表面是技术补全，深层逻辑是Anthropic要把「开发者如何调用自己的模型」完全控制在自己手里。SDK不只是代码封装，它决定了开发者以什么范式使用模型。Stainless并入意味着SDK迭代不再依赖第三方时间表。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>开发者选择空间收窄，MCP server官方实现与Anthropic绑定更紧，但SDK质量迭代速度会明显提升。</p></div>
+  <div class="topic-title">🛠️ zread - AI代码仓库阅读助手CLI+MCP</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一行命令用AI把本地/远程代码仓库变成可读文档，支持CLI和MCP两种接入方式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ZreadAI/zread_cli" target="_blank">https://github.com/ZreadAI/zread_cli ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>npm install -g zread-cli &amp;&amp; zread analyze ./my-project 即可对本地代码仓库生成结构化的AI分析文档，包括架构图、模块依赖、核心逻辑解释。MCP模式可接入Claude Code/Codex等Agent工具中，让Agent在分析代码时直接调用zread的理解结果，而不是每次从头读代码。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>代码阅读是AI Agent最耗时的步骤之一。zread通过预处理生成代码的结构化理解，Agent可以直接消费这个「预消化」的结果。MCP模式特别实用——相当于给Agent装了个代码速读插件，减少重复解析的时间。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>新项目上手：生成项目架构文档，快速理解代码结构</li>
+    <li>Agent上下文增强：让Claude Code/Codex先调zread理解项目再写代码</li>
+  </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/berryxia/status/2056528789170266328" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2056516039047782483" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Cursor发布Composer 2.5</div>
-  <div class="section"><div class="section-label event">事件</div><p>Cursor上线自研编程模型Composer 2.5，长任务更稳、复杂指令跟得更准，额度翻倍</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>Cursor不再只是套壳编辑器，开始训练自己的编程模型。Composer 2.5专针对长上下文编程任务优化，训练用「文本反馈信用分配」方法让模型学会分辨重要指令。为推广把未来一周默认额度翻倍——标准land grab策略。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>编程AI赛道进入「编辑器+自有模型」军备竞赛。短期利好（额度翻倍+质量提升），长期隐忧是锁定效应。</p></div>
+  <div class="topic-title">🛠️ MiroMind - AI自主提出科研假设</div>
+  <div class="section"><div class="section-label event">一句话</div><p>盛大旗下AI实验室训练模型在不同学科自主提出科研假设，ICML 2026收录，代码开源。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>关注ICML 2026 proceedings或作者GitHub获取代码。核心思路是post-training一个模型，让它能在物理、化学、生物等不同学科中观察数据→提出假设→设计验证实验。一套方法跨学科通用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>post-training的终极形态不是更好的代码补全，而是科学发现本身。MiroMind证明了一套方法可以跨物理/化学/生物学科提出有意义的科研假设。如果这条路走通，2026年post-training的竞争焦点可能从「写代码」转向「做科研」。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>科研辅助：给定数据集，自动生成待验证假设</li>
+    <li>跨学科发现：用同一套方法在不同领域寻找规律</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2056530139710930985" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 萃猫大战阿迪王 - 开源网页格斗游戏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>纯前端格斗小游戏，打败阿迪王就能给萃猫的Claude账号解封，AI视频模型当游戏引擎的先锋实验。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://gordensun.github.io/CuiMao-VS-AdiWang/" target="_blank">https://gordensun.github.io/CuiMao-VS-AdiWang/ ↗</a></p>
+    <p><a href="https://github.com/GordenSun/CuiMao-VS-AdiWang" target="_blank">https://github.com/GordenSun/CuiMao-VS-AdiWang ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>浏览器打开即玩，键盘控制角色战斗。游戏本身是个有趣的meme（背景是萃猫Claude被封号），但技术亮点在于作者提出了「AI视频模型就是未来的游戏引擎」的观点。作者表示后续出教程时会展示如何用AI视频模型驱动游戏画面。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>虽然是meme项目，但开了一个脑洞：AI视频模型生成的画面可以直接作为游戏帧输出。传统游戏引擎需要建模→贴图→光照→渲染，AI视频模型把这一切压缩成「一句话生成画面」。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>摸鱼小游戏，体验「开源+AI meme」文化</li>
+    <li>学习前端游戏开发的最佳实践参考</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2056417658866999762" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056417322538328065/img/afTu1UvpygKhn054.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056417322538328065/img/afTu1UvpygKhn054.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ lark-bot2bot - 飞书机器人互聊框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让飞书机器人之间互相@对话，支持多角色讨论一个话题，最强模型驱动。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/iamkentzhu/lark-bot2bot" target="_blank">https://github.com/iamkentzhu/lark-bot2bot ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆项目后配置飞书Bot凭证，部署后即可让两个或多个飞书Bot互相@讨论你设定的话题。发给GPT-5.5级别的模型安装即可运行。由于飞书原生不支持Bot之间互相@，这个项目通过技术手段绕过了限制。可以设定不同Bot扮演不同角色（产品经理+工程师+设计师）。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多Agent对话在产品讨论、头脑风暴、模拟会议等场景非常实用。飞书作为国内主流协作工具，这个项目让Agent能力直接融入日常工作流。技术上绕过了飞书Bot互@的限制，实现思路巧妙。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让AI产品经理和AI工程师在飞书群里讨论需求</li>
+    <li>模拟多方利益相关者会议，提前发现潜在冲突</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2056228149445431778" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIkwXj-aYAAPlFh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIkwXj-aYAAPlFh?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic收购Stainless + Token限额翻倍</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic连续出招——正式收购SDK工具商Stainless，同时宣布所有计划的token limit翻倍。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Stainless此前已为Anthropic维护几乎所有语言的SDK和MCP server，收购后将SDK/MCP开发完全内化。结合token翻倍政策，Anthropic的战略意图清晰——降低开发者的AI使用门槛（token多了）同时收窄生态入口（SDK归我管）。对普通用户直接好处是长对话/大文件处理不再轻易撞墙。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>SDK/MCP工具链的集中化可能让开发者更依赖Anthropic生态，同时token翻倍直接提升Claude Design/Agent工作流的用户体验。对竞品（OpenAI/Gemini）构成差异化压力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2056525311635026398" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIoCL0qWYAAoF1E?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIoCL0qWYAAoF1E?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cursor发布Composer 2.5编程模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cursor上线自家编程模型Composer 2.5，主打长任务稳定性+复杂指令跟随，首周额度翻倍促销。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Cursor从「套壳各家模型」到「自研编程模型」标志着AI IDE赛道进入自有模型竞争阶段。Composer 2.5训练中引入「文本反馈信用分配」机制，让模型在10万token级长任务中保持指令忠诚度。官方声称效率比同级别模型高10倍。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Cursor自有模型如果跑通，将大幅降低对OpenAI/Anthropic API的依赖，利润率显著改善。对Copilot/Windsurf等竞品构成压力，可能引发AI IDE自研模型军备竞赛。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -282,10 +331,10 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Qwen 3.7 Max Preview杀入Arena前列</div>
-  <div class="section"><div class="section-label event">事件</div><p>阿里Qwen 3.7 Max Preview在Chatbot Arena总榜第13位，实验室总排名第6，数学第7、编程第10</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>LMSys Arena是真人盲测，含金量高。阿里在推理和代码生成上的投入开始收效，综合能力已可与GPT-5、Claude Opus 4.x掰手腕。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>开源/国产模型从「能用」进化到「好用」。如果像前代一样开源，将直接冲击DeepSeek和Llama市场位置。</p></div>
+  <div class="topic-title">📡 阿里Qwen 3.7 Max冲进Arena前十</div>
+  <div class="section"><div class="section-label event">事件</div><p>Qwen 3.7 Max Preview在Chatbot Arena总榜排13，实验室总排名第6，数学/编程赛道进入前十。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>数学第7、专家领域第9、软件IT第9、编程第10——四个赛道全面进入前十意味着Qwen 3.7 Max已接近第一梯队。考虑到阿里在Vision赛道还有独立优势（Qwen-VL系列），Qwen 3.7的完整版（含Vision/多模态）可能更强。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>国产开源模型在Arena上逼近GPT/Claude/Gemini，对国内企业选型有示范效应。如果能维持开源策略，将加速国内AI应用的模型底座迭代。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -299,24 +348,40 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Anthropic年化营收突破300亿美元</div>
-  <div class="section"><div class="section-label event">事件</div><p>Anthropic CFO最新访谈透露，Q1年化营收从90亿美元飙升至300亿美元</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>一年营收翻3倍多，但「算力同时服务训练、内部研发和外部客户」意味着供给紧张。解释了为什么Claude token limit翻倍但仍有各种限制。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>Anthropic从追赶者变成巨无霸。产能瓶颈若持续，可能给OpenAI和Google留出窗口期。</p></div>
+  <div class="topic-title">📡 马斯克起诉OpenAI案彻底败诉</div>
+  <div class="section"><div class="section-label event">事件</div><p>加州联邦法院陪审团一致裁定马斯克对OpenAI/Sam Altman的诉讼超过法定时效，全部主张被驳回，陪审团评议不到2小时。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>马斯克核心主张是OpenAI背离了非营利初心，但法院以「告晚了」为由不予审理实质内容。陪审团不到2小时的一致裁决表明案件在程序层面就缺乏争议空间。这是马斯克vs OpenAI系列诉讼中最决定性的一次败诉。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>OpenAI可以更自由地推进商业化转型（盈利子公司架构），不再受马斯克法律威胁掣肘。但「非营利变营利」的伦理争议不会因此消失，只是从法庭转向舆论场。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/vista8/status/2056250644739338399" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2056495238684770487" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2056534742833713436" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/Gorden_Sun/status/2056320014442225992" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/vista8/status/2056271703203033118" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2056255704537965012" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2056405708070072658" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2056535561540948056" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2056358590257242135" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2056250644739338399" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2056283234346959287" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2056309645703086547" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIodhfcbEAAccV9?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIodhfcbEAAccV9?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIodnDHasAAG3ds?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIodnDHasAAG3ds?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056534360468463616/img/oZnZnGOj51E1q8_j.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056534360468463616/img/oZnZnGOj51E1q8_j.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056416055493611522/img/2Arc0QN94BrLBnHy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056416055493611522/img/2Arc0QN94BrLBnHy?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HImCH6TakAARgnn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HImCH6TakAARgnn?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIlWjrkbUAAhdPO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlWjrkbUAAhdPO?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIlW7oFaAAAihyT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlW7oFaAAAihyT?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIlXd5paUAAcaWt?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlXd5paUAAcaWt?format=png&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HIlXi8Ma4AAVSCl?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIlXi8Ma4AAVSCl?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056249067634933760/img/gpYyDKkX4S0NE6ji.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056249067634933760/img/gpYyDKkX4S0NE6ji.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056237569403396096/img/1IcVD0LRyvdZX1k9.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056237569403396096/img/1IcVD0LRyvdZX1k9.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIpIIx1acAAtSXJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIpIIx1acAAtSXJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HInbJHobUAMaPDB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HInbJHobUAMaPDB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HImnO9FacAAEWzw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HImnO9FacAAEWzw?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIl5aNyaQAADNsX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIl5aNyaQAADNsX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIl5bEeaIAA6Qvs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIl5bEeaIAA6Qvs?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIl5y8KaYAA0nO_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIl5y8KaYAA0nO_?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIl6F7dbQAAVgEc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIl6F7dbQAAVgEc?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
@@ -324,13 +389,17 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>Mole 1.4.1：Tw93开发的macOS原生清理工具，菜单栏实时CPU/RAM/网速 <a href="http://mole.fit" target="_blank">→</a></li>
-    <li>lark-bot2bot：让飞书机器人之间互相@讨论的桥接工具 <a href="https://github.com/iamkentzhu/lark-bot2bot" target="_blank">→</a></li>
-    <li>微信读书伴侣Skill：花叔开发的微信读书增强工具 <a href="https://github.com/alchaincyf/huashu-weread" target="_blank">→</a></li>
-    <li>ClipDock：macOS免费开源剪贴板管理工具 <a href="https://github.com/appdev/ClipDock" target="_blank">→</a></li>
-    <li>DeepMind AI co-mathematician：多Agent三层协作体系加速数学研究 <a href="https://x.com/Gorden_Sun/status/2056320014442225992" target="_blank">→</a></li>
-    <li>ORCA Agent IDE：开源AI编程IDE，支持iOS/macOS <a href="https://x.com/vista8/status/2056271703203033118" target="_blank">→</a></li>
-    <li>docu.md：响马用vibe coding持续开发半年的文档协作应用 <a href="https://docu.md" target="_blank">→</a></li>
+    <li>Starchild-1：Odyssey AI实时多模态世界模型，画面+声音同时生成，尚未开放体验 <a href="https://x.com/berryxia/status/2056534742833713436" target="_blank">→</a></li>
+    <li>微信读书伴侣skill：花叔的WeRead增强工具，配合微信读书skill使用 <a href="https://t.co/cyPLKaUash" target="_blank">→</a></li>
+    <li>DeepMind AI co-mathematician：多Agent协作加速数学研究，三级Agent层级 <a href="https://x.com/Gorden_Sun/status/2056320014442225992" target="_blank">→</a></li>
+    <li>EverMe：EverMind私人记忆库，5/20发布，全免费，一键安装 <a href="https://x.com/elliotchen100/status/2056255704537965012" target="_blank">→</a></li>
+    <li>微信公众号文章抓取：扫码登录一键抓取任意公众号→本地Markdown <a href="https://t.co/vG9gYRcvWc" target="_blank">→</a></li>
+    <li>Krea角色一致性：AI绘画保持人物/风格/构图一致性 <a href="https://x.com/berryxia/status/2056405708070072658" target="_blank">→</a></li>
+    <li>Claude Code开发日志提示词：核心开发者Thariq的高频提示词模板 <a href="https://x.com/shao__meng/status/2056535561540948056" target="_blank">→</a></li>
+    <li>Spotify迪斯科Logo提示词：GPT-Image-2一键生成3D玻璒金属App图标 <a href="https://x.com/elliotchen100/status/2056358590257242135" target="_blank">→</a></li>
+    <li>Anthropic CFO披露：年化营收$90亿→$300亿+，算力三线作战 <a href="https://x.com/vista8/status/2056250644739338399" target="_blank">→</a></li>
+    <li>QuickRight闪电右键：macOS右键增强，免费开源 <a href="https://x.com/appinn/status/2056283234346959287" target="_blank">→</a></li>
+    <li>ClipDock：macOS免费开源剪贴板工具 <a href="https://x.com/appinn/status/2056309645703086547" target="_blank">→</a></li>
   </ul>
 </div>
 

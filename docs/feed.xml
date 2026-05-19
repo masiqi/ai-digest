@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 19 May 2026 01:24:32 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 01:38:42 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/05/19 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-19.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-19.html</guid>
-      <description>开源工具井喷日——从科研假设生成到桌面启动器、从AI阅读助手到在线格斗游戏，今天的X List几乎全是到手就能玩的硬货。MiroMind开源了跨学科科研假设生成模型，Cursor自研编程模型Composer 2.5上线，Anthropic收购Stainless并翻倍token限额。</description>
+      <description>终端工具+Agent IDE密集更新日：Pake/Mole/Wox三连发，ORCA开源Agent IDE首次亮相；Open Design正式接入Codex，设计-代码-视频一条龙工作流成型。Anthropic token翻倍+Cursor Composer 2.5推出，Agent工具链进入军备竞赛期。</description>
       <pubDate>2026-05-19T08:30:00+08:00</pubDate>
     </item>
     <item>
