@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 19 May 2026 01:38:42 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 00:36:50 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/05/20 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-20.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-20.html</guid>
+      <description>Google I/O 2026 全面拥抱 Agentic Gemini 时代——Gemini Omni 世界模型发布、3.5 Flash 性价比屠榜、Antigravity 2.0 正面硬刚 Codex。另一重磅：Karpathy 宣布加入 Anthropic 重返一线 R&amp;amp;D。</description>
+      <pubDate>2026-05-20T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/05/19 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-19.html</link>

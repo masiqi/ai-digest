@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-20</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-20</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Google I/O 2026 全面拥抱 Agentic Gemini 时代——Gemini Omni 世界模型发布、3.5 Flash 性价比屠榜、Antigravity 2.0 正面硬刚 Codex。另一重磅：Karpathy 宣布加入 Anthropic 重返一线 R&amp;D。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ NVIDIA LongLive 2.0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>NVIDIA 开源全球首个端到端 4-bit 超长视频生成基础设施，训练推理全流程打通，5B 参数模型跑出 45.7 FPS。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/NVlabs/LongLive" target="_blank">https://github.com/NVlabs/LongLive ↗</a></p>
+    <p><a href="https://nvlabs.github.io/LongLive/LongLive2" target="_blank">https://nvlabs.github.io/LongLive/LongLive2 ↗</a></p>
+    <p><a href="https://huggingface.co/papers/2605.18739" target="_blank">https://huggingface.co/papers/2605.18739 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接 git clone 仓库，README 包含完整安装和推理脚本。支持真实视频训练、few-step 蒸馏、多 shot 训练/推理、序列并行和 NVFP4 量化。Demo 页面可直接在线体验超长视频生成效果，上传图片或文本即可生成连贯长视频。如果你有 GPU（建议 24GB+），本地跑 5B 模型体验 FP4 量化带来的极速推理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>FP4 量化是视频生成领域的重大突破——把超长视频生成的硬件门槛直接砍到消费级。45.7 FPS 意味着实时生成成为可能，这是第一个真正"可部署"的超长视频生成方案。端到端训练+推理全开源，对视频生成社区的影响可能不亚于 SD 之于图像生成。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>超长视频内容生成（教程、虚拟主播、产品演示）</li>
+    <li>实时视频推理和编辑管线</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2056767536033894825" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056739640405569536/img/66OndOLiGSsOHGVh.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056739640405569536/img/66OndOLiGSsOHGVh.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cerebras 高速推理 Kimi K2.6</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cerebras 为超过 1T 参数的 Kimi K2.6 部署高速推理，告别官方推理龟速时代。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cerebras.ai" target="_blank">https://cerebras.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 Cerebras 推理平台（cerebras.ai/inference），在模型列表中选择 Kimi K2.6 即可使用。Cerebras 以其晶圆级芯片 WSE-3 提供远超 GPU 集群的推理吞吐，尤其适合长上下文和复杂推理任务。如果你之前因为 Groq（已被 Nvidia 收购）停止跟进主流模型而苦恼，现在有了新的高速入口。可直接通过 REST API 或平台 Playground 调用，对比官方 API 的速度提升非常直观。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Groq 被收购后 Kimi 系列一直缺高速推理，Cerebras 填补了空白。K2.6 是超过 1T 参数的超大模型，推理速度一直是瓶颈——Cerebras 的晶圆级芯片在这种场景下优势巨大。这也是 Cerebras 继 GPT 5.3 Codex Spark 之后的又一次大模型高速推理落地。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>需要高速响应的 AI Agent 后端推理</li>
+    <li>长上下文复杂推理的实时应用</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2056893761108713669" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIuN9vIaYAAlc0I?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIuN9vIaYAAlc0I?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIsh6kBXIAAVOJr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIsh6kBXIAAVOJr?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Google Gemini Omni Flash（世界模型初代）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google DeepMind 发布视频生成+编辑模型，真正理解物理规律、历史文化和故事逻辑——不只是"生成视频"，是"世界模型"的雏形。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Google AI Plus/Pro/Ultra 订阅用户可直接在 AI Studio 中使用 Omni Flash。支持文本/图片/视频混合输入生成视频，也支持视频编辑（替换元素、改变场景）。生成 10 秒视频仅需约 2 分钟。操作方式：在 AI Studio 选择 Gemini Omni Flash 模型，输入多模态 prompt（可同时上传图片和文本描述），模型理解物理规律后生成符合真实世界逻辑的视频。也可在 Flow 平台直接体验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Omni 的核心差异不是"生成更好看的视频"——而是具备物理推理能力。它能理解重力、碰撞、光影变化，结合 Gemini 的历史/科学/文化知识生成有逻辑的视频内容。这不再是一个"视频版 Midjourney"，而是向 AGI 世界模型迈出的实质性一步。负面评价也有（分镜编排不如 Sora 2，编辑能力弱于 SeeDance 2.0），但"理解世界"这个方向本身是里程碑式的。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>需要物理一致性的视频预演和仿真</li>
+    <li>结合文化/历史知识的教育内容生成</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2056882001224073297" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056881150828982273/img/-cLZzJmYgM647mb4.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056881150828982273/img/-cLZzJmYgM647mb4.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056785964324831232/img/Er6GvJ-uvMtJLp0s?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056785964324831232/img/Er6GvJ-uvMtJLp0s?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Google Gemini 3.5 Flash</div>
+  <div class="section"><div class="section-label event">一句话</div><p>效果逼近 GPT 5.5，价格仅 1/3，Agentic 和多模态能力更强——可能是目前性价比最高的旗舰级 API 模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://aistudio.google.com" target="_blank">https://aistudio.google.com ↗</a></p>
+    <p><a href="https://ai.google.dev" target="_blank">https://ai.google.dev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>API 定价 $1.50/$9.00 per 1M token（输入/输出），缓存输入仅 $0.15，上下文窗口 1M token。Google AI Studio 可直接免费试用（有速率限制）。相比 3.1 Pro 效果大幅提升，Agentic 能力（工具调用、多步推理）和视觉理解显著增强。如果你是 API 用户，可直接替换现有模型端点测试效果。Google 表示将大量用于自家产品，说明对稳定性有足够信心。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Gemini 3.5 Flash 的定价策略非常激进——$1.50 的输入价格对标的是 GPT 5.5 的性能区间，而后者要贵 3 倍。1M token 的上下文窗口意味着可以塞入整本书。缓存价格 $0.15 对高频重复调用的场景极度友好。如果效果真如基准所示接近 GPT 5.5，这会改写 API 市场的价格锚点。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>大批量文档分析和 RAG 替代方案</li>
+    <li>需要高频 API 调用的 Agent 工作流（性价比极高）</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2056860218387321054" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HItvZvBagAE1hY5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HItvZvBagAE1hY5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenAI Symphony（多 Agent 编排框架）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenAI 开源多 Agent 编排框架 Symphony，用项目管理工具（如 Issue Tracker）作为控制面板协调多个 Coding Agent 协同工作。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Symphony 的设计理念是"用任务系统而非代码编排 Agent"——你在 Issue Tracker 中创建任务、分配优先级、设定依赖关系，Symphony 自动调度多个 Coding Agent 并行/串行执行。这意味着非程序员也可以通过类似 Jira/Trello 的界面管理 AI 开发团队。开源意味着可以自定义 Agent 类型、任务编排逻辑和集成任意 Issue 系统。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>从"人管理 Agent"到"Agent 管理 Agent"的范式转变。Symphony 用 Project Management 范式取代了代码编排，降低了多 Agent 协作的门槛。InfoQ 已报道，国内 AI 社区关注度很高。结合 Codex 的 Goals 模式（work→check→continue），Symphony 可能是 OpenAI 多 Agent 战略的核心拼图。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>复杂软件项目的多 Agent 自动化开发</li>
+    <li>非技术人员通过任务面板管理 AI 开发团队</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2056715048345894920" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare Agents SDK + Durable Objects 免费</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cloudflare Workers 免费计划现已支持 Durable Objects，零成本构建有状态的 AI Agent，搭配 Agents SDK 开箱即用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developers.cloudflare.com/agents/" target="_blank">https://developers.cloudflare.com/agents/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>注册 Cloudflare 账号（免费），在 Workers 控制台创建新 Worker，启用 Durable Objects（现已在 Free 计划中可用，无需绑卡）。安装 Agents SDK（npm install @cloudflare/agents），使用官方模板快速搭建 AI Agent——包括对话历史管理、状态持久化、工具调用等。本质上是零成本的 Serverless AI Agent 后端，非常适合个人项目和原型验证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>有状态是 AI Agent 的核心需求（记忆、上下文、会话），而之前 Durable Objects 需要付费计划。免费开放意味着个人开发者可以零成本构建生产级 AI Agent 后端。Cloudflare 的全球边缘网络延迟极低，对实时 AI 应用非常友好。结合 Workers AI 甚至可以全链路零成本（推理+状态+部署）。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>零成本部署个人 AI Agent 后端</li>
+    <li>全球低延迟的实时 AI 应用原型</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2056724816636379228" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cola × Codex 打通</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cola 新增 Codex 登录功能和自定义 API Key（GPT/Claude），Codex 用户可直接用现有套餐驱动 Cola。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>更新 Cola 到最新版，在设置中选择"Codex 登录"即可用 OpenAI Codex 账号登录，套餐中的 Token 配额直接用于 Cola 的 Agent 功能。或者填入自己的 OpenAI/Anthropic API Key 使用 GPT 或 Claude。Cola 本身是一个轻量级 AI Agent 工具，Codex 的"太多用不完"的用户现在有了新的消费出口——在 Cola 里跑自动化任务、文件处理、代码辅助等，不浪费 Codex 配额。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>工具互通是好文明。Codex 用户有了更多消费场景，Cola 用户多了模型选择。这种"拆墙"式的产品设计比各自封闭造车更符合用户利益。支持多模型 Key 也让 Cola 从单模型依赖中解放出来。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Codex 套餐用户扩展 Agent 使用场景</li>
+    <li>多模型灵活切换的日常 AI 工作流</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2056878350728351918" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIt_NDAbgAAycnR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIt_NDAbgAAycnR?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design 支持 Grok Build（现已支持 17 个 Agent Runtime）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Open Design 设计到代码工具新增 Grok Build 支持，累计支持 17 个本地 Coding Agent runtime，覆盖主流全平台。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://opendesign.ai" target="_blank">https://opendesign.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Open Design 中完成设计稿后，选择导出目标为 Grok Build / Claude Code / Codex CLI / Gemini CLI / Cursor Agent / Hermes / Kimi CLI 等任一支持的 runtime，直接生成可运行的代码项目。Open Design 负责从设计到代码规范的转换，Agent runtime 负责执行。支持的前端框架包括 React、Vue、Next.js 等。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>17 个 Agent runtime 的全覆盖意味着 Open Design 正在成为"设计→代码"的通用中间层。无论你用哪个 Agent，设计产出都能无缝对接。对团队来说，这意味着可以用统一的设计规范驱动不同的 AI 开发工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>设计师直接通过 Open Design 输出可运行的代码项目</li>
+    <li>团队用统一设计规范驱动多个 AI Agent 并行开发</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2056700191399428152" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIrdwp0WsAAuLBG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIrdwp0WsAAuLBG?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIrPhVLXgAA8pTk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIrPhVLXgAA8pTk?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Andrej Karpathy 加入 Anthropic</div>
+  <div class="section"><div class="section-label event">事件</div><p>前 OpenAI 创始团队成员、Tesla AI 前总监 Andrej Karpathy 官宣加入 Anthropic，重返一线 R&amp;D 工作。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Karpathy 是 AI 教育领域最具影响力的人物之一，他的加入对 Anthropic 的公众形象和研发实力都是巨大利好。他明确表示"仍对教育充满热情，会在适当时候恢复"，但也坦承"LLM 前沿未来几年将特别具有塑造性"——暗示 Anthropic 可能有更大的模型计划。加上之前爆出的 Stainless 收购（控制 SDK 生成管道），Anthropic 正在系统性地布局从协议标准（MCP）到工具链到人才的全栈竞争力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Anthropic 对 OpenAI 的人才虹吸效应持续增强。Karpathy 的加入可能吸引更多顶级研究者选择 Anthropic。短期内他的公开教程会减少（遗憾），但 Anthropic 的模型能力可能迎来质的提升。对普通用户来说，Claude 系列模型未来的进步值得期待。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/karpathy/status/2056753169888334312" target="_blank"><span class="handle">@karpathy</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cursor Composer 2.5 发布</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cursor 发布 Composer 2.5，仍基于 Kimi K2.5，同时与 SpaceXAI 合作，使用 Colossus 2 算力训练，正在从零训练一个算力规模 10 倍以上的全新模型。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Cursor 绑定 Kimi 系列模型的策略依然坚定。Elon Musk 亲自发帖证实合作细节和 Colossus 2 算力投入，说明 SpaceXAI 与 Cursor 的合作关系比外界想象的更深。正在训练的"算力规模 10 倍以上全新模型"是最大看点——如果成功，可能改变 Coding Agent 的底层模型格局。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Cursor 用户将直接受益于模型迭代。Composer 2.5 的性能提升加上未来更大算力模型的前景，让 Cursor 在 Coding Agent 赛道的竞争力持续加强。对 Kimi 系列模型的长期绑定也意味着 Cursor 的用户体验将深度依赖 Kimi 的进步速度。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2056537910598627785" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIpKUHHbwAAPqjm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIpKUHHbwAAPqjm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HInYLGEbUAMPCxf?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HInYLGEbUAMPCxf?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 ChatGPT 金融 Dashboard</div>
+  <div class="section"><div class="section-label event">事件</div><p>ChatGPT 推出 Finance Dashboard，接入 12,000 家银行，即将与 Intuit 合作提供信用卡推荐、税务分析、预约税务专家等功能。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>OpenAI 从通用 AI 助手向垂直金融平台的转型信号非常明确。4 月收购 Hiro 的意图现在清晰——构建金融垂直生态。12,000 家银行的接入规模意味着这不是实验性功能，而是战略级产品。结合信用卡推荐和税务服务，OpenAI 正在进入 Intuit 和传统金融科技公司的核心领地。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI + 金融的融合进入深水区。如果 ChatGPT 成为数亿用户的金融入口，对传统银行 App 和金融科技公司的威胁将远超预期。数据安全和合规将是最大挑战——用户是否愿意让 AI 访问银行账户是一个重大信任门槛。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2056715126406074478" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2056724752878698978" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2056714805420187789" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/jundotkim/status/2056666955466383521" target="_blank"><span class="handle">@jundotkim</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2056696844013773024" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2056753074883215726" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Barret_China/status/2055675393294889222" target="_blank"><span class="handle">@Barret_China</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2056879760257806743" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/sama/status/2056804900017947046" target="_blank"><span class="handle">@sama</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2056750058306154989" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2056862526239908047" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIq_JOFbMAAi0ff?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIq_JOFbMAAi0ff?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIra4E7bAAAD3cN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIra4E7bAAAD3cN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIq4jQDXcAAsEnp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIq4jQDXcAAsEnp?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIsOBbAasAARjAB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIsOBbAasAARjAB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIc52YPaQAAAzCM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIc52YPaQAAAzCM?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056748972849696768/img/SFqGABkNpUdMzFMr.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056748972849696768/img/SFqGABkNpUdMzFMr.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056721555456229376/img/vUfjzSRGj1tkdAVZ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056721555456229376/img/vUfjzSRGj1tkdAVZ.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056794605082025984/img/v_ML1UTvA98ZLvVh.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056794605082025984/img/v_ML1UTvA98ZLvVh.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Milvus 3.0-beta + Zilliz Cloud Serverless GA：稀疏向量+多向量混合搜索，成本最高降低 50 倍 <a href="https://x.com/seclink/status/2056724752878698978" target="_blank">→</a></li>
+    <li>Anthropic 收购 Stainless：掌控 OpenAI 和 Gemini 也依赖的 SDK 生成管道 + MCP 工具栈 <a href="https://x.com/seclink/status/2056714805420187789" target="_blank">→</a></li>
+    <li>MLX 0.3.9rc1：低内存 Mac 不再被杀进程，分块预填充优化 <a href="https://x.com/jundotkim/status/2056666955466383521" target="_blank">→</a></li>
+    <li>Google AI Studio 移动端：Play 商店可预注册，终于不用忍受 Gemini App <a href="https://x.com/op7418/status/2056696844013773024" target="_blank">→</a></li>
+    <li>LandingAI ADE Classify：文档页面级分类 API，只解析需要的页面 <a href="https://x.com/Sumanth_077/status/2056753074883215726" target="_blank">→</a></li>
+    <li>微信读书.skills：AI 直接接入微信读书全部书库，搜书+读取划线点评 <a href="https://x.com/Barret_China/status/2055675393294889222" target="_blank">→</a></li>
+    <li>NVIDIA CEO 黄仁勋金句：每个工程师未来都要管理和使用几百个 AI Agent <a href="https://x.com/berryxia/status/2056879760257806743" target="_blank">→</a></li>
+    <li>Codex 重置：Sam Altman 发帖暗示 Codex rate limit 重置 <a href="https://x.com/sama/status/2056804900017947046" target="_blank">→</a></li>
+    <li>Lucius AI 融资 $3M：企业级 AI Context Layer <a href="https://x.com/berryxia/status/2056750058306154989" target="_blank">→</a></li>
+    <li>Google Antigravity 2.0：UI 抄袭 Codex 但比 Gemini 好用 <a href="https://x.com/dotey/status/2056862526239908047" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
