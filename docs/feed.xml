@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 20 May 2026 00:36:50 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 00:39:41 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/05/21 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-21.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-21.html</guid>
+      <description>Google I/O 2026 刷屏——Gemini 3.5 Flash 性能碾压自家 3.1 Pro、Gemini Omni 做 any2any 世界模型、Antigravity 2.0 正面硬刚 Codex。与此同时开源社区疯狂输出：Codex 增强插件、开源版 Claude Design、PaddleOCR 打通 HuggingFace 生态、端侧 TTS 模型跑167倍实时速度，今天的主题是「开源工具集体爆发 + Google 全力反扑」。</description>
+      <pubDate>2026-05-21T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/05/20 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-20.html</link>

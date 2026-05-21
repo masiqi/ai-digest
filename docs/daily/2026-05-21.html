@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-21</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-21</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Google I/O 2026 刷屏——Gemini 3.5 Flash 性能碾压自家 3.1 Pro、Gemini Omni 做 any2any 世界模型、Antigravity 2.0 正面硬刚 Codex。与此同时开源社区疯狂输出：Codex 增强插件、开源版 Claude Design、PaddleOCR 打通 HuggingFace 生态、端侧 TTS 模型跑167倍实时速度，今天的主题是「开源工具集体爆发 + Google 全力反扑」。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Codex++ —— 给你的 Codex App 开挂</div>
+  <div class="section"><div class="section-label event">一句话</div><p>增强/魔改 Codex 客户端的开源插件，即使你用 API 登录也能解锁 Computer Use、Goal 指令、Chrome 风格顶部 Tab、任务完成声音提醒等功能</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/b-nnett/codex-plusplus" target="_blank">https://github.com/b-nnett/codex-plusplus ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后，把安装指令直接发给你的 Codex Agent：「Inspect &amp; install this for me: https://github.com/b-nnett/codex-plusplus, tell me where you install it and send me the local path for me to add new tweaks.」Codex 会自动完成检查、安装和配置。安装后你可以：1）在 API 登录模式下使用 Computer Use 功能（原本仅限订阅用户）；2）添加自定义 Goal 指令引导 Agent 行为；3）切换界面为 Chrome 顶部 Tab 布局；4）设置任务开始/完成的提示音。是重度 Codex 用户的必装增强包。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是社区首次系统性地 Hack Codex 客户端，把官方限制的功能通过插件方式解锁出来。顶部 Tab 的多会话管理方案也很有争议——宝玉指出这可能带来内存占用问题，但这种「浏览器式」的 Agent App 交互确实是新方向</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用 API Key + Codex++ 享受 Computer Use，省下订阅费</li>
+    <li>同时管理多个 Agent 任务，像浏览器 Tab 一样切换</li>
+    <li>给 Codex 加自定义预设指令，标准化工作流</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2057124658927812758" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIxeuZFWEAARsIY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIxeuZFWEAARsIY?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIxfkUZW4AABw2-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIxfkUZW4AABw2-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design —— 开源版 Claude Design，接 Codex/Claude Code 就能做设计</div>
+  <div class="section"><div class="section-label event">一句话</div><p>140 套现成设计体系的开源设计工具，可搭配 Codex、Claude Code、Cursor Agent 让 AI 自动完成 UI 设计、生成页面、测试交互、迭代修改</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>1）安装后选择一个 CLI Agent（推荐 Codex 或 Claude Code）；2）打开 Open Design，告诉 Agent 你想做什么设计（比如「做一个 SaaS 登录页」）；3）Agent 会在 Open Design 工作台里自动选择设计流程、填写 brief、生成页面、检查文件、测试交互；4）你可以直接丢一个参考网站 URL，它自动复刻风格。整个过程几乎不需要碰命令行，所有操作在可视化工作台完成。比单买 Claude Design $200/月划算太多。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这可能是目前最强的开源设计 Agent 方案。Tom Huang 团队实现了「人负责表达需求和判断方向，Agent 负责执行和迭代」的协作模式——设计从一次性生成变成了人+Agent 在同一环境里持续迭代的工作流。140 套设计体系覆盖了市面上几乎所有主流设计风格</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速原型设计，扔个竞品 URL 就自动复刻风格出原型</li>
+    <li>非设计师用自然语言驱动 Agent 生成页面</li>
+    <li>团队用 Codex + Open Design 协同迭代产品设计</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohua_888/status/2056929403028853113" target="_blank"><span class="handle">@xiaohua_888</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIsJahnaUAA2weS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIsJahnaUAA2weS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2055850158441877504/img/yj5P1_P66VFqo5Pd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2055850158441877504/img/yj5P1_P66VFqo5Pd?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Rodin Gen-2.5 —— 一张图生成高质量 3D 模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>上传一张图片即可生成千万级面数的 3D 资产，一键下载 obj/fbx/glb 源文件和贴图，直接导入 Blender/Maya/Unity 继续编辑</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://hyperhuman.deemos.com/rodin" target="_blank">https://hyperhuman.deemos.com/rodin ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 Rodin 官网，上传任意产品图、角色图或概念图，等待几秒即可生成 3D 模型。下载格式包括 obj、fbx、glb 等主流 3D 格式，贴图资源也会一并打包。导入到 3D 软件后可以继续精修。向阳乔木体验后对比几年前在字节做 3D 虚拟人要协调建模师、绑骨师、贴图师的流程，感慨现在一张图就搞定。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Rodin Gen-2.5 号称全球首款实现千万级面数的 3D 生成模型。从图片到可直接用于生产环境的 3D 资产，这直接砍掉了传统 3D 建模的大量重复劳动。对独立开发者和小团队来说，3D 内容创作的门槛被大幅拉低</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>游戏开发快速生成道具、角色、场景原型</li>
+    <li>电商产品 3D 展示图一键生成</li>
+    <li>AR/VR 应用的 3D 资产快速生产</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2057093608747229556" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057092793882021888/img/RvKyhlAJMKYboGrw.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057092793882021888/img/RvKyhlAJMKYboGrw.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIxDDBnbIAAjtfF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIxDDBnbIAAjtfF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056738140111749120/img/jKaON4k_hrRrQmpx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056738140111749120/img/jKaON4k_hrRrQmpx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PaddleOCR 3.5 —— 打通 HuggingFace 生态，OCR 迎来 LLM 级推理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>PaddleOCR 最新版支持 Transformers 作为推理后端，PP-OCRv5 和 PaddleOCR-VL 1.5 模型现在可以直接在 HuggingFace 上用，无需 PaddlePaddle 框架</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/PaddlePaddle/PaddleOCR" target="_blank">https://github.com/PaddlePaddle/PaddleOCR ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>pip install paddleocr 后，现在可以选择用 Transformers backend 推理。PP-OCRv5 做标准文字识别，PaddleOCR-VL 1.5 做视觉语言级别的文档理解。最重要的是模型直接托管在 HuggingFace Hub，可以用熟悉的 transformers 接口加载，不需要装 PaddlePaddle 全家桶。对于已有的 HuggingFace pipeline，切换成本极低。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>PaddleOCR 一直是中文 OCR 的天花板，但之前绑定 PaddlePaddle 框架让很多开发者却步。这次打通 HuggingFace 生态意味着 PaddleOCR 终于融入了主流 ML 工具链——LLM 推理、模型微调、部署都变得简单。对于需要大量文档数字化、票据识别的场景，这是重大利好</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>中文发票/合同/证照的批量 OCR 识别</li>
+    <li>扫描版 PDF → 结构化文本的文档处理 pipeline</li>
+    <li>结合 LLM 做端到端的文档理解（OCR + 信息提取）</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2057088151051817074" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIw-w1pboAAIv4_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIw-w1pboAAIv4_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Supertonic —— 端侧多语言 TTS，167 倍实时速度</div>
+  <div class="section"><div class="section-label event">一句话</div><p>完全本地运行的超快多语言 TTS 模型，ONNX Runtime 推理，6600 万参数，生成速度达到实时播放的 167 倍</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载模型通过 ONNX Runtime 在本地推理，支持多语言。适合集成到任何需要语音合成的应用里——因为它纯本地运行，零延迟、零成本、隐私安全。167 倍实时速度意味着生成 1 分钟语音只需要不到 0.4 秒。可在 MacBook 甚至移动设备上跑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>端侧 TTS 一直存在速度慢、音质差的问题。Supertonic 用仅 66M 参数做到了 167 倍实时速度，这在端侧 TTS 里是颠覆性的。结合 Gemma 4 等端侧 LLM，本地语音助手的产品体验将大幅提升——全离线、低延迟、免费</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地 AI 语音助手/聊天机器人的语音输出</li>
+    <li>播客/有声书批量生成</li>
+    <li>无障碍应用的实时语音播报</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2057094800424534211" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIxE0Y9aMAEBC5G?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIxE0Y9aMAEBC5G?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 乔帮主油猴脚本合集 —— 让微信/小红书/抖音支持截图粘贴</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一套开源的 Tampermonkey 脚本，让微信、小红书、抖音网页版支持截图直接粘贴上传，外加 YouTube 字幕复制下载、小宇宙倍速调节</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-userscripts" target="_blank">https://github.com/joeseesun/qiaomu-userscripts ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>装好 Tampermonkey 浏览器插件后，在 GreasyFork 或直接从 GitHub 安装这些脚本。主要功能：1）微信/小红书/抖音网页版——截图后 Ctrl+V 直接粘贴上传图片（这些平台原生不支持粘贴）；2）YouTube——一键复制/下载字幕，支持倍速调节，一键发送字幕到 ChatGPT 或 NotebookLM 处理；3）小宇宙网页版——倍速播放调整。全部即装即用，零配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>2026 年了微信/小红书/抖音居然还不支持粘贴图片上传，这套脚本解决的就是这些「反人类」的产品设计。乔帮主出品质量有保证，一套脚本覆盖日常内容创作的多个痛点——截图分享、字幕处理、播客收听，搭配 Raycast AI 等工具能形成高效的内容创作工作流</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>截图后直接粘贴到微信/小红书/抖音发布内容</li>
+    <li>YouTube 视频 → 字幕提取 → ChatGPT 总结 → 一键成文</li>
+    <li>小宇宙播客加速收听</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2056975992078676393" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIvYOyUbUAAn8gK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIvYOyUbUAAn8gK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Draw Things + Flux.2 —— iPad 上跑开源生图模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 iOS/macOS 生图 App Draw Things 最新版开始支持 Flux.2，iPad 本地跑高质量文生图不再鸡肋</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 iPad 或 Mac App Store 下载 Draw Things，免费开源。加载 Flux.2 模型（首次需下载模型文件），然后就像用 Stable Diffusion 一样输入提示词生成图片。因为是本地推理，图片完全私密、无限生成、零费用。对新版 iPad Pro/Mac 的 Apple Silicon 优化得很好。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Draw Things 之前虽然支持 SD 系列模型但质量一般，Flux.2 是目前最强的开源文生图模型之一，这次集成让 iPad 从「随便玩玩」变成了可用的移动端 AI 生图工作站。对于需要随时随地快速出图的设计师和创作者来说，iPad + Draw Things + Flux.2 是一个很棒的组合</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>移动端快速出概念图/草图</li>
+    <li>隐私敏感的图片生成（本地处理，不上传云端）</li>
+    <li>无限量的免费 AI 生图</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2057064763839181210" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIwpfPCawAARzAT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIwpfPCawAARzAT?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIsRrRuaQAEPkCJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIsRrRuaQAEPkCJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIsRrRwbMAAljFV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIsRrRwbMAAljFV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIsRrSUa8AAejt0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIsRrSUa8AAejt0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIsRrSDbAAAgk4K?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIsRrSDbAAAgk4K?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 豆包输入法 Mac 版 —— AI 时代的 Mac 中文输入法</div>
+  <div class="section"><div class="section-label event">一句话</div><p>字节出品的 Mac 中文输入法，中英文混合输入、专业名词识别、语音+键盘联动，准确率和响应速度碾压竞品</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载安装后切换为豆包输入法，支持拼音、语音双模式。最大亮点是中英文混合输入——不需要切换输入法就能中英混打（比如「我刚用 Codex 跑了一个 Pipeline」不打乱码）。语音输入和键盘输入可以联动：说一段话自动转文字，然后键盘微调修改。歸藏用了几天表示「已经离不开了」，Orange 也发现语音+键盘联动能 1+1&gt;2。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Mac 上一直没有好用的国产 AI 输入法（搜狗广告多、讯飞体验一般），豆包填补了这个空白。核心优势是 AI 驱动的上下文理解和专业名词识别——对技术写作、中英混排场景特别友好。字节把 AI 能力注入了最基础的人机交互环节</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>技术博客/文档写作，中英文混排无压力</li>
+    <li>语音速记 + 键盘精修的高效输入</li>
+    <li>程序员写 PRD/周报的中英混输场景</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2057123946039058618" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIxfPWQawAEJANI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIxfPWQawAEJANI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 美团龙猫大模型 —— 每天免费 5500 万 Token</div>
+  <div class="section"><div class="section-label event">一句话</div><p>美团推出龙猫大模型，注册即送每天 5500 万 token 免费额度，适合做大量推理任务</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>注册美团龙猫大模型平台，即可免费使用每天 5500 万 token 的推理额度。适合批量文本处理、数据清洗、RAG 索引构建等 token 消耗量大的场景。API 兼容 OpenAI 格式，改个 endpoint 就能接入。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>5500 万 token/天在免费额度里极其慷慨（对比 OpenAI 免费额度每月仅百万级），而且是日更的。这对个人开发者和学生来说可以覆盖几乎所有日常使用。美团此举可能是在 AI 领域卡位的信号</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>大规模文本分类/标注/清洗</li>
+    <li>RAG 知识库的 embedding 和索引构建</li>
+    <li>批量翻译/摘要生成</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2057071378495627333" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CommonGround Kernel —— 让多个 Agent 互相协作的开源框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Intelligent Internet 开源的 Agent 协调内核，解决 Agent 之间无法移交任务、不能基于对方成果继续工作的问题</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Intelligent-Internet/CommonGround/" target="_blank">https://github.com/Intelligent-Internet/CommonGround/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在你的 Agent 工作流中集成 CommonGround Kernel，不同 Agent 可以共享工作上下文、协调任务、互相交接。博客有详细的使用指南。如果你在搭建多 Agent 系统（比如一个 Agent 做调研、另一个做开发、再一个做测试），CommonGround 解决了它们之间的「记忆孤岛」问题。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多 Agent 协作是 2026 年 Agent 领域的核心挑战。目前主流的 Agent 框架（Codex、Claude Code、Cumora）各自为战，Agent 之间无法有效传递上下文。CommonGround 试图建立一个开放标准来解决这个问题，如果得到社区采纳，将是 Agent 生态的重要基础设施</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>多 Agent 流水线：调研 Agent → 开发 Agent → 测试 Agent 无缝交接</li>
+    <li>团队协作中共享 Agent 工作成果</li>
+    <li>长周期任务的 Agent 轮班机制</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ii_posts/status/2057080889629081795" target="_blank"><span class="handle">@ii_posts</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIwvoUzWIAApaMm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIwvoUzWIAApaMm?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google I/O 2026：Gemini 3.5 Flash + Omni + Antigravity 2.0 三连击</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 在 I/O 2026 发布 Gemini 3.5 Flash（性能超 Gemini 3.1 Pro 且更快更便宜）、Gemini Omni（any2any 原生多模态世界模型）、Antigravity 2.0（Agent-first 原生应用）、Gemini Spark（基于 Gemini 3.5 + Antigravity harness 的 Agent 产品）</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Google 把过去半年的落后一口气追回来了。Gemini 3.5 Flash 在 Intelligence vs Speed 的 Pareto 前沿上把整个行业往前推了一大截——Intelligence Index 55 分，超过 Grok 4.3 和 Claude Sonnet 4。Gemini Omni 不是单纯的视频模型，而是音频/图像/视频/文本 any2any 的世界模型，Gorden Sun 实测后发现「错怪它了」。Antigravity 2.0 界面直接对标 Codex App，从「带 Agent Manager 的 IDE」走向「Agent-first 原生应用」。但 Nathan Clark 的吐槽也一针见血：Google 产品线太混乱，Gemini/Gemini Advanced/AI Pro/AI Ultra/Spark 傻傻分不清</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Google 在模型能力上缩小了与 OpenAI/Anthropic 的差距，但产品矩阵的混乱仍是最大短板。Antigravity 能否挑战 Codex 尚不可知，但至少说明 Agent 原生应用的 UI 范式（侧边栏 + 对话 + 文件区）正在成为行业标准</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2056894919709753731" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIuPBIhbYAAqUxW?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIuPBIhbYAAqUxW?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIstKWYboAAf-wH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIstKWYboAAf-wH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 即将 IPO</div>
+  <div class="section"><div class="section-label event">事件</div><p>据《华尔街日报》报道，OpenAI 正在准备在未来几天或几周内申请首次公开募股（IPO）</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这将是 AI 行业有史以来规模最大的 IPO。OpenAI 从非营利到「有限盈利」再到 IPO，商业化路径已经完全清晰。上市将为 OpenAI 带来巨额资金，但也意味着每个季度的财报压力——这对前沿研究投入可能形成约束。同时，IPO 也意味着 OpenAI 核心技术能力和财务数据的全面公开，竞争对手将获得前所未有的情报</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 行业估值体系将被 OpenAI IPO 重塑。巨头们（Google、Meta、微软）可能加大投入以应对上市后的 OpenAI 的资本优势。创业公司则面临选边站或差异化竞争的压力。资本市场可能迎来一波 AI 概念股热潮</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2057143906761138425" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Andrej Karpathy 加入 Anthropic，Eureka Labs 关停</div>
+  <div class="section"><div class="section-label event">事件</div><p>两年前离开 OpenAI 启动 AI 教育项目 Eureka Labs 的 Andrej Karpathy，正式宣布加入 Anthropic，Eureka Labs 账号锁推，AI 教育之旅就此告一段落</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Karpathy 是 AI 社区最具影响力的教育者之一，他的 Neural Networks: Zero to Hero 系列教程影响了一代 AI 从业者。Eureka Labs 两年来迟迟没有实质性产品推出，这次关停侧面说明「AI+教育」的商业化路径仍然不清晰。加入 Anthropic 后，Karpathy 可能会在 Agent 安全、对齐、可解释性等方向发力</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Anthropic 得到了一位顶级研究者和教育者，品牌加成巨大。AI 教育领域失去了一位最有号召力的旗手——Karpathy 的课从来不只是教技术，而是建立思维范式。对国内做 AI 教育的人来说，这可能是「天花板信号」</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2057047941945413861" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIwZB44bwAAYbLV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIwZB44bwAAYbLV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Midjourney 创始人后悔用 Google TPU：白白浪费一年</div>
+  <div class="section"><div class="section-label event">事件</div><p>Midjourney 创始人暗示他们被 Google TPU 坑了，如果回到过去会从第一天起全部使用 Nvidia GPU，使用 TPU 导致研究进度落后了大约一年</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是 Midjourney 创始人在被问及「为什么 Midjourney 进展不够快」时的坦诚回应。TPU 虽然在理论性能上不输 GPU，但实际适配成本、工具链成熟度、调试难度都远不如 Nvidia CUDA 生态。对于需要快速迭代的研究型团队，生态成熟度远比硬件理论算力重要</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这个案例会成为「TPU vs GPU」争论的经典注脚。Google 要想让更多团队选用 TPU，仅靠硬件性能不够，必须在开发者工具和生态建设上大幅投入。Nvidia 的护城河又一次被验证——不是硬件本身，而是 CUDA 生态 + 社区惯性</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2057131947621753071" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cerebras 为 Kimi K2.6 提供高速推理</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cerebras 在 GPT 5.3 Codex Spark 之后，再次为 Kimi K2.6（超过 1T 参数）提供高速推理平台。此前 Kimi K2.6 官方推理极慢，Groq 被 Nvidia 收购后也未跟进</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Cerebras 正在成为超大规模模型的「高速推理专用平台」——不做基座模型，专门给别人的大模型做推理加速。Kimi K2.6 在官方平台上慢到几乎不可用，Cerebras 的介入让它变成了真正可用的产品。这对月之暗面（Kimi 母公司）来说是救命稻草</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 推理市场正在形成新格局：大模型公司做训练和基座，Cerebras/Groq 等做推理加速。如果 Kimi K2.6 在 Cerebras 上体验良好，可能会吸引更多国内大模型公司选择 Cerebras 作为海外推理合作伙伴</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2056893761108713669" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIuN9vIaYAAlc0I?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIuN9vIaYAAlc0I?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIsh6kBXIAAVOJr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIsh6kBXIAAVOJr?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Andrew Ng 新课：用 AI Agent 生成图像和视频</div>
+  <div class="section"><div class="section-label event">事件</div><p>Andrew Ng 与 Google Cloud 合作推出新课程——构建能生成图像和视频的 AI Agent，重点在于让 Agent 自我评估输出质量并迭代优化</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这门课定位在「Agent + 视觉生成」的交汇处，相对冷门但前沿。核心理念是让 Agent 不仅生成内容，还能自我 critique 和改进——这是 Agent 从「工具」到「创作者」的关键跃迁。Katie Nguyen 主讲，免费短课程形式</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Agent 自我评估和迭代能力是通向更高级自主 Agent 的关键。这门课可能启发一批用 Agent 做自动化视觉内容创作的产品——从自动生成营销素材到 AI 辅助电影分镜</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AndrewYNg/status/2057146565500998024" target="_blank"><span class="handle">@AndrewYNg</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2057073452536782865" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2057004209229197696" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2057024193846243749" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2056984417457918158" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2057080995539796223" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2057180300145557937" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2057097816737292727" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2057040118347911344" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2057125388678254859" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/iscreamnearby/status/2057135260991906213" target="_blank"><span class="handle">@iscreamnearby</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057145895007989760/img/eJ5DVwRXZDyifNYW.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057145895007989760/img/eJ5DVwRXZDyifNYW.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIwEmoHXEAIQIAE?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIwEmoHXEAIQIAE?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057080670913191936/img/ZKEqbynz9RxFwzWp.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057080670913191936/img/ZKEqbynz9RxFwzWp.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056989951380873216/img/_v-4ibsB8OYuJ6di?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056989951380873216/img/_v-4ibsB8OYuJ6di?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057180196919480320/img/fGjs3KcNFUL1_16H.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057180196919480320/img/fGjs3KcNFUL1_16H.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056919269569679360/img/AiqOy3nya7eQMc6B.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056919269569679360/img/AiqOy3nya7eQMc6B.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIwS3XkbYAEzmNA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIwS3XkbYAEzmNA?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057125245233041409/img/I94WT4VMmL0tdEz3.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057125245233041409/img/I94WT4VMmL0tdEz3.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIxpmKWa8AAMeQU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIxpmKWa8AAMeQU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Moeli 阅读：轻量漫画小说阅读器 <a href="https://x.com/appinn/status/2057073452536782865" target="_blank">→</a></li>
+    <li>Drowsebook 入梦书：睡前听电子书 iOS App <a href="https://x.com/appinn/status/2057004209229197696" target="_blank">→</a></li>
+    <li>小众软件「10款最新免费小工具」合辑 <a href="https://x.com/appinn/status/2057024193846243749" target="_blank">→</a></li>
+    <li>anygen.io：据传为字节跳动出海的 Web 端产品马甲 <a href="https://x.com/seclink/status/2056984417457918158" target="_blank">→</a></li>
+    <li>Fastlane：一个 prompt 驱动 Claude Code 做全自动社交营销 <a href="https://x.com/berryxia/status/2057080995539796223" target="_blank">→</a></li>
+    <li>Open Duck：Gemma 4 驱动的开源 3D 打印机器人，有视觉和对话能力 <a href="https://x.com/xiaohu/status/2057180300145557937" target="_blank">→</a></li>
+    <li>Funes World 黑神话小西天悬塑在线观赏 <a href="https://x.com/berryxia/status/2057097816737292727" target="_blank">→</a></li>
+    <li>女娲.skill：提炼思维模型的开源项目突破 20K Stars <a href="https://x.com/AlchainHust/status/2057040118347911344" target="_blank">→</a></li>
+    <li>Seedance 2.0：文字完全正确的视频生成 <a href="https://x.com/Gorden_Sun/status/2057125388678254859" target="_blank">→</a></li>
+    <li>CHI-Bench：75 个真实医疗 AI Agent 工作流基准，最好模型仅 28% 成功率 <a href="https://x.com/iscreamnearby/status/2057135260991906213" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
