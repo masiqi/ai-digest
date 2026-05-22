@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-22</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-22</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Codex 三连击（Appshots窗口上下文+Locked Use锁屏续命+手机端远程操控）+ ChatGPT 原生嵌入 PowerPoint，AI 正在从「帮你写」进化到「替你操作电脑」。同时 StabilityAI 开源 Stable Audio 3.0、Chrome DevTools for Agents 1.0 也值得立即上手。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ ChatGPT for PowerPoint（OpenAI 官方插件）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>直接在 PowerPoint 右侧对话框里用自然语言生成/改进/总结 PPT，输出完全可编辑</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 PowerPoint 中点击「插入」→「获取加载项」→ 搜索 ChatGPT 安装官方插件。安装后右侧出现 ChatGPT 对话框，你可以：(1) 用大白话描述需求直接生成新 PPT；(2) 让它读现有 PPT 逐页改进文案和排版；(3) 把会议记录或数据表粘贴进来，自动整理成展示内容；(4) 让它总结整份 PPT 的故事线。所有输出都是 PowerPoint 原生可编辑格式，不是死图片。需要 ChatGPT Plus/Pro 订阅。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是 OpenAI 首次将 ChatGPT 原生嵌入 Office 工作流，不再是浏览器里复制粘贴——生成的每张幻灯片、每段文字都能直接在 PPT 里调整，打通了 AI 内容生成到生产力工具的最后一步</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>周报/月报：把零散数据和要点扔进去，一键生成汇报 PPT</li>
+    <li>会议纪要转汇报：粘贴会议记录，自动提炼要点并排版成展示稿</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2057566877346611568" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI3yAAlboAAgPfd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI3yAAlboAAgPfd?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Codex Appshots：双击 Command 把当前窗口上下文发给 AI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 Mac 任意应用中双击 Command 键，Codex 截取当前窗口截图+读取所有文字内容（含屏幕外部分），直接开始对话</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://codex.openai.com（需安装" target="_blank">https://codex.openai.com（需安装 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装最新版 Codex Mac 客户端后，在任意应用（浏览器、VS Code、Figma、文档编辑器等）中工作，遇到需要 AI 帮忙的地方，双击左右 Command 键（⌘⌘，可在设置中修改快捷键）。Codex 会自动截取当前窗口，不仅抓截图，还会提取窗口内所有文字（包括没显示在屏幕上的滚动部分），然后你可以直接提问：「这段代码有什么问题？」「帮我改写这段文案」「这个设计的配色怎么样？」。更进阶的是 /goal 模式，可以给 Codex 设定目标让它跨应用完成任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这比传统截图+手动粘贴高效太多——窗口上下文一键送达，Codex 还能读到屏幕外的文字，相当于 AI 有了「读屏能力」。配合 /goal 模式，AI 从聊天助手进化成真正替你操作电脑的代理</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发调试：在 IDE 里双击 Command，让 Codex 分析当前文件的问题</li>
+    <li>文档协作：在 Notion/飞书里双击，让 AI 帮你润色或翻译整篇文档</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2057556752888222025" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI3Sh-BWcAALr5_.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HI3Sh-BWcAALr5_.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Codex Locked Use：Mac 锁屏后 AI 继续干活，手机远程指挥</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Codex 通过苹果官方 Authorization Plug-in 机制在锁屏状态下临时解锁 Mac 干活，屏幕保持黑屏，干完自动锁回</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Codex Mac 客户端设置中启用「Computer Use」和「Locked Use」功能。之后你可以：锁屏离开工位→用手机上的 Codex App 下发任务（比如「跑完这个测试套件，把结果发我邮箱」）→Codex 在锁屏状态下通过苹果官方 API 临时解锁 Mac 执行任务→屏幕全程保持黑屏，隐私安全→任务完成后自动重新锁屏。手机端还能收到编译完成、任务结束的实时推送通知。这用的是苹果 macOS 原生的 Authorization Plug-in 机制，不是第三方 hack。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这解决了「AI 需要跑长任务但人不能一直守着电脑」的核心痛点。手机远程下达任务 + 锁屏安全执行 + 自动锁回，真正实现了「AI 替你加班」</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>睡前让 Codex 跑测试/训练/数据爬取，早上看结果</li>
+    <li>通勤路上用手机指挥家里的 Mac 继续开发工作</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2057570191048126690" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI31KbQaAAAlyow?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI31KbQaAAAlyow?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Stable Audio 3.0：开源音乐/音效生成模型，Mac 本地可跑</div>
+  <div class="section"><div class="section-label event">一句话</div><p>StabilityAI 开源的文本到音频生成模型，Small/Medium 版本可下载本地跑，Large 版通过 API 使用，在线 Demo 可直接体验</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/collections/stabilityai/stable-audio-3" target="_blank">https://huggingface.co/collections/stabilityai/stable-audio-3 ↗</a></p>
+    <p><a href="https://huggingface.co/spaces/stabilityai/stable-audio-3" target="_blank">https://huggingface.co/spaces/stabilityai/stable-audio-3 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最快上手方法是打开 HuggingFace Space 在线 Demo，输入文本描述（如 "upbeat electronic track with piano melody, 120bpm"），点击生成即可得到音频。想本地跑的话，Small 和 Medium 版本权重已开源在 HuggingFace 上，下载后用 diffusers 或官方脚本加载推理，Mac M5 Pro 上能达到 59x realtime 速度。还支持 LoRA 微调，不到 1 小时就能训练出自己的风格模型。Large 版本效果最好但需通过 StabilityAI API 调用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>音乐/音效生成领域终于有了能本地跑的开源方案，且充分利用了 Apple Silicon 的统一内存架构优势。LoRA 微调门槛极低，个人创作者也能快速训练自己的音色风格</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>视频创作者的背景音乐/音效生成，告别版权焦虑</li>
+    <li>独立游戏开发者批量生成游戏音效和配乐</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2057472095970598969" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Chrome DevTools for Agents 1.0：让 AI Agent 真正「看见」浏览器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 官方发布的 Agent 浏览器调试工具，支持 MCP Server / CLI / Agent SDK 三种接入方式，让 AI 能像真实用户一样验证和调试 Web 代码</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developer.chrome.com/blog/devtools-for-agents-v1" target="_blank">https://developer.chrome.com/blog/devtools-for-agents-v1 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>三种接入方式——(1) MCP Server：在你的 AI 工具（Claude Code/Codex/Hermes 等支持 MCP 的客户端）中配置 Chrome DevTools MCP Server，Agent 即可操作真实浏览器、查看页面行为、检查 console 输出；(2) CLI：更省 Token 的方式，Agent 把操作打包成脚本批量在浏览器中执行，适合高频自动化测试；(3) Agent SDK：直接在你的 Agent 代码中集成 DevTools 能力。安装后 Agent 能做的事情包括：打开网页检查渲染效果、读取 console 错误、截取页面截图、执行 JS 并获取返回值。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是第一个官方级别的「Agent 浏览器眼睛」。之前 Agent 写前端代码只能盲写，看不到实际渲染效果和报错，现在有了完整的浏览器调试能力，Agent 开发 Web 应用的准确率将大幅提升</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Agent 写前端代码后自动打开浏览器验证 UI 效果和 console 报错</li>
+    <li>自动化端到端测试：Agent 模拟用户操作路径并检查页面行为</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2057262293348679733" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIzdH6mbwAAufwS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIzdH6mbwAAufwS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Datasette Agent：SQLite 数据库的 AI 对话助手</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Simon Willison 发布的开源工具，让你用自然语言对话 SQLite 数据库，支持插件扩展，有在线 Demo 可直接体验</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://agent.datasette.io" target="_blank">https://agent.datasette.io ↗</a></p>
+    <p><a href="https://simonwillison.net/2026/May/21/datasette-agent/" target="_blank">https://simonwillison.net/2026/May/21/datasette-agent/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最快体验——打开 agent.datasette.io 在线 Demo，可以直接用自然语言提问示例数据库（如「显示销量最高的 10 个产品」「按地区统计用户增长趋势」），AI 自动生成并执行 SQL 查询，返回结果和可视化。想本地使用：pip install datasette-agent，然后 datasette agent my-database.db 启动，浏览器打开本地地址即可与你自己的 SQLite 数据库对话。支持通过插件系统扩展工具和功能。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Simon Willison 出品必属精品——Datasette 生态又一力作。不需要写 SQL，不需要配 BI 工具，一行命令就能让自己的 SQLite 数据库开口说话，对非技术用户极其友好</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>数据分析师用自然语言快速探索 SQLite 数据集，无需手写 SQL</li>
+    <li>产品经理直接向用户数据库提问，获取行为洞察</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2057554315821371543" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057554000950743040/img/QxmOdaugNGU9RNBS.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057554000950743040/img/QxmOdaugNGU9RNBS.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Magic Slide：丝滑到离谱的 AI 幻灯片生成器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>输入主题一键生成带精美转场动画的完整幻灯片，审美和丝滑程度被博主集体按头推荐</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://magicslide.show" target="_blank">https://magicslide.show ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 magicslide.show，输入你的演示主题（支持中文），AI 自动生成一整套幻灯片——不仅内容到位，转场效果和动画也极其丝滑。背后使用了团队自研的 PIPELLM 网关调度多个模型协作（联网搜索+内容生成+排版美化）。生成后可在线预览所有幻灯片和动画效果，支持导出。目前免费使用，适合快速产出演示场景。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>被 Berryxia、Cydiar 等多位博主同时推荐，关键是转场动画和视觉审美确实比同类工具高一个档次。它不只是一个「自动配文字的 PPT 生成器」，而是把设计感和流畅动画作为核心卖点</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>创业路演/Pitch Deck 快速出稿</li>
+    <li>教学课件一键生成，省去排版时间</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2057499103861572083" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057495408822333440/img/yy3ncEZdOjMSNzfo.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057495408822333440/img/yy3ncEZdOjMSNzfo.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeerFlow：字节跳动开源的长程 SuperAgent 框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>字节开源的长时程 AI Agent 框架（Deep Exploration and Efficient Research Flow），专为需要持续探索和研究的复杂任务设计</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆 GitHub 仓库后按 README 配置 LLM API key 即可启动。框架的核心是让 Agent 在长时间任务中保持上下文一致性——能持续 35 小时以上调用超过 1000 个工具不丢失方向。典型工作流：设定一个研究目标→Agent 自动规划子任务→逐步执行搜索/分析/总结→产出结构化的研究报告或代码。适合需要多轮迭代的深度任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>2026 年各大模型厂都在梭哈长程任务后训练/RL，DeerFlow 是字节在这一方向的开源贡献。能稳定运行 35 小时+1000 工具调用的数字本身就很惊人，代表了 SuperAgent 工程化的最新进展</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>深度行业研究报告：Agent 花几小时自动搜索、整理、交叉验证信息</li>
+    <li>复杂代码库重构：Agent 持续分析整个项目并逐步提出改进方案</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2057508909871755400" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Pipecat：开源实时语音 AI Agent 框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Python 框架，用来搭建实时语音/视频 AI Agent，插件式架构支持多种 AI 服务和传输协议</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>pip install pipecat-ai 安装后，官方提供大量示例代码，最简几行就能启动一个语音对话机器人。框架采用 pipeline 架构：音频输入→STT（语音转文字）→LLM（理解+生成回复）→TTS（文字转语音）→音频输出，每个环节都是可插拔组件。支持 OpenAI/Deepgram/ElevenLabs 等多家服务商，传输层支持 WebSocket/WebRTC/电话线路。可以快速搭建类似 ChatGPT Voice Mode 的实时语音助手。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Voice AI 是 2026 年最热赛道之一，Pipecat 是目前最成熟的开源语音 Agent 框架，插件生态丰富，从原型到生产部署路径清晰</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>客服/外呼系统：搭建能自然对话的 AI 语音客服</li>
+    <li>语言学习伴侣：实时语音对话练习外语</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2057458115323539734" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI2PQJgaoAAjHs9?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI2PQJgaoAAjHs9?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MemOS 2.0：开源 AI 记忆系统，「执行即学习」</div>
+  <div class="section"><div class="section-label event">一句话</div><p>GitHub 9.3K Star 的开源 AI 记忆项目，2.0 版本从高级剪贴板升级为「执行即学习」的真正长期记忆系统</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MemOS-ai（通过原推" target="_blank">https://github.com/MemOS-ai（通过原推 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装 MemOS Local Plugin 后，AI 在执行任务过程中自动从「做了什么、结果如何」中学习并沉淀记忆，不再只是把聊天记录存下来做语义检索。新版本的核心机制是「执行即学习」：AI 每完成一个操作（比如写了段代码、做了次数据分析），MemOS 会自动提取关键信息形成记忆节点，下次遇到类似场景时主动调取。支持与 Codex、Claude Code 等主流 AI 工具集成。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>绝大多数 AI 记忆方案本质还是 RAG——存文本→检索→塞进 prompt。MemOS 2.0 把焦点从「存了什么」转移到「学到了什么」，记忆质量有质的提升</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长期项目开发：AI 记住你的代码风格偏好和历史决策，越用越懂你</li>
+    <li>个人知识管理：让 AI 从日常对话和操作中自动积累你的知识体系</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2057451892423508248" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI2JjWia0AAoQpG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI2JjWia0AAoQpG?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI1X7h0bwAALyik?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI1X7h0bwAALyik?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MLX-Vulkan：让 MLX 跑在所有平台上</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 Apple 的 MLX 框架移植到 Vulkan 后端，意味着 MLX 模型能在 Windows/Linux/Android 等任意支持 Vulkan 的设备上运行</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/goniz/mlx-vulkan" target="_blank">https://github.com/goniz/mlx-vulkan ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>git clone 后按 README 编译（需要 Vulkan SDK），编译完成后可以像使用原生 MLX 一样加载和推理模型，但计算后端从 Metal 换成了 Vulkan。这意味着原本只能在 Apple Silicon 上跑的 MLX 模型（如 llama.cpp 的 MLX 版本、Stable Diffusion MLX 等），现在可以在 NVIDIA/AMD 显卡甚至 Android 手机上运行。目前处于早期阶段，部分算子仍在移植中。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>MLX 是 Apple 生态最优秀的本地 AI 推理框架，MLX-Vulkan 打破了平台锁定。如果 Vulkan 后端成熟，MLX 模型将真正实现「一次编写，到处运行」，对端侧 AI 部署意义重大</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Windows/Linux 工作站上运行原本 Mac 独占的 MLX 模型</li>
+    <li>将 MLX 优化的模型部署到 Android 设备端</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/zcbenz/status/2057400661927747646" target="_blank"><span class="handle">@zcbenz</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI0TC-IWIAE0hv6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI0TC-IWIAE0hv6?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI0TDCyW8AAI1Wj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI0TDCyW8AAI1Wj?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI0TC-HWEAAKMZ0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI0TC-HWEAAKMZ0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MarkEdit：4MB 的 macOS 原生 Markdown 编辑器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>免费开源的 macOS Markdown 编辑器，仅 4MB，能流畅编辑百万行文档，类似系统文本编辑但专为 Markdown 优化</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 Mac App Store 免费下载安装（仅 4MB），打开后即用。支持标准 Markdown 语法高亮、实时预览、代码块语法高亮。最大亮点是性能——能秒开并流畅编辑百万行级别的巨型 Markdown 文件，而许多 Electron 套壳编辑器在这种情况下会卡死。界面极简，和 macOS 原生文本编辑的风格一致，快捷键也遵循 Mac 习惯。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>在 Electron 编辑器动辄几百 MB 的时代，一个 4MB 的原生应用能流畅处理百万行文档，本身就证明了「原生 &gt; Web 套壳」的价值。对于追求轻量和速度的用户，这是目前 Mac 上最好的纯 Markdown 书写工具</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>技术写作：打开大型文档/日志文件秒开秒编辑</li>
+    <li>日常笔记：替代系统文本编辑，享受 Markdown 语法高亮</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/jaywcjlove/status/2057307398273159466" target="_blank"><span class="handle">@jaywcjlove</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI0F2gcbgAAnrYg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI0F2gcbgAAnrYg?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 内部通用推理模型破解 80 年数学难题</div>
+  <div class="section"><div class="section-label event">事件</div><p>一个未公开的 OpenAI 内部推理模型自主解决了 Erdős 1946 年提出的平面单位距离问题，chain of thought 长达 125 页</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个模型的突破在于它不是一个为数学专门训练的模型，而是通用推理模型。它在推理过程中从代数数论拉了一套工具去解离散几何问题，这个跨领域连接是人类 80 年来没想到的。这表明通用模型的推理能力可能已经超越了「在已知范式内优化」，开始真正「发现」新的数学联系</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果通用模型能自主解决这种级别的纯数学问题，意味着 AI 在科学研究中的角色正在从「辅助工具」转向「独立发现者」。对科研范式的影响可能比 GPT-4 对编程的影响更大</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2057380350188482592" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HIyP2KPa8AAvD4Z.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HIyP2KPa8AAvD4Z.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Karpathy 加入 Anthropic 做预训练</div>
+  <div class="section"><div class="section-label event">事件</div><p>Andrej Karpathy 正式加入 Anthropic 负责预训练，博主评价其判断是「不回实验室就要落伍了」</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Karpathy 是全球最有资格判断模型能力是否到顶的人之一。他离开 OpenAI 后选择加入 Anthropic 而非做应用层创业，等于用行动回应了「Scaling Law 到头了、接下来做应用吧」的论调——他认为模型能力还远没到头，预训练仍有巨大空间</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>将吸引更多顶级研究人才重新聚焦基础模型预训练，可能减缓行业全面转向应用层的趋势，对 Anthropic 下一代模型竞争力也是重大利好</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2057422937498743020" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Qwen 3.7 Max 发布</div>
+  <div class="section"><div class="section-label event">事件</div><p>阿里通义千问发布 Qwen 3.7 Max 新旗舰模型，多项指标对标甚至超越 Gemini 3.5 Flash</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>博主测试了深度思考和快速模式下的二叉树推理任务，表现可圈可点。千问也启用了独立域名 qianwenai.com。今年国产模型的迭代节奏明显加快，从 Qwen 2.5 到 3.0 再到 3.7，不到半年三连跳</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>国产模型在旗舰性能上持续缩小与 OpenAI/Google 的差距，API 价格战背景下对国内开发者和企业用户是利好，选择面越来越宽</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2057477302100119940" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057475519290191872/img/pVRxk-4WSc0GhX1X.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057475519290191872/img/pVRxk-4WSc0GhX1X.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2056955757124620290/img/6IpOG4dYQgGXbUCb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2056955757124620290/img/6IpOG4dYQgGXbUCb?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 剪映海外版 × Gemini 合作</div>
+  <div class="section"><div class="section-label event">事件</div><p>字节旗下 CapCut（剪映海外版）宣布与 Google Gemini 合作，未来可在剪映中使用 Gemini 编辑图像和视频</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>具体合作方式和上线时间未公布，但这标志着短视频编辑工具开始深度集成大模型能力。有趣的是字节自己的豆包大模型也很强，却选择在海外版与 Gemini 合作</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>视频编辑的 AI 化将加速，创作者可能很快就能用自然语言在剪映里完成复杂剪辑操作，AI 视频编辑赛道竞争白热化</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2057486305806938119" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2057607356448473269" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2057494913164382306" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2057487816201003249" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2057611358498398435" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2057391572795203731" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yan5xu/status/2057442273647075516" target="_blank"><span class="handle">@yan5xu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xbresson/status/2056533889062260771" target="_blank"><span class="handle">@xbresson</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2057453057823395949" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2057486858461057267" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2057607517593858312" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2057602488090628257" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI0kN5eagAAosfN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI0kN5eagAAosfN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI2f5tdWQAArBAb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI2f5tdWQAArBAb?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI2p7FUacAAvf05?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI2p7FUacAAvf05?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057610676886183936/img/w9n2p7pLthn7Lqku.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057610676886183936/img/w9n2p7pLthn7Lqku.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057463337026510848/img/wCdIKiJLpXNgJx7Y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057463337026510848/img/wCdIKiJLpXNgJx7Y?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI1Su6MWIAEkeu3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI1Su6MWIAEkeu3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI2AC15a8AAqB03?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI2AC15a8AAqB03?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIpGjcTaoAEsg5c?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIpGjcTaoAEsg5c?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057477887985639424/img/MANowXSjH93mGJge.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057477887985639424/img/MANowXSjH93mGJge.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057607120401608704/img/sGLlgT7LD8-eMXjP.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057607120401608704/img/sGLlgT7LD8-eMXjP.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057290328584183808/img/TG8kenCJsAObRG_r?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057290328584183808/img/TG8kenCJsAObRG_r?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI4SjRabUAAv5Oh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI4SjRabUAAv5Oh?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI2VAb8WUAEBT-m?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI2VAb8WUAEBT-m?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI2VEDlXYAABuXC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI2VEDlXYAABuXC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI2VEY0W8AAoH4T?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI2VEY0W8AAoH4T?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Tencent HY-MT2 翻译模型：1.8B~30B 全尺寸开源，翻译水平比肩大参数通用模型 <a href="https://huggingface.co/collections/tencent/hy-mt2" target="_blank">→</a></li>
+    <li>Cursor 手机版：宝玉透露 Cursor 手机版即将推出 <a href="https://x.com/dotey/status/2057607356448473269" target="_blank">→</a></li>
+    <li>Claude Code /usage 升级：现在能清楚看到 Token 花在哪里 <a href="https://x.com/dotey/status/2057494913164382306" target="_blank">→</a></li>
+    <li>Google AI Studio 手机版：iOS 已上架（非国区），预计 7 月 1 日正式上线 <a href="https://x.com/berryxia/status/2057487816201003249" target="_blank">→</a></li>
+    <li>Bloome 正式上线：Berryxia 力荐的 AI 工具，设计迭代极细 <a href="https://x.com/berryxia/status/2057611358498398435" target="_blank">→</a></li>
+    <li>Phosphene：把任意视频设为 macOS 桌面和锁屏壁纸 <a href="https://x.com/appinn/status/2057391572795203731" target="_blank">→</a></li>
+    <li>bb-browser 支持远程访问本地浏览器，无缝切云浏览器 <a href="https://x.com/yan5xu/status/2057442273647075516" target="_blank">→</a></li>
+    <li>Open Design 成为可接入各种 CLI/Agent 的设计画布，Grok Build 已加入 <a href="https://github.com/nexu-io/open-design" target="_blank">→</a></li>
+    <li>Crys-JEPA：用 JEPA 做 AI 材料设计，47.9% VSUN on MP20 <a href="https://x.com/xbresson/status/2056533889062260771" target="_blank">→</a></li>
+    <li>Starship V3 首飞：星舰第 12 飞北京时间今早 6:30，33 台第三代猛禽 <a href="https://x.com/fankaishuoai/status/2057453057823395949" target="_blank">→</a></li>
+    <li>Telegram 收件箱自动化：指派机器人代读代回复消息 <a href="https://x.com/berryxia/status/2057486858461057267" target="_blank">→</a></li>
+    <li>Apple Immersive for Autodesk VRED：Vision Pro 汽车设计协作 <a href="https://x.com/berryxia/status/2057607517593858312" target="_blank">→</a></li>
+    <li>iPhone 17 Pro 拍摄 MLS 直播：周末首次全 iPhone 足球联赛直播 <a href="https://x.com/berryxia/status/2057602488090628257" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
