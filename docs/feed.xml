@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 22 May 2026 00:39:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 01:25:50 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/05/22 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-22.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-22.html</guid>
-      <description>Codex 三连击（Appshots窗口上下文+Locked Use锁屏续命+手机端远程操控）+ ChatGPT 原生嵌入 PowerPoint，AI 正在从「帮你写」进化到「替你操作电脑」。同时 StabilityAI 开源 Stable Audio 3.0、Chrome DevTools for Agents 1.0 也值得立即上手。</description>
+      <description>OpenAI Codex 迎来一波重磅更新（Appshots 窗口上下文、Locked Use 锁屏工作），Stability AI 开源 Stable Audio 3 音乐生成模型，Google AI Studio 手机版预告上线——今天是「Agent 能力进化 + 创意工具开源」的双主场。</description>
       <pubDate>2026-05-22T08:30:00+08:00</pubDate>
     </item>
     <item>
