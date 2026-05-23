@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 22 May 2026 01:25:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 01:05:44 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/05/23 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-23.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-23.html</guid>
+      <description>Agent 基础设施大爆发：Google 开源分布式 Agent 框架 AX，Cursor 开源内部代码审计 Skills，飞书 Bridge 让 Claude Code 走进 IM —— 今天的节奏是"让 Agent 跑在生产线里"。</description>
+      <pubDate>2026-05-23T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/05/22 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-22.html</link>

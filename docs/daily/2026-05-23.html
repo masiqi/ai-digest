@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-23</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-23</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Agent 基础设施大爆发：Google 开源分布式 Agent 框架 AX，Cursor 开源内部代码审计 Skills，飞书 Bridge 让 Claude Code 走进 IM —— 今天的节奏是"让 Agent 跑在生产线里"。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ 网易有道开源子曰4（Confucius4）：27B多模态大模型 + 跨语种语音克隆</div>
+  <div class="section"><div class="section-label event">一句话</div><p>网易有道开源了子曰4系列，包含多模态大模型和 TTS 语音克隆，主打跨语种不带口音——用你的声音说日语、英语，不串味儿。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/netease-youdao/Confucius4-TTS" target="_blank">https://github.com/netease-youdao/Confucius4-TTS ↗</a></p>
+    <p><a href="https://huggingface.co/netease-youdao/Confucius4" target="_blank">https://huggingface.co/netease-youdao/Confucius4 ↗</a></p>
+    <p><a href="http://confucius4-tts.youdao.com/gradio" target="_blank">http://confucius4-tts.youdao.com/gradio ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Gradio 在线 demo（confucius4-tts.youdao.com/gradio），上传一段你自己的中文录音，然后选择目标语言（日语/英语/韩语等），点击生成即可听到"你自己的声音"说外语，不带中国口音。如果想本地部署，去 HuggingFace 下载 Confucius4 多模态模型，或去 GitHub 克隆 Confucius4-TTS 仓库，按 README 搭建环境运行。27B 参数在单张消费级显卡上就能跑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>市面上 ElevenLabs 等语音克隆跨语种都会有"口音串味"问题——中文声音说日语带着中国腔。子曰4 专门解决了这个难题，在多专家 OPD 架构下做语种解耦。同时它还把翻译模型重练了一遍，解决了"脱靶"和"语种混出"两个机翻老毛病。开源+27B 参数+可本地部署，这在语音 AI 领域非常少见。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自媒体创作者用自己声音做多语种内容出海</li>
+    <li>游戏/动画角色配音本地化，保持角色声线统一</li>
+    <li>语言学习——用自己的声音听标准外语发音</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2057726984088682501" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057725891875332096/img/ZgvRMmHxJAlQ-DA_.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057725891875332096/img/ZgvRMmHxJAlQ-DA_.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Google AX：分布式 Agent 基础设施（开源）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 开源了 AX，专门解决多 Agent 系统的状态管理、失败恢复、跨进程/跨集群调度协调问题——让 Agent 从"单机玩具"变成"分布式生产线"。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/Gorden_Sun/status/2057720476714336287" target="_blank">https://x.com/Gorden_Sun/status/2057720476714336287 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>目前刚官宣开源，建议直接去 Google GitHub 组织（github.com/google）搜索 "ax" 或关注 Gorden_Sun 推文获取 repo 地址。核心思路是：当你需要多个 Agent 并行跑任务（比如一个爬数据、一个写代码、一个做测试），AX 负责它们之间的状态同步和故障恢复。拿到代码后，可以先跑它的 Quickstart 示例，理解 Agent 的调度模型，然后把自己的 Agent 接入它的编排框架。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>当前大多数 Agent 框架（LangGraph、CrewAI 等）本质上是单机工作流，一旦 Agent 进程挂了就全丢了。AX 在基础设施层面解决了 Agent 的持久化状态和跨集群协调，这意味着生产环境的 Agent 系统终于有了"操作系统级"的保障。Google 出品+开源，标准制定意味浓厚。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>CI/CD 流水线中多个 AI Agent 协作代码审查</li>
+    <li>大规模数据采集与处理的 Agent 集群</li>
+    <li>企业内部多个 Agent 服务的统一调度与监控</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2057720476714336287" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI592y7aQAIRwsR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI592y7aQAIRwsR?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 飞书 Claude Code Bridge：把 Claude Code 变成飞书机器人</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Zara 开源的工具，让你本地的 Claude Code 直接作为飞书机器人运行——手机上用飞书就能跟 Claude Code 对话，完成复杂开发任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/zarazhangrui/feishu-claude-code-bridge" target="_blank">https://github.com/zarazhangrui/feishu-claude-code-bridge ↗</a></p>
+    <p><a href="https://larkcommunity.feishu.cn/docx/OaRIdFIRFoLM3xxTmKwcetHqn5e" target="_blank">https://larkcommunity.feishu.cn/docx/OaRIdFIRFoLM3xxTmKwcetHqn5e ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆 GitHub 仓库，按文档配置飞书应用的 App ID 和 Secret，启动 Bridge 服务后，本机 Claude Code 就会作为一个飞书机器人上线。你在手机上打开飞书，找到这个机器人，直接发消息给它——"帮我查下这个 bug""重构这个函数""写个 Dockerfile"——它就像在终端里一样执行。支持群聊、私聊、多轮对话。配合归藏的 IM 连接 Skill，还能扩展到 Telegram、QQ、微信、Discord。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这解决了"不在电脑前想写代码"的真实痛点。Claude Code 本身只能在终端里用，飞书 Bridge 把它变成了随时随地可用的开发助手。而且它是开源、本地运行、数据不出你机器，比任何云端方案都安全。飞书作为国内最流行的 IM 之一，这个组合的传播潜力巨大。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>通勤路上手机排查线上故障</li>
+    <li>开会时悄悄让 Claude Code 生成方案</li>
+    <li>非技术同事通过飞书群协作开发</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2057751033615700128" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI6ZoVybYAAy4tQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI6ZoVybYAAy4tQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ChatGPT PowerPoint 插件：侧边栏直接编辑 PPT</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ChatGPT 出了官方 PPT 插件，在侧边栏里像对话一样编辑幻灯片——改文字、换布局、生成配图，全部一句话完成。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://marketplace.microsoft.com/en-us/product/office/WA200010215" target="_blank">https://marketplace.microsoft.com/en-us/product/office/WA200010215 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 PowerPoint → 插入 → 加载项 → 搜索 "ChatGPT" → 安装插件。安装后在右侧会出现 ChatGPT 侧边栏。选中任意幻灯片，告诉它"把这页的文字改得更有说服力""根据这页内容生成一张配图""保持布局不变，把中文翻译成英文"——它直接在 PPT 里操作，不需要导出导入。实测效果跟 Claude（Opus 4.7）在同一水平，而且还能直接生成图片插入 PPT。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是 ChatGPT 首次以官方插件形态进入 Office 生态，直接把"PPT 民工"的重复劳动自动化。侧边栏编辑体验远超"上传文件→AI处理→下载"的传统流程。能生成配图这个能力是差异化优势——Claude 和 Gemini 目前都没有。配合 GPT-5.5 的多模态理解，这种"所见即所得"的文档编辑正在成为新标准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速把周报要点变成汇报 PPT</li>
+    <li>批量翻译企业介绍 PPT 到多语言版本</li>
+    <li>用一句话给每页配高质量示意图</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2057777828633223589" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI6x16hacAAuSV3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI6x16hacAAuSV3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cursor Team Kit：团队内部代码审查 Skills 开源</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cursor 团队公开了他们内部使用的代码审查工具集，包含一个叫 thermo-nuclear-code-quality-review 的严苛审查员 Skill——能在 PR 合并前识别出"能跑但让代码库变烂"的改动。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cursor.com/marketplace/cursor/cursor-team-kit" target="_blank">https://cursor.com/marketplace/cursor/cursor-team-kit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Cursor 中打开 Marketplace，搜索并安装 Cursor Team Kit。安装后你会获得一套 Skills，其中最核心的是 thermo-nuclear-code-quality-review。把它用在 PR review 流程中——提交代码前让它审查，它会按四条原则（可维护性&gt;功能正确性、模式一致性、抽象层次、复杂度控制）给出意见。不同于 linter，它关注的是"代码品味"——比如"这个函数跟已有的 3 个函数做的是同一件事，应该合并""这个抽象多了一层没必要的中间层"。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Cursor 团队公开内部工作流是大新闻。这套 Skills 代表了 Cursor 对"AI 辅助代码审查"的最佳实践。不是简单的"找 bug"，而是守护代码库的长期质量——这是所有工程团队的刚需。而且它在 Cursor Marketplace 可以直接装，零配置开箱即用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>团队 PR 流程中自动代码审查</li>
+    <li>个人项目提交前自查代码质量</li>
+    <li>新人入职后学习团队代码规范</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2057620030142193902" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI4ie_8boAAVKji?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI4ie_8boAAVKji?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057521313678553088/img/8OXsQ737mQfdGo2M?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057521313678553088/img/8OXsQ737mQfdGo2M?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MuseUI：纯浏览器运行的开源 AI 图片工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个在浏览器里就能用的 AI 图片编辑工作台，开源，无需安装，打开网页就能做图生图、编辑、处理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/appinn/status/2057737879971918232（小众软件发现频道发布，详情见推文内链接）" target="_blank">https://x.com/appinn/status/2057737879971918232（小众软件发现频道发布，详情见推文内链接） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问推文中的链接打开 MuseUI 网页。这是一个纯前端应用，所有的 AI 处理通过 API 调用完成。你可以上传图片进行背景移除、风格转换、超分辨率放大、局部重绘等操作。因为是浏览器运行，可以部署到任何静态托管服务（Vercel/Netlify/GitHub Pages）上自用。开源意味着你可以 fork 代码，定制自己的工作流，接入自己的模型 API。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>纯浏览器 AI 工具正在成为趋势——不需要安装、不依赖系统环境、跨平台一致。MuseUI 把"AI 图片工作台"这个概念做到了最轻量化，开源让它能被集成到任何产品中。对于经常处理图片的开发者，这是一个可以直接拿来做二次开发的基础设施。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>博客/社交媒体配图快速处理</li>
+    <li>电商产品图批量背景替换</li>
+    <li>集成到自家产品作为图片处理模块</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2057737879971918232（小众软件发现频道发布，详情见推文内链接）" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2057737879971918232" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LynMusic：开源跨平台音乐播放器（Android/iOS/Mac/Windows/车机）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个新开源的跨平台音乐播放器，从手机到车机全平台支持，界面现代，可以自己部署。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/appinn/status/2057797039598051409（小众软件发现频道，详情见推文内链接）" target="_blank">https://x.com/appinn/status/2057797039598051409（小众软件发现频道，详情见推文内链接） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问推文中的链接获取 GitHub 仓库地址，clone 后按平台编译或直接下载 release 包。支持 Android、iOS、macOS、Windows 和车机系统。可以连接本地音乐库，也支持网络流媒体。因为是开源，可以自己魔改 UI、添加音效插件、接入自己的音乐源。部署到车机上尤其有意思——自己打造一个专属车载音乐系统。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>市面上跨这么多平台（特别是含车机）的开源音乐播放器极少。Flutter/React Native 技术栈的可能性示范——一套代码跑通手机+电脑+车机。对喜欢 DIY 的音乐爱好者来说，这是一个拿到手就能改的好底子。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自建家庭音乐服务器客户端</li>
+    <li>车机定制音乐播放体验</li>
+    <li>学习跨平台应用开发的最佳实践</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2057797039598051409（小众软件发现频道，详情见推文内链接）" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2057797039598051409" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DeepSeek V4-Pro 永久降价，比同等水平便宜3倍</div>
+  <div class="section"><div class="section-label event">事件</div><p>DeepSeek 宣布限时折扣变为永久定价，V4-Pro API 价格仅为同等水平模型的 1/3。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>DeepSeek 的策略很清晰——用极致性价比锁死开发者生态。Flash 模型本身已经足够便宜，现在 V4-Pro 也降到位，对于个人开发者和中小团队来说几乎没有理由再选其他 API。这种"价格屠夫"策略在过去半年已经让 DeepSeek 在中文 AI 社区积累了惊人的人气，现在永久化意味着它要稳住这个基本盘。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对于整个 AI API 市场来说，DeepSeek 的定价锚点会迫使 OpenAI、Anthropic 进一步降价或推出更轻量的模型。对于开发者，这意味着"AI 成本不再是瓶颈"，更多创意可以落地。但也要警惕：过低的价格可能让 API 服务质量在高峰期下降。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/deepseek_ai/status/2057854261699195173" target="_blank"><span class="handle">@deepseek_ai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI7xPnWbgAAW4UO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI7xPnWbgAAW4UO?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HHCeB16bIAAGQeE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HHCeB16bIAAGQeE?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 补贴时代终结？微软取消内部 Claude Code 许可，Uber 四个月烧光全年 AI 预算</div>
+  <div class="section"><div class="section-label event">事件</div><p>微软本周取消了内部 Claude Code 许可（token 计费太贵），Uber CTO 内部备忘录警告公司四个月内烧光了 2026 全年 AI 预算。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这两件事放在一起看意味深长。微软作为全球最大的云服务商都嫌 token 计费贵，说明大模型 API 的真实成本远比"包月 $20"表面价格高得多。Uber 的情况更说明问题——大型企业的 AI 用量一旦铺开，成本是指数级增长的。这预示着"按月订阅"的商业模式正在向"按 token 计费"回归，B2B 市场尤其如此。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期看，企业会收紧 AI 预算，优先选择性价比最高的 API（利好 DeepSeek）。中期看，自建小模型/本地部署的需求会更旺盛，开源小模型将迎来第二波热潮。对创业公司来说，"AI 是免费流量"的红利窗口正在关闭，成本控制能力成为核心竞争力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HedgieMarkets/status/2057531661785628841" target="_blank"><span class="handle">@HedgieMarkets</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HI3SF9TXcAAB0A7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI3SF9TXcAAB0A7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic Project Glasswing：AI 网络安全项目一个月挖出超万条高危漏洞</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 上个月启动的 Project Glasswing AI 网络安全合作项目，一个月内在合作伙伴的核心软件中扫描出超过一万条高危或关键漏洞，全部是真实生产环境中的发现。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这证明了 AI 在安全领域的巨大潜力——不是实验室模拟，是真刀真枪在生产环境里扫漏洞。一万条高危/关键漏洞意味着什么？意味着人类安全团队年复一年漏掉的问题，AI 一个月就全翻出来了。而且这不是 Anthropic 一家在玩——Google、微软都在推 AI 安全工具，整个软件供应链的安全审计正在被 AI 重构。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对于企业和开发者，这意味着安全审计从"半年一次"变成"持续实时"，代码质量门槛会被拉高。对于安全行业，初级安全审计员的饭碗岌岌可危。反过来，攻防两端同时用 AI，攻击者也用 AI 找漏洞，防御者也用 AI 堵——军备竞赛加速。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2057974531072168166" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2057778107617292310" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2057756179363995755" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2057820198502068399" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2057815415921770865" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2057847615237317104" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2057921944025235611" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2057835713442230638" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2057783822893318277" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057777691898822656/img/sywDNPzRBKyvSOuO.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057777691898822656/img/sywDNPzRBKyvSOuO.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI6eK1xb0AEOnAi?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI6eK1xb0AEOnAi?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057817033069461504/img/KfYL-12ZkXZvHj-v.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057817033069461504/img/KfYL-12ZkXZvHj-v.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2057814615887618048/img/Q8v04szJBGeklWJF.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2057814615887618048/img/Q8v04szJBGeklWJF.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI804k1bMAECTVn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI804k1bMAECTVn?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI6bsa_a0AAqUJC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI6bsa_a0AAqUJC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI63H_dbYAAWqS8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI63H_dbYAAWqS8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>歸藏 AI 墨水屏便签 Skill：AI 根据你的状态和记忆往墨水屏推送 To-do/日历/信息 <a href="https://x.com/op7418/status/2057778107617292310" target="_blank">→</a></li>
+    <li>歸藏 IM 多平台连接 Skill：Claude Code/Codex 对接 Telegram/飞书/QQ/微信/Discord <a href="https://x.com/op7418/status/2057756179363995755" target="_blank">→</a></li>
+    <li>Prompts Hero Chrome 插件：vista8 和姚老师写的提示词库插件，一键复制+简写补全，含几百套 GPT-Image-2 提示词 <a href="https://x.com/vista8/status/2057820198502068399" target="_blank">→</a></li>
+    <li>Codex 交互式 Prompt Workbench：把 Jason 的《Getting the most out of Codex》做成可视化的 prompt 生成器 <a href="https://x.com/tuturetom/status/2057815415921770865" target="_blank">→</a></li>
+    <li>Anker AI 录音豆：歸藏和向阳乔木都在安利，目前个人最喜欢的 AI 硬件 <a href="https://x.com/vista8/status/2057847615237317104" target="_blank">→</a></li>
+    <li>X Premium 支持 Openclaw/Opencode/Hermes 直接授权 <a href="https://x.com/xiaohu/status/2057921944025235611" target="_blank">→</a></li>
+    <li>DeepSeek Harness 团队大规模招人（PM+工程师） <a href="https://x.com/dotey/status/2057835713442230638" target="_blank">→</a></li>
+    <li>M5 Stack 新硬件设备（带麦克风+扬声器，可玩性极强） <a href="https://x.com/op7418/status/2057783822893318277" target="_blank">→</a></li>
+    <li>OpenAI vs Anthropic ARR 对比可视化 <a href="https://huasheng.ai/anthropic-vs-openai-arr.html" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
