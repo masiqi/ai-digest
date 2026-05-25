@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 23 May 2026 02:31:56 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 00:36:52 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/05/25 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-25.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-25.html</guid>
+      <description>Codex 生态持续爆发——从网络优化到 SubAgent 监控，从会话历史自动提炼 Skills 到 Appshots 集成，OpenAI 的 Agent 平台正在形成完整工作流。同时 DeepSeek V4 Pro 宣布 75% 折扣永久化，缓存输入价格仅为 GPT-5.5 的 1/34，国产模型在 Agent 场景的性价比优势进一步拉大。</description>
+      <pubDate>2026-05-25T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/05/23 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-23.html</link>
