@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 25 May 2026 00:36:52 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 03:05:59 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/05/26 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-26.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-26.html</guid>
+      <description>AI Coding CLI 格局再添重磅选手——xAI 发布 Grok Build 正面硬刚 Codex/Claude Code；同时开源的微信仪表盘、Waza Agent Skills、Yansu 主动型 Agent 等多个可上手项目集中涌现。</description>
+      <pubDate>2026-05-26T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/05/25 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-25.html</link>

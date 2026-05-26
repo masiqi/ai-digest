@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-26</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-26</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>AI Coding CLI 格局再添重磅选手——xAI 发布 Grok Build 正面硬刚 Codex/Claude Code；同时开源的微信仪表盘、Waza Agent Skills、Yansu 主动型 Agent 等多个可上手项目集中涌现。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Grok Build CLI（xAI）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>xAI 出品的 AI 编程 Agent 命令行工具，对标 Claude Code 和 OpenAI Codex，SuperGrok / X Premium+ 用户免费使用订阅额度。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.ai/cli" target="_blank">https://x.ai/cli ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>执行 curl -fsSL https://x.ai/cli/install.sh | bash 一键安装，然后运行 grok 启动交互式 TUI（终端全屏、鼠标操作）；也支持 Headless 模式 grok -p "指令" 放入脚本自动跑。支持切换任意自定义模型，不绑死 Grok。同款模型 grok-build-0.1 已在 API 上开放。macOS / Linux / Windows 都支持。核心模式包括 Plan（任务规划）和 Build（代码生成执行）。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent CLI 赛道 Claude Code 和 Codex 二分天下已久，xAI 凭借 Grok 模型的大尺度能力和 X 平台用户基础直接入局，且安装门槛极低（一条 curl 命令），对已有 X Premium 订阅的用户零边际成本。内置 TUI 交互和 Headless 脚本双模式，兼顾手动和自动化场景。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>日常代码开发——在终端里让 Grok Build 分析项目、生成代码、运行测试</li>
+    <li>CI/CD 流水线——Headless 模式下将 grok -p 嵌入自动化脚本做代码审查或修复</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2059012699330424884" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJMUIJbaQAAsLdL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJMUIJbaQAAsLdL?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 微信仪表盘 WeChat Radar</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的微信消息驾驶舱，将微信聊天记录可视化展示，类似 Codex 生态中的消息管理面板。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/wechat-radar" target="_blank">https://github.com/joeseesun/wechat-radar ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>GitHub 上 fork 项目（作者表示一天后转私有库，需要尽快 fork），克隆后按 README 配置微信数据库路径，启动本地服务即可在浏览器中查看微信消息统计、聊天趋势、联系人分析等可视化面板。底层依赖 wx-cli，建议用半年以上的微信小号测试，只读取历史记录不操作朋友圈，测试通过版本为微信 4.1.9.58。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>微信生态长期封闭，此类工具极其稀缺。将个人聊天数据转化为可视化驾驶舱，既有实用价值又为开发者展示了微信数据挖掘的可能性。作者承诺开源但限时一天私有化，紧迫感拉满。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>个人微信数据分析——了解自己的聊天模式、高频联系人</li>
+    <li>开发者二次开发——基于 wx-cli 构建更多微信自动化工具</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2059080766345412797" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJNTAc8acAAM0Tf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJNTAc8acAAM0Tf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Waza — Agent 工程最佳实践 Skill 集</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Tw93 将真实项目的工程经验提炼为 AI Agent 可直接执行的 Skill，支持 Claude Code / Codex / Cursor / Pi。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Waza" target="_blank">https://github.com/tw93/Waza ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>git clone 后按文档将 Waza Skill 写入 Agent 的项目说明文件（如 AGENTS.md / CLAUDE.md），之后 AI Agent 在开发时会自动遵循这些工程规范。最新版已覆盖 Mac 原生应用、CLI 工具、Rust 项目的开发最佳实践。安装和设置提示词：安装更新后把 Skill 写入 Agent 配置，后续所有开发设计优先用这套 skill。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>不同于代码片段的 Copilot 模式，Waza 将"怎么做好工程"的隐性知识显式化为 Agent 可执行的规则。这代表 AI 编程从"能写代码"进化到"能写好代码"的关键一步。吸收了真实项目中大量踩坑经验，实战导向而非学术玩具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>新项目启动——让 Agent 自动遵循成熟的工程规范，减少 code review 负担</li>
+    <li>团队协作——统一团队中不同 Agent 的编码风格和质量标准</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2059075254954401855" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJNN_0aawAARsET?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJNN_0aawAARsET?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Yansu — 主动型 AI Agent 应用</div>
+  <div class="section"><div class="section-label event">一句话</div><p>后台默默记录截图、操作和声音，理解你的工作方式，将零散上下文沉淀为结构化知识。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://producthunt.com/products/yansu" target="_blank">https://producthunt.com/products/yansu ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Product Hunt 页面下载安装，Yansu 在后台持续运行，自动捕获你的屏幕截图、键盘操作和环境声音，用 AI 分析你的工作模式后将碎片化的上下文（如"在改这个 bug 时参考了哪篇文档"）沉淀为可检索的结构化知识库。支持主动提醒和信息关联。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>「主动型 Agent」是当前趋势——从被动响应指令进化到主动理解上下文并提供帮助。Yansu 将 Rewind/Microsoft Recall 的「记忆回放」概念与 AI Agent 的「主动理解」结合，形成真正的第二大脑。Product Hunt 正式发布说明产品已成熟。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发者——自动记录调试过程，几周后回溯"那个 bug 怎么修的"</li>
+    <li>知识工作者——会议/研究过程的上下文自动归档，告别手动记笔记</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2058816410063863928" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Onyx — 开源最强深度研究 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>反直觉设计——剥夺总指挥 Agent 的搜索权限后，深度研究能力反而登顶 DeepResearch Bench，吊打 Claude 和 ChatGPT。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>项目为开源深度研究系统，核心创新在于调度架构——让"最聪明的总指挥"只做规划调度而不直接搜索，由专项子 Agent 负责信息检索，汇总后由总指挥合成。这种"剥夺式分工"反而消除了总指挥的搜索偏见，大幅提升研究质量。目前代码在 GitHub 公开，可 clone 后配置 LLM API key 和搜索工具运行。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是一个反常识的架构洞察——最强大的能力不一定来自最强大的模型，而是来自正确的任务分配。在 DeepResearch 权威基准上超越闭源商业产品，证明了开源社区的创新能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学术研究——自动化文献综述、跨领域知识整合</li>
+    <li>商业情报——竞品分析、市场调研的深度自动化</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2058931193249497522" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2058931172424728577/img/mgrR6qmZGzuntG9Q.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2058931172424728577/img/mgrR6qmZGzuntG9Q.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HJJ2BTEbEAAoPL8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HJJ2BTEbEAAoPL8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AudioMass — 不到100KB的在线开源多轨音频编辑器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>核心代码不到 100KB，浏览器里就能做多轨音频编辑，完全免费开源。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/audiomass/" target="_blank">https://appinn.com/audiomass/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开网站即可使用，无需注册或安装。支持多轨道录音和混音、剪切/复制/粘贴音频片段、淡入淡出效果、音调调整、多种音频格式导入导出。所有处理在浏览器本地完成，不上传服务器。也可以下载源码自行部署。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>极致轻量（核心 100KB）却实现了专业级多轨编辑功能，展示了 Web Audio API 的工程极限。对于播客制作者、视频创作者来说，替代 Audacity 等笨重工具的轻量选择。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>播客剪辑——快速裁剪、拼接音频片段</li>
+    <li>视频配音——多轨道混合背景音乐和人声</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2058802056081584545" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJJVj0yWUAAmdv5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJJVj0yWUAAmdv5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Astral Wings — AI 生成的飞机射击游戏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用 Cursor + Grok Imagine 开发的网页射击游戏，开源可玩。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://gordensun.github.io/astral-wings/" target="_blank">https://gordensun.github.io/astral-wings/ ↗</a></p>
+    <p><a href="https://github.com/GordenSun/astral-wings" target="_blank">https://github.com/GordenSun/astral-wings ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>浏览器打开即玩，操控飞机射击敌机。代码完全开源，展示了如何用 AI 编程工具（Cursor）+ AI 生图（Grok Imagine）从零构建一个完整的网页游戏。开发者是 Gorden Sun，代码库可作为 AI 辅助游戏开发的教学案例。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>「用 AI 做游戏」从概念验证走向实际产出。这个项目完整展示了 AI 编程工具在游戏开发中的实用性——从游戏逻辑到美术资源全链路 AI 辅助，对独立开发者极具参考价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>休闲娱乐——浏览器打开就玩</li>
+    <li>学习参考——研究 AI 辅助游戏开发的完整工作流</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2058937631246057796" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2058937206891511808/img/ZWNaQUQhYVPnk0xy.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2058937206891511808/img/ZWNaQUQhYVPnk0xy.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 教皇利奥十四世发布 AI 通谕</div>
+  <div class="section"><div class="section-label event">事件</div><p>天主教教皇利奥十四世发布关于人工智能的官方通谕（encyclical），引发全球关注。Simon Willison 专门撰文解读。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是宗教最高权威首次对 AI 发表系统性立场的标志性事件。通谕涉及 AI 伦理、人类尊严、技术权力集中等核心议题。在天主教全球 13 亿信徒的影响力下，这份文件可能推动各国政府和国际组织加速 AI 治理立法。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 伦理讨论从科技圈和学术界扩展到宗教和哲学领域，可能影响公众舆论和政策制定方向。对 AI 公司而言，可能需要更多关注技术的社会影响和伦理合规。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2059065719086792804" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic MTS 现象：为什么顶级人才纷纷加入做"普通工程师"？</div>
+  <div class="section"><div class="section-label event">事件</div><p>从各大公司 CTO 到 Andrej Karpathy，再到戏称"教皇"，越来越多顶级人才放弃高管职位加入 Anthropic 成为 MTS（Member of Technical Staff）。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>MTS 在 Anthropic 不是贬低，而是一种"去层级化"的文化——所有人都是技术贡献者。这种扁平结构吸引了那些厌倦管理、想回归技术本身的人才。更深层看，这可能反映了 AI 安全赛道的人才虹吸效应。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Anthropic 持续吸引顶级人才加强其 AI 安全研究能力，对其他 AI 公司构成人才竞争压力。扁平化组织模式在大模型公司中的可行性得到验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2059066753557344391" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJLmMdUXsAAb70A?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJLmMdUXsAAb70A?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJLmMdUWwAAjJ5n?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJLmMdUWwAAjJ5n?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 法拉利首款纯电跑车 Luce 发布</div>
+  <div class="section"><div class="section-label event">事件</div><p>由 Jony Ive 的 LoveFrom 设计公司打造的法拉利首款纯电跑车正式亮相。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>LoveFrom 参与了所有维度的设计（不仅是内饰），最终成品"很有电车感觉"但似乎缺少法拉利传统的视觉冲击力。这是传统超跑品牌电气化转型的关键节点。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>超豪华汽车品牌全面拥抱电动化，对电动汽车产业链（电池、电机、电控）和设计生态产生示范效应。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2059066046632624399" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2059004876504653824/img/jY5KaYBov3sVUq0_.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2059004876504653824/img/jY5KaYBov3sVUq0_.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Kimi 招聘到 Agent Harness 人才，技术栈转向 TypeScript/Bun</div>
+  <div class="section"><div class="section-label event">事件</div><p>月之暗面（Kimi）已招聘到 agent harness 人才，计划将 CLI 从 Python 迁移到 TypeScript + Bun。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>TypeScript/Bun 组合在 Agent CLI 工具链中逐渐成为主流——Codex 和 OpenClaw 都基于此技术栈。Kimi 的跟进说明国内大模型公司正在加速补齐 Agent 工具链短板。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>TypeScript/Bun 在 AI Agent 基础设施领域的话语权进一步增强。国内 Agent 工具链竞争加剧。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2058888088189796417" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2059051464044032089" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2058851504967094306" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2059096803212153202" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2058906351208669204" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2058869268666826842" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2058848980671599008" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2058857715774984701" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2058857713665253634" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2058877011649593688" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJNhdbZbQAAZDgW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJNhdbZbQAAZDgW?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2058771342447849472/img/B33Vmhps5WiSSAiS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2058771342447849472/img/B33Vmhps5WiSSAiS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJKSegVbkAAs0Av?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJKSegVbkAAs0Av?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJJ6551XsAA-jHl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJJ6551XsAA-jHl?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Await：两分钟把点子变成 iPhone 小组件的 iOS App <a href="https://x.com/appinn/status/2059051464044032089" target="_blank">→</a></li>
+    <li>AliasVault：自带匿名邮箱的开源密码管理器 <a href="https://x.com/appinn/status/2058851504967094306" target="_blank">→</a></li>
+    <li>MeMo (Memory as a Model)：把记忆库训练成小模型，arXiv 论文 <a href="https://arxiv.org/abs/2605.15156" target="_blank">→</a></li>
+    <li>Krea Seedance 2.0：Pro/Max/Business 会员视频生成无限使用 <a href="https://x.com/op7418/status/2059096803212153202" target="_blank">→</a></li>
+    <li>火山引擎 Mem0：记忆库服务免费公测中 <a href="https://x.com/seclink/status/2058906351208669204" target="_blank">→</a></li>
+    <li>乔木快捷提示词 Chrome 插件：600+ 用户的 AI 提词工具 <a href="https://x.com/vista8/status/2058869268666826842" target="_blank">→</a></li>
+    <li>Bloome Chat：Berryxia 的 AI 聊天 App，邀请码 BLOOMENOW <a href="https://x.com/berryxia/status/2058848980671599008" target="_blank">→</a></li>
+    <li>家族森林：iOS 现代化家族图谱制作工具 <a href="https://x.com/appinn/status/2058857715774984701" target="_blank">→</a></li>
+    <li>PandaABC：AI 背单词·词源故事学英语 <a href="https://x.com/appinn/status/2058857713665253634" target="_blank">→</a></li>
+    <li>Open Design 持续增长：全球开发者贡献 PR/skills/templates <a href="https://x.com/tuturetom/status/2058877011649593688" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
