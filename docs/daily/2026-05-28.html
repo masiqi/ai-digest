@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-28</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-28</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Agent生态全面爆发——从记忆打通（EverMe）、协作编排（Alook）到企业安全隧道（OpenAI MCP Tunnel），再到设计工具（Open Design）、实战手册（CodexGuide），今天几乎全是能上手即用的干货。OpenRouter 1.13亿美元B轮融资印证推理层已成为AI行业最赚钱的收费站。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ EverMe — Agent跨会话记忆打通</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一行命令让Codex、Claude Code、Hermes等Agent共享记忆，跨sessions、跨agents，免费。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://everme.ai（推测）" target="_blank">https://everme.ai（推测） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>登录EverMe官网，复制一行命令，粘贴到你的Codex/Claude Code/Hermes终端中即可。它会自动在Agent之间打通端侧记忆，不仅是文本记忆，还包括Agent的操作上下文和执行历史。这意味着你上午在Claude Code里做的修改，下午切到Codex继续开发时，Agent能无缝接上之前的上下文。全免费，不需要任何配置和充值。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent记忆断裂是多工具协作的最大痛点——每次换工具都要重新喂上下文。EverMe用一行命令解决，而且免费，这是端侧Agent基础设施的关键拼图。背后团队@EverMind看起来有更大的野心，7月还有发布会。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>多Agent协作开发：Claude Code写plan → Codex实现 → Hermes review，上下文全通</li>
+    <li>长期项目跨天开发：第二天Agent自动记住昨天的进度和决策</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2059787895989469451" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Alook — 把多个CLI Agent组织成AI团队</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的多Agent协作编排层，让Claude Code、Codex、OpenCode等本地Agent像团队一样协作，有角色、任务板、日历和执行记录。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alookai/alook" target="_blank">https://github.com/alookai/alook ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>git clone后本地运行，可以给每个Agent分配不同角色（如"前端开发""后端开发""代码审查"），设置邮箱和权限。在任务板上创建任务，Agent会自动认领并执行。支持日历调度，可以定时让Agent执行巡检任务。执行记录全程可追溯，方便复盘。底层的Agent可以是Claude Code、Codex或OpenCode的任意组合。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它换了一条组织轴——不搞"三省六部"式的多角色聊天（宝玉吐槽的那种纯浪费Token），而是在任务层面做Agent编排。这种设计更务实，也更符合单Agent多工具的趋势。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自动化的CI/CD+代码审查流水线</li>
+    <li>定时巡检：让Agent每天检查服务状态、抓取最新信息</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2059639640647500263" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJVPU6yaQAEJuTT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJVPU6yaQAEJuTT?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJVEkUjbMAEJnQu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJVEkUjbMAEJnQu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CodexGuide — 开源Codex实战手册</div>
+  <div class="section"><div class="section-label event">一句话</div><p>苍老师（社区知名博主）实战数周撰写的Codex使用指南，手把手解决登录、充值、配置、Computer Use、浏览器任务等新手痛点。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com（开源地址见原文t.co链接）" target="_blank">https://github.com（开源地址见原文t.co链接） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这是一份面向Codex Desktop App新手的开源实战指南。从注册OpenAI账号、充值、安装Codex App开始，覆盖Computer Use（控制桌面）、浏览器自动化任务、SSH远程开发等核心场景。每个步骤都有截图和避坑提示，特别适合那些"一上来就被登录/充值/配置卡住"的小白用户。可以直接clone仓库，按章节顺序实操。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Codex是当前最强的Agent产品之一，但门槛不低。这份社区驱动的实战手册填补了官方文档和实际使用之间的空白，而且开源可协作改进。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Codex新手从零到一完整入门</li>
+    <li>作为团队Codex使用培训材料</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2059614018629967919" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJU4BMEbsAAEf1J?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJU4BMEbsAAEf1J?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design 0.8.0 — AI重新定义设计工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Plugin Everything架构的AI设计工具，打通设计→代码→动效全流程，支持Cursor Composer 2.5直接操控。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://opendesign.ai（推测）" target="_blank">https://opendesign.ai（推测） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装Open Design 0.8.0后，可以直接在Cursor Composer 2.5中用自然语言操控它生成UI设计。新版核心是Plugin Everything——不只是多做几个功能，而是让AI能在设计工具里调用各种插件完成从设计稿到代码再到动效的完整链路。用它配合GPT生成结构化排版设计尤其出彩（Berryxia实测GPT排版能到7-80分）。建议先让AI定义一套Design System，然后基于Design System生成UI，一致性会好很多。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>设计→代码→动效三段割裂是传统设计流程的最大痛点。Open Design 0.8.0用Plugin Everything架构把这三段串在一起，配合Cursor Composer 2.5的稳定长任务执行能力，正在定义AI时代的设计工作流。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>产品原型到可运行代码的一键生成</li>
+    <li>基于Design System的批量UI产出</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2059557780537631054" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2059544804116025348/img/4COAskaKbi8R1Jol.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2059544804116025348/img/4COAskaKbi8R1Jol.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ guizang-social-card-skill — 小红书图文卡片AI生成器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>歸藏开源的小红书图文卡片生成Skill，覆盖旅行、美食、教程等常见品类，AI自动标记地图路线嵌入图片。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/op7418/guizang-social-card-skill（推测）" target="_blank">https://github.com/op7418/guizang-social-card-skill（推测） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装这个Skill后，给AI描述你想发的小红书内容主题——比如旅行攻略的"目的地+线路"，AI会自动在底图上标记路线、POI点位，嵌入到图片卡片中。不同品类有不同优化：旅行博主的地图组件、美食博主的菜谱布局、教程类的步骤拆解排版都已内置。生成后直接下载发小红书，从内容到排版全自动。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>小红书图文是当前内容营销的核心渠道，但排版设计耗时。这个Skill把AI的内容生成能力和结构化排版结合，让"发一篇高质量小红书笔记"变成一句话的事。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>批量生成旅行攻略类小红书图文</li>
+    <li>知识类博主的内容自动化生产</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2059587983289016348" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJUgKfGbgAA33vP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJUgKfGbgAA33vP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJUgKp3aoAAfsNS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJUgKp3aoAAfsNS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJOpyJKaMAAjRfX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJOpyJKaMAAjRfX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 复旦NLP GPU Agent — 免费GPU驱动AI科研全自动</div>
+  <div class="section"><div class="section-label event">一句话</div><p>没卡没资源也能跑AI科研——复旦NLP实验室把免费GPU资源封装成Agent，自动完成文献调研、实验设计、代码编写和论文撰写。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/fudan-nlp-gpu-ai-agent/" target="_blank">https://appinn.com/fudan-nlp-gpu-ai-agent/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问项目页面，Agent会自动调用可用的免费GPU资源（如Colab、Kaggle等平台的免费额度）。你只需要提出研究问题，Agent会自主完成：搜索相关论文→设计实验方案→编写代码→在免费GPU上运行→分析结果→撰写论文初稿。全程不需要自己有GPU或云服务账号。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是"AI替人做科研"从概念到落地的真实案例，特别适合学生和独立研究者。把免费GPU资源池化+Agent自动调度，降低了AI科研的门槛到几乎为零。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学生/独立研究者零成本跑实验</li>
+    <li>快速验证论文中的方法是否可复现</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2059553384688918824" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJUA47MXoAUfIf5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJUA47MXoAUfIf5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenAI Secure MCP Tunnel + Harpoon — 企业内网安全接入Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenAI推出Private MCP Tunnel，让ChatGPT/Codex安全连接企业内网MCP服务器，零入站端口开放。内含Harpoon工具可把REST接口标签化暴露给Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://platform.openai.com/docs（推测）" target="_blank">https://platform.openai.com/docs（推测） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在企业内网安装tunnel-client小程序，它主动通过HTTPS outbound连接OpenAI的服务——不需要开放任何入站端口，不散落永久API Key。安装后配置你的内网MCP服务器地址，ChatGPT和Codex就能安全调用内网的数据和工具。另外有个叫Harpoon的内嵌MCP服务器，可以让你把内网一小撮REST接口按标签暴露给Agent调用，不是通用代理，安全可控。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>安全和合规是企业采用Agent的最大障碍。OpenAI这个方案彻底推倒了这堵墙——内网数据不出企业，单向outbound连接，无需开端口。这意味着金融机构、医疗等强监管行业终于可以用Agent了。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>企业内部数据库的自然语言查询</li>
+    <li>让Codex安全访问公司内部API完成自动化任务</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2059708948085932386" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2059708625116090368/img/MCLIv0TKH9p8cV5P.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2059708625116090368/img/MCLIv0TKH9p8cV5P.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ESMFold2 — 蛋白质结构预测新SOTA</div>
+  <div class="section"><div class="section-label event">一句话</div><p>EvolutionaryScale发布ESMFold2，在蛋白质相互作用和抗体-抗原复合物预测上达到新SOTA，开源可用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/evolutionaryscale/esm（推测）" target="_blank">https://github.com/evolutionaryscale/esm（推测） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>通过HuggingFace或GitHub下载模型，支持从单序列或多序列比对（MSA）预测蛋白质3D结构。在抗体-抗原复合物预测上表现特别突出——这是治疗性抗体设计的核心场景。可以用Python API调用，几行代码输入氨基酸序列就能得到3D结构预测。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>ESMFold2在抗体设计上的突破直接关系到新药研发效率。而且开源+可用，不需要像AlphaFold那样依赖大型计算集群。Yann LeCun转帖背书。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>抗体药物设计中的抗原-抗体结合预测</li>
+    <li>蛋白质工程中的结构引导突变设计</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/alexrives/status/2059611151860683097" target="_blank"><span class="handle">@alexrives</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HJU0vsFXkAAcnP3.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HJU0vsFXkAAcnP3.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenRouter完成1.13亿美元B轮融资</div>
+  <div class="section"><div class="section-label event">事件</div><p>AI推理网关OpenRouter完成1.13亿美元B轮，CapitalG领投，估值达13亿美元，用户800万，支持400+模型。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>过去6个月OpenRouter的周token处理量从5T飙到25T，翻了5倍。这不是实验性的小打小闹，是实打实的企业生产级使用在爆发。AI行业重心已从"训练"转移到"推理"再到"Agent"，而推理网关成了多模型调度的刚需基础设施。a16z、Menlo等顶级VC全部参与本轮。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>推理层正在成为AI行业最赚钱的"收费站"。国内做API中转的团队可以对照OpenRouter的估值逻辑重新定价。Copilot、Codex等Agent产品的token消耗将是下一波增长引擎。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2059702421346210197" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJQGFgQbgAArjoi?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJQGFgQbgAArjoi?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 小米Mimo大幅降价 — LLM价格战升级</div>
+  <div class="section"><div class="section-label event">事件</div><p>小米Mimo推理价格大幅下调，缓存命中降99%，基础推理降60-80%。同时给每个用户送820亿token。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>小米在推理优化上做了SGLang HiCache + SWA的全链路优化，KV Cache多级存储间数据搬运量降到了原来的近10%。这背后是罗福莉团队在推理系统上的硬核工程能力。即便如此降价，依然有利润空间。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Mimo的input价格是Claude Sonnet的1/5，output是1/20。这种20倍的成本差距将倒逼所有LLM公司重新审视模型架构和推理效率。DeepSeek和小米这对价格屠夫组合，正在把大模型推向真正的普惠阶段。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2059621923227910464" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJU_LTUagAEw_uS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJU_LTUagAEw_uS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude将引入AI Fluency评分系统</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic将推出个人AI熟练度评分卡（AI Fluency Score），基于用户对话记录评估AI使用能力，包括批判性思维、上下文提供、功能使用频率等维度。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这可能是AI产品从"工具"走向"教练"的标志性转变。Claude不再只是一个被动的对话机器人，而开始评估用户"会不会用AI"——这既是用户体验优化，也暗含企业采购时对员工AI能力的考核需求。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI Fluency可能会成为职场新技能标签，类似当年的"计算机二级"。企业培训市场可能因此衍生出新品类。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2059473203840328132" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2059729329119006928" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2059615225478005226" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/klindt_david/status/2059432130946457958" target="_blank"><span class="handle">@klindt_david</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2059652638275506477" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2059472965461262720" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2059609943762968980" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJWgUGqXcAALvW8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJWgUGqXcAALvW8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJWgi9rWAAIwMOq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJWgi9rWAAIwMOq?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/ext_tw_video_thumb/1868362255298871296/pu/img/WUvWnYCi4iDebbEO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/ext_tw_video_thumb/1868362255298871296/pu/img/WUvWnYCi4iDebbEO?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJU5E0ta0AIk0MN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJU5E0ta0AIk0MN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJToiGWWcAMjdcu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJToiGWWcAMjdcu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2059430260521758721/img/g9slzXcCRdlUSumz.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2059430260521758721/img/g9slzXcCRdlUSumz.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2059635880546217984/img/446psGsgI2KTqRRa.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2059635880546217984/img/446psGsgI2KTqRRa.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJU0S4dbkAAB_jG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJU0S4dbkAAB_jG?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJS1rUdaIAAXk1J?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJS1rUdaIAAXk1J?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>RepoPrompt：被OpenAI收购后免费+即将开源，原付费用户送Codex Credits <a href="https://x.com/dotey/status/2059729329119006928" target="_blank">→</a></li>
+    <li>NitroGen（MineDojo）：游戏内容AI生成引擎 <a href="https://github.com/MineDojo/NitroGen" target="_blank">→</a></li>
+    <li>Chronicles-OCR：腾讯HY实验室古文字OCR基准，28个前沿模型在甲骨文上最高仅14%准确率 <a href="https://x.com/berryxia/status/2059615225478005226" target="_blank">→</a></li>
+    <li>LeJEPA可识别性理论：Yann LeCun团队证明JEPA学到了世界的潜在变量，世界模型理论重大进展 <a href="https://x.com/klindt_david/status/2059432130946457958" target="_blank">→</a></li>
+    <li>Warp Agent云端切换：合上笔记本Agent自动切到云端继续跑，跨夜coding无压力 <a href="https://x.com/berryxia/status/2059652638275506477" target="_blank">→</a></li>
+    <li>微软强制内部迁移：微软要求工程师2026年6月30日前从Claude Code切换到GitHub Copilot CLI <a href="https://x.com/seclink/status/2059472965461262720" target="_blank">→</a></li>
+    <li>MiniMax M3蓄势待发：M2社区生态半年验证后，M3即将发布 <a href="https://x.com/berryxia/status/2059609943762968980" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

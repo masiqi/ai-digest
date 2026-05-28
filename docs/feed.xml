@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 27 May 2026 00:39:33 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 00:36:52 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/05/28 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-28.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-28.html</guid>
+      <description>Agent生态全面爆发——从记忆打通（EverMe）、协作编排（Alook）到企业安全隧道（OpenAI MCP Tunnel），再到设计工具（Open Design）、实战手册（CodexGuide），今天几乎全是能上手即用的干货。OpenRouter 1.13亿美元B轮融资印证推理层已成为AI行业最赚钱的收费站。</description>
+      <pubDate>2026-05-28T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/05/27 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-27.html</link>
