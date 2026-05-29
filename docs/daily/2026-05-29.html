@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-29</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-29</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Anthropic 发布 Claude Opus 4.8，42天刷新旗舰模型迭代速度；同时 BioHub 开源蛋白质世界模型 ESMFold2，9行代码即可做最先进蛋白质结构预测。开源工具和基础模型同日井喷。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Opus 4.8</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 最新旗舰模型，更诚实、更少幻觉，长时间 agent 任务更可靠，价格与 4.7 持平。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://claude.ai（官网）" target="_blank">https://claude.ai（官网） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>官网 claude.ai 选择 Opus 4.8 模型即可使用；Cursor 用户无需更新客户端，在模型选择下拉中直接切换到 Opus 4.8（默认隐藏了 4.7、保留了 4.6）。API 用户通过 Anthropic API 调用 model="claude-opus-4-8-20260528"。当前知识截止时间 2026年1月，与 4.7 同属一个预训练基座，后训练显著增强。最大变化：更愿意承认不确定，agent 长时间运行更稳定，不用时时盯着。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Opus 4.7 仅存活 42 天即被替代，Anthropic 用 LLM 训练 LLM 实现月级迭代。4.8 在 autoresearch 能力上大幅加强，推出了强化版 /goal，使用大量子代理完成复杂研究任务。HuggingFace 创始人用它在 three.js 里构建了一个波音747飞行模拟。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>复杂代码项目的长周期 agent 开发</li>
+    <li>需要诚实度优先的研究分析任务</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2060051148921323542" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJbMFspWsAElsNb.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HJbMFspWsAElsNb.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJa4OYgWwAAlfWX?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJa4OYgWwAAlfWX?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ESMFold2 / ESMC / ESM Atlas — 蛋白质世界模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>BioHub 开源蛋白质生物学世界模型，9行代码做最先进蛋白质结构预测，无需 MSA，完全开源。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://biohub.ai/esm/protein（官网）/" target="_blank">https://biohub.ai/esm/protein（官网）/ ↗</a></p>
+    <p><a href="https://huggingface.co/biohub（HF模型）/" target="_blank">https://huggingface.co/biohub（HF模型）/ ↗</a></p>
+    <p><a href="https://biohub.ai/papers/esm_protein.pdf" target="_blank">https://biohub.ai/papers/esm_protein.pdf ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>pip install esm 后，9行 Python 代码即可预测蛋白质结构。包含三个组件：ESMFold2（折叠预测，在抗体-抗原复合物上超过 AlphaFold3）、ESMC（28亿蛋白质序列训练的语言模型）、ESM Atlas（11亿预测结构+68亿序列的图谱，比 AlphaFold DB 多8亿条目）。Nature 已报道。所有模型和数据集在 HuggingFace 上完全开源。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>不需要 MSA（多序列比对），速度快一个数量级。Fast 模型在抗体-抗原复合物上超过带 MSA 的 AF3。这是蛋白质工程领域近年来最重要的开源发布之一，将蛋白质设计门槛降到极低。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>抗体药物设计和优化</li>
+    <li>新型酶/蛋白质的从头设计</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ebetica/status/2059662638011777162" target="_blank"><span class="handle">@ebetica</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJVkNdiWAAEvvQX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJVkNdiWAAEvvQX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SIA — 自我改进 AI 框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源自我改进框架，让任意 AI agent 自动提升基准任务表现，已击败 Karpathy 的 autoresearcher。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>SIA（Self-Improving AI）不同于固定权重的静态 agent 框架，它能自主分析失败、迭代优化策略。核心思路：给定一个 agent 和基准任务，SIA 自动运行、评估、改进，循环提升。已在多个 benchmark 上击败 Karpathy 的 autoresearcher。代码开源，可直接 clone 后在本地 agent 框架上集成使用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>大多数 agent 框架是静态的（固定 prompt/工具/权重），SIA 实现了 agent 的自我进化。这对需要长期运行、持续优化的生产环境 agent 意义重大，代表 agent 从「工具调用」走向「自我改进」的关键一步。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>生产环境 agent 的持续性能优化</li>
+    <li>复杂研究工作流的自动改进</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2060031707378839772" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJaz3bebkAEZHcy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJaz3bebkAEZHcy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060003043698225152/img/HHSLcFI59c-w9fbq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060003043698225152/img/HHSLcFI59c-w9fbq?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ stable-worldmodel — JEPA/世界模型开源平台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源可扩展的 JEPA 和世界模型研究平台，LeCun 转推认可，一行命令开始训练。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>历经一年开发，stable-worldmodel 提供完整的 JEPA（联合嵌入预测架构）训练和评估管线。clone 仓库后按 README 配置环境即可开始训练自己的世界模型。支持多种预训练 backbone 和下游任务评估。LeCun 亲自转推背书，是当前 JEPA 方向最完整的开源实现。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Yann LeCun 一直力推 JEPA 作为 LLM 的替代架构，认为世界模型是通往 AGI 的必经之路。这个平台将 JEPA 研究从论文变为可复现的工程代码，极大降低了世界模型研究的入门门槛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>视频预测和物理世界模拟</li>
+    <li>机器人/自动驾驶的世界理解预训练</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lucasmaes_/status/2060022309759389774" target="_blank"><span class="handle">@lucasmaes_</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJamxUsWQAIilkQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJamxUsWQAIilkQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Genesis — 开源通用物理引擎</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向机器人、具身智能和物理 AI 的开源物理仿真平台，让机器人自己生成训练数据。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Genesis-Embodied-AI/genesis-world" target="_blank">https://github.com/Genesis-Embodied-AI/genesis-world ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>git clone 后 pip install 即可运行。Genesis 提供高性能物理仿真（碰撞、流体、软体等），支持 Python 原生接口。底层物理引擎和仿真平台已开源，上层生成式框架（自动生成训练场景和数据）将陆续放出。适合做机器人 RL 训练、具身智能 sim-to-real 迁移。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>物理仿真长期被 NVIDIA Isaac 等闭源平台垄断，Genesis 以开源方式提供通用物理引擎，直接面向「让机器人自己生成训练数据」这一核心痛点。底层引擎的性能据说对标甚至超过商业方案。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>机器人强化学习训练的仿真环境</li>
+    <li>具身智能的 sim-to-real 数据生成</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2059988349616857225" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2059988156301398016/img/JNucc0P6SfbQ3LB4.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2059988156301398016/img/JNucc0P6SfbQ3LB4.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cua — 后台 Agent 操作工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让 AI Agent 在 Mac/Windows 后台独立操作程序，不影响你正常使用鼠标，支持多个虚拟鼠标并行。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装后在 Mac/Windows 上运行，Agent 通过虚拟鼠标在后台操作应用程序。与 Codex Computer Use 不同，Cua 不抢占真实鼠标光标，你可以在前台正常工作的同时让 Agent 在后台操作其他程序。支持同时启动多个虚拟鼠标并行操作不同应用。Windows 版 Codex 可以搭配 Cua 实现真正的后台 Computer Use。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Computer Use 的最大痛点是「占用屏幕和鼠标」，Cua 通过虚拟化鼠标解决了这个问题，让 Agent 操作真正成为后台能力。这对自动化测试、RPA、批量处理等场景意义重大。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自动化 UI 测试和 RPA 流程</li>
+    <li>多任务并行自动化处理</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2059920581471203551" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ II-Commons Skills — Agent 知识技能包</div>
+  <div class="section"><div class="section-label event">一句话</div><p>为 AI Agent 提供来自 arxiv、PubMed 等学术源的即时知识接入，开源可扩展。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Intelligent-Internet/II-Commons-Skills" target="_blank">https://github.com/Intelligent-Internet/II-Commons-Skills ↗</a></p>
+    <p><a href="https://agent.ii.inc" target="_blank">https://agent.ii.inc ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>将 II-Commons Skills 添加到你的 agent 框架中（支持 II-Agent 及其他主流 agent 框架），agent 即可动态查询 arxiv 最新论文、PubMed 医学文献等结构化知识。技能包是模块化设计，按需加载不浪费 token。开源仓库可自行扩展新数据源。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 最大的问题是知识时效性和可靠性。II-Commons 将学术数据库封装为 agent 可调用的 skills，让 agent 的回答有据可查。模块化设计避免了一次性加载大量上下文。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>科研 agent 实时文献检索和综述</li>
+    <li>医疗 agent 获取最新临床证据</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ii_posts/status/2060013720022007830" target="_blank"><span class="handle">@ii_posts</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060011906996342786/img/SojRdu98zLb0XqnN.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060011906996342786/img/SojRdu98zLb0XqnN.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen-Image-Bench — 文生图评测新标准</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Qwen 发布 T2I 评测基准，56个细粒度维度 + 人类对齐评分器，OpenAI/Gemini/Grok/Flux 重新排座次。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://arxiv.org/abs/2605.28091" target="_blank">https://arxiv.org/abs/2605.28091 ↗</a></p>
+    <p><a href="https://huggingface.co/collections/Qwen/qwen-image-bench" target="_blank">https://huggingface.co/collections/Qwen/qwen-image-bench ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 HuggingFace 下载数据集和 Q-Judger 评分模型。用你的图像生成模型跑 benchmark 的 56 个 facet（覆盖真实世界保真度、创意生成、提示词对齐等），Q-Judger 自动评分，与人类评分相关性 ρ=0.92。可以看到自己的模型在哪些维度比 GPT-5.5/Flux 强或弱。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统 T2I 评测只看提示词对齐，Qwen-Image-Bench 证明「真实世界保真度」和「创意生成能力」才是真正的差异化战场。56 个细粒度 facet 让模型优缺点一目了然。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>图像生成模型的细粒度能力诊断</li>
+    <li>多模型对比选型</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2060014899993170203" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJakmyGa4AAg0Jv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJakmyGa4AAg0Jv?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJaeGeBWIAERLtl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJaeGeBWIAERLtl?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic H轮融资650亿美元，估值逼近万亿</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 获得650亿美元 H 轮融资，估值达9650亿美元，超越 OpenAI。ARR 从2月的140亿美元飙升至5月底的470亿美元。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Anthropic 以「每42天一个新旗舰模型」的速度狂奔，ARR 4个月增长3.4倍。这轮融资后 Anthropic 现金储备超过多数国家主权基金，将全力投入下一代 Mythos 模型的训练。与 Cerebras 签署 $20B+ 推理协议也在推进中。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 基础设施的资本密度已超过半导体和航天。Anthropic 和 OpenAI 今年内可能双双冲击万亿市值上市，AI 领域的「双寡头」格局正在形成。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2060152538943705281" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJchyQoakAA2wb-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJchyQoakAA2wb-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 X 全量自动翻译上线 — 巴别塔倒塌</div>
+  <div class="section"><div class="section-label event">事件</div><p>X（Twitter）自动翻译全量上线，所有推文根据用户语言自动翻译展示，跨语言内容消费无障碍。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是第一个全量自动化翻译的主流社交平台。AI 翻译让全球用户真正实现了跨语言发现内容，多位博主反馈「刷推体验回到 web2.0 时代的惊喜感」。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对出海产品、全球开源社区影响深远——内容分发不再受语言限制，非英语创作者的作品获得前所未有的曝光机会。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2059947491798417914" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 安全插件 16 万安装</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Code 安全提醒插件上线，通过 pre-tool hook 自动拦截 Write/Edit/MultiEdit 中的命令注入、eval() 等安全问题，已 16 万安装。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>插件覆盖 GitHub Actions 命令注入、Node.js child_process.exec() 不安全调用、eval()/new Function() 等常见 AI 生成代码的安全漏洞。说明 vibe coding 的安全问题已经严重到需要专用插件防护。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 辅助编程的安全治理从「开发者自觉」走向「工具化拦截」，这可能会成为所有 AI coding 工具的标配功能。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2060020850624176411" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJapVkDbkAA6XBi?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJapVkDbkAA6XBi?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 iOS 27 渲染图泄露：Siri 彻底重做</div>
+  <div class="section"><div class="section-label event">事件</div><p>Mark Gurman 爆料 iOS 27 核心变化，Siri 从简单问答升级为能理解上下文、主动处理多步任务的智能体，AI 照片编辑大幅升级。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>苹果在 AI 助手赛道的反击终于来了。新 Siri 的「多步任务主动执行」能力直接对标 Google Astra 和 Anthropic Computer Use，照片编辑则可能集成生成式 AI 能力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>iOS 27 将是苹果近年最大的 AI 系统更新，可能重塑移动端 AI 助手的竞争格局。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2060035364115689595" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2059976049476124866" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/arnal_charles/status/2060009395107377282" target="_blank"><span class="handle">@arnal_charles</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/logic_int/status/2060093674524975416" target="_blank"><span class="handle">@logic_int</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2059795639207350395" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/HiTw93/status/2059997282272190483" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2059927042221629674" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2060026364317839414" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2059955552311034287" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJa3KF7bAAAWqsD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJa3KF7bAAAWqsD?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJaO3lRWoAQ1yO-?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJaO3lRWoAQ1yO-?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJbsEnhXsAAayrK?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJbsEnhXsAAayrK?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HIyP2KPa8AAvD4Z?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HIyP2KPa8AAvD4Z?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJXdMWQaUAAbArs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJXdMWQaUAAbArs?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJV2pVAa8AAR39g?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJV2pVAa8AAR39g?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJaUYAXbMAET03g?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJaUYAXbMAET03g?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJZUuo3XkAUxpxR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJZUuo3XkAUxpxR?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Pi (pi-mono)：Armin Ronacher (Flask/Jinja2作者) 新作，54K stars 的 AI agent，系统 prompt 不到 1000 token，靠懒加载技能极致省 token <a href="https://x.com/seclink/status/2059976049476124866" target="_blank">→</a></li>
+    <li>ATLAS：Meta AI 发布史上最大数学形式化项目，25+教科书、50万行 Lean 4 代码，开源贡献 <a href="https://x.com/arnal_charles/status/2060009395107377282" target="_blank">→</a></li>
+    <li>Aleph Prover：OpenAI 反证 Paul Erdős 平面单位距离问题的 Lean 4 形式化，开源可验证 <a href="https://x.com/logic_int/status/2060093674524975416" target="_blank">→</a></li>
+    <li>howtoeval.com：2026 年生产环境 AI Agent 评估指南，提出 Benchmark-maxxer vs Floor-raiser 概念 <a href="https://x.com/shao__meng/status/2059795639207350395" target="_blank">→</a></li>
+    <li>Mole (mole.fit)：Tw93 的 Mac 守护 App，数百项改进规划中，精致安静 <a href="https://x.com/HiTw93/status/2059997282272190483" target="_blank">→</a></li>
+    <li>File Converter：右键转换/压缩文件的 Windows 工具，小众软件推荐 <a href="https://x.com/appinn/status/2059927042221629674" target="_blank">→</a></li>
+    <li>Anthropic Computer Use 最佳实践：官方发布 CU 操作指南，含分辨率匹配等关键避坑 <a href="https://x.com/vista8/status/2060026364317839414" target="_blank">→</a></li>
+    <li>WorkBuddy：中国 AI Agent 出海成功案例，分钟级生成网站/周报/PPT <a href="https://x.com/seclink/status/2059955552311034287" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
