@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 29 May 2026 00:37:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 00:36:52 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/05/30 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-05-30.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-05-30.html</guid>
+      <description>Anthropic H轮650亿美元融资当天同步发布Opus 4.8 + Dynamic Workflows，编码Agent从「单兵作战」正式进入「数百子Agent并行」时代；同时OpenAI Codex Computer Use登陆Windows，两大AI编码巨头同日亮剑。</description>
+      <pubDate>2026-05-30T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/05/29 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-29.html</link>
