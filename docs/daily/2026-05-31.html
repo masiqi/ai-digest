@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-05-31</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-05-31</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Agent编排和工作流成为绝对主角：Sandcastle用TS脚本多Agent协同、Claude Code Dynamic Workflows进入Codex、微软SkillOpt把SKILL.md变成可训练对象——Agent不再单打独斗。同时Google发布可暂停数天的长运行Agent框架ADK，Agent基础设施进入新阶段。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Sandcastle — Agent多军种联合作战平台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用TypeScript脚本编排Codex、Claude Code、Cursor、GitHub Copilot等多个Agent在同一个Workflow中协作完成复杂任务，支持在虚拟机中运行。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Sandcastle是Matt开发的Agent编排框架，核心思路是用TypeScript定义Workflow，让不同Agent各司其职。比如你可以让Codex负责代码生成、Claude Code做审查、Cursor处理前端UI，全部在沙箱虚拟机中执行。安装方式需关注作者@dotey后续发布的仓库链接。安装后编写.ts工作流脚本，定义各Agent的任务和交接逻辑，一键运行即可实现多Agent流水线协作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这解决了当前碎片化的Agent生态痛点——每个人都在用多个Agent，但缺乏统一编排层。Sandcastle把"集众家之长"变成了工程化实践，虚拟机沙箱执行保证了安全隔离，TypeScript脚本让工作流可版本控制、可复用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>复杂全栈项目：Codex写后端+Claude Code审查+Cursor调前端，流水线自动化</li>
+    <li>多模型对比评测：同一个任务发给多个Agent，对比输出质量</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2060865571244183797" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2049505675072663552/img/oLbdZ4thjF_R1aXh.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2049505675072663552/img/oLbdZ4thjF_R1aXh.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Codex Chronicle — 让AI拥有"屏幕记忆"</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开启后Codex不间断截图你的屏幕，累积巨量上下文，AI回答越来越懂你，越用越顺手。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在Codex中启用Chronicle功能后，AI会持续捕获屏幕画面作为上下文。与手动复制粘贴不同，Chronicle自动建立"视觉记忆"，你在做什么项目、用什么工具、遇到什么问题，AI全知道。回答问题更个性化，不再需要每次解释背景。对于长期项目尤其有效——第二天的对话里AI还记得昨天你在调试的那个bug。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这可能是Codex最低调但最实用的功能。当前AI助手的最大痛点是"失忆"——每次对话都是新的开始。Chronicle用截屏流解决了巨量上下文问题，让Agent真正"看见"你在做什么，而不是依赖你手动描述。这是从copilot到真正搭档的关键一步。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长期开发项目：AI记得整个项目上下文，调试不再需要重复解释</li>
+    <li>设计/UI工作流：AI直接看到你的设计稿，反馈更加精准</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2060657201958543637" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJjskTVa8AEEOML?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJjskTVa8AEEOML?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HGXgdYAbQAAxsZG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HGXgdYAbQAAxsZG?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ mlx-vlm + Step 3.7 Flash — Apple Silicon本地多模态推理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Step 3.7 Flash模型正式加入mlx-vlm，4bit量化版本在128G Apple Silicon上跑出53+ tokens/s，视觉理解+文本生成全跑通。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Blaizzy/mlx-vlm（mlx-vlm项目主页）" target="_blank">https://github.com/Blaizzy/mlx-vlm（mlx-vlm项目主页） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>前提是拥有一台Apple Silicon Mac（M系列芯片）。安装mlx-vlm：`pip install mlx-vlm`，然后下载Step 3.7 Flash的MLX转换版模型文件（作者Ivan Fioravanti已提供转换），使用4bit量化格式。在Mac Studio上实测，32K上下文窗口下生成速度53 tokens/s以上。支持图片输入做视觉理解，文本输出做对话。完全本地运行，无需联网。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Apple Silicon正在成为AI推理的性价比之王。Step 3.7 Flash是Step系列中最快的模型，加上mlx-vlm的MLX优化，能在消费级硬件上跑出接近云端的体验。128G统一内存可加载大模型+长上下文，这是NVIDIA消费卡做不到的。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>隐私敏感场景：本地处理文档、发票、证件等包含敏感信息的图片</li>
+    <li>离线多模态AI助手：飞机上、无网络环境下也能用视觉AI</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2060758287994503508" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJlIu3ZbwAAUn6N?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJlIu3ZbwAAUn6N?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJklD7cXUAI6oSS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJklD7cXUAI6oSS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Starlight Promise — 用Cursor+GPT Image 2一键生成的文字恋爱游戏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一段提示词+GPT Image 2生成所有图片，Cursor写代码，做出了一个完整的文字恋爱游戏，开源可玩。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://gordensun.github.io/starlight-promise/" target="_blank">https://gordensun.github.io/starlight-promise/ ↗</a></p>
+    <p><a href="https://github.com/GordenSun/starlight-promise" target="_blank">https://github.com/GordenSun/starlight-promise ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开在线地址即可开始游戏——这是一个浏览器端运行的文字恋爱游戏，所有角色立绘和场景图由GPT Image 2生成，代码由Cursor完成。可以Fork GitHub仓库，修改剧情和角色，替换图片素材，生成你自己的恋爱游戏。整个项目展示了AI全栈开发的范式：图片用GPT生成、代码用AI写、部署在GitHub Pages。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是AI全栈开发的最佳demo——一个人+AI完成了原本需要美术+程序员+编剧团队的完整游戏。GPT Image 2生成的角色一致性相当好，Cursor处理了游戏逻辑和UI，GitHub Pages零成本部署。从想法到可玩产品，零门槛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>独立游戏开发：快速原型验证玩法创意</li>
+    <li>AI教育：向非程序员展示AI全栈开发的全过程</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2060749521295130794" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060748011387662336/img/EC3AwVTi_TZNk-A7.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060748011387662336/img/EC3AwVTi_TZNk-A7.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Google ADK（Agent Development Kit）— 能暂停数天的长运行Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google官方Agent开发工具包，支持构建可暂停数天、存活重启、不丢失上下文的长运行AI Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://goo.gle/4uGa8QL（含完整代码+教程）" target="_blank">https://goo.gle/4uGa8QL（含完整代码+教程） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>大多数Agent教程只做到无状态demo就结束了。Google ADK针对生产环境设计：Agent可以运行数周，中途暂停保存状态，服务器重启后无缝恢复，上下文不丢失。代码和教程在官方链接中，包含完整的持久化、状态管理、断点恢复示例。用Python即可上手。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是Agent从demo走向生产的关键基础设施。现实中的Agent任务（代码审查周期、数据分析项目、客户支持工单）往往跨越多天，当前框架几乎都假设Agent是"一次性"的。Google ADK解决了Agent持久化这个被忽视的核心问题，对构建企业级Agent应用至关重要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长期代码审查Agent：跨多天的PR审查流程不丢失上下文</li>
+    <li>持续数据监控Agent：数周运行的数据管道，自动从断点恢复</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/googledevs/status/2060405810132402578" target="_blank"><span class="handle">@googledevs</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJdUTsOWcAUgDee?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJdUTsOWcAUgDee?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SkillOpt（微软）— 自动优化你的Agent技能文档</div>
+  <div class="section"><div class="section-label event">一句话</div><p>微软将SKILL.md转变为可训练对象，优化器模型通过Agent执行反馈循环自动改进技能文档，让Agent提示词越跑越好。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>传统SKILL.md是手写或一次性生成的静态文档。SkillOpt引入独立的优化器模型，输入Agent rollout数据（Agent执行任务的实际表现），自动分析哪些指令有效、哪些造成了困惑，然后重写优化SKILL.md。这形成了一个反馈闭环：Agent执行→记录表现→SkillOpt优化→更好的SKILL.md→Agent表现提升。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是提示词工程的范式转变——从"人工调优"变成"机器学习优化"。这解决了SKILL.md维护中最痛苦的问题：技能文档随时间退化、无法验证效果、优化依赖直觉。SkillOpt把这个问题变成了可量化的优化任务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Agent技能库维护：自动迭代优化你的Agent技能文档</li>
+    <li>企业Agent部署：大规模Agent技能质量管理，不再依赖个体工程师调参</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2060720910735446433" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJkmsG5bQAAcu3a?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJkmsG5bQAAcu3a?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJKuUtHXwAAfOME?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJKuUtHXwAAfOME?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Firebase Studio（Google）— 完全免费的AI全栈开发工作区</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google将Project IDX升级为Firebase Studio，内置AI编码辅助、多语言支持、直接集成Firebase生态，完全免费。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://idx.google.com/" target="_blank">https://idx.google.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问Firebase Studio网页版，无需安装任何本地环境。支持Node.js、Python、Go、Java等多语言，内置AI代码补全和对话助手，直接连接Firebase的数据库、认证、部署等服务。对比Cursor的付费模式，Firebase Studio对个人开发者完全免费。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是Google在AI IDE战争中打出的免费牌。Project IDX原本是实验项目，升级为Firebase Studio后整合了完整的AI+云服务生态。对个人开发者和学生而言，免费+全栈+AI是杀手级组合。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>个人项目快速原型：从零到部署一条龙</li>
+    <li>教学/学习场景：学生无需配置环境即可开始全栈开发</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2060576876867862675" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Bolt.new — 浏览器内全栈开发，无需本地环境</div>
+  <div class="section"><div class="section-label event">一句话</div><p>StackBlitz用WebContainer技术在浏览器里跑完整Node.js环境，输入描述直接生成全栈应用，零配置。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://bolt.new" target="_blank">https://bolt.new ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开bolt.new，输入你想要构建的应用描述（支持中文），AI自动生成完整的前后端代码。WebContainer技术在浏览器沙箱中运行真实的Node.js运行时，可以安装npm包、运行数据库操作、启动开发服务器。生成的应用可以直接部署到Netlify/Cloudflare，或导出代码到本地继续开发。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>bolt.new是"prompt-to-app"领域的标杆产品。WebContainer让浏览器变成一个完整的开发环境，不需要安装Node、不需要配置环境变量、不需要处理系统兼容性。对非程序员而言，这是最低门槛的"想法→应用"路径。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>非技术人员做原型：产品经理/设计师直接生成可交互的应用原型</li>
+    <li>快速验证创业想法：1小时内从idea到可演示的MVP</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2060576718520197469" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ guizang-social-card-skill — GitHub本周Star第一的Agent技能</div>
+  <div class="section"><div class="section-label event">一句话</div><p>歸藏为AI Agent写的社交媒体卡片生成Skill，冲到GitHub本周新建项目Star排名第一。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这是一个供AI Agent（Codex/Claude Code等）使用的Skill，让Agent能自动生成社交媒体分享卡片（OG Image）。在支持的Agent中导入该Skill后，只需告诉Agent"为这篇文章生成社交卡片"，它会自动设计布局、配色、排版，输出标准尺寸的社交分享图。完全由Agent驱动，无需手动操作设计工具。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个项目爆火说明AI Agent的"技能市场"正在形成。Skill是Agent的扩展模块，好的Skill能让Agent瞬间获得新能力。歸藏的这个Skill证明了：为Agent写Skill可以帮助成千上万的用户，比做一个独立App的影响力更大。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>博客/公众号作者：每篇文章自动生成社交分享图</li>
+    <li>内容团队：标准化品牌视觉，Agent批量生成统一风格的卡片</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2060667214077034978" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJj14gPa8AAZayM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJj14gPa8AAZayM?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 归所（FinalPlace）— 基于规则引擎的文件自动整理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用规则引擎自动化文件分类整理，告别手动整理杂乱文件夹。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://t.co/9gy8vHiRfU）" target="_blank">https://t.co/9gy8vHiRfU） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Windows平台下载安装后，配置整理规则——例如"*.pdf文件→文档文件夹"、"图片创建时间&gt;2024→归档文件夹"、"文件名包含'发票'→财务文件夹"。规则引擎支持多重条件组合，可以按扩展名、创建日期、文件大小、文件名关键词等维度自动分类搬运。一次配置，之后新下载的文件自动归位。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Windows至今缺少像Hazel（macOS）那样好用的自动整理工具。归所填补了这个空缺，规则引擎提供了比简单文件过滤更强的灵活性。对于下载文件夹常年杂乱、桌面堆满临时文件的用户来说，这是解放生产力的利器。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>下载文件夹自动清理：下载完自动分类到项目/文档/软件目录</li>
+    <li>照片整理：按日期+地点自动归入对应相册文件夹</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2060771606339747942" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PhoneMic — 手机当电脑麦克风，用豆包语音输入</div>
+  <div class="section"><div class="section-label event">一句话</div><p>手机扫码后用豆包语音引擎将语音转文字，实时输入到电脑上。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://t.co/PpqT7x0Q7V）" target="_blank">https://t.co/PpqT7x0Q7V） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>电脑上打开PhoneMic网页，手机扫码连接，手机端调用豆包语音识别引擎，说话后文字实时出现在电脑输入框。不需要蓝牙、不需要数据线，纯网页+扫码。支持中文和多种语言，识别准确率高于系统自带语音输入。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>解决了电脑语音输入的老大难问题——大多数电脑麦克风收音差、环境噪音大。用手机当高灵敏度麦克风+豆包引擎的高精度识别，把手机变成了专业级语音输入外设，成本为零。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长文写作：说话比打字快3倍，适合初稿输出</li>
+    <li>会议记录：手机放桌上收音，文字实时显示在电脑上</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2060586615756472776" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ pibot — 完全本地运行的多模态AI助手，零Python依赖</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用Rust/mlx-c重写的pibot，集成本地STT/TTS和多模态LLM，全部本地运行无Python依赖。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>pibot现在使用parakeet做语音识别（STT）、qwen3-tts做语音合成（TTS）、Qwen 3.6多模态模型做理解（通过llama.cpp）。所有推理引擎基于Rust/mlx-c从Python移植过来，完全零Python依赖。在Apple Silicon Mac上编译运行，获得一个完全本地、隐私安全、能看能听能说的AI助手。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>零Python依赖意味着更小的体积、更快的启动、更少的依赖冲突。Rust重写让pibot在生产环境中更可靠。而且本地STT+TTS+多模态LLM的全栈方案，对隐私敏感场景（医疗、法律、企业）极有价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地智能家居中枢：完全断网的语音+视觉AI助手</li>
+    <li>嵌入式设备集成：小体积、低依赖使其适合运行在树莓派等边缘设备</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/badlogicgames/status/2060268257739677713" target="_blank"><span class="handle">@badlogicgames</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJeKxkXWIAAc3n5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJeKxkXWIAAc3n5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 北大苏炜杰加入OpenAI</div>
+  <div class="section"><div class="section-label event">事件</div><p>宾夕法尼亚大学沃顿商学院统计与数据科学系正教授苏炜杰（北大数院出身）正式加入OpenAI，同时兼任宾大机器学习研究中心联合主任。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>苏炜杰是统计机器学习领域的顶尖学者，他在高维统计、深度学习理论方面的研究直接影响了大模型训练方法论。OpenAI此次挖角延续了从学术界吸收顶级理论人才的策略——在模型能力趋于平台期的当下，理论突破比工程优化更稀缺。这也是继Karpathy、Sutskever之后又一重磅学界→工业界迁移。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>OpenAI正在构建一个"理论+工程+产品"的铁三角。苏炜杰的加入将强化OpenAI在模型训练理论、可解释性、可靠性方面的基础研究能力，这对下一步的AGI safety和模型可控性至关重要。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yuyy614893671/status/2060830199248552233" target="_blank"><span class="handle">@yuyy614893671</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJmKJLzaQAAP11R?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJmKJLzaQAAP11R?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Opus 4.8 + Dynamic Workflows发布</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic发布Claude Opus 4.8，并引入Dynamic Workflows动态工作流机制。但中文社区反馈两极分化——有人觉得升级不大甚至变笨了，有人账号莫名变成未注册状态。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Opus 4.8的Dynamic Workflows是Agent编排能力的重要更新，但用户感知不强——因为大多数人只用单轮对话。反响分化反映了能力展示与用户体验之间的鸿沟：底层能力的进步不一定能转化为立即可感知的体验提升。另外账号问题影响了部分用户的测试体验。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Anthropic在新模型发布节奏上明显加快，但与OpenAI的差距仍然存在。Dynamic Workflows的方向是对的——Agent化是不可逆的趋势——但如何让用户感知到这些底层进步是Anthropic的挑战。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2060569852834873789" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Groq融资6.5亿美元，AI推理芯片赛道升温</div>
+  <div class="section"><div class="section-label event">事件</div><p>AI芯片创业公司Groq据报道正在融资6.5亿美元，专注推理专用芯片路线，与NVIDIA的通用GPU路线差异化竞争。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>在NVIDIA 200亿美元收购案之后，Groq的这轮高额融资说明资本市场看好推理专用芯片这一赛道。目前AI计算市场大头被NVIDIA占据，但推理侧的延迟、成本、能效比是NVIDIA GPU的短板。Groq的LPU（语言处理单元）专为Transformer推理优化，延迟极低。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>推理芯片专业化将加速AI应用的部署成本下降。中国对Groq这类推理专用芯片的关注度远低于对NVIDIA/AMD的关注，这是一个信息差。推理芯片可能重塑AI基础设施格局，让更多中小企业用得起高质量AI推理。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2060581822875029554" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 小米MiMo V2.5 API大降价</div>
+  <div class="section"><div class="section-label event">事件</div><p>小米MiMo团队罗福莉分享技术博客，MiMo V2.5系列API价格大幅下调，背后是将推理系统彻底重构为Hybrid Sliding Window架构。用户实测120万token只花了3块多。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>小米的定价策略极为激进，120万token仅3元+的价格几乎是大厂API的1/10。Hybrid Sliding Window架构是降本的关键技术——通过动态窗口管理减少KV缓存开销，大幅提升推理吞吐量。小米走的是"极致性价比"路线，对其他国产模型API形成降价压力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>MiMo V2.5的定价可能引发国产AI模型的又一轮价格战。对于个人开发者和中小团队，超低API价格降低了AI应用的门槛。但模型质量是否能与价格匹配仍需验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2060751816800047413" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/SylvainGariel/status/2060158821008650258" target="_blank"><span class="handle">@SylvainGariel</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2060718171536204206" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2060751765050732987" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2060663796440744247" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2060631644336189564" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2060689179642916894" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2060554568849907945" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2060712675538092382" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2060586621964099828" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2060586619078324357" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJlC0iZbgAEfoNy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJlC0iZbgAEfoNy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HJU0vsFXkAAcnP3.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HJU0vsFXkAAcnP3.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJZoel_bcAAScJ6?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJZoel_bcAAScJ6?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJZoemAaEAAarnx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJZoemAaEAAarnx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJZoemAbkAAvkw6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJZoemAbkAAvkw6?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJZoel_agAA0OX9?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJZoel_agAA0OX9?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060741891763912704/img/oxahd9QjdgeojGfj.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060741891763912704/img/oxahd9QjdgeojGfj.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJjyoWabMAAyQR5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJjyoWabMAAyQR5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJf71KBaoAA6X6u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJf71KBaoAA6X6u?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJjVj4LXQAQd7_5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJjVj4LXQAQd7_5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060687456287281152/img/lgXmiVlm2v-3glw8.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060687456287281152/img/lgXmiVlm2v-3glw8.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJiPbN4bEAAfDXf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJiPbN4bEAAfDXf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>ESMFold2：Meta开源蛋白质折叠模型，11亿结构vs AlphaFold3的2亿，不使用MSA达到SOTA <a href="https://x.com/SylvainGariel/status/2060158821008650258" target="_blank">→</a></li>
+    <li>MemTrace/MemTraceBench：浙大张宁豫团队的Agent记忆系统评测基准，可追踪、诊断、优化memory <a href="https://x.com/elliotchen100/status/2060718171536204206" target="_blank">→</a></li>
+    <li>Anthropic Prompting 101：官方25分钟提示词工程课程，从语气到XML结构到Few-shot全覆盖 <a href="https://x.com/berryxia/status/2060751765050732987" target="_blank">→</a></li>
+    <li>Grok-building-0.1支持X AI API：百万Token输入$1/输出$2，性价比突出 <a href="https://x.com/berryxia/status/2060663796440744247" target="_blank">→</a></li>
+    <li>微软公开45年前DOS源码：一摞打印纸的代码考古，历史价值拉满 <a href="https://x.com/appinn/status/2060631644336189564" target="_blank">→</a></li>
+    <li>即览（iOS）：歸藏做的HTML/Markdown预览App即将发布测试 <a href="https://x.com/op7418/status/2060689179642916894" target="_blank">→</a></li>
+    <li>Salesforce工程Agent化转型：从Copilot到Agentic Engineering的完整经验 <a href="https://x.com/shao__meng/status/2060554568849907945" target="_blank">→</a></li>
+    <li>PopShort AI / Mangaka.app：AI短剧工厂、文字转完整漫画，海外成熟中国空白 <a href="https://x.com/seclink/status/2060712675538092382" target="_blank">→</a></li>
+    <li>体育视频比分屏蔽油猴脚本：看回放视频时隐藏比分避免剧透 <a href="https://x.com/appinn/status/2060586621964099828" target="_blank">→</a></li>
+    <li>Android ADB客户端App：手机上管理安卓设备，开源 <a href="https://x.com/appinn/status/2060586619078324357" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
