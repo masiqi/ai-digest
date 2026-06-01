@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 31 May 2026 00:37:45 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 00:37:50 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/01 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-01.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-01.html</guid>
+      <description>Agent 生态的工具链继续加速成熟——从 AI 搜索数据源到 GEO 优化系统再到多 Agent 编排，基础设施层的开源项目密集涌现。另一边，Anthropic 以 9650 亿美元估值登顶全球最高估值 AI 公司，行业格局正在被重写。</description>
+      <pubDate>2026-06-01T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/05/31 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-05-31.html</link>

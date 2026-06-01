@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-01</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-01</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Agent 生态的工具链继续加速成熟——从 AI 搜索数据源到 GEO 优化系统再到多 Agent 编排，基础设施层的开源项目密集涌现。另一边，Anthropic 以 9650 亿美元估值登顶全球最高估值 AI 公司，行业格局正在被重写。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ files.md：极简 Markdown 编辑器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款在线、开源、支持本地使用的极简 Markdown 编辑器，打开浏览器就能写</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/files-md/" target="_blank">https://appinn.com/files-md/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问官网即可使用在线版，无需注册和安装。也支持下载源码自行部署到本地或服务器。编辑器界面极其干净，没有工具栏干扰，专注写作体验。支持实时预览和标准 Markdown 语法，生成的文件可直接导出为 .md 格式。适合用来记笔记、写日报、整理文档，也可以集成到自己的工作流中作为轻量写作入口。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>在 notion/obsidian 等重型笔记工具泛滥的当下，一款回归文本本质的极简编辑器反而稀缺。开源 + 零依赖浏览器运行，意味着你可以完全掌控自己的数据，不被任何平台锁定。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>日常快速记录想法和待办事项</li>
+    <li>作为团队共享文档的轻量写作入口</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2060997878475047344" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJoiph4W8AErbyt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJoiph4W8AErbyt?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ GEOFlow：AI 搜索时代的 SEO 替代方案</div>
+  <div class="section"><div class="section-label event">一句话</div><p>专门面向 Generative Engine Optimization 的开源系统，帮你让自己的内容被 AI 搜索引用和推荐</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yaojingang/GEOFlow" target="_blank">https://github.com/yaojingang/GEOFlow ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>整套工具体系包含 4 个 GitHub 仓库。先 clone GEOFlow 主仓库，按 README 配置运行，它会分析你的网页内容并生成 GEO 优化建议。配套的 yao-meta-skill 是创建 Skill 的元 Skill（https://github.com/yaojingang/yao-meta-skill），yao-geo-skills 提供了 17 套开箱即用的 GEO 优化 Skill。还有 geo-citation-lab 收录了 41 篇最新 GEO/AI 搜索相关论文，适合深入研究底层原理。每月最后一个周六有免费直播公开课。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统的 SEO 在 AI 搜索（ChatGPT/Perplexity/Google AI Overview）面前正在失效，GEO 是下一个蓝海。这套工具是目前中文社区最完整的 GEO 开源方案，从理论（41篇论文）到实践（17套Skill）再到公开课，形成了完整闭环。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让自己的博客/产品文档被 ChatGPT 等 AI 搜索引用</li>
+    <li>电商产品页面优化以提升 AI 推荐可见性</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2060884670963970203" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AnySearch：专为 AI Agent 设计的数据源引擎</div>
+  <div class="section"><div class="section-label event">一句话</div><p>给 AI Agent 提供专业搜索能力的 Skill，解决 Agent 搜索混乱、结果不准确的问题</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://anysearch.com（官网）/" target="_blank">https://anysearch.com（官网）/ ↗</a></p>
+    <p><a href="https://github.com/anysearch-ai/anysearch-skill（GitHub" target="_blank">https://github.com/anysearch-ai/anysearch-skill（GitHub ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问官网注册（国内友好，无需绑信用卡，可免费使用），然后在你的 Agent（Codex/CC/Cursor等）中通过该 GitHub 仓库安装 Skill。它能将 Agent 的搜索查询路由到专业数据源，而非通用的 web search，从而避免多次搜索、结果混乱等问题。开发者可以免费接入任意 Agent 或 AI 工作流。铁锤人还用它做了一个"摸鱼盯盘"的 Skill，展示其灵活性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI Agent 最大的痛点之一就是搜索——通用搜索引擎返回结果质量参差不齐，严重影响 Agent 决策质量。AnySearch 通过专业数据源解决了这个瓶颈，且对国内开发者极其友好（无需翻墙注册）。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 Coding Agent 接入最新技术文档和 API 参考</li>
+    <li>构建金融/法律等垂直领域的专业 Agent</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2060970565763256800" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060969835031662592/img/XKLWhVslvPoO6JYV.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060969835031662592/img/XKLWhVslvPoO6JYV.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-read-helper：飞书 + AI 深度阅读工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把电子书导入飞书，边读边划线，让 AI 自动回复你的批注和疑问</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-read-helper" target="_blank">https://github.com/joeseesun/qiaomu-read-helper ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>前提安装飞书 CLI，然后一行命令安装：`npx skills add joeseesun/qiaomu-read-helper`。安装后用 Codex 或 Claude Code 把 Epub 电子书按章节写入飞书文档。人肉阅读时对有感触的地方划线、加粗、评论。再让 Codex 读取飞书文档中的标记和评论，AI 会针对你的批注逐一回复和解释。这种"AI 陪你读书"的体验比单纯问 ChatGPT 更沉浸。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>将"阅读"和"AI 对话"有机结合——不是让 AI 替你读，而是 AI 陪你读、回应你的思考。飞书作为载体使得批注和对话能持久保存，形成个人知识库。开源 Skill 意味着可以改造适配自己的阅读习惯。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>深度阅读技术书籍，AI 实时解答疑问</li>
+    <li>读书会场景——多人批注 + AI 辅助讨论</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2061128902266007802" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ read-frog：沉浸式翻译 + 单词学习系统</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于开源沉浸式翻译插件的单词学习工具，阅读英文网页时收藏生词，按艾宾浩斯曲线复习</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mengxi-ream/read-frog" target="_blank">https://github.com/mengxi-ream/read-frog ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>clone 仓库后在浏览器中加载插件。阅读英文网页时，遇到不认识的单词会被自动标记，可以手动收藏。系统根据单词难度（如 CET6+）在旁边加上中文翻译，并标记你的掌握情况。收藏的单词会变成闪卡，基于艾宾浩斯遗忘曲线安排复习。如果一篇文章里没有生词翻译标记出现，说明你的词汇量差不多了。开发者还在用 Codex 持续优化功能，等稳定后开源完整版。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>把"翻译"和"学习"打通了——不是一次性翻译完就忘，而是把每次阅读遇到的生词自动转化为学习材料。艾宾浩斯曲线复习让记忆效率最大化。比传统背单词 App 更自然，因为单词来自真实的阅读语境。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>日常阅读英文技术文档时积累专业词汇</li>
+    <li>备考英语考试（四六级/考研/雅思）的自然词汇积累</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2061126489048039724" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJqWQmsaUAAtsan?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJqWQmsaUAAtsan?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJqW1FdaEAAhJOk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJqW1FdaEAAhJOk?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole CLI v1.40.0：Mac 系统垃圾清理专家</div>
+  <div class="section"><div class="section-label event">一句话</div><p>专门清理 AI Agent（Claude Code/Codex 等）产生的多 GB 缓存垃圾，同时支持 QQ 音乐/腾讯视频等应用的缓存清理</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>通过 Homebrew 或 npm 安装 Mole CLI 后，运行 `mo clean` 即可自动回收 Claude Code 和同类 Agent 留下的 git worktree 磁盘空间（动辄几个 GB）。新增支持清理 Chrome DevTools MCP、Spacedrive、QQ 音乐、腾讯视频、CodeBuddy 的缓存，以及 OrbStack 存储可视化。`mo optimize` 可以优化 Docker 等资源占用。AI 开发者必备，因为 Agent 频繁创建和丢弃 git worktree 非常吃磁盘。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI Coding Agent 在后台默默吃掉了你几十 GB 的磁盘空间，大多数人根本不知道。Mole CLI 精准击中这个痛点，且持续扩展清理范围到国产常用软件。Tw93 是知名开源作者，代码质量和维护有保障。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>AI 开发者定期清理 Agent 产生的 git worktree 垃圾</li>
+    <li>Mac 用户一键清理多款应用的缓存释放空间</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2060881094254498025" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJm4bilakAAqHga?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJm4bilakAAqHga?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 锤子便签导出助手：抢救云端记忆</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把锤子手机云端便签一键导出为 Markdown 文件，保留原有分类结构</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/export-smartisan-notes/" target="_blank">https://appinn.com/export-smartisan-notes/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接下载工具，登录锤子便签账号后即可批量导出所有云端便签。导出格式为 Markdown，自动保留便签的分类和排序。对于曾经使用锤子手机、在锤子便签里存了大量笔记的用户来说，这是抢救数据的最后机会——锤子服务随时可能关停。工具小巧、操作简单，不需要任何技术背景。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>数字记忆的脆弱性——你永远不知道哪个云服务会突然消失。这个工具的价值不仅在于导出功能本身，更在于提醒我们：重要的数据应该掌握在自己手里，存成开放的 Markdown 格式而非被锁定在某个平台。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>前锤子手机用户批量迁移笔记到 Obsidian/Notion</li>
+    <li>老用户的数字遗产抢救</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2060986484740534338" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJoYSUcWEAMY_nI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJoYSUcWEAMY_nI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ xinghai-gacha：纯抽卡游戏——戒手游瘾的"反向疗法"</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个只有抽卡、没有游戏系统的网页游戏，让你体验抽卡快感而不沉迷</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://gordensun.github.io/xinghai-gacha/" target="_blank">https://gordensun.github.io/xinghai-gacha/ ↗</a></p>
+    <p><a href="https://github.com/GordenSun/xinghai-gacha" target="_blank">https://github.com/GordenSun/xinghai-gacha ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开网页即玩，没有任何注册或下载。核心机制只有抽卡——抽取二次元角色和图鉴。没有战斗、没有养成、没有任务、没有氪金系统，就是纯粹体验抽卡的随机刺激。作者用 Cursor 一句话 prompt 生成，代码完全开源，可以 fork 后换上自己喜欢的角色卡面。适合了解"抽卡机制为何让人上瘾"的行为心理学。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>用"反向设计"揭示了手游抽卡的核心成瘾机制——当你剥离了所有游戏性，只剩下抽卡本身，你会发现那种快感依然存在。这是一个行为心理学的绝佳实验品，同时展示了 Vibe Coding 的低门槛创造能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>理解抽卡成瘾机制的行为实验</li>
+    <li>学习 Vibe Coding 的入门示例项目</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2060890466338656568" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060890050108559360/img/1Qb94QTolTZT58vg.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060890050108559360/img/1Qb94QTolTZT58vg.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 登顶全球最高估值 AI 公司</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 完成 650 亿美元 H 轮融资，估值 9650 亿美元，首次超越 OpenAI（8520 亿美元）。同时发布 Opus 4.8 模型。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Anthropic 从"最不待见中国人的 AI 公司"到全球估值第一，只用了不到两年。这轮融资规模相当于一个小国的年度 GDP，背后是资本市场对 AI 安全路线和 Claude 系列模型的极度看好。同时发布 Opus 4.8 也说明融资不是终点——产品迭代速度才是护城河。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>OpenAI 和 Anthropic 的双寡头格局正式形成。中国市场参与者（智谱等）虽然在估值上追赶，但在全球影响力和模型能力上差距仍在扩大。对开发者来说，两家竞争意味着更快的模型迭代和更低的价格。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2060174069119832522" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJc1ZSDaQAAF8Rq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJc1ZSDaQAAF8Rq?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJc1ZdNbgAElAta?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJc1ZdNbgAElAta?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic CEO：编程将首先消失</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic CEO Dario Amodei 在播客中被问"是否还应该学编程"，回答"编程将首先消失"，并建议转向其他技能方向。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这话出自正在构建最强大 AI 编程工具的公司 CEO 之口，分量很重。他不是说编程能力不再重要，而是说"单纯的编程技能"会率先被 AI 替代——就像计算器替代了笔算，但数学思维依然重要。他建议的方向是产品设计、系统思维、跨领域整合等更高维度的能力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对全球数千万程序员的职业规划产生深远影响。短期内编程岗位不会消失，但从业者必须向"AI 管理者"转型——不是写代码，而是驾驭 AI 写代码。教育体系也面临重构压力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2061122550042951950" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061118435242000385/img/6L6sg4OMdY4Z6FEf.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061118435242000385/img/6L6sg4OMdY4Z6FEf.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 智谱估值追平小米，成全球市值最高开源 AI 公司</div>
+  <div class="section"><div class="section-label event">事件</div><p>智谱当前市值已等于小米，相当于两个多京东，因其模型全部开源，成为世界市值最高的开源软件公司。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>智谱用"开源"策略走出了与 OpenAI/Anthropic 不同的路——通过开源模型构建生态，吸引开发者和企业客户。其估值暴涨反映了市场对"中国版开源 AI 平台"的期待，但也引发了对估值泡沫的讨论。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开源的商业模式正在被验证——先通过开源占领心智和基础设施位置，再通过企业服务和云平台变现。这对国内 AI 创业公司的路径选择有示范效应。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ruanyf/status/2061009832963154240" target="_blank"><span class="handle">@ruanyf</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2061238389869797391" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2061120486038450317" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2060865571244183797" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2060902037081165996" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2060862059731120572" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/cn__csquare/status/2060971081104859606" target="_blank"><span class="handle">@cn__csquare</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2060880354949611982" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2061063716016472360" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yuyy614893671/status/2060830199248552233" target="_blank"><span class="handle">@yuyy614893671</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2060902645150241183" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJqRnMhaIAA8nBt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJqRnMhaIAA8nBt?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJqRooXa8AEWkLc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJqRooXa8AEWkLc?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060687456287281152/img/lgXmiVlm2v-3glw8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060687456287281152/img/lgXmiVlm2v-3glw8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2049505675072663552/img/oLbdZ4thjF_R1aXh.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2049505675072663552/img/oLbdZ4thjF_R1aXh.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060901539754262528/img/jL0m58n7dEHdd_Cv.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060901539754262528/img/jL0m58n7dEHdd_Cv.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJmnHhra4AAQA1M?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJmnHhra4AAQA1M?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJm3wAua8AAivja?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJm3wAua8AAivja?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJpeg9WbEAA-g7R?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJpeg9WbEAA-g7R?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJmKJLzaQAAP11R?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJmKJLzaQAAP11R?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>NotchLive（Mac 本地实时字幕/翻译工具）：面向多国团队会议，自动将语音转为多语言字幕 <a href="https://x.com/appinn/status/2061238389869797391" target="_blank">→</a></li>
+    <li>即览（iOS Markdown/HTML 阅读 APP）：歸藏开发的 iOS 阅读器，即将上架限免，iPhone/iPad 都支持 <a href="https://x.com/op7418/status/2061120486038450317" target="_blank">→</a></li>
+    <li>Sandcastle（多 Agent 编排框架）：用 TypeScript 脚本编排 Codex/CC/Cursor/Copilot 等多个 Agent 协同工作，可在 VM 中运行 <a href="https://x.com/dotey/status/2060865571244183797" target="_blank">→</a></li>
+    <li>音乐 MTV 自动生成 Skill：输入 Suno 歌曲 URL，Codex 自动调用生图、组织画面、生成对齐字幕的 MTV，完工后开源 <a href="https://x.com/vista8/status/2060902037081165996" target="_blank">→</a></li>
+    <li>CC Switch 已支持在 Codex 中使用：Claude Code 的 Switch 功能现在可以在 OpenAI Codex 中直接调用 <a href="https://x.com/berryxia/status/2060862059731120572" target="_blank">→</a></li>
+    <li>Yansu（Rewind 替代品）：本地屏幕录制 + AI 搜索，存的 sqlite 数据库可让 AI 直接检索所见内容 <a href="https://x.com/cn__csquare/status/2060971081104859606" target="_blank">→</a></li>
+    <li>ArthaNethra（PDF 转金融知识图谱）：从 PDF 自动提取结构化知识，支持查询/溯源/风险检测，LandingAI 黑客松项目 <a href="https://x.com/shao__meng/status/2060880354949611982" target="_blank">→</a></li>
+    <li>个人生活自动化 Agent 工具栈：Codex + Google 全家桶 + WhatsApp + 电报 + Notion + AGENTS.md 实现邮件介绍/联系人管理等全自动工作流 <a href="https://x.com/shao__meng/status/2061063716016472360" target="_blank">→</a></li>
+    <li>北大苏炜杰加入 OpenAI：宾大沃顿正教授、机器学习研究中心联合主任正式加盟 <a href="https://x.com/yuyy614893671/status/2060830199248552233" target="_blank">→</a></li>
+    <li>免费 AI 推理生态（Groq 等）：海外已形成完整免费推理生态，Groq 每分钟 30 次免费请求，无需信用卡 <a href="https://x.com/seclink/status/2060902645150241183" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
