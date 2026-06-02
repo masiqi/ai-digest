@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-02</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-02</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>开源模型密集轰炸——NVIDIA Cosmos 3物理世界模型、快手KwaiKeye VL 2.0多模态、MiniMax M3三连发，外加StemDeck这种让人眼前一亮的音频工具，今天全是能动手玩的。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ StemDeck —— 开源音乐分轨神器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>扔一首YouTube歌进去，直接拆成6条独立音轨（人声、鼓、贝斯、吉他、钢琴、其他），本地运行不上传不花钱。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Clone GitHub仓库后本地安装依赖，启动后会得到一个接近DAW的界面。把YouTube链接贴进去，模型自动下载音频并跑Demucs分离。分离完每条音轨可独立播放、静音、调音量，甚至导出分轨文件。全程本地跑，不需要注册账号，歌曲不会上传到任何服务器。适合做remix、扒谱、提取伴奏。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>以前音乐分轨需要付费软件（如iZotope RX）或上传到云端处理，StemDeck把Meta开源的Demucs模型包装成了开箱即用的桌面工具，还带类DAW交互界面，对音乐爱好者和内容创作者来说是降维打击。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>提取歌曲伴奏用于翻唱或视频BGM</li>
+    <li>扒谱学习——单独听吉他/贝斯/钢琴轨</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/XAMTO_AI/status/2061030928986878151" target="_blank"><span class="handle">@XAMTO_AI</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJj5BFoaUAA-i5n?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJj5BFoaUAA-i5n?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ NVIDIA Cosmos 3 —— 物理世界AI模型开源</div>
+  <div class="section"><div class="section-label event">一句话</div><p>英伟达开源适用于物理世界的AI模型，统一物理推理、视频生成、动作生成，实现「理解→预测→行动」闭环。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/nvidia/Cosmos3-Super" target="_blank">https://huggingface.co/nvidia/Cosmos3-Super ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>HuggingFace直接下载8B或32B模型权重，支持三种模式：文本→图像、视频→视频、动作+视频→视频。同时开源了6个数据集用于微调。可以在配有足够显存的GPU上本地推理，也支持HuggingFace Inference API在线试用。模型能理解物理规律——比如预测物体碰撞后的运动轨迹、根据文本描述生成物理上合理的视频。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是目前少数将「世界模型」概念落地的开源项目。Cosmos 3不只是生成视频，而是试图理解物理规律。对机器人、自动驾驶、仿真训练等领域有直接价值，8B版本降低了使用门槛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>机器人仿真训练——生成带物理约束的虚拟环境</li>
+    <li>视频预测——根据当前帧预测后续运动轨迹</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2061396998855745646" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJuNo6yaUAAPhd8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJuNo6yaUAAPhd8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MiniMax M3 —— 1M上下文+原生多模态</div>
+  <div class="section"><div class="section-label event">一句话</div><p>MiniMax发布大版本升级M3，标配100万token超长上下文、MSA稀疏注意力架构、原生多模态。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://platform.minimax.io（API试用）" target="_blank">https://platform.minimax.io（API试用） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问MiniMax平台注册获取API Key，通过Chat接口或Playground直接体验1M上下文——可以塞进整本小说、完整代码库或超长对话历史。原生多模态支持图片、视频、桌面操作输入。有博主实测用一张游戏截图+文字需求做了一个「飞剑对决手势控制双人游戏」，M3从理解视觉风格到拆解workflow到生成代码全程没翻车。每天有免费额度可试用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>1M上下文+原生多模态+Agentic能力三合一，在国产模型中是首个。MSA稀疏注意力架构让超长上下文不拖慢推理，体感与GPT-5.5在部分agent任务上可打。配合Claude Code workflow使用效果尤其好。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>超长文档/代码库的全文理解和分析</li>
+    <li>多模态Agent——截图→理解→执行→编码的自动化流水线</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2061327301644861608" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJtNlTBaoAAYFaz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJtNlTBaoAAYFaz?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJsWydIbIAAFAZL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJsWydIbIAAFAZL?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ KwaiKeye VL 2.0-30B-A3B —— 快手开源多模态小钢炮</div>
+  <div class="section"><div class="section-label event">一句话</div><p>总参数30B、激活仅3B的视觉语言模型，Apache 2.0完全开源，用DeepSeek Sparse Attention实现256K上下文。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/KwaiKeye（HuggingFace搜索KwaiKeye）" target="_blank">https://huggingface.co/KwaiKeye（HuggingFace搜索KwaiKeye） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>HuggingFace直接下载模型，3B激活参数意味着消费级显卡（RTX 3060/4060的8GB显存即可）就能跑。支持图片、视频输入，视频理解尤其亮眼——喂的帧数越多准确率反而稳步上升。可以用transformers库加载，几行Python代码就能做图文问答、视频摘要。Apache 2.0协议，商用无忧。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>3B激活参数的MoE架构，在极小显存占用下实现了接近更大模型的多模态理解能力。视频理解随帧数增加不降反升这一点非常反直觉，说明其注意力机制设计有独到之处。快手-Kwai体系的开源诚意越来越足。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>视频内容自动摘要和标签提取</li>
+    <li>边缘设备上的多模态理解（手机、IoT）</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2061384182362984530" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJuB3q8aoAEfvMP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJuB3q8aoAEfvMP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJttuLKXsAAICrq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJttuLKXsAAICrq?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Gemini Omni 数字人 —— 三步克隆你自己</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google Gemini Omni上线数字头像功能，外貌+声音双重克隆，三步创建你的数字分身。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开Gemini应用，找到Digital Avatar入口。第一步：对着摄像头拍一段短视频或上传几张照片，Gemini会重建你的面部3D模型。第二步：朗读一段指定文本，克隆你的声音特征。第三步：生成！你的数字分身可以替代你参加视频会议、录制课程、做多语言口播（声音克隆后会保留你的语气特征）。目前功能已全面上线，免费用户也有基础额度。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Google把数字人制作的门槛压到了「三步+手机」这个级别。相比HeyGen等付费工具，Gemini Omni免费可用且深度集成在Gemini生态里。这可能是数字人走向大众化的转折点。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>多语言视频口播——用你的脸+声音讲外语</li>
+    <li>异步视频会议——让数字分身替你参加</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2061488617558831499" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CodePilot 0.55.0 —— Codex当引擎的开源客户端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>CodePilot重构版发布，UI全面升级，支持将Codex作为Agent引擎，可自定义模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com（搜" target="_blank">https://github.com（搜 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载预览版客户端（0.55.0-preview.5），配置Codex API Key或自定义模型Endpoint。UI整体重构后操作更流畅，支持多模型切换。可以把Codex当后端Agent引擎，也可以接入自己的模型。目前是测试版本未正式推送，可能有bug，适合尝鲜。特别适合不想用命令行的AI编程用户。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Codex的Agent能力公认很强，但终端操作有门槛。CodePilot提供了类Cursor的GUI体验，同时保留了Codex的强大Agent引擎。UI重构后交互更友好，填补了「GUI + Codex Agent」的生态位。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>不习惯命令行的开发者用GUI操作Codex Agent</li>
+    <li>在自有模型和Codex之间灵活切换</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2061426771267125649" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJuoKn9bYAI5R0-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJuoKn9bYAI5R0-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 蚂蚁百灵 —— 每日50万token免费薅</div>
+  <div class="section"><div class="section-label event">一句话</div><p>蚂蚁集团百灵大模型开放试用，每天免费50万token，单次支持5万token上下文。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://chat.ant-ling.com/open" target="_blank">https://chat.ant-ling.com/open ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开网页版，注册登录即可用。每天自动赠送50万token额度，每次对话最多消耗5万token，相当于每天能免费用10次长对话。支持文本对话、代码生成、文档分析等基础能力。蚂蚁自研模型，中文理解自然不错。适合作为日常AI助手的备用/补充方案，或批量处理中文文档。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>日送50万token在免费试用中算很大方，对比很多平台只给几万token。蚂蚁在金融、政务领域有大量真实场景数据，模型在专业领域的中文理解可能优于通用模型。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>中文长文档的批量摘要和分析</li>
+    <li>日常编码问答和辅助（免费额度够用）</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2061587007004868912" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061586909692911616/img/G4aieS7F1D5MEhOS.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061586909692911616/img/G4aieS7F1D5MEhOS.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic秘密提交IPO申请</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic已向SEC秘密提交S-1注册声明草案，IPO进入实质性阶段，预计审查通过后公开招股书。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>OpenAI刚宣布放弃IPO转向「长期社会企业」架构不到一周，Anthropic反手就提交了上市文件。两家顶级AI实验室在资本路径上走向了完全相反的方向——一个退回非营利安全港，一个冲刺公开市场。这背后反映的是对AI商业化节奏和治理模式的根本分歧：OpenAI认为上市会迫使其追求短期利润而牺牲安全，Anthropic则认为公开市场的透明度和资本支持反而有利于负责任的AI发展。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果Anthropic成功上市，将成为首个登陆公开市场的顶级AI实验室，为整个行业的估值和融资建立标杆。同时也会让更多AI初创公司看到IPO的可能性，可能引发一波AI上市潮。但散户投资者需要面对AI公司「高投入、长回报周期」的现实。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2061483642019623354" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJvccHJaAAArfV3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJvccHJaAAArfV3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 NVIDIA RTX Spark + 微软AI PC：本地跑120B模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA发布RTX Spark超级芯片，1 PFLOPS算力+128GB统一内存，与微软深度合作为Windows构建原生Agent运行环境，秋季上市。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是NVIDIA从云端AI算力向个人端侧AI计算的战略延伸。RTX Spark不只是给笔记本加一块GPU，而是在ARM架构上集成RTX 5070级GPU和最高128GB统一内存，目标是在本地跑120B参数的大模型。与微软的合作意味着Windows将内置Agent运行时——你的PC自己就是一个AI Agent主机。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>本地AI推理的「去云端化」趋势加速。如果消费级AI PC能跑120B模型，很多现在依赖API调用的场景（代码Agent、个人助理、隐私敏感任务）都可以本地完成。对OpenAI/Anthropic的API收入模式是潜在威胁，对苹果的Apple Intelligence也是竞争压力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2061392672997425300" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJuJqv8b0AAAKwA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJuJqv8b0AAAKwA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 硅谷新宠：AI FDE（前沿部署工程师）</div>
+  <div class="section"><div class="section-label event">事件</div><p>Andrew Ng撰文指出AI FDE正成为硅谷最热门的新职位——驻场到客户组织内部，帮助定制和落地Agent工作流。OpenAI和Anthropic已开始组建FDE团队。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这很像Palantir当年的FDE模式复活——不再是卖API让客户自己摸索，而是派工程师驻场深度集成。区别在于，Palantir的FDE做数据集成，AI FDE做Agent工作流定制。但吴恩达同时指出，长期来看企业内部AI Engineer的规模会远超厂商派驻的FDE，最有价值的是能搭应用的通才型AI工程师。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>FDE的兴起说明企业级AI落地远比「调用API」复杂，需要深度理解客户业务逻辑才能把Agent用起来。这会催生一个新的服务生态——AI咨询+系统集成，但人力成本极高，只有大客户能承受。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AndrewYNg/status/2061477558693384395" target="_blank"><span class="handle">@AndrewYNg</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2061414052916547705" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/antigravity/status/2061519617550340492" target="_blank"><span class="handle">@antigravity</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2061448563020759347" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2061347868401651871" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2061385888345600502" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2061405018893459791" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJvWmCHagAAnTxQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJvWmCHagAAnTxQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061413224613076993/img/-swsfPmiKJeJaXD8.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061413224613076993/img/-swsfPmiKJeJaXD8.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061519331129700352/img/YJ1aBaawhqBkro9r.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061519331129700352/img/YJ1aBaawhqBkro9r.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJuDf1vaQAARV11?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJuDf1vaQAARV11?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJuDiOrbAAA2YsP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJuDiOrbAAA2YsP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJuDh1Hb0AAaKwg?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJuDh1Hb0AAaKwg?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJuUngqbsAAEXDi?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJuUngqbsAAEXDi?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2060969835031662592/img/XKLWhVslvPoO6JYV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2060969835031662592/img/XKLWhVslvPoO6JYV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Agentic OS手机演示：OpenAI Hack Night上团队展示「即时生成UI」的AI手机系统，不调用任何APP <a href="https://x.com/xiaohu/status/2061414052916547705" target="_blank">→</a></li>
+    <li>Google Antigravity科学工作台：集成Alpha模型+30个科学数据库，蛋白质分析几分钟完成 <a href="https://x.com/antigravity/status/2061519617550340492" target="_blank">→</a></li>
+    <li>HuggingFace AI Agent词汇表：Agent领域术语速查手册，适合新人入门 <a href="https://huggingface.co/blog/agent-glossary" target="_blank">→</a></li>
+    <li>rbtodo：国人开发的轻量级Electron桌面待办应用，公测版v1.0.1 <a href="https://x.com/appinn/status/2061448563020759347" target="_blank">→</a></li>
+    <li>CharacterArc弧光：AI小说创作桌面应用，开发者自荐 <a href="https://x.com/appinn/status/2061347868401651871" target="_blank">→</a></li>
+    <li>Agent Skills已达160万：开源Agent Skill数量井喷，泥沙俱下 <a href="https://x.com/CoderJeffLee/status/2061385888345600502" target="_blank">→</a></li>
+    <li>铁锤人推荐AI编程6件套：豆包输入法/Paste/CleanShot/Obsidian Web等 <a href="https://x.com/lxfater/status/2061405018893459791" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
