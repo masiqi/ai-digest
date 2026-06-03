@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-03</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-03</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>OpenAI Codex 连发大招（Python SDK + 一句话建站），GitHub Copilot 转向 Token 计费引发开发者震动，微软同步禁止员工用 Claude Code。工具箱生态进入「编程Agent可编程化」新阶段。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenAI Codex Python SDK</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用 pip 一行安装，就能在 Python 代码里操控 Codex Agent——启动线程、流式进度、传图片、控制沙箱权限。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在终端执行 `pip install openai-codex` 安装，然后在 Python 脚本中导入 `from openai_codex import CodexClient`。创建 client 实例后可以 launch 一个新 turn，实时 stream 返回的 progress token，随时 resume 之前的 session，还能传入图片让 Codex 分析。最关键的是可以复用你已有的 Codex 登录态，不需要额外配置 API key。这意味着你可以在自己的自动化流程、数据分析 pipeline、甚至 CI/CD 中嵌入顶级编程 Agent。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是 Coding Agent 从「命令行对话工具」到「可编程基础设施」的质变。之前你只能手动在终端跟 Codex 交互，现在它可以作为你代码的一个函数调用。结合 sandbox 权限精细控制，可以做很多之前不敢让 Agent 做的事——比如批量处理多个 repo、自动化 code review、定时跑测试修复。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在自己的 Python 后端里嵌入 Codex，实现自动修 bug 的 CI 流水线</li>
+    <li>批量处理多个项目仓库的代码重构，每个 turn 独立沙箱不互相污染</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2061858463941296637" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJwpQ9oWoAAELys?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJwpQ9oWoAAELys?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Codex @site 一句话建站</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenAI Codex 企业版新增 `@site` 命令，一句话描述就能生成完整网站，还能生成可分享链接让别人查看。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>确保已安装最新版 Codex CLI 并有企业版订阅。在 Codex 对话中输入 `@site 做一个{你的描述}`，例如「做一个极简风格的开发者个人主页，深色模式，包含项目展示和时间线」。Codex 会自动完成设计+前端代码+部署，生成一个可公开访问的 URL。你把这个链接分享给别人就能直接查看成品网站。比 Anthropic 的 Design 更进一步——包设计还包网站生成部署一条龙。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这标志着 AI 编程工具从「帮你写代码」进化到「帮你交付产品」。Anthropic 的 Claude 还在帮你画设计稿，OpenAI 已经把设计→代码→部署全链路打通。对非技术人员的价值尤其大，产品经理/设计师现在也能自己出可用的网站原型了。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>产品经理快速出产品 Landing Page 验证想法</li>
+    <li>开发者做 Side Project 展示页，省掉 Vercel/Netlify 部署环节</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2061875079630496169" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ0vagObIAAhvL7.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HJ0vagObIAAhvL7.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MLX-VLM v0.6.0：把 Mac 变成本地 Agent 机器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Apple Silicon 上的本地模型推理框架大更新，加入推测性解码，支持 Gemma 4、Qwen MTP、DeepSeek V4 MTP，token 生成速度大幅提升。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ml-explore/mlx-vlm" target="_blank">https://github.com/ml-explore/mlx-vlm ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Mac 上 `pip install mlx-vlm` 安装最新版。v0.6.0 新增了 speculative decoding 支持——对 Gemma 4 用 EAGLE3 + DFlash、Qwen 用 MTP、DeepSeek V4 用 MTP 加速。实测 token 生成速度提升明显，等待时间大幅缩短。支持从桌面到移动端（iPhone/iPad），可以把 Mac 变成真正的本地 Agent 运行时，所有推理都在本地完成，数据不出设备。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>本地推理的「最后一公里」正在被打通。之前本地跑大模型最大的痛点是慢，v0.6.0 的推测性解码直接解决了这个问题。而且 MLX 是 Apple 官方支持的框架，对 Apple Silicon 的优化深度是其他框架无法比的。这意味着一台 M4 MacBook Pro 就能跑出不逊于云端 API 的推理体验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac 上搭建完全离线的 Coding Agent，代码不出本地</li>
+    <li>用 iPhone 跑本地 Agent，通勤路上继续干活</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Prince_Canuma/status/2061541992790683726" target="_blank"><span class="handle">@Prince_Canuma</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061538785964236802/img/wClUrAc8XFDFBF8l.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061538785964236802/img/wClUrAc8XFDFBF8l.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ NVIDIA Skill 安全扫描工具（开源）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>英伟达开源了针对 AI Agent Skill 的安全扫描工具，能检测恶意代码注入、后门等安全风险。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://t.co/0RaJlQTZHo（英伟达" target="_blank">https://t.co/0RaJlQTZHo（英伟达 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后在 Agent 的 skills 目录下运行扫描。工具会检查 skill 文件中是否包含可疑的命令注入、文件操作、网络请求等危险模式。特别针对 Claude Code settings.json 注入、VS Code tasks.json 注入、MCP 配置篡改等已知攻击向量有专项检测。建议所有重度使用 Agent Skill 的开发者都跑一遍——尤其是用过第三方 Skill 或从网上下载过 Skill 模板的。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Skill 安全是当前 AI Agent 生态最大的盲区。大家都在疯狂写 Skill、分享 Skill，但几乎没人做安全审计。恶意 Skill 可以在你的 Claude Code settings.json 里注入 SessionStart hook，在你每次启动时执行任意代码。英伟达此举填补了一个关键空白，也暗示物理 AI Agent 领域的供应链安全将是下一个焦点。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对自己写的 Agent Skill 做上线前安全扫描</li>
+    <li>对从社区下载的第三方 Skill 做安全检查后再使用</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2061848042249322499" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ0m1KOWsAAaeUn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ0m1KOWsAAaeUn?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ TripoSplat：2D 图片一键转 3D 模型（开源）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Tripo 开源了 TripoSplat，把 2D 图片变成 3D 高斯泼溅模型，在线可试，GitHub 可下。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/VAST-AI-Research/TripoSplat" target="_blank">https://github.com/VAST-AI-Research/TripoSplat ↗</a></p>
+    <p><a href="https://huggingface.co/spaces/VAST-AI/TripoSplat" target="_blank">https://huggingface.co/spaces/VAST-AI/TripoSplat ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>有两种方式。方式一：直接打开 HuggingFace Space 链接，上传一张物体图片（推荐简单物体如杯子、椅子、玩具），点击生成，几秒后就能得到一个可旋转查看的 3D 高斯泼溅模型。方式二：克隆 GitHub 仓库，按 README 配置环境，在本地运行推理。目前对简单物体效果不错，人物面部会有模糊，适合做快速 3D 原型和资产预览。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>3D 高斯泼溅是 2024-2026 年最热的 3D 重建技术，比 NeRF 更快、渲染更实时。Tripo 把这个能力开源并做成在线 Demo，把「2D→3D」的门槛降到了拖拽上传的程度。而且 Tripo 背靠 VAST，是 3D AIGC 赛道头部玩家，开源质量有保障。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>电商商品快速生成 3D 展示模型</li>
+    <li>游戏开发中快速生成 3D 资产原型</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2061663028891066381" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061662933927796736/img/nCeyXDzLRpQqDJDu.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061662933927796736/img/nCeyXDzLRpQqDJDu.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 字节 Bernini：开源视频生成+编辑统一模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>字节跳动开源 Bernini，一个模型同时支持文生视频、图生视频、视频编辑，输入文本/图片/视频都能出视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/ByteDance/Bernini-R" target="_blank">https://huggingface.co/ByteDance/Bernini-R ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 HuggingFace 模型页面，可以在线试用或下载模型权重本地部署。支持三种输入模式：纯文本 prompt 生成视频、上传图片+文本描述生成/编辑视频、上传视频+文本指令编辑视频。虽然生成画面质量一般（类似小 Seedance），但「一个模型做所有事」的统一架构思路值得关注。本地部署需要一定 GPU 显存，建议在 HuggingFace Space 上直接体验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>目前的视频生成工具通常「生成」和「编辑」是两套模型/两套流程。Bernini 用一个模型统一了这两件事，架构上更优雅，也意味着「先用文字生成初版 → 再用指令精细编辑」的迭代工作流可以跑在同一个模型里，不需要切换工具。字节在视频 AI 上的投入和开源诚意都值得肯定。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速生成短视频素材后用文字指令微调细节</li>
+    <li>给已有视频添加/修改元素（比如给风景视频加一只飞鸟）</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2061755093960298874" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061754994303582209/img/3msFiVvDU_ZXkf1r.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061754994303582209/img/3msFiVvDU_ZXkf1r.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DualPiP：给任意网页视频加实时字幕（Chrome 扩展）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 Chrome 扩展，给任何网页上的视频（直播/网课/无字幕视频）实时叠加 AI 字幕。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Chrome 浏览器中安装 DualPiP 扩展。打开任意带有视频的网页（B站、YouTube、直播平台、在线课程网站），扩展会自动检测视频并弹出字幕叠加层。支持实时语音识别转字幕，对没有字幕的直播和网课特别实用。v1.7 版本改进了识别精度和延迟，字幕几乎跟语音同步。完全本地处理，不上传音频。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是「小而美」工具的典范——解决了一个非常具体的痛点。很多人看英文直播/网课时因为语速快或口音问题跟不上，这个工具直接给所有网页视频加了一层实时字幕。开源意味着不会被商业公司收购后关停，用户可以自己维护。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>看 YouTube 英文技术演讲时开实时英文字幕辅助理解</li>
+    <li>参加没有字幕的 Zoom 网课/Webinar 时获取实时字幕</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2061697741655326744" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GitHub Copilot 转向 Token 计费，微软禁 Claude Code</div>
+  <div class="section"><div class="section-label event">事件</div><p>GitHub Copilot 从按请求计费改为按 Token 计费，用户反馈成本暴增 10-50 倍；同时微软内部禁止员工使用 Claude Code，原因是 AI 成本已超过人工成本。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Copilot 之前按请求计费存在「套利漏洞」——用户用其他 Agent 制定计划，然后用 Copilot 一次性执行，一个请求背后消耗几千万 token。转向 Token 计费堵住了这个漏洞，但也让重度用户叫苦不迭。微软禁 Claude Code 的举动释放了一个信号：大厂内部的 AI 工具成本已经到了「不可持续」的程度，就算效果更好的 Claude Code 也要被砍。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Token 计费将成为行业标准，Coding Agent 的「成本控制」上升为核心竞争力。能提供高质量但低 Token 消耗的方案（如本地推理、fork 复用上下文）会更有优势。对个人开发者来说，Copilot 不再是「无脑开」的便宜选择了。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2061846771719102745" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 启动 IPO，MiniMax 和智谱申请 A 股/科创板</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 开始准备 IPO，同时中国 AI 公司 MiniMax 和智谱也提交了上市申请，开始上市辅导。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>大洋两岸的 AI 公司几乎同时冲向资本市场。Anthropic IPO 将进一步验证「AI 模型公司能否独立盈利」，而 MiniMax 和智谱冲击 A 股/科创板则说明中国 AI 公司在经历技术突破后，现在到了向资本市场证明商业价值的阶段。值得注意的是 Anthropic 的 Claude Opus 4.7/4.8 近期表现不佳，IPO 前这段产品停滞期是否会影响估值值得关注。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 行业进入「上市潮」，标志着从技术探索期进入商业化验证期。对开发者而言，模型公司的上市意味着产品节奏可能从「快速迭代抢用户」转向「稳定盈利保股价」，模型更新速度可能放缓。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2061645513964003631" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJxvfaRaEAAzj78?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJxvfaRaEAAzj78?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Codex 周活用户突破 500 万，增长 6 倍</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 官方数据，Codex 每周活跃用户已超 500 万，比 2 月桌面 App 刚上线时增长了 6 倍多。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是单纯的用户增长数字，关键是「这些人在用 Codex 干什么」——从推文配图来看，Codex 正在从「程序员写代码的工具」变成「所有人的 AI 工作台」。非技术用户用 @site 建站、用生图、用 Skill 做设计，这些场景的增长可能远超纯编程场景。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>500 万周活意味着 Coding Agent 已经进入主流。它的竞争对手不再是 VS Code 插件，而是整个 SaaS 生态——当用户可以一句话建站，Wix/Squarespace 的价值就被削弱了。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2061852762544169168" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ0sHRfaYAEQm_y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ0sHRfaYAEQm_y?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ0aLlObkAAmx2z?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ0aLlObkAAmx2z?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Apple WWDC26 定档 6 月 9 日</div>
+  <div class="section"><div class="section-label event">事件</div><p>苹果宣布 WWDC26 将于北京时间 6 月 9 日凌晨 1 点举行，发布了新视觉设计和官方壁纸。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>WWDC26 是苹果在 AI 时代的第三次开发者大会。在 Vision Pro 销售不及预期、Apple Intelligence 仍在追赶的背景下，今年的重点是「AI 如何深度融入苹果生态」。预计会有 Siri 大升级、Xcode AI 增强、以及更多 on-device AI 能力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>苹果的 AI 策略对开发者生态有决定性影响——如果 Xcode 大幅增强 AI 能力（类似 Cursor），iOS/macOS 开发的工作流将发生根本性变化。同时 on-device AI 的推进意味着更强大的本地 Agent 运行环境。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2061644847325610329" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2061967776831639677" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2061786565714788447" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2061695930349293654" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2061966193368646088" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2061963482518733298" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2061659824954147201" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2061698885534310863" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2061807952911356298" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2061689883882569777" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/DKThomp/status/2061110056293106118" target="_blank"><span class="handle">@DKThomp</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/akazwz_/status/2061684297120292934" target="_blank"><span class="handle">@akazwz_</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/evilcos/status/2061456654840053863" target="_blank"><span class="handle">@evilcos</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJxvB3qbQAAp2HO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJxvB3qbQAAp2HO?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061468718639849472/img/QpYhlrRG1gyLWlGj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061468718639849472/img/QpYhlrRG1gyLWlGj?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ2UAOjbEAASfNz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ2UAOjbEAASfNz?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJzvVjdbUAAZkFQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJzvVjdbUAAZkFQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJzvVjaawAAyqTs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJzvVjaawAAyqTs?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJydSEFXEAA82Xn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJydSEFXEAA82Xn?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJydd6pW4AAGdwt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJydd6pW4AAGdwt?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061843952534495232/img/044d3bc_cvk2D5Lm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061843952534495232/img/044d3bc_cvk2D5Lm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJx779nWsAA_WAd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJx779nWsAA_WAd?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ0CXdSbUAE9ExD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ0CXdSbUAE9ExD?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJn786qWoAYfWfT?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJn786qWoAYfWfT?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJySNCNbgAA6WFX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJySNCNbgAA6WFX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>OpenClaw 接入 Windows 生态：微软用 MXC 安全容器让 OpenClaw 在 Windows 原生运行，还提供 companion app <a href="https://x.com/xiaohu/status/2061967776831639677" target="_blank">→</a></li>
+    <li>Paseo 跨设备终端：iPhone/Android/Mac 实时同步同一个智能体会话，支持 Claude Code + Gemini + 国产 Agent <a href="https://x.com/fankaishuoai/status/2061786565714788447" target="_blank">→</a></li>
+    <li>baoyu-image-gen Skill 支持 Codex：Claude Code/Hermes Agent 里能直接调用 Codex 出图了 <a href="https://x.com/dotey/status/2061695930349293654" target="_blank">→</a></li>
+    <li>Claude Code /fork 命令：带上下文的 subagent，复用主 session context，近免费缓存 <a href="https://x.com/MinLiBuilds/status/2061966193368646088" target="_blank">→</a></li>
+    <li>BigSet：B2B SaaS 产品智能比价，输入需求自动整理产品清单、免费方案和定价 <a href="https://x.com/shao__meng/status/2061963482518733298" target="_blank">→</a></li>
+    <li>美团「觅游」AI 社区：Agent 可以注册、测 MBTI 人格、分享 Skill，花叔的 CC 测出 ESTJ <a href="https://x.com/AlchainHust/status/2061659824954147201" target="_blank">→</a></li>
+    <li>飞书 CLI 教程：用 AI Agent 在飞书里干活的官方教程 <a href="https://x.com/seclink/status/2061698885534310863" target="_blank">→</a></li>
+    <li>Bloome Agent 模拟炒股大赛：派你的 Agent 去炒股赚 Token 费 <a href="https://x.com/berryxia/status/2061807952911356298" target="_blank">→</a></li>
+    <li>NVIDIA Isaac Sim 开源：机器人仿真平台，入门机器人的最佳学习资料 <a href="https://x.com/seclink/status/2061689883882569777" target="_blank">→</a></li>
+    <li>医学奇迹月：GLP-1 三重激动剂、胰腺癌新药、PCSK9 基因编辑降胆固醇（Karpathy 转帖） <a href="https://x.com/DKThomp/status/2061110056293106118" target="_blank">→</a></li>
+    <li>Codex Free/Go 计划改为月用量刷新：不再是每周重置 <a href="https://x.com/akazwz_/status/2061684297120292934" target="_blank">→</a></li>
+    <li>Clop 恶意代码藏匿位置提醒：settings.json hook、VS Code tasks.json 注入 <a href="https://x.com/evilcos/status/2061456654840053863" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

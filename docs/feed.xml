@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 02 Jun 2026 00:46:16 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 00:41:57 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/03 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-03.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-03.html</guid>
+      <description>OpenAI Codex 连发大招（Python SDK + 一句话建站），GitHub Copilot 转向 Token 计费引发开发者震动，微软同步禁止员工用 Claude Code。工具箱生态进入「编程Agent可编程化」新阶段。</description>
+      <pubDate>2026-06-03T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/02 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-02.html</link>
