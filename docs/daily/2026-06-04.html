@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-04</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-04</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Google 发布 Gemma 4 12B 开源多模态模型，16GB 笔记本就能跑全模态 AI，同时推出 AI Edge Gallery 桌面应用打通端侧 Agent 工作流。Codex 则发布角色插件体系，正式从编程工具走向「通用智能体」。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Gemma 4 12B 开源多模态模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 发布的无编码器架构开源多模态模型，文字/图像/音频/视频四路输入直通同一个 Transformer，16GB 内存笔记本即可本地运行。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/collections/google/gemma-4" target="_blank">https://huggingface.co/collections/google/gemma-4 ↗</a></p>
+    <p><a href="https://developers.google.com/edge/gallery" target="_blank">https://developers.google.com/edge/gallery ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 HuggingFace 下载模型权重（GGUF 格式），用 llama.cpp 或 Ollama 本地加载。或者直接下载 Google AI Edge Gallery 桌面应用（macOS 版已上线），应用内置沙盒 Python 环境，聊天中能写代码执行并画图；Eloquent 子应用支持语音交互，对着电脑说话即可完成文本编辑。底层用 LiteRT-LM 将 Gemma 4 推理压缩到消费级硬件可承载的范围。Mac 用户推荐直接使用 MLX 框架版本，推理速度通常比通用版本快 10-20%。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是首个将「无编码器统一多模态架构」做到 12B 规模且能在消费级 GPU/内存上跑的模型。去掉了传统的图像/音频编码器，四模态直接进 Transformer，架构极其简洁。对端侧 AI 生态是里程碑式事件，意味着打开笔记本就能做全模态 Agent 工作流，不需要联网或付费 API。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地全模态 Agent：语音输入 → 模型处理 → 生成代码 → 执行画图，全程离线</li>
+    <li>低资源设备上的多模态理解：照片分析、音频转录、视频摘要，16GB 笔记本搞定</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2062329020273000882" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062327577185046529/img/qk55Jpv6cMySvnKM.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062327577185046529/img/qk55Jpv6cMySvnKM.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenSquilla — AI Agent 路由框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>国内团队用 Python 重写的 AI Agent 编排框架，解决模型不听话、费 Token、安全风险三大痛点，100 次对话省 100 万 Token。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/opensquilla/opensquilla" target="_blank">https://github.com/opensquilla/opensquilla ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后 pip install，启动后浏览器打开 http://127.0.0.1:18791/control/ 进入控制面板。支持 OpenRouter、OpenAI、Anthropic、DeepSeek 等 20+ 提供商，推荐用 OpenRouter 一个 key 调多模型。核心功能：智能模型路由（简单任务切便宜模型）、安全沙箱（不可信指令直接拒绝、高风险工具调扔进受限沙箱跑）、规则强制执行（不再出现模型忽略 system prompt 的情况）。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>解决了一个真实痛点——模型在 Agent 场景下经常不听话、乱烧 Token、安全边界模糊。路由机制能让简单任务用便宜模型、复杂任务切强模型，实测 100 次对话省百万 Token。安全设计也用心，敏感环境变量不会泄漏到子进程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>多模型 Agent 编排：自动路由给最合适的模型，省钱又高效</li>
+    <li>企业 Agent 安全护栏：沙箱隔离高风险操作，拒绝可疑指令</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2062112308126761353" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ4Vo-VbcAA3i7u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ4Vo-VbcAA3i7u?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Devin Desktop（原 Windsurf 重生）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cognition 收购 Windsurf 一年后，将「IDE + 自主 Agent」合并为 Devin Desktop，一个桌面应用管理 AI Agent 的全流程开发。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://devin.ai/blog/windsurf-is-now-devin-desktop" target="_blank">https://devin.ai/blog/windsurf-is-now-devin-desktop ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 devin.ai 下载 Devin Desktop 桌面应用，安装后用 Devin 账号登录。核心变化：原 Windsurf IDE 变成了 Devin 的桌面客户端，支持 Agent 管理、代码编辑、任务编排一体化。配套 Devin Cloud 可实现远程任务调度。如果你之前用 Windsurf，升级后直接迁移，产品线已合并且免费层保留。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是「IDE + Agent」合并的标志性产品，说明 AI 编程工具正在从「补全」进化为「自主执行」。Cognition 把 Devin 的自主 Agent 能力和 Windsurf 的编辑器体验缝合在一起，形成「One Devin, every surface」策略。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>全流程 AI 开发：从写代码到 PR review 都由 Agent 协助完成</li>
+    <li>远程任务调度：桌面 IDE 指挥云上 Devin 跑长时间任务</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2061982033828790558" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ2htcJakAA0H6S?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ2htcJakAA0H6S?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2061888533590114304/img/Bz0_fF1qtUUPUNU2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2061888533590114304/img/Bz0_fF1qtUUPUNU2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole 1.6.2 — Mac 小伴侣工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Tw93 开发的 Mac 菜单栏效率工具，新增屏幕常亮、隐私警报、清洁屏幕、软件检查等功能。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mole.fit" target="_blank">https://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 mole.fit 下载安装，菜单栏常驻。新功能：保持屏幕常亮（不让 Mac 休眠）、隐私警报（菜单栏显示相机/麦克风使用状态）、清洁屏幕（锁定输入方便擦拭显示屏）、软件检查（检查 App 更新）。本次更新包含 222 个提交、新增 50,084 行代码，最大改进是让 Mac 使用体验「更平静」。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>小而美的工具哲学——不做大而全，只做菜单栏里真正有用的那几件事。Tw93 作为知名开源作者（妙言、Pake 等），这次更新在细节打磨上下了大功夫，尤其是隐私警报和屏幕清洁这种不起眼但高频的场景。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>演示/开会时一键保持屏幕常亮</li>
+    <li>监控哪些 App 在偷用摄像头/麦克风</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2062164018392088652" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ5FWW8boAA3aq1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ5FWW8boAA3aq1?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WhatCable — Type-C 数据线检测工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>macOS 小工具，插上线就告诉你这条 Type-C 线支持什么协议、传输速率、充电功率。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/whatcable/" target="_blank">https://appinn.com/whatcable/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载 WhatCable macOS 应用，运行后用 Type-C 线连接设备，工具自动读取线缆的 e-Marker 芯片信息，显示支持的标准（USB 2.0/3.0/4.0/Thunderbolt）、最大传输速度、最高充电功率。从此不再猜手里这根线能不能跑 4K 显示器或 100W 充电。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Type-C 接口统一了物理形态但协议极度碎片化——同一条线可能只支持 USB 2.0 数据传输却支持 100W 充电。这个小工具解决了「线缆盲盒」问题，对经常倒腾外设的硬核用户是刚需。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>整理线材时快速分类：哪些能传 4K 视频，哪些只能充电</li>
+    <li>排查外设问题：显示器不亮先查是不是线缆不支持视频传输</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2062022118913544236" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ3GMLDW0AAzfQT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ3GMLDW0AAzfQT?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ RenamerX — 本地 AI 文件重命名</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用本地 AI 模型自动分析和重命名混乱的文件，批量整理成清晰、可搜索的规范文件名。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载 RenamerX，选择一个文件夹，工具用本地 AI 分析文件内容（支持图片、文档等），自动生成描述性文件名。例如「IMG_4872.jpg」变成「2024-深圳团建合影.jpg」。完全本地运行，文件不会上传到云端，隐私安全。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 落地最实用的场景之一——文件管理。不需要手动整理上千张照片或文档，本地 AI 逐个分析内容并重命名。完全离线运行也避免了隐私顾虑。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>整理几年积累的混乱照片文件夹</li>
+    <li>给项目文档批量规范化命名，方便搜索</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2062023564853719552" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ rssume — AI 自动翻译和摘要 RSS 订阅</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源工具，用 AI 自动翻译你的 RSS 订阅外文内容并生成摘要，打破语言壁垒。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库，配置你的 RSS 源列表和 AI API key（支持 OpenAI/DeepSeek 等），设置定时任务后自动抓取新文章，调用 AI 翻译成中文并提取摘要。输出支持多种格式，可推送到 Telegram/飞书/邮件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>信息获取的效率工具。如果你订阅了很多英文技术博客但没时间逐篇读，这个工具帮你把「英文长文 → 中文摘要」的流程全自动化，只关注真正重要的内容。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>订阅海外技术博客，每天收中文摘要推送</li>
+    <li>团队内部共享行业情报，自动翻译后推送到飞书群</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2062314312534827369" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ codex-reset-watchdog — Codex 额度重置监控</div>
+  <div class="section"><div class="section-label event">一句话</div><p>监控 OpenAI Codex 的额度重置消息，第一时间自动切 fast 模型消耗额度，避免浪费。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/thinkingjimmy/codex-reset-watchdog" target="_blank">https://github.com/thinkingjimmy/codex-reset-watchdog ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>将安装指令复制发给 Codex，它会自动静默安装并启用 watchdog。功能：监控 Codex 的重置通知，当额度即将重置时自动切换到 fast 模型快速消耗剩余额度，避免月底清零浪费。全程自动运行，无需人工干预。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Codex 的月度额度不累积，月底清零是一种隐性浪费。这个小工具把「薅羊毛」自动化了，一条安装指令就能永久解决。实用且玩心十足。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>每月额度用不完时自动消耗，不浪费已付费的资源</li>
+    <li>学习 Codex Skill 开发，看一个简单的自动化工具怎么写</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2061982033828790558" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Codex 角色插件体系发布：从编程工具到通用智能体</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布 Codex 角色插件、标注编辑（Annotations）和 Sites 三大能力，覆盖数据分析、设计、销售、产品设计、股权投资、投行 6 个岗位。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Codex 正式越过「编程工具」边界，通过预配置的角色插件（角色 × 工具 × prompt 模板）让非程序员也能直接使用。标注编辑功能可以局部修改文档/Excel/PPT 而非重新生成全文，Sites 则让企业版用户生成可分享的网页 URL。这标志着 OpenAI 对 Codex 的定位从「代码助手」转向「通用工作智能体」。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Agent 产品的竞争维度正在从「代码能力强不强」升级为「能不能覆盖非程序员的工作流」。Codex 的角色插件本质是 GPTs 的继承者——当年 GPT Store 的愿景正以 Codex 为载体回归。对企业市场，这意味着 AI Agent 的采购决策将从工程团队扩展到全公司。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2061970571093844267" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ2XSp6awAAE3hA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ2XSp6awAAE3hA?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ0vagObIAAhvL7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ0vagObIAAhvL7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Uber 设定每人每月 $1500 AI 编码工具预算上限</div>
+  <div class="section"><div class="section-label event">事件</div><p>据报道 Uber 对每个员工每个 AI 编码工具设定了每月 $1500 的上限，暗示企业认为这些工具提供的价值已经达到可量化阶段。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>$1500/月/人是相当高的预算——够订阅 Codex Pro、Claude Code、Cursor 全套。这说明 Uber 内部对 AI 编码工具的 ROI 有正面评估，但也在防止无限制使用带来的成本失控。把预算写到制度层面，意味着 AI 编码工具已被视为和 IDE license、云资源一样的标准生产资料。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>当大企业开始给 AI Agent 制定预算标准时，整个行业的定价锚点就出现了。未来 SaaS 化的 AI 编码工具可能会围绕 $500-$1500/人/月这个区间定价。也暗示企业在推进「必须用 AI 提效」的制度化建设。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2062143151184465964" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 微软发布 7 个 Mai 系列模型：2 LLM + 2 图像 + 2 语音 + 1 识别</div>
+  <div class="section"><div class="section-label event">事件</div><p>微软发布 Building a Hillclimbing Machine 系列共 7 个模型，均为二流水平且未开源，但企业可在 Azure 上微调。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>微软的模型策略是一贯的「不是最强但最好用」——模型本身不需要赢 benchmark，但在 Azure 生态里可以一键微调、部署、集成现有企业工作流。这是典型的平台思维：模型是引流品，真正卖的是 Azure 的算力和企业服务。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对创业公司影响不大（没人会因为微软发布模型而切换），但对 Azure 存量企业客户是一个信号：不用跳槽去其他平台也能获得最新的模型能力。微软在「自研模型 + 托管开源模型 + OpenAI」三条线并行推进。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2062123815463948522" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2062268602380915053" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2062314314149630058" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2062314311226175935" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2062314748075811261" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ4iqWBboAAUBnh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ4iqWBboAAUBnh?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ6mDBwa0AA0-Pu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ6mDBwa0AA0-Pu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062193308093530113/img/omeYBKOojY0KY9cO.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062193308093530113/img/omeYBKOojY0KY9cO.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>EverOS AI Memory 重构：记忆存 Markdown，直观可查可改，AI memory 从黑盒变白盒 <a href="https://x.com/elliotchen100/status/2062268602380915053" target="_blank">→</a></li>
+    <li>Gorden VFX Video Skill：本地生成特效视频的开源 Skill，文字动画/弹跳/划光效果 <a href="https://github.com/GordenSun/Gorden-vfx-video" target="_blank">→</a></li>
+    <li>Duckle 开源 ETL 平台：本地优先的数据集成与 ETL 工具，Local-First 架构 <a href="https://x.com/appinn/status/2062314314149630058" target="_blank">→</a></li>
+    <li>TouchAI 桌面 Agent：开源免费 BYOK 的一触即达桌面效率工具，支持小米 Mimo <a href="https://x.com/appinn/status/2062314311226175935" target="_blank">→</a></li>
+    <li>Claude Code Dynamic Workflows：Bun 作者 Jarred 现场演示的 workflow 被 Anthropic 在 5 月底正式发布 <a href="https://x.com/MinLiBuilds/status/2062314748075811261" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

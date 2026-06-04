@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 03 Jun 2026 00:41:57 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 00:36:48 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/04 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-04.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-04.html</guid>
+      <description>Google 发布 Gemma 4 12B 开源多模态模型，16GB 笔记本就能跑全模态 AI，同时推出 AI Edge Gallery 桌面应用打通端侧 Agent 工作流。Codex 则发布角色插件体系，正式从编程工具走向「通用智能体」。</description>
+      <pubDate>2026-06-04T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/03 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-03.html</link>
