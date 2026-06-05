@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-05</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-05</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>开源视频创作工具迎来「HTML即视频」范式变革，html-video 3万行代码将Agent原生视频创作门槛拉到零；同时谷歌Gemma 4、Ideogram 4、NVIDIA Nemotron-3 三大开源模型齐发，端侧多模态时代加速到来。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ html-video — HTML版剪映，Agent原生视频创作</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源视频创作框架，Agent通过写HTML就能做出产品宣传片、知识解说视频，支持20+模板、MP4导出，接入Claude Code/Codex/Cursor等主流Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/html-video" target="_blank">https://github.com/nexu-io/html-video ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>git clone项目后在本地安装依赖，启动CLI或Web Studio界面。选择内置的20多套视频风格模板（产品宣传、知识解说等），Agent会自动生成对应的HTML页面，分页编辑后一键导出MP4。已接入Minimax配音配乐，支持通过frames.md定义视频运动规范、design.md定义视觉风格。本地Coding Agent直接通过CLI命令即可调用——在Claude Code或Codex里说"用html-video做一个产品介绍视频"就行。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是视频创作范式的根本转变——传统视频工具（剪映/PR）依赖时间轴拖拽，html-video用声明式HTML+CSS+JS定义画面，Agent完全可以自主编写和迭代。站在HyperFrames和Remotion的肩膀上，项目仅3天就完成3万行代码，展现了Agent-native工具的爆发力。对于开发者来说，批量生成视频、A/B测试不同版本变得极其高效。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>产品发布快速制作多个版本的宣传视频</li>
+    <li>知识类内容批量转视频（博客→视频管道）</li>
+    <li>Agent自动化生成SaaS产品的onboarding教程视频</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2062470358687498470" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062470267725611008/img/S8bTFxsjj_VRfrhg.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062470267725611008/img/S8bTFxsjj_VRfrhg.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Gemma 4 12B — 谷歌开源原生多模态模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>谷歌开源12B参数多模态模型，支持文本+图片+音频输入，本地可运行，采用MTP草稿加速推理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/collections/google/gemma-4" target="_blank">https://huggingface.co/collections/google/gemma-4 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问HuggingFace下载GGUF量化版（推荐Q4_K_M），用llama.cpp或Ollama本地加载：ollama pull gemma4:12b 然后 ollama run gemma4:12b。也可以上传图片或音频让模型分析。12B大小在16GB内存的MacBook上就能跑，推理速度使用MTP加速后可比同尺寸模型快2-3倍。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>12B这个尺寸卡在「本地可跑」和「能力不差」的甜蜜点。原生多模态意味着不需要额外插件就能处理图片和音频，对比Llama等纯文本模型是降维打击。Google这次开源+商用友好许可的组合拳，明显是要抢Llama的生态位。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地运行的隐私敏感场景（医疗报告分析、合同审查）</li>
+    <li>离线环境下的多模态助手（图片描述、音频转文字+理解）</li>
+    <li>端侧设备的AI能力嵌入</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2062484673838928040" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ9q38ubYAAY7BO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ9q38ubYAAY7BO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Ideogram 4 — 开源最强图片生成模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>9.3B参数开源图片模型，审美在线，英文文字渲染完美，基于Qwen语言模型，本地可跑。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/collections/ideogram-ai/ideogram-4" target="_blank">https://huggingface.co/collections/ideogram-ai/ideogram-4 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>HuggingFace下载模型权重，搭配ComfyUI或diffusers加载。在ComfyUI里搜索Ideogram 4工作流模板，调整提示词即可生成。9.3B参数在24GB显存的GPU上可以跑FP16版，Mac用户可用MLX或GGUF量化版。官方也提供在线体验：https://ideogram.ai 直接注册就能试用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>图片模型的两大痛点——审美和文字渲染——Ideogram 4同时解决了。审美方面击败了Flux和SD3.5，文字渲染仅次于闭源的Banana和GPT Image 2。开源意味着可以微调、LoRA、ControlNet全套组合拳，这是闭源API永远给不了的。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>品牌营销素材批量生成（带精准文字的海报、banner）</li>
+    <li>电商产品图（产品+文字描述+场景）</li>
+    <li>游戏/漫画角色设计及风格一致性保持</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2062481782617018421" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ9lAbSaUAAfdH3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ9lAbSaUAAfdH3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ9lCJfbQAAHqyv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ9lCJfbQAAHqyv?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design 0.9.0 — AI设计门槛归零</div>
+  <div class="section"><div class="section-label event">一句话</div><p>将AI做设计的门槛从「需要CLI+API Key+模型配置」降到浏览器打开即用，实现真正的设计平权。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问在线版本或克隆仓库本地运行。不需要配置本地CLI、API key、模型——浏览器打开就能让AI帮你设计网页、UI界面、海报等。选择设计类型，描述需求，Agent自动生成设计稿，支持实时预览和迭代修改。0.9.0版本核心是把技术门槛全部封装掉，让非技术用户也能用AI做设计。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>从「给early adopter的玩具」到「人人可用的工具」的质变。之前的AI设计工具都卡在环境配置这一步——大多数人还没开始设计就被劝退了。Open Design 0.9.0把这件事做成了开箱即用，这是设计师和非技术用户的ChatGPT时刻。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>创业者快速出产品落地页和原型</li>
+    <li>设计师用AI批量产出初稿再人工精调</li>
+    <li>非技术团队的内部工具界面搭建</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2062533932743045436" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062522082424971264/img/BCs2vDnW4aURF8SX.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062522082424971264/img/BCs2vDnW4aURF8SX.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LM Studio 手机版 — iPhone上烧着跑大模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LM Studio发布iOS版，可以在iPhone上本地运行大模型，离线、隐私、免费。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://lmstudio.ai" target="_blank">https://lmstudio.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>App Store下载LM Studio，首次启动会引导下载模型（推荐选择1-3B的小模型如Qwen2.5-1.5B或Phi-3-mini）。下载完成后直接对话，完全离线运行。iPhone 15 Pro以上机型体验更流畅（更多RAM+更强NPU）。模型管理界面可以直接搜索HuggingFace上的GGUF模型一键下载。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是「端侧AI」真正走进普通消费者的标志。之前手机跑大模型要么需要技术背景（llama.cpp命令行），要么效果太差。LM Studio用App化体验+GGUF生态把门槛降到普通用户可接受的水平。iPhone的ANE神经网络引擎做推理能效比远超GPU，长时间对话不烫手。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>飞机/地铁等无网络环境下的AI助手</li>
+    <li>隐私敏感对话（个人日记、心理咨询等不离开设备）</li>
+    <li>测试不同小模型在移动端的实际表现</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2062667036439048522" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062581689042567168/img/Rv1VhshGupTULS5R.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062581689042567168/img/Rv1VhshGupTULS5R.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenSquilla — 开源Agent智能路由，省钱不降智</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源Agent框架，给每个请求按难度打分分四档派发模型，在6月15日Anthropic订阅Token停用前提供省钱方案。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/OpenSquilla" target="_blank">https://github.com/OpenSquilla ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后配置多个模型API Key（如Claude/DeepSeek/GPT/Haiku），设置四档难度阈值。Agent收到任务后自动评估复杂度：简单任务（如"格式化这段代码"）路由到便宜模型，复杂任务（如"重构整个模块"）路由到最强模型。可以自定义评分规则和模型映射，支持添加任意OpenAI兼容API。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>6月15日Anthropic所有订阅套餐Token将被禁止第三方使用，大量依赖Claude订阅的Agent工具面临断供。OpenSquilla的「按难度路由」思路比一刀切换便宜模型聪明得多——简单任务确实不需要SOTA模型，省下的Token用在刀刃上。这个策略也是Anthropic自己正在推的方向。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>日均几千次Agent调用的团队节省70%+ Token成本</li>
+    <li>作为所有Agent工具的中间路由层统一管理模型预算</li>
+    <li>CI/CD流水线中的代码审查自动分级</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2062506101468205281" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ9-HokbAAAklF8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ9-HokbAAAklF8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ9-IZEbQAA4L4r?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ9-IZEbQAA4L4r?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ListenHub AI视频 — Agent和人类都能用的视频生成平台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AI视频生成平台正式上线，支持HappyHorse和Seedance 2.0等模型，人类用户和Agent都能调用，输入想法或参考图即可生成视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://listenhub.ai/zh/app/ai-video" target="_blank">https://listenhub.ai/zh/app/ai-video ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问官网注册账号，在AI视频模块输入文字描述或上传参考图/参考视频。选择模型（HappyHorse适合创意类、Seedance 2.0适合写实类），设置时长和风格参数，一键生成。Agent也可以通过API调用——在Claude Code等工具中描述想要的视频，Agent自动调用ListenHub生成。目前提供免费试用额度。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>ListenHub区分于其他视频生成平台的核心是「同时服务人类和Agent」的设计。提供标准化的API让Agent调用，意味着视频生成可以嵌入自动化工作流——比如每天自动生成新闻视频摘要、产品更新演示视频。多模型聚合也避免了单模型审美疲劳。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>社交媒体短视频批量制作</li>
+    <li>Agent自动化的日报/周报视频生成</li>
+    <li>产品Demo从截图到视频的一键转换</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2062511076529602908" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ-C3C1aAAAlxb9?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ-C3C1aAAAlxb9?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 即览 Glimpse — iOS上的AI产出物预览神器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>无AI、不联网的iOS工具，专注解决手机上Markdown和HTML格式AI产出物的预览问题，TestFlight 8000名额开放。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>TestFlight安装后，从Claude Code/Codex等工具导出的Markdown或HTML文件，通过分享菜单发送到即览即可渲染预览。支持代码高亮、表格、LaTeX公式等Markdown扩展语法。完全离线——不会上传任何内容到服务器，适合预览含敏感信息的AI产出。也可直接粘贴剪贴板内容快速预览。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI工具产出大量Markdown/HTML但手机端一直缺好用的预览工具——iOS Files预览Markdown不支持扩展语法，Safari打开本地HTML经常样式丢失。归藏做的这个小工具精准解决了这个缝隙需求，离线+隐私的设计也打消了用户对数据上传的顾虑。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>手机上快速检查Agent生成的文档/报告排版</li>
+    <li>预览含敏感信息的AI分析结果（无需上传云端）</li>
+    <li>分享前确认Markdown渲染效果</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2062392105860059227" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062391872862175232/img/vCRdfweCZ0Oam2tc.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062391872862175232/img/vCRdfweCZ0Oam2tc.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CodePilot v0.55.0 — 多引擎AI编程助手正式版</div>
+  <div class="section"><div class="section-label event">一句话</div><p>完成重构的正式版，支持Claude Code/Native/OpenAI Codex三引擎切换，上下文用量可视化，修复大量macOS/Windows问题。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载安装后配置API Key（支持多个服务商），在设置中选择执行引擎——Claude Code适合复杂重构、Native引擎适合快速编辑、Codex适合iOS/Apple生态开发。新版的上下文用量可视化能实时看到Token消耗和剩余额度。macOS用户注意：这版修复了视觉渲染和托盘图标问题，体验大幅提升。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多引擎架构是这个工具的核心差异化——不同引擎擅长的场景不同，一键切换比手动换工具高效。上下文用量可视化也解决了Agent编程「不知不觉烧光Token」的痛点。歸藏作为独立开发者把产品迭代到这个完成度，说明AI编程工具的独立开发者赛道依然有空间。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>根据任务复杂度灵活切换成本/能力最优的引擎</li>
+    <li>Token预算紧张时的精细化管理</li>
+    <li>macOS/Windows双平台统一的AI编程体验</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2062567442568933720" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ-2JuvaYAAKRT8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ-2JuvaYAAKRT8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 VoidZero 被 Cloudflare 收购</div>
+  <div class="section"><div class="section-label event">事件</div><p>尤雨溪创立的VoidZero（Vite/Vitest/Rolldown/Oxc背后的公司）正式加入Cloudflare，所有项目保持MIT开源，团队继续领导开发。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是普通的收购——VoidZero手握JS生态最核心的基础设施（Vite是npm下载量最高的构建工具），Cloudflare的Workers平台本身就是Vite的重度用户。收购后Vite+将在Cloudflare边缘运行时上获得原生级优化，JS全栈开发的「本地→边缘」部署路径将被彻底打通。尤雨溪从Vue到Vite再到VoidZero，完成了个体开发者→框架作者→生态基础设施构建者的三级跳。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Vite系工具链将获得Cloudflare的全球CDN和边缘计算资源加持，npm生态的构建/测试/部署体验可能在未来1-2年发生质变。对Next.js生态构成直接竞争——Vite+边缘原生的组合比Next.js+Vercel的绑定更开放。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/voidzerodev/status/2062520542121304146" target="_blank"><span class="handle">@voidzerodev</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ-LgNTXkAAetvW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ-LgNTXkAAetvW?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 ChatGPT 记忆系统大升级：Dreaming V3</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI发布ChatGPT记忆合成系统Dreaming V3，从"用户主动说记住"进化到"后台自动提炼整合更新记忆"，解决跨年时间尺度的记忆陈旧性和准确性问题。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是ChatGPT从「会话工具」到「长期伴侣」的关键一步。旧版Saved Memories需要用户手动触发（"记住这个"），Dreaming V3变成全自动后台进程——AI会主动从你的聊天历史中发现模式、更新认知。技术上看，核心挑战是记忆冲突解决（你三年前说喜欢Python但现在主力用Rust，AI需要更新而非叠加）和隐私边界（自动记忆引发用户对"AI知道太多"的恐惧）。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>个性化AI的竞争从「更好的单次回答」升级到「更懂你的长期记忆」。Apple Intelligence、Google Gemini必然会跟进类似能力。但隐私争议也会随之升级——自动记忆意味着AI有了你的"数字日记"，数据控制权将成为监管焦点。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2062690152569614572" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKAlwJRbgAAJGxf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKAlwJRbgAAJGxf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 订阅Token禁令倒计时</div>
+  <div class="section"><div class="section-label event">事件</div><p>6月15日起Anthropic所有订阅套餐的Token将被禁止第三方使用，全部转为API计费。Claude订阅的"无限用"时代终结。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一场酝酿已久的商业模式切换。Anthropic要上市必须证明盈利——订阅模式下开发者通过Agent SDK、claude -p等方式大量消耗Token，对Anthropic是纯成本。转API计费后，最受冲击的是依赖Claude订阅的独立开发者和开源Agent工具（如feishu-claude-code-bridge）。但对Anthropic本身，这是从「补贴增长」到「商业变现」的成人礼。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期会有一批Agent工具被迫重构后端（要么涨价要么换模型），Claude Code的性价比优势缩小。中长期推动模型路由技术（如OpenSquilla）和本地模型方案（如LM Studio）的加速普及。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2062506101468205281" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ9-HokbAAAklF8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ9-HokbAAAklF8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ9-IZEbQAA4L4r?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ9-IZEbQAA4L4r?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Codex 推出 Build iOS Apps 插件</div>
+  <div class="section"><div class="section-label event">事件</div><p>Codex新增Build iOS Apps插件，可以在内置浏览器中实时预览iOS App和SwiftUI组件，无需Xcode和Simulator。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是Codex从「代码编辑器」升级为「完整开发环境」的关键一步。之前做iOS开发必须切到Xcode跑模拟器，现在Codex内闭环了编辑→预览→调试的完整循环。SwiftUI预览的实时热更新体验甚至优于Xcode。这对独立开发者尤其友好——不需要买Mac也能在Codex（基于浏览器）里做iOS开发。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Xcode的价值被进一步削弱——Apple会如何回应？要么大幅升级Xcode的AI能力，要么对第三方iOS开发工具设限。长期看，Apple可能被迫开放更多iOS开发工具链。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2062629786283864504" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2062415262893134321" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2062548621346897999" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2062338071438508531" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2062452761732493367" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2062675463479140728" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ_Tl-VakAAPauY.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HJ_Tl-VakAAPauY.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ8rklRXEAAlPkS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ8rklRXEAAlPkS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ8rma9XEAA9VmC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ8rma9XEAA9VmC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI_IjVKWAAA8-Nr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI_IjVKWAAA8-Nr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI_I1OeWYAAXrUJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI_I1OeWYAAXrUJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI_I2k2WEAAxqY1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI_I2k2WEAAxqY1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HI_I4EEWgAAXUcT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HI_I4EEWgAAXUcT?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062548386457497600/img/bWOljONQIsL8WGS3.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062548386457497600/img/bWOljONQIsL8WGS3.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062548399950614528/img/I5shv2aSPCWC6b5u.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062548399950614528/img/I5shv2aSPCWC6b5u.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ7liY3asAA0_nV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ7liY3asAA0_nV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>NVIDIA Nemotron-3-Ultra-550B：550B总参数/55B激活的Mamba-2+Attention MoE架构，100万上下文，接近GLM 5.1水平 <a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4" target="_blank">→</a></li>
+    <li>feishu-claude-code-bridge：飞书连接Claude Code的开源桥，但6月15日后需关注API计费影响 <a href="https://x.com/dotey/status/2062415262893134321" target="_blank">→</a></li>
+    <li>Gemini Omni视频去字幕：自动去除视频硬字幕并补全被遮挡画面，电商从业者福音 <a href="https://x.com/Gorden_Sun/status/2062548621346897999" target="_blank">→</a></li>
+    <li>h5i Radio：利用Git让Claude和Codex实时对话的黑魔法 <a href="https://appinn.com/h5i-radio/" target="_blank">→</a></li>
+    <li>Cursor Debug Mode：AI Agent不再靠猜修复Bug，而是实际运行验证 <a href="https://x.com/shao__meng/status/2062338071438508531" target="_blank">→</a></li>
+    <li>WeChatExport 2.3.7：公众号文章批量下载，支持HTML/Word/PDF等9种格式 <a href="https://x.com/appinn/status/2062452761732493367" target="_blank">→</a></li>
+    <li>BiliReveal：B站网页版显示IP属地的用户脚本 <a href="https://x.com/appinn/status/2062675463479140728" target="_blank">→</a></li>
+    <li>有赞AI建站工具：类似Manus/Lovable，设计UI/UX一绝 <a href="https://b.ucdarts.com/05H3gg8f" target="_blank">→</a></li>
+    <li>Lucas AI：10岁小男孩构思的AI亲子睡前故事工具，在线可玩 <a href="https://lucas.superun.yun" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

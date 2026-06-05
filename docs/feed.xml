@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 04 Jun 2026 00:36:48 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 00:41:40 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/05 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-05.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-05.html</guid>
+      <description>开源视频创作工具迎来「HTML即视频」范式变革，html-video 3万行代码将Agent原生视频创作门槛拉到零；同时谷歌Gemma 4、Ideogram 4、NVIDIA Nemotron-3 三大开源模型齐发，端侧多模态时代加速到来。</description>
+      <pubDate>2026-06-05T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/04 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-04.html</link>
