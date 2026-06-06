@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-06</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-06</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>AI 工具从「Coding」全面转向「Working」——Kimi Work 发布办公Agent集群，Codex 打通 iOS 开发闭环，Cursor 支持浏览器端 UI 标注。同时开源社区迎来 html-video（HTML→视频）、Kaku（AI终端）、Magenta RealTime 2（实时音乐生成）三个高星项目。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ html-video — HTML 一键生成视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 HTML/CSS/JS 动画渲染成 MP4 视频的开源工具，不到24小时破1000 Star</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/html-video" target="_blank">https://github.com/nexu-io/html-video ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>`git clone https://github.com/nexu-io/html-video` 克隆仓库，安装依赖后在浏览器打开 HTML 页面即可渲染导出视频。支持 Trae CLI 命令行调用，可嵌入 CI/CD 流水线自动生成产品 Demo 视频。已有社区贡献者接入 Trae AI 实现自然语言生成视频效果。你可以用它给开源项目做 Release 视频、产品介绍动画，或者把 Notion/飞书里的数据可视化一键导出为可传播的视频片段。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>填补了「代码→视频」的工具链空白。传统做产品 Demo 需要录屏+剪辑，html-video 直接从源码渲染，画质无损、可编程、可批量。技术栈基于现代 Web API（Canvas/WebCodecs），输出质量远超录屏方案。nexu-io 团队的 Open Design 生态布局清晰，这个项目是其「Coding Video」方向的第一块砖。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开源项目自动生成 Release 演示视频（接入 GitHub Actions）</li>
+    <li>产品官网的数据动画直接导出为社交媒体传播素材</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2062839807630340366" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062470267725611008/img/S8bTFxsjj_VRfrhg.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062470267725611008/img/S8bTFxsjj_VRfrhg.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kaku — 专为 AI 编程打造的 macOS 终端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个快速、开箱即用、开源无账号的 macOS 终端，内置 AI 编程能力</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="http://kaku.fun" target="_blank">http://kaku.fun ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 http://kaku.fun 下载 macOS 客户端，安装后直接打开即可使用。内置了针对 AI 编程优化的终端体验，无需注册账号。支持多标签页、分屏、命令补全等现代终端特性，并且与主流 AI Coding Agent（Claude Code、Codex、Cursor）深度适配。对习惯在终端里用 AI 写代码的开发者来说，Kaku 省去了 iTerm2 + tmux + AI 插件的组合配置成本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者 Tw93 是前端/工具领域的知名开源作者（Mole、Kami 等项目），Kaku 延续了其一贯的「极简但好用」的设计哲学。在 Warp 等商业终端走向订阅制收费的背景下，一个完全开源免费、专为 AI 编程场景优化的终端显得尤为珍贵。网站也刚刚重建，体验大幅提升。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>作为日常 AI 编程的主终端，替代 iTerm2/Warp</li>
+    <li>配合 Claude Code / Codex 进行高强度 Vibe Coding</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2062941719684079985" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKEI_ipbsAARjwU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKEI_ipbsAARjwU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Google Magenta RealTime 2 — 200ms 实时音乐生成</div>
+  <div class="section"><div class="section-label event">一句话</div><p>谷歌开源实时音乐模型，延迟仅200ms，有2.4B和230M两个尺寸</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/google/magenta-realtime-2" target="_blank">https://huggingface.co/google/magenta-realtime-2 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 HuggingFace 模型页下载权重，使用 Transformers 加载即可。2.4B 模型质量更高适合离线使用，230M 模型更适合实时交互场景。支持文本描述和音频两种输入方式，输出为纯音乐（无人生）。可以用文字描述想要的风格（如「欢快的爵士钢琴」），模型在 200ms 内就会生成对应的音乐片段。本地部署推荐用 230M 版本，消费级 GPU 即可实时推理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>200ms 延迟是实时音乐生成的关键里程碑——低于这个阈值，人类感知不到延迟，音乐交互体验接近真实乐器。上一代 Magenta 的延迟在秒级，只能做离线生成。这次直接压缩到 200ms，意味着实时音乐交互应用（如 AI 伴奏、游戏动态配乐、直播 BGM）真正有了落地的技术基础。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>游戏/VR 场景的动态背景音乐实时生成</li>
+    <li>视频创作者的免版权配乐工具</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2062818060738957706" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKCaFktboAAvwuI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKCaFktboAAvwuI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kimi Work — 最多调度300个Agent的办公套件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Kimi 从 Coding 延伸到办公场景，集成金融/科研/法律专业数据库，¥99/月起</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://kimi.com/zh-cn/products/kimi-work" target="_blank">https://kimi.com/zh-cn/products/kimi-work ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 Kimi 官网下载桌面客户端（macOS/Windows），登录后选择 Moderato 及以上会员（¥99/月）。核心能力：上传上百页的招股书/财报/论文，Kimi Work 会调度多个 Agent 并行分析，一次性输出研报+PPT+Excel。最多可同时调度 300 个 Agent，适合处理大规模文档分析任务。小互实测分析了 SpaceX 招股书，效果详尽。目前 Beta 版偶有长任务中断，需要手动让它继续。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是国内首个将 Agent 集群能力从 Coding 扩展到 Office 的产品。之前 Kimi Code 主打编程，Kimi Work 把同样的多 Agent 协作架构搬到了金融、法律、科研场景，打通了 Wind/Bloomberg 级别的专业数据库。月之暗面的产品节奏极快——从 Kimi Chat 到 Kimi Code 到 Kimi Work，一年走完了海外产品两年的路。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>金融分析师：上传百页招股书，一键生成尽调报告+财务模型</li>
+    <li>科研人员：批量分析论文，自动生成文献综述和 PPT</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2062824756634931256" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062821535887523840/img/KjzxZRtQfWWcM-kM.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062821535887523840/img/KjzxZRtQfWWcM-kM.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PlanningBench — 腾讯混元开源 LLM 真实规划能力评测框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯混元+人大联合开源，30+真实世界规划任务，覆盖调度/生产/旅行/资源分配/应急响应</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tencent-Hunyuan/PlanningBench" target="_blank">https://github.com/Tencent-Hunyuan/PlanningBench ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>`git clone` 仓库后安装依赖，数据集托管在 HuggingFace（huggingface.co/datasets/tencent/PlanningBench），论文在 arxiv.org/abs/2605.20873。框架包含 30+ 真实规划任务，每个任务有清晰的成功标准和全自动验证机制。你可以用它评测任意 LLM 的真实规划能力——不是推理题的规划，而是「安排10辆卡车在5个城市间最优配送」这种真实运筹问题。目前主流模型在 PlanningBench 上的表现和人类差距仍然很大。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>大模型从卷推理（Math/Code）转向卷规划（Planning）是 2026 下半年的明确趋势。PlanningBench 是第一个把「真实世界规划」做成标准化 benchmark 的开源项目——任务来自生产调度、应急响应等实际场景，不是合成数据。这比 MMLU 之类的选择题更能反映模型的真实智能水平。腾讯混元这次开源得很彻底：论文+代码+数据集全开放。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>评估你的 Agent 在真实运筹任务上的规划能力</li>
+    <li>作为企业选型 LLM 的补充 benchmark</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2062866734596673828" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKDGW6eaUAE0Mof?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKDGW6eaUAE0Mof?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKCMgTnbgAAwN50?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKCMgTnbgAAwN50?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Winxvideo AI 二十周年限免 — 视频压缩+AI画质提升</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Windows/macOS 本地视频处理工具限时免费，AI 提升画质、防抖、压缩三合一</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/winxvideo-ai-2606/" target="_blank">https://appinn.com/winxvideo-ai-2606/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问小众软件文章页获取限免激活码，下载安装 Winxvideo AI。核心功能：① AI 超分辨率提升视频画质（480p→1080p/4K）；② AI 防抖稳定手持拍摄素材；③ GPU 加速视频压缩（H.265/H.264）。全本地处理，不上传云端，适合处理个人隐私视频。限免活动截至日期不明确，建议尽快领取。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>市面大多数 AI 视频增强工具都需要上传云端（如 Topaz Video AI 虽强但贵且重），Winxvideo 主打本地处理+轻量。二十周年版限免是实打实的福利——正常售价 $39.95/年，这次直接白送。对于需要批量处理老旧视频、VHS 转数字、运动相机防抖的用户来说是刚需工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>老旧家庭录像/VHS 数字化后的画质修复</li>
+    <li>运动相机/手机手持拍摄视频的防抖后期</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2062827311414522215" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKCigiOWIAAWPie?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKCigiOWIAAWPie?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenAI Codex iOS Build 官方插件 — 在 Codex 里直接开发和预览 iOS App</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Codex 新增面向 SwiftUI 的 iOS 开发插件，热重载+模拟器预览，不用切 Xcode</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>更新 Codex 到最新版本，在设置中启用「Build iOS Apps」官方插件。使用时在 Codex 对话中说 "build an iOS app"，Agent 会自动创建 SwiftUI 项目。核心体验：① Codex 内直接打开 SwiftUI 实时预览（类似 Xcode Canvas）；② 代码编辑后自动热重载，无需重新编译；③ 减少了在 Codex 和 Xcode/模拟器之间来回切换的摩擦。底层通过 Swift Package Manager 和 xcodebuild 自动化，对开发者透明。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Codex 正在从「代码生成器」变成「全栈开发环境」。这个插件补齐了 iOS 这一大块——之前 Codex 做 iOS 开发需要手动复制代码到 Xcode 跑模拟器，现在闭环了。加上已有的 Codex Sites（Web 建站），Codex 覆盖了 Web + iOS 两大平台。方向清晰：让 Agent 直接吃掉 IDE。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速原型：用自然语言描述 App，Codex 直接生成可预览的 iOS 界面</li>
+    <li>非 iOS 开发者（后端/前端）零门槛试水 SwiftUI</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2062696260247998803" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKArTAraAAETj-L?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKArTAraAAETj-L?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ_Tl-VakAAPauY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ_Tl-VakAAPauY?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 顶级严师提示词 — AI 追问到底直到你真正学会</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个超级严厉的 AI 教师提示词，每阶段必须确认你彻底掌握才会进入下一阶段</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/xiaohu/status/2062902972649222311）" target="_blank">https://x.com/xiaohu/status/2062902972649222311） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>复制提示词到 ChatGPT/Claude/DeepSeek 中，告诉它你想学习什么知识。AI 会像一个严格的私教：每讲完一个概念，必须出题验证你是否真正理解；答错或不完整就反复追问、换角度解释，直到确认你吃透为止。不会一口气讲完，而是分阶段递进。适合用来攻克难懂的技术概念（如 RAG 原理、Transformer 注意力机制、Rust 所有权模型）。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个提示词解决了 AI 教学的经典问题——学生以为自己懂了但实际没懂（illusion of competence）。通过强制追问+验证机制，把 AI 从「信息播报员」变成「苏格拉底式导师」。提示词设计巧妙，利用了 LLM 的 role-play 能力来模拟严格的教学场景。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自学复杂技术概念（分布式系统、密码学、编译原理）</li>
+    <li>备考面试，AI 模拟面试官追问技术细节</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2062902972649222311）" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2062902972649222311" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKDnC0OaIAANNDs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKDnC0OaIAANNDs?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 发布 AI 递归自我改进报告 — 一边警示危险一边提交招股书</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 发布研究报告称 AI 已开始被用于开发下一代 AI（递归自我改进），呼吁行业放缓研发进度。但同一周 Anthropic 刚刚提交了招股书。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>报告本身技术内容扎实——Claude 系列模型在 Anthropic 内部已被广泛用于写训练代码、设计架构、调试模型。但呼吁「大家一起放缓」却不提自己先停，显得言行不一。多位数码博主直接嘲讽「A 社的思维模式很离谱」。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>无论动机如何，这份报告可能成为监管机构要求 AI 公司增加安全审计的依据。但短期内不会改变任何公司的研发节奏——毕竟 OpenAI、Google、Meta 都在全速推进。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2062693785772155317" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKApDrhakAAsvL2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKApDrhakAAsvL2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 ChatGPT Dreaming V3 — 从「记笔记」到「自主回忆」</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布 ChatGPT 记忆系统 Dreaming V3，后台异步生成记忆，自动提炼修正，目前对美国 Plus/Pro 用户开放。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Dreaming V3 是记忆系统的第三代：V1 手动保存 → V2 对话关联 → V3 自主回忆。模型会在后台异步分析用户的历史对话，自动提炼重要信息、修正过时记忆。这是 ChatGPT 从「无状态工具」向「个性化助手」演进的关键一步。但部分用户反馈记忆功能有时反而带来困扰。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>个性化记忆是 Agent 的必备能力——没有记忆的 Agent 每次对话都从零开始。OpenAI 通过 Dreaming 系统在规模化记忆上取得突破，将为后续的 Operator/Deep Research 等 Agent 产品提供长期记忆基础设施。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2062690152569614572" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKAlwJRbgAAJGxf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKAlwJRbgAAJGxf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Airbnb 创始人组建 AI Lab 专攻 UI/设计模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>Airbnb 创始人 Brian Chesky 正在筹备一个 AI Lab，专门构建 UI 和设计领域的模型。社区反应积极——Airbnb 的设计品味在业内有口皆碑。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是设计×AI 领域的一个重要信号。目前 AI 建站工具（V0、Lovable、bolt.new）的审美仍远不及专业设计师，Airbnb 如果能将其设计 DNA 注入模型训练，可能大幅提升 AI 生成界面的品质上限。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果 Airbnb 的设计模型开源或提供 API，将直接冲击 Figma AI、Canva AI 等现有设计 AI 工具。更重要的是，非设计师出身的开发者将能借助 AI 产出 Airbnb 级别的 UI。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2062769393785016326" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJ_tOEAXoAAowU4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ_tOEAXoAAowU4?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 WWDC 2026 前瞻：AI Agent 将上架 App Store</div>
+  <div class="section"><div class="section-label event">事件</div><p>据 The Information 报道，Apple 计划在 6月8日 WWDC keynote 上宣布 AI Agent 应用可上架 App Store，新版 Siri 将具备 agentic 能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Apple 的 agent 策略和 OpenAI/Google 不同——不是自己做最强的 Agent，而是做 Agent 的分发平台（App Store）。这与 Apple 在音乐（iTunes）、应用（App Store）上的一贯策略一致：做平台不做内容。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对开发者来说，Agent App Store 意味着新的分发渠道和变现模式。对用户来说，Siri 可能从一个「设置闹钟」的工具升级为能调用多个第三方 Agent 的编排中心。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2062731839148638436" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2062881848309494098" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2062958132758708253" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2062815010443719151" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2062733478395813916" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2062792455641026896" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2062778270987219035" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2062731896480534567" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2062952453398466819" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2062841319584833921" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2062780785388609802" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/HiTw93/status/2062689643028754801" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062876607484731392/img/wgQpkJ5dl0VCWa32.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062876607484731392/img/wgQpkJ5dl0VCWa32.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062949990021124097/img/YstvW3BfDenDs0Ao.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062949990021124097/img/YstvW3BfDenDs0Ao.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HKBM52bXUAAXv_Z.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HKBM52bXUAAXv_Z.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKB0r8PXgAASHra?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKB0r8PXgAASHra?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKB0r8FXMAADJeo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKB0r8FXMAADJeo?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKET_PlWsAAWges?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKET_PlWsAAWges?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKEUA0xWoAAwvH_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKEUA0xWoAAwvH_?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ5N_SJXUAA-vgc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ5N_SJXUAA-vgc?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJ5OA1NXcAAvf2x?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJ5OA1NXcAAvf2x?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKB3pS5XoAAHYef?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKB3pS5XoAAHYef?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKAlK7Ga0AAm8SJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKAlK7Ga0AAm8SJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Open Design 0.9.0：支持 DeepSeek 等平价模型的设计工具，Windows/macOS/Linux 全平台 <a href="https://x.com/tuturetom/status/2062881848309494098" target="_blank">→</a></li>
+    <li>Cursor Canvases：对标 Codex Sites 的浏览器端 UI 标注功能 <a href="https://x.com/dotey/status/2062958132758708253" target="_blank">→</a></li>
+    <li>Polywise：知识图谱+Agents 桌面应用，花半年打磨 <a href="https://x.com/appinn/status/2062815010443719151" target="_blank">→</a></li>
+    <li>OpenSquilla：智能模型路由，简单任务用便宜模型，复杂任务用 Opus 4.8/GPT-5.5 <a href="https://x.com/AlchainHust/status/2062733478395813916" target="_blank">→</a></li>
+    <li>Mac 菜单栏 AI 助手：用完即走的小任务工具，开发者自荐 <a href="https://x.com/appinn/status/2062792455641026896" target="_blank">→</a></li>
+    <li>B站 Build in Public 活动：头奖100万，AI Coding 类最高奖金活动 <a href="https://x.com/AlchainHust/status/2062778270987219035" target="_blank">→</a></li>
+    <li>agnt8x：全球首个 AI Agent 招聘平台上线（"你的下一个雇员不是人类"） <a href="https://x.com/seclink/status/2062731896480534567" target="_blank">→</a></li>
+    <li>Hermes Agent Desktop 已支持中文（宝玉贡献 PR 合并） <a href="https://x.com/dotey/status/2062952453398466819" target="_blank">→</a></li>
+    <li>Vibelab iOS 公开测试：Vibe Coding 直播协作 App <a href="https://x.com/turingou/status/2062841319584833921" target="_blank">→</a></li>
+    <li>花叔 Darwin.skill 纳入微软 SkillOpt 策略 <a href="https://x.com/AlchainHust/status/2062780785388609802" target="_blank">→</a></li>
+    <li>Kami AI 排版设计系统更新：新增网页落地页模块 <a href="https://x.com/HiTw93/status/2062689643028754801" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

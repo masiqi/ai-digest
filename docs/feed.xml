@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 05 Jun 2026 00:41:40 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 00:37:10 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/06 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-06.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-06.html</guid>
+      <description>AI 工具从「Coding」全面转向「Working」——Kimi Work 发布办公Agent集群，Codex 打通 iOS 开发闭环，Cursor 支持浏览器端 UI 标注。同时开源社区迎来 html-video（HTML→视频）、Kaku（AI终端）、Magenta RealTime 2（实时音乐生成）三个高星项目。</description>
+      <pubDate>2026-06-06T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/05 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-05.html</link>
