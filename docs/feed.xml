@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 06 Jun 2026 00:37:10 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 00:37:21 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/07 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-07.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-07.html</guid>
+      <description>开源AI编程工具密集更新：Tw93发布Kaku macOS终端、花叔开源Huashu Design 2.0华丽升级，Codex+Claude Code联用工作流引爆Vibe Coding圈。</description>
+      <pubDate>2026-06-07T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/06 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-06.html</link>
