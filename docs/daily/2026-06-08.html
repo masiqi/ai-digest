@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-08</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-08</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Cursor 推出类 Claude Design 的内置设计工作流，Raycast 发布 Glaze（一句话生成 Mac App 并上架），AI 开发工具正从「写代码」进化到「做产品」——设计+开发+发布一体化。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Glaze — 一句话生成 Mac 应用并一键上架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Raycast 团队出品，输入需求自动生成 macOS 原生应用，内置开发、日志、上架全链路。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://glaze.app" target="_blank">https://glaze.app ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>前往 glaze.app 申请内测资格，收到邀请后安装 Glaze ——它是 Raycast 团队的新作，集成了 AI 编码、调试日志查看和 App Store 发布功能。打开后直接用自然语言描述你想要的应用（比如"帮我做一个用 Spotify API 的音乐电台"），AI 会自动生成完整项目代码、构建并打包。你可以在内置的 Store 里一键安装其他用户分享的 App，体验接近原生 macOS 应用。开发者用 10 分钟、一句话需求就做出了可用的 Spotify 电台 App，debug 只做了一次。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Raycast 已是 Mac 效率工具标杆，Glaze 把 vibe coding 推进到了「vibe shipping」——不再仅仅生成代码片段，而是覆盖了从需求到发布的完整链条。上下文全打包的设计意味着 AI 能看到项目全局，开发效率远超在 IDE 里手动复制粘贴代码。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速原型验证：产品想法 → 10 分钟可交互原型</li>
+    <li>个人小工具开发：Spotify 电台、蓝牙管理器这类轻量 Mac App 不再需要学 Swift</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2063443048458264603" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKLL4GAaIAAz5u7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKLL4GAaIAAz5u7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKLL79QaQAEMS7l?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKLL79QaQAEMS7l?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKLOjKIbEAAFHhE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKLOjKIbEAAFHhE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKLRpd-agAAHdSv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKLRpd-agAAHdSv?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cursor Design（Claude Design 本地运行版）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cursor 新增浏览器预览 + 元素标注功能，描述一个页面 → 生成 HTML → 点击任意元素说出修改需求。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cursor.com" target="_blank">https://cursor.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>更新 Cursor 到最新版，在终端执行 `npx skills add JimLiu/baoyu-design` 安装宝玉开发的 baoyu-design Skill。打开 Cursor，使用 Composer 2.5 模式，输入设计需求（如"帮我设计一个 Reader Mac App 的信息架构"），它会先生成 3 个设计变体供你选择。选择后进入浏览器预览，点击任意 UI 元素就能通过自然语言调整样式——不需要写 CSS。搭配 Claude Opus 4.8 效果最佳，宝玉实测对比发现 Opus 审美显著优于 GPT-5.5。Knobs 模式下点击画布元素可直接拖拽调整 CSS 参数。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是 Claude Design 的本地化替代方案，不依赖浏览器扩展，直接在 IDE 内完成设计→开发闭环。元素标注（element annotation）+ Knobs 调节让非设计师也能产出专业级 UI，且所有代码都在本地可修改。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>独立开发者快速出高颜值 Landing Page</li>
+    <li>前后端分离项目的前端快速搭建</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2063448680808452573" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2063441254701010945/img/Pn9IRMuTR5onPKnj.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2063441254701010945/img/Pn9IRMuTR5onPKnj.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2062949990021124097/img/YstvW3BfDenDs0Ao?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2062949990021124097/img/YstvW3BfDenDs0Ao?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Repo2RLEnv — 把任意 GitHub 仓库变成 RL 训练环境</div>
+  <div class="section"><div class="section-label event">一句话</div><p>HuggingFace 开源工具，从 GitHub 仓库自动合成可验证的强化学习训练数据。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co" target="_blank">https://huggingface.co ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装该工具后，只需指向任意 GitHub 仓库地址，它会自动分析每个已合并的 PR——提取 PR 描述作为「任务描述」、把合并前的代码作为「初始状态」、合并后的 diff 作为「正确解法」，生成可验证的 RL 训练任务。生成的数据集会自动推送到 HuggingFace Hub，可直接用于训练代码生成 Agent。核心理念是将真实的软件工程实践转化为 RL 信号：每个成功的 PR 都是一个「从问题状态到达目标状态」的轨迹。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>代码 Agent 训练长期受困于高质量 RL 数据的稀缺，Repo2RLEnv 把 GitHub 上亿级真实 PR 变成了训练信号源。不是合成数据，而是真实开发者在真实项目中解决问题的路径——这比任何人工构造的编程题都更有价值。HuggingFace 出品意味着与现有训练栈（TRL、Axolotl）无缝集成。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为自己的开源项目生成代码修复训练数据</li>
+    <li>训练专用编程 Agent（如某框架/语言专项能力）</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2063624459375071732" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKN3dcqbYAAVfpk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKN3dcqbYAAVfpk?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2059983919844675585/img/iC7UNnXWlRL0meBv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2059983919844675585/img/iC7UNnXWlRL0meBv?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AnySearch — 面向 AI Agent 的免费搜索 API</div>
+  <div class="section"><div class="section-label event">一句话</div><p>专为 Agent 工作流设计的搜索 API，支持接入任意 AI Agent，免费对开发者开放。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="http://anysearch.com" target="_blank">http://anysearch.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 anysearch.com 注册获取 API Key。它提供了与主流 Agent 框架（Codex、LangChain 等）兼容的搜索接口——特点是搜索结果经过结构化处理，Agent 可以直接消费而无需额外解析。在 Codex 中，可以通过 Skill 配置将其作为默认搜索后端。meng shao（研发 TL）用它做每日 AI 团队信息分享，解决了信息广度和置信度判断的问题，全程在 Codex 内完成无需跳出。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>现有搜索 API（Google/Bing）对 Agent 不友好——返回 HTML 需要额外清洗，且费用不菲。AnySearch 的「Agent-first」设计理念把搜索结果直接结构化输出，免费开放意味着开发者可以零成本为 Agent 添加搜索能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为 Coding Agent 添加实时技术文档搜索</li>
+    <li>构建自动化信息监测 Agent（趋势追踪、竞品监控）</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2063411467790246023" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ mlx-audio v0.4.4 — Apple Silicon 上最强的本地 TTS/ASR</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 Mac 上本地运行文本转语音和语音识别，新增 15 个模型，含 OpenAI 兼容的服务端。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>确保你的 Mac 是 Apple Silicon（M1/M2/M3/M4），`pip install mlx-audio` 安装最新 v0.4.4。新增的 15 个 TTS、ASR、VAD 模型覆盖多语言，长文本转录速度大幅提升。它还内置了 OpenAI 兼容的音频服务器——启动后可以用任何兼容 OpenAI API 的工具直接调用本地语音服务。对于想做语音 Agent 的开发者，这是目前 Mac 上功能最完整的离线方案。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Apple Silicon 的统一内存架构让大模型本地推理成为可能，mlx-audio 充分利用了这一点。v0.4.4 的 OpenAI 兼容服务器意味着你可以把本地 Mac 当语音 API 服务器用，零延迟、零费用、数据不出本机。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>构建本地语音助手（替代云 TTS/ASR 服务）</li>
+    <li>播客/会议录音的离线转写和摘要</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2063301957385867652" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKJBzhyXAAA4yYW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKJBzhyXAAA4yYW?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Perculia — Mac 蓝牙一键切换神器（免费）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mac Menu Bar 蓝牙管理工具，一键在多个蓝牙设备间切换，解决「想连音箱却连到 AirPods」的痛点。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://apps.apple.com/us/app/perculia/id1462633284" target="_blank">https://apps.apple.com/us/app/perculia/id1462633284 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Mac App Store 免费下载安装。安装后在顶部 Menu Bar 出现蓝牙图标，点击即可看到当前连接的所有蓝牙设备。想从 AirPods 切换到蓝牙音箱？点一下目标设备就行，无需打开系统设置。特别适合有多套蓝牙设备的用户——大疆麦克风、AirPods、蓝牙音箱、键盘——一键切换避免「以为连上了实际没连」的尴尬。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是 macOS 蓝牙管理的「瑞士军刀」，解决了一个苹果十多年没修的小痛点。免费、轻量、Menu Bar 即用，不需要任何配置。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>视频录制时快速切换音频输入设备</li>
+    <li>办公/娱乐场景间蓝牙设备无缝切换</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2063556949996962046" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKM4QiPboAAsVYa?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKM4QiPboAAsVYa?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKM4pnxagAAiD0V?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKM4pnxagAAiD0V?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ content-repurposing-skills — 博客一键转推文/LinkedIn 的 Agent Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 Agent Skill，把长图文博客自动转成中文推特、即刻和英文 LinkedIn 帖子。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JeffLi1993/content-repurposing-skills" target="_blank">https://github.com/JeffLi1993/content-repurposing-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>`git clone` 后配置到你的 Codex/Claude Code 的 skills 目录。包含两个 Skill：`blog-to-twitter-post`（博客→中文推文/即刻）和 `blog-to-linkedin-post`（博客→英文 LinkedIn）。使用时只需告诉 Agent「把这篇文章转成推文」，它会自动提取核心观点、压缩篇幅、适配平台语气。作者正在开发 Twitter Threads 和 LinkedIn Carousel 支持。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>内容分发是创作者最耗时的环节，这个工具把「写一篇→发三平台」自动化了。开源意味着你可以定制风格和输出格式，对于做个人品牌的技术博主尤其实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>技术博客作者一键多平台分发</li>
+    <li>出海产品的内容本地化（中→英）</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2063612708336062471" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKNszgab0AAIV5t?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKNszgab0AAIV5t?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKNszgQbMAAZbZd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKNszgQbMAAZbZd?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKNszgbakAA_axf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKNszgbakAA_axf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 宝玉的 Claude Design HAR 解析工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>解析 Claude Design 传输的 protobuf 二进制数据，逆向查看其设计 Prompt。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/dotey" target="_blank">https://x.com/dotey ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Claude Design 前后端通信使用 Protocol Buffers 而非 JSON，无法直接查看传输内容。宝玉发现客户端 JS 中有 protobuf schema，于是写了解析 HAR 文件的工具来解密。使用方式：在浏览器 DevTools 导出 Claude Design 的 HAR 文件，用该工具解析即可看到完整的请求 Prompt 和响应数据——相当于逆向工程了 Anthropic 的设计系统指令。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是对 Claude Design 最深入的逆向分析，揭示了大厂设计 Agent 的 Prompt 工程思路。对于想做自己设计 Agent 的团队，了解 Claude Design 的提示策略比盲目模仿 UI 更有价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学习大厂 Agent 的 Prompt 设计模式</li>
+    <li>开发自有设计 Agent 时参考行业最佳实践</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2063475943402872982" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKLu4EOXAAAzoZu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKLu4EOXAAAzoZu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKLvOXQWYAAy7SV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKLvOXQWYAAy7SV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKLwQ3ZWIAAdcsj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKLwQ3ZWIAAdcsj?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2063441254701010945/img/Pn9IRMuTR5onPKnj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2063441254701010945/img/Pn9IRMuTR5onPKnj?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SMS-Man — 美国虚拟手机号注册服务（有免费版）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在线注册美国虚拟手机号，用于海外服务验证，有免费版可用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://sms-man.com" target="_blank">https://sms-man.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 sms-man.com，选择免费版即可获得一个美国虚拟号码。适合注册需要短信验证的海外服务（OpenAI、Google 等）。付费版提供更多国家和长期号码。注意虚拟号码不一定被所有平台接受，建议先试免费版验证目标平台兼容性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>对于国内开发者来说，海外服务注册的第一步永远是手机验证。SMS-Man 的免费版降低了这个门槛，而且界面简洁、无需 VPN 即可访问。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>注册需要美国号码的 AI 服务</li>
+    <li>测试海外产品的短信验证流程</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2063449552074740190" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 准备 ChatGPT 史上最大改版：从聊天工具变身「超级应用」</div>
+  <div class="section"><div class="section-label event">事件</div><p>英国《金融时报》报道，OpenAI 高管内部宣称「Chat is dead」，计划将 ChatGPT 转型为融合编码工具和 AI Agent 的超级应用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是 ChatGPT 自 2022 年发布以来最大规模的战略转向。OpenAI 显然意识到纯聊天界面已无法承载日益复杂的 Agent 能力——Codex 的成功让他们看到了「工具型 AI」的变现潜力。新增的 Product Design 插件（先出 3 个设计变体再开发）就是这种转型的缩影。从商业模式看，把编码、设计、Agent 整合进一个超级应用，意味着更高的用户粘性和更丰富的付费点（类似 Notion 从笔记→all-in-one 工作台的路径）。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>产品形态从「对话式」转向「工作台式」，将直接冲击 Cursor、Claude Code 等垂类工具的市场空间。但同时也会教育用户接受 Agent 工作流，对全行业是利好。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2063686036895478162" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKOAynTbQAA1ztT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKOAynTbQAA1ztT?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKOAyo6bgAAcSy2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKOAyo6bgAAcSy2?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKOAynVaoAA72WB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKOAynVaoAA72WB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKOAynVbYAAt7L_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKOAynVbYAAt7L_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 生态爆发：黑客马拉松冠军开源完整 Playbook</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic x Forum Ventures 黑客马拉松冠军 Affaan Mustafa 开源了 10 个月打磨的「Everything Claude」完整工作流，涵盖 Claude Code 从入门到生产级部署的全部实践。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是 Claude Code 生态从「个人玩具」走向「团队工具」的标志性事件。Playbook 包含了多 Agent 协作、CI/CD 集成、Prompt 模板库等企业级实践，说明 Anthropic 的开发者生态正在形成正循环——用户贡献最佳实践→吸引更多用户→更多贡献。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Claude Code 正在成为 AI 编程的事实标准之一，其开放的 Skill 系统（npx skills add）比 Cursor 的封闭生态更具扩展性。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2063773845337907270" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 人才暗流：OpenAI 高管跳槽 Anthropic</div>
+  <div class="section"><div class="section-label event">事件</div><p>多位推友确认，有 OpenAI 核心人员近期转投 Anthropic，反映行业人才竞争加剧。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>在 GPT-5.5 发布后、ChatGPT 大改版前的关键窗口期，人才流向 Anthropic 值得关注。Claude Opus 4.8 在设计、代码审美等维度被广泛认为优于 GPT-5.5，这可能反映了背后团队文化和研发方向的差异。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>人才流向直接影响产品迭代速度。Anthropic 如果在设计和 Agent 体验上持续领先，可能改写当前 OpenAI 一家独大的格局。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2063442202291007719" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 中国 Agent 工具竞赛加速：Kimi Work + Kimi Code CLI 加入战场</div>
+  <div class="section"><div class="section-label event">事件</div><p>范凯在信息简报中提到 Kimi 正式推出 Agent 工作台和命令行工具，加入与 Codex、Claude Code 的竞争。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>国内大厂正在从「模型能力」竞争转向「Agent 生态」竞争。Kimi 的 CLI 工具对标 Codex，Work 对标 ChatGPT 的新 Agent 界面。这说明「让 AI 干活」而非「跟 AI 聊天」已成为行业共识。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>中国开发者和企业将拥有更多本土化 Agent 工具选择，可能加速 Agent 在国内企业的落地。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2063460639813886351" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/victormustar/status/2063017894221591008" target="_blank"><span class="handle">@victormustar</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2063585103284990029" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/BTCqzy1/status/2063165828208746639" target="_blank"><span class="handle">@BTCqzy1</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2063432154315637025" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2063422532385161381" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2063464057647075379" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2063373480184484016" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2063610166101057894" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2063484505051242977" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2063016485455327232/img/JXYvy-1UzvlyRxRH.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2063016485455327232/img/JXYvy-1UzvlyRxRH.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2063164613919916032/img/rYVcc6Y3cpaBT3mQ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2063164613919916032/img/rYVcc6Y3cpaBT3mQ.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2058751454371041280/img/h56mvth6sxF7D3X1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2058751454371041280/img/h56mvth6sxF7D3X1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2063432057313968128/img/1LbFfrMDMRvV2vGt.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2063432057313968128/img/1LbFfrMDMRvV2vGt.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKK_2d5aQAEQPOH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKK_2d5aQAEQPOH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKK_2d4boAAPWPG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKK_2d4boAAPWPG?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKLlEi5W0AAU0rx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKLlEi5W0AAU0rx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKLlGxGW8AAfciE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKLlGxGW8AAfciE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2063441254701010945/img/Pn9IRMuTR5onPKnj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2063441254701010945/img/Pn9IRMuTR5onPKnj?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKNqeSBXQAAIaB6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKNqeSBXQAAIaB6?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HFWd_dgXoAAqliX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HFWd_dgXoAAqliX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKL4KFGasAA6e6Y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKL4KFGasAA6e6Y?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>NVIDIA Nemotron 3 Ultra：550B Mamba-MoE 开源模型，仅55B活跃参数，1M上下文 <a href="https://x.com/victormustar/status/2063017894221591008" target="_blank">→</a></li>
+    <li>Obsidian Source Mode Inline Images 插件：告别编辑器图片多动症 <a href="https://x.com/appinn/status/2063585103284990029" target="_blank">→</a></li>
+    <li>OpenAI Codex Product Design 插件上线：Agent 先出3个设计变体再写代码 <a href="https://x.com/BTCqzy1/status/2063165828208746639" target="_blank">→</a></li>
+    <li>Seedance 2.1 预告：视频生成从15秒升级到60秒 <a href="https://x.com/Gorden_Sun/status/2063432154315637025" target="_blank">→</a></li>
+    <li>Spotify 新增 AI Agent：语音对话找歌建歌单 <a href="https://x.com/vista8/status/2063422532385161381" target="_blank">→</a></li>
+    <li>宝玉新书发布：AI编程实战指南 <a href="https://x.com/dotey/status/2063464057647075379" target="_blank">→</a></li>
+    <li>wanman.ai 灰度上新：Agent 互联互通打造虚拟公司 <a href="https://x.com/turingou/status/2063373480184484016" target="_blank">→</a></li>
+    <li>Hermes Agent 橙皮书 v2 筹备中：0.7→0.16版本飞跃 <a href="https://x.com/AlchainHust/status/2063610166101057894" target="_blank">→</a></li>
+    <li>微软 Clarity AI Visibility 免费上线：追踪你的内容是否被 AI 引用 <a href="https://x.com/CoderJeffLee/status/2063484505051242977" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

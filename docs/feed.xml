@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 07 Jun 2026 00:37:21 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 00:35:36 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/08 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-08.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-08.html</guid>
+      <description>Cursor 推出类 Claude Design 的内置设计工作流，Raycast 发布 Glaze（一句话生成 Mac App 并上架），AI 开发工具正从「写代码」进化到「做产品」——设计+开发+发布一体化。</description>
+      <pubDate>2026-06-08T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/07 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-07.html</link>
