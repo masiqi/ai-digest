@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 09 Jun 2026 01:12:02 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 00:39:23 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/10 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-10.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-10.html</guid>
+      <description>Anthropic 放出「带护栏的 Mythos」——Claude Fable 5 正式上线，基准测试几乎全线 SOTA，软件工程/长任务领域领先幅度极大。但仅免费到6月22日，之后只能 API 调用。同日 Google Gemini 3.5 Live 发布实时翻译模型，被完全淹没。工具侧，Kuse Workflow 用自然语言生成自动化工作流、MiMo 推出 1000 token/s 超高速模型。</description>
+      <pubDate>2026-06-10T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/09 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-09.html</link>

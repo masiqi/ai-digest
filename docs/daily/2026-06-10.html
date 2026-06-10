@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-10</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-10</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Anthropic 放出「带护栏的 Mythos」——Claude Fable 5 正式上线，基准测试几乎全线 SOTA，软件工程/长任务领域领先幅度极大。但仅免费到6月22日，之后只能 API 调用。同日 Google Gemini 3.5 Live 发布实时翻译模型，被完全淹没。工具侧，Kuse Workflow 用自然语言生成自动化工作流、MiMo 推出 1000 token/s 超高速模型。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Kami v1.7</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 Markdown 渲染成精美幻灯片的开源工具，支持 HTML/PDF/PPTX 输出</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/kami" target="_blank">https://github.com/tw93/kami ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接 `git clone` 项目到本地，写 Markdown 即可生成幻灯片。支持图表（Mermaid/ECharts）、支持打印导出、无需额外配置。新增韩语支持，文档网站更锐利。安装后 `npm install &amp;&amp; npm run dev` 就能在浏览器里预览，写完直接导出 PDF 或 PPTX 分享。适合需要频繁做技术分享但不想用 PowerPoint/Keynote 的开发者。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Tw93 的开源项目一向质量极高（Star 数万级别），Kami 把「写 Markdown = 做幻灯片」这件事打磨到了极致，渲染效果接近专业设计工具。v1.7 版本在排版、多语言和图表支持上都有显著提升。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>技术分享/内部分享：写完文档即幻灯片，零切换成本</li>
+    <li>课程讲义制作：Markdown 管理内容 + 一键导出多格式</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2064500116787257514" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKaT50haUAAc9AE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKaT50haUAAc9AE?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kuse Workflow</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用自然语言描述需求，AI 自动生成稳定可复用的自动化工作流</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://kuse.ai" target="_blank">https://kuse.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问官网注册账号，用大白话描述你想要的工作流（例如「监控谷歌邮箱，收到特定邮件自动分析内容并回复」），Kuse 会给出选项，点选后自动创建。已打通 Google 全家桶、Notion、Slack、GitHub、Jira、Canva、Figma 等大量第三方工具。工作流支持定时执行和事件触发。比 n8n 简单得多，不需要手动拖拽节点。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>n8n 级别的能力但零门槛，真正把自动化工作流从「只有工程师能用」拉到了「人人可用」。自然语言生成 + 丰富的应用生态，这是低代码/无代码自动化的下一个形态。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>邮件自动分类、分析和回复</li>
+    <li>竞品监控：自动抓取价格变动并邮件提醒</li>
+    <li>社交媒体自动化：从 Reddit 抓热点 → 生成推文 → 自动发送</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2064257254820552790" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064256569655820288/img/L2rHJJk4xFmpbAkA.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064256569655820288/img/L2rHJJk4xFmpbAkA.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cohere North Mini Code</div>
+  <div class="section"><div class="section-label event">一句话</div><p>3B 激活参数的 MoE 编码小模型，Apache 2.0 开源，专为 Agentic Coding 打磨</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/CohereForAI" target="_blank">https://huggingface.co/CohereForAI ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>去 HuggingFace 搜索「North Mini Code」，下载模型权重（约 6GB），用 Ollama 或 vLLM 本地部署。3B active 参数意味着普通笔记本就能跑，在 Artificial Analysis Coding Index 上拿到 33.4 分，和同量级对手打得有来有回。适合嵌入到自己的 Agent 工作流中做代码生成，或者用来做本地代码补全。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>30B 总参数但只有 3B 激活的 MoE 架构，效率极高。Apache 2.0 协议意味着可以商用、可以微调、可以随便改。这是目前开源编码小模型里最有诚意的发布之一。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地代码补全/生成，无需联网</li>
+    <li>嵌入 Agent 框架做 autonomous coding</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2064478144078471576" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Zero to Claude Code（中文版）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Wix VP 出品的免费课程，从零基础教你用 Claude Code 构建真正的产品</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://zero2claude.dev" target="_blank">https://zero2claude.dev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开网站即可开始学习，已有简体中文版。课程从 Claude Code 安装配置开始，手把手带你构建真实产品，全程免费。已有 300 名中国学生在学习。作者 Itay Shmool 专门用中文官宣，表达了对中文 AI 社区的感谢。不需要任何编程基础。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Claude Code 是目前最强的 Coding Agent 之一，但学习曲线陡峭。这个课程由 Wix 的 VP 亲自制作，从实战出发，不是学院派教程。中文版的推出让国内开发者零障碍上手。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>零基础入门 Claude Code Agent 开发</li>
+    <li>学习 Agent-Native 开发范式</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2064484255154196680" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKaFe_7bEAAw3PQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKaFe_7bEAAw3PQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKY2P_8WwAAHfnr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKY2P_8WwAAHfnr?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ShipAny 新版本</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Agent-Native 开发框架，专为 AI Coding 设计，三套模板一键部署</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://shipany.ai" target="_blank">https://shipany.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>ShipAny 发布了三套基础模板：shipany-next（Agent-Native 框架，通过内置 Skills 极速开发）、shipany-vinext（基于 Cloudflare Vinext，一键部署到 Workers，体积是原版 1/7）、以及一个绑定 CF 的版本。适合用 Claude Code/Codex 来驱动开发，内置的 Skills 让 Agent 理解项目结构更快。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>idoubi 是 ShipAny 作者，这个框架精准抓住了「AI 写代码」时代的新需求——代码结构要对 Agent 友好。模板化 + Skills 内置的设计让 AI 编码效率翻倍。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用 Claude Code/Codex 快速启动 SaaS 项目</li>
+    <li>一键部署到 Cloudflare，零运维</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2064304410361311368" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKXaLJhbIAAndhs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKXaLJhbIAAndhs?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKXaftAawAAGFW8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKXaftAawAAGFW8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKXa-4uboAA7yOB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKXa-4uboAA7yOB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKXcM1sa4AATHF-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKXcM1sa4AATHF-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Memento-Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>自我进化的 Agent 框架，Agent 从失败中学习并自动重写自己的 Skills</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Sumanth077/memento-skills（搜索此项目名）" target="_blank">https://github.com/Sumanth077/memento-skills（搜索此项目名） ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后，配置你的 LLM API key，启动 Agent 并给它一个任务。当 Agent 执行失败时，Memento-Skills 不会简单地报错退出——它会分析失败原因，自动修改对应的 Skill 文件，然后重新尝试。这解决了当前大多数 Agent 框架的痛点：Skills 是静态的，写一次就不管了，失败后需要人工调试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个设计思路非常前沿——让 Agent 具备「从错误中学习」的能力，而不是每次都重新发明轮子。如果这个模式成熟，Agent 的可靠性将大幅提升。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长期运行的自主 Agent，自动迭代优化策略</li>
+    <li>复杂任务编排，失败后自修复</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2064344585065926878" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKYGdavaMAAdEmO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKYGdavaMAAdEmO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MiMo V2.5 Pro UltraSpeed</div>
+  <div class="section"><div class="section-label event">一句话</div><p>全球首个 1000+ token/s 的万亿参数模型，输出速度炸裂</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mimo.app" target="_blank">https://mimo.app ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 MiMo 官网或 App，选择 V2.5 Pro UltraSpeed 模型即可体验。归藏实测跑了复杂 3D 场景生成、长文写作等任务，速度体感提升极其明显。1T 参数模型达到这个速度，意味着复杂推理任务不再需要等几十秒——几乎实时出结果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>1000 token/s 是一个里程碑。之前这个速度只存在于小模型，1T 参数级别能达到这个吞吐量，说明推理优化有了质的突破。对于需要实时交互的 Agent 场景意义重大。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>实时编码辅助，代码生成几乎无延迟</li>
+    <li>复杂推理任务（数学/逻辑）快速迭代</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2064257622803710463" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064257508290732032/img/Rftn5s3czZrmaorT.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064257508290732032/img/Rftn5s3czZrmaorT.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Skills For Real Engineers - Teach Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>GitHub 122K Star 的 Skills 仓库推出新 Skill，把终端目录变成有状态学习空间</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mattpocock/skills/tree/main/skills/productivity/teach" target="_blank">https://github.com/mattpocock/skills/tree/main/skills/productivity/teach ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装该 Skill 后，在任意项目目录下激活 Teach 模式，AI 会把当前目录当作「教材」，根据目录中的代码、文档等内容生成交互式学习体验。设计理念是 Knowledge → Skills → Wisdom，适合用来快速理解一个陌生项目的代码结构和设计思路，或者用来教别人理解你的代码库。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>mattpocock 是 TypeScript 圈的顶级内容创作者，他的 Skills 仓库是 Claude Code/Codex 生态里最受欢迎的资源之一。Teach Skill 把「理解代码」从被动阅读变成了主动教学，这个方向非常有想象力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速上手陌生开源项目</li>
+    <li>团队新人 onboarding，让 AI 带新人读代码</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2064144978792878348" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKVQ6UVbcAAZ_tt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKVQ6UVbcAAZ_tt?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 瑞幸咖啡 CLI/Skills/MCP</div>
+  <div class="section"><div class="section-label event">一句话</div><p>瑞幸咖啡居然开源了 CLI 工具、Skills 和 MCP 服务，程序员可以用命令行下单</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://open.lkcoffee.com" target="_blank">https://open.lkcoffee.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 open.lkcoffee.com 查看安装方式，安装 CLI 后可以在终端里直接下单买咖啡。更骚的是它提供了 MCP 服务，意味着你可以在 Claude Code/Codex 里通过 MCP 工具调用直接下单。还可以绑定支付方式实现「AI 自动帮你买咖啡」。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这可能是国内第一个把 CLI/Skills/MCP 全部开放的大众消费品牌。虽然看起来是营销噱头，但技术栈非常完整，说明瑞幸的技术团队是认真在做开发者生态。这个模式如果跑通，会有更多品牌跟进。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>终端里一键下单咖啡，不打断工作流</li>
+    <li>接入 Agent，让 AI 根据工作状态自动帮你买咖啡</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2064270588093649177" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKXCwegbwAANBwL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKXCwegbwAANBwL?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Fable 5 &amp; Mythos 5 正式发布</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 同日发布两个模型——Fable 5（带安全护栏，面向所有用户）和 Mythos 5（去部分限制，仅供 Project Glasswing 网络安全合作伙伴）。两者共享同一底座。Fable 5 基准测试全线 SOTA，软件工程/知识工作/科研/视觉领域领先幅度极大。Andrej Karpathy 称这是「自 Claude 4.5 以来最重大的进步」。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Anthropic 的策略很清晰——把最强模型做安全处理后给大众用（Fable 5），原始版本只给安全合作伙伴用（Mythos 5）。但 Fable 5 的定价是 Opus 的 3 倍、速度是 Opus 的 10 倍，且 6 月 22 日后订阅用户也无法直接使用，只能走 API。这实质上是一次「实力展示 + API 推广」，同时为 Project Glasswing（AI 驱动的网络安全）铺路。Cloudflare 已作为零号客户运行 Mythos 5。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Anthropic 形成了完整产品线（Haiku → Sonnet → Opus → Fable → Mythos），且 Fable/Mythos 在编码和长任务领域拉开了与竞品的差距。但高定价和限时免费策略也让普通用户感到不安。对 OpenAI 和 Google 构成直接压力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2064397772103528771" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKY5eixXIAE9EAZ.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HKY5eixXIAE9EAZ.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google Gemini 3.5 Live 实时翻译模型发布</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 发布 Gemini 3.5 Live，主打实时翻译能力，同时 Gemini 模型已通过 Apple Foundation Models 框架在 Xcode 中原生支持。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>发布时机极其不幸——刚发完就被 Fable 5 刷屏淹没。但 Gemini 3.5 Live 的实时翻译能力本身是强需求，且集成到 Apple 生态意味着所有 iOS/macOS 开发者都能直接调用。Google 正在从「和 OpenAI 卷 benchmark」转向「嵌入生态」，这个策略更务实。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Google 在消费者 AI 心智上持续落后，但开发者生态渗透在悄悄推进。Apple + Gemini 的组合可能在下半年产生实际产品。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2064490691137618317" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064398534800265216/img/OCcrVWjbWc2-0rDz.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064398534800265216/img/OCcrVWjbWc2-0rDz.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 WWDC 2026：iPhone Fold 折叠屏抢先体验</div>
+  <div class="section"><div class="section-label event">事件</div><p>WWDC 2026 没有重大发布，但 iOS 27 的 Mac iPhone 镜像模式支持调整窗口大小，被解读为 iPhone Fold 折叠屏的提前适配。国内媒体已展示过折叠屏效果的音乐播放界面。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>苹果用软件更新悄悄为硬件铺路，这是其一贯作风。iPhone Fold 预计售价 1.5 万+起步，通过镜像模式让开发者和用户提前适应折叠屏交互，是聪明的过渡策略。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>折叠屏 iPhone 可能成为苹果下一个增长点，iOS 生态将迎来新的交互范式。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2064497756778205633" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064497603845439488/img/tl5b99KVGNMfz2Ly.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064497603845439488/img/tl5b99KVGNMfz2Ly.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 发布「第三阶段」战略</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 宣布第三阶段三大目标：构建自动化 AI 研究员、加速经济增长、给地球上每个人一个个人 AI 助手。Sam Altman 强调「强大系统必须保持安全、对齐人类意图」。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是 OpenAI 首次系统性地阐述 AGI 路线图的第三阶段。自动化 AI 研究员意味着让 AI 自主做科研，这是通往 AGI 的关键一步。但「给每个人一个个人 AI」这个目标需要极低的推理成本，目前看还需要时间。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>OpenAI 的战略叙事从「模型能力」转向「社会影响」，为其政策和资源争取做铺垫。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2064329544979345412" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2064464986819457210" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AllyHubAI/status/2064382017806975365" target="_blank"><span class="handle">@AllyHubAI</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2064378455526158368" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064369104211865672" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064255836692545837" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064369110184530331" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2064255593138004194" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/micahgoldblum/status/2064361011994337772" target="_blank"><span class="handle">@micahgoldblum</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2064148065771229198" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Cloudflare/status/2064332944743756063" target="_blank"><span class="handle">@Cloudflare</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064381355140464640/img/AaVvwsr4yFXcJVX6.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064381355140464640/img/AaVvwsr4yFXcJVX6.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064378316271054848/img/hLTwvAskF6OeHRtX.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064378316271054848/img/hLTwvAskF6OeHRtX.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKW1hDmbQAAJd2h?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKW1hDmbQAAJd2h?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKYUV_bWIAEFN1t?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKYUV_bWIAEFN1t?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKVTtscbUAAa2Np?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKVTtscbUAAa2Np?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>agentsview.io：Simon Willison 分享的 Claude Fable 5 token 花费追踪工具，支持自定义模型定价 <a href="https://x.com/simonw/status/2064464986819457210" target="_blank">→</a></li>
+    <li>AllyHub AI：12 美分让 AI 分析 580 篇社交媒体帖子并生成完整报告 <a href="https://x.com/AllyHubAI/status/2064382017806975365" target="_blank">→</a></li>
+    <li>Seedance：AI 视频生成工具，用 AI 写的提示词生成有模有样的视频 <a href="https://x.com/Gorden_Sun/status/2064378455526158368" target="_blank">→</a></li>
+    <li>Tutti：让 macOS 多设备同步音频输出的小工具 <a href="https://x.com/appinn/status/2064369104211865672" target="_blank">→</a></li>
+    <li>Ameow 0.3.0：常驻桌面的悬浮窗，统一收纳拖拽/粘贴/浏览器内容 <a href="https://x.com/appinn/status/2064255836692545837" target="_blank">→</a></li>
+    <li>多点AI浏览器：一个界面同时和多个网页 AI 对话 <a href="https://x.com/appinn/status/2064369110184530331" target="_blank">→</a></li>
+    <li>Google LEAP：通用大模型无需微调做形式化数学证明，Putnam 竞赛 12 题全解 <a href="https://x.com/Gorden_Sun/status/2064255593138004194" target="_blank">→</a></li>
+    <li>LCLM 潜在上下文语言模型：将海量上下文压缩为微小潜在表示，超越 KV 缓存压缩方法 <a href="https://x.com/micahgoldblum/status/2064361011994337772" target="_blank">→</a></li>
+    <li>Claude Code 一周年回顾：负责人 Boris Cherny 分享方法论，从 2 个 Slack 点赞到主流 Coding Agent <a href="https://x.com/shao__meng/status/2064148065771229198" target="_blank">→</a></li>
+    <li>Cloudflare Project Glasswing：围绕漏洞的架构防御，作为 Mythos 5 零号客户运行 <a href="https://x.com/Cloudflare/status/2064332944743756063" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
