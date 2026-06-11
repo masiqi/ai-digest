@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 10 Jun 2026 00:39:23 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 00:36:54 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/11 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-11.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-11.html</guid>
+      <description>Claude Fable 5 炸场——Anthropic 将 Mythos 降规发布，Agent Coding 基准远超 Opus 4.8，同时秘密提交 S-1 准备 IPO（估值或达 $965B）。但开放社区对 Anthropic 限制 AI 研究用途和「自我保存」条款的争议也在升温。另一边，Google 用 DiffusionGemma 把文本生成干到 4 倍速，开源 Apache 2.0；Cohere 开源 North Mini Code，小而美的 MoE 编程模型。</description>
+      <pubDate>2026-06-11T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/10 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-10.html</link>

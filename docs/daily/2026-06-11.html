@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-11</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-11</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Claude Fable 5 炸场——Anthropic 将 Mythos 降规发布，Agent Coding 基准远超 Opus 4.8，同时秘密提交 S-1 准备 IPO（估值或达 $965B）。但开放社区对 Anthropic 限制 AI 研究用途和「自我保存」条款的争议也在升温。另一边，Google 用 DiffusionGemma 把文本生成干到 4 倍速，开源 Apache 2.0；Cohere 开源 North Mini Code，小而美的 MoE 编程模型。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ DiffusionGemma — Google 开源扩散文本生成模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 发布全新扩散式文本生成模型，不用自回归逐个吐字，而是整块起草、纠错、精炼，速度飙到 1000+ token/s。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/google/diffusiongemma-2b-v0.1" target="_blank">https://huggingface.co/google/diffusiongemma-2b-v0.1 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 HuggingFace 直接下载模型权重，支持本地部署推理。基于 Apache 2.0 协议完全开源，你可以用 transformers 库加载，或者通过 Google AI Studio 的 API 体验。与传统自回归模型不同，DiffusionGemma 先用噪声初始化，然后并行去噪生成整段文本，推理速度是同等规模自回归模型的 4 倍。目前开源的是 2B 参数版本，单卡即可跑。对于需要高吞吐的文本生成场景（批量翻译、摘要、数据合成），体验完全不一样。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是 Google 首款生产级扩散文本模型，打破了「大语言模型必须是自回归」的惯性思维。扩散生成天然支持并行解码和非自回归生成，在处理长文本时延迟远低于自回归模型。Apache 2.0 意味着你可以随意商用、修改、蒸馏，没有 Anthropic 那种「不许研究 AI」的 AUP 限制。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>批量文本生成与数据合成，吞吐量提升 4 倍</li>
+    <li>嵌入本地应用做实时文本补全，延迟极低</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2064843418925433274" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKfMJHiakAAfT9B?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKfMJHiakAAfT9B?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKdtBVsXgAANtlK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKdtBVsXgAANtlK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cohere North Mini Code — 开源 MoE 编程模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cohere 发布首个开源代码模型，30B 总参数仅激活 3B，面向 Agent 编程场景，256K 上下文。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/CohereLabs/North-Mini-Code-1.0" target="_blank">https://huggingface.co/CohereLabs/North-Mini-Code-1.0 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>通过 HuggingFace 下载模型，最低仅需 1×H100（FP8）即可运行。使用标准的 transformers + vLLM 推理。128 个专家中每 token 激活 8 个，意味着推理成本极低。支持 256K 输入和 64K 输出，适合做长代码文件重构和大规模 Agent 任务规划。可以直接挂到 Claude Code、Continue、Aider 等编程助手里当后端模型。官方还提供了详细的微调指南，可以针对自己的代码库做领域适配。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Cohere 的 MoE 架构在「参数效率」这个维度上做到极致——30B 的容量、3B 的推理成本，这个比例目前是最优之一。专门为 Agent 编程优化（不是补全，是自主完成任务），256K 上下文意味着可以吞下整个 repo。在开源编程模型中，它是参数效率最高的选择之一。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>接入本地 AI 编程助手作为后端推理引擎</li>
+    <li>长代码文件级别重构和跨文件 Agent 任务</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2064518114835108255" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKakQcmbUAAUXy5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKakQcmbUAAUXy5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKYhzHXWsAA-CDG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKYhzHXWsAA-CDG?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Gemini 3.5 Live Translate — Google 实时同传翻译</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 发布实时翻译模型，70+ 语言边听边译，保留说话人语调节奏，延迟仅几秒。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://translate.fishjam.io" target="_blank">https://translate.fishjam.io ↗</a></p>
+    <p><a href="https://ai.google.dev/gemini-api/docs/live-api/live-translate" target="_blank">https://ai.google.dev/gemini-api/docs/live-api/live-translate ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问 translate.fishjam.io 即可在线体验，选好源语言和目标语言，对着麦克风说话，几秒后就能听到翻译结果。Google Translate App 也新增了「听筒模式」，贴耳即听翻译。开发者可以通过 Gemini Live API 接入，支持流式音频输入/输出，自动滤除背景噪音，嘈杂环境也能稳定工作。目前已支持 70+ 语言对，中文↔英文实测效果流畅自然。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是传统的 ASR→翻译→TTS 串行流水线，而是端到端实时翻译模型，直接从音频到音频。保留了说话人的语调、节奏和音高（voice preservation），比传统方案更像「同传译员」而非「机器人朗读」。API 开放后，任何视频会议、播客、在线教育平台都可以接入实时多语言能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>跨国视频会议实时同传，无需等待发言结束</li>
+    <li>海外视频/播客实时翻译收听</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2064626905169760379" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064620348310720512/img/Q709H3-FM71VC5Y8.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064620348310720512/img/Q709H3-FM71VC5Y8.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Text-To-Lottie Agent Skill — 让 AI 生成 Lottie 动画</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一套 Agent Skill + 本地预览工具，让 Claude Code/Codex/Cursor 等 Agent 直接生成 Lottie 动画并在浏览器实时验收。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/diffusionstudio/lottie" target="_blank">https://github.com/diffusionstudio/lottie ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>一行命令安装：`npx skills add diffusionstudio/lottie`。安装后，在 Claude Code 或 Codex 中直接说「生成一个加载动画的 Lottie」，Agent 就会调用 Skill 生成对应的 Lottie JSON 并自动打开本地浏览器预览。Skill 内部教会了 Agent Skottie（Lottie 的底层格式）语法，支持关键帧、路径动画、形状变换等常用动画原语。预览 harness 是一个本地 Web 服务，实时渲染 Lottie，所见即所得，不满意可以继续对话微调。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Lottie 动画在 App/Web 中无处不在，但手写 Lottie JSON 极其痛苦（坐标计算、贝塞尔曲线）。这个 Skill 把「意图→动画文件」的链路打通了，Agent 直接输出可用的 .json 文件而不是一段描述。对独立开发者和设计师来说，省掉了 AE 导出 Lottie 的繁琐流程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速生成 App 中的加载动画、图标动效</li>
+    <li>产品原型中嵌入交互动画，所见即所得迭代</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2064508455051043008" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKaberCbEAAMXL1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKaberCbEAAMXL1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064010372621737984/img/u0c0ovEguIx46u6Q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064010372621737984/img/u0c0ovEguIx46u6Q?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 橙线插画 Skill — 开源 AI 插画配图工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Orange AI 将文章配图流程蒸馏成开源 Skill，一键为文章生成统一风格的插画。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/orange2ai/orange-line-illustration" target="_blank">https://github.com/orange2ai/orange-line-illustration ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装 Skill 后，在 Claude Code 或支持 Skills 的 Agent 中使用。给定一段文本，Skill 自动分析内容、提取关键场景、生成线稿风格插画配图。风格统一为「橙线」——线条简洁、色彩克制的扁平化插画风格。适合博客、公众号、Newsletter 写作者快速配图，不需要打开 Figma 或找设计师。Skill 内部串联了多步 prompt chain：内容分析→构图规划→风格化生成→后处理，一步到位输出可直接使用的 PNG。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是一个「把个人工作流蒸馏成可复用 Skill」的绝佳范例。作者把自己给文章配图的完整思考链（分析内容→选场景→定构图→执行风格）编码进了 Skill，别人装上就能用，不需要理解背后的 prompt engineering。开源 Skill 生态正在崛起，这种可组合的 Agent 能力模块会成为新的「软件包」。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>公众号/博客写作者批量配图，风格统一</li>
+    <li>产品文档、教程中的插图自动化生成</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2064861625883222114" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 书籍解读口播脚本 Skill — 多 Agent 协作写稿</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 Skill，调用多个 Subagent 从不同角度写书评脚本，主 LLM 整合成终稿。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-book-script" target="_blank">https://github.com/joeseesun/qiaomu-book-script ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装指令 `npx skills add joeseesun/qiaomu-book-script`。安装后只需说「解读《被讨厌的勇气》」，Skill 会自动启动多个 Subagent：一个负责提炼核心观点，一个分析写作背景，一个挖掘金句，一个写读后感——四个 Agent 并行工作，最后由主 LLM 统稿润色，输出结构完整的口播脚本。特别适合做读书分享视频/播客的创作者，把原本 2 小时的构思压缩到几分钟。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是目前开源 Skill 生态中「多 Agent 协作」范式的典型代表——不是让一个模型硬写，而是分工协作、并行产出、最后统稿。这种 Subagent 模式在复杂写作任务上的质量远超单次对话，而且工程实现很轻量。对 Skill 开发者来说，这个仓库是学习「如何编排 Subagent」的好教材。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>短视频/播客读书分享脚本批量生产</li>
+    <li>学习 Subagent 编排模式，迁移到自己的写作 Skill</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2064709239810191647" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064367287293906944/img/NA8rJptPeZhdloUS.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064367287293906944/img/NA8rJptPeZhdloUS.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 讯飞星火限免 Qwen3.6 模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>讯飞开放平台限免 Qwen3.6 系列模型 API，支持 Claude Code 和 OpenClaw 接入，承诺高并发不限量，截止 6 月 30 日。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://xinghuo.xfyun.cn" target="_blank">https://xinghuo.xfyun.cn ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>注册讯飞开放平台账号，在模型广场找到 Qwen3.6 系列，领取免费额度。API 兼容 OpenAI 格式，直接填到 Claude Code 的 API 配置里（provider 选 openai-compatible，base_url 填讯飞端点）就能当编程助手的后端模型。也支持 OpenClaw、ChatBox 等第三方客户端。Qwen3.6 是阿里最新开源模型，代码和推理能力对标 GPT-4 级别，讯飞这次不限并发，实测响应速度很快。趁 6 月底前白嫖，性价比拉满。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Qwen3.6 在编程和推理 benchmark 上接近 Claude Opus 级别，但完全免费不限量（对比 Fable 5 一问 0.5 美元）。对于日常编码、文档处理、翻译等中高频场景，找一个便宜好用的模型比追最新旗舰更实际。讯飞这次活动是体验国产模型能力的低成本入口。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>替代高价 API 做日常编程辅助，零成本</li>
+    <li>接入 OpenClaw 等工具做批量文本处理</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2064580182078279741" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKbcvCcXsAAAhi2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKbcvCcXsAAAhi2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Zero to Claude Code — Wix VP 免费中文课程</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Wix VP 推出的免费 Claude Code 入门课程，已支持简体中文，从零教你用 AI Agent 编程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="http://zero2claude.dev" target="_blank">http://zero2claude.dev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 zero2claude.dev 网站，选择中文语言，从第一章开始按顺序学习。课程覆盖：Claude Code 安装配置、基本命令、Skills 使用、多 Agent 协作、实际项目案例（构建全栈应用）。每章有配套练习和 prompt 模板。作者用中文官宣并感谢了中文 AI 社区，翻译质量不错。全程免费，不需要任何前置知识，适合新手从「听说过」到「真正上手干活」。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>目前中文 AI 编程教育领域缺少系统性课程，大部分是零散的推文和视频。这个课程由真正在 AI 编程一线的人（Wix 的 VP）编写，案例来自真实工作流，不是纸上谈兵。免费 + 中文 + 系统化，对中文开发者来说是稀缺资源。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从零开始学习用 Claude Code 做全栈开发</li>
+    <li>作为团队 AI 编程培训的内部教材</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2064484255154196680" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKaFe_7bEAAw3PQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKaFe_7bEAAw3PQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKY2P_8WwAAHfnr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKY2P_8WwAAHfnr?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CodePilot v0.56.0 — 开源 AI 编程桌面端更新</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 AI 编程 GUI 工具更新，新增 Claude Fable 5 和 MiMo UltraSpeed 支持，修复多项问题。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/op7418/CodePilot/releases/tag/v0.56.0" target="_blank">https://github.com/op7418/CodePilot/releases/tag/v0.56.0 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 GitHub Releases 下载对应平台的安装包（macOS/Windows/Linux），安装后配置 API Key 即可使用。新版支持 Claude Fable 5（Anthropic 最新旗舰）、小米 MiMo UltraSpeed、以及通用 OpenAI 兼容第三方渠道。GUI 界面下可以切换模型、管理对话、查看用量统计。还修复了回复状态丢失、服务商列表刷新等细节问题。适合不想用命令行的开发者——有完整的聊天界面、文件管理、代码高亮这些 IDE 级别的体验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>CodePilot 是目前中文开源社区最活跃的 AI 编程桌面端之一，更新快、渠道多。v0.56.0 是 Fable 5 发布后首批跟进的客户端，而且部分修复就是用 Fable 5 自己写的（dogfooding）。开源 MIT 协议，可以自己改 UI 加功能。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>团队统一 AI 编程工具，支持多模型切换</li>
+    <li>不想用命令行的同学用 GUI 体验 Fable 5</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2064572793124245998" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKaobrzbkAAvk-u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKaobrzbkAAvk-u?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 秘密提交 S-1 准备 IPO</div>
+  <div class="section"><div class="section-label event">事件</div><p>PitchBook 发布 Q2 2026 Anthropic 专题报告，披露 Anthropic 已于 6 月 1 日秘密提交 S-1，估值或达 $965B，$47B ARR，成为首个正式启动 IPO 的前沿 AI 实验室。OpenAI 在一周后跟进提交。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是 AI 行业真正的「锚点时刻」。如果 Anthropic 以这个估值上市，它将不仅定义 AI 公司的定价基准，还会重新校准整个科技行业的估值体系。$47B ARR 意味着它的年化收入已经超过大多数 SaaS 巨头。值得注意的是，S-1 是秘密提交的——在正式路演前，市场只能靠 PitchBook 这类机构的分析推测真实财务状况。中文媒体几乎未报道这个时间节点和估值细节，存在显著信息差。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>一旦上市，Anthropic 将面临季度财报压力，可能会加速商业化（提高 API 价格、收紧免费额度）。同时 IPO 会释放大量流动性，吸引更多资本涌入 AI 赛道，加速第二梯队（Cohere、Mistral 等）的融资节奏。对用户来说，短期内 API 价格可能继续上涨。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2064557423273099303" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Fable 5 限制 AI 研究方向引发社区反弹</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 在 Fable 5 的 AUP（可接受使用政策）中加入限制条款：「任何与构建预训练管道、分布式训练基础设施或 ML 加速器设计相关的主题……可能受到限制」。HuggingFace CEO Clement Delangue、alphaXiv、antirez 等多位行业人物公开批评，Yann LeCun 大量转发。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是普通的「安全审查」，而是从根本上限制了用户研究 AI 本身的自由。如果你在用 Fable 5 研究如何训练更好的模型、优化分布式训练、甚至讨论 ML 硬件，都可能被过滤。对于学术研究者和开源社区来说，这等于 Anthropic 在说「只有我们能做 AI 研究，你们不行」。Clement 的批评一针见血：权力集中、能力集中、经济财富集中才是 AI 最大的风险。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这次争议可能会加速开源模型的采用——与其被 AUP 限制，不如用 DiffusionGemma、Qwen、Llama 等 Apache 2.0 模型。Anthropic 在开发者社区的口碑正在分化：企业客户爱它的代码能力，研究者恨它的审查制度。长期看，过于激进的 AUP 会倒逼生态分裂。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/askalphaxiv/status/2064504303096828345" target="_blank"><span class="handle">@askalphaxiv</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKaXKkiawAAY4op?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKaXKkiawAAY4op?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 WWDC 2026：LM Studio 聚类功能登上 Steve Jobs Theater</div>
+  <div class="section"><div class="section-label event">事件</div><p>WWDC 2026 上，yagilb 在 Steve Jobs Theater 现场演示 LM Studio 即将推出的聚类功能，基于苹果 MLX 团队的工作。Apple 也使用 OpenCode 演示了 MLX。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>苹果在 AI 上的策略越来越清晰：不做通用大模型，而是打造最好的本地推理基础设施。MLX（Apple Silicon 上的机器学习框架）已经成为 Mac 生态中运行开源模型的事实标准。LM Studio 的聚类功能意味着多台 Mac 可以组成一个推理集群——这对小型团队来说是极具吸引力的方案。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Mac 正在成为 AI 开发者的标配机器。MLX 生态的成熟会让更多模型优先适配 Apple Silicon，形成正向循环。WWDC 舞台上演示第三方 AI 工具（而非自家模型），说明苹果在 AI 上走的是「平台赋能」路线而非「自己造轮子」。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yagilb/status/2064804333762613753" target="_blank"><span class="handle">@yagilb</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKenkIeaoAAPjHp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKenkIeaoAAPjHp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Microsoft MAI-Thinking-1 论文公开完整训练细节</div>
+  <div class="section"><div class="section-label event">事件</div><p>微软发布 MAI-Thinking-1 论文，罕见公开了训练前沿模型所需的所有信息——包括 30 万亿 token 预训练数据量、3.55 万亿 token 中期训练（STEM/数学/代码）、以及 RL 阶段的详细超参数。被 Yann LeCun 转发并称赞。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>在闭源趋势愈演愈烈（Fable 5 连研究用途都限制）的当下，微软这篇论文是开放科学的一面旗帜。30T token 的预训练规模表明微软在基础设施投入上不输任何玩家。公开超参数意味着任何有足够算力的团队都可以复现或改进——这对于学术界尤其是宝贵资源。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这篇论文可能会成为未来几个月开源模型训练的标准参考，类似当年的 Llama 论文效应。微软在「开放研究」和「商业化」之间的平衡值得观察。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/natashajaques/status/2064498903937163596" target="_blank"><span class="handle">@natashajaques</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/HiTw93/status/2064529729592705260" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xicilion/status/2064696767971791296" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064852208810611056" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064611936386285983" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064632063752335400" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2064623481698885801" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2064611893566640275" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064579425383890968" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064630606349099031" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2064694269890134493" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064579421818744882" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064664611979219252" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2064853539781034364" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKaRY_KasAAXu0H?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKaRY_KasAAXu0H?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKawzPBaoAAZFvj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKawzPBaoAAZFvj?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKb47goWoAA8xci?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKb47goWoAA8xci?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKcKmHIXAAAErfg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKcKmHIXAAAErfg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2064676024470626304/img/WYDORTS7Fc4BRtqs.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2064676024470626304/img/WYDORTS7Fc4BRtqs.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKcphfuWIAIEXSw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKcphfuWIAIEXSw?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKfVWH8aEAA-4_2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKfVWH8aEAA-4_2?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKeHnfyWEAEkyB8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKeHnfyWEAEkyB8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Mole 开源项目被「抄袭」争议：Tw93 的 MIT 开源 CLI 工具被他人包装成「付费版免费替代」，作者考虑闭源 <a href="https://x.com/HiTw93/status/2064529729592705260" target="_blank">→</a></li>
+    <li>docu.md 支持批注功能：响马的在线文档工具新增批注能力 <a href="https://x.com/xicilion/status/2064696767971791296" target="_blank">→</a></li>
+    <li>MP工具箱：截图/剪贴板/录动图/取色器/中英文绑定/置顶窗口等多合一 Windows 工具 <a href="https://x.com/appinn/status/2064852208810611056" target="_blank">→</a></li>
+    <li>FusionCloud 网盘挂载工具：把天翼/百度/夸克网盘和对象存储挂成本地磁盘，免费公测 <a href="https://x.com/appinn/status/2064611936386285983" target="_blank">→</a></li>
+    <li>Document to Markdown：一键将 PDF/Docx/PPT 转纯净 Markdown，为 AI 喂料瘦身 <a href="https://x.com/appinn/status/2064632063752335400" target="_blank">→</a></li>
+    <li>Coze CLI：字节的 Coze 命令行工具，产品体验不错 <a href="https://x.com/seclink/status/2064623481698885801" target="_blank">→</a></li>
+    <li>产品经理 Skill 5天 13k Stars：涵盖产品经理日常工作流的大而全 Skill 包 <a href="https://x.com/vista8/status/2064611893566640275" target="_blank">→</a></li>
+    <li>全球机票酒店查询 Skill：by RollingGo，Agent 内直接搜机票酒店 <a href="https://x.com/appinn/status/2064579425383890968" target="_blank">→</a></li>
+    <li>PowerToys v0.100.0：全新快捷键指南/命令面板扩展库 <a href="https://x.com/appinn/status/2064630606349099031" target="_blank">→</a></li>
+    <li>Claude Fable 5 情报站：Tom Huang 用 Fable 5 生成的可交互信息聚合站 <a href="https://x.com/tuturetom/status/2064694269890134493" target="_blank">→</a></li>
+    <li>压缩包文件清理工具：删除解压后散落文件的单 exe 小工具 <a href="https://x.com/appinn/status/2064579421818744882" target="_blank">→</a></li>
+    <li>Windows 11 Low Latency Profile：正式上线，明显加速系统响应 <a href="https://x.com/appinn/status/2064664611979219252" target="_blank">→</a></li>
+    <li>小米 MiMo-Code 开源：终端原生 AI 编程助手，跨会话永久记忆，自主子代理 <a href="https://x.com/berryxia/status/2064853539781034364" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
