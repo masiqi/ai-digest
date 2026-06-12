@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 11 Jun 2026 00:36:54 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 00:36:58 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/12 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-12.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-12.html</guid>
+      <description>Claude Fable 5 持续刷屏——社区一边用它生成炫酷网页和应用，一边激烈争论 Anthropic 的发布策略与隐藏拒绝机制。同时小米发布免费 Coding Agent MiMo Code，AI 支付协议大战正式开打。</description>
+      <pubDate>2026-06-12T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/11 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-11.html</link>

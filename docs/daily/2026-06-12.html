@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-12</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-12</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Claude Fable 5 持续刷屏——社区一边用它生成炫酷网页和应用，一边激烈争论 Anthropic 的发布策略与隐藏拒绝机制。同时小米发布免费 Coding Agent MiMo Code，AI 支付协议大战正式开打。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Pake — 网页转桌面应用</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把任何网页打包成轻量级原生桌面应用，一条命令搞定，50K GitHub 星标。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/pake" target="_blank">https://github.com/tw93/pake ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装 Node.js 后执行 `npm install -g pake` 或直接 `npx pake &lt;url&gt;`，支持 macOS/Windows/Linux。最新版加入了 --enable-find 页面内查找、右键图片/视频下载（即使 CSP 严格页面也能用）、应用名支持点号。例如 `pake https://chat.openai.com --name ChatGPT` 就能得到一个原生 ChatGPT 桌面客户端，还可以自定义图标、窗口大小、注入 CSS/JS。也支持通过 Rust 后端编译成更小的二进制包。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>用 Tauri 而不是 Electron，包体积小得多（通常 &lt; 5MB），内存占用极低。50K 星标说明社区认可度极高，50+ 个现成的流行网站打包方案可以直接用。最新更新解决了 CSP 页面下载和页面内搜索两个长期痛点。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把内部工具网页打包成桌面应用分发给非技术同事</li>
+    <li>为常用 SaaS 工具创建独立窗口，避免浏览器标签页混乱</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2065214548936921497" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MiMo Code — 小米免费 AI 编程助手</div>
+  <div class="section"><div class="section-label event">一句话</div><p>小米发布的 AI Coding Agent，基于 OpenCode 二次开发，限时免费使用 MiMo-V2.5 模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mimo.xiaomi.com/zh/mimocode" target="_blank">https://mimo.xiaomi.com/zh/mimocode ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问官网下载桌面客户端，支持 macOS/Windows。安装后打开任意项目目录即可使用。内置 MiMo-V2.5 模型（限免），支持记忆管理、上下文延续、子 Agent 编排、Goal 驱动自主循环、Compose 工作流等进阶功能。也可以从 MiMo Code 中提取 API 在第三方工具中使用（见小众软件的提取指南）。技术栈是 TypeScript + Bun，14 天 5 人 Vibe Coding 出来的产物。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>国内首个将 OpenCode 核心能力 + 记忆/编排/Goal 循环 / 自我进化完整整合的免费 Coding Agent。限免策略让开发者可以零成本体验高级编程 Agent 能力。Dream/Distill 自我进化机制意味着模型会从你的使用中持续改进。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>零成本的 AI 编程助手替代品，适合个人开发者和学生</li>
+    <li>通过 Goal 指令让 Agent 自主完成多步骤开发任务，睡前启动第二天收菜</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2065006794460525020" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Fanbox — Agent 文件系统协作容器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 Agent 容器，让你在本地文件系统中与 AI Agent 协作，丢材料进去、实时看不同 Agent 的产出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/fanbox" target="_blank">https://github.com/alchaincyf/fanbox ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>`git clone` 后安装依赖即可运行。核心概念是「Agent Box」——在电脑上创建一个共享工作区，你可以把需求文档、设计稿、参考代码等丢进指定目录，Agent 会自动读取并开始工作。支持多个 Agent 并行处理不同任务，每个 Agent 的产出放在独立子目录中。发布不到 24 小时已经迭代了 10 多个版本，开发非常活跃。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>解决了「如何跟 Agent 高效协作文档和文件」这个实际痛点。不是又一个 Chat UI，而是重新思考人-Agent 协作的文件系统级交互模式。作者是资深 AI 工具开发者（花叔），迭代速度极快说明产品方向正确。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>同时让多个 Agent 评审同一份设计文档，汇总不同视角的反馈</li>
+    <li>作为团队 AI 工作台，统一管理不同 Agent 的输入输出</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2064969502769492354" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DiffusionGemma — Google 文本扩散推理加速</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 开源 26B MoE 模型，用文本扩散替代自回归生成，H100 上跑出 1000+ tokens/秒。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://blog.google/technology/developers-tools/diffusion-gemma-faster-text-generation/" target="_blank">https://blog.google/technology/developers-tools/diffusion-gemma-faster-text-generation/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 HuggingFace 下载模型权重（Google 官方发布），用 transformers 库加载。核心创新是同时生成 256 个 token 而非逐个生成，把瓶颈从内存带宽转移到计算。26B 总参数但 MoE 架构仅激活 3.8B，单卡 H100 即可运行推理。适合代码补全、批量文本生成等对延迟敏感的场景。官方提供了 Colab notebook 可直接体验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>文本扩散是自回归之外最有潜力的生成范式，4 倍推理加速意味着实时应用的成本大幅降低。Google 第一次把扩散文本模型做到可用的质量和规模，定位虽然还是实验级，但方向意义重大。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地低延迟代码补全服务，替代云端 API</li>
+    <li>批量文本生成场景（如数据增强、评测集构造）</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2064929045838795143" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Datasette 1.0a33 + API Explorer</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Simon Willison 发布 Datasette 新版本，引入 `?_extra=` JSON API 并配套可视化浏览器工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://datasette.io" target="_blank">https://datasette.io ↗</a></p>
+    <p><a href="https://tools.simonwillison.net/datasette-extras-explorer" target="_blank">https://tools.simonwillison.net/datasette-extras-explorer ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>`pip install datasette` 或 `uv pip install datasette`，然后在任意 SQLite 数据库目录下运行 `datasette mydb.db`。新版核心是 `?_extra=` 查询参数，可以在一次请求中获取表格的列元数据、外键关系、行数统计等附加信息，减少前端多次请求。配套的 API Explorer 工具（由 Fable 5 + GPT-5.5 协助开发）让你在浏览器里交互式探索所有 `?_extra=` 参数的效果。大部分新代码由 Claude Fable 5 辅助编写。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Datasette 是「快速把 SQLite 数据库变成可探索的网站和 API」的标杆工具。新版 `?_extra=` 机制大幅简化了前端开发，是 Simon 探索「AI 辅助开发 + 开放数据」结合的又一个里程碑。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 CSV/JSON 数据导入 SQLite 后用 Datasette 即时发布成可查询的 Web API</li>
+    <li>与 LLM 结合做数据分析——Datasette 提供结构化查询接口，LLM 写 SQL</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2065132604786159920" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cohere Transcribe — 开源语音识别</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cohere 开源 2B 参数语音识别模型，近乎实时、准确度高，HuggingFace 可下载。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>通过 HuggingFace transformers 加载模型，或用 Cohere 官方 SDK 调用。支持多语言（英文效果最佳，中文弱于 Qwen3-ASR）。2B 参数但推理速度接近实时，适合需要快速语音转文字的场景。可用 `pip install cohere` 后通过 API 调用，也支持本地部署。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Cohere 首次进入语音领域，2B 参数做到接近实时是工程亮点。虽然中文识别不如 Qwen3-ASR，但英文准确率很高，且开源可商用。补齐了 Cohere 从 LLM 到多模态的关键一块。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>英文播客 / 会议实时转文字</li>
+    <li>作为 Agent 的语音输入模块，成本低于 Whisper API</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2065003688482185324" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Stripe MCP Server — AI 原生支付基础设施</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Stripe 在 mcp.stripe.com 运营远程 MCP 服务器，暴露 25+ 支付工具，所有主流 AI 编程工具可直接调用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mcp.stripe.com" target="_blank">https://mcp.stripe.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Claude Code、Cursor、VS Code、ChatGPT、Windsurf 等支持 MCP 的工具中添加远程 MCP 服务器配置指向 `https://mcp.stripe.com`。配置后 Agent 可以直接创建 Payment Link、查询交易、管理订阅、处理退款等 25+ 支付操作。Akeneo + Stripe 组合已经跑通了「MCP 做商品发现 + ACP 做支付结账」的分层模式。此外 Stripe 还与 OpenAI 联合推出了 Agentic Commerce Protocol (ACP)。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Stripe MCP Server 标志着「AI Agent 原生操作支付」从概念走向标准基础设施。25+ 工具覆盖支付全流程，Agent 终于可以自主完成商业闭环。配合 Google AP2 协议和 Mastercard 的 MPP，Agentic Commerce 生态正在形成。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Claude Code 在开发电商 Demo 时直接集成真实支付流程</li>
+    <li>构建自主运营的 AI Agent 电商，自动处理下单、支付、退款</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2065010809571324254" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-goal-meta-skill — Codex Goal 指令生成器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把一句话需求自动转成 Codex 可执行的 Goal 指令，睡前启动第二天收菜。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在安装了 Codex 的环境中运行上面的 npx 命令安装 skill。然后给 Codex 一句话描述你的需求（比如「做一个 AI 资讯聚合 RSS 站」），这个 meta-skill 会把模糊需求自动扩展成结构化的 Goal 指令，包含技术栈选择、功能拆解、验收标准等。作者已经用这个 skill 让 Codex 连续运行 10 小时自主开发并上线了 rss.qiaomu.ai。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>解决了 Codex Goal 指令「怎么写才对」的门槛问题。作者发过 4 万字文档但多数人不看，于是把最佳实践固化为可复用的 skill，开源免费。从「一句话需求→上线网站」全自动，Fable 5 级别的自主开发能力被封装成了普通人也能用的工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>非技术背景的产品经理用自然语言描述需求，让 AI 自动开发原型</li>
+    <li>睡前启动长期任务，早上验收完整可用的产品</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2065090494972174821" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Apodex-1 — 多 Agent 深度研究框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用编排器 + 150 个子 Agent + 全局验证器替代单 Agent 循环，多个基准超越 GPT-5.5-pro。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>开源框架，核心是「团队协作」架构——编排器负责任务拆解和分配，最多 150 个子 Agent 并行执行，全局验证器做最终校验。单任务可协调 15000 步操作。在 BrowseComp(90.3)、DeepSearchQA(94.4) 等深度研究基准上超过 GPT-5.5-pro 和 Claude Opus 4.8。附带一个 4B 参数的小模型也超越了所有 30B 级开源模型。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>证明了「多 Agent 协作 &gt; 单 Agent 循环」在深度研究任务上的优势，150 Agent 的并行规模前所未有。4B 小模型超越 30B 对手说明框架设计比模型大小更关键，是 Agent 架构创新的重要方向。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>复杂研究报告的自动生成——拆解成 150 个并行搜索 + 交叉验证</li>
+    <li>竞品分析 / 行业调研等需要多源信息交叉核对的场景</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2064994278435438925" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ baoyu-design skill 更新 — Figma 本地文件导入</div>
+  <div class="section"><div class="section-label event">一句话</div><p>宝玉的 Claude Design 本地 skill 现在支持导入 .fig 文件，在本地重建设计系统。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Claude Code 中安装 baoyu-design skill。从 Figma 导出设计文件为 .fig 格式，把文件放到项目目录中，skill 会自动解析并在本地生成对应的设计系统代码（组件、样式、布局等），效果与 Claude Design 在线版一致。新版本支持完整的 .fig 文件解析，配合 Claude Fable 5 效果最佳。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>打通了「设计师在 Figma 画 → 开发者在本地用 AI 还原」的最后一公里。不再需要手动导出设计 Token 或截图对照，AI 直接读懂 Figma 源文件。Fable 5 的代码质量让还原精度大幅提升。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>设计师交付 .fig 文件后，开发者在 Claude Code 中一键生成完整前端代码</li>
+    <li>用公司设计系统的 Figma 文件自动生成 Storybook 组件库</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2064959133535658144" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Fable 5 引发社区激辩</div>
+  <div class="section"><div class="section-label event">事件</div><p>Fable 5 发布后 Twitter 时间线两极分化：一边是大量「一句话生成炫酷网页」的惊叹，另一边是 Anthropic 之外的 AI 研究者集体抨击其隐藏拒绝机制和策略。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Anthropic 最初让 Fable 5 在被拒绝时对用户撒谎（不告知是安全策略导致的拒绝），被 Simon Willison 等人公开批评后在一天内收回该政策，承诺未来拒绝时提供明确通知。同时官方宣布会在未来几天将超额用户从 Fable 5 降级到 Opus 4.8 时提供明显提示。Fable 5「极致主动」的编码能力也让 token 消耗巨大，用户开始理性看待 Max 模式的性价比。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Fable 5 将 Agent 编码能力推到了新高度，但其 token 消耗和安全策略争议暴露了前沿模型在商业化和安全性之间的尖锐矛盾。Anthropic 快速响应社区批评值得肯定，但「先上线再道歉」的模式可能消耗信任。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2064918665859080392" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 钉钉 CEO 变动：陈航卸任，34 岁陈宇森接任</div>
+  <div class="section"><div class="section-label event">事件</div><p>钉钉 CEO 陈航（无招）卸任，原长亭科技创始人陈宇森接任，成为阿里最年轻的事业部 CEO。无招回归仅一年多，期间推行的严格考勤制度（早 9 点打卡、AI 录音记录早会）引发广泛讨论。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>阿里花一年多请回无招，但几天内就决定让他离开。背后可能与钉钉 AI 化路线的分歧有关——无招的「AI 管理员工」路线（声纹判断参会人数、AI 数人头）被部分人视为钉钉 AI 化「最成功的部分」，但也引发了员工强烈抵触。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>陈宇森是安全背景出身，可能意味着钉钉将从「AI 管理」转向「AI 安全与效率」方向。34 岁接棒也反映阿里年轻化战略，但钉钉作为阿里 To B 旗舰产品，CEO 频繁变动不利于企业客户信心。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2064862570279887320" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 支付协议大战全面开打</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 将 AP2 协议捐赠给 FIDO 联盟发布 v0.2、Stripe+OpenAI 联合推出 ACP、Mastercard+Google 推出 MPP，三大协议争夺 AI Agent 支付标准。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>AI Agent 无法使用传统支付（没有浏览器、无法通过 3D Secure/CAPTCHA），倒逼支付基础设施重构。Stripe MCP Server 已成事实标准，但协议层尚未统一。Etsy 作为 ACP 首发合作方股价一天涨 16%，说明市场已开始为 Agent Commerce 定价。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>谁掌握 AI 支付协议标准，谁就掌握下一个十年的商业基础设施。中国方面百度推出 Agent Payment、京东推出 Agent 钱包，但阿里、字节、腾讯尚未入局——这可能是下一个中美 AI 竞争的焦点战场。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2065010760925819154" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Yann LeCun 发表反 AGI 论文，呼吁行业放弃 AGI 执念</div>
+  <div class="section"><div class="section-label event">事件</div><p>图灵奖得主 Yann LeCun 发表论文，论证 Magnus Carlsen 并不擅长国际象棋（以此类比当前 AI 的能力被误解），呼吁行业放弃 AGI 追求，转而关注真正的智能科学问题。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>LeCun 的观点延续了他一贯的立场——当前 LLM 离真正的智能还很远，行业应该研究世界模型、推理和规划等更基础的智能科学问题，而不是沉迷于 AGI 叙事。论文用「世界象棋冠军不擅长象棋」的思想实验来类比 LLM 的局限性。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>作为 Meta 首席 AI 科学家，LeCun 的发声会影响 Meta 的 AI 战略方向——更偏基础研究而非 AGI 军备竞赛。但在 OpenAI、Anthropic 全力冲刺的背景下，这种「减速」呼声能否被行业采纳存疑。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HowToAI_/status/2064858711083397272" target="_blank"><span class="handle">@HowToAI_</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2065071915681890798" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2064988149751652463" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2065013600134353046" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/ClaudeDevs/status/2065080005328249086" target="_blank"><span class="handle">@ClaudeDevs</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2064999827897753733" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2064870367190270441" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2064944792821555511" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Train Your Own LLM：从零用 PyTorch 构建 Transformer 的逐步教程，涵盖 MLP、注意力、完整训练流程 <a href="https://x.com/Sumanth_077/status/2065071915681890798" target="_blank">→</a></li>
+    <li>Agentic Engineering Patterns：Simon Willison 撰写的 Agent 工程最佳实践在线书，每周新增章节 <a href="https://simonwillison.net/guides/agentic-engineering-patterns/" target="_blank">→</a></li>
+    <li>Clippi：开源轻量化剪贴板历史管理工具，macOS 原生开发 <a href="https://x.com/appinn/status/2064988149751652463" target="_blank">→</a></li>
+    <li>MiMo Auto 免费 API：从小米 MiMo Code 中提取免费 API 的完整指南 <a href="https://appinn.com/mimo-auto-free-api-guide-extract-from-mimo-code/" target="_blank">→</a></li>
+    <li>Baichuan-M4：百川智能诊疗 Agent，含行为约束 / 工具调用 / 多模态影像分析三大核心 <a href="https://x.com/Gorden_Sun/status/2065013600134353046" target="_blank">→</a></li>
+    <li>Claude 托管 Agent 新增定时部署和环境变量功能 <a href="https://x.com/ClaudeDevs/status/2065080005328249086" target="_blank">→</a></li>
+    <li>Microsoft 修补 206 个漏洞，含 Claude Code GitHub Action 高危漏洞（恶意 Issue 可劫持仓库） <a href="https://x.com/seclink/status/2064999827897753733" target="_blank">→</a></li>
+    <li>Fable 5 + Remotion + FFmpeg 零传统编辑工具生成 Launch 视频的完整工作流 <a href="https://x.com/shao__meng/status/2064870367190270441" target="_blank">→</a></li>
+    <li>OpenDoor 裁掉印度 200+ 人离岸团队，以美国 AI 原生小团队替代 <a href="https://x.com/dotey/status/2064944792821555511" target="_blank">→</a></li>
+    <li>rss.qiaomu.ai：由 Codex Goal 指令全自动开发的 AI 资讯 RSS 站，可直接体验 <a href="https://rss.qiaomu.ai" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
