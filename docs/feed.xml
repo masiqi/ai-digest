@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 12 Jun 2026 00:36:58 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 00:38:58 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/13 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-13.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-13.html</guid>
+      <description>开源模型与工具生态大爆发：Kimi 发布 K2.7-Code 编程模型直追一线，墨韵 1.0 开源国风水墨画应用惊艳上线，Open Design 63.6K 星后再推内建浏览器。可上手的高质量项目密集发布，周末正好逐一把玩。</description>
+      <pubDate>2026-06-13T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/12 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-12.html</link>
