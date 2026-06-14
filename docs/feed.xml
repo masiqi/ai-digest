@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 13 Jun 2026 00:38:58 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 00:37:52 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/14 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-14.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-14.html</guid>
+      <description>美国政府以出口管制为由紧急叫停 Claude Fable 5 / Mythos 5 对非美国用户的访问，全球开发者社区炸锅。与此同时，中国开源模型阵营密集出击：智谱发布 GLM 5.2，Kimi 开源 K2.7-Code，开源力量迎来结构性利好。</description>
+      <pubDate>2026-06-14T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/13 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-13.html</link>

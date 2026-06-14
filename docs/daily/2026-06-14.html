@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-14</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-14</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>美国政府以出口管制为由紧急叫停 Claude Fable 5 / Mythos 5 对非美国用户的访问，全球开发者社区炸锅。与此同时，中国开源模型阵营密集出击：智谱发布 GLM 5.2，Kimi 开源 K2.7-Code，开源力量迎来结构性利好。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Google Earth 飞行模拟器（网页版）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 地球内建的飞行模拟器现已面向全球所有用户免费开放，在浏览器里就能操控飞机飞越全球任意地标。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://goo.gle/4fBYnWO" target="_blank">https://goo.gle/4fBYnWO ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Google Earth 网页版（earth.google.com），点击左下角菜单图标找到「飞行模拟器」或直接通过上述短链接进入。选择一架飞机（F-16 战斗机或 SR22 螺旋桨飞机），然后在全球任意地点点击「开始飞行」即可。用鼠标控制俯仰和方向，键盘方向键也能辅助操控。建议先从自己家上空起飞，再尝试飞跃大峡谷、阿尔卑斯山或迪拜棕榈岛等经典地标。操作手感需要适应几分钟，小互反馈鼠标操控有点晕，多练习就好。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是第三方简陋模拟器，而是 Google Earth 官方整合的 3D 飞行体验，底层依托 Google 地球的全球高精度 3D 地形和建筑数据。在浏览器里流畅运行无需下载任何客户端，技术实现依赖 WebGL 和 Cesium/MapGL 等现代前端图形栈，是地理信息可视化与游戏化体验的绝佳交叉案例。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>地理教学——让学生飞越课本上的每个地名</li>
+    <li>旅行规划——提前从空中预览目的地地形和城市布局</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2065699893638033801" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2065698606175465472/img/5B5WKN6L9LaPWheo.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2065698606175465472/img/5B5WKN6L9LaPWheo.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole 1.7（macOS 系统工具）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mac 端系统增强工具，集成了 Apple Silicon 风扇控制、摄像头/麦克风隐私警报、AI 编码时保持唤醒、输入锁定擦屏等功能，支持 macOS 27。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mole.fit" target="_blank">https://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 mole.fit 下载 Mac 版安装包（支持 macOS 26/27）。安装后菜单栏会出现 Mole 图标。核心功能：① 风扇控制——手动调节 M 系列芯片风扇转速，编译或训练模型时主动降温；② 隐私警报——当任何应用调用摄像头或麦克风时弹出通知，防偷窥；③ AI 保持唤醒——编码时阻止系统休眠，避免长时间 Agent 任务中断；④ 锁定输入——一键擦除屏幕并锁定键盘鼠标，开会演示时防手滑。早鸟价 $9 到 6 月 15 日截止。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Tw93 是知名开源作者（MiaoYan、Kami 等），Mole 1.7 一口气把开发者日常高频痛点（编译过热、隐私泄漏、AI 任务被休眠打断）打包进一个轻量菜单栏工具。支持最新 macOS 27 说明维护积极，$9 买断制对独立开发者相当良心。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地跑大模型推理时手动拉满风扇降温</li>
+    <li>用 Claude Code/Codex 长时间编码时防止 Mac 自动锁屏休眠</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2065802627997397216" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2065802185062096897/img/eTFqpki70NFNJiGc.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2065802185062096897/img/eTFqpki70NFNJiGc.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ FanBox——Agent 容器框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>花叔在 Fable 5 可用的 72 小时内疯狂迭代出的 Agent 运行容器，支持多 Agent 沙箱隔离、工具链编排和持久状态管理，已开源。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/fanbox" target="_blank">https://github.com/alchaincyf/fanbox ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后 `pip install -r requirements.txt` 安装依赖。FanBox 核心概念是「沙箱容器」——每个 Agent 跑在独立命名空间内，互不干扰。配置 YAML 定义工具链（文件系统、网络、Shell、浏览器等），支持接入 Claude Code、Codex、Pi 等后端。启动后 Agent 自动读取任务描述并循环执行，中间状态保存在 .fanbox/ 目录下，支持断点续跑。花叔 3 天烧了 5 亿 token 迭代 20+ 版本，代码质量和架构设计经过实战检验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 编排框架目前各家闭源（Claude Code、Codex CLI），FanBox 是少见的开源通用 Agent 容器方案。沙箱隔离机制让多个 Agent 并行工作而不互相污染上下文，特别适合需要多 Agent 协作的复杂工程任务。Fable 5 谢幕之作，架构被花叔称为「太特么好用了」。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>并行跑多个 Code Agent 处理大型 monorepo 的不同模块</li>
+    <li>搭建自动化 CI Agent——PR 提交后自动 review + 修 bug + 跑测试</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2065685608006070435" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami——AI 简历生成器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Tw93 开发的终端 AI 简历工具，输入 Markdown 素材一句话生成排版精美的专业简历，支持多种模板风格。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>`npm install -g kami` 全局安装（或 `npx kami` 直接运行）。准备好自己的简历素材写成 Markdown 文件（教育经历、工作经验、项目经历、技能栈）。在终端执行 `kami init` 生成配置文件，然后运行 `/kami` 指令让 AI 读取你的 Markdown 并自动排版输出。支持交互式调整——觉得某段太长或风格不满意，直接说「把工作经历改成更简洁的风格」即可微调。Tw93 为简历场景单独优化了渲染效果，清晰整洁。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Kami 本质是 CLI + AI 的排版引擎，把「写简历」这个高频刚需变成了「准备素材→一句话指令→调两下→导出 PDF」。相比在 ChatGPT 里反复 prompt 调整格式，Kami 的模板化渲染更可控且输出一致。开源 MIT 协议，可以 fork 后定制自己的简历模板。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>海投不同岗位时快速产出多版本定向简历</li>
+    <li>帮朋友改简历——让他丢 Markdown 过来，30 秒出成品</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2065724271486493084" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKrtOlYbEAAmj90?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKrtOlYbEAAmj90?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ZONOS2——开源 MoE TTS 模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>8B 总参数（0.9B 激活）的混合专家文本转语音模型，支持多语言和语音克隆，中文效果不错。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/zyphra/zonos2" target="_blank">https://huggingface.co/zyphra/zonos2 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装 `pip install zonos` 后，通过 Python API 调用。核心用法：① 基础 TTS——`model.speak("你好世界")` 直接生成中文语音；② 语音克隆——提供 5-10 秒参考音频，`model.clone("要说的文本", reference_audio="voice.wav")`，模型会模仿参考音色朗读新内容；③ 多语言切换——同一模型支持中/英/日/韩/法等十余种语言。0.9B 激活参数意味着在 M1/M2 Mac 上也能本地跑（约需 2-3GB 显存/内存）。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>MoE 架构在 TTS 领域尚属少见，8B 总参数量大但推理只激活 0.9B，兼顾质量与速度。中文效果实测不错，语音克隆质量接近商业 API（如 ElevenLabs），且完全本地运行无需联网。开源 Apache 2.0 协议，可商用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给自己播客或视频配 AI 旁白，不用买商业 TTS API</li>
+    <li>用 5 秒录音克隆自己声音，做个性化语音助手</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2065747653535961121" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CliperX（灵剪）——macOS 灵动岛剪贴板</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把剪贴板历史塞进灵动岛的 macOS 工具，支持文本/图片/文件等类型的历史记录搜索和快速粘贴。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 Mac App Store 或开发者网站下载安装。安装后灵动岛上会出现 CliperX 图标，点击展开剪贴板历史列表。每次复制的内容（文本、链接、图片、文件）自动保存到列表中。点击任意条目一键粘贴到当前光标位置。支持搜索历史记录（按关键词过滤），可固定常用片段为置顶项，设置保留天数自动清理。快捷键 `⌘+Shift+V` 快速呼出历史面板。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>macOS 原生剪贴板只能记住最后一次复制，CliperX 把 iPhone 14 Pro 系列才有的「灵动岛」交互形态利用为剪贴板管理入口，设计巧妙。开发者自荐产品，定位清晰不臃肿——就是做好剪贴板历史这一件事，符合 Unix 哲学。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>写代码时频繁切换复制多个变量名/函数签名，从历史直接找回</li>
+    <li>整理资料时复制了十几条链接，搜索历史一键复用</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2065660088208040293" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 2026 世界杯赛程订阅站</div>
+  <div class="section"><div class="section-label event">一句话</div><p>向阳乔木用 Codex Goal Skill 在 24 分钟内从零开发的 2026 世界杯观赛日程网站，支持按球队/小组/赛程生成 ICS 日历订阅。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://2026fifa.qiaomu.ai" target="_blank">https://2026fifa.qiaomu.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开网站后选择关注方式：① 按赛程——订阅全部比赛日程；② 按 48 支球队——只订阅你支持球队的比赛；③ 按 12 个小组——订阅小组赛阶段；④ 按阶段——小组赛/淘汰赛分开订阅。点击「订阅」后生成 ICS 日历链接，复制到 Apple Calendar / Google Calendar / Outlook 中即可自动同步。每场比赛开赛前 30 分钟弹出提醒，不会再错过巴西队凌晨 6 点的比赛。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是 Codex Goal Skill 的真实案例——一句话需求→24分钟交付完整网站。开发效率的跃迁肉眼可见。对普通用户来说，ICS 日历订阅是无缝集成到现有生活节奏的最佳方式，比下载专门的看球 App 轻量得多。网站本身轻巧无需注册。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>订阅中国队所在小组赛程，设置赛前提醒</li>
+    <li>把淘汰赛全部订阅，决赛前每场都不落</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2065817104847458544" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKtA48dbQAAjIb3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKtA48dbQAAjIb3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ infocard-skills——瑞士国际主义风格信息卡片</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 AI 的信息卡片生成工具，支持 8 种瑞士国际主义设计风格，输入文字自动排版输出精美卡片。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/shaom/infocard-skills" target="_blank">https://github.com/shaom/infocard-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后，将项目目录添加到你的 AI 编码助手（Claude Code、Codex、Cursor 等）的 skill 路径中。使用时对 AI 说「用 infocard skill 生成一张关于 XXX 的信息卡片」，AI 会自动调用 skill 内的模板和设计规则。支持 8 种风格（包括极简、网格、不对称布局等），不同比例（1:1 方形、16:9 横向、9:16 竖版）都做了布局优化，避免大块空白或内容拥挤。输出为 HTML/CSS 渲染的 PNG 或 SVG。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>meng shao 的又一力作，将瑞士国际主义设计原则（Josef Müller-Brockmann 那一脉）固化为 AI 可调用的 skill 模板，让非设计师也能产出专业级排版。本次更新的核心改进是跨比例布局的合理性，解决了之前某些比例下内容截断的痛点。适合做社交媒体配图、演讲 Slide、产品功能卡片。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>技术分享时把核心观点生成视觉卡片当封面</li>
+    <li>产品发布时用不同风格快速迭代宣传图</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2065777377360384447" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKsdcdZbYAAKsuI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKsdcdZbYAAKsuI?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HEBUpmWbwAA-wbx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HEBUpmWbwAA-wbx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Voicer——iOS 文字转播客工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把文字和文档变成播客的 iOS 阅读工具，支持 PDF/网页/文本输入，AI 语音朗读并生成播客风格音频。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 App Store 搜索「Voicer」下载。打开后可通过三种方式导入内容：① 粘贴文字；② 导入 PDF 文档；③ 输入网页 URL 自动抓取正文。选择播客风格（单人讲述/双人对谈），AI 将内容转化为口语化脚本，然后 TTS 合成音频。支持后台播放、倍速调节，生成的音频可导出分享。适合通勤/运动时「听」文章。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Google NotebookLM 带火了「文档转播客」的交互范式，Voicer 把它做成了轻量 iOS App，降低了使用门槛。对中文内容的语音合成和口语化改写质量是关键——开发者自荐说明有一定打磨。相比在浏览器里用 NotebookLM，手机 App 更贴合播客的消费场景（通勤、健身）。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把长文报告转成播客，通勤路上「听」完</li>
+    <li>把 PDF 电子书转成对话体音频，运动时听</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2065633634384576862" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Fable 5 被美国政府出口管制下线</div>
+  <div class="section"><div class="section-label event">事件</div><p>美国政府以国家安全与出口管制为由，要求 Anthropic 停止向所有非美国公民提供 Fable 5 和 Mythos 5 模型访问。Anthropic 因无法区分用户国籍，一刀切下线全球所有非美国用户的权限，仅保留已验证美国身份的用户。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Fable 5 上线仅 3 天即被封杀，被社区戏称为「AI 史上最短命的神模型」。讽刺的是，Anthropic CEO Dario Amodei 长期在华盛顿游说 AI 安全监管，最终监管回旋镖打到了自己身上。全球开发者社区反应激烈——Simon Willison 每分钟写脚本轮询 API 看自己何时被踢；花叔在 Fable 5 上烧了 5 亿 token 迭代 20 版 FanBox 后被迫中止；多个依赖 Fable 5 大规模重构的项目半途而废。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>中国开源模型获得结构性利好——智谱 GLM 5.2 发布、Kimi K2.7-Code 开源恰逢其时，大量海外开发者开始认真评估中国模型替代方案。这次事件将加速 AI 供应链的去美国化，欧洲和亚洲市场对非美模型的需求会爆发式增长。Anthropic 原定 6/22 的 Fable 5 Build Day 已降级为 Opus 4.8 Build Day。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2065621579703390259" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 智谱发布 GLM 5.2</div>
+  <div class="section"><div class="section-label event">事件</div><p>智谱发布 GLM 5.2，目前通过订阅制向 codingPlan 用户开放，官方宣布下周开源模型权重并开放 API。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>GLM 5.2 发布时间恰逢 Fable 5 下线，被社区解读为精准卡位的战略动作。智谱在发布声明中直言「前沿智能不应只属于少数人，也不应被少数规则随时收回。它应该开放、可用、可构建，并服务于每一位开发者」，直接对标 Anthropic 的闭源和合规困境。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>GLM 5.2 若性能真能对标国际一线模型，加上开源策略，将吸引大量因 Fable 5 禁用而寻找替代方案的海外开发者。智谱是国内大模型厂商中开源力度最大的之一，此举可能引发新一轮国内模型出海潮。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2065736651087978970" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Kimi 开源 K2.7-Code 编码模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>Kimi 发布 K2.7-Code，在 K2.6 基础上针对编程 Agent 专项优化，三项编码基准均有提升：Kimi Code Bench v2 +21.8%，长链路任务成功率更高，推理 token 更少。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>K2.7-Code 的定位非常明确——不是通用模型，而是专门为编程 Agent 场景优化的模型。三个核心改进：编码能力、Agent 任务完成率、推理效率。相比 K2.6 在编程基准上大幅提升，说明 Kimi 团队找到了 Agent 场景下的优化方向。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开源编码模型的竞争格局正在形成——DeepSeek、Qwen、Kimi 各有侧重。K2.7-Code 瞄准 Agent 长链路任务这一细分，差异化明确。对开发者来说，本地跑的开源编码模型选择越来越多，闭源 API 不再是唯一选项。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2065391798961442966" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKm-4sHb0AAlu9t?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKm-4sHb0AAlu9t?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKmxoVmagAAJKj8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKmxoVmagAAJKj8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKmxpGYaUAAstZB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKmxpGYaUAAstZB?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Telegram 发布重大更新：AI Bot 支持富文本</div>
+  <div class="section"><div class="section-label event">事件</div><p>Telegram 发布重大更新，Bot API 现在支持富文本消息——表格、清单、图片轮播、可折叠段落、数学公式、行内插图等，同时上线 Apple Watch 客户端和 AI 群聊管理功能。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是 Telegram 在 AI 时代的战略升级——Bot 从只能回纯文本到可以输出结构化富文本，直接扩大了 Bot 的应用场景（AI 客服、数据报表推送、教育内容分发）。微信做不了的富文本 Bot，Telegram 做到了。Apple Watch 客户端补足了可穿戴设备生态。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>富文本 Bot 能力可能催生新一轮 Telegram Bot 创业潮——AI 日报推送、股票报表、课程内容分发都可以用富文本实现更好的阅读体验。对微信来说，这又是一次「别人都做到了我们还做不了」的尴尬对照。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2065614907425591681" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2065612714194731008/img/XpIi2yzs0GabQWLt.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2065612714194731008/img/XpIi2yzs0GabQWLt.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Vercel 发布 HarnessAgent</div>
+  <div class="section"><div class="section-label event">事件</div><p>Vercel 在 AI SDK 7 Canary 版中发布 HarnessAgent，提供统一 API 支持在 Claude Code、OpenAI Codex、Pi 等 agent 运行环境间无缝切换，同时提供沙箱（Sandbox）隔离机制。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>HarnessAgent 解决的核心痛点是 Agent 框架碎片化——开发者要在 Claude Code / Codex / Pi 之间反复切换，HarnessAgent 用一个统一接口抹平差异。Y11 贴出的用法显示安装非常简洁（npm install @ai-sdk/harness/agent），适合需要跨平台测试 Agent 性能的开发者。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Vercel 入局 Agent 编排层，意味着 AI 开发工具链正在向标准化方向发展。如果 HarnessAgent 成为主流，可能会削弱单个 Agent 框架的锁定效应——开发者可以轻松把任务从 Claude Code 切到 Pi 或 Codex。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2065679465259180092" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2065598057434185845" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2065644664145715549" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2065832438912217276" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2065709209384296481" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKp6egXaAAA9WMx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKp6egXaAAA9WMx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Kami 简历生成器：Tw93 推荐用 /kami 指令一键生成专业简历 <a href="https://github.com/tw93/Kami" target="_blank">→</a></li>
+    <li>pi + DeepSeek 配置教程：新手友好的 pi agent 入门博客，半小时彻底入门 <a href="https://deepakness.com/blog/pi-agent-setup/" target="_blank">→</a></li>
+    <li>Cursor Agent 舰队系统：为训练 Composer 模型构建的数千 Agent 协同系统，通过 SSH + inbox 文件实现自管理 Loop <a href="https://x.com/shao__meng/status/2065598057434185845" target="_blank">→</a></li>
+    <li>本地编程 Agent 实战：llama.cpp + Gemma 4 26B + MTP 推测解码在 M1 Max 上达 72 tok/s 的详细教程 <a href="https://x.com/seclink/status/2065644664145715549" target="_blank">→</a></li>
+    <li>香港打小人仪式模拟器：小众软件发现频道的趣味项目 <a href="https://x.com/appinn/status/2065832438912217276" target="_blank">→</a></li>
+    <li>Chrome 151 终结 uBlock Origin：Manifest V2 彻底停用，ublock Origin 时代落幕 <a href="https://appinn.com/chrome-151-manifest-v2-end-ublock-origin/" target="_blank">→</a></li>
+    <li>SpaceX 招股说明书：完整 S-1 文件可在 SEC 官网查看 <a href="https://sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm" target="_blank">→</a></li>
+    <li>AI memory 研究入选 KDD 2026：EverMind 两篇 memory 工作入选顶会，核心发现是「记忆串了比忘了更可怕」 <a href="https://x.com/elliotchen100/status/2065709209384296481" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
