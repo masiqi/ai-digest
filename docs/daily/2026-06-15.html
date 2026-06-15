@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-15</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-15</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Fable 5 被白宫勒令下架成为本周期最大黑天鹅——亚马逊CEO一通电话、24小时内出口管制落地，Anthropic近万亿美元估值面临考验。与此同时，OpenAI GPT-5.6泄露传闻四起（6月23日发布、150万token上下文、价格仅为Fable 1/3），OpenRouter Fusion 以模型融合策略低成本超越单模型天花板。开源工具层持续爆发：Waza、agent-skills、infocard-skills、CCOnline等一批可上手项目密集发布。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Waza — 模型无关的 Agent 编码技能包</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Tw93 开发的 8 项编码 Agent 技能集合，可在 Claude Code、Codex 等不同底层模型上无缝切换，规划、审查、调试一气呵成。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/waza" target="_blank">https://github.com/tw93/waza ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>git clone 项目后，将技能文件导入你使用的 Coding Agent（Claude Code、Codex、Cursor 等），根据 README 配置 skill 目录路径。8 项技能覆盖项目规划（Plan）、代码审查（Review）、调试（Debug）、测试生成（Test）、文档编写（Docs）、重构（Refactor）、架构设计（Arch）、部署（Deploy）。每个技能提供专门的系统提示词和工作流，切换底层模型时无需修改技能逻辑，Agent 自动适配不同模型的输出风格。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>在 Fable 5 被下架后，模型不可用风险凸显，Waza 的模型无关设计让开发者不绑定任何单一模型供应商。8 项技能覆盖完整开发生命周期，用业余时间打磨的 11 万行 Swift 代码（Mole 同作者）展现了极高的工程素养。技能包即插即用，大幅降低 Agent 编码上手门槛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Fable 5 下架后快速迁移到 GPT-5/Opus 继续开发</li>
+    <li>团队统一 Agent 编码规范，跨模型保持一致的代码风格</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2066305747290640521" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKz-HrvawAAmjHS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKz-HrvawAAmjHS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenRouter Fusion — 一次调用融合 8 个模型，半价超越顶级单模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenRouter 新推出的 Fusion API 将同一 prompt 并行发给最多 8 个模型，由裁判模型综合输出，在 DRACO 深度研究基准中超越所有单模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://openrouter.ai/fusion" target="_blank">https://openrouter.ai/fusion ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>注册 OpenRouter 账号获取 API Key，调用 Fusion 端点替代常规 chat completions。支持自定义模型组合——可以选择 Fable 5 + GPT-5.5 + Opus 4.8 等高端组合（69% DRACO 分数），也可以用便宜模型做融合。API 兼容 OpenAI 格式，只需替换 endpoint URL 和 model 参数。支持并行网络搜索增强。定价约为 Fable 5 的一半。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>模型融合（MoE-style ensembling）正在从学术概念走向生产可用。Fusion 证明了「多模型协同 &gt; 单一最强模型」的实用性，且成本更低。在 Fable 5 被禁后，Fusion 提供了一个不依赖单一供应商的高性能替代方案。对未来 AI 应用架构的启示：可能是「模型路由器 + 融合」而非「单一 API」成为主流。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>深度研究报告生成（DRACO benchmark 场景）</li>
+    <li>需要高可靠性的企业级 AI 应用，多模型交叉验证</li>
+    <li>Fable 5 不可用时的降级替代方案</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2066168952460620158" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKyBsu1asAEVryS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKyBsu1asAEVryS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MLX-LoRA-Studio — macOS 原生的 LLM 微调桌面应用</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 Mac 上通过图形界面完成 LLM 的 LoRA 微调全流程（训练→导出→在 LM Studio 中使用），即将发布。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ActuallyIsaak/mlx-lora-studio（作者" target="_blank">https://github.com/ActuallyIsaak/mlx-lora-studio（作者 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 原生应用，前后端一体，下载后直接打开。界面引导选择基座模型（支持 MLX 格式模型）、配置训练参数（LoRA rank、学习率、epoch 等）、导入训练数据（JSONL 格式），点击开始训练。训练完成后一键导出为 GGUF 格式，直接加载到 LM Studio 进行本地推理。完整端到端流程无需命令行。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>将 LLM 微调从「需要 Linux 服务器 + 命令行」降低到「Mac 桌面应用 + 点击操作」。MLX 是 Apple 官方机器学习框架，在 Apple Silicon 上效率极高。配合 LM Studio 形成完整的 Mac 本地 AI 工作流：微调→推理，全在本地完成，数据不出设备。对垂直领域微调（客服、写作、代码）有巨大实用价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用个人写作/聊天记录微调一个私人风格模型</li>
+    <li>企业用内部文档微调客服/技术支持模型</li>
+    <li>开发者微调代码补全模型适配自己的代码库</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ActuallyIsaak/status/2066277220872597532" target="_blank"><span class="handle">@ActuallyIsaak</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Headroom — 不改代码，AI API 账单立减 90%</div>
+  <div class="section"><div class="section-label event">一句话</div><p>通过智能缓存和请求合并，在不修改任何业务代码的情况下，将 AI API 调用成本降低 90%。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/chopratejas/headroom" target="_blank">https://github.com/chopratejas/headroom ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>部署 Headroom 作为 AI API 的反向代理（proxy）。将应用中的 OpenAI/Anthropic API endpoint 指向 Headroom 的地址，Headroom 自动对重复/相似请求做语义缓存（semantic cache），对并发请求做 batch 合并。支持 OpenAI、Anthropic、Google Gemini 等主流 API。提供 Dashboard 查看节省金额和缓存命中率。Docker 一键部署。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI API 成本是很多产品的最大支出项。Headroom 的语义缓存不同于简单字符串匹配——即使两次请求措辞不同但语义相同，也能命中缓存。90% 的节省率意味着月账单从 $10000 降到 $1000，对创业公司和 indie hacker 意义重大。不改代码的设计让接入成本趋近于零。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>AI 客服产品的高频重复问答缓存</li>
+    <li>AI 写作/代码助手的大量相似请求合并</li>
+    <li>多租户 SaaS 产品的 AI 成本优化</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2066143940894761424" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Agent-Skills — Addy Osmani 的全栈开发 Agent 技能包</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 工程师 Addy Osmani 开源的 Agent 技能集合，把全栈开发任务打包成可调用的模块，让 Agent 直接干完整工程活。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/addyosmani/agent-skills" target="_blank">https://github.com/addyosmani/agent-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后将 skills 目录配置到 Claude Code 或 Codex 的技能路径中。技能覆盖：React 组件生成、API 路由设计、数据库 Schema 设计、测试编写、Docker 部署配置、CI/CD Pipeline 生成、性能优化分析、可观测性配置。每个技能包含结构化提示词模板和验证检查清单，Agent 执行后会按模板输出可落地的代码和配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Addy Osmani 是 Google Chrome 团队资深工程师，技能包体现了大厂全栈开发的最佳实践。与 Waza 互补——Waza 偏工作流抽象，agent-skills 偏具体领域技能。开源技能包正在成为 Agent 生态的「npm」——开发者分享和复用经过验证的 Agent 提示词模板。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>新产品 MVP 从零到部署的一条龙开发</li>
+    <li>已有项目的性能优化和可观测性补齐</li>
+    <li>学习大厂全栈开发最佳实践</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2066143940894761424" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ infocard-skills — 瑞士国际主义风格信息卡片生成器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>shaom 开发的 Agent 技能，一键生成八种瑞士国际主义风格的精美信息卡片，最新版优化了多比例布局。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/shaom/infocard-skills" target="_blank">https://github.com/shaom/infocard-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>将技能文件导入 Claude Code/Codex 等 Agent。使用时只需提供标题、要点文字和目标比例（1:1、16:9、9:16 等），Agent 自动生成 HTML/CSS 卡片。八种风格涵盖：极简黑白、网格系统、不对称布局、大字报风格、模块化色块、几何图形、渐变光效、杂志编排。输出为独立 HTML 文件，可直接截图或导出为图片。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 生成内容的视觉呈现一直是痛点——默认输出缺乏设计感。infocard-skills 用瑞士国际主义设计原则约束 Agent 输出，保证视觉质量一致。多比例适配解决了一个实际难题：同一内容需要在 Twitter（16:9）、Instagram Story（9:16）、LinkedIn（1.91:1）等不同平台发布。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>社交媒体内容创作者的每日金句卡片</li>
+    <li>产品功能更新/发布公告的信息图</li>
+    <li>技术分享/演讲的要点摘要卡片</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2065777377360384447" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKsdcdZbYAAKsuI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKsdcdZbYAAKsuI?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HEBUpmWbwAA-wbx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HEBUpmWbwAA-wbx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CCOnline — 在线 Vibe Coding，零依赖开箱即用</div>
+  <div class="section"><div class="section-label event">一句话</div><p>idoubi 用 ShipAny TanStack 构建的在线 coding 环境，内置模型和 sandbox 终端，打开浏览器即可开始 vibe coding。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/idoubicc/status/2066116918587875593（作者" target="_blank">https://x.com/idoubicc/status/2066116918587875593（作者 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问网站后直接在浏览器中获得一个完整的 coding 环境：左侧文件树 + 中间代码编辑器 + 右侧 AI 对话面板 + 底部 sandbox 终端。内置接入多个模型，无需配置 API Key。sandbox 运行在隔离环境中，支持 Node.js、Python 等运行时。适合快速原型验证和分享——生成的项目可通过链接分享给他人直接运行。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>降低了 vibe coding 的启动门槛——不需要安装任何 IDE、插件或 CLI 工具。内置模型免去 API Key 配置，适合非技术用户快速体验 AI coding。sandbox 隔离设计保证了安全性，分享链接即可演示，对教学和协作场景友好。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>非技术人员快速体验 AI 编程</li>
+    <li>教学场景：讲师编写 demo 学员直接运行</li>
+    <li>快速原型验证和团队协作 review</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2066116918587875593（作者" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/idoubicc/status/2066116918587875593" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKxSYmIboAALcQ4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKxSYmIboAALcQ4?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 2026 世界杯赛程订阅站 — Codex Goal Skill 24 分钟开发</div>
+  <div class="section"><div class="section-label event">一句话</div><p>向阳乔木用 Codex Goal Skill 在 24 分钟内构建的世界杯赛程网站，支持个性化日历订阅（按球队、小组、比赛日）。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://2026fifa.qiaomu.ai" target="_blank">https://2026fifa.qiaomu.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开网站选择关注的球队/小组/比赛日，生成专属 ICS 日历订阅链接。将链接添加到 Apple 日历/Google 日历/Outlook 中，自动同步赛程，每场比赛前 30 分钟提醒。支持 48 支球队、12 个小组、小组赛到决赛全赛程。日历格式标准 ICS，兼容所有主流日历应用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>24 分钟从零到上线验证了 AI Coding 的生产力边界——传统开发至少需要 2-3 天。ICS 日历订阅比 App 更轻量、更高频使用（用户每天看日历）。Codex Goal Skill 代表了 Agent 开发的未来方向：高层次意图 → 完整可交付产品。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>世界杯观赛日程管理</li>
+    <li>体育社群/球迷会的赛程共享</li>
+    <li>AI Coding 效率的鲜活案例展示</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2065817104847458544" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKtA48dbQAAjIb3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKtA48dbQAAjIb3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Fable 5 被白宫 24 小时紧急下架</div>
+  <div class="section"><div class="section-label event">事件</div><p>亚马逊 CEO Jassy 上周四向特朗普政府反映 Fable 5 存在 jailbreak 风险，周五上午白宫召集会议，下午致电 Anthropic CEO Dario Amodei，当晚 Fable 5 下架。美国政府对单一 AI 模型启动出口管制，史无前例。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这一事件标志着 AI 治理从行业自律进入政府强力干预阶段。亚马逊作为 Anthropic 的主要投资方和云服务商，其 CEO 亲自推动竞品模型下架，揭示了 AI 产业中资本、政治与安全的深度纠缠。Fable 5 的 jailbreak 风险是否真实存在、是否值得出口管制级别的响应，业内争议巨大——Yann LeCun 暗讽 Anthropic「种瓜得瓜」。Simon Willison 庆幸政府没用同样理由封禁 Opus 4.x 和 GPT-5.x。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期来看，依赖 Fable 5 的企业和开发者面临模型断供，需紧急迁移；Waza 等模型无关工具价值凸显。长期来看，美国可能建立常态化的 AI 模型审查机制，开源模型发布也可能受限。中国 AI 技术栈获得意外的地缘政治窗口——正如 Daniel Jeffries 所言，60 亿非美国人将标准化采用中国 AI。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2066306495952875877" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKz-zYuaUAAW82H?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKz-zYuaUAAW82H?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GPT-5.6 泄露：6 月 23 日发布，150 万 token 上下文</div>
+  <div class="section"><div class="section-label event">事件</div><p>多方泄露消息称 OpenAI 可能在 6 月 23 日推出 GPT-5.6，价格仅为 Fable 5 的 1/3，支持 150 万 token 上下文窗口，Agent 编码工作流全面升级，直接对标 Claude 风格系统。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>发布时机选择极为微妙——恰在 Fable 5 被政府勒令下架后两周。OpenAI 明显在利用 Anthropic 的监管困境抢占市场。「价格仅为 Fable 1/3」直击 Anthropic 的商业软肋。150 万 token 上下文是当前公开可用模型中的最大值，意味着可以一次性处理整本《三体》级别的文本。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果消息属实，6 月 23 日将成为 2026 年 AI 竞争格局的分水岭。OpenAI 有望在 Anthropic 受困期间重夺开发者心智。Fable 5 的 jailbreak 争议反衬出 OpenAI 的安全策略更「务实」。价格战将进一步压缩中小模型厂商的生存空间。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2066305163619680628" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKz9l99bkAE-9bL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKz9l99bkAE-9bL?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKxHV4QbMAAOIWL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKxHV4QbMAAOIWL?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 黄仁勋「五层 AI 蛋糕」：真正的钱在能源和芯片层</div>
+  <div class="section"><div class="section-label event">事件</div><p>Jensen Huang 将 AI 生态比喻为五层蛋糕：最底层能源（核电/太阳能/氢能）→ 芯片 → 基础设施 → 模型 → 应用。他指出大家都盯着第四层模型，但真正的投资机会在底下三层。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>老黄的发言既是对产业现状的精准解剖，也是在为 NVIDIA 的全栈战略做背书。能源和芯片层具有天然垄断性（重资产、长周期、高技术壁垒），而模型层和应用层竞争激烈、毛利承压。NVIDIA 正从芯片向上延伸到数据中心基础设施（DGX Cloud），同时通过投资能源项目锁定电力供应。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 投资风向可能从「模型竞赛」转向「基础设施建设」。算力中心的电力消耗已成为关键约束——北京地区数据中心年耗电量占比已引发关注。创业者在选择赛道时应更关注底层的「铲子型」机会而非应用层的「淘金热」。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2066314393441485130" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Satya Nadella 提出「Token 资本」新概念</div>
+  <div class="section"><div class="section-label event">事件</div><p>微软 CEO 发长文提出 Token Capital 概念：AI 时代每家公司需同时经营人力资本和 Token 资本（公司自建的 AI 能力），两者是乘法关系——人的判断力越强，Token 资本的杠杆效应越大。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个概念巧妙地将 AI 投资从「成本中心」重新定义为「资本积累」。Token 资本不同于传统的软件资产——它会随使用反馈持续进化，且边际复制成本趋近于零。Nadella 的框架为微软 Copilot 生态提供了理论支撑：每个企业都在用 Copilot 积累自己的 Token 资本。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业的 CFO 和 CIO 将重新评估 AI 投入的会计属性——从 OpEx（运营支出）转向 CapEx（资本支出）。这一定位将推动更多企业加大 AI 投资。对创业公司来说，「Token 资本」的概念为 AI-native 产品的估值提供了新叙事。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2066280904725836283" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2066165703443726749" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2066170145102536747" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/JoyLi629/status/2066074809876783155" target="_blank"><span class="handle">@JoyLi629</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2065949364187807818" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2066171912124768409" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2065832438912217276" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HKx9DUnbYAElBeK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKx9DUnbYAElBeK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKyCCA1b0AA_ULh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKyCCA1b0AA_ULh?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKyEEfKXMAE_giC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKyEEfKXMAE_giC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKrJkziWAAEU-JD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKrJkziWAAEU-JD?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>open-notebook：本地版 NotebookLM，可在自己电脑上跑知识整理和播客生成 <a href="https://github.com/lfnovo/open-notebook" target="_blank">→</a></li>
+    <li>last30days-skill：新型 AI 搜索引擎技能，探索搜索的新交互范式 <a href="https://github.com/mvanhorn/last30days-skill" target="_blank">→</a></li>
+    <li>TVAPP：电视直播/追剧 APK，支持自定义 IPTV 源 <a href="https://github.com/youhunwl/TVAPP" target="_blank">→</a></li>
+    <li>Gravity：基于物理的太阳系模拟器，适合给孩子做天文启蒙 <a href="https://appinn.com/gravity-the-solar-system/" target="_blank">→</a></li>
+    <li>乔木小说创作 Skill：AI 自动生成小说剧情、人物设定、钩子和冲突 <a href="https://x.com/vista8/status/2066165703443726749" target="_blank">→</a></li>
+    <li>App Store 评论挖掘工具：输入 App 名称自动抓取评论，用 DeepSeek 分析用户痛点，下周开源 <a href="https://x.com/vista8/status/2066170145102536747" target="_blank">→</a></li>
+    <li>Open Design 全新官网：265 套视觉模板 + 150+ Design Systems + 50+ 教程 <a href="https://x.com/JoyLi629/status/2066074809876783155" target="_blank">→</a></li>
+    <li>Pyodide WASM 支持：Python 扩展（C/Rust）可编译到 WASM，通过 PyPI 分发 <a href="https://x.com/simonw/status/2065949364187807818" target="_blank">→</a></li>
+    <li>Mole 1.7：Mac 效率工具，风扇控制、隐私警报、AI 编码保活，早鸟价 $9 截至今日 <a href="https://mole.fit" target="_blank">→</a></li>
+    <li>FanBox：Coding Agent 的驾驶舱，管理多个 Agent 协同工作 <a href="https://x.com/AlchainHust/status/2066171912124768409" target="_blank">→</a></li>
+    <li>香港打小人仪式模拟器：小众软件的趣味项目 <a href="https://x.com/appinn/status/2065832438912217276" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

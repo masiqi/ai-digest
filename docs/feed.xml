@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 14 Jun 2026 00:37:52 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 00:47:42 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/15 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-15.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-15.html</guid>
+      <description>Fable 5 被白宫勒令下架成为本周期最大黑天鹅——亚马逊CEO一通电话、24小时内出口管制落地，Anthropic近万亿美元估值面临考验。与此同时，OpenAI GPT-5.6泄露传闻四起（6月23日发布、150万token上下文、价格仅为Fable 1/3），OpenRouter Fusion 以模型融合策略低成本超越单模型天花板。开源工具层持续爆发：Waza、agent-skills、infocard-skills、CCOnline等一批可上手项目密集发布。</description>
+      <pubDate>2026-06-15T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/14 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-14.html</link>
