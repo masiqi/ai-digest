@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 16 Jun 2026 02:48:41 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 02:52:30 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/06/16 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-16.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-16.html</guid>
-      <description>今天最值得关注的是「Agent 工具链」继续向可运行、可组合、可交易三个方向扩散：从 Vercel 的 Agent Harness UI、智谱 ZCode，到 Clawhunt 的 Agent 悬赏市场，都不是概念稿，而是可以直接打开或安装试的东西。另一个主线是轻量开源工具密集出现：简历/报告生成、App Store 评论分析、本地小说写作、Lottie 动画生成等，适合今天就拿来拆解或改造成自己的工作流。</description>
+      <description>今天最值得关注的是“可运行的 Agent 基础设施”集中出现：从 Vercel 的 Agent Harness、Claude Agent SDK 额度、ZCode 客户端，到 Agent 悬赏市场和多 Agent 治理框架，开发者正在把 AI 从聊天窗口推向真实执行、评测、付费和交付闭环。另一条主线是低门槛工具爆发：RAG 压缩索引、App 评论分析、AI 写作/剧本/小说工具、视觉检测和 Lottie 动画生成，都已经有网页、GitHub 或客户端下载入口，可以今天就上手。</description>
       <pubDate>2026-06-16T08:30:00+08:00</pubDate>
     </item>
     <item>

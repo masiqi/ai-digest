@@ -70,20 +70,20 @@
   <div class="date">2026-06-16</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>今天最值得关注的是「Agent 工具链」继续向可运行、可组合、可交易三个方向扩散：从 Vercel 的 Agent Harness UI、智谱 ZCode，到 Clawhunt 的 Agent 悬赏市场，都不是概念稿，而是可以直接打开或安装试的东西。另一个主线是轻量开源工具密集出现：简历/报告生成、App Store 评论分析、本地小说写作、Lottie 动画生成等，适合今天就拿来拆解或改造成自己的工作流。</p>
+    <p>今天最值得关注的是“可运行的 Agent 基础设施”集中出现：从 Vercel 的 Agent Harness、Claude Agent SDK 额度、ZCode 客户端，到 Agent 悬赏市场和多 Agent 治理框架，开发者正在把 AI 从聊天窗口推向真实执行、评测、付费和交付闭环。另一条主线是低门槛工具爆发：RAG 压缩索引、App 评论分析、AI 写作/剧本/小说工具、视觉检测和 Lottie 动画生成，都已经有网页、GitHub 或客户端下载入口，可以今天就上手。</p>
   </div>
 </div>
 <div class="topic">
-  <div class="topic-title">🛠️ Vercel Generative UI × Agent Harness</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个把 Coding Agent 执行过程渲染成结构化 UI 的示例 Harness，让 Agent 不只输出 Markdown，而是输出步骤、Diff、终端、测试结果和图表组件。</p></div>
+  <div class="topic-title">🛠️ Vercel Agent Harness Chat</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Vercel Labs 的 json-render 示例，把 Coding Agent 的执行过程渲染成结构化 UI，而不是只返回 Markdown。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/vercel-labs/json-render/tree/main/examples/harness-chat" target="_blank">https://github.com/vercel-labs/json-render/tree/main/examples/harness-chat ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库后进入 examples/harness-chat 目录，先阅读 README 和 package 脚本，按项目要求安装依赖并启动本地开发服务。核心玩法是把 Claude Code、Codex、Pi 这类 Coding Agent 放进 Vercel Sandbox，让它真实改代码、跑命令、测用例；汇报阶段则让 Agent 按 json-render 的受约束 JSON UI 规格返回内容。你可以先跑官方示例，再把自己的 Agent 输出从纯文本改成 JSON 组件，比如 terminal、diff、test-result、chart 等模块，观察前端如何实时渲染。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 产品的瓶颈不只是「会不会做事」，还包括用户如何理解、审查和信任它做了什么。这个示例把执行轨迹 UI 化，等于给 Coding Agent 加了一层可观察、可交互的报告协议，适合用来做内部开发助手、代码审查面板或任务执行控制台。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库后先阅读 examples/harness-chat 目录的 README 和 package 配置，按仓库说明安装依赖并启动示例。它的核心玩法不是让 Agent 直接吐一大段文字，而是让 Agent 输出受约束的 JSON UI 规格，前端把步骤、Diff、终端输出、测试结果、图表等渲染为组件。你可以先跑通默认 demo，再把自己的 Claude Code、Codex 或 Pi 调用封装进相同 harness，把“执行命令—修改代码—运行测试—展示结果”的过程变成可审计的产品界面。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Coding Agent 真正进入生产后，瓶颈不是“能不能写代码”，而是人如何理解、验证和回滚它做了什么。Generative UI 把 Agent 行为从文本流升级成可交互的状态机，方便做权限控制、测试证据展示和多人协作审查，是 Agent 产品化的重要基础设施。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>给自研 Coding Agent 做实时执行看板，展示命令、补丁和测试结果。</li>
-    <li>把 Agent 工作流产品从聊天窗口升级为可审查的工程控制台。</li>
+    <li>给内部代码助手做可视化任务面板，展示每一步命令、Diff 和测试结果。</li>
+    <li>做 SaaS 里的 Agent 执行回放，让客户不用读终端日志也能判断任务是否可信。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -98,15 +98,15 @@
 
 <div class="topic">
   <div class="topic-title">🛠️ Kami</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Tw93 开源的 AI 写作与排版工具，用来生成更整洁的简历、报告和多语言文档。</p></div>
+  <div class="section"><div class="section-label event">一句话</div><p>tw93 开源的 AI 写作排版工具，面向简历、报告和多语言内容润色。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库后先查看 README 的安装方式和示例截图，按项目说明准备运行环境。使用时可以把已有简历、项目介绍或报告草稿交给 Kami，先让它做事实核查和结构重写，再选择目标语言和页面样式生成两页以内的整洁内容。建议从一个真实但不重要的简历副本开始测试：先输入原始经历，再对比重写前后的事实、措辞、长度和版式，确认没有虚构经历后再导出或复制到正式文档。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 AI 写作工具只负责「生成文字」，Kami 更强调最终文档的可读性、事实检查和极简设计系统。它适合把 LLM 写作结果落到真实交付物上，尤其是简历、汇报、申请材料这类既要准确信息又要视觉干净的内容。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库查看安装和运行说明，适合先从示例或本地开发模式跑起。把已有的简历、周报、项目报告或中英文草稿导入后，让 Kami 在改写前做事实检查，再把内容压缩成两页以内的整洁版式。它强调“写得好，也要看起来刚好”，因此不要只把它当文本润色器，可以用它做最终交付前的版面统一：标题层级、段落长度、语言切换和简洁视觉风格都交给工具处理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 AI 写作工具停留在生成文字，真正影响交付质量的是事实一致性、篇幅控制和视觉呈现。Kami 选择把写作、检查、排版和多语言放在一个轻量系统里，适合个人开发者、求职者和知识工作者把 AI 输出变成可提交材料。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>快速重写中英文简历、项目经历和求职材料。</li>
-    <li>把杂乱的报告草稿整理成可直接发给老板或客户的版本。</li>
+    <li>求职者快速把长简历整理成双语、两页以内、结构清晰的版本。</li>
+    <li>咨询、产品、运营人员把会议纪要或调研报告改写成面向老板/客户的正式文档。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -123,41 +123,40 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ AI 驱动开发七阶段 / Skills For Real Engineers</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Matt Pocock 的开源工程技能材料，把 AI 驱动开发拆成 Grill、Research、Prototype、PRD、Issues、Implement、Review 七个阶段。</p></div>
+  <div class="topic-title">🛠️ LEANN 本地 RAG 系统</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把笔记本电脑变成大规模 RAG 搜索系统的项目，宣称用比传统方案少 97% 的存储索引百万级文档。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/mattpocock/skills" target="_blank">https://github.com/mattpocock/skills ↗</a></p>
+    <p><a href="https://x.com/Sumanth_077/status/2066530299467706495" target="_blank">https://x.com/Sumanth_077/status/2066530299467706495 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库后从目录中找到与 AI 开发流程相关的章节，先不要急着复制模板，而是拿一个真实的小需求做演练。第一步 Grill：让 AI 追问需求边界，输出问题陈述；第二步 Research：让它查已有代码和相关方案；第三步 Prototype：用最小 Demo 验证；随后让它生成 PRD、拆 Issue、实现代码，最后进入 Review。你可以把七步做成 Claude Code/Codex 的固定提示词或项目 Skill，每次新需求都按阶段推进，而不是直接让模型「写代码」。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI Coding 的质量问题往往不是模型不会写，而是缺少需求澄清、研究、验收和审查的过程。这个七阶段框架把传统工程纪律重新包装成适合 Agent 协作的流程，能显著降低一次性生成大量不可验证代码的风险。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从原推进入项目主页或仓库，确认当前支持的安装方式、向量模型和文档格式。上手时建议不要一开始导入全部资料，而是先选一个 1GB 以内的 PDF、Markdown 或网页归档目录，建立索引后测试关键词搜索和自然语言问答的召回质量。它的卖点是基于图的 selective recomputation：不是把所有向量和中间结果都永久堆在磁盘上，而是在检索时选择性重算，从而节省存储。验证时要比较三件事：索引体积、检索延迟、答案是否漏掉关键文档。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>个人知识库和企业文档 RAG 最大痛点之一是“索引比原文还占空间”，尤其在本地电脑或 NAS 上不划算。LEANN 如果能在准确率接近传统方案的同时大幅压缩存储，会让离线知识库、代码库问答和私有资料检索更容易普及。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>给团队制定 AI 辅助开发 SOP，统一从想法到 PR 的流程。</li>
-    <li>把个人 vibe coding 改造成可复盘、可审查的工程闭环。</li>
+    <li>在本地 Mac 或 Linux 笔记本上给 Obsidian、PDF 论文、项目文档做私有 RAG。</li>
+    <li>给中小团队搭建低成本文档搜索，不把敏感资料上传到云端向量数据库。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/shao__meng/status/2066678169005121847" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2066530299467706495" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HK5Q1Z8bEAAcJG-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5Q1Z8bEAAcJG-?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HK2CSd0WcAA6tOm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK2CSd0WcAA6tOm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK3KWxJa4AAkgih?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK3KWxJa4AAkgih?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ 乔木 App Review Insights</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个开源 App Store 用户评价分析工具，输入 App 名称后自动抓取评论并用 LLM 总结成产品洞察。</p></div>
+  <div class="topic-title">🛠️ Qiaomu App Review Insights</div>
+  <div class="section"><div class="section-label event">一句话</div><p>输入任意 App 名称，自动抓取 App Store 用户评价并用 LLM 分析成产品经理可用洞察。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://appreview.qiaomu.ai" target="_blank">https://appreview.qiaomu.ai ↗</a></p>
+    <p><a href="https://appreview.qiaomu.ai/" target="_blank">https://appreview.qiaomu.ai/ ↗</a></p>
     <p><a href="https://github.com/joeseesun/qiaomu-app-review-insights" target="_blank">https://github.com/joeseesun/qiaomu-app-review-insights ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>最快方式是直接打开在线体验 appreview.qiaomu.ai，输入一个你关心的 App 名称，选择预设的国家、免费榜或付费榜数据，让系统抓取 App Store 评论并生成分析。每天限查 3 个 App，适合先验证效果；如果想研究实现或自部署，可以进入 GitHub 仓库，按 README 配置依赖、模型 API 和抓取参数。建议拿竞品 App 做测试，重点看差评聚类、用户高频需求、付费阻碍和功能建议，再把结果整理进产品 Roadmap。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>App 评论是产品经理最容易忽略但极有价值的一手数据。这个工具把抓取、清洗、聚类和 LLM 解读串成完整流程，而且代码开源，适合学习「垂直场景数据 + LLM 分析」如何做成实用小产品。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最简单的方式是直接打开在线体验站 appreview.qiaomu.ai，输入一个 App 名称，选择市场或榜单来源后生成评价分析。免费预设每天限查 3 个 App，适合先试自己产品、竞品和榜单头部产品。想长期使用可以访问 GitHub 仓库自部署：配置 App Store 数据抓取、LLM API Key 和分析提示词后，把评论按版本、国家、评分和时间聚合，输出用户痛点、功能请求、负面原因和可执行改进建议。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>App 评论里有大量真实需求，但人工读评论成本高、噪音大。这个工具把“抓取—清洗—归类—洞察”串成产品工作流，尤其适合独立开发者和小团队低成本做竞品研究，不需要先购买昂贵的数据分析平台。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>分析竞品 App 的用户痛点、差评原因和高频功能诉求。</li>
-    <li>给独立开发者做上架后评论监控和版本迭代依据。</li>
+    <li>独立开发者查看自己 App 最近差评集中在哪些版本和功能。</li>
+    <li>产品经理研究海外 Top App 的用户抱怨，反向寻找新功能机会。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -171,13 +170,13 @@
   <div class="topic-title">🛠️ AIO-Coding-Hub</div>
   <div class="section"><div class="section-label event">一句话</div><p>一个 all-in-one 的 Claude、Codex 本地代理网关，支持 OAuth 登录、日志计费、隐私过滤和缓存预警。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://t.co/13REamch7N" target="_blank">https://t.co/13REamch7N ↗</a></p>
+    <p><a href="https://meta.appinn.net/t/topic/86957" target="_blank">https://meta.appinn.net/t/topic/86957 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>从原文链接进入小众软件发现频道页面，找到项目 GitHub 或发布页后，先阅读部署方式和支持的后端模型。它的定位是本地代理网关，因此建议在本机或内网服务器上启动，再把 Claude、Codex 等编码工具的 API Base 指向它。首次体验可以只接一个模型账号，打开日志和隐私过滤功能，运行几次 Claude Code 或 Codex 任务，观察请求、token、费用统计和缓存命中情况；确认稳定后再接入更多团队成员或更多模型。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>随着多种 Coding Agent 并行使用，统一鉴权、日志、成本统计和隐私过滤会变成刚需。AIO-Coding-Hub 如果做得成熟，可以成为个人或小团队的「AI 编码网关」，把分散的模型调用变成可治理的基础设施。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从小众软件发现频道进入项目介绍页，查看作者提供的仓库、安装包或部署命令。它适合放在本机或内网服务器上，作为 Claude Code、Codex、OpenClaw 等编码工具的统一出口。部署后先配置上游模型账号或 OAuth 登录，再把本地 CLI 的 API Base URL 指向这个网关，逐项打开日志、计费统计、隐私过滤和缓存预警。建议先用一个测试项目验证：敏感文件是否被过滤、请求量是否记录、失败请求是否能定位。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 编码工具越来越多，账号、额度、日志和隐私策略分散在不同客户端里，很难管理。统一代理网关能把个人或团队的模型调用变成可观测、可限流、可审计的基础设施，是重度 AI Coding 用户非常实用的“中间层”。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>给团队统一管理 Claude、Codex 等编码 Agent 的调用入口和费用。</li>
-    <li>在本地做敏感信息过滤、日志审计和缓存预警，降低误传风险。</li>
+    <li>个人开发者统一管理 Claude、Codex、第三方模型的调用日志和额度消耗。</li>
+    <li>小团队在内网部署 AI Coding 网关，避免源码和密钥被工具随意上传。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -188,16 +187,83 @@
 </div>
 
 <div class="topic">
+  <div class="topic-title">🛠️ Script Forging 剧本锻造 Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把一句想法扩展成可拍摄剧本的 Skill 工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.appinn.com/script-forging/" target="_blank">https://www.appinn.com/script-forging/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开小众软件文章后，按文中给出的 Skill 内容或模板导入到支持 Skills 的 Agent 环境，例如 Claude、Hermes 或其他可保存系统提示词的工具。使用时不要只给“写一个短剧”这种泛需求，而要给主题、人物、时长、平台风格、预算限制和禁忌。Skill 会把想法拆成故事核心、人物关系、场景、冲突、分镜或对白。第一次生成后重点检查“能不能拍”：场景数量是否过多、道具是否现实、对白是否符合人物，再让 Agent 迭代成最终拍摄稿。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>视频创作者最难的是从灵感走到可执行脚本，普通 LLM 容易写出文学化但拍不了的内容。剧本锻造把创作流程结构化，强调拍摄约束和落地性，适合短视频、广告、课程和自媒体脚本生产。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>短视频团队把热点选题快速变成可拍的 1-3 分钟脚本。</li>
+    <li>个人创作者把产品卖点、故事灵感转成分镜、对白和拍摄清单。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2066476572215808011" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK2ZfePXYAAOZOI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK2ZfePXYAAOZOI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Agentic Detection / Perceptron Demo</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个视觉检测模型，用自然语言描述就在图里精确框出目标，还支持样例检索。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.xiaohu.ai/c/xiaohu-ai/agentic-detection-ai" target="_blank">https://www.xiaohu.ai/c/xiaohu-ai/agentic-detection-ai ↗</a></p>
+    <p><a href="https://www.perceptron.inc/demo" target="_blank">https://www.perceptron.inc/demo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开 perceptron.inc/demo 上传一张图片，先用简单查询测试，例如“找出所有杯子”“圈出可能挡住门的物体”。进阶玩法有三种：不指定标签时让它全量盘点图片中的人、物和杂物；给一组自然语言目标，让模型逐类框选；上传几张样例图让它寻找相似目标，并用反例排除干扰。建议用真实复杂场景测试，比如仓库货架、桌面杂物、工厂照片，而不是只用单物体图片。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统目标检测需要预定义类别和标注训练，开放词汇检测虽然进步很快，但对“需要物理推理或上下文判断”的目标仍不稳定。Agentic Detection 把语言理解、视觉定位和交互式查询结合起来，降低了非技术用户做视觉检测的门槛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>电商、仓储、质检场景中快速定位指定物品、缺陷或异常摆放。</li>
+    <li>设计、安防、教育中用自然语言给图片做结构化盘点和标注。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2066467115880837500" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Text-to-Lottie Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Diffusion Studio 的 Lottie 生成项目，让 Agent 根据文字或数据生成可嵌入的 Lottie 动画。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/diffusionstudio/lottie" target="_blank">https://github.com/diffusionstudio/lottie ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库后按 README 安装依赖，先运行示例生成一个基础文字动画。Lottie 本质是 JSON 动画格式，适合网页和 App 轻量播放；这个项目的玩法是让 Agent 生成动画结构，而不是让设计师手工调关键帧。你可以从简单提示开始，例如“生成一个数字从 0 增长到 100 的进度动画”，再尝试输入真实数据，让 Agent 生成柱状、折线或状态变化动画。生成后用 Lottie 预览器检查体积、帧率和兼容性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 生成图片和视频已经很多，但产品界面真正常用的是可控、轻量、可交互的动效。Text-to-Lottie 把自然语言和结构化动画连接起来，适合开发者不依赖设计工具快速做 Loading、引导页、数据可视化和营销动效。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>前端开发者为网页、App、Dashboard 快速生成轻量动效素材。</li>
+    <li>数据产品把真实指标转成可嵌入的动态可视化，用于汇报或运营页面。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2066465853470851180" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HK2PuKjaQAA6dpW.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HK2PuKjaQAA6dpW.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
   <div class="topic-title">🛠️ ZCode</div>
-  <div class="section"><div class="section-label event">一句话</div><p>智谱推出的类 Codex 编码客户端，支持 Windows、Mac，登录后可试用 GLM 5.2 进行 AI 编程。</p></div>
+  <div class="section"><div class="section-label event">一句话</div><p>智谱推出的类 Codex 客户端，支持 Windows、Mac，疑似可免费使用 GLM 5.2。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://zcode.z.ai/cn" target="_blank">https://zcode.z.ai/cn ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 zcode.z.ai/cn，按系统选择 Windows 或 Mac 安装包；Mac 用户注意区分 Intel 与 Apple Silicon 版本，Linux 目前需要通过内测群获取。安装后使用 Google 或官方支持的方式登录，创建或打开一个真实代码项目，先让 ZCode 做低风险任务，比如解释项目结构、修一个小 bug、生成测试或重构单个函数。测试时建议开启 git，所有修改先看 diff 再接受，并对比你平时使用 Codex、Claude Code 的速度、上下文理解和补丁质量。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>国内厂商正在把大模型能力从网页聊天推进到本地开发客户端。ZCode 的价值不只在模型本身，还在于它能否提供好用的项目索引、文件修改、命令执行和审查体验；如果 GLM 5.2 免费额度足够，对开发者是一个值得横向比较的新选择。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 zcode.z.ai/cn 下载对应系统版本，Mac 用户注意区分 Intel 和 Apple Silicon，Linux 版本需要按页面提示加入内测群。安装后用 Google 或页面支持的账号登录，创建或打开一个本地代码项目，先让它执行小任务：解释项目结构、修复一个 lint 错误、补一个测试。因为它定位类似 Codex 客户端，建议重点观察三点：是否能真实读写文件、是否能运行命令、是否有清晰的 Diff 审查和回滚机制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 编码客户端正在从命令行走向桌面化和多模型化。ZCode 如果能以低成本接入 GLM 5.2，并覆盖 Windows/Mac/Linux，会给国内开发者一个更容易上手的 Codex/Claude Code 替代方案，也会推动本土模型进入真实工程工作流。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在本地项目中尝试国产模型驱动的代码修改、解释和测试生成。</li>
-    <li>对比 Codex、Claude Code、ZCode 在同一任务上的补丁质量和交互体验。</li>
+    <li>不方便使用 OpenAI/Anthropic 的开发者，用国产模型客户端做日常代码修改。</li>
+    <li>团队评估 GLM 系列模型在项目理解、Bug 修复和测试生成中的表现。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -212,60 +278,37 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Agentic Detection / Perceptron Demo</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个视觉检测 Demo，用自然语言描述目标后，AI 能在图中精确框出对象，且不需要提前训练类别。</p></div>
+  <div class="topic-title">🛠️ Show Me The Story</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个用 AI 写长篇小说的本地工具，面向长文本创作和小说项目管理。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://perceptron.inc/demo" target="_blank">https://perceptron.inc/demo ↗</a></p>
+    <p><a href="https://meta.appinn.net/t/topic/86944" target="_blank">https://meta.appinn.net/t/topic/86944 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开在线 Demo 后上传一张包含多种物体或人物的照片，先用简单提示测试，例如「找出所有杯子」「圈出坐着的人」。随后尝试更复杂的物理关系或语义目标，例如「找出可能会滚落的物体」「找出桌面上不属于办公用品的东西」。它支持三种查询方式：不指定标签时全量盘点画面，给一组自然语言清单时逐类定位，用样例图时寻找更多相似对象并可加入反例。建议用自己的真实场景图测试边界能力，而不是只看官方样例。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统目标检测依赖固定类别和训练数据，而 Agentic Detection 更像把视觉定位、语言理解和推理结合起来。它适合做「开放词表检测」和「任务驱动视觉理解」，未来可接入机器人、质检、安防或相册管理等场景。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从小众软件项目页查看下载地址、仓库或运行说明，优先在本地创建一个测试小说项目。使用时先输入世界观、主角设定、章节目标和写作风格，不要直接让它“写一本小说”。长篇创作关键是连续性，所以要重点测试角色卡、情节线、章节大纲和前文记忆是否能被工具保存并复用。建议先生成 3 章，每章后人工修改关键设定，再让工具继续续写，看它是否能遵守修改后的事实。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>长篇小说不是一次性生成问题，而是记忆、结构、人物一致性和版本管理问题。本地工具如果把这些流程封装好，会比普通聊天窗口更适合严肃创作者，同时保护未发布作品不被上传到第三方平台。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>给图片、视频帧做自然语言目标搜索和批量标注。</li>
-    <li>在机器人或工业质检场景中按任务描述寻找异常物体。</li>
+    <li>网文作者用 AI 管理设定、章节大纲和初稿续写。</li>
+    <li>剧本、游戏剧情团队在本地迭代世界观和人物支线。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/xiaohu/status/2066467115880837500" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2066454127219998760" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Text-to-Lottie Skill</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Diffusion Studio 的开源 Lottie 生成工具/Skill，让 Agent 根据文字或真实数据生成 Lottie 动画。</p></div>
+  <div class="topic-title">🛠️ ClawHunt AI Agent 悬赏市场</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 AI 版“猪八戒”悬赏任务市场，让外部开发者部署的 Agent 自动接单、完成任务并获得赏金。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/diffusionstudio/lottie" target="_blank">https://github.com/diffusionstudio/lottie ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库后查看 README，按说明安装依赖并运行示例。最简单的玩法是给 Agent 一段文字动画需求，例如「生成一个 AI Daily Digest 标题出现、数据点依次弹出的 5 秒 Lottie」，让它输出 Lottie JSON，再用网页播放器、LottieFiles 或项目自带预览方式查看效果。进一步可以把真实数据喂给它，比如增长曲线、排名变化、步骤流程，让 Agent 生成可嵌入网页或 App 的动态图表。生成后重点检查 JSON 大小、兼容性和动画节奏。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Lottie 是产品界常用的轻量动画格式，但手工制作门槛不低。Text-to-Lottie 把 Agent 变成动画脚本生成器，适合快速做解释型动画、数据动画和界面微交互原型，让非设计师也能产出可嵌入产品的动态素材。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>为网页、App、PPT 快速生成轻量级动效和解释动画。</li>
-    <li>把真实业务数据转成可视化 Lottie 动画，用于报告或仪表盘。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2066465853470851180" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/tweet_video_thumb/HK2PuKjaQAA6dpW.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HK2PuKjaQAA6dpW.jpg" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ Clawhunt</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个 AI Agent 悬赏任务市场，用户发布复杂任务并挂赏金，由不同 Agent 接单、执行和验收。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://clawhunt.store" target="_blank">https://clawhunt.store ↗</a></p>
+    <p><a href="https://clawhunt.store/" target="_blank">https://clawhunt.store/ ↗</a></p>
     <p><a href="https://clawhunt.store/community" target="_blank">https://clawhunt.store/community ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 clawhunt.store 后先浏览已有任务类型，理解它把「复杂问题」包装成悬赏单的方式。作为使用者，可以注册账号，发布一个边界清楚的小任务，比如优化 SQL、写一个 Skill、搭建工作流或修复脚本，并设置验收标准和赏金；作为开发者，则可以按平台要求注册自己的 Agent，填写名称、能力描述、使用模型和 Webhook 地址，通过能力测试后接入平台抢单。建议从低金额、可自动验收的任务试起，观察任务分发、执行结果和付款流程是否可靠。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>如果 Agent 真的能作为独立劳动力参与任务市场，那么关键不再只是模型能力，而是任务描述、能力匹配、验收、支付和声誉系统。Clawhunt 把这些环节产品化，值得作为「Agent 经济」的早期样本观察和试玩。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 clawhunt.store 注册账号后，可以先作为需求方发布一个小任务，例如优化数据库查询、写一个 Skill、生成工作流或修复脚本，设置明确验收标准和赏金。另一种玩法是作为 Agent 开发者接入平台：填写 Agent 名称、能力描述、使用模型和 Webhook 地址，通过能力测试和审核后让平台派单。建议第一步先围观现有任务和社区，理解任务格式、验收规则和支付方式，再把自己的 Agent 接入，避免因为能力描述过泛导致接到无法完成的任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 商业化的关键不是 demo，而是任务分发、验收、支付和声誉系统。ClawHunt 试图把 AI Agent 从“工具”变成“可交易劳动力”，如果闭环跑通，会催生大量垂直 Agent，例如 SEO、数据分析、代码修复、自动运营等。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>把零散工程任务、数据处理任务或自动化需求外包给 Agent 尝试完成。</li>
-    <li>给自研 Agent 接入任务市场，测试真实用户任务中的可靠性和收益模型。</li>
+    <li>创业者把小型自动化任务挂赏金，测试不同 Agent 的真实交付能力。</li>
+    <li>Agent 开发者把自己的工作流接入市场，获得真实任务和收入反馈。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -279,16 +322,79 @@
 </div>
 
 <div class="topic">
+  <div class="topic-title">🛠️ Loop Engineering 橙皮书</div>
+  <div class="section"><div class="section-label event">一句话</div><p>免费开源的 32 页材料，系统梳理 Loop Engineering 的概念来源和最佳实践。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/loop-engineering-orange-book" target="_blank">https://github.com/alchaincyf/loop-engineering-orange-book ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库下载 PDF 或阅读 Markdown 版本，建议按“概念—争议—最佳实践—案例”的顺序读。读的时候不要把 Loop Engineering 当新名词崇拜，而是结合自己的 Agent 使用流程做对照：输入如何被拆解，反馈如何进入下一轮，人工检查点在哪里，哪些环节可以自动化。读完后可以把其中方法改写成团队提示词或项目 Skill，用在需求澄清、实验记录、评审复盘和自动化迭代中。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 圈新词很多，但 Loop Engineering 指向的是一个真实问题：如何让 AI、人和环境形成可持续反馈回路，而不是一次性提示词。开源材料如果能把来源、反对意见和实践边界讲清楚，比碎片化观点更适合团队内部培训。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>AI 产品经理和工程师建立 Agent 工作流的反馈、评测和复盘机制。</li>
+    <li>团队内部培训，统一对 Loop Engineering、Agent Skill、自动化迭代的理解。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2066392529470128167" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK1MJfgW4AAbo0k?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK1MJfgW4AAbo0k?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 微信 AI 生态接入指引</div>
+  <div class="section"><div class="section-label event">一句话</div><p>微信发布开发者接入微信 AI 生态的官方指引，给小程序和微信生态开发者提供 AI 能力入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developers.weixin.qq.com/miniprogram/dev/ai/guide.html" target="_blank">https://developers.weixin.qq.com/miniprogram/dev/ai/guide.html ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开微信官方文档，先确认你的主体、小程序类型和接口权限是否满足接入要求。上手路径建议是：创建一个测试小程序，按指引开通 AI 相关能力，阅读接口鉴权、调用额度、内容安全和审核要求，再做一个最小 demo，例如智能客服、商品推荐、表单自动填写或内容生成。不要直接上生产业务，先用灰度环境测试响应速度、敏感词拦截、日志留存和用户授权提示。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>国内大量真实用户和交易场景都在微信里，AI 能力一旦成为官方生态接口，会让小程序从“页面工具”升级为“智能服务入口”。这对本地生活、电商、教育、客服和企业微信协同都有直接影响。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>小程序开发者把客服、搜索、导购、表单填写接入官方 AI 能力。</li>
+    <li>企业在微信生态内构建面向客户和员工的轻量 Agent 服务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2066387155446894707" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AMD Ryzen AI Halo 本地 AI 开发平台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AMD 推出 Mac mini 大小的本地 AI 开发平台，128GB 统一内存，宣称可本地运行最高 2000 亿参数模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.amd.com/en/products/processors/desktops/ryzen/ryzen-ai-halo.html" target="_blank">https://www.amd.com/en/products/processors/desktops/ryzen/ryzen-ai-halo.html ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读 AMD 官方页面确认具体型号、内存、NPU/GPU 算力和支持框架。它不是普通云 API，而是面向本地部署的大模型开发机；上手时应关注预装环境是否包含常见推理框架、模型管理和示例。拿到设备后可以按官方 demo 从小模型开始，再尝试 GPT OSS 120B、Qwen、GLM 等量化模型，记录首次出 token 时间、吞吐、温度、功耗和上下文长度。若用于生产，还要验证驱动、容器和远程访问稳定性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>本地 AI 的价值在隐私、低延迟和可控成本，但过去高显存设备要么贵、要么难配置。AMD 把统一内存和预装模型环境做成小型开发平台，是对 NVIDIA DGX Spark 和 Mac Studio 路线的直接挑战。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>企业在本地跑代码、文档、客服等私有模型，不把数据传到云端。</li>
+    <li>AI 开发者评测大参数量开源模型在桌面级设备上的真实可用性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2066410744149922235" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
   <div class="topic-title">🛠️ Mole for Mac</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Mac 系统增强小工具，提供风扇控制、摄像头/麦克风隐私警报、AI 编码保持唤醒、锁定输入擦屏等功能。</p></div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mac 工具 Mole 1.7 更新，加入 Apple Silicon 风扇控制、摄像头/麦克风隐私警报、AI 编码保持唤醒等功能。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="http://mole.fit" target="_blank">http://mole.fit ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 mole.fit 下载 Mac 版本，安装后按系统提示授予必要权限，例如辅助功能、通知或硬件状态读取权限。初次体验建议先打开摄像头/麦克风隐私警报，确认调用时是否能及时提示；再测试 AI 编码保持唤醒功能，在长时间运行 Claude Code、Codex 或构建任务时避免 Mac 睡眠中断；如果是 Apple Silicon 设备，可以试试风扇控制和状态监控。锁定输入擦屏适合在清洁键盘或屏幕时使用，避免误触。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI Coding 让 Mac 长时间跑任务变得常见，保持唤醒、隐私提醒和硬件状态管理会从小众需求变成生产力基础设施。Mole 把这些功能打包成一个轻量工具，对经常用本机跑 Agent 的开发者很实用。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 mole.fit 下载 Mac 版，安装后先授予必要的系统权限，例如辅助功能、通知、摄像头/麦克风状态读取和电源管理。AI 编码用户可以重点打开“保持唤醒”功能，避免 Claude Code、Codex 或本地模型长任务时电脑睡眠；再配置摄像头/麦克风隐私警报，监控后台应用是否调用设备。Apple Silicon 用户可以测试风扇控制和系统状态面板，但要保守设置，避免为了安静牺牲散热。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI Coding 让电脑出现大量长时间后台任务，传统 Mac 小工具没有专门考虑“跑 Agent、跑模型、跑测试”的场景。Mole 把隐私、唤醒、风扇和系统监控结合起来，对重度本地 AI 开发者很实用。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>长时间运行本地 AI 编码、构建或测试任务时保持 Mac 不睡眠。</li>
-    <li>监控摄像头/麦克风调用，提升日常隐私安全感。</li>
+    <li>让 Claude Code/Codex 长任务期间 Mac 不睡眠，并监控资源状态。</li>
+    <li>给远程会议、录屏、AI 工具使用场景增加摄像头/麦克风隐私提示。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -299,10 +405,35 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Claude Agent SDK 与 claude -p 订阅额度政策调整</div>
-  <div class="section"><div class="section-label event">事件</div><p>Anthropic 撤回原先把 Agent SDK、claude -p 等第三方使用改为 API 计费的安排，改为给订阅用户提供专用额度，Pro 用户每月约 20 美元，Max 5x 约 100 美元。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这次调整对重度 Claude Code、Agent SDK 和第三方 Agent App 用户影响很大。此前如果第三方调用完全转向 API 计费，会显著抬高个人开发者和工具作者的使用成本；现在改成订阅内单独额度，相当于承认「非交互式 Agent 使用」已经是 Claude 订阅的重要场景，但又通过专用预算控制算力风险。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>短期看，Codex、OpenClaw、Hermes Agent、Pi 等依赖 Claude 订阅侧能力的工具会获得喘息空间，用户迁移压力降低。长期看，模型厂商会继续在订阅、API、Agent SDK 之间寻找计费边界，开发者需要关注额度、上下文和可用模型是否随时变化。</p></div>
+  <div class="topic-title">🛠️ Qiaomu AI 音乐站</div>
+  <div class="section"><div class="section-label event">一句话</div><p>乔木的 AI 音乐站更新多首 Suno 生成歌曲，展示组合创新带来的新听觉体验。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://music.qiaomu.ai/track/ghostty-1aea" target="_blank">https://music.qiaomu.ai/track/ghostty-1aea ↗</a></p>
+    <p><a href="https://music.qiaomu.ai/track/we-flow-so-slowly-1f5e" target="_blank">https://music.qiaomu.ai/track/we-flow-so-slowly-1f5e ↗</a></p>
+    <p><a href="https://music.qiaomu.ai/track/neon-song-c065" target="_blank">https://music.qiaomu.ai/track/neon-song-c065 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开三首歌曲链接试听，重点听风格融合、歌词结构、人声质感和编曲层次。想复刻玩法，可以把每首歌当作 prompt 研究样本：记录它像哪几种风格组合，哪里有 AI 痕迹，哪些段落适合短视频或产品宣传。再回到 Suno 或其他 AI 音乐工具，用“风格组合 + 情绪 + 场景 + 结构”的方式生成自己的版本，而不是只输入一句泛泛的“生成一首电子歌”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 音乐的实用价值正在从“能不能生成歌”转向“能不能做出明确风格和用途”。这些在线样本可以帮助创作者理解 AI 在风格拼接、氛围塑造和短内容配乐上的能力边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>短视频、播客、产品 demo 寻找灵感，生成匹配主题的背景音乐。</li>
+    <li>音乐爱好者研究不同风格组合，形成自己的 AI 音乐 prompt 模板。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2066542834212319265" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK3UKpXaMAIYAfH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK3UKpXaMAIYAfH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Agent SDK 和 claude -p 获得订阅专用额度</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 从 6 月 15 日起为 Agent SDK、Claude Code 的 claude -p、GitHub Actions 集成和第三方 Agent App 提供订阅专用使用额度，Pro 用户约 $20，Max 5x 约 $100。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这相当于 Anthropic 在“禁止第三方消耗订阅额度”和“完全转 API 计费”之间做了折中：个人订阅仍可驱动 Agent 工作流，但用独立额度隔离成本。对开发者来说，claude -p 非交互模式、Agent SDK 脚本、Pi、OpenClaw、Hermes 等工具的可用性明显提升，不必每次都直接走昂贵 API。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期会刺激 Claude 生态的 Agent 工具增长，尤其是个人开发者和小团队的自动化脚本。长期看，平台仍在摸索订阅、API、第三方客户端之间的成本边界，未来额度、模型、上下文长度和身份验证都可能继续调整。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -315,10 +446,43 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Anthropic 隐私政策加入身份/年龄验证相关条款</div>
-  <div class="section"><div class="section-label event">事件</div><p>Anthropic 更新隐私政策，提到在特定情况下可能要求 Claude 免费版、Pro 和 Max 用户提供年龄或身份验证，生效日期指向 2026 年 7 月 8 日。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这不是一个可直接上手的工具，但对 Claude 生态用户非常关键。身份验证条款通常与合规、安全、出口管制、未成年人保护和高风险使用场景有关。现在信息还不完整，不能简单理解为所有用户立即强制 KYC，但对跨区使用、团队共享账号和自动化 Agent 调用来说，未来出现验证弹窗或访问限制的概率会上升。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果 Claude 成为更多开发者 Agent 工作流的底层模型，账号验证政策会直接影响连续可用性。个人用户应提前准备替代模型和多供应商路由；工具作者则需要在产品里处理验证失败、额度变化和模型不可用的降级逻辑。</p></div>
+  <div class="topic-title">📡 Agentic Code Review 成为工程瓶颈</div>
+  <div class="section"><div class="section-label event">事件</div><p>Addy Osmani 讨论 Agentic Code Review，指出 AI 让代码产出提高约 4 倍，但实际交付价值只增加约 10%，多出来的是待验证代码。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>AI 编码把“写代码”成本大幅压低后，工程瓶颈转移到审查、测试、理解和信任。团队如果只追求生成速度，会得到更多 PR、更大 Diff 和更多隐性维护成本；真正有杠杆的是自动化审查、风险分级、测试生成和架构一致性检查。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>代码审查工具、Agent 评测、CI 中的安全/质量门禁会成为下一波基础设施机会。企业采购 AI Coding 工具时，也会从“能写多少代码”转向“能否证明代码可靠、可维护、符合团队规范”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2066687681200037904" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK5Zc71aMAA5g6j?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5Zc71aMAA5g6j?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cua-Bench 评测专业软件 Computer Use 能力</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cua 与 Snorkel AI 发布 Cua-Bench，首个公开数据集聚焦 KiCad，包含 25 道由执业电气工程师编写并复核的电子设计任务。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Computer Use 评测如果只停留在网页点击和简单办公软件，无法代表专业工作。KiCad 任务要求模型理解电路、元件、约束和软件操作，从“改电容值”到“搭建双运放电路”，更接近真实白领/工程师工作流。它能暴露模型在长任务规划、视觉定位、领域知识和错误恢复上的短板。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这类基准会推动 Agent 从通用桌面操作走向垂直专业软件，未来 CAD、EDA、财务、医学影像、数据分析软件都可能出现类似评测。模型厂商和 Agent 公司需要证明自己不只是会点按钮，而是能完成专业任务。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2066684840033026274" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK5W5rRasAAS3D3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5W5rRasAAS3D3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HK38bqRa4AAFy-m?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HK38bqRa4AAFy-m?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 隐私政策加入年龄/身份验证条款</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 更新隐私条款，Claude 免费版、Pro 和 Max 用户在特定情况下可能被要求进行年龄或身份验证，政策涉及验证数据收集。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这说明前沿模型服务正在面对合规、出口管制、年龄限制和滥用治理压力。身份验证不一定会覆盖所有用户，但一旦触发，可能涉及证件、自拍或第三方验证服务。对依赖 Claude 的个人和工具开发者而言，账号可用性不再只是订阅问题，还包括地区、身份和任务类型。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期会增加部分用户的使用摩擦，推动多模型备份和本地模型替代。长期看，AI 服务会像金融、支付和云服务一样逐步引入更强的 KYC/风控机制，第三方客户端也必须处理验证、隐私说明和用户数据边界。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -331,10 +495,27 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Cloudflare 加码 AI 基础设施效率</div>
-  <div class="section"><div class="section-label event">事件</div><p>Cloudflare 宣布引入 Ensemble AI 团队成员，继续加深在机器学习基础设施和效率方向的投入。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>Cloudflare 的 AI 布局不是单点模型竞争，而是围绕边缘网络、推理效率、开发者平台和基础设施成本做长期铺垫。引入擅长 ML 基础设施和效率的团队，说明它希望在模型服务、边缘推理和 AI 应用部署层面继续强化，而不是只做传统 CDN 和安全服务。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果 Cloudflare 把 AI 推理、向量存储、队列、Workers 和安全能力进一步整合，中小开发者会更容易用低运维方式部署 AI 应用。对产业而言，AI 基础设施竞争会从「谁有最大模型」扩展到「谁能把推理更便宜、更近、更稳定地交付给开发者」。</p></div>
+  <div class="topic-title">📡 Kimi 前负责人创业公司获大额融资</div>
+  <div class="section"><div class="section-label event">事件</div><p>原阿里千问大模型负责人林俊旸创立的 AI 实验室完成首轮融资，红杉和高榕据称各出资 1 亿美元，腾讯跟投 2000 万美元，投后估值约 20 亿美元。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>模型人才和训练经验仍然是资本追逐的核心资产。即便基础模型竞争进入高投入阶段，顶级团队一旦具备从预训练到产品化的履历，仍能获得巨额早期融资。这也反映国内大模型创业从“讲故事”进入“抢人、抢算力、抢生态”的阶段。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>国内模型赛道会继续分化：头部新团队获得资本和算力，腰部公司更难独立训练前沿模型，可能转向垂直应用、Agent 工具或企业交付。对大厂来说，核心模型人才流动也会成为战略风险。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2066529151801262314" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK2t1mla4AAo9DI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK2t1mla4AAo9DI?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK2t1mjboAAAgma?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK2t1mjboAAAgma?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cloudflare 加码 AI 基础设施</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cloudflare 通过吸纳 Ensemble AI 团队成员，继续加强机器学习基础设施和效率方向投入。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Cloudflare 的优势在全球网络、边缘计算、安全和开发者平台，AI 基础设施天然需要低延迟分发、推理路由、缓存、安全过滤和可观测性。吸收 ML 基础设施团队，说明它不只是卖 CDN，而是在为“AI 请求经过 Cloudflare”构建更深能力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来开发者可能在 Cloudflare Workers、AI Gateway、边缘推理和安全策略中获得更完整的一站式 AI 部署体验。云厂商、CDN 和模型平台的边界会继续模糊，基础设施竞争会从算力扩展到网络与治理层。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -344,22 +525,39 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 原阿里千问负责人 AI 实验室完成大额融资</div>
-  <div class="section"><div class="section-label event">事件</div><p>原阿里千问大模型负责人林俊旸创立的 AI 实验室完成首轮融资，红杉和高榕共同领投，腾讯跟投，投后估值约 20 亿美元。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>大模型核心人才从大厂出走后迅速获得顶级资本支持，说明市场仍在押注「小团队 + 顶级研究/工程能力」能在模型或 Agent 时代跑出新公司。虽然融资金额亮眼，但最终竞争力仍取决于算力、数据、产品分发和商业化速度。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>国内大模型创业会继续围绕顶级人才形成资本虹吸，大厂内部模型团队的人才稳定性也会承压。对开发者来说，这类新实验室可能带来新的 API、开源模型或 Agent 产品，但短期更多是产业信号，而不是可立即采用的工具。</p></div>
+  <div class="topic-title">📡 Databricks 推出 Omnigent 多 Agent 治理抽象</div>
+  <div class="section"><div class="section-label event">事件</div><p>Databricks 推出 Omnigent，定位为 meta-harness，解决多个 Agent 的组合、治理和协作问题。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>当单个 coding agent、数据 agent 或业务 agent 被大量部署后，企业真正头痛的是谁来协调它们、如何分配权限、怎样追踪责任、如何防止相互冲突。Databricks 从 5000+ 工程师使用 coding agent 和对外交付 Genie 等实践中抽象出 meta-harness，说明 AgentOps 正在从“单 Agent 能力”上移到“组织级编排”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业 AI 平台会需要类似 Kubernetes/工作流引擎的 Agent 管理层，包含任务路由、审计、评测、权限、记忆和成本控制。数据平台厂商如果能掌握这一层，会在企业 AI 落地中获得更高控制点。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/iamtonyzhu/status/2066529151801262314" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/Sumanth_077/status/2066530299467706495" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2066507535637492081" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2066326398252499391" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HK2t1mla4AAo9DI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK2t1mla4AAo9DI?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HK2t1mjboAAAgma?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK2t1mjboAAAgma?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HK3KWxJa4AAkgih?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK3KWxJa4AAkgih?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK0Q5ZgagAAimQC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK0Q5ZgagAAimQC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKtA54CXgAAObfX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKtA54CXgAAObfX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Codex Mobile 工程实践</div>
+  <div class="section"><div class="section-label event">事件</div><p>Dimillian 总结 Codex Mobile 心智模型：手机不是缩小版终端，而是远程开发机的控制中心。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>移动端做 AI 编程的关键不是在手机上跑编译，而是让手机负责启动、引导、审查和组织任务，真实执行仍在 Mac、Windows 或 devbox 上完成。这种模式把碎片时间变成工程管理入口：排队任务、查看 Diff、批准测试、合并 PR，而不是在小屏幕敲代码。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI Coding 会改变开发者设备分工，桌面负责执行，手机负责决策和审查。未来 GitHub、Linear、Slack、Codex/Claude Code 客户端可能进一步融合，移动端工程协作会从通知工具升级为 Agent 控制台。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2066319268933988686" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2066507535637492081" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2066434120436285872" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK0KaoCbgAAqsEN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK0KaoCbgAAqsEN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK1y4HsaQAAnekS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK1y4HsaQAAnekS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKx3fl_aMAAw_Yo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKx3fl_aMAAw_Yo?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
@@ -367,14 +565,16 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>LEANN：用更少存储空间在本地为百万级文档建立 RAG 索引和搜索，适合关注轻量本地知识库的人继续追踪 <a href="https://x.com/Sumanth_077/status/2066530299467706495" target="_blank">→</a></li>
-    <li>Show Me The Story：小众软件推荐的开源本地长篇小说 AI 写作工具 <a href="https://t.co/VtJB9gZSRl" target="_blank">→</a></li>
-    <li>AI 老照片修复小工具：面向家庭相册的 AI 修复工具，适合非技术用户体验 <a href="https://t.co/9xVa755ZMG" target="_blank">→</a></li>
-    <li>Launchpad 替代方案：小众软件推荐的 macOS 启动器替代思路 <a href="https://t.co/AfCYzHUMw0" target="_blank">→</a></li>
-    <li>剧本锻造 Skill：把一个想法扩展成可拍摄剧本的 Skill <a href="https://appinn.com/script-forging/" target="_blank">→</a></li>
+    <li>Matt Pocock Skills：AI 驱动开发七阶段方法，包括 Grill、Research、Prototype、PRD、Issues、Implement、Review <a href="https://github.com/mattpocock/skills" target="_blank">→</a></li>
+    <li>Claude Agent SDK 支持文档：说明订阅额度可用于 Agent SDK、claude -p、GitHub Actions 和第三方 Agent App <a href="https://support.claude.com/en/articles/15036540-use-the-claude-agent-sdk-with-your-claude-plan" target="_blank">→</a></li>
+    <li>Launchpad 替代方案：小众软件发现频道推荐 macOS 启动器替代工具 <a href="https://meta.appinn.net/t/topic/86950" target="_blank">→</a></li>
+    <li>AI 老照片修复小工具：面向家族相册的照片修复工具 <a href="https://meta.appinn.net/t/topic/86949" target="_blank">→</a></li>
+    <li>Anthropic 隐私政策原文：Claude 身份验证和验证数据条款的官方来源 <a href="https://www.anthropic.com/legal/privacy" target="_blank">→</a></li>
+    <li>AMD Ryzen AI Halo：本地 AI 开发平台官方产品页 <a href="https://www.amd.com/en/products/processors/desktops/ryzen/ryzen-ai-halo.html" target="_blank">→</a></li>
     <li>智元机器人开放平台文档：机器人开发平台 AIMDK 文档入口 <a href="https://x2-aimdk.agibot.com/zh-cn/latest/index.html" target="_blank">→</a></li>
-    <li>Loop Engineering 橙皮书：免费开源的 Loop Engineering 系统材料 <a href="https://github.com/alchaincyf/loop-engineering-orange-book" target="_blank">→</a></li>
-    <li>Open Design 新站：包含开放设计资源库、模板、技能和设计系统，适合 AI 原生设计师收藏 <a href="https://x.com/OpenDesignHQ/status/2066507535637492081" target="_blank">→</a></li>
+    <li>XDash AI 课程优惠：AI 知识萃取系统等课程限时降价入口 <a href="https://zerodaybook.mikecrm.com/LjEzDNf" target="_blank">→</a></li>
+    <li>OpenDesign 开放设计资源：260+ 模板、155 项技能和 150+ 设计系统资源库，适合 AI 原生设计师关注 <a href="https://x.com/OpenDesignHQ/status/2066507535637492081" target="_blank">→</a></li>
+    <li>Gemma 4 12B Coder GGUF：本地 12B 代码模型思路，主打消费级显卡离线编码能力 <a href="https://x.com/berryxia/status/2066434120436285872" target="_blank">→</a></li>
   </ul>
 </div>
 
