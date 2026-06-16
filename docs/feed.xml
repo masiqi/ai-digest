@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 15 Jun 2026 00:47:42 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 02:48:41 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/16 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-16.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-16.html</guid>
+      <description>今天最值得关注的是「Agent 工具链」继续向可运行、可组合、可交易三个方向扩散：从 Vercel 的 Agent Harness UI、智谱 ZCode，到 Clawhunt 的 Agent 悬赏市场，都不是概念稿，而是可以直接打开或安装试的东西。另一个主线是轻量开源工具密集出现：简历/报告生成、App Store 评论分析、本地小说写作、Lottie 动画生成等，适合今天就拿来拆解或改造成自己的工作流。</description>
+      <pubDate>2026-06-16T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/15 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-15.html</link>
