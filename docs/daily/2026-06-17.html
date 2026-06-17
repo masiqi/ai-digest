@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-17</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-17</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手看的方向是“把 AI 接进真实工作流”：从 Figma 网页抓取、文档处理 Skills、Agent UI 汇报，到本地设计/PPT、写作、浏览器分流，很多工具都不是概念演示，而是可以直接装、直接跑、直接嵌入日常流程的小杠杆。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Figma Chrome 插件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Figma 官方 Chrome 插件可以把网页元素抓取成可编辑图层，方便做页面拆解、仿站和设计素材收集。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://chromewebstore.google.com/detail/figma/fkmaohpngenfoccdgceedjkfhkdcohmg?pli=1" target="_blank">https://chromewebstore.google.com/detail/figma/fkmaohpngenfoccdgceedjkfhkdcohmg?pli=1 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Chrome Web Store 链接安装插件，登录自己的 Figma 账号后访问任意网页，点击浏览器右上角的 Figma 插件图标。接着在页面上选择想抓取的区域或元素，把它发送到 Figma 文件中继续编辑。适合先从一个结构清晰的 landing page 试起：抓取 hero 区、按钮、卡片和导航栏，然后在 Figma 里检查图层是否可编辑、文本是否能修改、图片是否被独立提取。也可以把它当成精准截图工具使用，专门收集竞品页面的局部组件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>过去网页到设计稿通常要靠截图、手动临摹或第三方插件，信息损失很大。官方插件如果能稳定把 DOM 视觉结果转换为 Figma 可编辑图层，会明显降低设计复刻、竞品分析和设计系统资产沉淀的成本，也让“看到一个网页就拆成可复用组件”的工作流更顺。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速拆解竞品网页，把按钮、卡片、导航等元素变成 Figma 里的设计素材。</li>
+    <li>给前端和设计师做页面还原、视觉回归、落地页改版前的素材采集。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2066918099845288177" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ copy-notes</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 macOS Notes 的小脚本/工具，用大模型和自动化把复制内容快速送进备忘录。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/lijigang/copy-notes" target="_blank">https://github.com/lijigang/copy-notes ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库查看 README，按说明 clone 到本地并配置运行环境；如果它依赖 AppleScript、快捷指令或本地脚本权限，先在 macOS“系统设置 → 隐私与安全性”里给终端或脚本工具授权访问辅助功能、自动化和备忘录。最简单的试法是复制一段网页文字或代码片段，然后运行仓库提供的命令/脚本，看它是否能把当前剪贴板内容写入指定 Notes。进一步可以让 Codex、Claude Code 或 Cursor 按自己的习惯改造成快捷键、菜单栏按钮或 Alfred/Raycast 动作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个项目的价值不在“备忘录”本身，而在展示一种高频自动化方向：把 C-c/C-v 之间的摩擦交给脚本和模型消除。很多个人效率工具都可以从这种微小但高频的场景切入，先解决一个固定输入到固定输出的搬运动作，再逐步加入分类、总结和检索。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>收集阅读材料、会议片段、代码片段时，一键归档到 macOS Notes。</li>
+    <li>作为模板，让 AI 帮你改造成任意 App 之间的复制、清洗、粘贴自动化。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lijigang/status/2066904078123503632" target="_blank"><span class="handle">@lijigang</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Papr</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的 Mac 应用，可以通过 Homebrew Cask 安装，适合想体验本地 AI/效率工具的人直接上手。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/l0ng-ai/papr" target="_blank">https://github.com/l0ng-ai/papr ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS 终端运行 `brew install --cask l0ng-ai/papr/papr` 安装，安装完成后从 Applications 或 Spotlight 启动 Papr。第一次打开建议先阅读 GitHub README，确认是否需要配置 API Key、本地模型或系统权限；如果涉及文件索引、剪贴板、辅助功能权限，按提示逐项授权。随后用一个小任务测试：导入一小批文档、网页或笔记，尝试搜索、问答、整理或生成内容，观察它的响应速度、隐私边界和是否真的能替代浏览器标签页里的零散 AI 工具。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它提供了非常低摩擦的安装路径，`brew install --cask` 对 Mac 用户尤其友好。开源项目加桌面 App 的组合，意味着高级用户可以检查实现、提 issue、二次开发，也能把它放进自己的本地工作流中，而不是只依赖一个不可控的在线服务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Mac 用户快速试用一个开源 AI 桌面工具，评估是否适合日常资料处理。</li>
+    <li>开发者参考其桌面应用架构、分发方式和 AI 功能集成方式。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2066902879462662310" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源设计工具/设计工作台，把 prompt-to-design 和设计循环放在一个窗口里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库后先看 README 的安装说明，通常可以用 git clone 拉到本地，再按项目要求安装 Node/包管理器依赖并启动开发服务器。启动后从一个简单页面开始：输入你想要的界面需求，让它生成初版设计，再在同一个窗口里修改文案、布局、组件和视觉风格。如果仓库提供示例项目，优先跑 example，确认本地环境没问题后再接入自己的品牌色、组件库或设计系统素材。也可以把它与 Figma/网页素材采集工具配合，形成“收集素材—生成设计—迭代修改”的闭环。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多数 AI 设计工具的问题是生成一次就结束，很难进入真实迭代。Open Design 强调 design loop，把提示、生成、修改、预览和资产管理放在持续循环里，更接近设计师和产品经理的真实工作方式；开源形态也让团队有机会把它接进私有组件库。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>产品经理快速生成落地页、功能页、仪表盘等界面草稿。</li>
+    <li>团队探索把设计系统、视觉资产和 AI 生成流程放进同一个本地/私有工作台。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2066879334703378856" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LandingAI ADE Document Processing Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LandingAI 把 Agentic Document Extraction 做成了可给 Codex、Claude Code、Cursor 使用的文档处理 Skills。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/landing-ai/ade-document-processing-skills" target="_blank">https://github.com/landing-ai/ade-document-processing-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库后按 README 把 Skills 文件安装到你常用的 Coding Agent 环境中，例如 Claude Code、Cursor 或 Codex 支持的 skills/prompts 目录。准备一份 PDF、扫描件或复杂表格文档，先让 Agent 使用 `document-extraction` 做解析，输出结构化 Markdown、字段和表格；再让它调用面向业务流程的 skill，把结果整理成你需要的 JSON、CSV、数据库写入脚本或审核报告。建议从一页发票、合同摘要、实验报告这类小样本开始，确认解析质量后再批量处理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>文档抽取过去常停留在“API + 手写脚本”，对非专业用户不够友好。把能力包装成 Agent Skill 后，用户可以在对话中描述目标，让编码代理自动写流水线、处理异常和生成后续代码，文档 AI 从单点 OCR 变成可组合的工程能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从合同、发票、报表、申请表中抽取结构化字段并生成处理脚本。</li>
+    <li>给企业内部 Coding Agent 增加可复用的文档解析与审核能力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2066853435618869361" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK7wPGubEAAyicE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK7wPGubEAAyicE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK7cCBna8AAjYPn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK7cCBna8AAjYPn?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WeClaw</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个接入微信 ClawBot 的多角色 Agent 产品，主打“会聊天，也能干活”的工具+陪伴体验。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://weclaw.im/" target="_blank">https://weclaw.im/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问官网后按页面提示扫码或进入注册流程，把 WeClaw 接入微信环境中的 ClawBot。第一次使用建议创建两个角色：一个偏工具型，比如“日程/资料整理助手”；一个偏陪伴型，比如“学习搭子”或“生活教练”。分别给它们发真实任务：让工具型角色整理一段会议记录、生成待办清单；让陪伴型角色围绕一个长期目标做追踪提醒。观察它在微信里的响应速度、上下文保持、多角色切换和任务执行边界，再决定是否适合放进日常高频聊天入口。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Agent 产品的问题是入口太重，用户想起来才会打开。WeClaw 把多角色 Agent 放进微信这种高频沟通场景，可能更容易形成习惯；同时它结合了 Manus、Character AI、OpenClaw 的思路，值得观察“工具能力”和“人格陪伴”能否在同一个产品中共存。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在微信里长期使用个人助理、学习搭子、资料整理员等多角色 Agent。</li>
+    <li>开发者参考其基于 FastClaw/ShipAny 的多角色 Agent 产品化路径。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2066810323450183792" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK7JB9IboAA0Ykt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK7JB9IboAA0Ykt?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ baoyu-design</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让你在本地运行 Claude Design 风格工作流的 Skill，现在支持生成 PPT、预览、标注修改和导出 PPTX。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/jimliu/baoyu-design" target="_blank">https://github.com/jimliu/baoyu-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库，按 README 把 baoyu-design skill 安装到 Claude Code、Cursor 或 Codex 等支持本地文件和浏览器预览的编码工具中。新建一个空项目，给 Agent 一个主题，例如“做一份 8 页的 AI 工具日报汇报 PPT”，让它生成 HTML/React 或项目内的演示文件。随后用内置浏览器预览，按 F 全屏播放，发现问题后直接用标记工具或对话要求修改某页布局、字号、配色和图表，最后按仓库说明导出为可编辑 PPTX。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 生成 PPT 的难点不只是生成内容，而是可预览、可修改、可导出、可继续编辑。baoyu-design 把这些环节放在本地 Agent 工作流里，既能利用编码代理的文件操作能力，也能保留人类对视觉细节的迭代控制。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地快速生成项目汇报、课程讲义、产品方案等可编辑 PPT。</li>
+    <li>把 Figma/设计系统素材导入后，让 Agent 重建品牌化演示模板。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2066736451404923109" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK5yAxkWUAElpLy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5yAxkWUAElpLy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5zfbfWQAAFF9V?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5zfbfWQAAFF9V?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5z6TbWcAA1bm1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5z6TbWcAA1bm1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK50RXHXQAAQIVu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK50RXHXQAAQIVu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKgyzLQXYAAYbq5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKgyzLQXYAAYbq5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AnyChat</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开发者自荐的工具，目标是让任何输入框都变成你的 AI Chat 客户端。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://meta.appinn.net/t/topic/86972" target="_blank">https://meta.appinn.net/t/topic/86972 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开小众软件发现频道页面，查看开发者提供的下载、官网或安装说明。安装后先在一个低风险场景测试，例如浏览器搜索框、在线文档评论框或本地文本编辑器输入框，确认触发方式、快捷键和模型配置。可以尝试输入一段草稿，然后调用 AnyChat 改写、翻译、总结或生成回复；再测试它是否支持自定义提示词、不同模型、历史记录以及隐私设置。若它需要读取当前输入框内容，建议先确认权限范围，不要直接在含敏感信息的企业系统里试用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI Chat 最大的摩擦之一是频繁在当前工作页面和聊天窗口之间切换。把能力嵌进“任何输入框”，等于把 AI 从独立 App 变成系统级文本增强层，覆盖邮件、表单、社交、代码评论和笔记等大量微任务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在网页表单、邮件、评论区中直接改写、扩写、翻译文本。</li>
+    <li>给不想频繁切换 ChatGPT/Claude 网页的用户提供轻量 AI 输入助手。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2066729545558839634" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ json-render Harness Chat</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Vercel Labs 的 generative UI/Agent Harness 示例，让 Coding Agent 的执行过程以结构化 UI 展示，而不是只吐 Markdown。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/vercel-labs/json-render/tree/main/examples/harness-chat" target="_blank">https://github.com/vercel-labs/json-render/tree/main/examples/harness-chat ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 示例目录，按仓库说明安装依赖并运行 harness-chat example。启动后给它一个小型代码任务，例如“修改按钮样式并跑测试”，让 Agent 在 Vercel Sandbox 或本地沙箱中改代码、执行命令、收集测试结果。重点观察前端如何通过 json-render 接收受约束的 JSON UI 规格，并实时渲染步骤、diff、终端输出、测试结果和图表。开发者可以把这个例子拆开，替换成自己的 Agent 后端或 CI 执行环境。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 产品的体验瓶颈正在从“能不能执行任务”转向“用户能不能信任执行过程”。结构化 UI 可以把黑盒式 Markdown 汇报变成可检查的步骤、证据和结果面板，对代码代理、运维代理、数据分析代理都很关键。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>构建 Coding Agent 控制台，实时展示 diff、命令输出和测试结果。</li>
+    <li>给企业内部自动化 Agent 增加可审计、可回放、可交互的前端汇报层。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2066690742727409944" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK5cRK7boAAuaQc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5cRK7boAAuaQc?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的简历和报告写作工具，强调事实核查、两页整洁内容、四种语言和极简设计系统。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库后查看 README 的在线体验、安装或本地运行方式。如果提供网页版，先直接导入一份旧简历或报告草稿，尝试让 Kami 重写、压缩到两页、改成英文/中文/其他语言，并检查事实核查环节是否会保留你的真实经历而不是编造。若要本地运行，按仓库说明安装依赖、配置模型 Key，然后用自己的简历 Markdown 或报告文本测试生成效果。建议输出后逐段核对事实，再导出为 PDF 或复制到简历模板中。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>简历和报告是 AI 写作里非常高频、但容错率低的场景。Kami 把“好看、短、可核查、多语言”作为明确产品约束，比泛用聊天机器人更贴近实际交付；开源也方便用户检查数据流向并按行业定制模板。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把冗长简历压缩成两页、改写为更清晰的中文或英文版本。</li>
+    <li>给项目报告、申请材料、个人作品集生成更统一的排版和表达。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2066688695160439270" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK5aZoAaYAAJRT-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5aZoAaYAAJRT-?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5aZn9bwAASxU5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5aZn9bwAASxU5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5aZn9aQAAg8jl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5aZn9aQAAg8jl?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5aZn_a4AAr9JD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5aZn_a4AAr9JD?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GLM-5.2 宣布免费开源</div>
+  <div class="section"><div class="section-label event">事件</div><p>推文称 GLM-5.2 权重以 MIT 协议开源，并强调 1M 上下文、Coding 和 Agent 长程任务能力提升。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果信息属实，这类长上下文、偏 Coding/Agent 的开源模型会继续压低应用开发者对闭源模型的依赖。尤其是“长程任务”能力，直接对应自动化研究、大规模代码实现、复杂调试等新一代 Agent 场景。不过实际价值仍要看权重、推理成本、工具调用稳定性和社区基准测试，不能只看发布口径。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开源模型在 2026 年的竞争重点已经从单轮聊天质量转向工程可用性：上下文长度、代码仓库理解、工具调用、长任务规划和成本。如果 GLM-5.2 能在这些维度站稳，会对企业私有化部署、国产 Agent 框架和开发者工具链形成明显推动。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2067033511069135005" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK-UBFybwAA4MW5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK-UBFybwAA4MW5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK84LPRXQAA6x0_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK84LPRXQAA6x0_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 NVIDIA ENPIRE：AI Agent 在真实机器人上自我改进</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA GEAR 实验室发布 ENPIRE，让 AI 编程 Agent 自主操控真实机器人做实验、判断成败、查论文并修改代码。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>ENPIRE 的重点不是单个机器人策略，而是把“实验—评估—检索—改代码—再实验”的闭环搬到真实物理世界。相比只在仿真里训练，真实机器人会带来传感器噪声、硬件误差、安全边界和重置成本，能跑通闭环说明 Agentic Research 的边界正在外扩到实验室自动化。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类系统成熟，机器人研发的迭代速度可能显著提升，人类研究员会从手动调参和重复实验中抽身，转向定义目标、约束和评估标准。产业上，具身智能、自动化实验室、工业机器人和科学发现平台都会受到影响。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2067027033431875699" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI GPT-Bidi-1 语音模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>推文提到 OpenAI 全新的语音模型 GPT-Bidi-1 发布，并指出语音交互正在成为高频使用方式。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>语音模型竞争的关键不只是识别和合成，而是低延迟、可打断、情绪和多语言稳定性。很多普通用户使用 AI 的入口并不是写长提示词，而是像和真人一样边走边说、边做事边问，因此双向语音能力会决定移动端和陪伴型产品体验。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>语音模型提升会让 AI 从办公桌面扩展到通勤、家务、驾驶、学习陪练和可穿戴设备。对应用开发者来说，未来产品可能需要默认支持语音输入输出，否则在高频生活场景中会输给语音原生的助手形态。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2067019043387891987" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK8qI4RbQAAQxSE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK8qI4RbQAAQxSE?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agentic AI 代码审查瓶颈</div>
+  <div class="section"><div class="section-label event">事件</div><p>推文引用 Codacy 博客数据称，AI Agent 提交的 PR 在代码审查队列中等待时间是人工 PR 的 5.3 倍。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条动态提醒大家，AI 编程的瓶颈正在从“写代码速度”转移到“审查和信任”。当 Agent 能大量产出代码，团队真正缺的是判断代码是否正确、安全、可维护的机制。更多 PR 不等于更多交付，反而可能把 reviewer、CI 和测试环境压垮。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来开发工具的机会不只在代码生成，也在自动化 code review、变更解释、测试生成、风险分级和可审计证据链。企业采用 AI 编程时，需要同时升级工程流程，否则提效会被 review backlog 抵消。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2066850477958918548" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>SOMA-X：NVIDIA 开源的 3D 人体模型，单一骨架适应多体型，适合机器人训练、物理仿真和动作迁移 <a href="https://github.com/NVlabs/SOMA-X" target="_blank">→</a></li>
+    <li>Show Me The Story：AI 长篇小说工具，从设定、大纲到逐章成文一条龙 <a href="https://www.appinn.com/show-me-the-story/" target="_blank">→</a></li>
+    <li>同览：macOS 多浏览器分流与同步中枢，适合多浏览器工作流用户 <a href="https://meta.appinn.net/t/topic/86977" target="_blank">→</a></li>
+    <li>sky-tv：跨平台视频播放器，类似 tvbox，支持导入自己的视频源 <a href="https://meta.appinn.net/t/topic/86971" target="_blank">→</a></li>
+    <li>mattpocock/skills：AI 驱动开发七阶段方法论，从 Grill、Research 到 Review <a href="https://github.com/mattpocock/skills" target="_blank">→</a></li>
+    <li>江湖论剑：你选门派，AI 写脚本替你打的水墨武侠对战小玩具 <a href="https://meta.appinn.net/t/topic/86997" target="_blank">→</a></li>
+    <li>印月智学：把实验室搬进电脑里的学习/实验类应用 <a href="https://meta.appinn.net/t/topic/86996" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
