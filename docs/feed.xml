@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 17 Jun 2026 00:41:24 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 00:34:50 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/18 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-18.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-18.html</guid>
+      <description>今天最值得动手的是 Agent 工具链继续向「可配置、可切换、可落地」推进：从 Coding Agent 模型切换、托管式研究 API，到可视化 Agent Dashboard 和本地 OCR 工作台，都更偏向马上试用。另一个明显方向是开源/国产模型与设计工具加速融合，GLM-5.2、Open Design、Grok Imagine 这类能力正在变成可接入的生产组件。</description>
+      <pubDate>2026-06-18T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/17 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-17.html</link>

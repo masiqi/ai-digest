@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-18</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-18</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手的是 Agent 工具链继续向「可配置、可切换、可落地」推进：从 Coding Agent 模型切换、托管式研究 API，到可视化 Agent Dashboard 和本地 OCR 工作台，都更偏向马上试用。另一个明显方向是开源/国产模型与设计工具加速融合，GLM-5.2、Open Design、Grok Imagine 这类能力正在变成可接入的生产组件。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ CC Switch</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源工具，用来在 Coding Agent 里快速切换不同模型，适合同时使用 Claude、Codex、开源模型或自定义模型端点的开发者。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/farion1231/cc-switch" target="_blank">https://github.com/farion1231/cc-switch ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub 仓库查看 README，按项目说明安装 CLI 或配置脚本；安装后把你常用的 Coding Agent 客户端、模型供应商 Key、本地或远端模型端点写进配置文件。实际体验时，可以用同一个代码修复任务分别切到默认模型、便宜模型和本地模型跑一遍，观察响应速度、代码质量、工具调用稳定性和成本差异。最适合把它接到日常开发流里：比如简单重构走低成本模型，复杂架构问题再切到强模型。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Coding Agent 正在从「绑定单一模型」走向「可插拔模型路由」。CC Switch 的价值不是多一个包装 CLI，而是把模型选择权还给开发者，让同一个 Agent 工作流可以根据任务难度、预算、延迟和隐私要求灵活切换，尤其适合正在尝试开源模型替代闭源模型的团队。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Claude Code、Codex 等 Agent 工作流里快速比较不同模型效果。</li>
+    <li>给团队配置低成本模型和高性能模型的分层使用策略。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2067258372861362569" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLBJOaaWUAA_tRS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLBJOaaWUAA_tRS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Exa Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Exa 发布的托管式 Web Research Agent API，把搜索、任务拆解、并行子 Agent 和结果整理封装成一个接口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://exa.ai/blog/exa-agent" target="_blank">https://exa.ai/blog/exa-agent ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 Exa 官方博客阅读接口说明，然后注册 Exa 账号并申请 API Key。上手可以先选一个明确任务，例如「找出最近三个月融资的 AI Infra 公司并整理官网、创始人、融资轮次」，用 Exa Agent API 发起研究请求，再把返回结果与普通搜索结果对比。进一步可以把它接进自己的 CRM、投研表格或自动日报脚本里，让它定期补全公司资料、竞品动态和实体信息。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统搜索 API 返回的是网页列表，真正可用的研究还需要人或 Agent 做分解、筛选、交叉验证和结构化。Exa Agent 把这一层直接产品化，对做市场研究、名单构建、销售线索 enrichment、行业情报监控的人非常实用，也说明搜索引擎正在变成 Agent 基础设施。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自动构建投资、销售、招聘或竞品研究名单。</li>
+    <li>为内部知识库、日报系统和研究 Agent 提供结构化 Web 情报。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2067247791211168152" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLBW5lrbIAAxv99?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLBW5lrbIAAxv99?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ docu.md</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 Markdown / GitHub 文档的在线阅读器，现在支持直接显示 GitHub 内嵌图表。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docu.md" target="_blank">https://docu.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问 docu.md，把你想阅读的 GitHub README、技术文档或 Markdown 项目地址贴进去，观察它如何重新排版文档内容。今天的新点是 GitHub 里的内嵌图表能直接显示，适合找一个包含 Mermaid、架构图或流程图的开源项目试试。可以把常看的长 README、设计文档、接口说明加入书签，用它替代 GitHub 默认阅读页面，尤其适合在手机或平板上阅读复杂技术文档。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>开源项目越来越依赖 Markdown 承载产品说明、系统架构和流程图，但 GitHub 原生阅读体验并不总是适合深度阅读。docu.md 这类工具把 Markdown 文档变成更顺滑的阅读入口，支持图表后，对读架构文档、模型说明和 Agent 项目 SOP 的体验提升明显。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>阅读包含图表的 GitHub README、技术白皮书和教程。</li>
+    <li>给团队分享更清爽的开源项目文档阅读入口。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xicilion/status/2067247349186064400" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLBWV05aUAAEW7D?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLBWV05aUAAEW7D?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ FastClaw Cloud</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个不用写代码即可在 Dashboard 创建 Agent 的平台，可配置 models、skills、files，并自带 Sandbox 做工具调用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="http://cloud.fastclaw.ai" target="_blank">http://cloud.fastclaw.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 cloud.fastclaw.ai 注册或登录后，新建一个 Agent。先选择模型，再配置 Agent 的身份、启动说明、可用 Skills 和文件；接着在平台自带 Sandbox 里调试工具调用，测试它是否能读取上下文、执行任务并返回稳定结果。跑通后，可以通过 API 把这个 Agent 接到自己的客户端、网页产品或内部系统里。建议从一个低风险任务开始，例如自动整理网页资料、生成客服草稿或处理固定格式文档。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多人想做 Agent，但卡在环境、工具、模型和记忆配置上。FastClaw Cloud 把这些基础设施做成可视化配置，降低了从想法到可调用 Agent 的门槛；如果 API 和 Sandbox 稳定，它更像是 Agent 应用的后端控制台，而不是单纯聊天机器人。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速搭建面向业务场景的客服、研究、内容或运营 Agent。</li>
+    <li>把调好的 Agent 通过 API 嵌入自有产品或内部自动化流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2067234269672681682" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLBKYI0bEAAL2kL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLBKYI0bEAAL2kL?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design 0.10.0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 AI 设计工作台，把点选、评论、标注、编辑、截图灵感和 AI remix 放进同一个设计循环。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://opendesign.dev" target="_blank">https://opendesign.dev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 Open Design 官网或项目入口，按说明在本地或在线环境启动工作台。上手可以准备一张产品截图、一个网页灵感图或一句界面需求，让 AI 生成初稿；随后用点选和标注指出需要改的局部，例如按钮层级、卡片布局、配色或文案，再让 AI remix。推荐把它放到 Cursor 或常用 Coding Agent 旁边试用：先生成设计，再把结果交给 Agent 实现，最后继续截图回 Open Design 做迭代。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 编程工具正在补上设计闭环，Open Design 的重点不是一次性生成 UI，而是把人类审美反馈、局部修改和 Agent 执行连接起来。它支持多个 AI Agent，也能直接跑在开发环境里，对独立开发者和小团队尤其有价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为新产品、Landing Page、仪表盘快速生成并迭代 UI 方案。</li>
+    <li>把设计反馈转换成可执行的前端实现任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2067196095638208718" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PP-OCRv6 Mac 本地工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个免费开源的本地 OCR 工作台，把 PP-OCRv6 做成 Mac App，并用 CoreML 加速 Tiny、Small、Medium 三种模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://t.co/Kn7jg3TEek" target="_blank">https://t.co/Kn7jg3TEek ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从原文提供的开源地址进入仓库，下载 Release 里的 Mac 版本，或按 README 从源码构建。第一次打开后，先选择 Tiny 模型测试截图、票据、PDF 截图等轻量文本识别；如果对准确率要求更高，再切换 Small 或 Medium。建议用中英文混排、表格截图、低清图片各测一轮，比较速度、识别率和本地资源占用。因为它本地运行，适合处理不方便上传云端的敏感图片。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>OCR 是很多自动化流程的基础能力，但在线 OCR 涉及隐私和成本。本地化 PP-OCRv6 加 CoreML 的组合，兼顾轻量、速度和离线可用性，对 Mac 用户很友好，也能成为文档处理、票据归档、截图转文本工作流里的基础组件。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地识别截图、扫描件、票据和 PDF 图片里的文字。</li>
+    <li>给自动化脚本、知识库录入和文档整理流程提供离线 OCR 能力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2067083628824404342" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ seo-audit-skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 Agent 的深度 SEO 技术审计 Skill，新增站点 URL 盘点、测试环境收录风险、PageSpeed、Schema 和多语言 SEO 检查。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JeffLi1993/seo-audit-skill" target="_blank">https://github.com/JeffLi1993/seo-audit-skill ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库，把 Skill 按 README 安装到你使用的 Agent 环境里，例如 Claude Code、Codex 或兼容 Skills 的本地 Agent。准备一个网站域名，先让 Skill 读取 Sitemap 做 URL Inventory，再选择几个代表页面做 Lighthouse、Schema、Canonical、多语言 hreflang 和索引风险检查。最好先跑自己的博客或小型官网，确认输出结构和建议质量，再用于客户网站或生产项目。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>SEO 审计很适合 Agent 化，因为它既有固定清单，又需要根据站点结构做判断。这个 Skill 把 URL 资产盘点、技术风险发现和页面级审计串起来，能减少人工遗漏，也适合增长、独立站和内容团队把 SEO 检查标准化。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给新站上线前做技术 SEO 风险排查。</li>
+    <li>定期审计内容站、SaaS 官网或跨境独立站的索引和性能问题。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2067276811369914513" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLBxSjEa8AAepp9?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLBxSjEa8AAepp9?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLBxSjZbcAAj6mP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLBxSjZbcAAj6mP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLBxSjDacAAuOZH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLBxSjDacAAuOZH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLBxSjOaoAAzTXp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLBxSjOaoAAzTXp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WinCal</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Windows 任务栏日历工具，可显示日程，并支持 ics 日历订阅。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/wincal/" target="_blank">https://appinn.com/wincal/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入小众软件文章页面，按文中链接下载 WinCal 并安装到 Windows。启动后把它固定到任务栏或托盘区域，然后导入或订阅你的 ics 日历，例如 Google Calendar、公司日历、课程表或公开节假日订阅。设置好后，点击任务栏即可快速查看近期日程，不需要打开完整日历应用。建议先用一个只读的公开 ics 链接测试订阅，再逐步接入个人日历。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Windows 原生日历和任务栏日程体验一直偏弱，很多人只是想在桌面快速看到今天和本周安排。WinCal 属于小而实用的效率工具，支持 ics 后可以把多来源日程聚合到任务栏，适合重度桌面办公用户。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Windows 任务栏快速查看个人、工作和公开日历订阅。</li>
+    <li>给不想打开 Outlook 或网页日历的用户提供轻量日程入口。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2067162142944448619" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLAJA7sWYAAc1oC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLAJA7sWYAAc1oC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Grok Imagine Video 1.5</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Grok 里的视频生成模型更新，支持多国语言和中文，已可直接生成视频内容。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://grok.com/imagine/post/01267701-7195-472e-b717-1f1e2d66dae9" target="_blank">https://grok.com/imagine/post/01267701-7195-472e-b717-1f1e2d66dae9 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Grok 的 Imagine 入口或原文中的示例链接，使用支持该功能的账号进入视频生成界面。先用短提示词生成一个 5 到 10 秒的视频，例如产品宣传片开场、角色说中文、自媒体口播封面动画；再逐步增加镜头、风格、语言和动作要求。建议与 Seedance、即梦或其他视频模型用同一提示词对比，重点看中文口型、运动稳定性、画面一致性和生成速度。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Grok 正在把图像/视频生成能力补齐到通用 AI 产品里，Video 1.5 虽然未必领先 Seedance，但胜在入口集中、社交传播链路短。如果多语言与中文表现稳定，它会成为快速做短视频草稿、创意验证和社交内容试验的新选择。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速生成短视频创意、口播片段和社交媒体素材。</li>
+    <li>对比不同视频模型在中文、多语言和运动场景下的效果。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2067148452514140438" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2067148322591428608/img/P-uk7LnOQzUB9Pgd.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2067148322591428608/img/P-uk7LnOQzUB9Pgd.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2067148322587164672/img/Pj3Stcfyb9Y0YHeC.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2067148322587164672/img/Pj3Stcfyb9Y0YHeC.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Code History Viewer</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个用于查看 Claude Code 历史聊天记录的 viewer，解决回看旧会话不方便的问题。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://t.co/H4EJ9bSzGU" target="_blank">https://t.co/H4EJ9bSzGU ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从原文链接进入项目页面，按 README 安装或启动 viewer。使用前先找到本机 Claude Code 保存会话记录的位置，按工具要求授权读取或导入历史文件。第一次建议只导入一个非敏感项目的会话，确认它能按时间、项目或关键词展示记录；之后再用于查找过去的调试思路、命令、上下文和模型输出。若涉及公司代码，先确认 viewer 是否本地运行以及是否会上传数据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 编程的历史会话其实是高价值资产，里面有需求推理、错误排查、命令记录和设计决策。能结构化浏览历史记录，就相当于给 Coding Agent 增加了可回溯记忆，对复盘、继续旧任务和沉淀团队知识都有帮助。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>回看 Claude Code 旧项目里的调试过程和实现思路。</li>
+    <li>从历史会话中提取可复用命令、SOP 和项目背景。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2067138368677531973" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GLM-5.2 正式发布并开源权重</div>
+  <div class="section"><div class="section-label event">事件</div><p>智谱/Z.ai 发布 GLM-5.2，主打编码和 Agent 任务，支持 1M 上下文、思考力度控制，并开放 MIT 许可权重。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次 GLM-5.2 的讨论热度很高，核心不是单个榜单名次，而是它把长上下文、Agent 长周期任务和代码能力同时作为主卖点。百万上下文加 IndexShare 这类稀疏注意力优化，意味着它试图在真实工程任务中降低长输入成本；MIT 权重许可也让开发者可以下载、量化、蒸馏、微调和本地部署。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果 GLM-5.2 在真实 Coding Agent 场景里稳定接近闭源强模型，会进一步压缩闭源模型在开发者工具链里的护城河。对国内 Agent 产品、IDE 插件、私有化部署和企业知识库来说，这类高性能开源权重会成为重要替代选项。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2067077537721954542" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HK-7jKeb0AAPMQL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK-7jKeb0AAPMQL?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK-7jKca8AI_yqJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK-7jKca8AI_yqJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK-7jKiacAAvVBV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK-7jKiacAAvVBV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK84LPRXQAA6x0_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK84LPRXQAA6x0_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Codex 支持接入开源模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>多位博主提到 Codex 的 App、CLI 和 SDK 支持开发者把底层模型替换成开源模型或其他模型。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这说明 Coding Agent 的竞争重点正在从单一模型能力，转向客户端、工具调用、上下文工程和模型路由。Codex 如果允许接入任意模型，就会从「OpenAI 模型入口」变成更通用的 Agent 执行环境，开发者可以在同一套交互和工具协议上比较不同模型。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会推动模型供应商围绕 OpenAI 兼容接口、Agent 工具调用稳定性和成本展开竞争。对用户来说，未来可能不再纠结用哪个 Agent 客户端，而是把客户端当作壳，根据任务切换模型。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2067244558765998261" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Framer 上线 Agent 能力</div>
+  <div class="section"><div class="section-label event">事件</div><p>网页构建工具 Framer 开始加入 Agent 能力，尝试把 AI 与其现有建站基础设施结合。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Framer 本来就拥有设计、发布、组件和托管链路，如果 Agent 能理解页面结构并完成局部修改，它会比纯文本生成网页更接近真实生产流程。问题在于 Framer 过去在 AI 迭代速度上偏慢，现在补 Agent 能力既是防守 Cursor、Lovable、v0 等新工具，也是重新利用自身产品深度。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>无代码/低代码建站工具会越来越像 AI 产品经理加前端执行器。对设计师和增长团队来说，未来 Landing Page 的创建、文案测试、局部改版和上线可能都在同一个 Agent 化工作台完成。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2067073608393109651" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 微信推出 AI Agent 专属支付卡</div>
+  <div class="section"><div class="section-label event">事件</div><p>微信被曝为 AI Agent 提供专属支付卡，让用户能在对话里完成推荐、下单和支付。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Agent 商业闭环最难的是支付和履约，微信如果把支付能力开放给 Agent，相当于把对话推荐直接连接到交易系统。它不是简单的聊天机器人功能，而是让 Agent 能参与消费决策、订单生成和支付授权，未来会影响电商、生活服务和本地服务入口。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>一旦微信生态内的 Agent 支付跑通，品牌、小程序和服务商会开始围绕「对话内成交」重新设计转化链路。对支付宝、抖音和美团等平台来说，这会加速 Agent 入口和支付能力的竞争。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2067178077629923699" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2067059437697900716" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/KevinQHLin/status/2066928995426582730" target="_blank"><span class="handle">@KevinQHLin</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2067190464449749255" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLAXgDMbIAAdJs3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLAXgDMbIAAdJs3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK_t-tKaIAAp4Bg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK_t-tKaIAAp4Bg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLAir47a8AA0eWC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLAir47a8AA0eWC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Cursor Origin：Cursor 计划推出面向 Agent 时代的代码托管与 Git 协作平台，已开放等待列表 <a href="http://cursor.com/origin" target="_blank">→</a></li>
+    <li>TRAE AI 创造力大赛：面向非专业开发者的 Vibe Coding 赛事，奖金高、门槛低 <a href="https://trae.cn/ai-creativity" target="_blank">→</a></li>
+    <li>Parallels Desktop 26：618 期间官网优惠，适合需要在 Mac 上跑 Windows 的用户 <a href="https://appinn.com/parallels-desktop-26/" target="_blank">→</a></li>
+    <li>Apify Actors：把网页采集 Agent 的结果写入 Notion、Slack、GitHub 等系统的自动化平台 <a href="https://apify.com" target="_blank">→</a></li>
+    <li>Grok PowerPoint 集成：Grok 进入 Microsoft PowerPoint，面向幻灯片生成和办公场景 <a href="https://x.com/berryxia/status/2067059437697900716" target="_blank">→</a></li>
+    <li>Vue&amp;ViteConf 2026：7 月 18 日上海举办，包含 Vue、Vite、Agent 工具开发等主题 <a href="https://vueconf.cn" target="_blank">→</a></li>
+    <li>Data2Story：数据记者 Agent，能把原始数据生成带证据链的多模态文章 <a href="https://x.com/KevinQHLin/status/2066928995426582730" target="_blank">→</a></li>
+    <li>即梦 Seedance 2.0 Mini：视频模型入口价格下降，适合尝试低成本视频生成 <a href="https://x.com/op7418/status/2067190464449749255" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
