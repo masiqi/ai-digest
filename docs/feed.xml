@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 18 Jun 2026 00:34:50 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 00:35:51 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/19 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-19.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-19.html</guid>
+      <description>今天最值得动手的是“Agent 基础设施”：从 Datasette Apps、Vercel Eve、Browser Use 模板，到 FanBox、Loop Library，大家都在把一次性的 AI 对话沉淀成可运行、可观察、可复用的应用与工作流。另一条线是开源模型和创作工具继续下放，TTS、画布、ASCII 视频、研究 Agent 都已经有在线 Demo 或 GitHub 可试。</description>
+      <pubDate>2026-06-19T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/18 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-18.html</link>
