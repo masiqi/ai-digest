@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-20</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-20</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得上手的是“Agent 工程化”和“可运行交互应用”：从 Vercel Eve、Browser Use 模板、Datasette Apps，到各种 Skill/MCP 项目，都在把 AI 从聊天变成可复用、可部署、可协作的工作流。另一个方向是“本地可试的个人自动化”：Codex/Claude Code 的新功能、元 Skill、设计 Skill 都在降低把经验沉淀成工具的门槛。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Datasette Apps</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Simon Willison 新发布的 Datasette 插件，可以在 Datasette 里托管沙盒化 HTML+JS 小应用，并通过 JSON API 直接查询/写入数据库。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://datasette.io/blog/2026/datasette-apps/" target="_blank">https://datasette.io/blog/2026/datasette-apps/ ↗</a></p>
+    <p><a href="https://simonwillison.net/2026/Jun/18/datasette-apps/" target="_blank">https://simonwillison.net/2026/Jun/18/datasette-apps/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入官方博客，按文中的 uv 一行命令在本机启动演示；如果你已经有 Python/uv 环境，可以直接复制命令运行，然后打开本地 Datasette 页面。体验时重点看两个点：第一，iframe 中的 HTML+JS 应用如何通过 Datasette 暴露的 API 读写表数据；第二，自己能否把一个小型数据应用打包成“artifact”式页面。建议拿一个 CSV 或 SQLite 数据库试验，比如个人读书清单、产品反馈表、爬虫结果表，再让前端页面做筛选、图表或编辑表单。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Claude Artifacts 这类“可交互小应用”的体验带到了真实数据库上，而且不是只展示静态 HTML，而是能连接完整关系型数据库。对于做内部工具、数据浏览器、轻量 BI 和 AI 生成数据应用的人来说，这是一个非常实用的底座。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 CSV/SQLite 数据快速生成可交互查询、编辑和可视化界面。</li>
+    <li>把 AI 生成的 HTML+JS 数据应用安全托管在 Datasette 中，供团队访问。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2067760286426337405" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Vercel Eve Agent Framework</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Vercel 开源的生产级 Agent 框架，把 Agent 组织成目录结构，让开发者主要描述“做什么”，框架处理运行、工具、记忆和部署形态。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://vercel.com/blog/introducing-eve" target="_blank">https://vercel.com/blog/introducing-eve ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Vercel 官方博客，先看它的 agent/ 目录约定：agent.ts 放模型与配置，instructions.md 放任务指令，其他文件承载工具、上下文和工作流。上手时可以创建一个最小 Agent 项目，把你常用的任务写成 instructions.md，比如“监控 GitHub Issue 并生成处理建议”或“把网页内容整理成日报”。然后根据文档接入 Vercel 平台能力，尝试部署一个能被触发的 Agent。重点不是一次做复杂系统，而是理解 Eve 如何把 Agent 从 prompt 文件变成可维护的工程目录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 项目越来越像软件工程项目，需要目录规范、部署约定、触发器、状态管理和团队协作。Eve 的价值在于把反复出现的 Agent 形态抽象成框架，有机会成为 Vercel 生态中构建自动化 Agent 的标准模板。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>构建可部署的客服、运营、研发助理 Agent。</li>
+    <li>将一次性 prompt 改造成版本化、可维护的 Agent 工程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2067405750646055226" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLDmkOea8AA6JzO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLDmkOea8AA6JzO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Browser Use Browser Agent Template</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Browser Use 开源的浏览器 Agent 模板，让任意 Agent 连接真实云端浏览器，并能实时观察网页操作过程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/browser-use/browser-agent-template" target="_blank">https://github.com/browser-use/browser-agent-template ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库后，先按 README 克隆模板并安装依赖，通常流程是 git clone、安装包管理器依赖、配置 Browser Use Cloud 或相关浏览器运行凭证，再启动本地开发服务。建议从一个简单网页任务开始：让 Agent 打开一个网站、搜索关键词、读取页面摘要、点击某个按钮并返回结果。跑通后再把模板嵌入你自己的 Agent 项目，让模型不只调用 API，而是真正使用浏览器完成登录后后台、网页表单、数据录入等任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多现实任务没有稳定 API，只能通过网页完成。这个模板把“云端浏览器 + 可视化观察 + Agent 控制”打包成可复用工程，对于需要让 Agent 操作 SaaS 后台、网页系统和长流程任务的人非常关键。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自动操作没有 API 的后台系统、表单和网页工具。</li>
+    <li>给现有 Agent 增加可视化浏览器执行能力，便于调试和演示。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2067742110074507657" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-llm-mcp</div>
+  <div class="section"><div class="section-label event">一句话</div><p>向阳乔木开源的 MCP，可在 Codex 中调 Claude Code 干活，也支持多模型多轮讨论后交给 Codex 总结方案。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-llm-mcp" target="_blank">https://github.com/joeseesun/qiaomu-llm-mcp ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库，把链接发给你正在使用的 AI 编程工具（如 Codex），让它读取 README 并引导安装；也可以手动按仓库说明配置 MCP server。安装后在 Codex 中触发这个 MCP，尝试让 Claude Code 参与写作、前端、翻译或方案讨论任务。一个推荐玩法是：同一需求先让 Claude、国产便宜模型和 Codex 各自提出方案，再由 Codex 汇总成可执行计划，最后选择其中一个 Agent 落地代码或文档。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>现在单一模型并不能覆盖所有任务，Claude 擅长写作和前端审美，Codex 擅长工程执行，国产模型适合低成本批处理。这个 MCP 的亮点是把多模型协作变成工具调用，而不是手工复制粘贴。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Codex 额度不足或模型不擅长时调其他模型补位。</li>
+    <li>用多模型辩论生成技术方案、翻译稿或前端设计方案。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2067813036019388598" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-daodejing-comics</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的《道德经》配图阅读项目，用 AI 生图提升古文阅读体验，并提供在线体验站点。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://daodejing.qiaomu.ai/" target="_blank">https://daodejing.qiaomu.ai/ ↗</a></p>
+    <p><a href="https://github.com/joeseesun/qiaomu-daodejing-comics" target="_blank">https://github.com/joeseesun/qiaomu-daodejing-comics ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最简单的方式是直接打开在线站点浏览每一章，观察 AI 配图如何辅助理解文本意象；如果想改造项目，可以克隆 GitHub 仓库，在本地查看页面结构和内容组织方式。你可以替换成自己的文本材料，比如唐诗、英文短篇、品牌手册或课程讲义，再接入自己的生图模型生成插图。由于作者提到 Seedream 5 有时图文不相关，建议把“人工挑图/重生成”加入流程，保证阅读体验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它是一个很好的“AI 内容再包装”样板：不是只生成文章，而是把经典文本、配图、网页阅读体验和开源项目结合起来。对做教育内容、电子书、文化类网站的人有直接参考价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将古文、诗歌、教材改造成图文互动阅读站。</li>
+    <li>复用项目结构制作 AI 配图电子书或课程页面。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2067815746391224382" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLJbPNtaMAAbEVt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLJbPNtaMAAbEVt?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5jl_jacAAESYp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5jl_jacAAESYp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ yao-meta-skill 2.0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>姚金刚开源的“创建 Skill 的 Skill”升级到 2.0，用来帮助用户写出更高质量的 Claude/Codex/Hermes 类 Agent 技能。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yaojingang/yao-meta-skill" target="_blank">https://github.com/yaojingang/yao-meta-skill ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库阅读安装说明，把该元 Skill 放入你的 Agent 技能目录，或把仓库链接交给 Claude Code、Codex、Hermes 等工具让它协助安装。上手任务可以选一个你每天重复做的流程，例如“整理 X 日报”“生成 PR Review Checklist”“把会议纪要转成 Jira 任务”，让元 Skill 先访谈需求、抽取触发条件、步骤、验证标准和坑点，再生成 SKILL.md。生成后不要直接收工，最好用真实任务跑一次，再把失败点补回 Skill。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Skill 的本质是把经验固化为可复用程序化记忆。这个项目聚合了 Anthropic 官方 Skill 思路和社区实践，能让不会写 Skill 的用户也建立可维护的个人自动化库。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把重复工作流沉淀成 Agent 可调用的技能。</li>
+    <li>为团队统一编写代码审查、文档生成、发布流程等标准 Skill。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yaojingang/status/2067502677958050163" target="_blank"><span class="handle">@yaojingang</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLE8v1CbsAES_-U?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLE8v1CbsAES_-U?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLE80Rwa8AAhX7m?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLE80Rwa8AAhX7m?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLE9D1cbMAAUOXV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLE9D1cbMAAUOXV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLE9e56bkAAyHns?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLE9e56bkAAyHns?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5PEcGbcAARhu7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5PEcGbcAARhu7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5PEcEaIAAVhR0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5PEcEaIAAVhR0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Brand to DESIGN.md Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把品牌网站提取为 DESIGN.md，再用设计规范指导生成页面的开源 Skill。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/shaom/brand-to-design-md-skill" target="_blank">https://github.com/shaom/brand-to-design-md-skill ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆或安装该 Skill 后，选择一个你想复刻风格的网站，例如 Vercel、Linear 或 Stripe，让 Agent 先访问网站并抽取色彩、排版、组件、动效和语气，生成 DESIGN.md。第二步再把 DESIGN.md 作为设计约束，让 Agent 生成 landing page、产品页或演示站。今天 Vercel 创始人公开 DESIGN.md 的事件也很适合用来对比：一边用官方 DESIGN.md，一边用 Skill 自动抽取，看生成质量差异。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 生成前端页面的最大问题常常不是功能，而是审美和一致性。把品牌风格转成可复用 DESIGN.md，相当于给 Agent 一个设计系统记忆，能显著减少“每次生成都变风格”的问题。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速复刻某个品牌的视觉语言，生成高一致性的落地页。</li>
+    <li>为团队沉淀自己的 DESIGN.md，指导后续 AI 前端生成。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2067601352348352630" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLGYK22bwAAsqFg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLGYK22bwAAsqFg?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ orange-line-illustration</div>
+  <div class="section"><div class="section-label event">一句话</div><p>orange2ai 开源的插图 Skill，用于给文章、PPT 或网页配置线稿风格插图。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/orange2ai/orange-line-illustration" target="_blank">https://github.com/orange2ai/orange-line-illustration ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库后按 README 安装到你的 Agent 技能目录，或者把仓库链接交给 Codex/Claude Code 让它指导配置。安装完成后，拿一段文章或一个 PPT 大纲做测试，让 Agent 根据段落含义生成对应的线稿插图提示词或图片。建议先规定统一画风、色彩和构图，比如“黑白细线、少量橙色点缀、适合技术博客”，再批量生成多张图，这样最终页面不会显得拼贴混乱。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>高质量内容越来越需要视觉表达，但每次手动找图或写提示词很耗时。把插图风格做成 Skill，可以让图文生成成为稳定流程，尤其适合技术写作者、课程作者和产品页面制作。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给博客、长文、PPT 自动生成统一风格插图。</li>
+    <li>作为其他写作 Skill 的配套视觉模块。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2067795819701682365" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLJJPwIakAA8jnO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLJJPwIakAA8jnO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Loop Library</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Matthew Berman 建的 Agent Loop 模板库，集中收集各种可复用的 Agent 循环流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://signals.forwardfuture.ai/loop-library/" target="_blank">https://signals.forwardfuture.ai/loop-library/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Loop Library 后，先浏览已有 loop，挑一个与你需求接近的模板，例如研究循环、编码循环、自动化执行循环或反馈修正循环。不要只看标题，重点读它的输入、步骤、退出条件和人工检查点。上手时可以复制一个模板到自己的 Agent 工作流中，替换成你的工具和目标，再跑一个小任务验证，比如“每天抓取 10 条行业信息并筛选可上手项目”。如果有稳定流程，也可以按网站要求提交自己的 loop。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 的关键不只是模型，而是循环结构：计划、执行、观察、修正、验证如何组织。模板库把这些隐性经验变成可复用模式，对搭建可靠 Agent 工作流非常有帮助。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为研究、编程、运营自动化寻找现成 Agent 流程。</li>
+    <li>把团队内部好用的 Agent 循环沉淀为模板并共享。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2067739780906160618" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLIWXf7b0AAbHwx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLIWXf7b0AAbHwx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare Vulnerability Harness</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cloudflare 公开多阶段漏洞发现框架技术细节，展示如何用自动化分类循环、状态控制和对抗审查管理 LLM 安全分析。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://blog.cloudflare.com/build-your-own-vulnerability-harness/?utm_campaign=cf_blog&amp;utm_content=20260618&amp;utm_medium=organic_social&amp;utm_source=twitter" target="_blank">https://blog.cloudflare.com/build-your-own-vulnerability-harness/?utm_campaign=cf_blog&amp;utm_content=20260618&amp;utm_medium=organic_social&amp;utm_source=twitter ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 Cloudflare 博客后，按文章拆解它的漏洞 harness 结构：输入目标、生成候选漏洞、自动分类、状态推进、误报审查、上下文裁剪。实践时不建议直接扫生产系统，可以先选一个本地靶场或开源小项目，把流程复刻成脚本：让 LLM 读代码片段提出风险，再用规则或二次模型复核，最后输出结构化报告。关键是学习它如何把一次性“让 AI 找漏洞”变成可追踪、多阶段、可降低误报的 pipeline。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>安全场景最怕幻觉和误报。Cloudflare 这篇文章提供了真实生产团队如何约束 LLM、管理状态和绕过上下文限制的经验，对安全工程、代码审计和企业 AI 自动化都很有参考价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为开源项目或内部代码库搭建半自动安全审查流程。</li>
+    <li>学习如何设计多阶段 LLM harness，减少误报并保留审计轨迹。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Cloudflare/status/2067669887141499143" target="_blank"><span class="handle">@Cloudflare</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepEval LangChain Pytest 集成</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepEval 提供面向 LangChain Agent 的 Pytest 测试方式，用来评估非确定性的 LLM、工具和检索链路输出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/confident-ai/deepeval" target="_blank">https://github.com/confident-ai/deepeval ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 deepeval，并在你的 LangChain Agent 项目中创建 pytest 测试文件。不要用传统单元测试的“输出必须等于某字符串”，而是定义评估指标，比如回答相关性、工具调用正确性、事实一致性、检索上下文覆盖率。然后运行 pytest，让 DeepEval 在本地对 Agent 多次输出进行评分。一个适合入门的例子是：给 RAG Agent 准备几条固定问题和标准资料，检查它是否引用正确文档、是否调用了预期工具、是否没有编造答案。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 系统由模型、工具、检索、记忆多部分组成，失败方式很多，传统测试很难覆盖。把评估接入 Pytest，意味着 AI Agent 可以进入 CI 流程，逐步接近常规软件工程的质量管理方式。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 LangChain Agent、RAG 应用和工具调用链路建立回归测试。</li>
+    <li>在发布前用 CI 自动发现模型输出质量下降或工具调用异常。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2067606147553456220" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLGcwB1aEAAwCv2?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLGcwB1aEAAwCv2?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 蛋定 Todo 鸿蒙版</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开发者自荐的鸿蒙版 Todo 应用，适合 HarmonyOS 用户尝试轻量任务管理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://meta.appinn.net/t/topic/87109" target="_blank">https://meta.appinn.net/t/topic/87109 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开小众软件发现频道帖子，查看作者提供的安装包、应用市场入口或测试说明；如果帖子里有 APK/HAP 或应用商店链接，按说明在鸿蒙设备上安装。上手时可以建立三个清单：今天必做、长期项目、临时想法，测试添加、提醒、完成、归档等基本操作是否顺手。由于是开发者自荐项目，建议同时关注评论区反馈，看看是否有权限、同步、提醒后台保活等移动端常见问题。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>鸿蒙生态里的独立开发应用仍在增长，Todo 是最容易体现系统通知、桌面组件、跨设备同步能力的品类。对关注国产移动生态或想做鸿蒙应用的人，它也是观察产品细节的样本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 HarmonyOS 手机上做轻量待办和提醒管理。</li>
+    <li>作为独立开发者研究鸿蒙应用分发与用户反馈的案例。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2067921175389384808" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Codex Record &amp; Replay</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI Codex 上线 Record &amp; Replay，用户在 Mac 上演示一次重复流程，Codex 可生成可复用 Skill 并在下次用新参数重放。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这相当于把 RPA、Computer Use 和 Skill 生成结合起来。过去让 Agent 学会一个流程，需要人工写步骤、截图、边界条件和验证方式；现在变成“人先做一遍，系统观察并抽象为技能”。目前仅限 macOS、欧盟不可用，且需要开启 Computer Use，说明它仍处在受控发布阶段。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类功能成熟，办公室里的报销、填表、后台配置、内容发布等重复工作会更快被个人自动化，而不是等企业采购大型 RPA。它也会让 Skill 成为 AI 工具生态的核心资产：谁沉淀的工作流多，谁的 Agent 就越像真正的个人助理。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2067699358586253663" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code Artifacts</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 为 Claude Code 推出 Artifacts，可把 coding session 转成私密、实时更新的网页，便于分享 PR 演示、架构说明、调试过程和发布清单。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Claude Code 原本偏终端协作，Artifacts 把不可见的终端过程变成可浏览、可分享的项目页面。这对团队协作很重要，因为很多 AI 编程成果不是最终代码本身，而是中间的决策、调试路径和风险说明。将这些内容实时网页化，可以降低非开发成员理解 AI 工作流的门槛。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 编程工具正在从“个人终端助手”走向“团队协作界面”。未来 PR、设计评审、事故复盘、架构讨论可能都由 Agent 自动生成可交互页面，研发管理和知识沉淀方式会随之变化。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2067708784106160322" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cursor /automate 自动化能力</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cursor 被曝上线 /automate 能力，可用自然语言描述任务，自动配置触发器、指令和工具，形成可运行 automation。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>从描述看，Cursor 正在把 IDE 中的 Agent 能力延伸到持续自动化：不是打开编辑器后问一次，而是让任务在 GitHub Issue、Slack 消息等事件触发时自动运行。它和 Codex Record &amp; Replay、Claude Artifacts 构成同一个趋势：AI 编程产品开始争夺“工作流入口”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开发工具会越来越像自动化平台，IDE、CI、Issue、聊天工具之间的边界被打通。对团队来说，这意味着很多工程流程可以用自然语言搭建；对个人开发者来说，也意味着需要更重视权限、安全和自动执行后的审查机制。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2067743735220424759" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Gemini CLI 支持策略变化</div>
+  <div class="section"><div class="section-label event">事件</div><p>有消息称 Google 停止向非企业用户提供开源 Gemini CLI 支持，并引导用户转向专有 Antigravity CLI。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果属实，这代表大厂 AI 编程工具在开源与商业化之间重新平衡。Gemini CLI 作为开源编程助手曾吸引大量开发者，但当使用成本、产品定位和企业安全要求变重后，厂商可能更倾向把核心能力放进可控的专有工具。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开发者依赖单一厂商 CLI 的风险会增加，企业也会更关注模型和工具链的可替代性。短期内，开源社区可能会寻找替代 CLI；长期看，多模型、多工具编排层会变得更重要，避免工作流被某个供应商策略变化打断。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2067803537627586807" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 豆包实时语音模型 3.0 API</div>
+  <div class="section"><div class="section-label event">事件</div><p>豆包实时语音模型 3.0 API 上线，支持全双工、端到端语音进出、可插话和多人聊天中的规则遵循。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>端到端实时语音模型的价值在于减少 ASR→LLM→TTS 的链路延迟和误差，让交互更接近真人对话。全双工和可插话尤其重要，因为真实语音场景不是一问一答，而是会打断、补充、等待时机和遵守会话规则。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>语音 Agent 的落地场景会继续扩展到客服、陪练、会议助手、车载、智能硬件和多人协作。国内厂商提供 API 后，创业团队能更低成本构建中文实时语音产品，竞争重点会转向延迟、稳定性、情绪表达和安全边界。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2067851008492052519" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Prometheus 世界模型实验室融资</div>
+  <div class="section"><div class="section-label event">事件</div><p>Jeff Bezos 宣布成立 Prometheus，一家专注物理世界 AI 的前沿实验室，融资 120 亿美元、估值 410 亿美元。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>世界模型正在成为下一阶段 AI 竞赛的关键词，目标从文本和视频生成走向可交互、持久、一致的物理模拟。Bezos 入局意味着资本认为机器人、自动驾驶、工业设计和科学实验等物理场景还存在巨大模型红利。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>大规模资金进入会推高世界模型方向的人才和算力竞争，也会加速合成数据、仿真环境和机器人训练平台的发展。对普通开发者而言，短期可直接玩的产品不多，但相关开源工具、数据集和模拟平台可能会快速增多。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2067949429026697422" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLDwzJ6aQAAQv4Y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLDwzJ6aQAAQv4Y?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Qualcomm Developer / GitHub：高通开发者入口与开放仓库，适合探索 Snapdragon、AIMET、NexaSDK 等端侧 AI 能力 <a href="https://github.com/qualcomm" target="_blank">→</a></li>
+    <li>NVIDIA Developer：英伟达 SDK 与开发者资源入口，覆盖 CUDA、AI、图形和机器人生态 <a href="https://developer.nvidia.com/" target="_blank">→</a></li>
+    <li>Intel XPU PyTorch：PyTorch 官方 Intel XPU 入门文档，可尝试在 Intel GPU 上跑深度学习工作负载 <a href="https://docs.pytorch.org/docs/stable/notes/get_start_xpu.html" target="_blank">→</a></li>
+    <li>平头哥 YoCBook：芯片开发入门教程，适合了解 RISC-V/嵌入式开发基础 <a href="http://yoc.docs.t-head.cn/yocbook/" target="_blank">→</a></li>
+    <li>Stanford CS25 Transformers United V6：Transformer 与世界模型方向课程视频 <a href="https://www.youtube.com/watch?v=GBd7iuJkW08" target="_blank">→</a></li>
+    <li>安心铃：把闲置旧手机改造成防失联的智能家居设备 <a href="https://meta.appinn.net/t/topic/87085" target="_blank">→</a></li>
+    <li>Epic 限免游戏：本周可领取《ROBOBEAT》《深空梦里人》等游戏 <a href="https://www.appinn.com/eggs-26619/" target="_blank">→</a></li>
+    <li>Aether Labs：世界模型相关创业公司官网，可观察其产品叙事与方向 <a href="https://aetherlabs.ai/" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

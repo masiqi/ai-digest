@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 19 Jun 2026 00:35:51 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 00:35:31 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/20 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-20.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-20.html</guid>
+      <description>今天最值得上手的是“Agent 工程化”和“可运行交互应用”：从 Vercel Eve、Browser Use 模板、Datasette Apps，到各种 Skill/MCP 项目，都在把 AI 从聊天变成可复用、可部署、可协作的工作流。另一个方向是“本地可试的个人自动化”：Codex/Claude Code 的新功能、元 Skill、设计 Skill 都在降低把经验沉淀成工具的门槛。</description>
+      <pubDate>2026-06-20T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/19 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-19.html</link>
