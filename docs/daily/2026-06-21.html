@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-21</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-21</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手看的方向是“Agent 工程化”：从 Deep Agents 教程、Cloudflare 临时部署账号，到 Codex Handoff，工具链正在把 AI 写代码从本地对话推进到可部署、可迁移、可协作的真实工作流。另一个明显趋势是实用型小工具回潮：公众号转 Markdown、PDF 增强、安卓 APK 安装器、Mac 菜单栏工具都很适合马上试用。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ 微信公众号转 Markdown</div>
+  <div class="section"><div class="section-label event">一句话</div><p>输入微信公众号文章 URL，就能把文章转换成 Markdown，并自动下载文章里的图片。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/jackwener/wechat-article-to-markdown" target="_blank">https://github.com/jackwener/wechat-article-to-markdown ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub 仓库查看 README，按项目要求准备 Python/Node 环境和浏览器依赖；如果你只是想试验，找一篇公开的公众号文章 URL，按 README 的命令把 URL 作为参数传入，运行后检查输出目录里的 Markdown 文件和图片资源。它还提到会配合 camoufox 这类反检测浏览器，所以遇到微信页面无法正常抓取时，可以先安装 camoufox，再重新执行转换流程。转换完成后，把 Markdown 放进 Obsidian、Typora、Notion 导入器或自己的 RAG 知识库里测试效果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>公众号内容长期被困在网页和移动端里，复制排版、图片保存、归档都很麻烦。这个项目把反爬访问、正文抽取、图片下载和 Markdown 输出串成一条链路，适合做个人知识库、内容再编辑、文章转 PPT 或企业内部资料沉淀的前置工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把高质量公众号文章批量归档到本地知识库。</li>
+    <li>将公众号长文转换为 PPT、PDF、RAG 文档或二次编辑素材。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2068333104205275138" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ camoufox</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向自动化抓取场景的反检测浏览器，可用于绕过常规浏览器指纹识别。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/daijro/camoufox" target="_blank">https://github.com/daijro/camoufox ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库按 README 安装，通常会先准备 Python 环境，再安装 camoufox 包和浏览器二进制。安装后可以把它当成自动化浏览器后端，用在 Playwright/脚本抓取流程里；最简单的玩法是先跑仓库示例，确认能打开目标网页，再把原先脚本里的普通 Chromium 启动逻辑替换为 camoufox。和微信公众号转 Markdown 项目一起用时，可以先用 camoufox 打开目标文章，看正文和图片是否完整渲染，再执行内容抽取。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>越来越多站点对 Playwright、Selenium、Headless Chrome 做指纹检测，普通自动化脚本经常还没抓到内容就被拦截。camoufox 的价值在于降低自动化浏览器被识别的概率，让个人归档、内容迁移、内部数据采集这类合法自动化流程更稳定。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给网页归档、资料抽取、内容迁移脚本提供更稳的浏览器环境。</li>
+    <li>调试被常规 Headless Chrome 阻断的自动化任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2068333104205275138" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Deep Agents 实战</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Datawhale 开源的 Deep Agents 教程，围绕 LangChain/LangGraph 生态讲解如何构建真实 Agent 应用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/datawhalechina/deepagents-in-action" target="_blank">https://github.com/datawhalechina/deepagents-in-action ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库后先从目录和 README 看课程结构，按章节安装 Python 依赖并配置所需模型 API Key。建议不要一口气读完，先 clone 到本地，跟着第一章跑通最小 Agent 示例，再逐章实验工具调用、状态管理、长任务拆解和多步骤执行。每完成一节，就把示例改成自己的任务，比如网页总结、资料检索、客服问答或代码助手，这样能真正理解 LangGraph 编排和 Deep Agents Harness 的边界。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 现在最大的问题不是“会不会调用模型”，而是如何把上下文、工具、记忆、状态和评估组织成稳定工程。这个教程来自 LangChain 官方认证大使，重点放在可落地工程实践，比单纯 prompt 合集更适合开发者系统学习。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学习 LangChain/LangGraph 并构建自己的生产级 Agent 原型。</li>
+    <li>给团队做 Agent 工程培训或内部技术分享。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2068306942184034471" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLQaI67bUAA0pwt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLQaI67bUAA0pwt?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLFZ4r3bsAABAlF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLFZ4r3bsAABAlF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLFZ4r5bIAA65y8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLFZ4r5bIAA65y8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLFZ4r4bgAAL5CP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLFZ4r4bgAAL5CP?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare Workers 临时账号 / temporary deploy</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cloudflare 给 AI Agent 提供临时部署账号，Agent 可先部署验证 Worker，再由真人认领资源。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://blog.cloudflare.com/temporary-accounts/" target="_blank">https://blog.cloudflare.com/temporary-accounts/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先把 Wrangler 更新到 4.102.0 或更新版本，然后在一个 Cloudflare Workers 项目目录里运行 `wrangler deploy --temporary`。命令会创建短期账户和自动生成的 API Token，把 Worker 部署到 workers.dev 子域名，开发者或 Agent 可以在 60 分钟有效期内验证代码、KV、D1 等资源是否正常。确认没问题后，打开 Agent 返回的 claim/认领链接，把这些临时资源绑定到你自己的 Cloudflare 账号，最后再按常规方式纳入项目管理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>过去 Agent 写完代码后，部署环节经常卡在人类账号、API Token、权限授权上。临时账号把“先部署验证”和“后绑定归属”拆开，大幅降低了自动化开发闭环的摩擦，是 Agent 从写代码走向自主交付的重要基础设施。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Claude Code、Codex 或自研 Agent 自动部署 Cloudflare Worker Demo。</li>
+    <li>在不给长期 API Token 的情况下验证第三方生成的边缘应用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2068334204337942814" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLQy5WraMAAjBP-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLQy5WraMAAjBP-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Frame0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Setapp 本周推荐的应用，用于快速制作线框图、流程草图和产品原型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/frame0-setapp-weekly/" target="_blank">https://appinn.com/frame0-setapp-weekly/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你已经订阅 Setapp，可以直接在 Setapp 客户端搜索 Frame0 并安装；没有 Setapp 的话，先通过文章进入应用介绍页，查看是否提供独立下载或试用。打开后从空白画布开始，用内置组件画一个 App 页面、落地页结构或用户流程。建议把最近正在做的产品想法拆成 3 个页面：入口页、核心操作页、结果页，用 Frame0 快速拉出结构，再截图发给 AI 或同事继续细化。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 生成 UI 很快，但产品早期更需要低成本表达结构和交互逻辑。Frame0 这类轻量线框图工具能减少“直接上高保真导致反复返工”的问题，也适合作为 AI 生成前的需求澄清材料。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>独立开发者快速画产品原型并交给 AI 生成页面。</li>
+    <li>产品经理在会议中即时表达流程和信息架构。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068308542260470173" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLQbqKaW4AA8BWM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLQbqKaW4AA8BWM?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SumatraPDF Plus</div>
+  <div class="section"><div class="section-label event">一句话</div><p>SumatraPDF 的增强版，主打中文排版、全渲染暗黑模式、双击查词和大文件加速。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/sumatrapdf-plus/" target="_blank">https://appinn.com/sumatrapdf-plus/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入小众软件文章下载对应版本，Windows 用户可以先用便携版试用，避免影响现有 PDF 阅读器默认设置。打开后找几类文档测试：中文扫描 PDF、电子书 PDF、超大技术文档和需要暗黑模式阅读的论文。重点试双击查词、目录跳转、页面渲染速度和暗黑模式是否真的覆盖全文渲染。如果满意，再把它设为默认 PDF 阅读器，或者只作为大文件和夜间阅读的专用工具。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>原版 SumatraPDF 胜在轻巧，但中文阅读、暗黑模式和大文件体验并不总是完美。Plus 版如果能补齐这些高频痛点，就很适合替代臃肿阅读器，尤其是技术文档、论文、说明书和电子书重度用户。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Windows 上快速阅读大体积 PDF、EPUB、技术手册。</li>
+    <li>夜间阅读中文 PDF，并用双击查词提升学习效率。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068286143120949721" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare 私有文档分享工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个基于 Cloudflare 的私有文档分享工具，适合低成本部署个人或团队资料分享页。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/cloudflare-private-document-sharing-tool/" target="_blank">https://appinn.com/cloudflare-private-document-sharing-tool/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读小众软件文章确认项目地址和部署方式，通常这类工具会基于 Cloudflare Pages、Workers、R2 或 D1。准备好 Cloudflare 账号后，按教程 fork/导入项目，配置访问密码、文档目录和部署变量。第一次部署建议只放一两个测试文档，验证访问控制、移动端阅读、链接分享和更新流程，再决定是否迁移真实资料。如果支持 Git 同步，可以把 Markdown 文档放进仓库，用 Cloudflare 自动构建成私有站点。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多资料分享需求不需要完整 CMS，也不想放到公开网盘。Cloudflare 免费/低价边缘基础设施配合轻量文档工具，能做出访问快、维护少、可控权限的私人知识发布系统。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给家人、客户或小团队分享有密码保护的文档。</li>
+    <li>搭建个人手册、项目资料库或内部 SOP 站点。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068253331701583934" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Universal Installer</div>
+  <div class="section"><div class="section-label event">一句话</div><p>安卓万能 APK 安装器，用来改善手动安装 APK、分包和安装包管理体验。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/universal-installer-android/" target="_blank">https://appinn.com/universal-installer-android/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在安卓设备上打开小众软件文章，按文中来源下载 Universal Installer 的 APK；首次安装需要允许浏览器或文件管理器“安装未知应用”。安装后准备几个测试包：普通 APK、APKS/APKM/XAPK 或你常用的离线安装包，逐个用 Universal Installer 打开，观察是否能正确识别、解析并完成安装。建议先在备用设备或非关键 App 上测试，确认权限和兼容性后再作为日常安装器使用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>安卓生态里分包格式越来越多，很多应用不再是单一 APK，普通文件管理器安装容易失败。一个好用的统一安装器能减少折腾，尤其适合经常测试开源 App、侧载海外应用或给家人维护安卓设备的人。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>安装 GitHub、F-Droid 或第三方渠道下载的安卓应用。</li>
+    <li>处理 APKS、XAPK 等分包安装场景。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068250674526109738" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLPnB0RWUAAYVku?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLPnB0RWUAAYVku?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ GreenRAM</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mac 工具，可自动退出后台 App，帮助释放内存和减少资源占用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/greenram-mac/" target="_blank">https://appinn.com/greenram-mac/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入小众软件文章下载 GreenRAM，安装后授予它必要的辅助功能或自动化权限。先不要直接全局启用，建议观察当前常驻后台 App 列表，把不希望自动退出的应用加入白名单，比如同步盘、输入法、通讯工具和开发服务。然后设置一个较温和的自动退出策略，打开活动监视器对比启用前后的内存压力、后台进程数量和电池续航。用一两天确认不会误关工作软件后，再长期保留。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Mac 内存管理本身不错，但 Electron、菜单栏工具和各种后台服务会越积越多。GreenRAM 把“手动清理后台 App”自动化，适合轻度用户减少卡顿，也适合老款 Mac 延长可用性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>老款 Mac 或小内存 Mac 日常释放后台资源。</li>
+    <li>在外出办公时减少后台耗电和无用常驻进程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068214378197905439" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ShowMeThe.codes</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个社交卡片制作工具，类似 linktr.ee / bento.me，可生成个人展示页。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://showmethe.codes" target="_blank">https://showmethe.codes ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问 showmethe.codes，先看官方示例和模板。如果提供登录或编辑入口，可以创建一个自己的页面，把 GitHub、X、博客、作品集、联系方式等链接放进去，再调整头像、标题、简介和卡片布局。完成后用手机和桌面分别打开预览，确认首屏信息是否清楚、链接是否可点击。开发者还可以研究它背后的 shipany-tanstack 实现思路，用来快速搭建自己的目录页、产品导航页或活动页。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>个人品牌和独立产品都需要一个低维护的“入口页”。相比完整建站，社交卡片工具更轻，也更适合把多个作品、账号和产品统一展示；如果它的技术栈可复用，对独立开发者也是一个不错的 SaaS 模板参考。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给独立开发者、设计师、AI 创作者做个人链接主页。</li>
+    <li>为一个小产品或活动快速生成导航卡片页。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2068171534871769383" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLOctwpa4AAoZfG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLOctwpa4AAoZfG?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ macOS 菜单栏 WebDAV 轻量工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开发者自荐的 macOS 菜单栏 WebDAV 工具，用于轻量连接和管理 WebDAV 文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/macos-menubar-webdav-tool/" target="_blank">https://appinn.com/macos-menubar-webdav-tool/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从小众软件文章进入下载或 App Store 页面，安装后在菜单栏打开应用，添加你的 WebDAV 地址、用户名和密码。建议先用一个测试目录连接，比如坚果云、NAS 或自建 WebDAV 服务，试试上传、下载、打开链接和断线重连。确认稳定后，可以把常用同步目录、临时文件交换目录或远程素材库挂进去。因为涉及账号密码，最好使用服务端生成的应用专用密码，而不是主账号密码。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>WebDAV 仍然是个人云盘、NAS、知识库同步里的通用协议，但很多客户端过重或体验割裂。菜单栏轻量工具能让“临时传文件、取资料、管理远程目录”变成一个很顺手的小动作。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac 上快速访问 NAS、坚果云或自建 WebDAV 目录。</li>
+    <li>给跨设备工作流提供一个轻量文件中转入口。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068156521909797147" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ mole.fit</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个带科幻叙事的 Mac 应用官网，定位为从太阳获取能量、面向个人状态或效率的工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mole.fit" target="_blank">https://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开 mole.fit，先看官网说明、截图和下载入口；如果提供 Mac 客户端，下载后按 macOS 提示拖入 Applications。首次打开时留意它请求的权限，例如通知、健康数据、日历或辅助功能，按你愿意尝试的范围授权。建议用一天时间观察它到底记录什么、提醒什么、如何把“能量/状态”可视化，再决定是否纳入日常菜单栏或健康效率工作流。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推文的包装很有趣，但更值得看的是真正的产品交互：越来越多独立 Mac App 正在把健康、效率、游戏化和 AI 叙事融合。即使最后不用，也适合作为产品定位、官网文案和情绪化设计的参考。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>体验新一代 Mac 个人效率/状态管理应用。</li>
+    <li>参考独立 App 的品牌叙事、落地页和视觉表达。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2068121117802614835" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ loopany.run</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个新出现的可体验项目入口，推文只给出“整吗？”和网址，适合探索其具体玩法。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="http://loopany.run" target="_blank">http://loopany.run ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 loopany.run 后先观察它是产品官网、Demo 还是下载页；不要急着登录或授权，先看页面说明、示例和隐私条款。如果它提供在线体验，使用临时测试内容跑一遍核心流程，记录它输入什么、输出什么、是否需要 API Key。如果它和近期流行的 loop/多 Agent 协作概念有关，可以尝试用一个小任务测试：让多个角色围绕一篇文章、一个需求或一个代码改动进行协作，再判断它是否真的比单 Agent 更有效。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推文信息很少，但独立开发者发布的早期 Demo 往往最值得第一时间试玩。尤其是 loop、多 Agent、协作式 AI 产品正处在快速试错期，早期体验能帮助判断哪些交互模式会留下来。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>探索多 Agent / loop 工作流类新产品。</li>
+    <li>给自己的 AI 协作工具寻找交互和产品灵感。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2068024488298783126" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLMZTO8boAACiRd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLMZTO8boAACiRd?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLMZTO9aAAAydi4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLMZTO9aAAAydi4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLMZTPWbAAAh_Py?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLMZTPWbAAAh_Py?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AlphaFold 负责人 John Jumper 离开 Google DeepMind 加入 Anthropic</div>
+  <div class="section"><div class="section-label event">事件</div><p>多位博主提到 AlphaFold 之父、诺奖得主 John Jumper 离开 Google DeepMind，加入 Anthropic。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果消息属实，这不是普通人才流动，而是顶尖科学 AI 人才从 DeepMind 向 Anthropic 迁移的信号。DeepMind 曾经在 AlphaFold、Transformer、强化学习等方向代表“AI 研究圣地”，但近年大模型产品化节奏、内部整合和商业压力让外界开始质疑其吸引力。Anthropic 则凭借 Claude、模型安全和企业市场持续吸纳高端研究者。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>顶级人才流向会影响未来基础模型、科学 AI 和生物计算方向的话语权。对开发者和企业来说，Anthropic 生态值得继续关注；对 Google 来说，Gemini 不只是产品竞争，也是在争夺研究组织的信心和凝聚力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2068382466025595164" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Codex Handoff 支持跨设备任务迁移</div>
+  <div class="section"><div class="section-label event">事件</div><p>Codex 上线 Handoff，可把本地进行中的编码任务迁移到远程服务器继续执行，再切回本地。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个功能解决的是 Agent 编程里很真实的痛点：长任务不能被笔记本合盖、网络变化或本地算力限制打断。Handoff 的关键不是简单同步文件，而是迁移“任务上下文 + 代码状态 + 执行环境”。它让 Codex 更像一个可持续工作的远程开发代理，而不是只能依附在当前终端里的聊天助手。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种跨设备迁移稳定可用，AI 编程工作流会更接近云端 IDE + 本地入口的混合模式。开发者可以在通勤、会议和夜间把任务交给远程 Agent 跑，回来再接管审查，团队也可能围绕远程 Agent 池建立新的开发基础设施。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2068183780938985827" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude 前沿模型访问限制引发 AI 可得性讨论</div>
+  <div class="section"><div class="section-label event">事件</div><p>Andrew Ng 等人讨论美国政府和 Anthropic 通过限制前沿模型访问来控制 AI 能力分发。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>过去很多人默认“只要付费就能用最强模型”，但前沿模型越来越具有战略资源属性，企业、国家和研究机构都可能面临被断供、限流或降级的风险。这会推动更多组织建立多供应商策略、自建模型能力或使用开源模型作为底线保障。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 基础设施采购会从“谁效果最好”变成“谁稳定、可控、合规、可替代”。国产模型、开源模型、私有化部署和模型路由服务都会因此受益；同时，依赖单一闭源模型构建核心业务的公司需要重新评估供应链风险。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AndrewYNg/status/2068039709126017356" target="_blank"><span class="handle">@AndrewYNg</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLMm79dbgAApRoV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLMm79dbgAApRoV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Jeff Bezos 支持 Prometheus，押注物理世界 AI</div>
+  <div class="section"><div class="section-label event">事件</div><p>推文称 Jeff Bezos 参与成立 Prometheus，专注物理世界 AI，融资规模和估值都非常高。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>物理世界 AI 的核心不只是聊天或写代码，而是把模型能力接入机器人、制造、实验室、物流和真实环境决策。Bezos 的履历和资源天然贴近供应链、航天、云计算和自动化，因此这个方向与其商业版图高度契合。无论具体数字是否还需进一步核实，资本对世界模型和物理智能的兴趣已经明显升温。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来一年，机器人、工业自动化、仿真环境、多模态感知和世界模型会继续获得更多资金与人才。对开发者而言，VLA、触觉数据、仿真训练、边缘部署等技能会变得更有长期价值。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2068152245145981431" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLDwzJ6aQAAQv4Y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLDwzJ6aQAAQv4Y?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI Agent 被用于投递木马，安全边界继续模糊</div>
+  <div class="section"><div class="section-label event">事件</div><p>有博主分享 Cursor/AI Agent 会话相关的 AMOS Stealer 木马案例，指出合法和非法行为越来越难区分。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Agent 的强项是自动执行复杂操作，这也意味着攻击者可以把恶意行为伪装成“正常开发任务”或“自动化调试”。当 AI 能读进程、改配置、执行脚本、访问浏览器会话时，传统安全软件很难仅凭行为判断意图。开发者使用 Agent 时，必须把权限最小化、命令审查、隔离环境和凭据保护变成默认流程。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 编程工具的安全能力会成为竞争点，包括沙箱、权限确认、敏感文件保护、命令风险提示和会话审计。企业采用 Agent 前，也需要建立专门的安全策略，而不是把它当普通 IDE 插件看待。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Barret_China/status/2068232282008334392" target="_blank"><span class="handle">@Barret_China</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2068291178915832058" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/aninibread/status/2068085726605136265" target="_blank"><span class="handle">@aninibread</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/matthieurouif/status/2068020352601424145" target="_blank"><span class="handle">@matthieurouif</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2068172294422429803" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2068162508171669770" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2067944028998693130" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLQL2jmbIAAHNxg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLQL2jmbIAAHNxg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLPMmfsbMAAdgpS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLPMmfsbMAAdgpS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLNQtGyacAAuafq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLNQtGyacAAuafq?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLMVdNOWoAAXE62?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLMVdNOWoAAXE62?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLMVcmuXIAAKl9Q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLMVcmuXIAAKl9Q?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLMVcmsX0AEaEEx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLMVcmsX0AEaEEx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>LandingAI ADE 密码文档解析：在同一次 Parse 请求中传 password，完成解密、解析和结构化输出 <a href="https://x.com/shao__meng/status/2068291178915832058" target="_blank">→</a></li>
+    <li>Cloudflare AI Search 托管索引迁移：现有和新实例迁移到内置存储与索引基础设施，一条命令即可获得搜索能力 <a href="https://x.com/aninibread/status/2068085726605136265" target="_blank">→</a></li>
+    <li>Photoroom 产品保真度担保：AI 产品图生成如果保真度不达标可退还代币 <a href="https://x.com/matthieurouif/status/2068020352601424145" target="_blank">→</a></li>
+    <li>BigQuant SDK：量化/数据分析相关 SDK 入口 <a href="https://x.com/seclink/status/2068172294422429803" target="_blank">→</a></li>
+    <li>字节产品与开发者文档合集：Coze、火山引擎、飞书开放平台等入口集中出现 <a href="https://x.com/seclink/status/2068162508171669770" target="_blank">→</a></li>
+    <li>NVIDIA SDK：英伟达开发者 SDK 入口，适合查 GPU/AI 加速能力 <a href="https://x.com/seclink/status/2067944028998693130" target="_blank">→</a></li>
+    <li>Intel XPU / PyTorch 文档：在 PyTorch 中使用 Intel XPU 的入门说明 <a href="https://docs.pytorch.org/docs/stable/notes/get_start_xpu.html" target="_blank">→</a></li>
+    <li>平头哥芯片开发入门教程：面向芯片/嵌入式开发的 YoC Book <a href="http://yoc.docs.t-head.cn/yocbook/" target="_blank">→</a></li>
+    <li>Windows 11 26H2：微软确认 2026 年秋季发布 <a href="https://appinn.com/windows-11-26h2-coming-fall-2026/" target="_blank">→</a></li>
+    <li>本周免费游戏：《ROBOBEAT》《深空梦里人》限时领取提醒 <a href="https://appinn.com/eggs-26619/" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

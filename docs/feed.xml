@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 20 Jun 2026 00:35:31 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 00:34:56 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/21 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-21.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-21.html</guid>
+      <description>今天最值得动手看的方向是“Agent 工程化”：从 Deep Agents 教程、Cloudflare 临时部署账号，到 Codex Handoff，工具链正在把 AI 写代码从本地对话推进到可部署、可迁移、可协作的真实工作流。另一个明显趋势是实用型小工具回潮：公众号转 Markdown、PDF 增强、安卓 APK 安装器、Mac 菜单栏工具都很适合马上试用。</description>
+      <pubDate>2026-06-21T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/20 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-20.html</link>
