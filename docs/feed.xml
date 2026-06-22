@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 21 Jun 2026 00:34:56 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 00:35:12 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/22 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-22.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-22.html</guid>
+      <description>今天最值得关注的是「AI 工具从聊天走向可操作工作流」：Codex 插件、终端常驻 Agent、浏览器/网页复刻、无限画布等项目都在把 AI 变成可录制、可复用、可嵌入日常流程的执行层。另一个主线是开源与本地小工具继续爆发，数据库迁移、图标生成、桌面贴图、权限流实现这类项目都可以马上下载试用或接入开发。</description>
+      <pubDate>2026-06-22T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/21 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-21.html</link>

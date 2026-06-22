@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-22</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-22</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得关注的是「AI 工具从聊天走向可操作工作流」：Codex 插件、终端常驻 Agent、浏览器/网页复刻、无限画布等项目都在把 AI 变成可录制、可复用、可嵌入日常流程的执行层。另一个主线是开源与本地小工具继续爆发，数据库迁移、图标生成、桌面贴图、权限流实现这类项目都可以马上下载试用或接入开发。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ sqlite-utils v4 RC1</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Simon Willison 发布 sqlite-utils v4 首个候选版，把 sqlite-migrate 迁移系统并入主工具，并加入嵌套事务支持。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/" target="_blank">https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你已经在用 Python 管理 SQLite 数据库，可以先在隔离环境里试新版：创建虚拟环境后安装 sqlite-utils 的 v4 RC 版本，准备一个测试数据库，用新迁移命令创建 migration 文件，再执行迁移并检查 schema 变化。建议先把现有项目数据库复制一份，在副本上跑完整迁移流程，重点验证表结构变更、回滚策略、嵌套事务场景，以及和旧脚本的兼容性。对于还没用过 sqlite-utils 的人，可以从命令行导入 CSV/JSON 到 SQLite，再尝试用 Python API 写一个小脚本完成建表、插入、查询和迁移。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>sqlite-utils 一直是轻量数据处理、原型开发和 Datasette 生态里的高频工具。v4 把迁移系统正式整合进来，意味着它不再只是「快速操作 SQLite」的小刀，而更接近一个适合长期维护小型数据库项目的工具链；嵌套事务支持也能降低复杂脚本里事务冲突的概率。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>小型数据产品、内部工具、个人知识库的 SQLite schema 迁移管理。</li>
+    <li>用 Python 快速清洗 CSV/JSON 数据，并把结果发布到 Datasette 或本地应用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2068840530465952121" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ docu.md</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个补齐 Markdown 短板的文档工具，强调丰富图表能力和高质量 docx 输出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docu.md/" target="_blank">https://docu.md/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问官网试用或查看产品入口，把一份现有 Markdown 文档导入进去，重点测试两类内容：一是带有图表、流程图、表格、代码块的技术文档，二是最终需要交给非技术同事的 Word 文档。实际体验时可以先用 Markdown 写大纲和正文，再在 docu 里补充可视化图表，最后导出 docx，检查目录、标题层级、图表位置、中文排版、页眉页脚和表格格式是否符合交付要求。团队使用时可把它作为「技术人员写 Markdown，业务人员收 docx」的中间层。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Markdown 的优势是轻量和可版本化，但在复杂图表、正式排版、Word 交付上一直容易卡住。docu.md 的价值在于承认 Markdown 不适合所有人，然后用工具链把技术写作和办公文档交付打通，尤其适合需要频繁交付方案、报告、产品说明书的团队。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>技术方案、产品 PRD、项目复盘等需要先快速写作再导出 Word 的场景。</li>
+    <li>非技术团队成员需要阅读、批注或归档技术文档的跨部门协作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xicilion/status/2068835401658441991" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ mole.fit</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向普通用户的健康/运动类工具，作者强调「好的工具应该惠及每个人」。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mole.fit/" target="_blank">https://mole.fit/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 mole.fit 网站，从首页提供的入口了解它支持的功能和适配平台；如果有下载入口，就先安装客户端或移动端版本。首次体验建议从最小闭环开始：建立一个个人目标，例如体重管理、日常运动记录或饮食记录，然后连续录入几天数据，观察它是否能给出清晰反馈、提醒或可视化趋势。也可以把它和你现有的健康 App 做对比，重点看上手难度、是否需要复杂配置、是否适合家人或非技术用户长期使用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 工具和效率工具经常只服务重度用户，但真正有生命力的产品往往能降低普通人的使用门槛。mole.fit 的讨论点不只是功能本身，而是它把「可负担、可理解、可持续使用」放在产品价值里，适合观察独立开发者如何做面向大众的实用产品。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>个人健康目标追踪、运动习惯养成、日常身体状态记录。</li>
+    <li>给家人或非技术用户推荐一款低门槛健康工具进行长期试用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2068701319083524240" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLWA0JlbwAE8lyN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLWA0JlbwAE8lyN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WebInk</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Chrome 插件，一键把网页内容智能转成更适合阅读、提取或整理的格式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://chromewebstore.google.com/detail/webink-intelligent-web-to/lhifbnmampdmdadbhpeeoikkljhiaohn" target="_blank">https://chromewebstore.google.com/detail/webink-intelligent-web-to/lhifbnmampdmdadbhpeeoikkljhiaohn ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Chrome Web Store 安装 WebInk 插件后，打开一篇长网页、技术博客或公众号镜像页面，点击插件按钮，让它对当前网页进行转换或提取。建议用三类页面测试：结构清晰的英文技术文档、广告较多的资讯文章、排版复杂的中文网页；分别观察标题、正文、图片、链接、代码块是否保留完整。若你平时用 Obsidian、Notion 或本地 Markdown 管理资料，可以把转换结果复制进去，检查是否比手动清洗网页更省时间。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>网页到知识库的最后一公里仍然很繁琐，尤其是中文网页、复杂排版和动态页面。WebInk 这种浏览器插件把「看到页面立刻提取」变成一个轻动作，适合资料收集、研究剪藏和 AI 上下文整理，是很多工作流里最容易被低估的一环。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把网页文章快速整理进 Obsidian、Notion、飞书文档或本地 Markdown。</li>
+    <li>在做竞品研究、论文资料收集、产品调研时批量清洗网页内容。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2068681400392577216" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLQw5ZWWQAEQU4J?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLQw5ZWWQAEQU4J?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLQw-2cXIAAwHrX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLQw-2cXIAAwHrX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ pinpic</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开发者自荐的独立贴图工具，可以把图片固定在桌面上作为参考。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://meta.appinn.net/t/topic/87171" target="_blank">https://meta.appinn.net/t/topic/87171 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入小众软件发现频道帖子，按照作者提供的下载地址安装 pinpic。安装后先选几张常用参考图，比如设计稿、配色板、截图说明或流程图，把它们贴到桌面固定位置；再测试置顶、透明度、缩放、拖拽、关闭等基础交互是否顺手。设计、写作或编程时，可以把需求截图、UI 参考、错误信息截图贴在屏幕边缘，避免反复在窗口之间切换。若你有多显示器，建议测试跨屏移动和重启后状态保持。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>贴图工具看似很小，但对需要频繁参考视觉资料的人非常有用。它不像大型知识库那样重，而是解决「我现在就想把这张图钉在眼前」的问题；这类低摩擦工具往往能显著改善设计、前端、写文档和 debug 的微工作流。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>UI/视觉设计时固定参考图、色板、竞品截图。</li>
+    <li>编程或写文档时把需求说明、错误截图、流程图贴在桌面边缘。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068637167811735928" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Otty</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Typora 团队新作，一个面向 Claude Code 等终端常驻 Agent 的 macOS 终端工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.appinn.com/otty-macos/" target="_blank">https://www.appinn.com/otty-macos/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问小众软件文章，按文中入口下载 Otty macOS 版本并安装。首次体验可以在一个测试项目目录打开它，启动 Claude Code 或类似 CLI Agent，让 Agent 作为终端里的「常驻用户」执行代码阅读、修改和命令运行。建议从低风险任务开始：让它解释项目结构、运行测试、修改 README 或写一个小脚本；同时观察 Otty 在会话管理、输出展示、命令确认、长任务交互上是否比普通终端更适合 AI Agent。不要一开始就在重要仓库里开启自动写入，先用 git diff 审查每次改动。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 编程工具正在从 IDE 插件扩展到终端原生体验。普通终端为人类命令行设计，而 Claude Code/Codex 这类 Agent 需要更长上下文、更频繁确认、更清晰的会话状态。Otty 的方向是重新思考「Agent 常驻终端」应该长什么样，可能会影响未来开发者工作台形态。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 macOS 上长期运行 Claude Code、Codex 等命令行 AI 编程助手。</li>
+    <li>需要保留多条 Agent 会话、审查命令输出、管理长时间任务的开发工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068590400336527656" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLUcAdIXEAAPRtZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLUcAdIXEAAPRtZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ codefree.cafe</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个以 Codex 为核心的无代码/低代码开发体验入口，主打「Codex 杀死比赛」。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://codefree.cafe/" target="_blank">https://codefree.cafe/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 codefree.cafe，先查看它提供的是在线体验、模板库还是产品说明。如果有可交互入口，建议用一个非常具体的小需求测试，例如「生成一个个人作品集首页」「做一个待办清单 App」「根据这段 API 返回数据生成展示页面」。体验时不要只看生成速度，要看它是否能让你继续修改、预览、导出代码或部署。若需要登录，建议用测试账号；若能下载代码，就把生成结果放进本地项目跑一次，检查依赖、构建和可维护性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 生成代码已经不稀奇，关键差异在于能否把需求、生成、预览、迭代、交付放进一个普通人也能操作的闭环。codefree.cafe 代表了一类新产品：把强模型能力包装成更低门槛的建站/做应用流程，适合观察「非程序员能否真正交付软件」。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速制作 Landing Page、作品集、活动页或简单内部工具原型。</li>
+    <li>产品经理、设计师、运营人员用自然语言验证应用想法。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2068562182074433737" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLUCVasbYAAJTNy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLUCVasbYAAJTNy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLUCVasaAAEfX9Y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLUCVasaAAEfX9Y?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLUCVata4AABM5L?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLUCVata4AABM5L?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLUCVavb0AApphf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLUCVavb0AApphf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-icon-generator</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 App 图标生成 Skill，可用 Codex 调 Imagen 生图，或搜索 2 万 SVG 图标叠加背景生成图标。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-icon-generator" target="_blank">https://github.com/joeseesun/qiaomu-icon-generator ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库后先阅读 README，按说明把 Skill 或脚本接入你的 Codex/本地工作流。最简单的玩法是准备一个 App 名称、功能描述和偏好的视觉风格，让它生成一批图标候选；如果使用 SVG 路线，可以输入关键词搜索图标，再选择纯色或渐变背景组合。生成后一定要在小尺寸下检查效果，例如 32px、64px、App Store 图标预览和浏览器 favicon，不要只看大图。可以把输出纳入项目初始化流程，每次做新 demo 时快速生成临时但不丑的图标。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>独立开发和 vibe coding 的瓶颈不只是代码，还有大量设计边角料。图标虽然小，却会影响项目第一印象。这个项目把 Codex Skill、图像模型和 SVG 资源库结合起来，解决「没有设计师也能快速出一版可用图标」的问题，非常适合高频做原型的人。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>独立开发者为新 App、网站、插件、CLI 工具快速生成图标。</li>
+    <li>团队在 hackathon、MVP、内部工具阶段临时补齐视觉资产。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2068551441048858744" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLT3PMwXYAAWzBj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLT3PMwXYAAWzBj?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ clonesite.ai</div>
+  <div class="section"><div class="section-label event">一句话</div><p>输入网址复刻网页，还原度据称可达 95% 以上，并交付基于 TanStack 的代码产物。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://clonesite.ai/" target="_blank">https://clonesite.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 clonesite.ai，选择一个你有权分析或复刻的公开网页，输入 URL 后让系统生成页面。测试时建议先选结构简单的落地页，再挑战复杂一点的 SaaS 官网或产品页；生成完成后对照原网页截图，检查布局、字体、间距、响应式、图片和交互细节。若平台提供代码导出，把产物下载到本地，安装依赖并运行预览，查看是否容易二次开发。请避免拿它复刻付费产品、登录后台或侵犯版权的页面，把它用于学习、迁移自有页面或快速搭原型。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>网页复刻工具的关键不只是截图生成 HTML，而是能否通过浏览器语义重建、截图比对和元素校准交付可维护代码。clonesite.ai 如果能稳定输出 TanStack 项目，就可能成为设计稿缺失、旧站迁移、竞品结构学习和快速原型开发的强力工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>复刻自有旧网站页面，迁移到现代前端技术栈。</li>
+    <li>学习优秀 Landing Page 的结构，并快速生成可改造的原型代码。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2068521958199984418" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLTZE0baAAAYL24?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLTZE0baAAAYL24?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PaperTodo</div>
+  <div class="section"><div class="section-label event">一句话</div><p>极简 Windows 便签工具，让桌面上有几张安静、可用的纸。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://meta.appinn.net/t/topic/87156" target="_blank">https://meta.appinn.net/t/topic/87156 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问小众软件帖子，下载 Windows 版本并安装。打开后先创建三类便签：今日待办、临时想法、长期提醒；测试它在桌面上的固定、编辑、删除、字体或颜色设置，以及重启后是否保留内容。建议把它和系统自带便签、Notion、Todo 软件区分使用：PaperTodo 更适合放「今天必须看见」的信息，而不是复杂项目管理。你可以把当天最重要的 3 件事写在桌面中央，把次要事项放到侧边，形成一个低打扰的视觉提醒系统。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>越复杂的任务管理工具越容易变成负担。PaperTodo 这种极简便签的价值在于把注意力拉回桌面和当下，不需要账号、同步、标签体系也能立刻使用。对 Windows 用户来说，它是一个很轻的个人工作流组件。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Windows 桌面上的今日待办、临时备忘、会议要点提示。</li>
+    <li>给不喜欢复杂任务管理软件的家人或同事提供轻量提醒工具。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068512488233062623" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cowart</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 Codex + 无限画布插件，可在画布上用自然语言标注、修改图片。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/zhongerxin/cowart" target="_blank">https://github.com/zhongerxin/cowart ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库阅读安装说明，把 Cowart 插件接入支持的 Codex 环境或本地项目。准备一张产品截图、设计草图或流程图，导入无限画布后直接用自然语言提出修改要求，例如「把这里标红并加解释」「把这块按钮改成更明显」「给这张图添加步骤编号」。体验时重点看它是否能保留修改痕迹、是否支持多轮迭代、是否能导出最终图片或标注文档。团队协作时可以把它用于评审截图，让修改意见不再散落在聊天记录里。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 图像编辑常常缺少可解释的上下文和修改轨迹，而无限画布天然适合承载标注、对比和迭代。Cowart 把 Codex 的执行能力嵌进画布，意味着它不只是「生成图片」，而是在一个可视空间里协助分析和修改视觉材料。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>产品评审时对截图、流程图、设计稿进行 AI 辅助标注和修改。</li>
+    <li>教程、文章、技术文档中快速制作带说明的配图。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/zhongerxin/status/2068450134401380498" target="_blank"><span class="handle">@zhongerxin</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLScQzDbcAAyLDe?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLScQzDbcAAyLDe?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ permiso</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个用 Swift 实现的 Codex 权限流程开源项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/zats/permiso" target="_blank">https://github.com/zats/permiso ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库，克隆到本地 macOS 环境后按 README 使用 Xcode 或 Swift Package Manager 构建运行。建议先阅读它如何表达权限请求、用户确认、命令执行边界和状态反馈，再用一个简单的模拟 Codex 操作测试权限流程。开发者可以把它当作参考实现，研究如何在 macOS 原生应用里为 AI Agent 设计「先请求、再授权、可审计」的交互。不要直接把它接入高权限自动化任务，先在沙盒目录或测试命令里验证安全边界。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 编程 Agent 的核心问题之一是权限控制：什么时候能读文件、什么时候能写文件、什么时候能执行命令。permiso 用 Swift 实现了 Codex 风格权限流，为 macOS 原生 AI 工具提供了一个可学习的模式，有助于减少「全自动乱改」和「每步都打断」之间的体验冲突。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>macOS AI 编程工具、自动化工具里的权限确认 UI 参考。</li>
+    <li>研究 Agent 安全、人机协作授权、命令执行审计的开发者样例。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/samdenty/status/2068416731895280002" target="_blank"><span class="handle">@samdenty</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HLR-B86XwAAFiBX.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HLR-B86XwAAFiBX.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLReGv3bwAAGeDD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLReGv3bwAAGeDD?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cloudflare 为 AI Agent 推临时账户机制</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cloudflare 被报道为 AI 提供特殊通道：人类需要注册，而 AI 可以使用临时账户完成访问或操作。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这说明互联网基础设施正在开始区分「人类用户」和「AI Agent 用户」。过去网站的身份系统默认访问者是人，自动化脚本通常被当作风险来源；但当 Agent 需要代替用户完成订票、填表、查询、购物等任务时，完全阻挡自动化会损害产品体验。Cloudflare 的方向可能是在安全和可用之间建立新层：让 AI 有受限、可追踪、临时的身份，而不是伪装成人类。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类机制成熟，网站接入 Agent 的门槛会明显降低，也会催生新的反滥用、授权、计费和审计标准。长期看，登录、验证码、会话管理、API 与网页访问的边界都会被重写，AI 浏览器和个人 Agent 可能获得更正式的网络身份。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2068682202741674108" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLVvgDFXIAAm8Vu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLVvgDFXIAAm8Vu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DeepSeek-V4-Flash 限时免费试用</div>
+  <div class="section"><div class="section-label event">事件</div><p>DeepSeek-V4-Flash 在 openmodel.ai 上限时免费到 6 月 28 日，参数规模 284B MoE，支持 1M 上下文。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类限时免费活动对开发者很有价值，因为它允许用接近生产的方式测试长上下文、编码和 Agent 能力，而不是只看榜单或宣传。建议重点跑真实任务：大型代码库问答、长文档摘要、多文件修改规划、工具调用链路，而不是只问常规聊天题。1M 上下文如果成本和延迟可接受，会对知识库、法律、金融、代码审查等场景很有吸引力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>国产大模型继续通过大上下文和低门槛试用争夺开发者入口，可能进一步压低中转站和应用层厂商的模型成本。对创业者来说，模型能力快速商品化意味着单纯套壳更难，真正的壁垒会转向数据、工作流、用户分发和场景交付。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2068659254823932066" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLVZ45faQAACUxH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLVZ45faQAACUxH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLQ3cNGa4AAqE1F?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLQ3cNGa4AAqE1F?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Codex Record &amp; Replay 工作流</div>
+  <div class="section"><div class="section-label event">事件</div><p>Codex 被讨论新增 Record &amp; Replay 能力：用户录制一次桌面或业务流程，Codex 可将其固化为可复用技能。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>很多真实工作流很难用纯文字描述，比如后台发布、报销填表、配置 issue、上传视频等，它们包含大量隐性偏好和界面细节。Record &amp; Replay 的价值在于把「示范」变成编程接口：用户做一遍，Agent 学会并复用。它会把桌面自动化从写脚本的人群扩展到普通知识工作者，但也要求更强的权限控制、错误恢复和环境识别能力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果录制式技能成为主流，企业内部会积累大量由员工示范生成的自动化流程，RPA、浏览器自动化、AI Agent 和知识管理会进一步融合。未来的竞争点可能不是谁能聊天，而是谁能更可靠地学习并执行组织里的重复流程。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2068688034493878396" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLV0yX6bwAAx_BB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLV0yX6bwAAx_BB?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 John Jumper 离开 Google DeepMind 加入 Anthropic</div>
+  <div class="section"><div class="section-label event">事件</div><p>AlphaFold 核心人物 John Jumper 被曝离开 Google DeepMind，加入 Anthropic。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>顶尖 AI 人才从大厂流向前沿实验室，说明模型公司之间的竞争已经扩展到科学 AI、基础研究和组织吸引力层面。AlphaFold 代表了 AI 在科学发现上的标志性成果，相关人才的流动会被市场解读为 Anthropic 不只想做聊天和编程模型，也可能加强 AI for Science、推理、安全和复杂系统研究。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会加剧 Google DeepMind、Anthropic、OpenAI 之间的人才争夺，也可能带动更多科学 AI 项目向前沿模型公司集中。对行业来说，科研能力、算力、产品化速度和安全文化将同时成为吸引顶尖研究者的关键因素。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2068382466025595164" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/zhanghaili0610/status/2067533839589851610" target="_blank"><span class="handle">@zhanghaili0610</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLFZ4r3bsAABAlF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLFZ4r3bsAABAlF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLFZ4r5bIAA65y8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLFZ4r5bIAA65y8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLFZ4r4bgAAL5CP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLFZ4r4bgAAL5CP?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>T-Rex：UC Berkeley 与 NVIDIA 的触觉增强 VLA 机器人研究，翻书、运鸡蛋、擦桌子等成功率提升 30%+ <a href="https://tactile-rex.github.io/" target="_blank">→</a></li>
+    <li>icon.museum：现代 App 图标资源库，适合做图标灵感、风格参考和小尺寸预览 <a href="https://icon.museum/" target="_blank">→</a></li>
+    <li>openmodel.ai：可试用 DeepSeek-V4-Flash 等模型的平台入口 <a href="https://www.openmodel.ai/" target="_blank">→</a></li>
+    <li>DJI Developer：无人机 SDK 与开发者文档入口，适合探索无人机场景应用 <a href="https://developer.dji.com/cn/" target="_blank">→</a></li>
+    <li>Tabbit 1.0：美团开放的 AI 浏览器方向产品，值得观察 AI 浏览器形态 <a href="https://www.meituan.com/news/NN260612179003187" target="_blank">→</a></li>
+    <li>Stepfun 平台：阶跃星辰模型平台和试用计划入口 <a href="https://platform.stepfun.com/step-plan#plan-list" target="_blank">→</a></li>
+    <li>Deep Agents in Action：面向 LangChain 开发者的开源 Agent Harness 电子书 <a href="https://x.com/zhanghaili0610/status/2067533839589851610" target="_blank">→</a></li>
+    <li>WebInk：一键网页内容整理的 Chrome 插件 <a href="https://chromewebstore.google.com/detail/webink-intelligent-web-to/lhifbnmampdmdadbhpeeoikkljhiaohn" target="_blank">→</a></li>
+    <li>Cowart：Codex + 无限画布图片标注修改插件 <a href="https://github.com/zhongerxin/cowart" target="_blank">→</a></li>
+    <li>permiso：Swift 版 Codex 权限流程参考实现 <a href="https://github.com/zats/permiso" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
