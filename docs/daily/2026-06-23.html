@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-23</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-23</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线很明确：一边是“能立刻跑”的个人工具和开源项目密集出现，覆盖备份、视频、语音输入、Mac/iOS维护、Markdown导出；另一边是多模型/多智能体编排继续产品化，Fugu、AWS Agent Toolkit、Apodex 都在把复杂 Agent 工作流包装成更易接入的入口。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ ReSo Backup</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个基于 Reed-Solomon 纠删码和 AES-256-GCM 加密的开源文件备份工具，把文件拆成多份分片，丢掉几份也能恢复。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Nigh/ReSoBackup" target="_blank">https://github.com/Nigh/ReSoBackup ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>到 GitHub Releases 下载对应 Windows、macOS 或 Linux 的可执行文件；新手直接运行 `rsbackup` 打开 GUI，选择要保护的文件，设置 shares 和 threshold，比如 5 份分片、任意 3 份可恢复，再勾选加密并输入密码。备份后把 `.rs.001` 到 `.rs.005` 分散放到不同网盘和本地硬盘。恢复时把任意满足阈值的分片放到同一目录，选择任意 `.rs.NNN` 或 `.rsmeta` 文件执行 restore 即可。命令行也可用 `rsbackup backup --input 合同.pdf --shares 5 --threshold 3 --encrypt --password "你的密码"`。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“加密备份”和“容灾冗余”合在一起，不依赖同一个云盘、不需要联网验证，也不是简单压缩包单点存储。Reed-Solomon 的 N/K 阈值设计让用户能在存储成本和容灾能力之间自己取舍，适合长期保存重要资料。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把合同、证件扫描件、密钥备份等敏感文件拆分后分散存到多个云盘。</li>
+    <li>为家庭 NAS、移动硬盘、本地工作目录增加低成本离线容灾备份。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2069095092808290802" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Boogu-Image-0.1</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Apache-2.0 开源的图像生成与编辑模型家族，主打中英文文字渲染、海报/文档类图像生成和图片编辑。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/Boogu/models" target="_blank">https://huggingface.co/Boogu/models ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最省事的入口是打开在线 Demo：Base 用 https://demo-base.boogu.org/，Edit 用 http://demo-edit.boogu.org/，Turbo 用 http://demo-turbo.boogu.org/。想本地跑则在 Hugging Face 选择 `Boogu/Boogu-Image-0.1-Base`、`Turbo` 或 `Edit`，按模型卡安装 diffusers、transformers、accelerate 后，用 `DiffusionPipeline.from_pretrained("Boogu/Boogu-Image-0.1-Base", dtype=torch.bfloat16, device_map="cuda")` 加载模型，输入包含中文标语、版式、摄影风格或编辑需求的 prompt 生成图片。Turbo 版本用于 4-step 快速文生图，Edit 版本用于图像到图像编辑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>开源图像模型长期弱项之一是准确写字，尤其是中文和密集文本版式。Boogu 明确把中英文文字渲染、海报、文档、界面、品牌物料和精细文本编辑列为重点能力，并提供 Base/Turbo/Edit/fp8 多个版本，方便从在线试玩过渡到本地实验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>生成带中文标题、活动信息、品牌文字的海报和产品图。</li>
+    <li>做图像编辑、文字替换、背景替换、风格迁移等创意实验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2069007417405546915" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLaXRR0bsAApSMM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLaXRR0bsAApSMM?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLaXRRyagAABXgA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLaXRRyagAABXgA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ZWPlayer 3.3.0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个免费的网页视频播放器/互动视频套件，一个 JS 文件即可接入，支持 HLS、DASH、FLV、WebRTC、RTSP 等协议，并新增交互标注、水印、字幕、播放列表等在线编辑器。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.zwplayer.com/zh/tools/videoplayer/" target="_blank">https://www.zwplayer.com/zh/tools/videoplayer/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>可以先打开官方在线播放器页面，拖入本地视频或填入网络流媒体地址测试播放；要集成到项目里，可下载 GitHub Release 的 `zwplayer-v3.3.0-build20260622.zip`，或直接用 `&lt;script src="https://cdn.zwplayer.com/v3/zwplayer/zwplayer.js"&gt;&lt;/script&gt;` 引入。3.3.0 的玩法重点是工具链：进入交互标注编辑器、水印编辑器、字幕编辑器、章节编辑器或播放列表生成器，拖拽配置后导出 ZWMAP JSON，再让播放器加载对应 JSON。WordPress 用户还可以安装 `zw-player-video-embed` 插件，用古腾堡区块属性配置互动视频。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是单纯“能播视频”的 H5 播放器，而是把播放、编辑、配置生成、互动热区、防录屏水印和字幕章节统一到一套在线工具链里。对课程、培训、营销视频来说，低代码生成 JSON 后直接加载，比重新开发互动播放器省很多时间。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在线课程视频中插入可点击热区、测验题、章节和多轨字幕。</li>
+    <li>企业内训或知识付费视频添加动态水印、播放列表和本地化播放器配置。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2069042387498704902" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CertLock</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Windows 单文件便携工具，通过系统原生 SRP 软件限制策略封禁软件发布者证书，从源头阻止某类流氓软件运行。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/zhaofeiy2002-ctrl/certlock" target="_blank">https://github.com/zhaofeiy2002-ctrl/certlock ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 GitHub 仓库或 Release 获取 `CertLock.exe`，在 Windows 10/11 上以管理员身份运行；把想要封禁的已签名 `.exe`、`.dll`、`.msi` 或安装包拖入/选择，工具会提取其 X.509 签名证书，并写入 Windows Software Restriction Policy 规则。之后同一厂商证书签名的软件即使换目录、重命名或重新下载，也会被系统策略拦截。项目也支持哈希封禁和规则管理。注意 README 明确提示 PyInstaller 单文件可能被杀软误报，使用前最好阅读源码和 VirusTotal 说明。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不靠后台常驻、不装驱动、不改 hosts，也不是传统杀毒规则，而是利用 Windows 自带的证书级执行限制。对反复安装、自动拉起、换壳更新的软件族群，证书层封禁比删文件或卸载更持久。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在个人 Windows 电脑上阻止某些捆绑安装器或流氓软件家族再次运行。</li>
+    <li>给家人电脑或测试机配置轻量级软件执行黑名单，减少重复清理成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2069042385695195490" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole 1.8.0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款原生 macOS 维护应用，把缓存清理、应用卸载、系统优化、磁盘地图和状态监控整合到一个本地工具里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mole.fit/" target="_blank">https://mole.fit/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问官网下载安装 Mole，macOS 14+ 的 Apple Silicon 和 Intel Mac 都支持；免费试用可先扫描再决定是否购买。打开后可以用 Earth/Cleanser 清理 App 缓存、浏览器临时文件、Xcode build、npm/pip 下载、Slack/Discord/Adobe/ChatGPT/Claude 残留等 11 类垃圾；用 Mars/Forgetter 卸载应用并查找 preferences、Application Support、caches、launch agents、login items 等残留；用 Jupiter/Cartographer 查看磁盘 treemap 并从地图里丢弃文件夹；用 Sun/Heart 查看 CPU、内存、GPU、磁盘 I/O、网络、电池、温度和进程状态。1.8.0 还新增电池护理、Apple Silicon 风扇控制、更快更新和更流畅磁盘地图。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Mac 清理类工具常见问题是过度推销、后台扫、乱删。Mole 的页面强调本地扫描、无遥测、删除前展示文件列表和字节数、可恢复操作进废纸篓，定位更克制；同时把 DaisyDisk/iStat/CleanMyMac/App Uninstaller 类能力浓缩成一个轻量原生应用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定期清理开发者 Mac 上的 Xcode、npm、pip、聊天软件和 AI 客户端缓存。</li>
+    <li>卸载不常用 App 并检查残留，同时用磁盘地图定位大文件夹。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2069057881765503136" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLbFH_MbYAAh3EJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLbFH_MbYAAh3EJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Voice Key</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源桌面语音输入应用，按住快捷键说话、松开后把识别文本输入到当前光标位置，支持 macOS 和 Windows。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://buildwithais.github.io/voicekey/" target="_blank">https://buildwithais.github.io/voicekey/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网点击 Download App，或到 GitHub Releases 下载最新版；安装后先配置智谱 AI/GLM 的语音转写 API Key。macOS 因为应用未签名，若提示损坏需要按 README 的安全说明处理，并在“系统设置 → 隐私与安全性 → 辅助功能”为 Voice Key 授权，因为它需要监听按键并模拟输入。配置完成后，在任意聊天框、编辑器、浏览器输入框里按住设定热键说话，松开后自动转写并输入。开发者也可以拉取源码，基于 Electron、React、Vite、TypeScript、TailwindCSS、shadcn/ui 和 Zustand 本地改造。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把语音转文字从“打开单独录音 App”变成系统级输入方式，适合高频短文本输入。开源形态让用户能审计快捷键、权限和 API 调用逻辑，也便于替换后端转写服务或做团队内部定制。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在微信、飞书、邮件、IDE Issue、浏览器表单里快速语音输入长段文字。</li>
+    <li>给不喜欢打字或需要无障碍输入的用户配置跨应用语音键盘。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/pzx553/status/2068899205033115970" target="_blank"><span class="handle">@pzx553</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLY0RZfWQAAOXr6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLY0RZfWQAAOXr6?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLY0epcXgAAk_mk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLY0epcXgAAk_mk?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLY0hUAW0AAp-1r?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLY0hUAW0AAp-1r?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5yAxkWUAElpLy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5yAxkWUAElpLy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5zfbfWQAAFF9V?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5zfbfWQAAFF9V?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK5z6TbWcAA1bm1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK5z6TbWcAA1bm1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK50RXHXQAAQIVu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK50RXHXQAAQIVu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Agent Toolkit for AWS</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AWS 给 AI 编码代理准备的工具包，通过 MCP、技能和受控 AWS API 访问，让 Claude Code、Cursor、Codex、Kiro 等代理更可靠地构建、部署和排障 AWS 应用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://aws.amazon.com/products/developer-tools/agent-toolkit-for-aws/" target="_blank">https://aws.amazon.com/products/developer-tools/agent-toolkit-for-aws/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 AWS 官方页面，按你的编码代理选择对应接入方式：支持插件、MCP Server 配置或把 AWS 技能安装进兼容代理。核心思路是让代理不要只靠模型记忆猜 AWS API，而是通过 AWS MCP Server 获取当前文档、API reference、最佳实践、受控 AWS API 操作和复杂工作流技能。接入后可以让代理执行更具体的任务，比如创建 production-ready VPC、把 Lambda 接到 API Gateway、部署 ECS 容器应用、调查 CloudWatch 日志/指标或 CloudFormation stack 状态。企业环境中可通过 IAM、CloudWatch 和 `aws:CalledViaAWSMCP` 区分并审计代理行为。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 编码代理做云基础设施最怕“知识过期 + 权限失控 + 调错 API”。AWS 官方把文档、API、审计、IAM guardrails 和工作流技能打包，等于给代理加了一层生产环境上下文，能降低 token 浪费和误操作风险。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Claude Code/Cursor/Codex 帮你搭建和部署 AWS 服务，同时遵循 Well-Architected 实践。</li>
+    <li>用代理排查部署失败、成本异常、日志报错等运维问题，并保留可审计记录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2069046774107619727" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Apodex</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 deep research 和长链推理的重型 AI 求解器，强调多阶段推理链设计、执行、审查和验证。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.apodex.ai/" target="_blank">https://www.apodex.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 https://www.apodex.ai/ 注册或登录体验。根据推文，现阶段可免费使用，适合把原本需要 GPT/Gemini 深度研究的复杂问题交给它。页面介绍其 Apodex pipeline 会先设计 reasoning chain，再严格执行每一步，随后检查逻辑一致性并决定结论；Deep Mode 强调 verification gates。实际使用时可以把研究问题写成清晰任务，例如“调研某开源项目的竞品、商业模式和技术风险”，要求输出引用、证据和结论；对需要金融、科学、数学或多文档比较的问题，建议明确要求逐步验证和列出不确定性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的卖点不是普通聊天，而是把“深、慢、可验证”的 System 2 thinking 产品化，并强调 300 步推理链上的累计准确率目标。对于需要长链分析、交叉核验和多轮子任务的 research 场景，和通用聊天模型的使用方式明显不同。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做市场、技术、论文、竞品、投资主题的 deep research 初稿。</li>
+    <li>把复杂问题拆成多步骤推理与验证，辅助形成可追溯决策材料。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2068892438815793607" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLYutXLaQAAwRTY?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLYutXLaQAAwRTY?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Markdown Viewer / docu.md</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Markdown 转 Word/预览工具，支持 PlantUML、Mermaid、Vega、drawio、Canvas、Graphviz、LaTeX 公式、代码高亮和 29 套主题，本地处理并可一键导出 Word。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docu.md/" target="_blank">https://docu.md/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 docu.md 按平台安装：Chrome/Chromium 扩展、Firefox 扩展、VS Code 扩展，或查看其 GitHub 开源项目。安装后用它打开 Markdown 文件，文中的 Mermaid、PlantUML、Vega/Vega-Lite、drawio、Graphviz DOT、LaTeX 公式和代码块会被渲染成适合阅读和导出的格式；需要交付 Word 时点击下载/导出即可生成带高清图、可编辑 Word 公式、语法高亮和专业主题的文档。技术文档可以先选 Technical/Academic/Business 等主题，再导出给非技术同事或客户。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Markdown → Word 流程会在流程图、公式、代码和表格上翻车，最后还要手工截图和调格式。这个工具明确把复杂图表和公式转换作为核心能力，且本地处理、免费、开源，更适合技术写作交付。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把包含 Mermaid/PlantUML/LaTeX 的技术方案、论文笔记、项目文档导出成 Word。</li>
+    <li>在 VS Code 或浏览器里快速预览并美化 Markdown 文档，减少排版时间。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xicilion/status/2069016734062064076" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLafjNJbgAAnHAK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLafjNJbgAAnHAK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Sakana AI 发布 Fugu：把多智能体系统包装成一个模型 API</div>
+  <div class="section"><div class="section-label event">事件</div><p>Sakana AI 发布 Fugu 和 Fugu Ultra，用户通过 OpenAI-compatible API 调用一个端点，背后由系统动态编排多个模型/智能体完成复杂任务。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Fugu 的关键不是又一个单模型，而是“multi-agent system as a model”：它把模型选择、角色分工、任务拆解、协调和验证隐藏在一个 API 后面，开发者可以像换模型一样接入多智能体系统。官方还把 TRINITY、Conductor 等 learned orchestration 研究作为基础，说明模型编排正在从手写 workflow 走向学习型 coordinator。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类模式成立，应用开发者未来可能更少手写 agent graph，而是把难题交给可配置的“模型池编排端点”。这会冲击传统单模型路由、RAG 工作流和企业多模型管理方式，也会让 API 供应商围绕“质量/延迟/成本/合规可控的模型组合”竞争。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2068938426469306764" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLZYdVNawAAKVch?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLZYdVNawAAKVch?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 百度 Qianfan-OCR / Unlimited OCR 方向继续刷新文档智能模型讨论</div>
+  <div class="section"><div class="section-label event">事件</div><p>多位博主讨论百度新开源 OCR/文档智能模型，重点提到多页文档、R-SWA/恒定 KV Cache、端到端文档解析与 image-to-Markdown 等能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Qianfan-OCR 的公开资料显示，它是 4B 参数端到端文档智能模型，统一文档解析、布局分析、OCR、表格/公式/图表理解和 key information extraction，并支持 Layout-as-Thought。推文中提到的 Unlimited OCR/R-SWA 则指向长文档解析时 KV Cache 不随输出长度爆炸的方向，这正是传统“逐页 OCR + 拼接”流程的痛点。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>文档智能正在从传统 OCR pipeline 向视觉语言模型端到端解析迁移。对企业报表、合同、票据、考试卷、论文和档案处理来说，未来竞争点不只是识别率，而是多页上下文、布局推理、Markdown/JSON/HTML 结构化输出和长文档成本控制。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2069094144153464907" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Micron 与 Anthropic 达成多年期内存和存储战略合作</div>
+  <div class="section"><div class="section-label event">事件</div><p>Micron 宣布与 Anthropic 围绕 Claude 工作负载达成多年期 HBM、DRAM 和 SSD 合作，同时 Micron 内部也将部署 Claude。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类合作说明 AI 模型训练和推理已经深入影响上游存储/内存架构设计。Anthropic 不只是采购硬件，而是和供应商围绕模型工作负载共同优化内存与存储；Micron 则同时扮演供应商、合作伙伴、客户和投资者角色，把 AI 需求绑定到下一代产品路线。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>HBM、DRAM、SSD 不再只是通用算力配套，而会围绕大模型上下文、推理吞吐、训练通信和能效做协同设计。产业链上游厂商与模型公司的绑定会更紧，也可能让头部模型公司的硬件议价与供应保障能力继续增强。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2069088700668260589" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2068894382628216906" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2069041448083661198" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2068935883575754913" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLbhNDVaMAAXpCZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLbhNDVaMAAXpCZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLYwdglaIAANX-D?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLYwdglaIAANX-D?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HK84LPRXQAA6x0_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HK84LPRXQAA6x0_?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLFZ4r3bsAABAlF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLFZ4r3bsAABAlF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLFZ4r5bIAA65y8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLFZ4r5bIAA65y8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLFZ4r4bgAAL5CP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLFZ4r4bgAAL5CP?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>EvoAgentBench：开源的 Agent 自进化评测网站/排行榜，关注长期成长曲线、迁移效率、错误规避和 skill-hit quality <a href="https://github.com/EverMind-AI/evoagentbench" target="_blank">→</a></li>
+    <li>WeChatVideo1.0.1：Windows 微信视频号批量下载工具，支持 MP4 原画质、封面保存和最高 50 并发 <a href="https://meta.appinn.net/t/topic/87215" target="_blank">→</a></li>
+    <li>Device Kit：iOS 系统性能监控和硬件信息工具，含 CPU/GPU/内存/电池/网络、传感器、Ping/Telnet/SSH 等工具箱 <a href="https://meta.appinn.net/t/topic/87206" target="_blank">→</a></li>
+    <li>Qianfan-OCR：百度 4B 参数端到端文档智能模型，支持 image-to-Markdown、布局分析、表格/公式/图表理解 <a href="https://huggingface.co/baidu/Qianfan-OCR" target="_blank">→</a></li>
+    <li>codefree.cafe：咖啡馆里的 AI 编程小桌课，用 Claude Code 和 Codex 从想法现场做出项目 <a href="http://codefree.cafe" target="_blank">→</a></li>
+    <li>Zcode/GLM-5.2：围绕 GLM-5.2 和 Zcode 的免费试用体验讨论，适合继续观察国产 coding agent 产品化 <a href="https://x.com/shao__meng/status/2068894382628216906" target="_blank">→</a></li>
+    <li>Open Design AMR：Open Design 宣布支持 GLM 5.2，可用参考网站链接和提示生成网页重现 <a href="https://x.com/OpenDesignHQ/status/2069041448083661198" target="_blank">→</a></li>
+    <li>Deep Agents in Action：海立老师开源的第三本 Agent 开发资料书，适合收藏学习 <a href="https://x.com/vista8/status/2068935883575754913" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

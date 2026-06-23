@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 22 Jun 2026 00:35:12 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 00:44:54 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/23 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-23.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-23.html</guid>
+      <description>今天的主线很明确：一边是“能立刻跑”的个人工具和开源项目密集出现，覆盖备份、视频、语音输入、Mac/iOS维护、Markdown导出；另一边是多模型/多智能体编排继续产品化，Fugu、AWS Agent Toolkit、Apodex 都在把复杂 Agent 工作流包装成更易接入的入口。</description>
+      <pubDate>2026-06-23T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/22 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-22.html</link>
