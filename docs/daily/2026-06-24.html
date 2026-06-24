@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-24</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-24</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得关注的是“让 AI Agent 真正进入工作流”的工具链：从 Agent 专用浏览器、Agent Skills 部署平台，到 Workspace/网页动画/容器 CLI，都在把可操作能力从聊天窗口延伸到真实软件与基础设施。另一个方向是小而实用的个人工具继续涌现，Mac/Android 融合、WebDAV 共享、SEO 与内容生成都可以立刻上手试用。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ ego lite</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ego lite 是一款给人和 AI Agent 共用的 Chromium 浏览器，让 Agent 在独立 Space 里并行操作网页，同时复用你的真实登录态、Cookie、扩展和标签环境。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://lite.ego.app/" target="_blank">https://lite.ego.app/ ↗</a></p>
+    <p><a href="https://github.com/citrolabs/ego-lite" target="_blank">https://github.com/citrolabs/ego-lite ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问官网或 GitHub，按 Mac 芯片下载对应 DMG：Apple Silicon 版是 https://cdn.ego.app/setup/macos/arm64/egolite.dmg，Intel 版是 https://cdn.ego.app/setup/macos/x64/egolite.dmg。安装后首次启动可选择迁移 Chrome 数据，包括书签、扩展、Cookie、登录会话等；之后在支持技能的 Agent CLI 中使用 `ego-browser`，例如输入 `/ego-browser` 后让它打开网页、抓取信息、填写表单或执行多步页面任务。官方说明里还给了“让 agent follow @ego_agent on x.com”的示例，Agent 会在自己的 Space 打开页面、读取 Snapshot、执行操作，并且不抢你的鼠标和当前标签页。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是给 Agent 临时开的无状态浏览器，而是把“日常浏览器”和“Agent 自动化运行时”合在一起：Agent 可以用真实登录态处理 Gmail、Notion、LinkedIn、内部后台等需要认证的页面，同时通过语义 Snapshot、click/fill/navigate/capture 等工具减少逐步截图式操作的 token 和重试成本，对网页任务自动化非常关键。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Codex、Claude Code、Cursor 等外部 Agent 登录并操作后台、CRM、文档系统或数据面板。</li>
+    <li>并行跑多个网页信息整理、表单录入、线索抓取任务，同时自己继续正常浏览。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2069261253269156187" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ EdgeOne Makers Tools</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯 EdgeOne Makers Tools 是一套官方开源 AI Agent Skills，帮助 Agent 开发、部署和管理 EdgeOne Makers 上的 Web 应用、边缘函数、云函数、KV/Blob 存储和 AI Agent 项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/TencentEdgeOne/edgeone-makers-tools" target="_blank">https://github.com/TencentEdgeOne/edgeone-makers-tools ↗</a></p>
+    <p><a href="https://pages.edgeone.ai/document/pages-skills" target="_blank">https://pages.edgeone.ai/document/pages-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库可以看到 `makers-agents`、`makers-deploy`、`makers-edge-functions`、`makers-cloud-functions`、`makers-storage`、`makers-middleware`、`makers-cli`、`makers-recipes` 等技能目录。文档给出的命令行安装方式是 `npx skills add TencentEdgeOne/edgeone-pages-skills`，也可以让支持 Skills 的 AI 编程工具直接安装仓库。装好后对 Agent 说“Deploy this Next.js project and give me the preview URL”或“Build an AI chat agent on EdgeOne Makers”，它会按 Skill 流程检查环境、安装 CLI、登录、构建、上传并返回公开 URL。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这类平台把云部署知识写成 Agent 可读取的技能，而不是只提供传统文档。EdgeOne 的 Skill 覆盖部署、边缘函数、云函数、存储、中间件和 Agent 框架，意味着 Agent 不只是写代码，还能按平台规范选择运行时、放置目录、调试本地服务并完成上线，降低了从原型到可访问应用的摩擦。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 Next.js、Nuxt、Vike 或静态项目通过一句话交给 Agent 部署到 EdgeOne Makers。</li>
+    <li>让 Agent 创建带 KV 存储、认证中间件、Claude/OpenAI/LangGraph/CrewAI 后端的边缘应用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2069443143901286759" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLgjkVVaoAATuSu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLgjkVVaoAATuSu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AndroMeld</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AndroMeld 是一款 macOS 工具，可把 Android 手机原生挂载到 Finder，并提供屏幕镜像、剪贴板同步、Mac 输入法输入和 USB/Wireless ADB 连接。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://andromeld.catchingnow.com" target="_blank">https://andromeld.catchingnow.com ↗</a></p>
+    <p><a href="https://meta.appinn.net/t/topic/87295" target="_blank">https://meta.appinn.net/t/topic/87295 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问官网点击 `Direct Download` 下载 DMG，或从 Mac App Store 安装。安装后在 Android 手机上开启开发者选项里的 USB Debugging，用 USB 连接可获得更稳定和高带宽的体验；也可以使用 Wireless ADB 在局域网无线连接。连接成功后，Android 存储会出现在 Finder 侧边栏，支持拖拽文件、Mac 快捷键和空格 Quick Look；需要操作手机时打开镜像窗口，可以用 Mac 键盘和输入法直接在 Android App 中输入文字，并在两端复制粘贴文本或图片。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它试图给 Android + Mac 用户补上 Apple Continuity 式体验，而且不是简单投屏：页面明确提到通过 ADB 协议连接、本地点对点传输、Finder 原生文件映射、低延迟屏幕和音频投射、剪贴板双向同步。这对同时使用 Mac 和 Android 的开发者、内容创作者、测试人员非常实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac 上快速管理 Android 手机文件、相册、视频或 APK，不再反复用数据线传输工具。</li>
+    <li>做 Android App 测试、演示或直播时，把手机画面投到 Mac 并用键盘输入。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2069580923398406483" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Apple container</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Apple 开源的 `container` 是一个在 macOS 上创建和运行 Linux 容器的命令行工具，以轻量虚拟机方式运行 OCI 镜像，使用 Swift 编写并针对 Apple Silicon 优化。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/apple/container" target="_blank">https://github.com/apple/container ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认机器满足要求：Apple Silicon Mac，并运行 macOS 26。进入 GitHub 仓库的 Releases 页面下载最新签名安装包，双击 pkg 按安装器提示完成安装，文件会放到 `/usr/local`。安装后可按 README/文档启动系统服务，再使用 `container` 拉取、运行或构建 OCI 兼容镜像；仓库也提供 `update-container.sh` 和 `uninstall-container.sh` 这类辅助脚本用于升级、降级和卸载。如果想从源码构建，可继续阅读仓库里的 `BUILDING.md`。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Mac 上跑 Linux 容器长期依赖 Docker Desktop 或第三方虚拟化层，Apple 自己给出 Swift 实现、Apple Silicon 优化、OCI 镜像兼容的工具，代表 macOS 26 的虚拟化与网络能力正在直接面向开发者开放。它仍处于活跃开发、1.0 前可能破坏性变更，但已经很值得容器和本地开发环境用户试验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Apple Silicon Mac 上用更原生的方式运行 Linux 容器镜像和开发服务。</li>
+    <li>研究 Apple Containerization Swift 包、macOS 虚拟化与 OCI 容器运行时实现。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2069447666476740790" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Google Workspace CLI（gws）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google Workspace CLI 是一个开源命令行工具，用 `gws` 统一操作 Drive、Gmail、Calendar、Sheets、Docs、Chat、Admin 等 Google Workspace API，并输出结构化 JSON 方便 Agent 使用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/googleworkspace/cli" target="_blank">https://github.com/googleworkspace/cli ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库下载适合系统的最新 Release，把 `gws` 二进制放到 `$PATH`；也可以通过 npm 包 `@googleworkspace/cli`、Homebrew 或 Nix flake 安装。若本机已有并已登录 `gcloud`，README 推荐用 `gws auth setup` 快速配置认证；如果没有 `gcloud`，可走手动 OAuth、环境变量 `GOOGLE_WORKSPACE_CLI_TOKEN` 或 `GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE`。配置完成后用各资源的 `--help` 查看命令，先用 `--dry-run` 预览请求，再执行 Drive、Gmail、Calendar 等 API 操作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的核心亮点是命令面不是静态写死，而是运行时读取 Google Discovery Service 动态生成；当 Workspace 新增 API endpoint 时，工具理论上可以自动获得新能力。再加上 JSON 输出、自动分页、dry-run 和大量 Agent Skills，它很适合作为 AI Agent 操作企业 Workspace 的底层工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用脚本或 Agent 批量整理 Google Drive、查询 Gmail、创建 Calendar 日程或操作 Sheets。</li>
+    <li>为内部自动化搭建统一 Workspace CLI，而不是为每个 Google API 手写 curl 和认证逻辑。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2069589952212656414" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLhHJvWaoAEBgxd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLhHJvWaoAEBgxd?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Transitions.dev</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Transitions.dev 是一个网页过渡动画组件库，提供可复制粘贴的卡片缩放、数字翻转、通知徽章、菜单、Modal、页面切换、错误抖动等动效示例，还支持安装 Skill 让 Agent 帮网页加动画。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://transitions.dev/" target="_blank">https://transitions.dev/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 transitions.dev，直接浏览页面上的动画样例，比如 Card resize、Number pop-in、Notification badge、Menu dropdown、Modal open/close、Page side-by-side、Error state shake 等。看到合适的过渡效果后复制对应代码到你的前端项目中调试。推文还给出 Agent Skill 安装命令：`npx skills add jakubantalik/transitions.dev`，装好后可以让支持 Skills 的编码 Agent 阅读该技能，并根据你的网页组件结构自动挑选和添加更合适的动效。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多数动效库要么太大、要么偏设计展示，Transitions.dev 把常见 Web App 微交互拆成可直接复制的“小过渡”，对 AI 辅助前端开发尤其友好。配合 Skill 后，Agent 可以在改 UI 时不只生成静态布局，还能遵循现成动效模式补上可感知的质量细节。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 SaaS 面板、表单、菜单、Modal、通知和数据卡片快速加上更自然的交互动效。</li>
+    <li>作为前端 Agent 的动效参考库，让它按现成模式改进网页体验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2069513317693964418" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2069416470887780352/img/Zx3lyV14fPG23cKk.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2069416470887780352/img/Zx3lyV14fPG23cKk.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AITDK</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AITDK 是一组面向 SEO 的 AI 在线工具，提供标题、描述、关键词、功能点、FAQ、Testimonial 的生成和改写。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://aitdk.com/" target="_blank">https://aitdk.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 aitdk.com 后，可以在首页选择 AI Title Generator、AI Description Generator、AI Keywords Generator、AI Feature Generator、AI FAQ Generator、AI Testimonial Generator，也可以选择对应 Rewriter 工具。页面显示的入口示例是输入主题如“Best AI SEO tools for beginners”，点击 `Generate` 得到带分数的 SEO 标题候选。对站长来说，可以先从标题和描述生成器开始，把产品页、博客页或落地页主题填进去，拿到初稿后再用 Rewriter 调整已有文案。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 SEO 常见素材拆成多个非常具体的生成器，而不是一个泛泛的聊天框：标题、meta description、关键词、功能点、FAQ 和用户证言分别有入口。推文还提到订阅用户可查看 DR、外链、AI 访问量趋势、Adsense 关联网站等，更偏站长增长与竞品调研。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为独立站、产品落地页、博客文章快速生成 SEO 标题、描述、关键词和 FAQ。</li>
+    <li>做竞品或外链建设时，结合站点指标、AI 访问趋势和 Adsense 关联信息筛选机会。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2069423048063946920" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLgKiksboAA8QVu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLgKiksboAA8QVu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WebDAV Lite</div>
+  <div class="section"><div class="section-label event">一句话</div><p>WebDAV Lite 是一款 macOS 菜单栏小工具，可以一键把任意本地文件夹变成局域网 WebDAV 服务器，方便 iPad、Apple TV、Infuse、VLC、Finder 等访问。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.appinn.com/webdav-lite-for-macos/" target="_blank">https://www.appinn.com/webdav-lite-for-macos/ ↗</a></p>
+    <p><a href="https://apps.apple.com/app/webdav-lite-lan-file-server/id6779282964" target="_blank">https://apps.apple.com/app/webdav-lite-lan-file-server/id6779282964 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 App Store 安装 WebDAV Lite（小众软件文章提示非国区），启动后它会常驻菜单栏。选择想共享的 Mac 文件夹，一键开启局域网 WebDAV 服务；在 iPad、Apple TV、Infuse、VLC 或 Finder 中添加该 WebDAV 地址即可访问、同步或串流文件。文章还提示目前是应用内购买限免：进入 App 内购买页面，看到 `$0.00` 可永久解锁 Full Unlock。需要安全访问时开启 HTTPS 加密和密码保护。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“临时开 WebDAV 服务”这件事做成了原生轻量菜单栏工具，纯 SwiftUI，支持 Apple Silicon 和 Intel，不占 Dock。相比手动配置服务器，它更适合家庭局域网、视频串流和跨设备文件传输，还会自动过滤 `.DS_Store`、`.git` 等 Mac 冗余文件，减少污染共享目录。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 Mac 上的高清视频目录共享给 Apple TV、iPad、Infuse 或 VLC 播放。</li>
+    <li>在局域网内给多台设备快速读写某个项目文件夹或素材目录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2069244686892433912" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLdvE75WEAE6rmZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLdvE75WEAE6rmZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ListenHub</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ListenHub 是一个把知识、文档、文字和想法转成讲解视频、幻灯片、播客、TTS 音频、配音和声音克隆内容的 AI 内容创作平台。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://listenhub.ai/" target="_blank">https://listenhub.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 listenhub.ai 后可以从首页进入不同功能入口：Explainer Video 的 `Try It Out` 对应 `/app/explainer`，Slides 的 `Try It Out` 对应 `/app/slides`，AI Podcast 可把视频、PDF、文档或想法转成结构化播客。你可以输入一个主题或上传资料，例如让它解释历史人物、艺术背景、数学概念，或生成短视频电商年终大促这类幻灯片。推文提到 ListenHub 接下来会接入 Seed Audio，因此音频内容制作体验可能会进一步升级。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的重点不是单一 TTS，而是把“复杂知识转成多媒体内容”的流程聚合在一起：讲解视频、Slides、播客、配音和克隆声音都在同一平台，适合把文档和知识资产快速改造成 YouTube、TikTok、Podcast、课程或品牌内容。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把长文档、PDF、课程资料改造成讲解视频、播客或演示幻灯片。</li>
+    <li>为品牌账号、教育内容或知识型短视频批量生成脚本、画面和配音素材。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2069289000708501753" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MECCHA CHAMELEON</div>
+  <div class="section"><div class="section-label event">一句话</div><p>MECCHA CHAMELEON 是一款 Steam 多人躲猫猫派对游戏，躲藏方要把白色身体涂成环境颜色来伪装，寻找方要在限时内找出所有人。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://store.steampowered.com/app/4704690/_/" target="_blank">https://store.steampowered.com/app/4704690/_/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Steam 商店页搜索或访问 MECCHA CHAMELEON，购买/安装后即可进入游戏。玩法是分成 Seeker 和 Hider 两队，Seeker 要在时间限制内找到所有 Hider；Hider 不是简单躲在物体后，而是要给自己的白色身体上色，尽量匹配场景纹理、颜色和角度，再选择合适姿势混入环境。页面说明支持与朋友玩，也可以创建非私密服务器让陌生人加入，推荐 2–10 人游玩；主播也可以开观众参与局，直播和录制视频被官方允许。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把躲猫猫、绘画伪装和社交派对结合起来，核心乐趣来自“画得像不像”和“观察力够不够”。相比传统 hide-and-seek，Hider 的艺术技巧会直接影响胜负，天然适合直播、整活和多人派对传播。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>和朋友开多人语音派对局，比拼谁更会把自己涂成背景。</li>
+    <li>主播创建公开房间，做观众参与式躲猫猫节目。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2069370077020041363" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Codex Remote 官方工程实践指南</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI Developers Blog 发布《Mastering Codex Remote for engineering》，强调手机不是小终端，而是远程控制工程任务的 control plane。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这篇指南把 Codex Remote 的使用方式讲得很清楚：代码仍然运行在 Mac、Windows、devbox 或其他已连接主机上，手机负责选择仓库、工作区、分支、是否新建 worktree、是否排队或中途 steer、是否批准命令和审查改动。它不是让工程师在手机上深度读代码，而是把“启动、转向、批准、归档、复盘”这些阻塞 Agent 工作流的决策移动化。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种模式成熟，AI 编程工具的竞争点会从“模型会不会写代码”扩展到“能不能把长任务稳定挂在真实开发机上，并让人随时低成本介入”。远程控制、队列/转向语义、权限批准、worktree 隔离和手机端 review 都会变成 Agent IDE 的标准能力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2069586680080945190" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLimGoXbkAAg13F?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLimGoXbkAAg13F?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google Workspace CLI 作者离职争议</div>
+  <div class="section"><div class="section-label event">事件</div><p>多位博主讨论 Google Workspace CLI 开源发布后，原作者 Justin Poehnelt 被 Google 解雇一事。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>从工具角度看，`googleworkspace/cli` 本身仍是一个很有价值的开源项目：统一 Workspace API、动态读取 Discovery Service、支持 JSON 输出和 Agent Skills。但围绕作者被解雇的讨论，让社区重新关注大公司内部个人开源、官方仓库归属、Developer Relations 与公司合规边界之间的冲突。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对开发者生态来说，这类事件会削弱个人在大厂名义下快速发布实用工具的信心，也会让企业更谨慎地管理“非正式但放在官方 GitHub 下”的项目。另一方面，社区已经注意到这个 CLI 的实际价值，未来它是否继续维护、是否保持开放和 Agent 友好，会影响 Google Workspace 自动化生态。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2069537208378302874" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLhHJvWaoAEBgxd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLhHJvWaoAEBgxd?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Tag 异步协作形态讨论</div>
+  <div class="section"><div class="section-label event">事件</div><p>博主 Tony 出海认为 Claude 正在形成一种新的 AI 交互方式“Claude Tag”，从单次聊天或本地应用走向长期存在、异步运行并嵌入组织工作流的智能协作体。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是一个具体可下载项目，但它概括了今天很多工具的共同趋势：AI 不再只是用户打开后提问的对话框，而是在后台等待任务、被 mention、被分派、跨系统协作并留下可追踪输出。Codex Remote、Agent 浏览器、云部署 Skills 都在支撑这种“异步委派 + 人类控制面”的产品形态。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>组织软件未来可能会把 AI 协作者当成常驻成员：它需要身份、权限、任务队列、通知、审计日志和工作流入口。对 SaaS 与开发工具厂商来说，谁能把 AI Agent 安全地嵌入现有权限模型与业务流程，谁就更可能成为企业 AI 落地的基础设施。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2069590496562082074" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2069557357403902026" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2069431862620225538" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2069212351975596386" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2069557281298235392/img/3WJt53sPywcY4NEB.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2069557281298235392/img/3WJt53sPywcY4NEB.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLhDYkxbQAA-6oR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLhDYkxbQAA-6oR?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLhDaU5aIAAH1qZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLhDaU5aIAAH1qZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2069160677089161216/img/dXit-7bQnPvLH-W_.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2069160677089161216/img/dXit-7bQnPvLH-W_.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Coday：用“日均成本 / 次均成本”重新审视已购买物品的记录 App，论坛页面提到支持 iOS/安卓/鸿蒙互通，但抓取内容未显示明确下载链接 <a href="https://meta.appinn.net/t/topic/87284" target="_blank">→</a></li>
+    <li>Flowith Matrix + GLM-5.2：博主分享 Matrix 接入 GLM-5.2，用 1M 上下文做长程产品构建和 Agent 公司相关体验 <a href="https://x.com/berryxia/status/2069557357403902026" target="_blank">→</a></li>
+    <li>Renaissance Geek / Impeccable：Paul Bakaus 宣布成立新公司并获 a16z 支持，讨论 AI 抬高“第一稿地板”后如何继续追求高质量输出 <a href="https://x.com/berryxia/status/2069431862620225538" target="_blank">→</a></li>
+    <li>HeyGen PR-to-video Skill：围绕“用 HTML/视频帮助人理解代码变更”的可视化趋势，值得继续观察 <a href="https://x.com/shao__meng/status/2069212351975596386" target="_blank">→</a></li>
+    <li>Gorden Sun AI 资讯日报：6 月 23 日 AI 日报汇总，适合作为横向信息源补充 <a href="https://gorden-sun.notion.site/6-23-AI-38859424732580638d1ce910b74151a2?source=copy_link" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
