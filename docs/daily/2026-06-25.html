@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-25</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-25</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得亲手试的方向，依然是“能直接装进工作流”的小工具和技能包：从端口查看、漫画拼图、文档排版，到可复用的 agent skills，都在把 AI 从概念拉回到可操作的桌面与工程场景。另一条线则是重度 agent 基础设施继续升级，Apodex、Qwen-AgentWorld 这类项目都在往“可验证、可自演化、可复现”的方向推进。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Ports</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个放在菜单栏里的 macOS 工具，专门查看本机上每个 dev server / 端口到底被谁占着。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.ports-app.com/" target="_blank">https://www.ports-app.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先到官网直接下载 `Ports-1.5.dmg`，拖进应用程序后打开即可。启动后它会常驻菜单栏，你可以一眼看到本机 localhost 上正在监听的端口、对应进程以及开发服务器状态；遇到 Vibe Coding 时不知道哪个端口占用、哪个服务没关、哪些本地服务重复启动，直接从菜单栏点开排查，再按界面里显示的进程信息去终止或切换端口，就能快速恢复开发环境。这个工具不需要复杂配置，核心就是“装上就能看、看完就能处理”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把最烦人的本地开发排障动作压缩成菜单栏级别的即时查看，特别适合频繁起多个服务、经常撞端口的前端/全栈开发者。相比每次都 `lsof`、`ps` 再手动筛，Ports 更像一个持续在线的本地监控面板，能直接降低调试摩擦。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Vite / Next.js / Astro 等本地开发时快速找端口冲突</li>
+    <li>多项目并行跑服务时确认每个监听进程的状态</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2069829525199007900" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向文档、幻灯片、简历、长文与落地页的 AI 设计系统/技能包，目标是让 AI 直接产出“像成品”的版式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub 仓库进入，直接看 README 和示例输出；如果你在 Claude Code 或支持插件市场的环境里，可以按仓库说明通过插件市场安装，文档里给了 `codex plugin marketplace upgrade kami` 和 `codex plugin add kami@kami` 这一类入口。装好后，挑一个模板场景先试最容易验证的类型，比如 one-pager、resume 或 changelog，再让模型按 Kami 的模板约束生成整页内容；如果你已经在 Claude Desktop 或其他支持 `~/.agents/` 的环境里，也可以按仓库的安装说明把它接进去。它的关键不是“让 AI 多写一点”，而是先把布局、字体、色板和模板约束固定住，再让模型填内容。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Kami 代表的是“约束优先”的 AI 内容生产方式。它不是让模型自由发挥，而是把文档设计拆成稳定的系统语言，减少每次生成都跑偏的概率。对需要高频出报告、提案、宣传页、简历的人来说，这种可复用的模板化约束非常实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速生成结构统一、排版干净的一页式报告</li>
+    <li>用同一套模板批量产出简历、提案、更新日志</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2069789347050869118" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLlebnbXsAEjhSl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLlebnbXsAEjhSl?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mangaga</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个纯浏览器端的漫画拼贴工具，把多张漫画图拼成一张长图，方便一次性分享。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://nigh.github.io/mangaga/；https://github.com/Nigh/mangaga" target="_blank">https://nigh.github.io/mangaga/；https://github.com/Nigh/mangaga ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开在线版就能用，不需要注册；进入后按页面提示把多张图片拖进去，接着调整网格、间距、背景和导出样式，最后一键导出大图即可。如果你想本地玩，论坛页也给了标准流程：`git clone` 仓库、`npm install`、`npm run dev`。它最适合把散图变成一张完整大图，再发到社交平台或保存为完整阅读页，整个过程完全在浏览器里完成，门槛很低。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“拼图发图”这个高频小需求做成了零安装、纯前端、即时可用的工具，技术栈也很现代：Astro、Svelte、Tailwind、Canvas 2D、PWA。对经常发漫画、截图合集、分镜图的人来说，这种工具很容易立刻提升体验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把漫画截图拼成一张完整长图后分享</li>
+    <li>把多张分镜、教程图、表情包整理成一张可传播图片</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2069811104398586254" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Apodex</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个主打“自我演化”和可验证推理的重度 research agent 体系，提供 web app、API 平台和开源评测/训练 harness。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.apodex.ai/；https://www.apodex.com/blog/apodex-1.0；https://github.com/ApodexAI/AgentHarness" target="_blank">https://www.apodex.ai/；https://www.apodex.com/blog/apodex-1.0；https://github.com/ApodexAI/AgentHarness ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果只是想先体验，先从官网进入 Web App，看它对“Self-Evolving Heavy-Duty Solver”的演示和产品定位；如果想复现或动手跑评测，可以进 `AgentHarness` 仓库，按 README 里提到的流程配置环境变量：`OPENAI_BASE_URL`、`OPENAI_API_KEY`、`OPENAI_MODEL`、`SERPER_API_KEY`、`JINA_API_KEY`、`E2B_API_KEY`，再把模型服务接到 SGLang 或兼容的 OpenAI API 端点上。官网和博客强调的是 ReAct agent、异步子代理、验证团队、全局 verifier 这条路线，所以更适合按“先看产品，再看 harness，再看 benchmark”顺序上手。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Apodex 把“搜索 + 工具调用 + 证据验证”当成一个系统问题来做，而不是单轮模型能力问题。它的 heavy-duty mode 强调多代理并行、交叉审查和证据审计，代表的是一种更接近研究工作流的 agent 架构，尤其适合高不确定性的深度调研任务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>需要长链路检索、交叉验证的研究型问答</li>
+    <li>想复现 deep-research benchmark 或构建可审计 agent 流水线</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2069770787779981644" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen-AgentWorld</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Qwen 发布的语言世界模型项目，主打模拟 agent 环境并预测下一状态，覆盖 MCP、Search、Terminal、SWE、Android、Web、OS 七个领域。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/QwenLM/Qwen-AgentWorld；https://qwen.ai/blog?id=qwen-agentworld" target="_blank">https://github.com/QwenLM/Qwen-AgentWorld；https://qwen.ai/blog?id=qwen-agentworld ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看 GitHub README 或官方 blog 的 demo 入口，想要直接试的话优先点博客里的 interactive demo；如果想下载模型或复现实验，仓库里已经给出 Hugging Face / ModelScope 集合和下载提示，也提到了 `huggingface download`、`git clone`、`SGLANG_USE_MODELSCOPE=true`、`VLLM_USE_MODELSCOPE=true` 这些启动线索。最适合的上手方式是先体验 demo 感受“世界模型如何模拟环境”，再决定是否把模型拉到本地或服务端跑更重的实验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是传统意义上“教 agent 怎么操作”的模型，而是把环境建模本身当成训练目标，试图让模型学会预测终端输出、网页变化和代码执行后的状态变化。这种思路如果成立，对 agent 可靠性、规划和仿真训练都会很有价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>研究 agent 世界模型、环境预测与仿真训练</li>
+    <li>评估多环境任务中的状态建模与规划能力</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2069819064424554987" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ mattpocock/skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一套面向真实工程场景的可组合 AI skills，重点解决“对齐、术语、测试、调试”这些实际痛点。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mattpocock/skills" target="_blank">https://github.com/mattpocock/skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最直接的方式是按仓库说明执行 `npx skills@latest add mattpocock/skills`，安装时注意选择 `/setup-matt-pocock-skills`，然后在自己的 agent 里运行这一步初始化。初始化后它会问你用什么 issue tracker、有哪些 triage 标签、文档存哪儿；接着你就能按场景选择具体 skill，比如需要澄清需求时用 grilling 类技能，需要共享领域语言时用 docs 类技能。这个仓库的价值在于，把 agent 使用过程拆成一个个小动作，而不是让你一次性把整个流程交给模型。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它代表的是一种很务实的 agent 方法论：技能要小、要可拼装、要能控制流程，而不是把一切交给大而全的自动化框架。对工程团队来说，这种方式更容易试错、替换和渐进采用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 coding agent 在动手前先澄清需求</li>
+    <li>为团队建立共享术语和可复用的工作流技能</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2069817907891294612" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Illustrated-Agent-Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>《图解 Skill》官方配套仓库，汇集了技能安装指南、写作工作流模板、完整 skills 和示例材料。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/Illustrated-Agent-Skills" target="_blank">https://github.com/JimLiu/Illustrated-Agent-Skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接进入仓库先看 README 和 `skill-templates/`、`skills/` 两个目录，里面已经把可直接复制的写作技能模板、完整技能和示例内容分门别类整理好了。如果你本身就在折腾 Claude Code、Claude Desktop、VS Code 或其他 agent 环境，可以优先看仓库里的安装指南和附录，再挑一个模板把它复制到自己的技能目录里试跑。这个仓库比较适合当“技能样板间”，用来理解技能怎么组织、怎么安装、怎么更新。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“技能是怎么写、怎么装、怎么维护”的整个链路都收拢到了一个官方配套仓库里，尤其适合想搭建自己技能库的人。相比只看概念文章，这类 repo 更容易直接照着做。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学习如何为自己的 agent 组织 skills 目录</li>
+    <li>直接复用写作、会议、分析类技能模板</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2069918721972523191" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 自研推理芯片 Jalapeño</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 被多条推文提到已开始设计并制造自研 AI 芯片，目标是为 ChatGPT、Codex、API 和未来代理型产品提供推理算力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这说明大模型竞争已经继续往基础设施和推理成本下沉。单靠模型参数优势已经不够，谁能把推理成本、能效、部署规模和供应链一起控制住，谁就更有可能把产品利润和交付稳定性握在手里。自研芯片并不只是“秀肌肉”，更像是被成本曲线和算力供给逼出来的系统性动作。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这条路线推进顺利，模型厂商和云厂商之间的边界会进一步模糊，未来竞争可能不只是比模型效果，还要比芯片、编译栈、集群调度和单位请求成本。对开发者而言，产品定价、响应速度和可用额度也可能随之变化。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2069776857130803614" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLlTD6cWQAAyxux?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLlTD6cWQAAyxux?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLlMzhyakAArWhk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLlMzhyakAArWhk?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 SeedMusic 1.0 Preview</div>
+  <div class="section"><div class="section-label event">事件</div><p>字节跳动新模型 SeedMusic 1.0 Preview 被推文提到可“一句话生成完整歌曲”，耗时大约 2-3 分钟。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类生成式音乐模型的体验门槛已经从“能不能生成”进入到“生成效果是否稳定、风格是否可控、是否足够快”。如果预览版就能做到较完整的歌曲结构，后续更关键的就会变成音质、版权、商用接口和创作可控性，而不只是演示效果。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>音乐生成会继续从玩法走向生产力工具，广告、短视频、游戏和内容创业团队都可能更频繁地把它放进工作流。真正的分水岭会是是否能形成稳定 API、可控版权和更低的创作成本。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2069781928056902121" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2069696700394946871" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2069705162759790962" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2069769861564379255" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2069781023353921536/img/i564iUIWXBD09r5N.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2069781023353921536/img/i564iUIWXBD09r5N.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLkR4KvXwAACOWA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLkR4KvXwAACOWA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Picser：macOS 上的轻量看图软件 <a href="https://x.com/appinn/status/2069696700394946871" target="_blank">→</a></li>
+    <li>Vovsoft Audio to Lyrics Converter：音频转字幕/歌词工具，外加限免信息 <a href="https://x.com/appinn/status/2069705162759790962" target="_blank">→</a></li>
+    <li>SuperNori：一个主打家庭场景的主动式 AI Agent 讨论 <a href="https://x.com/Gorden_Sun/status/2069769861564379255" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
