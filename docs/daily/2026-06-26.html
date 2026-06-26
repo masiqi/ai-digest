@@ -70,83 +70,21 @@
   <div class="date">2026-06-26</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>今天最值得关注的是“Agent 工作流产品化”：从 v0 把设计系统沉淀成 skill、FastClaw 把多 Agent 运行时做成单二进制，到 pi-context 让 Agent 主动管理上下文，都在把过去靠提示词硬撑的流程变成可复用基础设施。同时，今日也有不少马上能玩的桌面/移动小工具，覆盖 Windows 启动器、Mac 清理、iOS 语音日记和本地编码模型。</p>
+    <p>今天最值得亲手试的方向有两条：一条是“把重复工作打包成可运行的工作流”，从 FastClaw、loop-me 到 Cloudflare Workflows 都在把 Agent 从聊天框推进到可持续运行的任务系统；另一条是“轻量但立刻能用的桌面/移动小工具”，包括 Mac 清理、Windows 启动器和 iPhone 倒数日应用。
+相比纯观点和大厂口水战，今天更值得花时间的是这些已经给出下载入口、README、工作流说明或 App Store 页面、可以立即装起来试一轮的项目。</p>
   </div>
 </div>
-<div class="topic">
-  <div class="topic-title">🛠️ v0 Design Systems 2.0</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Vercel v0 的设计系统导入能力，可以让 v0 学会团队真实组件、tokens、providers 和使用约定，并在后续对话中复用。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://v0.app/docs/design-systems-2" target="_blank">https://v0.app/docs/design-systems-2 ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 https://v0.app/design-systems 进入 Design Systems 页面，准备好设计系统来源：GitHub 仓库、真实消费该组件库的应用、Storybook/文档站、Figma frame/node、截图或 `.tgz` 包。导入时按页面流程添加 sources；如果组件包是私有 npm 包，在 Vercel/v0 的 Development shared environment variables 里配置 `NPM_TOKEN`，或者直接上传包归档。导入完成后，v0 会读取来源、构建 starter app 验证理解，并把结果保存成当前个人或团队 scope 下的 skill。之后在 v0 chat 里要求生成页面时，它会按已验证组件、props、tokens 和 `v0.json` 中的配置来搭应用。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“每次和 AI 解释组件库”的重复劳动变成一次性可复用的设计系统适配器，而且官方文档明确要求 v0 只使用来源中可验证的组件、prop 和 token。这对企业 UI 生成尤其关键：AI 不再只是写看起来像的页面，而是有机会直接落在团队真实技术栈和规范里。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>让产品/设计/前端团队用内部组件库快速生成后台、营销页和原型。</li>
-    <li>把已有 Storybook、Figma 和消费应用沉淀为 v0 可调用的团队级 UI skill。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/shao__meng/status/2070309913612669115" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2070187275166904323/img/OtOVys-jK5qjL-2d?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2070187275166904323/img/OtOVys-jK5qjL-2d?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ AppGroup</div>
-  <div class="section"><div class="section-label event">一句话</div><p>AppGroup 是一个 Windows 任务栏应用分组工具，可以把常用程序组织成可固定到任务栏的快捷启动组。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/iandiv/AppGroup" target="_blank">https://github.com/iandiv/AppGroup ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub Releases 下载官方版本，README 提供 Setup、Setup Bundled、Portable、Portable Bundled 四类包；不确定选哪个就下载 Setup Bundled，因为它自带所需 .NET 8。安装或解压后启动 AppGroup，在主窗口点 `+` 新建 group，再通过组内 `+` 或拖拽方式加入 `.exe`、`.lnk`、`.url` 等快捷方式。需要把分组放到任务栏时，可以直接把 group icon 拖到 taskbar，或点 `⋮` 菜单选择 Open File Location，再右键快捷方式 Pin to Taskbar。UWP 应用可用 `Win + R` 打开 `shell:AppsFolder` 后创建/拖入快捷方式。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Windows 11 移除了传统“快捷启动栏”式体验，AppGroup 用 MIT 开源方式补上了这一层轻量组织能力。它不仅能启动单个应用，还支持自定义图标、嵌套 subgroup、导入导出 `.agz` 配置，对多工作流、多项目环境很实用。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>给“写作、开发、剪辑、游戏”等场景分别建立一键启动组。</li>
-    <li>在 Windows 11 任务栏恢复类似旧版快捷启动栏的多应用入口。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/appinn/status/2070309373360939463" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ QuickUp</div>
-  <div class="section"><div class="section-label event">一句话</div><p>QuickUp 是一个免费开源的 Windows 应用组启动器，可按任务/工作区快速启动一组应用、命令或子任务。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/Smart-Space/QuickUp" target="_blank">https://github.com/Smart-Space/QuickUp ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 GitHub Releases 下载安装包，项目 README 虽然给了 Microsoft Store 入口，但作者建议优先从 Release 页面获取安装包，系统建议 Windows 10 及以上。启动后在主窗口创建任务，进入编辑窗口填写任务名、目标程序路径和参数；目标输入框支持拖拽文件，遇到非常规地址会按 `shell:appsfolder` 下的应用处理。任务可设置工作目录、标星置顶、保存为桌面快捷键，还能加入命令集、子任务或子工作区。设置里可开启系统托盘、热键唤醒、开机自启动，并可用 `quickup -w 工作区 -t 任务 -s` 形式从命令行启动指定任务。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它比单纯启动器更接近“本地工作流编排器”：既能启动应用，也能运行 `cmd`/`powershell` 命令、维护工作区和标签，还支持任务 JSON 文件定位与存储关系查看。对 Windows 用户来说，这是把多步骤桌面准备动作压缩成一个任务的实用小工具。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>一键打开 IDE、终端、浏览器、数据库客户端和项目目录。</li>
-    <li>给学习、办公、娱乐分别配置工作区并用热键从托盘唤醒。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/appinn/status/2070167291946271047" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
 <div class="topic">
   <div class="topic-title">🛠️ Mole</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Mole 是一款安静克制的 Mac 清理与维护工具，集缓存清理、应用卸载、系统优化、磁盘地图和系统状态于一体。</p></div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款 macOS 本地优先的清理与维护工具，把缓存清理、应用卸载残留、系统优化、磁盘分析和实时状态监控做进了一个 App。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://mole.fit/" target="_blank">https://mole.fit/ ↗</a></p>
+    <p><a href="https://mole.fit" target="_blank">https://mole.fit ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问官网点击 `Try Free` 下载，要求 macOS 14+，支持 Apple Silicon 与 Intel。免费版可下载并扫描，清理、卸载和优化功能需要一次性购买 9 美元许可证，可用于 2 台 Mac，并有 14 天退款保证。打开后可分别使用 Earth 清理旧缓存和临时文件、Mars 卸载应用并查找偏好设置/缓存/Launch Agents 等残留、Mercury 执行 Quick Look/Spotlight/DNS 等维护任务、Jupiter 用 treemap 查看磁盘占用、Sun 查看 CPU/内存/GPU/网络/温度等实时状态。每次清理前都会显示文件列表和字节数，用户确认后再执行。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Mac 清理工具长期被“恐吓式弹窗”和过度自动化拖累口碑，Mole 的官网强调本地扫描、无 analytics/telemetry、无远程扫描、默认保守、先展示再删除。它把多个常见付费工具的能力合在一个简洁应用里，同时给出可恢复的 Trash 行为和明确的权限边界。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网后可以直接下载并先做免费扫描，首页明确写了支持 macOS 14+、Apple Silicon 与 Intel，并且首次启动会有一个引导流程，依次申请完整磁盘访问、辅助功能等权限。进入后可以先从 Earth 的 Cleanser 扫描缓存、浏览器临时文件、Xcode 构建数据、npm/pip 下载缓存和聊天软件残留，再手动取消不想删的项目；然后切到 Mars 查看某个应用的偏好文件、缓存和登录项残留，最后到 Mercury 运行 Spotlight 重建、DNS 刷新、Launch Services 修复之类的维护任务。如果只是想观察机器状态，还能直接打开 Sun 看 CPU、内存、磁盘、网络、电池和温度曲线，不用先付费就能感受整体工作流。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个项目不是单点做“清理”，而是把 CleanMyMac、AppCleaner、DaisyDisk、iStat Menus 这几类能力压到一个二进制里，并强调本地处理、先展示后删除、默认保守、不做遥测。对很多用户来说，真正有价值的不是“再多一个清理器”，而是把清理、卸载、磁盘定位和状态观察统一到一套低打扰界面里。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>清理 Xcode build、npm/pip 下载、Slack/Discord/Adobe/ChatGPT/Claude 残留缓存。</li>
-    <li>用磁盘 treemap 找大文件夹，并在维护前查看实时系统负载。</li>
+    <li>Mac 用久后缓存、Xcode 派生数据、下载残留越积越多，想快速回收空间但又不想盲删。</li>
+    <li>想卸载一些大型应用或开发工具时，顺手把偏好文件、缓存和启动项一起清干净。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -160,16 +98,16 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ FastClaw</div>
-  <div class="section"><div class="section-label event">一句话</div><p>FastClaw 是一个 Go 写的多 Agent 运行时/Agent Factory，提供单二进制、Dashboard、模型配置、技能、工具和沙盒执行能力。</p></div>
+  <div class="topic-title">🛠️ FastClaw iOS 客户端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>FastClaw 是一个用 Go 写的轻量 Agent runtime，这条动态指向了它的 iOS 客户端入口，方便把已有 FastClaw Agent 带到手机上管理和使用。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/fastclaw-ai/fastclaw" target="_blank">https://github.com/fastclaw-ai/fastclaw ↗</a></p>
+    <p><a href="https://fastclaw.ai" target="_blank">https://fastclaw.ai ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库按 README 方式安装或构建 FastClaw，项目是 Go 1.25+ 运行时，默认本地 Dashboard 在 `http://localhost:18953`。首次运行会进入配置流程，设置 LLM provider，生成默认 agent 和 admin token，记得保存 token 用于登录 Dashboard。登录后可在 Agents 创建和管理 agent，在 Models 配置 OpenAI、Anthropic、Ollama、OpenRouter 等模型，在 Skills 安装共享技能或 GitHub 技能，在 Settings 配置存储、沙盒和网关。每个 agent 有自己的 `SOUL.md`、`IDENTITY.md`、`MEMORY.md`、会话、技能和模型覆盖，公开访问也可通过 agent chat URL 控制。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是单个聊天壳，而是在尝试把 Agent 生命周期、技能、工具、会话、用户权限和沙盒统一成可部署运行时。对于想自建多 Agent 平台的人，FastClaw 的价值在于把“agent 文件、模型、技能、Dashboard、API、SQLite/Postgres 存储”放到同一套框架里，降低从 demo 到平台化的距离。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官网确认这是 FastClaw 官方入口，首页和仓库说明都写明它是一个“single binary”的 AI agent runtime。按项目说明，首次本地运行后会在 `http://localhost:18953` 打开设置向导，配置 LLM provider、创建默认 agent，并生成 admin token；随后可以在 Web 控制台里管理 Agents、Skills、Models 和 Settings。作者这条推文说明 iOS 客户端已经安排上，所以更合理的实操方式是先在电脑侧把 FastClaw 跑起来，完成 provider 与默认 agent 配置，再在手机端登录对应实例或关注其 TestFlight/商店入口，实测移动端能否直接查看会话、切换 agent 或发起任务。即便今天先不上 iOS，光是桌面端这套“单二进制 + 网页控制台 + 多 Agent”的启动方式也已经可以马上动手体验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>FastClaw 的卖点很清晰——单二进制、可接多模型、支持多 Agent、带技能和记忆体系，而且控制面从一开始就按“运行时平台”来设计，不只是一个聊天界面。iOS 客户端如果接上这套体系，意义不只是“手机能聊天”，而是把 Agent 的观察、触发和轻管理场景带到移动端。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>本地或服务器上搭一个可管理多个专用 Agent 的控制台。</li>
-    <li>给团队试验不同模型、skills、沙盒策略和公开 chat URL。</li>
+    <li>在本地或自托管环境里跑多个 Agent，希望随时用手机查看状态或补发任务。</li>
+    <li>想搭一个比传统聊天机器人更像运行时平台的 Agent 环境，统一管理模型、技能和会话。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -183,113 +121,73 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ pi-context</div>
-  <div class="section"><div class="section-label event">一句话</div><p>pi-context 是 Pi 的 Agentic Context Management 插件/skill，让 AI 通过 checkpoint、timeline、compact 主动管理长对话上下文。</p></div>
+  <div class="topic-title">🛠️ QuickUp</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个轻量级 Windows 应用组启动器，可以把一组工作、学习或娱乐场景所需的软件打包成一键启动。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://pi.dev/packages/pi-context" target="_blank">https://pi.dev/packages/pi-context ↗</a></p>
+    <p><a href="https://quickup.smart-space.com.cn/document/" target="_blank">https://quickup.smart-space.com.cn/document/ ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你在使用 Pi，直接运行 `pi install npm:pi-context` 安装包。安装后在当前 session 输入 `/acm` 启用 Agentic Context Management，用 `/context` 打开可视化 dashboard，查看上下文窗口使用和 token 分布。它会加载 `context-management` skill，并提供三个核心工具：`context_checkpoint` 给关键对话节点打语义锚点，`context_timeline` 查看当前路径的 checkpoints、summaries、branch points 和当前位置，`context_compact` 从某个 checkpoint、history node 或 root 创建带总结的 continuation branch。使用前建议检查 GitHub 源码，因为 Pi package 能执行代码并影响 Agent 行为。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>长任务 Agent 最大痛点之一是上下文越来越脏、压缩越来越被动。pi-context 把“何时标记、何时查看、何时压缩”变成 Agent 可调用的显式工具，并且强调它管理的是 conversation history，不会回滚文件、进程、数据库或远程服务，边界比很多“时间旅行”概念更清楚。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从文档页或 GitHub 仓库进入项目，开发者在论坛帖里明确说明它是免费使用、基础代码以 GPL-v3 开源。装好之后，核心玩法不是“像传统启动器那样搜索单个程序”，而是先建立多个应用组，例如“上班环境”“写作环境”“剪辑环境”，然后把每组需要的软件逐个加入。之后每次切换场景时，只需要在 QuickUp 里点一次对应分组，就能把这一组程序同时拉起。因为帖子里附了多张界面截图，能确认它至少已经有分组管理与批量启动的交互，而不是单纯概念页，所以最适合的体验路径就是先建 2 到 3 个真实场景组，观察它能否稳定替代手动逐个开应用的动作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多“效率工具”最后都停留在更花哨的启动入口，但 QuickUp 抓的是一个更具体的问题——用户每天反复打开的是“软件组合”而不是“单个软件”。这个视角很适合办公和创作场景，也更符合 AI 和自动化时代“按工作上下文切换环境”的思路。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在长时间代码修复、研究或写作任务中保留关键节点并压缩低价值探索。</li>
-    <li>为 Pi Agent 构建类似 session tree 的上下文仪表盘和主动整理流程。</li>
+    <li>上班时需要固定打开 IM、浏览器、IDE、文档和远程工具，希望一键进入工作环境。</li>
+    <li>玩游戏、剪视频或直播前要开一串配套软件，想减少每次重复点击的步骤。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/Gezi_lzq/status/2070107620187472131" target="_blank"><span class="handle">@Gezi_lzq</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2070167291946271047" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Ornith-1.0</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Ornith-1.0 是 DeepReinforce 发布的开源 agentic coding 模型家族，覆盖 9B、35B、397B 以及 GGUF/FP8 等变体。</p></div>
+  <div class="topic-title">🛠️ daycraft</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款极简风格的 iOS 倒数日 App，用来记录生日、纪念日、节日、出发日和各种值得期待的重要时刻。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://huggingface.co/collections/deepreinforce-ai/ornith-10" target="_blank">https://huggingface.co/collections/deepreinforce-ai/ornith-10 ↗</a></p>
+    <p><a href="https://apps.apple.com/cn/app/daycraft-%E5%80%92%E6%95%B0%E7%94%9F%E6%97%A5-%E7%BA%AA%E5%BF%B5%E6%97%A5/id6746264646" target="_blank">https://apps.apple.com/cn/app/daycraft-%E5%80%92%E6%95%B0%E7%94%9F%E6%97%A5-%E7%BA%AA%E5%BF%B5%E6%97%A5/id6746264646 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 Hugging Face collection 选择合适模型，小机器可优先看 `deepreinforce-ai/Ornith-1.0-9B-GGUF`，更强推理可看 35B/397B 版本。官方模型卡给出 vLLM 和 SGLang 启动方式：例如 9B 可用 `vllm serve deepreinforce-ai/Ornith-1.0-9B --served-model-name Ornith-1.0-9B --host 0.0.0.0 --port 8000 --max-model-len 262144 --enable-prefix-caching --enable-auto-tool-choice --tool-call-parser qwen3_xml --reasoning-parser qwen3 --trust-remote-code` 启成 OpenAI 兼容服务。GGUF 版本也可用 llama.cpp、Ollama、llama-cpp-python 等本地推理工具尝试，注意模型卡建议的 sampling 为 `temperature=0.6, top_p=0.95, top_k=20`。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Ornith 的定位非常明确：面向终端编码代理、工具调用、大上下文软件工程任务，而不是泛聊天模型。模型卡列出 Terminal-Bench、SWE-bench、NL2Repo、ClawEval 等 agentic coding benchmark，并提供 reasoning parser 与 tool-call parser 配置，说明它是按“接入代理框架”来设计和评估的。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接从 App Store 打开 `Daycraft-倒数生日｜纪念日` 页面下载安装，论坛帖已经给出了完整商店链接和 App ID。上手时最适合先建 3 到 5 个真实事件，比如生日、旅行出发、见面日期和目标截止日，感受它是否真的像作者说的那样“没有复杂功能，也没有各种打扰，只是安静地帮你记录”。如果你平时用的是任务管理器或日历，这个 App 的正确玩法不是替代待办系统，而是把真正想期待、想被提醒的少数节点抽出来，单独做成倒数。帖子中还展示了中英文界面截图，所以也可以顺手观察本地化和视觉细节是否到位。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>倒数日产品很多，但 daycraft 的亮点不是功能堆叠，而是克制——它明确放弃重型效率路线，专注在“等待感”和“轻提醒”这一种情绪型需求上。对于移动端小工具来说，愿意少做功能、把交互压到足够安静，本身就是一种很稀缺的产品判断。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>给本地 Claude Code/OpenAI-compatible coding agent 替换或补充开源后端模型。</li>
-    <li>评测小参数 agentic coding 模型在真实仓库修改、工具调用和长上下文任务里的表现。</li>
+    <li>想单独管理纪念日、生日、旅行和见面日期，不希望这些事件淹没在待办列表里。</li>
+    <li>喜欢极简 UI，希望有一个打开就能看到期待值上升的小工具，而不是复杂的效率系统。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/berryxia/status/2070167806700908957" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2070055284215603507" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ loop-me</div>
+  <div class="section"><div class="section-label event">一句话</div><p>`mattpocock/skills` 仓库里一个仍在 in-progress 的技能，用连续追问的方式把模糊想法打磨成可执行的 workflow 规格。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mattpocock/skills/blob/main/skills/in-progress/loop-me/SKILL.md" target="_blank">https://github.com/mattpocock/skills/blob/main/skills/in-progress/loop-me/SKILL.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目不是传统 App，而是一个可以直接阅读和借鉴的技能规范。打开 `SKILL.md` 后能看到它把目标说得很清楚：围绕某个 recurring loop，也就是你生活或工作里反复出现的模式，一次只问一个问题，最后把结果沉淀成 `workflows/*.md` 里的规格文档。最适合的实操方式，是拿你最近一个高频重复任务来试，比如“每天收集行业信息并产出短报”“每周整理团队例会待办”或者“处理新 issue 的分流”，然后按文档中的 Trigger、Checkpoint、Push right、Brief 这些词汇自己写一版 workflow spec。它甚至明确提出“当实现者不需要再问任何问题时，规格才算完成”，所以非常适合直接拿来当 AI 工作流设计模板，而不只是看热闹。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>现在很多人谈 Agent 和 Loop Engineering 还停留在概念层，但 `loop-me` 已经把“怎么把重复任务说清楚”这件事拆成了可执行流程。它的价值不在代码复杂度，而在于把 workflow 设计语言标准化：什么时候用 event trigger，什么时候加人工 checkpoint，什么时候把人工审批尽量后移，这些都是搭自动化系统时最容易含糊的部分。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>想把自己或团队的重复任务写成 AI 可执行规范，减少每次从零解释需求的成本。</li>
+    <li>在设计 Agent 工作流前，先把触发条件、人工审批点和交付摘要格式定义清楚。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2069941286371774519" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HLqjo1CbMAAoc8u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLqjo1CbMAAoc8u?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLnomrsbcAAwali?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLnomrsbcAAwali?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Cloudflare Workflows Saga Rollbacks</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Cloudflare Workflows 新增 Saga Rollbacks，可在 `step.do()` 里直接声明失败后的补偿/回滚逻辑。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://developers.cloudflare.com/workflows/build/rules-of-workflows/#configuring-retries-and-rollbacks" target="_blank">https://developers.cloudflare.com/workflows/build/rules-of-workflows/#configuring-retries-and-rollbacks ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你在 Cloudflare Workers 里使用 Workflows，升级到支持 rollback 的写法后，把外部副作用步骤都包进 `step.do()`，并在最后一个 options 参数里加入 `rollback` 函数。例如扣款步骤可写成 `step.do("debit-bank-a", () =&gt; bankA.debit(...), { rollback: async ({ output }) =&gt; bankA.credit(..., output.id) })`，后续 credit 或 notify 步骤失败时，Workflow engine 会按完成步骤的相反顺序执行补偿。实际使用时要给正向操作和 rollback 操作都设计 idempotency key，避免重试导致重复扣款、重复退款或库存释放多次。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多步骤应用最难处理的不是“某一步失败”，而是前面步骤已经对支付、库存、邮件、第三方 API 产生了不可自动撤销的副作用。Saga Rollbacks 把补偿逻辑放在正向步骤旁边，减少巨大的 catch/unwind 代码块，也更适合构建可靠的异步业务流程。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>支付、退款、库存锁定、订单确认等有外部副作用的 Durable workflow。</li>
-    <li>用 Cloudflare Workflows 编排多 API 调用，并要求失败时自动补偿已完成步骤。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/Cloudflare/status/2070131155983048904" target="_blank"><span class="handle">@Cloudflare</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ 语迹 VoiceTrail</div>
-  <div class="section"><div class="section-label event">一句话</div><p>语迹 VoiceTrail 是一款 iOS 语音优先的大纲日记 App，支持实时转写、本地保存和 Markdown 导向的记录方式。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://apps.apple.com/cn/app/%E8%AF%AD%E8%BF%B9-voicetrail/id6779029961" target="_blank">https://apps.apple.com/cn/app/%E8%AF%AD%E8%BF%B9-voicetrail/id6779029961 ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 App Store 搜索“语迹 VoiceTrail”或打开国区/美区链接下载安装，应用无需注册即可使用，日记保存在本地。使用方式很直接：把手机拿到嘴边像发语音一样说几句，应用会把语音转成文本并落到每日大纲日记中。开发者说明中文默认使用豆包流式 ASR，英文适配 Deepgram，同时保留 Apple Speech；后端主要负责鉴权、配置和额度，不转发用户音频。适合先快速记录，再把 Markdown 内容迁移到 Obsidian、Logseq 或交给其他 AI 继续处理。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有把 AI 作为噱头，而是先解决“打开笔记、创建文档、组织标题再输入”的启动成本问题。语音输入、大纲结构、Markdown 可迁移和本地保存这几个点组合起来，比较适合 AI 时代个人知识库的原始材料采集。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>走路、睡前、通勤时快速记录零散想法和复盘。</li>
-    <li>把语音日记转成可搜索、可迁移、可被 AI 继续整理的 Markdown 素材。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/appinn/status/2070055281174643013" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ TP录音机</div>
-  <div class="section"><div class="section-label event">一句话</div><p>TP录音机是一个类似 iOS 语音备忘录的微信小程序，支持录音、编辑、覆写和分享。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://meta.appinn.net/t/topic/87377" target="_blank">https://meta.appinn.net/t/topic/87377 ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开小众软件论坛原帖，用微信扫描页面中的“TP录音机小程序二维码”进入小程序。进入后可像语音备忘录一样录音，并在任意时间点覆写内容；播放时支持拖拽定位、快进快退，录音文件可以重命名、批量删除，分享功能收费，其它功能免费。因为它是微信小程序，不需要单独安装 App，适合在手机上临时记录会议、采访或个人备忘；如果需要分享给别人，再按小程序内付费分享流程操作。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>轻量录音工具最重要的是入口快、编辑不麻烦。TP录音机把“录音 + 定位 + 覆写 + 重命名 + 批量删除”放在微信小程序里，降低了临时使用门槛，也避开了安装完整录音 App 的负担。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>会议、课堂、采访时快速录音并在局部覆写补录。</li>
-    <li>给不想安装独立 App 的用户提供微信内语音备忘录替代品。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/appinn/status/2070055278750421009" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">📡 OpenAI 用 Codex 数据说明 Agent 正在重塑知识工作</div>
-  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布官方文章《How agents are transforming work》，用 Codex 使用数据说明工作单位正从短问答转向可委托的长周期任务。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>OpenAI 把 Codex 定位为 agentic work 的代表，而不是单纯代码助手。文章提到到 2026 年 5 月，样本个人用户中 80.6% 至少发起过一个估计超过 30 分钟人工工作量的 Codex 请求，70.2% 发起过超过 1 小时的请求；内部层面，Codex 已成为 OpenAI 各部门主要 AI 工具，法律、财务、招聘等非技术部门也在用它做自动化、数据整理、调试和结构化分析。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>这会推动企业采购和组织流程从“员工问模型一句”转向“员工管理多个并行 Agent”。工具厂商的竞争点也会从模型能力扩展到任务队列、权限、审计、沙盒、上下文管理、跨部门模板和人机协作边界，今天的 v0 skill、FastClaw、pi-context 都处在这个方向上。</p></div>
+  <div class="topic-title">📡 Codex 正在把知识工作从“问答”改成“委托长任务”</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布研究与博客，称 Codex 已成为其内部几乎所有部门的主要 AI 工作工具，并显示用户越来越多地把长周期任务直接委托给 Agent。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条消息真正值得关注的不是“OpenAI 夸自己”，而是它给出了比较硬的数据切面：到 2026 年 5 月，很多用户已经把超 30 分钟、1 小时甚至 8 小时的人类工作量交给 Codex，内部非技术部门也大量转向使用。这说明 Agent 的价值点已经不再是更会聊天，而是更能吃下长链路、跨工具、可并行的任务。对创业公司和工具开发者来说，这意味着下一波机会不一定来自更花哨的对话界面，而是来自任务编排、状态管理、权限控制、交付验证这些“工作基础设施”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这一趋势持续，团队采购 AI 的标准会从“模型聪不聪明”逐步变成“能不能稳定接手任务”。这会直接带动 Agent runtime、工作流引擎、审计与安全、移动端陪跑界面等一整条配套市场，而不只是单个聊天产品之间的排名变化。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -306,34 +204,37 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 SQLite 作者解释为何不接受外部 PR</div>
-  <div class="section"><div class="section-label event">事件</div><p>Richard Hipp 解释 SQLite 项目不接受外部 PR 的原因：PR 不是免费的，而是长期维护责任。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这条不是新工具，但对开源维护者非常有现实意义。外部贡献者常把 PR 看作“我免费帮你写了代码”，维护者看到的却是后续二十五年的文档、测试、兼容、bug 修复和责任承担。Richard Hipp 用“免费小狗”比喻 PR：接收它并不意味着没有成本，而是从此要照顾它直到生命周期结束。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>随着 AI coding agent 能批量生成 PR，维护成本会更集中地压到少数核心维护者身上。未来开源项目可能会更强调贡献门槛、设计讨论、长期维护承诺和自动化质量筛选，而不是简单追求 PR 数量；这也解释了 SlopGuard 一类 PR/issue 质量评分工具为何会出现。</p></div>
+  <div class="topic-title">📡 Cloudflare 给 Workflows 加上 saga rollback</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cloudflare 在 Workflows 里加入 saga rollback，允许开发者把每一步的补偿逻辑直接写进 `step.do()` 的 `rollback` 选项里，在工作流最终失败时自动按逆序执行补偿。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这其实是一个很关键但容易被忽略的基础设施升级。大家现在都在谈 Agent 会调用外部系统、串好多步骤，可真正进生产时最麻烦的是“做了一半失败怎么办”。Cloudflare 这次不是单纯加了个 `try/catch` 糖衣，而是把补偿逻辑和前向步骤绑定，连重试、日志、顺序和恢复语义都纳入了工作流引擎本身。对需要调用支付、数据库、邮件、第三方 API 的任务系统来说，这种“失败也要可编排”的能力，比表面上的智能更接近落地价值。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>随着更多 Agent 应用开始连接真实业务系统，具备 rollback、幂等、补偿事务和可恢复执行能力的工作流平台会明显占优。开发者会越来越在意“失败后的工程语义”，而不只是“能不能跑通 happy path”。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/ruanyf/status/2070309433813676248" target="_blank"><span class="handle">@ruanyf</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Cloudflare/status/2070131155983048904" target="_blank"><span class="handle">@Cloudflare</span> 查看原文 ↗</a>
     </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HLs3cUHbsAA9akq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLs3cUHbsAA9akq?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Cloudflare 将 PACT 作为减少验证码的新协议方向写入周刊视野</div>
-  <div class="section"><div class="section-label event">事件</div><p>阮一峰周刊提到 Cloudflare 联合 Chrome、Firefox、Edge 开发 PACT 匿名令牌协议，用于识别真人流量并减少 CAPTCHA。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>PACT 的核心思路是让浏览器为真人 HTTP 请求携带可验证令牌，服务器据此判断访问者更可能是真人，而不必频繁弹验证码。它试图在反机器人、防滥用和隐私之间找新的平衡：网站不直接知道用户身份，但能得到“这次请求来自可信客户端/真人流程”的信号。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类协议普及，Web 反滥用会从网站各自堆验证码，转向浏览器、边缘网络和服务器共同参与的信任基础设施。对普通用户是少点验证码；对爬虫、自动化测试、AI browser agent 则意味着访问真实性、授权和合规边界会越来越重要。</p></div>
+  <div class="topic-title">📡 The Coming Loop：外层循环正在成为新的 Agent 工程焦点</div>
+  <div class="section"><div class="section-label event">事件</div><p>Armin Ronacher 发文讨论“the coming loop”，指出真正改变软件工作的，不只是 Agent 自身的工具调用循环，而是包在外面的 harness loop——它负责判断任务是否继续、是否重试、是否换上下文或换机器。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这篇文章之所以重要，是因为它把现在很多人模糊感受到的趋势说透了：未来难点不是单个模型能不能一次写对，而是你如何构造一个外层系统，让任务在模型“觉得自己做完了”之后还继续被评估、被追问、被重启、被转交。作者同时也泼了一盆冷水，指出 loop 很容易让代码越来越复杂、越来越防御式，最后形成“机器可维护、人难理解”的系统。这种张力很值得做 Agent 产品的人反复咀嚼。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>行业里会同时出现两股力量：一股推动更强的 loop/harness 自动化，另一股推动更严格的规格、验证和人工检查点设计。谁能把这两者平衡好，谁更可能做出真正可用而不是只会 demo 的 Agent 系统。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/ruanyf/status/2070303789673046429" target="_blank"><span class="handle">@ruanyf</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2069945596421771650" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2070309373360939463" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2069991791357476887" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2070144005589831745" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HLsyT9AbAAEeHrE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLsyT9AbAAEeHrE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLnsdxCbEAA7sDa?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLnsdxCbEAA7sDa?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLoVlkIXAAAZO5a?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLoVlkIXAAAZO5a?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLoWVvJWUAASFsE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLoWVvJWUAASFsE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLqgt21WkAAYJR7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLqgt21WkAAYJR7?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
@@ -341,13 +242,11 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>Ghost Proxifier PRO：Windows 进程级流量劫持工具，面向不走系统代理的应用 <a href="https://meta.appinn.net/t/topic/87397" target="_blank">→</a></li>
-    <li>daycraft：极简 iOS 倒数日/纪念日 App，适合记录生日、旅行和目标日期 <a href="https://apps.apple.com/cn/app/daycraft-%E5%80%92%E6%95%B0%E7%94%9F%E6%97%A5-%E7%BA%AA%E5%BF%B5%E6%97%A5/id6746264646" target="_blank">→</a></li>
-    <li>loop-me：Matt Pocock skills 仓库里的 in-progress skill，用于把想法拷问成可落地工作流规格 <a href="https://github.com/mattpocock/skills/tree/main/skills/in-progress/loop-me" target="_blank">→</a></li>
-    <li>The Coming Loop：Armin Ronacher 关于 Loop Engineering 与让渡判断力的长文 <a href="https://lucumr.pocoo.org/2026/6/23/the-coming-loop/" target="_blank">→</a></li>
-    <li>小米 MIMO API：推文分享兼容 OpenAI/Anthropic 协议的临时 Token 福利入口，注意安全与有效期 <a href="https://token-plan-sgp.xiaomimimo.com/v1" target="_blank">→</a></li>
-    <li>Epic 手机喜加一：Teenage Mutant Ninja Turtles - Shredder's Revenge 限时领取讨论 <a href="https://meta.appinn.net/t/topic/87400" target="_blank">→</a></li>
-    <li>Ruanyf 周刊 401：本期工具推荐含 Lore、DNS Pick、GitFolio、MyKVM、OnePagent、SlopGuard 等 <a href="https://www.ruanyifeng.com/blog/2026/06/weekly-issue-401.html" target="_blank">→</a></li>
+    <li>Ghost Proxifier PRO：Windows 进程级流量劫持工具，面向“不走系统代理”的顽固应用 <a href="https://meta.appinn.net/t/topic/87397" target="_blank">→</a></li>
+    <li>AppGroup：在 Windows 11 任务栏创建类似快捷启动栏的工具，推文给出了方向但抓取到的公开信息还不够细 <a href="https://x.com/appinn/status/2070309373360939463" target="_blank">→</a></li>
+    <li>飞书 CLI + Codex 记账流：用 `npx @larksuite/cli@latest install` 配合多维表格做对话式记账 <a href="https://x.com/vista8/status/2069991791357476887" target="_blank">→</a></li>
+    <li>腾讯 Agent 邮箱：面向 Agent 的邮箱入口，推文提到注册后会给出 CLI 配置提示词 <a href="https://x.com/vista8/status/2070144005589831745" target="_blank">→</a></li>
+    <li>Skills For Real Engineers / loop-me：围绕 workflow spec 设计继续扩充，值得持续跟踪其从 in-progress 变成熟版的演化 <a href="https://github.com/mattpocock/skills/blob/main/skills/in-progress/loop-me/SKILL.md" target="_blank">→</a></li>
   </ul>
 </div>
 

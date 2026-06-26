@@ -5,13 +5,14 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 26 Jun 2026 01:44:33 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 02:51:49 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/06/26 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-26.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-26.html</guid>
-      <description>今天最值得关注的是“Agent 工作流产品化”：从 v0 把设计系统沉淀成 skill、FastClaw 把多 Agent 运行时做成单二进制，到 pi-context 让 Agent 主动管理上下文，都在把过去靠提示词硬撑的流程变成可复用基础设施。同时，今日也有不少马上能玩的桌面/移动小工具，覆盖 Windows 启动器、Mac 清理、iOS 语音日记和本地编码模型。</description>
+      <description>今天最值得亲手试的方向有两条：一条是“把重复工作打包成可运行的工作流”，从 FastClaw、loop-me 到 Cloudflare Workflows 都在把 Agent 从聊天框推进到可持续运行的任务系统；另一条是“轻量但立刻能用的桌面/移动小工具”，包括 Mac 清理、Windows 启动器和 iPhone 倒数日应用。
+相比纯观点和大厂口水战，今天更值得花时间的是这些已经给出下载入口、README、工作流说明或 App Store 页面、可以立即装起来试一轮的项目。</description>
       <pubDate>2026-06-26T08:30:00+08:00</pubDate>
     </item>
     <item>
