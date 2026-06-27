@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-27</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-27</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得上手的方向有两个：一类是把 AI 真正接进具体工作流的工具，从视频生产到智能记忆再到设计交付，都开始提供可直接试跑的开源入口；另一类是把现有平台的复杂能力做成更低门槛的可视化工具，让普通用户几分钟内就能用起来。
+另一个明显信号是，能“本地跑、可导入现有流程、安装路径清晰”的项目更受欢迎，说明大家正在从围观概念转向搭建自己的长期工作台。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenMontage</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源的 AI 视频生产系统，把 AI coding assistant 变成可执行研究、写脚本、找素材、剪辑和渲染的视频工作室。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/calesthio/OpenMontage" target="_blank">https://github.com/calesthio/OpenMontage ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>项目 README 直接给了手动安装路径：先克隆仓库，在本地准备 Python 环境后执行 `pip install -r requirements.txt`，再进入 `remotion-composer` 执行 `npm install`，回到根目录后可继续安装 `piper-tts` 并复制 `.env.example` 为 `.env`。它的工作流不是单一“文生视频”，而是按 `research -&gt; proposal -&gt; script -&gt; scene_plan -&gt; assets -&gt; edit -&gt; compose` 这样的阶段推进。比较适合第一次上手时直接拿 README 里的示例提示词来跑，比如做一个 60 秒 explainer、纪录片蒙太奇或参考某个 YouTube Short 重做一个新主题。跑起来后重点看它是否能产出 proposal、脚本、scene plan 和最终 compose 结果，这样能最快理解整套 agent 化视频流水线。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这类项目常见问题是只解决单点生成，最后还是得手工拼接；而 OpenMontage 的重点是把研究、脚本、素材检索、配音、字幕、渲染放进同一条可审阅流程里，并且明确强调可以使用真实视频素材源与多种渲染路径，不只是把几张静图做成 slideshow。对想搭“AI 视频工位”的人来说，它更接近完整生产系统而不是单一模型包装壳。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用于快速制作产品介绍、教程短片、动画解说或品牌内容样片。</li>
+    <li>作为团队内部实验平台，验证多模型、多素材源、多阶段审稿的视频自动化流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2070647327766000081" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Memanto</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源的 AI agent 记忆层/记忆代理，用 `remember`、`recall`、`answer` 三类能力给 Claude Code、Codex、Cursor 等工具补上跨会话长期记忆。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/moorcheh-ai/memanto" target="_blank">https://github.com/moorcheh-ai/memanto ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>官网和 GitHub 都给了清晰入口。最短路径是本机先安装 CLI：`pip install memanto`，然后执行 `memanto agent create dev-agent` 创建一个 agent namespace。项目支持本地和云两种后端：本地模式需要 Docker，不需要账号和 API key；云模式可在 Moorcheh 控制台申请免费 key。创建后可以继续用 `memanto config backend` 切换后端，并通过 CLI 或 API 把上下文、事实和偏好写进记忆系统。首次体验建议找一个自己常用的 coding agent，把同一项目的多轮需求、决策和偏好持续写入，再观察下次检索时能否直接 recall 出相关内容。它还提供本地 REST API 与 Web UI，适合继续查看记忆状态与冲突。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多“AI 记忆”工具本质只是把一坨摘要塞回上下文，而 Memanto 明确把自己定义成 active memory agent，主打 queryable memory、时间感知、来源标注、冲突检测和零索引延迟。对高频使用 coding agent 的人，这意味着它不仅能存内容，还试图解决“旧偏好覆盖新需求”“记忆不可追溯”“写完不能立刻搜”等长期痛点。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 Claude Code、Codex、Cursor 等编程助手补充项目级长期记忆，减少重复解释架构和偏好。</li>
+    <li>在多 agent 或自动化流程里做跨会话上下文共享，追踪事实、决策和历史任务状态。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2070513297699512501" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2070513197917024256/img/3UpS3p90-NkZRUIm.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2070513197917024256/img/3UpS3p90-NkZRUIm.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2070321435529109504/img/8N4wpzkeeD6J7N45?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2070321435529109504/img/8N4wpzkeeD6J7N45?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ X Search Filters</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源 Chrome 扩展，把 X 原本依赖搜索操作符的高级检索能力做成可视化面板。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/fengdu2077/x-search-filters" target="_blank">https://github.com/fengdu2077/x-search-filters ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目最适合立即本地试用。打开 GitHub 仓库后下载源码或直接 clone，随后在 Chrome 访问 `chrome://extensions`，打开开发者模式，选择“加载已解压的扩展程序”，并选中直接包含 `manifest.json` 的项目目录。完成后进入 `https://x.com`，在搜索框附近会出现 Advanced/高级搜索入口。点击后可以用图形界面设置关键词、精确短语、排除词、日期、最少点赞、是否只看图片/视频/链接、语言、来源账号等条件；也能直接用 README 里提到的 `Ctrl+Shift+F` 快捷键调出面板。第一次上手建议拿一个热点主题，分别测试 `from:`、`since:`、`min_faves:`、`filter:images` 这些条件，感受它如何自动拼接 query preview。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>X 自带高级搜索并不弱，但门槛在于操作符难记、组合复杂，而这个扩展把高级搜索语法映射成了可点选面板，还把 query-builder、React 输入写入、历史与收藏都做成了模块。它不是重新发明搜索，而是把平台已有但难用的能力转成更高频、可视化、可复用的工作流，对内容研究、情报搜索和找素材的人都很实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做行业监测、找爆款推文、筛选特定语言或媒体类型的内容。</li>
+    <li>做内容选题研究时快速组合时间范围、账号来源和互动量门槛。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2070392620359315484" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2070044283273641984/img/Aid_7a18IMN8s0CP.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2070044283273641984/img/Aid_7a18IMN8s0CP.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2070044283273641984/img/Aid_7a18IMN8s0CP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2070044283273641984/img/Aid_7a18IMN8s0CP?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Win11Debloat</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源 PowerShell 脚本，用来移除 Windows 10/11 预装应用、关闭遥测并做一系列系统精简与个性化调整。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/raphire/win11debloat" target="_blank">https://github.com/raphire/win11debloat ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你手边有 Windows 机器，这个项目非常适合立刻尝试。GitHub README 明确写了它“无需安装”，并提供自动下载运行、`Run.bat` 传统方式以及带命令行参数的高级方式。最稳妥的玩法是先完整阅读 README 和 Wiki，再下载仓库后优先通过 `Run.bat` 或 PowerShell 启动脚本，在界面里按模块查看 App Removal、Privacy、AI Features、Windows Update、Appearance、Taskbar、File Explorer 等分类。第一次不要一键全开，建议先做预装应用和遥测相关项，再观察系统变化；如果是批量多机调整，还可以研究它的导出/导入设置与命令行参数。项目也明确强调大多数修改可回退，很多应用能从 Microsoft Store 重新安装。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Windows 精简脚本很多，但这个项目的信息组织和可回退性做得比较成熟：既照顾普通用户，又考虑了管理员批量复用、Audit mode、其他用户配置和参数化执行。尤其在 AI PC、预装组件越来越多的背景下，这类“把系统干净化并保留恢复路径”的工具，实用价值很直接。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>新装 Windows 10/11 后快速做去预装、隐私和界面精简。</li>
+    <li>IT 或技术支持团队批量统一多台设备的基础系统配置。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2070400994601488882" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLuKu7LW8AAF8ea?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLuKu7LW8AAF8ea?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google Finance 结束测试期并强化 AI 入口</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google Finance 新版页面与 Android App 一起推进，产品里已能看到 AI 研究入口、市场摘要与更完整的投资组合体验。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>从公开页面与第三方报道可见，Google Finance 不再只是一个被动行情页，而是在把“看盘、读新闻、问问题、接收摘要”打包成连续体验。页面里已经出现了“What's on your mind?” 这类研究入口，也明确标注 AI 内容可能出错，说明 Google 不是把 AI 放在新闻稿里点到为止，而是在尝试把自然语言研究、市场叙事生成和传统金融信息消费结合起来。对普通用户而言，这会降低理解市场动态的门槛；对 Google 来说，则是在搜索、财经信息和 AI 助手之间打通一个更高频的使用场景。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这条路走通，金融信息产品会进一步从“数据终端”转向“可提问的研究界面”。它会给券商、资讯聚合平台和个人投资工具带来压力：用户将期待更自然的问答、自动简报和更强的个性化追踪，而不只是静态行情和资讯列表。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2070446065200058422" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2070445462847713280/img/qDBSA7WLWNhpAUCq.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2070445462847713280/img/qDBSA7WLWNhpAUCq.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Adobe 收购 Topaz Labs</div>
+  <div class="section"><div class="section-label event">事件</div><p>Adobe 宣布收购 Topaz Labs，后者长期以图像修复、超分辨率和视频增强工具闻名。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这笔收购的核心不只是“补齐一个功能模块”，而是 Adobe 在生成式内容时代强化后处理能力的关键动作。如今大量 AI 图像和视频工作流都会在最后一步做超分、降噪、锐化、修复，Topaz 恰好占据了这一层的强势心智。把它纳入 Adobe 体系后，Adobe 可以同时覆盖生成、编辑、增强和交付，减少用户在不同工具间切换的摩擦，也进一步提高自家创意软件在专业工作流中的黏性。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对内容创作者和工作室来说，后期增强能力会更深地嵌入主流设计与视频套件；对独立 AI 视频工具而言，这会抬高用户对“原生超分与修复”能力的期待。未来生成模型做得不够精的部分，可能越来越依赖工具链里的增强层补齐。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2070435081639129368" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2070444084511089056" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2070539404767302116" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2070554759896142280" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2070521337974858191" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLuptFIaMAAdhl-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLuptFIaMAAdhl-?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2070538401871482880/img/BPtw_L7KfBqwbIMy.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2070538401871482880/img/BPtw_L7KfBqwbIMy.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2069795103556694016/img/6GkGjJJuxJPTslsj.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2069795103556694016/img/6GkGjJJuxJPTslsj.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Open Design：下载桌面应用后可把品牌系统延展到 decks、reports、graphics 甚至 live portal，官网展示了 Ikigai One 的团队案例 <a href="https://open-design.ai/stories" target="_blank">→</a></li>
+    <li>Areada：少数派/小众软件渠道分享的开源电子书阅读器，推文给出的是发现入口，具体功能还需进一步看项目页 <a href="https://x.com/appinn/status/2070444084511089056" target="_blank">→</a></li>
+    <li>SuperNori：围绕“主动式家庭 AI 代理”的一组讨论与案例，推文展示了餐厅协调、扫地机触发、饮食建议等场景 <a href="https://x.com/Gorden_Sun/status/2070539404767302116" target="_blank">→</a></li>
+    <li>Moxt：更新了多 agent 编排工作流，推文明确强调可让一群 Agent 协作并重复驱动更长任务 <a href="https://x.com/op7418/status/2070554759896142280" target="_blank">→</a></li>
+    <li>TileRT：围绕国产推理加速基础设施的讨论热度上升，适合作为底层性能方向继续追踪 <a href="https://x.com/seclink/status/2070521337974858191" target="_blank">→</a></li>
+    <li>baoyu-design：宝玉分享的新 PPT/设计 skill，主打导出可编辑版本、AI 配图与浏览器内标记编辑 <a href="https://github.com/jimliu/baoyu-design" target="_blank">→</a></li>
+    <li>Open Design 案例页：更像团队级设计工作流的信号样本，而不是单一新功能发布 <a href="https://open-design.ai/stories/ikigai-one/" target="_blank">→</a></li>
+    <li>Google Finance：如果你关心 AI+金融产品演化，可以直接打开新版页面观察其研究入口和市场摘要形态 <a href="https://www.google.com/finance" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
