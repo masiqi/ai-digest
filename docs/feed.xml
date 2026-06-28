@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 27 Jun 2026 00:36:48 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 00:39:09 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/28 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-28.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-28.html</guid>
+      <description>今天最值得上手的方向很明确：一类是把 AI 代理直接变成可交付生产工具的开源项目，另一类是把“长期记忆、工程习惯、内容生产”这些高频工作做成可安装、可下载、可重复运行的产品。
+从今天的推文看，真正值得花时间体验的不是概念，而是已经有下载入口、仓库、安装命令或明确操作路径的东西，尤其适合直接拿来试跑你的 PPT、视频、记忆层和代理工作流。</description>
+      <pubDate>2026-06-28T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/27 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-27.html</link>

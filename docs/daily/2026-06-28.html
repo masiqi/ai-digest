@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-28</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-28</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得上手的方向很明确：一类是把 AI 代理直接变成可交付生产工具的开源项目，另一类是把“长期记忆、工程习惯、内容生产”这些高频工作做成可安装、可下载、可重复运行的产品。
+从今天的推文看，真正值得花时间体验的不是概念，而是已经有下载入口、仓库、安装命令或明确操作路径的东西，尤其适合直接拿来试跑你的 PPT、视频、记忆层和代理工作流。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Huashu Design</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 Claude Code、Codex、Hermes 等代理环境的 HTML 原生设计 skill，可直接生成高保真原型、演示文稿、动画，并支持导出可编辑 PPTX。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/huashu-design" target="_blank">https://github.com/alchaincyf/huashu-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目最适合已经在用 Claude Code、Codex 或 Hermes 的人直接装到自己的代理环境里试。README 明确给了安装命令 `npx skills add alchaincyf/huashu-design`，装完后不要把它当普通设计插件，而是把它当“可对话的设计执行器”来用。最简单的起手式，是给出一条非常具体的任务，比如做一份 AI 心理学的演讲 PPT、做一个可点击的 iPhone 原型、或者把一段逻辑做成 60 秒动画。它的工作方式不是点按钮，而是让代理产出 HTML 文件、PPT、GIF、MP4 等交付物。第一次上手建议选一个你今天就用得上的真实任务，例如“做一份产品发布 PPT，先给我 3 个风格方向”或者“做一个 4 屏可点击的 iOS 原型”，这样最容易检验它是否真的能替代一部分 Figma/PPT 体力活。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的独特之处不只是“会出图”，而是把品牌资产提取、风格方向选择、HTML 原生设计、可编辑 PPT 输出和五维评审这些流程做成了成体系的 skill。README 里还强调了不允许凭空猜品牌色，而是要求搜索官方品牌页、抽取颜色、冻结成 `brand-spec.md`，这类约束说明它不是玩具 demo，而是在尝试提升 AI 设计输出的稳定性和可交付性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给产品发布、路演或内部汇报快速生成可编辑 PPT，再交给人做最后润色。</li>
+    <li>用代理直接生成高保真点击原型或短动画，验证新功能概念。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2070899297395294423" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLtDv8DbMAAH2QR?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLtDv8DbMAAH2QR?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Waza</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把工程师常用的思考、设计、检查、排错、写作、学习等习惯封装成 8 个可执行 AI skill 的开源项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/waza" target="_blank">https://github.com/tw93/waza ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你已经在用 Claude Code、Codex、Cursor 或兼容 `~/.agents/skills` 的环境，这个项目非常适合直接安装后在日常工作里试一整天。仓库说明它提供 `/think`、`/design`、`/check`、`/hunt`、`/write`、`/learn`、`/read`、`/health` 八个技能，你可以把它理解成一组“让代理按工程习惯工作”的快捷操作。最直接的玩法，是先安装并让它介入一个真实任务：先用 `/think` 做实现方案，再用 `/check` 做收尾审查；遇到 bug 时直接用 `/hunt`；读论文或 PDF 时用 `/read` 和 `/learn` 串起来。项目还给了更新命令 `npx skills update -g -y`，说明它不是一次性模版，而是会持续迭代。第一次上手不要全学完，直接挑一个你最缺的环节，比如“让代理先思考后写代码”或“让代理有系统地排错”，最容易感受到区别。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Waza 的价值在于它没有试图做一个大而全的新 agent，而是把高频、可复用的工程习惯拆成可单独触发的技能模块。这样既保留了你原本的工具链，又能显著减少代理乱写、漏检、草率总结的问题。尤其是 `/check`、`/hunt`、`/health` 这种偏工程质量控制的 skill，很适合现在大家普遍遇到的“AI 写得快但不够稳”的阶段。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给日常编码流程加上固定的“先思考、后实现、再检查”节奏。</li>
+    <li>在读文档、排查 bug、写说明文案时，复用同一套 AI 技能工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2070813462960501072" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HL0BhUua4AA2X-e?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HL0BhUua4AA2X-e?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Nowledge Mem</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本地优先的 AI 记忆层桌面应用，把对话、笔记、文件和决定沉淀到同一套可搜索、可复用的记忆系统里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mem.nowledge.co/zh" target="_blank">https://mem.nowledge.co/zh ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个产品的上手门槛不高，因为官网已经明确写了“下载 Nowledge Mem”并强调可先接入一个工具再逐步扩展。最适合的试法是把它当成“跨 AI 工具的统一记忆层”来体验：先下载安装到自己的电脑上，再连接一个你最常用的 AI 工具，比如 Claude Code、Cursor、DeepSeek、OpenClaw 或浏览器扩展。接着用它处理一两个真实任务，例如连续几天做同一个项目、积累一些对话结论、补充几份笔记和文件，然后去搜索这些上下文，或者在图谱里查看它们的关联。官网明确提到数据默认留在本机，只有当你需要从别的设备或远程工作流访问时，才通过自己的安全隧道连回来，所以第一次体验最值得验证的是：它是否真的能让你在换工具后继续接上之前的上下文，而不是每次重新解释一遍项目背景。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>现在很多人用多种 AI 工具，最大的浪费不是模型能力不够，而是上下文和工作记忆不断断裂。Nowledge Mem 试图补的是这一层基础设施：不是另造一个聊天框，而是让记忆默认留在你的设备里，并且能被多个工具共享。这个方向一旦做稳，价值会比再多一个聊天入口更高，因为它直接影响长期复用和知识沉淀效率。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Claude Code、Cursor、浏览器 AI 工具之间共享项目背景和历史决策。</li>
+    <li>把日常对话、笔记、文件沉淀成可搜索的个人知识图谱，减少重复输入上下文。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2070785541931675664" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLzoEv6akAAwrXz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLzoEv6akAAwrXz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenMontage</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把 AI 编码助手升级成完整视频制作工作室的开源项目，覆盖研究、脚本、素材生成、剪辑、字幕、渲染等全流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/calesthio/OpenMontage" target="_blank">https://github.com/calesthio/OpenMontage ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你想验证“AI agent 能不能真的做完一条视频”，这个项目非常值得直接跑。README 写得很清楚，前置依赖先装 `ffmpeg`，然后可以走两条路：要么打开仓库给你的 AI 编码助手直接下任务，例如“做一条 60 秒神经网络科普动画”；要么手动安装依赖，执行 `pip install -r requirements.txt &amp;&amp; cd remotion-composer &amp;&amp; npm install &amp;&amp; cd .. &amp;&amp; pip install piper-tts &amp;&amp; cp .env.example .env`。项目既支持图像动画视频，也支持从 Archive.org、NASA、Wikimedia Commons、Pexels、Unsplash、Pixabay 等开放素材库取真实视频片段做 montage。第一次体验建议不要上来就拍商业片，而是选一个 30 到 60 秒的小题目，比如产品广告、科普短片或无旁白氛围视频。跑完后重点检查它的自动研究、字幕、音乐和最终渲染是否真的省掉了大量手工剪辑步骤。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 AI 视频工具只是在生成单个片段，而 OpenMontage 的野心是把整条生产链交给代理编排，这里面包括研究、分镜、配音、音乐、字幕、QA 甚至最终交付检查。README 里明确列出了 12 条 pipeline、数十个工具和自检流程，说明它瞄准的不是“出一条炫技短视频”，而是更接近完整视频工作室的自动化能力，这个方向对内容团队、独立创作者和品牌营销都很有启发。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速生成产品宣传短片、科普解说、纪录片式 montage 等视频原型。</li>
+    <li>用低预算批量试不同视频脚本和视觉风格，验证内容选题。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2070781166496682143" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LitPlayer（播播机）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款支持手机、平板和 Android TV 的安卓音视频播放器，可播放本地视频，也能直接连接 SMB、WebDAV、FTP、Jellyfin、UPnP 等媒体源。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.appinn.com/litplayer-android/" target="_blank">https://www.appinn.com/litplayer-android/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个工具非常适合“今晚就能装上试”的那种上手型应用。根据小众软件的介绍，它有手机平板版和 TV 版，还区分 lite 与完整版本，关键差异在于 UPnP 媒体服务器支持以及 Android 最低版本要求。最推荐的试法不是只播一个本地文件，而是按你的真实观影方式来测：如果家里有 NAS、Jellyfin 或 WebDAV/SMB 共享，就分别装一个手机版或 TV 版，连上网络媒体库，再切回本地文件，看看它在不同场景下的检索、播放和交互是否顺手。因为它的定位之一就是“功能不要过度复杂但界面要清楚”，所以第一次体验重点可以放在遥控器操作、TV 界面、网络源管理和多端一致性上。如果你刚好想给 Android TV 找替代播放器，它比单纯看截图更值得实际跑一遍。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是一个 AI 项目，但它属于今天列表里那类“看完就能下载试”的高质量工具，而且对经常折腾家庭影音库的人很实用。页面直接说明了它基于 Media3 ExoPlayer，安装包只有 12MB 多，同时兼顾本地播放和多种网络协议，这种轻量但覆盖真实需求的产品，往往比空泛的“AI 万能工具”更容易形成长期留存。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用手机、平板或 Android TV 访问家庭 NAS、Jellyfin、WebDAV 媒体库看片。</li>
+    <li>作为轻量替代播放器，统一本地视频与网络媒体资源的播放入口。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2070794949444907382" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLzxCHaWUAASPOO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLzxCHaWUAASPOO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 闪讯</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个浏览器扩展，用“规则提醒 + 可选 AI 画像推荐”帮你从大量好价信息里筛出真正值得关注的内容。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://meta.appinn.net/t/topic/87464" target="_blank">https://meta.appinn.net/t/topic/87464 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目最适合有“经常刷优惠信息但总被无效推送吵到”痛点的人体验。作者在帖文里讲得很具体，它的核心不是泛泛的 AI 推荐，而是先让你自己配置规则，只在命中规则时提醒；另外才提供一个可选的 AI 画像推荐功能，而且需要你自己配置 OpenAI 兼容接口。实际试玩时，最好的方式是先去帖子里的 Google 商店链接安装扩展，然后拿你本来就在追踪的一类商品做规则，例如数码配件、显示器、相机镜头或日用品，设置几条带关键词和条件的提醒规则，再观察侧边栏里“全部 / 命中 / 收藏 / AI 推荐”的筛选体验。随后再决定是否开启 AI 画像推荐，看它对那些没命中规则、但可能符合你消费偏好的条目是否真的有补充价值。这样能清楚区分“规则系统是否实用”和“AI 是否只是装饰”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的设计非常克制，没有把 AI 硬塞进所有流程，而是先用规则把信噪比问题解决掉，再让 AI 做补充判断。再加上作者明确说明订阅配置、规则、收藏和历史信息主要保存在浏览器本地，只有主动开启并配置接口后才会调用 AI 服务，这种隐私边界和产品分层，比很多一上来就把所有数据丢给模型的扩展更成熟。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>追踪电商好价、特定商品降价、优惠活动时减少无效通知。</li>
+    <li>用规则和 AI 推荐组合筛选更符合个人场景的消费信息。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2070718305459949762" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GPT-4.5 退出 ChatGPT</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 已正式从 ChatGPT 中移除 GPT-4.5，意味着 GPT-4 系列在消费端产品里的时代基本结束。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条消息本身不是新工具，但对很多把 ChatGPT 当作稳定生产工具的人影响不小。GPT-4.5 在写作风格、个性和长文本表达上的口碑一直很好，哪怕它不是最便宜、也不是最新架构，依然有一批重度用户把它当成“最顺手的写作机型”。现在被移除后，用户的真实选择会更快分流到两个方向：一类转向更强的工作流型代理和 API 工具链，另一类开始认真评估别家的长文本模型与写作模型。这种迁移往往会改变很多团队的日常工具栈，而不只是换一个模型名。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对个人用户来说，影响是熟悉的写作手感消失；对平台和创业公司来说，影响是“模型能力”与“产品体验”进一步解绑。以后更重要的竞争点可能不只是模型本身，而是谁能把记忆、工作流、上下文管理和工具编排做得更稳，让用户即便换模型也不愿离开产品。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2070901946735587764" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HL1RLqQXwAActN8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HL1RLqQXwAActN8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 发布 GPT-5.6 系列有限预览</div>
+  <div class="section"><div class="section-label event">事件</div><p>Berryxia 转述称 OpenAI 已发布 GPT-5.6 系列有限预览，包含旗舰版 Sol、性价比版 Terra 和高吞吐版 Luna。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>从推文描述看，这次产品线更像是在进一步细分“高性能长时程任务”“成本效率”和“高吞吐应用”三条需求，而不是用一个统一型号覆盖所有场景。即便目前还是有限预览，这种分层本身就很值得关注，因为它反映出模型竞争已经从单点 benchmark 转向更细颗粒度的工作负载匹配：谁适合命令行代理、谁适合批处理 API、谁适合大规模廉价推理，会直接影响开发者如何选型和做成本结构设计。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对独立开发者和 AI 产品团队来说，后续最关键的不只是“强不强”，而是不同型号是否真的能对应不同业务形态。如果这种产品分层持续下去，未来应用可能会更像云服务选型：高价值任务用高端模型，海量轻任务用便宜模型，中间再通过路由和缓存做编排。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2070651512410481075" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLxukopbYAEGcfs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLxukopbYAEGcfs?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>CodeFree：广州线下实战日，主打一天内带 5 个人用 Claude Code、Codex 和 ShipAny 做出真实项目 <a href="https://codefree.cafe/" target="_blank">→</a></li>
+    <li>GEO 内容工程操作手册：基于 53 篇论文整理的 GEO 内容工程方法文档，适合做 AI 搜索内容策略参考 <a href="https://doc.laoyao.cn/9fl0bc" target="_blank">→</a></li>
+    <li>GEO 内容工程系统研究报告：从系统工程、RAG、结构化内容角度拆解 GEO 的长文报告 <a href="https://doc.laoyao.cn/t754wa" target="_blank">→</a></li>
+    <li>NovReader：一款 Windows 本地小说阅读与管理软件，主打 `.nov` 文本格式、目录分页和长段落自动拆分 <a href="https://meta.appinn.net/t/topic/87466" target="_blank">→</a></li>
+    <li>Gorden Sun AI 资讯日报：适合继续追踪当天更广泛的 AI 新闻与论文动态 <a href="https://gorden-sun.notion.site/6-27-AI-38c59424732580caa1a6cd27b2b79f96?source=copy_link" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
