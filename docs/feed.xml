@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 28 Jun 2026 00:39:09 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 00:37:53 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/29 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-29.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-29.html</guid>
+      <description>今天最值得上手的方向有两个：一类是在现有工作流上直接提效的“外骨骼”工具，比如给 AI Agent 补互联网能力、给写作补结构化记忆、给代码上下文整理加原生桌面入口；另一类是把原本需要专业门槛的事情做成“点开就能试”的轻量化产品，比如一键换设计风格、免安装投屏、菜单栏功耗监控。
+另一条暗线是开源基础设施继续往“可直接部署/可直接下载/可直接跑”的形态演进，今天不少项目都不是论文概念，而是已经有 GitHub、安装命令、安装包或现成入口的东西。</description>
+      <pubDate>2026-06-29T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/28 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-28.html</link>

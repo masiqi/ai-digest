@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-29</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-29</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得上手的方向有两个：一类是在现有工作流上直接提效的“外骨骼”工具，比如给 AI Agent 补互联网能力、给写作补结构化记忆、给代码上下文整理加原生桌面入口；另一类是把原本需要专业门槛的事情做成“点开就能试”的轻量化产品，比如一键换设计风格、免安装投屏、菜单栏功耗监控。
+另一条暗线是开源基础设施继续往“可直接部署/可直接下载/可直接跑”的形态演进，今天不少项目都不是论文概念，而是已经有 GitHub、安装命令、安装包或现成入口的东西。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ RepoPrompt CE</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 AI 编码代理的原生 macOS 上下文工程桌面应用，帮你整理代码库上下文、文件、结构和 diff，再交给 AI 工具使用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/repoprompt/repoprompt-ce" target="_blank">https://github.com/repoprompt/repoprompt-ce ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这是一个明确面向 macOS 26+ 的原生应用。最直接的方式是打开 GitHub 仓库，按 README 里的 Homebrew 或本地安装路径上手：仓库说明可以安装到 /Applications/RepoPrompt CE.app，也提供 “Launch RepoPrompt CE.command” 和 “Install RepoPrompt CE Local Production.command” 两条本地路线。上手时可以先挑一个自己的代码仓库，用它整理文件、CodeMaps、仓库结构和 Git diff，再把这些上下文交给 AI coding agent 或 MCP 客户端。它不是单纯聊天壳，而是强调“先把代码库上下文组织好再让模型动手”，所以最适合拿一个真实项目试：先载入仓库、筛选关键文件，再把整理后的上下文喂给代理做修改或评审。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>今天很多编码 Agent 的瓶颈不是不会写，而是拿不到稳定、可审查的上下文。RepoPrompt CE 的卖点正是把“上下文工程”产品化，而且是原生 macOS 应用加 MCP/CLI 结合的形态。对重度 AI 编程用户来说，这比再多一个聊天窗口更有价值，因为它直接瞄准了上下文选择、仓库理解和多代理协作的核心痛点。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在大型代码仓库里整理 AI 需要的最小上下文，减少无关文件干扰。</li>
+    <li>配合 MCP 客户端或 CLI Agent 做代码评审、重构和多步骤任务拆解。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2071348102263378085" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HJWgUGqXcAALvW8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJWgUGqXcAALvW8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HJWgi9rWAAIwMOq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HJWgi9rWAAIwMOq?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Agent Reach</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个给 AI Agent 一键补上互联网读取与搜索能力的开源能力层，支持网页、YouTube、GitHub、Twitter/X、Reddit、B 站、小红书等渠道。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Panniantong/agent-reach" target="_blank">https://github.com/Panniantong/agent-reach ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>仓库给的最短路径非常清楚：先执行 `pip install agent-reach`，再运行 `agent-reach install` 做安装；装完后可以用 `agent-reach doctor` 检查各个渠道的可用状态。README 还给了安全模式和预演方式，比如 `agent-reach install --safe`、`agent-reach install --dry-run`。如果你本来就在用 Claude Code、Cursor、OpenClaw、Windsurf 这类能跑命令的 Agent，可以先把它装在本机，让 Agent 直接去读网页、查 GitHub、拉 YouTube 字幕，甚至通过 cookie 方式用 twitter-cli 搜索和读取 X 内容。最适合的试玩方法，是先拿一个具体任务，比如“查一个仓库 README + 搜一条推文 + 读一个 YouTube 字幕”，看它能不能把过去需要多个插件和 API 才能完成的流程串起来。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它最有意思的地方不是又发明了一层包装，而是把多平台内容访问的“后端选型、安装、诊断、回退”都统一起来。项目明确把自己定义成 capability layer，而不是又一个封闭工具，这意味着它更像 Agent 的基础设施。对实际使用 Agent 的人来说，这种“给代理装眼睛”的能力往往比再换一个模型更能立刻提升可用性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让本地或云端 AI Agent 直接检索社交平台、GitHub、网页和视频字幕做研究或情报搜集。</li>
+    <li>给内容团队、开发者或分析师搭一套低 API 成本的跨站信息采集工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2071208963774074925" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2071205604627296256/img/0Ro70R-t40lW4KYN.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2071205604627296256/img/0Ro70R-t40lW4KYN.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2070647191417528320/img/1sjETyOUu3mix_DD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2070647191417528320/img/1sjETyOUu3mix_DD?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Goink</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个带结构化记忆的桌面 AI 长篇写作系统，支持对话式写作、自动状态追踪、本地语义搜索和内置 Git 回退。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/sigpanic/goink" target="_blank">https://github.com/sigpanic/goink ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最适合的入口是直接去 GitHub Releases 下载对应平台的安装包，仓库说明它主打“跨平台开箱即用”，不需要你额外先装 Python、Node.js、数据库或 GPU。安装后先新建一部小说或长文项目，再尝试用自然语言让它写角色、章节或伏笔，它会把角色档案、关系、伏笔状态、弧线进度、地点关系、读者认知等信息结构化追踪。实际体验时，建议故意做一个长上下文任务，比如先设定 3 个角色和 2 条伏笔，再写两章，看看它能不能通过本地语义搜索找回前文设定，并在写完后自动推进状态。正文修改默认走 Diff 审批流，还自带 Git 历史，所以你可以像审代码一样审小说改动。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>普通通用聊天模型写长篇最大问题就是“失忆”，而 Goink 明确把结构化记忆、本地语义检索和写后自维护做成核心能力，而不是靠用户不断补 prompt。它实际上是在把长篇写作从“聊天生成”升级成“带状态的 Agent 工作流”，这在中文写作工具里很有辨识度。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>写长篇小说、世界观复杂的剧本或连续专栏时，持续维护角色和伏笔一致性。</li>
+    <li>给内容团队做长期项目写作台，把大纲、正文、设定和改稿历史放在一个系统里。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2071156310708482061" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PowerTop</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个只面向带电池的 Apple Silicon MacBook 的原生 macOS 菜单栏功耗监控工具，可实时显示电量、功耗与电池相关参数。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/kDolphin/PowerTop" target="_blank">https://github.com/kDolphin/PowerTop ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目适合 Apple Silicon MacBook 用户直接下载试。最短路径是去 GitHub Releases 下载 `PowerTop.zip`，解压出 `PowerTop.app` 后拖进 `/Applications`，然后启动应用。打开后它会常驻菜单栏，能看到充电状态、电源流向以及更详细的电池和功耗参数。README 和小众软件页面都强调它只支持带内置电池的苹果芯片 MacBook，不支持 Mac mini、Mac Studio、Mac Pro，也不支持 Intel 机型，所以最好的体验方式是边充电边跑浏览器、视频导出或代码编译，观察 `SystemLoad`、`SystemPowerIn` 和电池充放电相关信息怎样变化。对于关心续航或电源适配器负载的人，这种实时反馈很直观。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多系统监控工具都很全，但不够轻，也未必把“功耗”和“菜单栏可见性”做到位。PowerTop 的特点是抓 AppleSmartBattery 的 PowerTelemetryData 做实时展示，还特别强调用 `Amperage × Voltage` 计算更可靠的充电速率。这类小而专的原生工具，往往是高频真实使用者最容易长期留下来的。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>观察 MacBook 在不同工作负载下的功耗和充电情况，优化续航策略。</li>
+    <li>排查高功耗应用、适配器供电是否跟得上，以及电池状态变化。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2071159818753028412" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HL484TNXEAAsc8K?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HL484TNXEAAsc8K?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ scrcpy 投屏助手</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个给 scrcpy 套上免安装、双击即用、全中文 Windows 图形界面的轻量开源工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/rockbenben/scrcpy-helper" target="_blank">https://github.com/rockbenben/scrcpy-helper ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目不是重新发明 Android 投屏协议，而是把原本偏命令行的 scrcpy 变成普通用户也能直接点开的形态。仓库写得很清楚：把 `scrcpy-helper.ps1`、`投屏助手-双击运行.bat` 和 `使用说明.txt` 放进 scrcpy 的解压目录，整个文件夹打包后，用户解压再双击 `.bat` 就能使用。作者建议搭配 scrcpy 4.0 及以上版本，因为独立窗口和保持唤醒这些参数依赖较新的 scrcpy。实际体验时，可以先准备一台开启 USB 调试的 Android 手机，在 Windows 上解压 scrcpy 官方发布包，再把这个助手文件放进去，双击后直接从中文界面选择有线投屏、无线投屏、录屏或独立窗口。对不想碰命令行的用户，这个门槛明显更低。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它代表了一种很实用的开源思路：不一定重新做一个“更大更全”的新产品，而是把成熟底层工具包装成更容易传播、更容易被普通用户真正用起来的形态。对于 scrcpy 这类本身很强但有上手门槛的项目，这种“最后一公里 GUI”非常有价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Windows 电脑上快速投屏 Android 手机做演示、录屏或远程操作。</li>
+    <li>给不熟命令行的同事或朋友提供一个开箱即用的手机投屏工具包。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2071049354526204206" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google AI Studio 加入 Design Variations</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google AI Studio 新增 Design Variations，可在已生成网页/应用后，一键生成多个新的界面风格方向供用户挑选。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条更新的意义不只是“多一个按钮”，而是把原本需要写一大段视觉提示词的事情，进一步压缩成在 Build 模式里对现有产物做风格分叉。结合推文中给出的实际路径——AI Studio、Build New App、生成网页后点击右上角 Edit tools，再点下方 Designs——它已经不是概念演示，而是能直接进产品里试的功能。对很多非设计背景的开发者和产品人来说，这种“先生成功能，再快速横向试多个视觉方向”的能力，会明显降低把 demo 做到可展示状态的门槛。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>它会进一步强化 AI Studio 作为“从想法到可分享原型”的入口价值，也会让界面生成逐渐从“会不会做”转向“能不能快速比较多个方向”。对独立开发者、小团队和快速原型工作流来说，这比单次生成一个页面更重要，因为真正的决策往往发生在对比阶段。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2071245834747064670" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2071245522250407936/img/yFdEt_F1c1HbfaA3.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2071245522250407936/img/yFdEt_F1c1HbfaA3.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Tag 在 Slack 内测开放</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 推出 Claude Tag beta，让 Claude 以可被 @ 的形式直接进入 Slack 频道协作，当前面向 Claude Team 和 Enterprise 用户。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>从已抓到的推文和外部公开描述看，Claude Tag 不再只是把聊天机器人塞进 Slack，而是让团队在共享频道中像 @ 同事一样给 Claude 派活，并由管理员预先限定它可访问的频道、工具、数据源和代码库。这个形态的关键在于“共享上下文”和“团队可见协作”，也就是 AI 不再只是个人助手，而是变成在工作流里有持续身份、能承接任务和线程上下文的协作者。它会把 Slack 这种消息工具进一步推向任务分派和代理执行的界面层。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对企业级 AI 应用来说，这比单点聊天式 Copilot 更接近组织级落地，因为协作、权限、可见性和跨人接续都在同一个界面里。未来真正的竞争点，很可能不是谁的模型回答更会说，而是谁能把代理嵌进团队已有的软件和治理结构里。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2071356525570924563" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DSpark / DeepSpec 开源投机解码基础设施</div>
+  <div class="section"><div class="section-label event">事件</div><p>DeepSeek 相关讨论集中在 DSpark 与 DeepSpec：前者是推理加速框架，后者是训练和评估 speculative decoding draft model 的开源代码库。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>就今天能核实的信息看，DeepSpec 的 GitHub 仓库明确提供了用于 speculative decoding 的数据准备、训练和评估全栈代码，并支持 DSpark、DFlash、Eagle3 等 draft 模型路线。推文里对 DSpark 的核心描述是：它不是新模型，而是推理优化方案，通过并行 draft backbone 加小型顺序 head 的方式降低后缀衰减问题。也就是说，这条线的重点不在“再出一个新基座”，而在于怎么把已有大模型在相同硬件上跑得更快。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这类开源对行业最大的刺激，是把推理优化从论文和闭源服务端技巧，往可复现实验和可迁移工程栈推进。对云推理平台、自托管模型服务和高并发场景来说，推理优化一旦成熟，带来的商业价值可能不亚于模型分数本身。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2071261357920682276" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2071226785472061904" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2071075762409459921" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/claudeai/status/2069468701548531895" target="_blank"><span class="handle">@claudeai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HL6ZOReb0AAkI7L?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HL6ZOReb0AAkI7L?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HL1V1mBaAAAZ9Zy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HL1V1mBaAAAZ9Zy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HL1WDNQawAAElEU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HL1WDNQawAAElEU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Huashu Design：HTML 原生设计 skill，可在 agent 里生成高保真原型、PPT、动画和可编辑 PPTX <a href="https://github.com/alchaincyf/huashu-design" target="_blank">→</a></li>
+    <li>TimesFM：Google Research 的时间序列基础模型，已开源 GitHub 与 Hugging Face，可做零样本时间序列预测 <a href="https://github.com/google-research/timesfm" target="_blank">→</a></li>
+    <li>IP Crawl：一个收集全球公共摄像头的网站，可按定位尝试查看附近公开摄像头 <a href="https://appinn.com/ip-crawl/" target="_blank">→</a></li>
+    <li>newtab01：作者分享的基于书签驱动、以列表显示的 Chrome 新标签页扩展，但当前抓到的信息不足以展开玩法细节 <a href="https://x.com/appinn/status/2071226785472061904" target="_blank">→</a></li>
+    <li>PinToDesk：作者分享的轻量待办工具，但当前抓到的信息不足以确认其下载入口与具体交互 <a href="https://x.com/appinn/status/2071075762409459921" target="_blank">→</a></li>
+    <li>Claude Tag：Slack 内可 @ 的团队协作型 Claude，当前为 Team / Enterprise beta <a href="https://x.com/claudeai/status/2069468701548531895" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
