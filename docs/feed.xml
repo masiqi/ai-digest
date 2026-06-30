@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 30 Jun 2026 02:27:28 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 02:27:40 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/06/30 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-30.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-30.html</guid>
-      <description>今天最值得上手的两条线，一条是“给现有 AI 工具补一层外部能力”的增强器与工作流包装，另一条是“把内容生产直接做成可导出、可打印、可复用的成品系统”。相比纯模型新闻，今天更值得亲自试的是这些可以马上下载、访问或克隆的工具。</description>
+      <description>今天最值得上手的方向有两个：一是“把现有 AI agent 变成更能落地的工作流工具”，包括云端 agent 编排、移动端远程操控、长任务 harness，以及把视频/PPT 直接变成可交付内容；二是文档与知识表达工具明显在升温，既有面向 Agent 的排版系统，也有更轻量的在线演示分享站。</description>
       <pubDate>2026-06-30T08:30:00+08:00</pubDate>
     </item>
     <item>
