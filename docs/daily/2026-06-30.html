@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-06-30</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-06-30</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得上手的两条线，一条是“给现有 AI 工具补一层外部能力”的增强器与工作流包装，另一条是“把内容生产直接做成可导出、可打印、可复用的成品系统”。相比纯模型新闻，今天更值得亲自试的是这些可以马上下载、访问或克隆的工具。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Google agents-cli</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 开源的一套 CLI 与 skills 包，用来把本地编码助手变成在 Google Cloud 上创建、评测和部署 AI agents 的专用助手。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/google/agents-cli" target="_blank">https://github.com/google/agents-cli ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目直接从 GitHub 就能开始看。先打开仓库 README，确认它的定位是“the CLI and skills that turn any coding assistant into an expert at creating, evaluating, and deploying AI agents on Google Cloud”。如果你本身就在用 Claude Code、Codex 或其他 coding assistant，第一步是先阅读仓库里的安装与初始化说明，确认它要求的 Python/云环境；第二步是把仓库提供的 skills 接到你现有助手的工作流里，让助手先学会如何创建、评估和部署云端 agent；第三步再挑一个最小场景，比如做一个基于 Google Cloud 的 demo agent、验证一个评测任务、或者跑一次部署流程。它更像“给 Agent 的开发文档 + 操作手册”而不是单独聊天产品，所以最适合你边读 README 边在自己的项目里实操。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推文明确提到它不是单独的新 Agent，而是一套 Skill 包；GitHub 主页也直接写明它要把任意 coding assistant 训练成“创建、评测、部署 Google Cloud agents 的专家”。这意味着它代表了一种很实用的新形态：不是只卷模型，而是把平台知识沉淀成 agent 可执行的技能层，降低云端 agent 工程化门槛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>团队想把本地 AI 编程助手接入 Google Cloud 的 agent 开发与部署流程。</li>
+    <li>需要把 agent 开发规范、评测步骤和部署套路沉淀为可重复执行的技能包。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2071521046537310447" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HL-FZEdbQAAaZRu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HL-FZEdbQAAaZRu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把 AI 生成内容排版成可打印 PDF、简历、报告、幻灯片和 One-Pager 的开源文档设计系统。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>仓库 README 已经给了非常清晰的入口：它主打“Good content deserves good paper”，并展示了简历、财报点评、演示文稿、产品一页纸、推荐信、更新日志、作品集等成品 PDF。最直接的玩法是先打开 GitHub 仓库里的 demo PDF 看效果，再按 README 的安装方式接入到你正在使用的 agent 环境里。它支持作为 Codex plugin 安装，也支持通用 agents 通过 `~/.agents/` 读取 skill 包。上手时可以先拿一份现成内容，比如投资笔记、产品介绍、个人简历或周报，让 AI 先生成文稿，再交给 Kami 套模板输出成正式文档；如果你经常要做对外材料，可以连续试一遍 Resume、Slides、One-Pager 这几类模板，感受它在统一视觉系统下的可复用性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>GitHub 页面明确说它提供“一套约束语言、九种模板”，目标是让 agent 生成的文档稳定、可交付，而不是每次都漂移成不同样式。今天推文又补充了新的更新点：序列图、类图和 ER 图现在采用 Kami 自己的调色板渲染，安装与打包也更稳定。这类工具的价值不是“再做一个编辑器”，而是让 AI 输出第一次就更像成品。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 AI 生成的研究报告、简历、产品 brief 快速整理成可打印或可发送的正式材料。</li>
+    <li>给团队建立统一的 AI 文档出品规范，减少每次手工调样式的时间。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2071440011564851690" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2071439936193241088/img/kAIh1kp6U8ChyNFU.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2071439936193241088/img/kAIh1kp6U8ChyNFU.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 视频转步骤文档生成器（video-to-doc-stepfun）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把操作视频自动转成带截图、带说明文字的步骤操作文档的开源项目，可输出 Markdown 和 PDF。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/lxfater/video-to-doc-stepfun" target="_blank">https://github.com/lxfater/video-to-doc-stepfun ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目的 README 已经把使用流程写得比较全。先准备一段教程视频或录屏，然后按仓库说明安装 `ffmpeg` 和 `whisper`，再配置 `.env` 中的 StepFun API Key。默认模式是“字幕驱动”：Whisper 先把语音转成带时间戳字幕，AI 再根据字幕识别操作步骤，成本更低、速度更快；如果你的视频很多关键信息在画面里，也可以切到更贵的“上传视频给 AI 看画面”模式。仓库还提供了 Web 界面：启动 FastAPI 后端和 React 前端后，直接在网页上传视频，就能实时看处理进度、在线编辑 Markdown，并导出 PDF。最适合的第一轮体验，是拿一段你自己的软件演示、后台配置流程或教程录屏跑一遍，看它能否自动生成一份像产品 SOP 一样的文档。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>GitHub README 已直接说明它会统一输出视频、字幕、截图、steps.json、Markdown 和 PDF，说明这不是只有概念的 demo，而是把“视频→文档”的完整流水线串起来了。再结合推文里作者同步开源代码，以及 StepFun Startup Program 页面写明它鼓励基于 Step 3.7 Flash 构建 agent 与工作流，可以看出这是一个很适合继续往产品化方向打磨的项目。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把产品演示、后台操作、培训录屏快速整理成 SOP、客服文档或内部培训手册。</li>
+    <li>做知识付费、课程运营或企业培训时，把视频内容同步沉淀成文字版步骤指南。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2071425817700401573" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ javii.tools / asciilab 所在工具箱</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向内容创作者的在线小工具集合，覆盖 ASCII/终端艺术、消息气泡 mockup、标签、抠图、像素化、图表和透明视频导出等。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="http://javii.tools" target="_blank">http://javii.tools ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个站点最适合直接打开网页试。首页就写明它是“seven tiny apps, one suite”，而且很多功能是即输即出：比如做 iMessage、WhatsApp、Instagram、TikTok、YouTube 风格的 mockup，输入文字后即可导出透明 PNG 或色键 MP4；想做内容封面或二创素材，可以直接生成 Instagram tag、iOS 风格地点标签、时钟组件、像素化局部、相机画廊式相框等。推文里提到的 asciilab 对应站内的“Photo. Glyphs. Terminal.”方向，支持把图片、GIF 或视频变成终端艺术/ASCII 风格输出。建议第一轮别贪多，直接拿一张图和一段文案，分别试一次终端艺术导出和社媒 mockup 导出，就能很快判断它是否适合你的内容生产链路。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>外部页面直接给出了非常具体的能力描述，不是单一小玩具，而是一整套“零设计门槛”的素材工具箱：既能生成社媒视觉元素，也能做 ASCII/terminal art、透明视频和数据图。推文本身强调了 ASCII 艺术切入点，官网则补全了整个平台的导出能力，这种“打开即用、结果可直接发”的工具，对内容创作者特别友好。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做短视频封面、社媒截图 mockup、透明标签和贴纸式视觉素材。</li>
+    <li>把图片或视频转成 ASCII / terminal art，用于海报、演示、二创和品牌视觉实验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2071627745591980125" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2071627645931130880/img/FkOyoTfDHWmTQnYa.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2071627645931130880/img/FkOyoTfDHWmTQnYa.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2071377770081378304/img/QfN-UnEcg5eG5tqu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2071377770081378304/img/QfN-UnEcg5eG5tqu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Codex++</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个不改原版 Codex 安装文件、通过外部 launcher 和 CDP 注入增强脚本的 Codex App 外挂增强器。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/BigPizzaV3/CodexPlusPlus" target="_blank">https://github.com/BigPizzaV3/CodexPlusPlus ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目的 README_EN 写得很实用，最简单的方式是直接从 GitHub Releases 下载对应系统的安装包，Windows 用 `CodexPlusPlus-*-windows-x64-setup.exe`，macOS 则有 `macos-x64.dmg` 和 `macos-arm64.dmg`。安装后会出现两个入口：`Codex++` 和 `Codex++ Manager`。推荐的试法不是一上来就折腾复杂配置，而是先用它启动你已有的 Codex App，确认增强菜单与管理工具能正常打开；再去看它提供的日志、诊断、worktree、provider sync 等增强能力。README 明确说它通过 Chromium DevTools Protocol 注入脚本，而不是修改 Codex 原始文件，所以更像“外挂式增强层”。如果你本来就重度使用 Codex 桌面版，这类工具最值得先试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推文只给了很短一句介绍，但 GitHub README 已充分证明它不是概念项目：有 40+ releases、完整的安装包、管理工具、日志诊断、Provider Sync 和 worktree 相关说明。它代表的是另一条很现实的 AI 工具路线：围绕现有强产品做增强层，而不是从零重造一个同类 IDE。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>重度 Codex 用户想补充启动管理、增强脚本、诊断和更灵活的接入方式。</li>
+    <li>团队希望在不修改原版安装文件的前提下，为 Codex 加一层更可控的外围能力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2071611749975888301" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Best.xiaohu.ai</div>
+  <div class="section"><div class="section-label event">一句话</div><p>小互做的一个把 AI 新消息讲清楚、讲人话的解释型内容站点。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://best.xiaohu.ai/en" target="_blank">https://best.xiaohu.ai/en ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个站本身不是下载型工具，更像一个可直接访问的“AI 解释器”。打开首页就能看到当天主打内容和一串最新 explainer，标题都偏“把复杂 AI 进展翻译成人话”，比如脑机接口、Loop Engineering、DeepSeek V4 加速、模型发布节奏等。实际玩法很简单：把它当成你的每日 AI 信息过滤层，先挑首页的 Today’s pick 或 Latest explainers 阅读，再结合它的 plain language 风格快速判断某个技术点是否值得继续深挖。如果你平时会把复杂技术话题转发给同事、客户或社群，这类站点很适合作为第一层“降噪转述”入口，而不是直接让大家啃原论文或原推文。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推文本身只说“瞎捣鼓了一个东西”，证据本来不够；但外部页面已经清楚写出定位：“Every day I make sense of what's new in AI — checking what's real and explaining it in plain language。”这让它从模糊链接升级成了一个有明确产品主张的可访问工具。它不解决编码问题，但解决了信息消费里的“看不懂、看不完、看不清真假”问题。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>每天快速扫 AI 圈新进展，先读解释版再决定要不要追原始资料。</li>
+    <li>给非技术同事、客户或社群转述复杂 AI 新闻和概念时做第一层整理。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2071612597200466011" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Meta 同时推 Brain2Qwerty v2，并把相关训练代码与数据集开放出来</div>
+  <div class="section"><div class="section-label event">事件</div><p>多条推文集中提到 Meta 发布 Brain2Qwerty v2，基于 MEG 脑磁图头盔做无创脑信号到文本的实时解码；同时小互还提到 Meta 这次把训练代码和数据集一起开源。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条新闻的关键不只是“脑机接口又进了一步”，而是它把科研演示、性能数字与开放策略捆在了一起。推文给出的核心数字是平均单词准确率 61%，最佳被试 78%，而 Best.xiaohu.ai 首页又补了一条更直观的对比：无创方案把准确率从 8% 拉到 61%。如果训练代码与数据集真的同步开放，这会让这一方向从“只能看论文”更进一步，变成研究团队能复现、比较和继续迭代的公共基线。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对产业层面的影响不在短期消费级落地，而在于无创脑机接口的研究门槛有机会被进一步拉低。开放代码和数据集会吸引更多学术团队、NeuroAI 创业公司和辅助沟通技术方向的开发者进入同一条基线竞争，推动脑信号解码从单点论文突破，逐步走向工具链、基准和上层应用生态。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2071743157465993461" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cursor 最近几版更新继续把重点押在云端 agent、自动化与可定制化</div>
+  <div class="section"><div class="section-label event">事件</div><p>列表里有人提到“Cursor iOS 版本正式来了”，但现有公开证据不足以确认官方 iOS App；能确认的是 Cursor 官方 changelog 在最近几版持续更新 Customize、Automations、Cloud subagents、Design Mode 等能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>今天更重要的不是某个移动端传闻，而是 Cursor 官方产品方向已经非常清晰：它在把桌面 AI IDE 继续外扩成一个“本地 + 云端 + 自动化 + 市场”的完整 agent 工作台。官方 changelog 明确写到 `/automate`、GitHub/Slack 触发器、computer use、cloud subagents、环境快照和插件/skills/MCP 统一管理页，这说明竞争焦点早就不只是代码补全，而是谁能让 agent 真正接管更长链路的工程任务。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会继续抬高 AI 编程工具的竞争门槛。未来用户比较的不再是“谁回答得更聪明”，而是谁能更稳定地跑自动化、管理团队工作流、把云端执行和本地编辑串起来。对开发者和团队来说，选型标准会越来越偏向工作流能力、生态与可扩展性，而不是单一模型分数。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2071739033953374270" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2071638346145923072/img/nqFrOzzGvR8kxbee.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2071638346145923072/img/nqFrOzzGvR8kxbee.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Zenith 押注“harness 大于模型”，把 GPT-5.5 推到 Frontier SWE 第一</div>
+  <div class="section"><div class="section-label event">事件</div><p>Intelligent Internet 发布 Zenith，并在博客和 GitHub 仓库中声称它通过长程任务编排与验证框架，把 GPT-5.5 在 Frontier SWE 上从默认 Codex harness 的第 5 名推到第 1 名。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Zenith 的重要性不在于又多了一个 agent 框架，而在于它把“长任务为什么失败”这个问题说透了：很多 agent 不是做不动，而是太早宣布完成。官方博客与 GitHub README 都反复强调 repeated gap-finding、revisable planning、independent verification、adaptive orchestration 和 stopping discipline。这种观点对当下 AI 工程特别关键，因为模型性能接近之后，真正拉开差距的是编排、验证、恢复与停止机制，而不是再盲目堆更强模型。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会强化整个行业对“agent harness”层的重视。未来会有更多团队把资源投入到 orchestration、tester、skills、evidence trace、validation gate 这些基础设施，而不是只追最新闭源大模型。对开源社区来说，这也是一个好信号：即便拿不到最顶级模型访问权限，仍然可以通过更好的控制循环把现有模型推到更高上限。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ii_posts/status/2071674024011161926" target="_blank"><span class="handle">@ii_posts</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMAQgKIXsAAixB5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMAQgKIXsAAixB5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>StepFun Startup Program：给早期 AI 团队提供 API credits、生态支持、联合营销和伙伴引荐的官方计划 <a href="https://platform.stepfun.ai/startup-program" target="_blank">→</a></li>
+    <li>Meta Models and libraries：Meta 官方模型与开源库总入口，可继续追踪其开放出来的模型、数据与研究工具 <a href="https://ai.meta.com/resources/models-and-libraries" target="_blank">→</a></li>
+    <li>Cursor 官方更新页：可持续跟踪 Customize、Cloud Agents、Automations、Design Mode 等新能力 <a href="https://cursor.com/changelog" target="_blank">→</a></li>
+    <li>Intelligent Internet 博文 Zenith: frontier performance without Fable：对长程 agent harness 的方法论和 benchmark 结果有更完整解释 <a href="https://ii.inc/blog/post/zenith" target="_blank">→</a></li>
+    <li>Codex++ Releases：如果你想直接装增强版启动器，安装包入口在这里 <a href="https://github.com/BigPizzaV3/CodexPlusPlus/releases" target="_blank">→</a></li>
+    <li>javii.tools：站内还有 mockup、标签、抠图、像素化、透明视频等一整套内容创作小工具可继续挖 <a href="http://javii.tools" target="_blank">→</a></li>
+    <li>Best.xiaohu.ai：适合持续跟踪“把 AI 新闻讲人话”的解释型内容产品 <a href="https://best.xiaohu.ai/en" target="_blank">→</a></li>
+    <li>Google agents-cli：如果你在关注“把平台知识封装成 agent skills”这条路线，可以继续跟它的 release 和 README 演进 <a href="https://github.com/google/agents-cli" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

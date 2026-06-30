@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 29 Jun 2026 00:37:53 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 01:30:49 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/06/30 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-06-30.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-06-30.html</guid>
+      <description>今天最值得上手的两条线，一条是“给现有 AI 工具补一层外部能力”的增强器与工作流包装，另一条是“把内容生产直接做成可导出、可打印、可复用的成品系统”。相比纯模型新闻，今天更值得亲自试的是这些可以马上下载、访问或克隆的工具。</description>
+      <pubDate>2026-06-30T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/06/29 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-06-29.html</link>
