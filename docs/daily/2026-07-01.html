@@ -70,132 +70,182 @@
   <div class="date">2026-07-01</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>今天最值得上手的方向有两个：一是“把现有 AI agent 变成更能落地的工作流工具”，包括云端 agent 编排、移动端远程操控、长任务 harness，以及把视频/PPT 直接变成可交付内容；二是文档与知识表达工具明显在升温，既有面向 Agent 的排版系统，也有更轻量的在线演示分享站。</p>
+    <p>今天最值得上手的是一批“把 AI 真正变成工作流”的工具：一边是面向开发者的 Agent IDE、网页媒体嗅探器、自动录屏 CLI，另一边是把影像日记、微信群约时间这类日常动作做得更顺手的小工具。
+同时，大厂动态也在继续推高多模态与垂直场景的门槛：Google 把更便宜更快的图像/视频模型推到开发入口，Anthropic 则开始把科学研究工作台产品化。</p>
   </div>
 </div>
 <div class="topic">
-  <div class="topic-title">🛠️ Google agents-cli</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Google 开源的一套 CLI + skills 组合，让本地编码助手更容易在 Google Cloud 上创建、评估和部署 AI agents。</p></div>
+  <div class="topic-title">🛠️ Orca</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 AI coding agent 的开源 ADE，可把 Claude Code、Codex、OpenCode、Pi 等并排跑在隔离 worktree 里。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/google/agents-cli" target="_blank">https://github.com/google/agents-cli ↗</a></p>
+    <p><a href="https://onorca.dev" target="_blank">https://onorca.dev ↗</a></p>
+    <p><a href="https://github.com/stablyai/orca" target="_blank">https://github.com/stablyai/orca ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 GitHub 仓库阅读 README，再按仓库提供的安装方式准备环境。证据包里给到的仓库描述明确写着它是“turn any coding assistant into an expert at creating, evaluating, and deploying AI agents on Google Cloud”，项目主语言是 Python，最近一次更新在 6 月 30 日，星标约 3.6k。实际动手时，适合先把它当成“给现有 Agent 加一层 Google Cloud 工作流能力”的工具：先看示例 skill 和命令结构，确认你的本地编码 Agent 能读取 skill，再从最小场景开始，例如创建一个测试 agent、跑评估、再尝试部署到云端，而不是一上来就接生产项目。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是又一个从零写 Agent 的框架，而是把“云端 Agent 的构建、评估、部署知识”打包成 CLI 与 skills，思路很贴近现在的 Agent 实战。外部证据显示它已拿到约 3.6k GitHub stars，说明开发者关注度不低；更重要的是，它把“给 Agent 一套可执行文档/技能包”这件事做成了产品形态，方向很值得盯。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最短路径是先去官网的下载页安装桌面版，支持 macOS、Windows 和 Linux；如果你本来就在用 Claude Code、Codex 或 OpenCode，装好后直接把现有 CLI 接进来即可，不需要换订阅体系。根据官网和 GitHub README，它的核心玩法是先为一个仓库开多个隔离 worktree，然后把同一任务分别交给不同 agent 并排运行，再在内置 diff 视图里比较结果、挑一个合并。进一步还能用内置 Chromium 做 Design Mode，点页面元素把 HTML/CSS 和截图送进 prompt；如果你经常离开工位，还可以配合手机 companion app 查看 agent 状态和追发指令。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是单纯“套壳终端”。GitHub README 明确把它定位成 “Run Codex, ClaudeCode, OpenCode or Pi side-by-side — each in its own worktree”，并且仓库已有约 7.9k stars。官网和 README 同时强调 worktree、原生终端分屏、Design Mode、SSH worktrees、移动端 companion，这说明它想解决的是多 agent 并行协作的整套环境，而不是只做一个聊天框。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>已经在用本地 coding agent，但想把 agent 工作流接到 Google Cloud。</li>
-    <li>团队要做云端 agent demo、评测或 PoC，希望少写一层重复脚手架。</li>
+    <li>同一个需求让 Claude Code、Codex、OpenCode 各做一版，快速对比代码质量和实现路径。</li>
+    <li>在远程机器上跑重型 agent 任务，同时用本地或手机端盯进度、补指令、做 diff review。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2071521046537310447" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/LinearUncle/status/2071807005275111658" target="_blank"><span class="handle">@LinearUncle</span> 查看原文 ↗</a>
     </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMCJKM8WgAAGnBr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMCJKM8WgAAGnBr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMCJSr6XgAExKc7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMCJSr6XgAExKc7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMCJaZiWAAIpz5H?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMCJaZiWAAIpz5H?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMCJe1xXcAAD-rE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMCJe1xXcAAD-rE?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Kami</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个把 AI 生成内容排成“能直接交付”的文档/幻灯/报告设计系统与模板工具。</p></div>
+  <div class="topic-title">🛠️ FlowPick</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个免费开源的浏览器扩展，不开 F12 也能抓取网页上的视频、音频和图片资源。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+    <p><a href="https://flowpick.com" target="_blank">https://flowpick.com ↗</a></p>
+    <p><a href="https://github.com/flowpick/flowpick-web" target="_blank">https://github.com/flowpick/flowpick-web ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先去 GitHub 仓库看 README 里的 Showcase 和 Install 部分。外部页面明确给了多种成品示例，包括 Resume、Equity Report、Slides、One-Pager、Changelog、Portfolio，并且 README 直接写了安装入口：Codex 插件市场可用 `codex plugin marketplace upgrade kami` 和 `codex plugin add kami@kami`，也支持通用 agents 通过 `~/.agents/` 方式接入。实际体验建议先挑一个最短路径：例如先用它生成一页产品 brief 或几页 slides，再观察模板对字体、留白、配色和图表风格的约束效果；如果你平时会让 Claude/Codex 生成文档，这类约束式模板最容易立刻见效。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>README 里写得很清楚，Kami 的核心不是“再造一个编辑器”，而是给 AI 输出增加一套稳定设计约束，让每次生成不再漂移成灰扑扑、版式不一致的默认文档。证据包显示仓库约 9.3k stars，更新很新；再结合 README 展示的跨语言、多模板 PDF 样例，它更像是面向 Agent 时代的“文档外观层”。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个工具的入口非常直接。按作者在小众软件帖子里的说明，先从 Chrome 商店、Edge 商店或 Firefox 扩展商店安装 FlowPick，然后打开任意带媒体资源的网页，点击浏览器工具栏中的 FlowPick 图标，弹窗会列出当前页面检测到的视频、音频和图片。你可以先预览再下载，也能对图片做批量勾选操作。帖子还写明它支持常规网页视频、流媒体 M3U8、音频文件和整页图片扫描，并提供基础格式转换、本地端合并流媒体、多线程下载和多清晰度选择。适合先拿公开课程页面、播客页面或图文页试一遍，看看它能不能替代手动找网络请求的流程。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者把它做成了“点击图标-预览-下载”三步流，而且明确强调本地端处理流媒体合并、不收集与追踪数据。相比很多只能抓单一视频链接的扩展，FlowPick 在帖子里给出的能力更完整：M3U8/MPD、图片批量打包、实时预览、自定义嗅探规则都已经覆盖，实用性很强。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>用 AI 快速生成简历、提案、一页纸、更新日志、演讲稿配套 slides。</li>
-    <li>团队内部统一 AI 文档的视觉风格，减少后期人工排版时间。</li>
+    <li>下载公开课、播客或资料页中的视频音频，做离线学习和素材留存。</li>
+    <li>批量抓取网页图片或流媒体资源，减少手动开开发者工具筛请求的时间。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/HiTw93/status/2071440011564851690" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2071991825808630178" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ 视频转步骤文档生成器（video-to-doc-stepfun）</div>
-  <div class="section"><div class="section-label event">一句话</div><p>把操作视频自动转成带截图、带文字说明的步骤操作文档，可输出 Markdown 和 PDF。</p></div>
+  <div class="topic-title">🛠️ OpenClaw 手机端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenClaw 的官方移动 companion，可把你的本地 AI 助手接到手机上做聊天、语音、审批和设备联动。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/lxfater/video-to-doc-stepfun" target="_blank">https://github.com/lxfater/video-to-doc-stepfun ↗</a></p>
+    <p><a href="https://openclaw.ai" target="_blank">https://openclaw.ai ↗</a></p>
+    <p><a href="https://apps.apple.com/us/app/openclaw-ai-that-does-things/id6780396132" target="_blank">https://apps.apple.com/us/app/openclaw-ai-that-does-things/id6780396132 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个仓库的 README 信息比较完整，适合直接照着试。它说明了默认是“字幕驱动”模式：先用 Whisper 提取带时间戳字幕，再由 AI 根据字幕识别操作步骤；也支持更贵的“上传视频给 AI 看画面”的增强模式。开始前先确保本机有 `ffmpeg` 和 `whisper`，再配置 `.env` 里的 StepFun API Key。随后可以先用一段自己录的产品操作视频做最小实验：跑命令生成字幕、截图、`steps.json`、`operation_guide.md` 和 `operation_guide.pdf`。如果你不想走命令行，README 还给了 FastAPI + React 的 Web 方案，前端默认访问 `http://127.0.0.1:5173`。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“录屏教程 → 可编辑文档”这条常见但麻烦的链路串起来了，而且 README 明确给出了产物结构、参数说明和 Web API。虽然仓库还很新、星标不高，但功能闭环完整，特别适合拿来做 SOP、客服帮助文档和产品 onboarding。对经常录教程的人来说，这种工具的节省时间是立竿见影的。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>官方给的上手路径很清楚：先在电脑上搭好 OpenClaw Gateway，再打开 iPhone 或 Android App，用二维码或 setup code 配对。配对后，手机端可以直接聊天、开 realtime/background Talk mode、接收 agent 的 action approvals，还能把别的 App 里的文字、链接、图片分享到 OpenClaw。App Store 页面还写明可以按需开启摄像头、定位、照片、通讯录、日历、提醒事项等权限，所以最适合的试玩方式不是空聊，而是先做一个具体闭环：例如把一条链接分享进去、让它整理内容，再在手机上审批某个动作，感受“个人 agent 节点”这条链路是否顺手。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>OpenClaw 官网主站还在主推“从 WhatsApp、Telegram 等聊天入口驱动个人 AI”，而 App Store 页面则进一步把手机定义为 secure node。它不是普通聊天壳，而是把审批、分享、设备能力和本地优先控制权都塞进了 companion app；另外 App Store 页面显示开发者声明“不收集任何数据”，对注重隐私的用户是明显加分项。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>把后台操作、软件使用录屏自动整理成客服/运营 SOP。</li>
-    <li>给新员工或客户快速生成带截图的上手手册。</li>
+    <li>出门在外时继续盯本地 agent 任务，在手机上审批、补充上下文、发起后续动作。</li>
+    <li>把照片、链接、位置等手机侧上下文直接喂给自建助理，做更贴近个人设备的自动化。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/lxfater/status/2071425817700401573" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2071841488687038839" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
     </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMCo0JsWoAEwvcM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMCo0JsWoAEwvcM?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ 乔木 PPT 共享站</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个在线分享与全屏展示 PPT/Keynote/PDF/HTML 演示稿的轻量站点，目标是让你不用带电脑也能放映内容。</p></div>
+  <div class="topic-title">🛠️ 日光集-Dayflower</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款 AI 驱动的影像日记 App，用照片和一句话整理情绪、事件与生活习惯。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://ppt.qiaomu.ai" target="_blank">https://ppt.qiaomu.ai ↗</a></p>
+    <p><a href="https://greyglow.cn" target="_blank">https://greyglow.cn ↗</a></p>
+    <p><a href="https://play.google.com/store/apps/details?id=cn.greyglow.dayflash" target="_blank">https://play.google.com/store/apps/details?id=cn.greyglow.dayflash ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目虽然没有公开代码，但站点和推文都给了足够的可验证信息。首页写明可在线阅读文稿，目前可浏览 11 份示例内容；推文则明确说支持上传 keynote、pdf、pptx、html ppt，并转换成全屏演示用的在线文稿。实际体验最直接的方式就是先打开站点看现成 deck，例如“哲学是什么：一场追问之旅”，页面显示它是 20 页、30.1MB 的 PPTX 文稿。若你要自己用，应该先注册、上传一份现成演示稿，再测试它在手机、平板、投屏场景下的阅读和翻页体验，重点看是否真能替代临时带电脑演讲的需求。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这类工具的价值不在复杂技术，而在很具体的使用场景。首页已经能看到不少真实中文 deck，说明作者不是只做了 landing page。再结合推文里“上传后成为全屏演示 PPT”的定位，它更像一个面向个人讲者/知识博主的轻量 Slideshare 替代品，门槛低，容易马上上手验证。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>根据作者在小众软件论坛的介绍，Dayflower 的基本用法是每天丢一张照片，再顺手写一句话。应用会结合照片中的时间、地点、场景信息，以及这句描述，帮你整理当时发生了什么、你的情绪走向，甚至长期归纳生活习惯。它还会提取照片主色，生成一片“花瓣”，把持续记录过的片段累成一棵可视化的树，后续再汇总成一本可翻阅的人生之书。作者还强调“无注册登录，无服务器，隐私至上”，并提供 Google Play 下载，所以最值得试的方式是拿过去几天的真实照片连续记录，观察它的整理是否真能比传统日记少负担。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 AI 日记产品停留在“帮你润色一句话”，但这个项目把图像、元数据、可视化和长期归档连到了一起。尤其“无服务器”的设定，让它更像一款重视个人记忆资产归属的本地型记录工具，而不是靠云端堆功能的内容 App。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>演讲者把本地 PPT/Keynote 上传后，用手机或平板直接展示。</li>
-    <li>内容创作者公开分享课程讲义、视觉讲稿、科普 PPT。</li>
+    <li>用最低成本持续记录生活碎片，让照片自动沉淀成可回看的个人年鉴。</li>
+    <li>给容易断更的日记用户一个更轻量的入口：拍照+一句话，而不是每次写长文。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/vista8/status/2071777397155017062" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2071991830237884566" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Cursor for iOS</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Cursor 推出的 iOS 客户端，可在手机上启动云端 agent，或远程控制电脑上的 agent。</p></div>
+  <div class="topic-title">🛠️ 约个时间OK</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个给微信群熟人局用的多人约时间微信小程序，用热力图方式找共同空闲时间。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://cursor.com/changelog/ios-mobile-app" target="_blank">https://cursor.com/changelog/ios-mobile-app ↗</a></p>
+    <p><a href="https://meta.appinn.net/t/topic/87625" target="_blank">https://meta.appinn.net/t/topic/87625 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>官方 changelog 和博客都给了很具体的入口。当前它处于 public beta，且“all paid plans”可用；安装入口直接指向 App Store。上手路径很清楚：打开 app 后选择一个 repo，像桌面端一样启动 cloud agent；也可以用 Remote Control 接管正在你电脑上运行的 agent，从手机继续发指令。官方还提到可以开启“保持电脑唤醒”的设置，确保人离开桌面时本机仍可被远程访问。实际使用时，最适合先拿一个短任务试，例如修一个小 bug、看 agent 运行日志、审 diff、再在手机上发 follow-up 指令，最后直接合并 PR。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是单纯把聊天框搬上手机，而是把“agent 工作流”搬上手机。官方博客明确提到它支持查看 demos、screenshots、logs 和 diffs，还能推送任务完成、需要输入、等待 review 的通知；另外 7 月 5 日前在移动端跑 Composer 2.5 还有 75% 折扣。对高频使用 AI 编程的人来说，这意味着很多等待型任务终于能在碎片时间里推进。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>作者给的场景非常明确，就是解决微信群里“周六行不行、晚上呢、你们定我尽量来”这种来回拉扯。实际用法是微信内搜索“约个时间OK”，由发起人创建活动、设置候选日期和时间范围，再把小程序卡片转发到群里；参与者进入后在时间格子上标出自己的空闲，最后大家查看共同空闲时间再回到群里拍板。它的思路接近 When2meet / Doodle，但刻意保持轻量——只做收集阶段，不把所有讨论和确认都搬进产品里。第一次体验最适合拿一次聚餐、桌游、运动局或小组 meeting 来试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有试图做成“大而全的协同平台”，而是只切微信群里一个高频又烦人的小动作。作者明确写出“更贴近微信群”的定位，这比国外协调工具简单搬运到中文场景更实在；对熟人社交、小团队临时协同来说，这种只解决一个痛点的小程序往往更容易用起来。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>出门在外时远程启动或续跑代码 agent，处理紧急 bug 或 on-call 任务。</li>
-    <li>用手机追踪长任务进度、审查产物、补充说明并合并 PR。</li>
+    <li>朋友聚餐、桌游、开黑、运动等熟人局，快速找出大多数人都能到的时间。</li>
+    <li>小组 meeting、读书会、轻量社群活动，先做时间收集，再回群确认最终安排。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2071775732859375854" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2071991833270386843" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Meta Brain2Qwerty：非侵入式脑信号转文字继续推进</div>
-  <div class="section"><div class="section-label event">事件</div><p>Meta 论文页面显示，Brain2Qwerty 可在不做开颅手术的前提下，用 EEG/MEG 脑信号解码句子级文本。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这条更适合放行业动态而不是“可立刻上手”，因为普通人并不能直接试玩，但研究进展本身很强。Meta 官方论文页写得很具体：在 35 名健康受试者上，MEG 条件下平均字符错误率 32%，EEG 为 67%，最佳参与者可到 19% CER，并能正确解码训练集外的一些句子。推文里流传的“61% 词准确率、最佳 78%”属于传播口径，但核心方向一致：非侵入式方案正在逼近更实用的句子级解码。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果这条路线继续成立，未来最大的意义不是“读心”噱头，而是给失语、失动患者提供更安全的沟通接口。产业层面上，它也会推动脑机接口从单纯硬件竞赛，转向“传感器 + 解码模型 + 数据闭环”的系统能力竞争。</p></div>
+  <div class="topic-title">🛠️ shot-scraper video</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Simon Willison 的 shot-scraper 新增视频录制能力，可用 YAML storyboard 录制 Web 应用演示。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://shot-scraper.datasette.io/" target="_blank">https://shot-scraper.datasette.io/ ↗</a></p>
+    <p><a href="https://simonwillison.net/tags/shot-scraper" target="_blank">https://simonwillison.net/tags/shot-scraper ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你已经会一点命令行，这个工具很值得直接动手。shot-scraper 官网说明它是一个“taking screenshots, recording video demos and scraping sites using JavaScript”的 CLI，而 Simon 的更新帖提到新增了 `shot-scraper video`，可以通过 storyboard YAML 录制 Web 应用演示。也就是说，你可以先写一个 YAML，描述打开哪个页面、点击什么、停留多久、执行哪些步骤，再让命令行自动跑出一段演示视频。对于开发者，最简单的试玩方式是拿自己刚做完的一个网页功能，录一个 onboarding 或 changelog demo；对于内容创作者，也可以把它当成“可编排的产品演示录屏器”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这类工具的价值不在“能录屏”，而在“能脚本化录屏”。官网已经把 `video` 列为一级命令，Simon 的博客还专门提到这次是为“you or your coding agent”设计的 YAML storyboards，这意味着未来它很适合和 agent 工作流结合：功能做完后，顺手自动产出演示视频和验证素材。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给新上线的 Web 功能自动生成 demo 视频，用于发布日志、产品更新说明或社媒宣传。</li>
+    <li>把录屏作为测试和验收的一部分，固定重放某段 UI 操作流程。</li>
+  </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2071772419195560393" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2072001270978855074" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Zenith：长时任务 Agent Harness 开始卷“控制层”</div>
-  <div class="section"><div class="section-label event">事件</div><p>Intelligent Internet 发布 Zenith，主打让 Agent 在长周期任务中不那么容易“过早宣布完成”。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>Zenith 的价值不在某个单点模型，而在 orchestration。GitHub README 把问题定义得很直接：长任务失败的主因常常不是做不动，而是太早停。它的做法是让 orchestrator 在每一轮读取任务状态后，动态决定要不要派 worker、tester、复用 skill、重规划或停止。README 还给出了 FrontierSWE 与 ablation 的结果表，把“重复找 gap、可修订计划、独立验证、停止纪律”这些控制机制摆到台面上讨论，这比单纯比模型分数更有启发。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>这说明 Agent 竞争正在从“底模谁更强”逐渐外溢到“控制器谁更会管任务”。对做企业落地和复杂自动化的人来说，今后可复制的优势，可能越来越来自任务编排、验证环和停止条件，而不是只押注某家模型升级。</p></div>
+  <div class="topic-title">📡 Google 推出 Nano Banana 2 Lite 与 Gemini Omni Flash</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google Cloud 宣布 Nano Banana 2 Lite 正式可用、Gemini Omni Flash 进入 public preview，并开放 Agent Platform、AI Studio/API 等入口。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次更新的重点不是“又发两个模型”，而是把多模态生产链路拆成更实用的两段：Nano Banana 2 Lite 负责 4 秒级快速出图和低成本编辑，Gemini Omni Flash 负责更高价值的视频生成与对话式编辑。Google Cloud 博文还明确写出 Omni Flash 支持文本、图片、视频混合输入，能做角色替换、补物体、重打光，并标出视频输出价格为每秒 0.10 美元；Nano Banana 2 Lite 则强调更快、更便宜、更适合高并发场景。对开发者来说，这意味着“先出静帧，再扩成视频”的流水线已经越来越标准化。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会继续压低图像和视频生成的实验门槛，尤其适合做广告变体、社媒内容、产品演示和 agent 内部自动配图。更关键的是，Google 已经把文档、Colab、Prompt guide、Agent Skills 一起摆上桌，说明它不是停留在展示层，而是在抢开发工作流入口。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/ii_posts/status/2071674024011161926" target="_blank"><span class="handle">@ii_posts</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2071992141644189821" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
     </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMEsoEYaoAAR-sg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMEsoEYaoAAR-sg?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 发布 Claude Science</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 发布面向科学研究者的 Claude Science，定位为可在本地、Linux、SSH 或 HPC 环境运行的 AI workbench。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Anthropic 官方文章把它描述成“像 Jupyter Notebook 一样”的科学研究工作台，但更进一步：它整合常见科研工具与包，能产出可审计 artifact，支持通过 SSH 或 HPC login node 连接实验室已有算力，还预置 60 多个面向基因组学、单细胞、蛋白组学、结构生物学、化学信息学等方向的 skills 和 connectors。更重要的是，文中强调 reviewer agent 会检查引用和计算、标记并修正错误。这说明 Anthropic 正在把“科研助手”从聊天式问答推向有工作流、有审计链、有算力调度的产品层。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这条路线成立，未来科研场景会最先出现一批真正依赖 agent 的垂直工作台，而不仅是把通用模型套在论文检索外面。对 AI 产品圈来说，这也释放出明确信号：通用 coding workbench 之后，下一轮高价值入口很可能是强行业约束、强可追溯、强工具链整合的专业工作台。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2072086962190884947" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2072093990669652177" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2071995057247297924" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AnthropicAI/status/2072106151890809341" target="_blank"><span class="handle">@AnthropicAI</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AxtonLiu/status/2072093499655168060" target="_blank"><span class="handle">@AxtonLiu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2071992108337033528" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HME8BsAboAAPDRf.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HME8BsAboAAPDRf.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMFJYt8XEAAYMDz.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HMFJYt8XEAAYMDz.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMEbdQGWoAERtu7?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMEbdQGWoAERtu7?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMEcEY9WUAA-VtP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMEcEY9WUAA-VtP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2071669943855370240/img/ymDZOCatH7qBsIAb.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2071669943855370240/img/ymDZOCatH7qBsIAb.jpg" loading="lazy" /></a>
   </div>
 </div>
 
@@ -203,11 +253,11 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>Best.xiaohu.ai：小互做的 AI 信息整理站，首页可见“AI, distilled &amp; clear.” 和每日精选，目前更像内容产品而非单独工具 <a href="https://best.xiaohu.ai/en" target="_blank">→</a></li>
-    <li>Codex++：面向 Codex App 的外部增强启动器/管理工具，搜索结果显示 GitHub 仓库存在，但原推文证据不足，建议感兴趣再深挖 README <a href="https://github.com/b-nnett/codex-plusplus" target="_blank">→</a></li>
-    <li>ASCII Lab：推文提到的字符画工具 asciilab，目前仅拿到站点线索，功能细节证据不足，先做关注项 <a href="http://javii.tools" target="_blank">→</a></li>
-    <li>龙珠主题在线演示 deck：作者用 AI 生成火柴人风格讲解内容，能直接在线浏览，但更像单个演示样例，不单独当工具展开 <a href="https://ppt.qiaomu.ai/decks/toriyama-manga-universe" target="_blank">→</a></li>
-    <li>Meta Brain2Qwerty 论文页：虽不属于可直接试玩工具，但值得持续跟踪论文与开源资源释放节奏 <a href="https://ai.meta.com/research/publications/brain-to-text-decoding-a-non-invasive-approach-via-typing" target="_blank">→</a></li>
+    <li>Claude Sonnet 5：Anthropic 新模型成为免费版和 Pro 版默认选择，开发者圈已开始讨论其性价比与 agent 能力定位 <a href="https://x.com/iamtonyzhu/status/2072093990669652177" target="_blank">→</a></li>
+    <li>Claude Code 中国代理“水印”争议：围绕系统提示词与代理识别的讨论继续发酵，但今天看到的主要仍是转述与争议链接，适合持续跟踪 <a href="https://x.com/dotey/status/2071995057247297924" target="_blank">→</a></li>
+    <li>Claude Fable 5 / Mythos 5 恢复访问：Anthropic 表示美国商务部已解除出口管制，相关模型将恢复可用 <a href="https://x.com/AnthropicAI/status/2072106151890809341" target="_blank">→</a></li>
+    <li>X MCP：X 平台开始被讨论推出 MCP 相关能力，但今天抓到的只有简短评论，证据不足以展开玩法 <a href="https://x.com/AxtonLiu/status/2072093499655168060" target="_blank">→</a></li>
+    <li>Claude Code 宣传视频翻车讨论：社区围绕多 worktree、超大 monorepo 和 agent 成功率宣传口径展开质疑，值得关注开发者真实反馈 <a href="https://x.com/dotey/status/2071992108337033528" target="_blank">→</a></li>
   </ul>
 </div>
 

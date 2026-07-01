@@ -5,13 +5,14 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 01 Jul 2026 00:36:14 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 08:34:41 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/07/01 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-01.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-01.html</guid>
-      <description>今天最值得上手的方向有两个：一是“把现有 AI agent 变成更能落地的工作流工具”，包括云端 agent 编排、移动端远程操控、长任务 harness，以及把视频/PPT 直接变成可交付内容；二是文档与知识表达工具明显在升温，既有面向 Agent 的排版系统，也有更轻量的在线演示分享站。</description>
+      <description>今天最值得上手的是一批“把 AI 真正变成工作流”的工具：一边是面向开发者的 Agent IDE、网页媒体嗅探器、自动录屏 CLI，另一边是把影像日记、微信群约时间这类日常动作做得更顺手的小工具。
+同时，大厂动态也在继续推高多模态与垂直场景的门槛：Google 把更便宜更快的图像/视频模型推到开发入口，Anthropic 则开始把科学研究工作台产品化。</description>
       <pubDate>2026-07-01T08:30:00+08:00</pubDate>
     </item>
     <item>
