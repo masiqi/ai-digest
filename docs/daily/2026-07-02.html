@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-02</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-02</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得看的不是单一大模型发布，而是“AI 工作流基础设施”继续下沉到可直接上手的技能包、内容站点和垂直插件：一类在教你怎么把 Agent 用得更稳，另一类在把 AI 能力接进真实应用。
+同时，行业侧也出现更明显的分化：一边是 Google 继续放宽部分 Gemini 免费额度，另一边是 WordPress、Mac 工具这类传统软件场景开始更积极地拥抱 AI 与自动化接口。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Science Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向科研计算与论文工作流的公开技能仓库，打包了 Claude Science 风格的 prompt、skills、agents 和 MCP server 资产。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/science-skills" target="_blank">https://github.com/JimLiu/science-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库后，先读 README 了解目录结构，再重点看 skills/、agents/ 和 mcp-servers/ 三个目录。skills/ 里按任务拆分了文献综述、PDF 探索、蛋白结构、远程计算等能力，你可以先挑一个最贴近日常工作的子目录，阅读其中的 SKILL.md，把里面的流程改造成自己常用 Agent 的提示词或技能包。若你已经在用 Claude Code、Hermes 或支持技能体系的代理框架，可以把这些技能内容迁移到本地技能目录，再配合仓库里的 MCP 服务器定义，把科研数据、化学工具、远程算力调用串起来，快速搭一个偏科研向的专用 Agent。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是单点小工具，而是一整套“科研型 Agent 资产模板”。它把 prompt、技能、代理角色和 MCP 工具链放在同一个仓库里，说明 AI 助手正在从聊天界面走向可复用的专业工作流配置，对研究人员和做垂直 Agent 的团队都很有参考价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给生物医药、科研计算、文献综述等场景搭建专用 Agent。</li>
+    <li>借鉴其 skills 结构，为自己的团队沉淀实验、检索、分析 SOP。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2072352618676953539" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMJ5pdFXIAA8P5Q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMJ5pdFXIAA8P5Q?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Skills for Design Engineers</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个专为设计工程师准备的技能仓库，重点帮助 AI 代理在动画、界面细节和交互审美上少犯低级错误。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/emilkowalski/skills" target="_blank">https://github.com/emilkowalski/skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库后先看 README，理解作者为什么强调“代理没有审美，需要外部技能约束”。随后进入 skills/ 目录，挑选与你当前项目有关的技能，例如动画、UI 细节或设计决策类条目，把其中的规则、反例和操作建议整理到你常用编码 Agent 的项目文档中。如果你在做前端、官网、落地页或产品界面，可以把这些 skill 当成“设计代码评审清单”：先让 Agent 按正常方式生成页面，再追加一轮基于这些技能的自检，检查 easing、阴影、层级、边框、动效时长和视觉一致性。这样能让 AI 生成结果从“能跑”提升到“更像成熟产品”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>现在很多 AI 编程输出的问题不是不会写，而是“写得不难看但也不高级”。这个仓库提供的是偏审美和交互品控的外部约束层，正好补齐当前代码 Agent 最容易翻车的那一段，对做产品界面的人尤其有价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用于前端页面、营销站、SaaS 控制台的 AI 设计审查与细节修正。</li>
+    <li>作为团队内部 UI 规范补充，降低 AI 生成界面风格跑偏的概率。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2072246813122531713" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ListenHub AI Voice</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个可直接在线体验的 AI 配音工具，你写脚本并用 @ 指定角色后，它会自动生成带情绪和配乐的完整音频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="http://listenhub.ai/app/ai-voice" target="_blank">http://listenhub.ai/app/ai-voice ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开网页后直接进入 AI Voice 页面，先写一段不超过页面限制的脚本，用接近分镜或播客脚本的方式描述场景、语气和节奏，再通过 @ 提及为不同角色分配声音。页面会把“写脚本、选声线、生成成品”合并成一个流程，适合先拿一段 30 到 90 秒的短内容试水，比如产品介绍、播客片头、角色对白或短视频旁白。若你想把它接进 Agent 工作流，可以先在人类模式下确认脚本结构有效，再参考其相关 GitHub 技能仓库，把脚本生成和音频生成拆成两个步骤：先让 AI 产出分角色脚本，再交给网页或后续 CLI 入口生成音频。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多语音产品还停留在“文本转单一声音”，而这个页面把角色分配、情绪、节奏和背景音乐融合到一次生成里，更接近“音频导演”而不是单纯 TTS。对于内容创作者来说，门槛低、反馈快，适合快速试创意。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>制作短视频旁白、播客片头、角色音频 Demo 和轻量广告口播。</li>
+    <li>为 Agent 或应用生成多角色语音内容，验证互动音频产品原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2072242511087898692" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole for Mac 1.9</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个原生 macOS 清理与维护工具，把缓存清理、卸载残留、磁盘分析和系统状态监控整合到同一应用里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="http://mole.fit" target="_blank">http://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问官网后可以先下载最新的 Mac 应用版本，也可以按官网文档使用 CLI。第一次使用建议先从最安全的扫描型操作开始，例如查看 Clean、Analyze 和 Status 几个模块：先扫描缓存、构建产物和日志占用，再观察磁盘树状图确认大文件来源，最后再决定是否执行真正清理。若你习惯命令行，可按站点展示的方法安装并使用 dry-run 或预览思路先确认会删除哪些内容，再做正式清理。对于开发者来说，它特别适合定期处理 Xcode 构建残留、浏览器缓存、项目 build/dist 目录和老旧应用卸载残渣，让 Mac 在不瞎删系统文件的前提下恢复空间和可维护性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是传统订阅制“优化软件”的套壳，而是把清理、安全边界、应用卸载、状态监控和可视化分析统一到一个偏开发者友好的产品里。官网还明确强调路径保护、运行中进程感知和预览机制，说明其定位更偏“可信维护工具”而非粗暴加速器。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定期清理开发机缓存、构建目录和卸载残留，释放磁盘空间。</li>
+    <li>观察 CPU、内存、网络、温度与进程状态，辅助排查 Mac 变慢问题。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2071993088248271236" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMEkhwaWsAIgmpz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMEkhwaWsAIgmpz?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMEkluCXkAAecsP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMEkluCXkAAecsP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMEnIubXMAAivQW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMEnIubXMAAivQW?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMEnMQPXAAA5Rmj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMEnMQPXAAA5Rmj?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 WPVibe 把 WordPress 站点接入 MCP</div>
+  <div class="section"><div class="section-label event">事件</div><p>WPVibe 公开了其 WordPress 插件仓库，用插件加托管 MCP 服务的方式，让 Claude、ChatGPT、Cursor 等 AI 客户端通过 MCP 访问和管理自托管 WordPress 站点。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这件事的意义不在“又一个 WordPress 插件”，而在于传统 CMS 开始以 MCP 为标准接口主动拥抱 AI。根据公开 README，WPVibe 的开源部分负责把 WordPress 侧能力暴露成受权限控制的 REST/MCP 可调用端点，托管服务再负责 OAuth、路由和工具注册。也就是说，AI 不再只是帮你写一段文章草稿，而是有机会在权限边界内直接协助做内容管理、主题编辑、REST API 调用甚至部分运维类动作。对独立站、内容团队和插件生态而言，这比单纯接个聊天机器人要更“可操作”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类模式跑通，未来会有更多垂直软件把自身功能包装成 MCP 工具，而不是各做各的私有插件协议。对于开发者和 SaaS 团队来说，这意味着“让 AI 真能操作业务系统”会越来越标准化，内容站点、后台系统和企业工具的 AI 化会更快进入实操阶段。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2072160734197526916" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Gemini 免费 API 配额继续抬高，但不是人人一样</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 被观察到正在提高部分 Gemini 免费用户的 API 限额，部分模型的免费层每分钟 Token 上限已显示到 100 万，但并非所有账户都一致。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个动态最关键的点不是“免费了很多”，而是免费层开始更像一个动态调节的流量池。小众软件的整理显示，Gemini 2.5 Flash 与 2.5 Flash-Lite 在部分账户中出现了 1M TPM 的免费额度，但也有账户仍停留在 250K TPM；同时 Pro 模型并未进入免费范围。对开发者来说，这意味着可以重新评估用 Gemini 做原型、批量摘要、长文处理和低成本 Agent 调度的可行性，但不能把截图里的最高额度当成统一基准，必须进入自己账号后台实测。这个“局部放量”本质上是在用更多免费推理换开发者生态和训练反馈。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期内会刺激更多个人开发者和小团队把 Gemini 重新纳入默认试验栈，尤其适合高吞吐但低预算的应用原型。中长期看，主流大模型平台对免费层的竞争会继续加剧，价格和额度将越来越成为开发者选型的重要抓手，而不仅仅是模型能力榜单。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2072301092092723399" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMJK3IbXAAA0bjJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMJK3IbXAAA0bjJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>writing-great-skills：Matt Pocock 新增的技能写作方法论，适合研究如何把 Skill 写成稳定可触发工作流 <a href="https://github.com/mattpocock/skills" target="_blank">→</a></li>
+    <li>SlimPaste：Windows 下粘贴时自动压缩剪贴板图片的小工具，适合经常往微信、飞书、WPS 粘图的人 <a href="https://s.ee/SlimPaste" target="_blank">→</a></li>
+    <li>EiRouter AI中转站：主打多模型聚合与国内直连，但本次证据主要来自转帖，建议先自行核验官网与稳定性 <a href="https://eirouter.com" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

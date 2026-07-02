@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 01 Jul 2026 08:34:41 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 00:36:40 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/02 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-02.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-02.html</guid>
+      <description>今天最值得看的不是单一大模型发布，而是“AI 工作流基础设施”继续下沉到可直接上手的技能包、内容站点和垂直插件：一类在教你怎么把 Agent 用得更稳，另一类在把 AI 能力接进真实应用。
+同时，行业侧也出现更明显的分化：一边是 Google 继续放宽部分 Gemini 免费额度，另一边是 WordPress、Mac 工具这类传统软件场景开始更积极地拥抱 AI 与自动化接口。</description>
+      <pubDate>2026-07-02T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/01 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-01.html</link>
