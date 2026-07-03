@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-03</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-03</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得追的不是“又一个聊天机器人”，而是更接近可落地生产力的基础层工具：AI 代理开始直接接管视频剪辑、设计系统、语音合成和长期记忆这些真实工作流。
+同时，行业侧也在加速往“Agent 基础设施化”推进：一边是 Claude Code 继续产品化，一边是跨组织、跨平台的 Agent 互操作正在被当成下一阶段竞争焦点。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ video-use</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是 browser-use 团队开源的 AI 视频剪辑 Skill，让 Claude Code、Codex、Hermes 这类 coding agent 通过转写文本和按需可视化素材来自动完成粗剪、重排与导出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/browser-use/video-use" target="_blank">https://github.com/browser-use/video-use ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最直接的入口是打开 GitHub 仓库，先阅读 install.md 和 README。项目的核心用法不是打开一个 GUI，而是把一批原始视频素材放进同一个文件夹，然后让带 shell 权限的 Agent 按仓库说明完成安装、接好 ffmpeg，并准备好所需转写能力。仓库介绍显示它会先把音频做成带词级时间戳的转写，再把多段素材压缩成适合大模型阅读的摘要文件，随后由 Agent 生成剪辑决策、输出 EDL，再渲染成 final.mp4。实际体验时，适合先拿一段口播、教程、访谈或产品 demo 做测试，观察它是否能正确删掉停顿、重组句子、保留重点，并检查 edit 目录下的最终成片和中间文件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把“AI 剪视频”做成泛泛的营销词，而是明确把视频编辑拆成 transcript、决策、EDL、render、自检闭环。相比直接让模型“看视频”，这种让模型先“读视频”的思路更省 token，也更适合真正接入 coding agent 工作流，说明视频编辑正从 GUI 工具往可编排、可自动化的基础设施演进。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把产品口播、教程录屏、采访素材自动整理成短视频初稿</li>
+    <li>让团队的 AI agent 批量生成发布用 demo、更新日志视频或社媒剪辑</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2072644710523691110" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMODWFlaUAAfodC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMODWFlaUAAfodC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Astryx</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是 Meta 开源的设计系统，提供 150+ 可访问组件、主题系统、模板和 CLI，目标是让人类开发者与 AI 助手都能更稳定地搭界面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/facebook/astryx" target="_blank">https://github.com/facebook/astryx ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库后，先看 README 的 Getting Started 部分。官方说明它基于 React 和 StyleX，支持直接导入预构建 CSS 与 Theme Provider，不要求你先搭复杂的 Babel 或 PostCSS 插件链。想试用的话，可以在一个现有 React/Next.js/Vite 项目里按 README 安装核心包和主题包，再把官方推荐的 CLI 脚本加入 package.json，通过类似 component list、模板脚手架和主题切换命令查看它能生成哪些组件与页面骨架。对于做 AI 辅助开发的人，更适合把它当成“可被 Agent 正确调用的设计系统”：先让助手读懂组件能力，再基于现成主题和模板快速拼一个内部后台、表单页或数据录入页面，验证生成质量和一致性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Meta 这次开源的不只是零散组件，而是一套在内部演进八年、支撑 13000+ 应用的系统化资产。更关键的是，它在文档里明确强调 agent ready：CLI、类型化组件、主题和模板都对 AI 协作友好。对现在越来越多的“让模型直接写前端”场景来说，这类强约束、强规范的设计系统，比单纯炫技组件库更有现实价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给内部运营系统、管理后台或数据工作台快速搭建统一前端</li>
+    <li>作为 AI 辅助前端开发的标准组件层，降低生成 UI 的漂移和返工</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2072612954965741766" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMNmfBGaYAAeFaL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMNmfBGaYAAeFaL?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Confucius4-TTS</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是网易有道开源的多语种、跨语种零样本文本转语音系统，主打“同一声音切换多种语言”，并尽量保留说话人的音色与表达风格。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/netease-youdao/Confucius4-TTS" target="_blank">https://github.com/netease-youdao/Confucius4-TTS ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 GitHub 仓库后，可以先直接打开它的在线演示页体验效果，再决定是否本地部署。若想动手试，README 已给出安装依赖、下载 checkpoint、运行 example.py 以及直接调用 Python API 的路径。更实用的试玩方式，是准备一小段参考音频和几段中英日韩等不同语言文本，先测试它能否在跨语种生成里保持同一说话人的音色，再进一步尝试把中文口播迁移成英文、日文版本。仓库还提供了训练与微调说明，包括所需 TSV 数据格式、预训练模型目录结构和 T2S / S2A 两阶段训练入口，因此不仅能“试用”，也能作为多语种配音或研究复现的起点。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 TTS 项目只强调自然度，但 Confucius4-TTS 更强调跨语种零样本与音色保持，这对视频翻译、国际化内容分发特别关键。仓库还公开了较详细的 benchmark 对比、推理与训练路径，意味着它不只是一个 demo，而是可以继续做二次开发、评测和私有部署的技术底座。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给中文课程、产品介绍或播客快速生成英文、日文等多语种配音</li>
+    <li>做出海内容本地化，尽量在不同语言版本里保留统一品牌声音</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2072696018647539993" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2072245087657246720/img/f6j7SXT9YyPcM2-0.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2072245087657246720/img/f6j7SXT9YyPcM2-0.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ EverOS</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是一个面向 AI agent 的可移植长期记忆层，主打 local-first、Markdown-native、用户自持，让不同代理和工作流共享、演化同一套记忆。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/EverMind-AI/EverOS" target="_blank">https://github.com/EverMind-AI/EverOS ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub 仓库的 README 和 QUICKSTART 开始，理解它不是通用聊天应用，而是一层给 Agent 用的记忆基础设施。适合的试玩方式，是在本地单独拉一个测试目录，把它接到你常用的 agent 工作流里，先让代理把会议记录、任务上下文、项目偏好或研究笔记写进 Markdown 记忆，再跨不同任务读取，观察它是否能在多轮会话后保持持续上下文。仓库结构里有 docs、tests、use-cases 和配置样例，可以先按示例跑通最小化配置，再挑一个真实场景，比如“持续跟进一个项目”或“管理多代理共享知识”，验证它与单次对话记忆的区别。若团队里已经有多个 AI 工具并行使用，这类记忆层比单一聊天产品更值得试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>2026 年很多 Agent 产品的问题已经不是“能不能调用工具”，而是“能不能稳定延续上下文”。EverOS 把长期记忆抽成独立层，而且强调本地优先、Markdown 原生和用户可拥有，这比把记忆锁在某个闭源 Agent 里更有可迁移性。它冲上万星也说明开发者开始把“记忆层”视为 Agent 时代的基础件，而不只是附属功能。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给多个 AI agent 提供共享的长期项目记忆、偏好和知识库</li>
+    <li>做个人研究、写作或产品迭代时的长期上下文沉淀与复用</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/evermind/status/2072593890654441703" target="_blank"><span class="handle">@evermind</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMNPUIca8AAj2xD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMNPUIca8AAj2xD?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLs7UocboAAsth4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLs7UocboAAsth4?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 推出 Artifacts</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Code 新增 Artifacts，可把会话里生成的 PR walkthrough、项目仪表盘或交互页面发布为可分享链接，并随会话更新自动刷新。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是一个单纯的“分享按钮”，而是把 coding agent 的输出从会话内结果推进到可分发资产。过去很多 Agent 产物停留在终端、Markdown 或本地文件里，团队成员要么截图、要么转述。Artifacts 让会话直接产出一个可访问页面，意味着 AI 辅助开发开始更像协作文档系统与轻量应用平台的结合体。对团队来说，这会降低“我让 Agent 做出来了，但别人看不到、也跟不上更新”的摩擦，让 agent 生成物更容易进入评审、同步、演示和内部协作链路。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类能力继续成熟，AI 编码工具的竞争点会从“谁写代码更强”逐步转向“谁更能把结果接入团队协作”。代码生成、PR 说明、测试看板、数据页面、演示原型都可能直接从聊天会话变成可分享制品，这会抬高同类工具对发布、权限和持续更新能力的要求。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2072832776806834209" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HLHZhd5WsAAzjSC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLHZhd5WsAAzjSC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent 互操作性成为基础设施话题</div>
+  <div class="section"><div class="section-label event">事件</div><p>有观点认为，下一阶段 Agent 经济的关键不只是单体能力，而是跨组织、跨平台安全移动与互操作，相关讨论同时提到了 OpenClaw、可复用 multi-agent workflow，以及 GenAI.mil 等信号。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这一波讨论的重点，不在“又来了一个新 Agent”，而在 Agent 之间、Agent 与系统之间能否低成本、安全地协作。随着企业里同时存在本地代理、云端代理、专用工作流代理和团队自动化代理，孤立的单点能力很快会遇到瓶颈：上下文不能转移、权限不好治理、流程难复用、跨团队交接成本高。今天提到的 OpenClaw、workflow 模式化和政府侧 GenAI 平台，背后都指向同一个问题——Agent 正在从个人玩具走向组织级执行单元，相应的基础设施层会被重新定价。需要说明的是，本条外部证据强度一般，除推文中的公开链接外，可直接交叉验证的细节有限，因此这里更适合作为趋势观察，而不是确定性结论。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来真正能进入企业核心流程的，不一定是最会“对话”的 Agent，而是最能接入权限、日志、审批、工作流和多代理编排体系的 Agent。对创业公司和开源项目来说，协议、接口、可复用 skill/workflow、记忆迁移和安全边界都会变成产品护城河的一部分。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2072833399774118004" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>HyperFrames：HeyGen 开源的视频生成框架，主打用 HTML/CSS/动画可确定性渲染 MP4，偏底层视频生产引擎 <a href="https://github.com/heygen-com/hyperframes" target="_blank">→</a></li>
+    <li>Agents-A1：上海 AI 实验室开源的长任务 Agent 模型，推文有模型入口，但本次证据包除原推外较弱，建议先关注再深入验证 <a href="https://huggingface.co/InternScience/Agents-A1" target="_blank">→</a></li>
+    <li>Oryzo.ai：一个被拿来做 Fable 5 复刻实验的高质量交互式站点，更像体验案例而不是直接可用工具 <a href="https://oryzo.ai" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

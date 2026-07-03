@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 02 Jul 2026 01:35:54 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 00:37:17 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/03 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-03.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-03.html</guid>
+      <description>今天值得追的不是“又一个聊天机器人”，而是更接近可落地生产力的基础层工具：AI 代理开始直接接管视频剪辑、设计系统、语音合成和长期记忆这些真实工作流。
+同时，行业侧也在加速往“Agent 基础设施化”推进：一边是 Claude Code 继续产品化，一边是跨组织、跨平台的 Agent 互操作正在被当成下一阶段竞争焦点。</description>
+      <pubDate>2026-07-03T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/02 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-02.html</link>
