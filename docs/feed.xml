@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 03 Jul 2026 00:53:59 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 00:35:20 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/04 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-04.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-04.html</guid>
+      <description>今天最值得关注的不是单一模型参数，而是“能马上接进工作流的 AI 工具层”在快速成型：一类把浏览器、播客、环境检测这些高频环节做成现成 CLI/Skill，另一类则在更垂直的遥感等场景里把基础模型做得更轻、更便宜、更容易落地。
+从今天这批信息看，真正值得大哥上手的方向依然是：能直接试、能立刻接入现有 AI 助手、能省时间或补能力边界的工具，而不是只有概念没有入口的讨论。</description>
+      <pubDate>2026-07-04T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/03 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-03.html</link>

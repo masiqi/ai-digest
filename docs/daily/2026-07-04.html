@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-04</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-04</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得关注的不是单一模型参数，而是“能马上接进工作流的 AI 工具层”在快速成型：一类把浏览器、播客、环境检测这些高频环节做成现成 CLI/Skill，另一类则在更垂直的遥感等场景里把基础模型做得更轻、更便宜、更容易落地。
+从今天这批信息看，真正值得大哥上手的方向依然是：能直接试、能立刻接入现有 AI 助手、能省时间或补能力边界的工具，而不是只有概念没有入口的讨论。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Browser Use CLI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 AI agent 的浏览器自动化命令行工具，可直接打开网页、读取页面状态、点击元素、填表、截图，并支持连接本地 Chrome 或云浏览器。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docs.browser-use.com/open-source/browser-use-cli" target="_blank">https://docs.browser-use.com/open-source/browser-use-cli ↗</a></p>
+    <p><a href="https://github.com/browser-use/browser-use/blob/main/browser_use/skill_cli/README.md" target="_blank">https://github.com/browser-use/browser-use/blob/main/browser_use/skill_cli/README.md ↗</a></p>
+    <p><a href="https://github.com/browser-use/browser-use" target="_blank">https://github.com/browser-use/browser-use ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你想把“会写代码的 AI”补成“也能自己操作网页的 AI”，这是今天最值得直接装来试的工具之一。官方文档给了最直接的安装路径：macOS/Linux 可用一行脚本安装，也可以用 uv pip install browser-use 手动安装，然后运行 browser-use install 拉起 Chromium，再用 browser-use doctor 检查环境。第一次上手建议不要直接让它做复杂任务，而是先按文档跑一遍最短链路：browser-use open https://example.com，接着用 browser-use state 看页面上可点击元素的编号，再执行 browser-use click 5、browser-use input 3 "john@example.com"、browser-use screenshot output.png 之类的命令，熟悉它“先取 state、再按编号交互”的工作方式。后面如果你要把它交给 Claude Code、Codex 或其他 agent，用官方推荐的 skill 安装方式接进去，再让 agent 调用这些命令做登录、表单填写、后台操作或网页巡检，会比单纯文本推理更实用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的亮点不是“又一个 browser agent”，而是把浏览器控制拆成了低延迟、持久化会话的 CLI 形态。官方文档明确提到其后台 daemon 设计能把连续命令延迟压到约 50ms 量级，同时支持本地 Chromium、现有 Chrome Profile、CDP 连接和 Cloud API，这意味着它既适合个人本地自动化，也适合接入更正式的 agent 工作流。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 Claude Code、Codex 这类编码助手补上真实网页操作能力，例如登录后台、点按钮、上传文件、验证页面结果。</li>
+    <li>做轻量网页 QA、表单回归测试、数据录入和需要截图留档的浏览器自动化任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2072987979979837620" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2072983234892513280/img/54294fU-KbRm_0OH.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2072983234892513280/img/54294fU-KbRm_0OH.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AI 播客索引</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把 AI 相关 YouTube 播客集中整理成静态站点的开源项目，提供中文简介、Transcript 状态和总结入口，适合系统化追踪高质量 AI 内容源。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-youtube-ai-podcast" target="_blank">https://github.com/joeseesun/qiaomu-youtube-ai-podcast ↗</a></p>
+    <p><a href="https://youtube.qiaomu.ai" target="_blank">https://youtube.qiaomu.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目不是“看一眼就完”的收藏夹，而是真的可以拿来做学习入口。最直接的玩法是先打开线上站点 youtube.qiaomu.ai，按研究、工程、创业、新闻、商业等分类筛选感兴趣的播客，看哪些节目带 Transcript、哪些只有总结、哪些只是简介概要。这样你不用自己挨个去 YouTube 搜频道，再手工判断值不值得听。如果你想进一步自己维护一份 AI 内容雷达，可以把它的 GitHub 仓库 fork 到自己账号，按 README 里的结构改 data/podcasts.json、data/episodes/*.json 和 content 目录里的 transcript/summary 内容，把你平时跟踪的频道加进去。项目 README 还给了当前数据规模验证结果：覆盖 25 个播客、125 期节目、99 份 transcript 和 125 份总结，这说明它不是空壳展示页，而是已经有一套可持续更新的数据组织方式。对于想建立个人 AI 学习情报库的人，这比零散收藏链接高效得多。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不只是“收集了很多播客”，而是把 AI 学习里最耗时间的三件事——找源、判断是否值得听、快速扫读——做了结构化处理。仓库和线上站点都明确展示了中文标题/简介、Transcript 状态和总结入口，等于把被动刷内容变成了可检索、可筛选、可扩展的知识入口，这种整理层往往比再多一个泛泛资讯号更有复利。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给自己建立一个长期可跟踪的 AI 学习入口，快速筛选值得精听的播客与访谈。</li>
+    <li>做内容选题、行业研究或内部学习资料库时，把分散的 YouTube/播客信息沉淀成可搜索索引。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2073042794831311360" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMTtA7sbkAEdAPG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMTtA7sbkAEdAPG?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-ai-access</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个用于检测当前环境是否带有“中国用户信号”的开源 skill，重点做透明检测和合规隐私卫生提示，而不是教人绕过平台限制。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-ai-access" target="_blank">https://github.com/joeseesun/qiaomu-ai-access ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你最近经常碰到“同样的提示词，为什么别人能用、我这里总是触发限制或体验不同”的问题，这个项目值得你亲自跑一下。它的定位不是魔法翻墙包，而是先把环境中的语言、时区、emoji、字体、网络等信号透明列出来，再决定是否继续做合规的隐私卫生整理。最直接的用法是进入仓库后按 README 安装依赖，然后跑推荐的全面本地检测命令，输出 JSON 报告。仓库还给出了 browser 层检测、network probe 以及 skill 验证等测试命令，适合先在本地环境验证，再决定要不要集成进自己的 agent 工作流。对大哥这种重度用 AI 工具的人，真正有价值的不是“假装成别的地区”，而是搞清楚到底哪些运行时、浏览器设定或工作区说明正在主动暴露不必要的环境信号。这个 skill 至少把问题从玄学变成了可见、可讨论、可整理的列表。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>今天不少讨论都围绕模型可用性、账号风险和地区体验差异，但大多数内容停留在情绪层。这个项目难得之处在于边界写得很清楚：它强调 transparency、consent 和 privacy hygiene，不提供绕过地理限制、伪装身份或规避风控的能力。换句话说，它把一个灰色需求重新做成了合规、可审计、可复用的工具，这种产品取向比单纯“教技巧”更长久。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在使用 Claude、Codex、各类模型网页或 API 前，先检查本地环境里哪些信号会影响体验或触发风控。</li>
+    <li>给自己的 AI 工作流做一次隐私卫生体检，减少不必要的语言、时区或浏览器偏好暴露。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2072859796647395377" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMRD1nnacAALKsL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMRD1nnacAALKsL?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OlmoEarth v1.2 把遥感基础模型继续做轻</div>
+  <div class="section"><div class="section-label event">事件</div><p>Ai2 更新 OlmoEarth v1.2 系列，相关论文页面显示该版本在不牺牲总体性能前提下，把训练和推理计算成本分别降低约 3.0 倍和 2.9 倍，并已关联到 Nano、Tiny、Small、Base 等多个模型版本。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条动态值得看，不是因为它会立刻变成大众爆款，而是它代表一个很清晰的行业趋势：基础模型正在从“越做越大”转向“把特定领域模型做得更高效、更可部署”。Hugging Face 页面显示 OlmoEarth v1_2-Nano 只有 1.7M 参数，面向 Sentinel-1、Sentinel-2、Landsat 图像与时间序列任务；而论文页又强调在性能基本不退化的前提下显著降低训练和推理成本。这意味着遥感这类原本偏科研、偏机构级的能力，正更接近真实业务使用条件。对产业来说，真正重要的不是又多一个 checkpoint，而是“领域基础模型”开始具备更现实的成本结构。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种路线持续推进，农业监测、林业变化、城市扩张、灾害评估这类过去依赖昂贵模型和重工程部署的场景，会更容易进入中型团队甚至产品化公司手里。长期看，它也会推动行业从“通用大模型万能论”转向“通用模型 + 领域小模型”的组合架构。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2072972631444496823" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMStmyPaQAATJVu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMStmyPaQAATJVu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 开源 AI 夏季情绪升温</div>
+  <div class="section"><div class="section-label event">事件</div><p>Hugging Face CEO Clement Delangue 发帖表示“你准备好迎接开源 AI 夏季了吗？”，虽然这条本身是短句，但它和近期一连串开源项目、轻量工具、专用 skill 的活跃发布形成了呼应。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>单看这条推文信息量不大，但放在今天的流里，它像是一个很强的气氛信号：过去几个月里，更多值得写进日报的内容不是新闭源模型，而是围绕 agent、browser、skill、工作流封装、垂直模型和可部署项目的开源层。这说明“开源 AI”在 2026 年中的竞争点，已经从“谁能复现一个聊天模型”逐步迁移到“谁能把能力打包进真实任务链路”。今天日报里能进入可上手区的条目，本质上也都属于这一波：不是论文口号，而是能被安装、能被 fork、能被接进实际流程的工具。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对开发者和小团队而言，这种趋势意味着机会更多地落在工具层、集成层和垂直场景层，而不是单纯比拼训练通用大模型。谁能更快把能力做成易安装、低门槛、边界清晰的开源资产，谁更容易吃到下一波分发与口碑红利。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ClementDelangue/status/2073073416114995300" target="_blank"><span class="handle">@ClementDelangue</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2072989595848098197" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Agent Tank 大战：把 agent coding 直接放进实时坦克策略修改的活动玩法，看起来很适合做演示和社区传播，但目前更偏活动与体验，产品证据还不够完整 <a href="https://agentank.ai" target="_blank">→</a></li>
+    <li>cconline.sh：浏览器里跑 Claude Code 的 serverless 架构思路很有意思，涉及 Cloudflare Workers、D1、R2 和会话隔离，值得后续跟踪其公开架构细节 <a href="http://cconline.sh" target="_blank">→</a></li>
+    <li>Immich v3：自托管相册的大版本更新和超高 GitHub 星数说明开源个人数据栈仍然强势，但这条与 AI 日报主线相关性偏弱，先放关注区 <a href="https://appinn.com/immich/" target="_blank">→</a></li>
+    <li>Project Sid 等 AI-Town 类原型：适合做“AI agent 社会模拟”资料清单，但今天这条更像汇总帖，不是新发布工具 <a href="https://x.com/seclink/status/2072989595848098197" target="_blank">→</a></li>
+    <li>Browser Use 相关 skill 生态：官方已经明确推荐给 coding agent 配 skill，后续如果出现更成熟的 Claude Code / Codex 实战案例，值得单独做一期工具深挖 <a href="https://github.com/browser-use/browser-use" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
