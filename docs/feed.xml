@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 04 Jul 2026 00:35:20 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 00:39:39 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/05 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-05.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-05.html</guid>
+      <description>今天更值得关注的不是“又一个大模型观点”，而是三类能立刻上手的 AI 工具链：把 Mac 维护做成可脚本化工作流、把自然语言直接变成多智能体系统、以及把高质量 AI 播客整理成可检索知识库。与此同时，行业侧开始出现“AI 原生工作流”进一步产品化与安全专项化的信号，说明 AI 正从聊天入口继续向执行入口和专业入口深入。</description>
+      <pubDate>2026-07-05T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/04 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-04.html</link>
