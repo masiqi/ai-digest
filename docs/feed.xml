@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 05 Jul 2026 00:39:39 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 01:30:09 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/06 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-06.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-06.html</guid>
+      <description>今天最值得看的，不是又多了一个“会聊天”的模型，而是 AI 工具链正快速走向“可复用工作流 + 可验证结果 + 更明确入口”。一边是工程化能力继续下沉到开源技能库、CLI 代理和免费试玩模型，另一边行业也开始暴露出更现实的问题：工具调用稳定性、以及大模型公司向垂直行业纵深进入。</description>
+      <pubDate>2026-07-06T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/05 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-05.html</link>

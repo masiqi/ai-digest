@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-06</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-06</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得看的，不是又多了一个“会聊天”的模型，而是 AI 工具链正快速走向“可复用工作流 + 可验证结果 + 更明确入口”。一边是工程化能力继续下沉到开源技能库、CLI 代理和免费试玩模型，另一边行业也开始暴露出更现实的问题：工具调用稳定性、以及大模型公司向垂直行业纵深进入。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Agent Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Addy Osmani 开源的一套面向 AI 编码代理的工程技能库，把“定义需求、规划、实现、测试、评审、发布”的流程做成可复用、可验证的技能与命令。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/addyosmani/agent-skills" target="_blank">https://github.com/addyosmani/agent-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 GitHub 仓库阅读 README，核心不是“下载一个 App”，而是把里面的技能文件和命令体系接到你正在使用的编码代理里。仓库里已经给出了多种接入方式：一类是直接通过 marketplace/plugin 方式安装；另一类是把 SKILL.md、skills 目录或 agents 配置复制到本地项目或代理规则目录。实际操作上，最适合先挑一个真实小任务试：例如先写需求说明，再用 /plan 做任务拆解，再逐步实现、测试和 review。这样你能明显体会到它不是给模型“加一句提示词”，而是把资深工程师的流程纪律固化为可以反复执行的动作模板。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这类项目的价值不在“再造一个模型”，而在于把高质量工程经验包装成代理可直接执行的流程资产。它覆盖 spec、plan、build、test、review、ship 等完整生命周期，还强调验证门槛和流程分层，这比单纯堆系统提示更容易复用，也更适合团队协作和长期沉淀。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 Claude Code、Copilot、Cursor 等编码代理补上稳定的软件工程流程。</li>
+    <li>团队把内部 code review、测试、发布规范封装成统一技能，降低个人发挥差异。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2073927149145428405" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMgRvEEagAAXSJz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMgRvEEagAAXSJz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ GLM-5.2 on NVIDIA NIM</div>
+  <div class="section"><div class="section-label event">一句话</div><p>NVIDIA Build 平台已提供 Z.ai 的 GLM-5.2 在线试玩与 API 入口，让开发者无需自建部署就能直接体验长上下文、编码与 agentic 能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://build.nvidia.com/z-ai/glm-5.2" target="_blank">https://build.nvidia.com/z-ai/glm-5.2 ↗</a></p>
+    <p><a href="https://build.nvidia.com/z-ai/glm-5.2/modelcard" target="_blank">https://build.nvidia.com/z-ai/glm-5.2/modelcard ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 NVIDIA Build 页面后先注册或登录账号，进入模型页再看 model card 和 playground。根据页面说明，这个入口不是只给论文参数，而是提供了现成的试用环境与 API 参考。一个务实的上手方式是：先在 playground 里测长上下文问答、代码修复、终端自动化提示词等典型任务；确认风格和延迟后，再去看 API Reference，把它接进自己的脚本、IDE 插件、自动化工作流或 agent 框架里。如果你平时被模型额度、排队或部署复杂度卡住，这类“注册即可试”的入口很适合先做真实任务压测，再决定是否纳入正式工作流。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>从模型卡信息看，GLM-5.2主打 1M token 上下文、工具调用、结构化输出与 agentic benchmark 表现，而且 NVIDIA 把它放进了现成的 Build/NIM 体验层，明显降低了试用门槛。对开发者来说，意义不只是“又一个大模型”，而是更容易快速比较不同模型在编码、推理和代理任务里的真实表现。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用于长文档分析、代码库理解、复杂多轮任务规划等长上下文工作。</li>
+    <li>在自己的 agent、脚本或开发工具里快速接入一个可直接测试的替代模型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2073563859613544734" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMbE2NwasAAQGev?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMbE2NwasAAQGev?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ GitHub Copilot CLI 自定义代理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>GitHub 正在把 Copilot CLI 从“一次性命令助手”推进成可复用的终端工作流系统，你可以用 Markdown 代理配置来固化角色、工具和护栏。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents" target="_blank">https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-custom-agents ↗</a></p>
+    <p><a href="https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli" target="_blank">https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你已经在用 GitHub Copilot CLI，最直接的做法是在仓库里新建 .github/agents/ 目录，然后创建一个 agent profile Markdown 文件。根据 GitHub Docs，这个文件可以写 description、prompt、tools，必要时还能配 MCP servers。初次上手建议不要做太复杂：先围绕一个高频流程做最小原型，比如“安全审计代理”“发版说明代理”或“事件响应代理”。把团队默认命令、允许使用的工具、输出格式、注意事项都写进 agent profile，然后在 CLI 中选用它执行任务。这样做的效果，是把反复口头说明的上下文变成版本化、可评审、可共享的仓库资产。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这说明主流厂商正在把 AI coding 从“问答”推进到“工作流资产化”。它的关键点不是模型更聪明，而是允许团队把角色边界、工具权限、输出要求和协作规范一起收进仓库，让 CLI、IDE、GitHub.com 的代理行为更一致。对真正做研发协作的人来说，这比单次 prompt 提升更实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为安全扫描、发布说明、依赖检查、基础设施审计建立统一终端代理。</li>
+    <li>把团队惯例写进仓库，让新人和不同 IDE/CLI 用户共享同一套 AI 工作方式。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/github/status/2073492041326088701" target="_blank"><span class="handle">@github</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ FluentCleaner</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个新的开源 Windows 清理工具，回到“只做好清理本身”的思路，基于社区维护多年的 winapp2.ini 规则库来做更可检查的系统清理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.appinn.com/fluentcleaner" target="_blank">https://www.appinn.com/fluentcleaner ↗</a></p>
+    <p><a href="https://github.com/builtbybel/FluentCleaner" target="_blank">https://github.com/builtbybel/FluentCleaner ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你是 Windows 用户，建议先从 Appinn 文章进入，确认它的定位与边界：它不是“大而全优化套件”，而是一个偏克制的清理工具。然后再去 GitHub 看项目发布页或源码，下载后先在非关键机器上做一次扫描，重点观察它基于规则库识别出的缓存、临时文件和注册表项，而不是一上来就全盘清理。更稳妥的使用方式是：先看默认规则，保留社区维护的 winapp2.ini/Winapp3/Winappx 方案，不急着自定义；初次执行前记录磁盘占用和系统状态，跑完后再核对释放空间与是否影响常用软件。这样既能体验它的“轻量清理”路线，也能避免传统系统优化工具常见的误伤问题。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这类工具重新流行，说明用户对“少打扰、少广告、少过度优化”的产品重新有需求。FluentCleaner 的技术亮点不是炫功能，而是把经过多年验证的规则数据库重新接回现代 WinUI 3 界面，并强调规则明确、可审核、可社区维护，这比黑箱式“大力优化”更值得信任。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>清理 Windows 临时文件、应用缓存和冗余注册表规则，回收磁盘空间。</li>
+    <li>给不想使用臃肿系统优化软件的用户提供一个更透明的开源替代方案。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2073688997298139419" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMc5J1UXcAAdaju?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMc5J1UXcAAdaju?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 更强模型不一定更会调工具</div>
+  <div class="section"><div class="section-label event">事件</div><p>Armin Ronacher 发文指出，更新的 Claude 模型在某些非主流工具 schema 上，反而比旧模型更容易产生不合法工具调用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条信息值得所有做 agent、插件、自动化工作流的人重视。问题不在“模型笨”，而在模型可能被某个主流闭源工具生态深度塑形之后，对别的 schema 适配反而变差。文章里提到，新模型会在 edit payload 中凭空补出多余字段，语义其实没错，但格式不合法，最终导致 harness 拒绝执行。从工程角度看，这意味着工具调用不再只是“模型是否理解任务”，还包括“它是否贴合自己训练时习惯的调用形状”。未来谁掌握主流 harness，谁就可能在无形中定义工具接口的事实标准。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对开发者和平台方来说，这会推动两件事：一是更严格的 schema 校验、约束解码和重试机制会重新变成必选项；二是做自定义 agent/harness 的团队不能再默认“只要给模型看 JSON schema 就够了”。工具生态可能会从“模型兼容任何接口”转向“接口要尽量贴近头部生态的分布”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2073933413095288874" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMgXaTaaYAEbzp3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMgXaTaaYAEbzp3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 开始下场做药物研发</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 宣布启动自有药物发现项目，聚焦传统大药厂认为商业回报不足的被忽视疾病，并同步推进面向科研人员的 Claude Science。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是普通的“行业合作新闻”，而是大模型公司开始从卖模型、卖平台，进一步走向“亲自下场做垂直应用”。如果消息持续兑现，Anthropic 的角色会从 AI 能力供应商，变成生命科学里的参与者与潜在竞争者。它对外说法是通过亲自做 preclinical drug discovery 获得第一手经验，从而做出更好的科研工具；这套逻辑很强，因为很多垂直 AI 产品真正缺的不是模型，而是对工作流、数据结构、实验环节和验证链条的深理解。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>一旦头部模型公司开始在生物医药、科研、金融等高价值行业直接做“业务层”，产业分工会被重写。对初创公司来说，机会在更细分、执行更深、与线下流程耦合更强的环节；对传统行业来说，未来合作对象不再只是软件供应商，也可能是潜在竞争者。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2073813815859478717" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>docu.md / Markdown Viewer：把 Markdown 一键转成带流程图、LaTeX、代码高亮的 Word 文档，支持浏览器扩展、VS Code 和移动端；但原推文信息过少，因此先放观察名单。 <a href="https://docu.md" target="_blank">→</a></li>
+    <li>AdaJEPA：一个强调持续学习、自适应工作记忆与闭环规划行动的研究项目，更偏研究追踪而不是今天就能直接玩的产品。 <a href="https://agenticlearning.ai/adajepa/" target="_blank">→</a></li>
+    <li>Gorden Sun AI资讯日报：适合补充观察他人筛选视角，但今天证据更像“内容汇总入口”，不适合展开写成可上手工具。 <a href="https://gorden-sun.notion.site/7-5-AI-39459424732580c29e8acc266edc508d?source=copy_link" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
