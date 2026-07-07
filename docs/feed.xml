@@ -5,13 +5,14 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 07 Jul 2026 01:30:20 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 02:13:20 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/07/07 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-07.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-07.html</guid>
-      <description>今天的 AI 热点不只是“又有新模型”，而是工具链明显朝“可组合、可落地、可验证”演进：一边是能直接上手的开源编排层、设计技能库和图像模型，一边是平台层开始补足缓存、部署与 agent 基础设施。由于本次 Agent Reach 证据增强脚本异常退出，以下内容以推文原文结合 GitHub、官网、Hugging Face 等外部公开资料人工交叉核实；证据不足的条目不放入可上手正文。</description>
+      <description>今天最值得盯的是“给 AI 再套一层工作流/控制层”的新工具潮：从工程技能包、设计技能、meta-harness 到多 agent 操作台，大家都在把“会聊天的模型”改造成“可复用、可验证、可协作的生产系统”。
+同时，大厂侧开始补基础设施与低成本高性能模型：Cloudflare 把缓存前置到 Worker，腾讯 Hy3 则继续把开源 agent 模型往“更便宜、更稳、更像产品级”推进。</description>
       <pubDate>2026-07-07T08:30:00+08:00</pubDate>
     </item>
     <item>
