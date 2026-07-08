@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 07 Jul 2026 02:13:20 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 00:41:36 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/08 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-08.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-08.html</guid>
+      <description>今天最值得盯的不是又一个大模型口号，而是“AI 直接变成可操作工具”的速度在继续加快：设计、记忆层、字幕翻译、内容筛选、3D 网格处理、小说写作这些原本分散的工作流，正在被做成可下载、可本地跑、可立刻上手的成品。
+同时，行业讨论也在从“提示词怎么写”明显转向“循环、记忆、缓存、外部 harness 怎么搭”，这说明下一轮差异化越来越落在工作流基础设施，而不只是模型本身。</description>
+      <pubDate>2026-07-08T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/07 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-07.html</link>

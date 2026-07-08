@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-08</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-08</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得盯的不是又一个大模型口号，而是“AI 直接变成可操作工具”的速度在继续加快：设计、记忆层、字幕翻译、内容筛选、3D 网格处理、小说写作这些原本分散的工作流，正在被做成可下载、可本地跑、可立刻上手的成品。
+同时，行业讨论也在从“提示词怎么写”明显转向“循环、记忆、缓存、外部 harness 怎么搭”，这说明下一轮差异化越来越落在工作流基础设施，而不只是模型本身。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本地优先、开源的 Claude Design 替代品，把代码代理直接变成设计引擎，可生成原型、落地页、仪表盘、幻灯片、图片和视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+    <p><a href="https://opendesigner.io" target="_blank">https://opendesigner.io ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 GitHub 仓库阅读 QUICKSTART 或 README，确认自己本机已有 Claude Code、Codex、Cursor、Gemini 或其他兼容 CLI 代理。随后按仓库说明安装桌面端或本地依赖，启动后选一个现成设计系统或模板，输入一个非常具体的任务，比如“做一个 AI 产品官网 Hero 区 + 功能区 + CTA”，让代理直接产出真实 HTML/视觉稿。接着再切到导出链路，把结果输出成 HTML、PDF、PPTX 或 MP4，验证它不是只会画图，而是真能交付文件资产。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是简单的“AI 出图”工具，而是在把设计系统、技能文件、插件和本地代理接成一个可组合工作台。对团队来说，真正有价值的是可复用的设计资产和本地可控工作流，而不是一次性演示图，这也是它短时间内获得极高关注的原因。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>创业团队快速生成官网、产品原型和演示稿</li>
+    <li>设计/前端协作时，把视觉探索直接落到真实文件</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2074380400110039268" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2074372040547831808/img/u3Rqk4OykXch1Hdc.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2074372040547831808/img/u3Rqk4OykXch1Hdc.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AutoRemesher</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个自动四边面重拓扑工具，能把高面数、结构混乱的 3D 模型转换成更适合绑定、动画和后续编辑的干净网格。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/huxingyi/autoremesher" target="_blank">https://github.com/huxingyi/autoremesher ↗</a></p>
+    <p><a href="https://github.com/huxingyi/autoremesher/releases" target="_blank">https://github.com/huxingyi/autoremesher/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果只是体验，最省事的方式是直接去 GitHub Releases 下载对应系统的预编译版本；如果你要自己编译，仓库 README 给了 CMake 构建路径，macOS 需先准备 Xcode Command Line Tools 和 cmake。打开软件后，导入一个高模或扫描得到的杂乱 mesh，运行自动重拓扑，再把输出结果导回 Blender、Maya 或其他 DCC 工具里检查四边面密度、边流和可绑定性。对比原网格与新网格的变形质量，能很快判断它是否适合动画、游戏资产或 3D 打印前处理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这类“脏活累活”过去常常要靠手工 retopo 或昂贵商业插件完成，而 AutoRemesher 把自动化门槛降得很低。更关键的是它最近刚发 1.0.0 正式版，说明这不是只停在概念演示，而是已经进入更稳定、可重复使用的阶段。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>游戏和动画制作中的模型清理与重拓扑</li>
+    <li>3D 扫描、AI 生成模型后的后处理与可编辑化</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2074431212303839349" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMncLr0aUAA04tm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMncLr0aUAA04tm?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ EverOS 1.1.1</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 AI agent 的本地优先记忆层，把对话、文件和 agent 轨迹存成可读 Markdown，并同步索引做长期检索。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/EverMind-AI/EverOS" target="_blank">https://github.com/EverMind-AI/EverOS ↗</a></p>
+    <p><a href="https://docs.evermind.ai" target="_blank">https://docs.evermind.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub 仓库读 QUICKSTART，理解它的核心不是聊天前端，而是“给 agent 一个可迁移的长期记忆层”。然后本地 clone 仓库，按 Python 项目说明装依赖并跑示例，把几段对话、任务笔记或文件摘要写进去，再用它的检索能力把旧信息找回来。更进一步，可以把它接到自己的 agent 工作流里：例如让编码助手把每次踩坑记录、决策理由和交付物索引写入 EverOS，再在下一次任务中自动召回，这样你测试的重点就会从“它会不会记住”变成“它如何组织和复用记忆”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 记忆这条赛道最近开始从“向量库组件”转向“可读、可迁移、用户可控的记忆运行时”。EverOS 把 Markdown 作为事实源、把本地优先作为默认假设，这对需要审计、版本控制和长期沉淀工作流的人尤其重要；1.1.1 这次还强调了 LoCoMo 评测复现稳定性，说明团队在往可验证方向收敛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给个人或团队 agent 增加长期记忆与经验复用能力</li>
+    <li>把项目决策、对话和文件沉淀成可检索知识资产</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2074493311046607113" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WhisperSubTranslate</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本地字幕生成与翻译桌面应用，能把视频音频转成 SRT 字幕，再离线或在线翻译成其他语言。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Blue-B/WhisperSubTranslate" target="_blank">https://github.com/Blue-B/WhisperSubTranslate ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接去 GitHub Releases 下载最新便携版，解压后运行 WhisperSubTranslate.exe，把本地视频拖进去即可先做语音转字幕。它底层使用 whisper.cpp 生成 SRT，随后你可以选择继续用内置的 Hy-MT2 本地模型离线翻译，或者填入自己的外部翻译 API。实际体验时，建议先拿一段 2-5 分钟的英文或日文视频做测试，观察字幕切分、翻译质量和本地显存/内存占用，再决定是否用于课程视频、访谈播客或素材粗翻。它的重点不是云端协作，而是“视频不出本地也能完成字幕流程”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>一方面，字幕生成+翻译本来就是高频刚需；另一方面，这个项目把“离线处理、无限次、无注册、无云端上传”做成了明确卖点，对很多不愿上传素材、又需要快速获取字幕的人非常有吸引力，本地工具价值很清晰。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给外语课程、访谈、播客素材快速生成双语字幕</li>
+    <li>对隐私敏感或无法上传的视频做本地字幕处理</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2074479438146802167" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ HNRSS</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把 Hacker News 变成实时、可筛选 RSS/Atom/JSON Feed 的服务，支持关键词、分数、评论数、岗位等多种过滤方式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://hnrss.org" target="_blank">https://hnrss.org ↗</a></p>
+    <p><a href="https://github.com/hnrss/hnrss" target="_blank">https://github.com/hnrss/hnrss ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最简单的玩法是直接打开 hnrss.org 文档，复制现成的 feed 地址进你的 RSS 阅读器。比如你可以订阅 frontpage 看上首页的新帖，或用 newest?q=agent 盯 AI agent 相关帖子，再加上 points=100 只看热度达到阈值的话题。更高级一点，可以把某个关键词、某位 HN 用户、某类招聘评论或 특정 thread 的新回复单独做成 feed，再接到自己的信息看板、Notion、邮件或自动摘要脚本里。它几乎就是“把 HN 重新 API 化给普通人用”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>信息入口越来越多，但可编排的高质量技术流入口并不多。HNRSS 的价值不在“又一个 RSS”，而在它提供了足够细粒度的过滤参数，能让个人研究、情报监控和机会发现从被动刷站，升级成主动订阅与自动化筛选。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>跟踪 AI、编程、创业等关键词在 Hacker News 的新讨论</li>
+    <li>把 HN 变成个人研究或情报系统的结构化输入源</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2074516635466220019" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Best.XiaoHu.AI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个强调“已核对来源、讲透不注水”的 AI 内容精选站，试图替代泛滥的低质量 AI 文章流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://best.xiaohu.ai" target="_blank">https://best.xiaohu.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开站点后，不要只把它当资讯首页看，而是先随机点进 3-5 篇“产品发布/研究解读/深度”文章，检查它的来源标注、立场提示、篇幅控制和是否真的做了二次解释。然后你可以把它当成一个高信噪比入口：每天固定扫最新更新，挑 1-2 条再回溯到原始厂商博客、论文或媒体报道，形成“精选站做初筛，自己做二次验证”的工作流。如果你平时已经信息过载，这类“先帮你去水、再留原始来源”的站，往往比单纯的资讯聚合更省时间。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 内容站很多，但真正把“核对来源”和“反信息泡沫”作为产品定位写出来的不多。它反映的是一个需求变化：用户越来越不缺 AI 新闻，而是缺能帮自己节省验证成本、提高信息密度的二次信息层。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>每天快速筛选值得进一步深挖的 AI 产品与研究动态</li>
+    <li>给团队做信息初筛，减少在低质量内容上的时间浪费</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2074315299634250059" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2074314520143810560/img/YJx3XJwt6ncsO1ES.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2074314520143810560/img/YJx3XJwt6ncsO1ES.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WriteWise</div>
+  <div class="section"><div class="section-label event">一句话</div><p>喜马拉雅推出的 AI 小说创作工具，提供灵感、人设、对白、武侠打斗等写作辅助，并带有专门面向小说创作的编辑器。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.ximalaya.com/gatekeeper/write-wise-web?ref=ai-bot.cn" target="_blank">https://www.ximalaya.com/gatekeeper/write-wise-web?ref=ai-bot.cn ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入官方网页后，可以直接先点“体验网页版”，也可以按页面提供的下载链接安装 Windows 或 macOS 客户端。第一次上手建议不要让它“一键写整章”，而是用更有效的三段式玩法：先让它帮你生成角色设定和世界观约束，再让它给单场景对白或冲突桥段出多个版本，最后用编辑器自己做人工收束。这样能更快判断它到底擅长灵感激发、文本润色，还是长篇结构推进。由于它本身就是为网文/小说流程设计，拿来测人物命名、桥段扩写和连载节奏会比通用聊天模型更贴场景。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是泛写作助手，而是更垂直的“小说生产工具”。在 AI 工具越来越同质化的背景下，行业里真正值得盯的是这种把模型能力压进具体工作流、并直接围绕专业用户界面和流程做产品化的项目，它更接近真实付费需求。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>网文、轻小说、剧本创作中的设定、对白和桥段辅助</li>
+    <li>内容团队测试垂直写作 AI 是否优于通用大模型</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2074449394787823800" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Harness Engineering 成为 RSI 的近期主战场</div>
+  <div class="section"><div class="section-label event">事件</div><p>Lilian Weng 的新文把递归式自我改进的现实落点，从“模型自己改权重”拉回到 agent 外围的 harness 与运行时系统。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条线重要在于它帮行业重新定义了“自我改进”应当先从哪里发生。短期内，真正可持续迭代的不是底座模型自己写自己，而是围绕模型搭建的工具调用、上下文管理、评测、记忆、子代理和权限控制系统。也就是说，很多团队过去以为自己在做 prompt optimization，接下来会更像是在做操作系统层和工程系统层的优化；谁能把这些外层回路搭好，谁就更可能把同一模型用出数量级差异。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会推动更多创业和开源项目从“再包一层聊天 UI”转向“做记忆层、循环框架、评测 harness、工具编排器”。对开发者和团队而言，下一阶段的能力分水岭不只是模型额度，而是谁能把模型外壳工程化。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2074385362777235878" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMmyeNbbUAAzpHu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMmyeNbbUAAzpHu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 把 Loops 提升为设计范式</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Code 团队公开总结了 Loops 设计范式，强调 agent 工程不应只围绕单次提示，而应围绕触发、停止条件、工件和适用场景来设计循环。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这件事的信号价值很强。过去大量用户仍在用“问一句、等一句”的方式理解 agent，而 Loops 其实是在把 agent 从交互式聊天，推进到半自动、可复用、可治理的任务执行器。它把大家口中的“工作流”拆成几个更稳定的设计变量，意味着未来好的 agent 产品会越来越像低代码流程引擎与软件工程规范的结合，而不是神秘提示词技巧的堆砌。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会进一步催熟 agent 编排、任务循环模板、结果校验和中断恢复等配套生态。对开发者来说，掌握循环设计会比死记提示词更值钱；对产品来说，可视化、可暂停、可恢复的 loop 很可能成为新标配。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2074290011282055656" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMlbw3CagAA5IJ1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMlbw3CagAA5IJ1?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cloudflare 推出 Workers Cache</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cloudflare 发布 Workers Cache，把分层缓存放到 Worker 前面，让 Worker 作为“源站”时也能先吃掉大量请求。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是单纯的性能小优化，而是边缘应用架构的一次方向性调整。过去不少 Worker 项目因为每次请求都要执行逻辑，成本和延迟难以下来；现在缓存前置意味着更多以 Worker 为核心的 AI 网关、API 聚合层、内容转译层，可以像传统站点一样先用 CDN 级缓存挡流量。对 AI 应用尤其关键，因为许多推理外围请求并不需要每次都重新算。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>边缘 AI 应用、Agent API 网关、内容分发型工具会更适合用 Worker 架构去做。它会降低一类“轻推理、重分发、重编排”项目的成本门槛，也会让开发者重新评估哪些后端原来必须放在传统服务器上。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2074294228910567874" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMlfgQIaAAANJwd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMlfgQIaAAANJwd?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Fable 5 免费体验延至 7 月 12 日</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 将 Claude Fable 5 的免费体验期延长到 7 月 12 日，已在订阅内开放给多类付费用户继续使用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这看似只是期限延长，但背后透露的是高端模型在进入更大规模试用阶段时，对“留存、转化、口碑扩散”的权衡。过去不少高性能模型一旦试用窗口过短，用户来不及建立稳定工作流，热度会很快流失；延期意味着 Anthropic 愿意用更多推理成本换取更深的使用渗透，也给了开发者更多时间验证它是否真的能承担长期生产任务，而不只是一次性惊艳。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>短期会刺激更多围绕 Fable 5 的使用技巧、工作流模板和替代成本比较内容出现；长期看，高性能模型的竞争会越来越像“谁先让用户形成依赖的工作方式”，而不是单次 benchmark 谁更亮眼。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2074567631214911505" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2074429490357235772" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lijigang/status/2074544282921529490" target="_blank"><span class="handle">@lijigang</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2074386773657137327" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2074578747106431017" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2074385362777235878" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2074296993896337489" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2074426633763622912/img/kMUWKv-KAgvNYGWG.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2074426633763622912/img/kMUWKv-KAgvNYGWG.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMmyeNbbUAAzpHu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMmyeNbbUAAzpHu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMliHGCaoAADmEC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMliHGCaoAADmEC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMkyzF_XkAAnYTP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMkyzF_XkAAnYTP?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Simon Willison / sqlite-utils 4.0：老牌数据工具迎来大版本升级，还专门提供升级指南，适合关注“让 agent 自动做升级迁移”的实践 <a href="https://x.com/simonw/status/2074578747106431017" target="_blank">→</a></li>
+    <li>Auto research / Loop / agent 设计语言：今天多条讨论都在往“模型之外的系统设计”收束，这条线比单一新品更值得长期跟踪 <a href="https://x.com/shao__meng/status/2074385362777235878" target="_blank">→</a></li>
+    <li>Claude Code 口述史：官方回看从内部原型到正式发布的路径，适合观察顶级 coding agent 产品是怎么被逐步产品化的 <a href="https://x.com/shao__meng/status/2074296993896337489" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
