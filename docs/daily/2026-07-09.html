@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-09</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-09</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得盯的不是又一个大模型口号，而是“能立刻上手的生产力组件”在同步变成熟：图像生成开始进入可编辑、可做信息图和 UI 原型的阶段，浏览器扩展、TTS、Agent Harness、Agent 支付与执行沙箱这些底层拼图也在快速补齐。
+由于 Agent Reach 多源证据包本次生成超时，今天正文以 X 原文 + 官网/GitHub/官方文档为主做交叉核验；凡是证据链不完整但信号很新的条目，我会明确放进“早期信号/证据待补”，不做功能脑补。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Seedream 5.0 Pro</div>
+  <div class="section"><div class="section-label event">一句话</div><p>字节刚上线的新一代图像生成与编辑模型，重点不是“更会画”，而是更适合做高密度信息图、局部精修、图层拆分和多语言视觉内容。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://seed.bytedance.com/seedream5_0_pro" target="_blank">https://seed.bytedance.com/seedream5_0_pro ↗</a></p>
+    <p><a href="https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro" target="_blank">https://seed.bytedance.com/en/blog/beyond-generation-it-understands-design-introducing-seedream-5-0-pro ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先直接打开官方主页看案例，重点看它在信息图、海报、UI 原型和局部编辑上的表现。官方博客已经给了很清晰的使用方向：一类是让它把复杂信息变成单张高密度可视化图，例如科普图、流程图、商品页草图；另一类是把已有图片拿来做点选、框选、换材质、换颜色、多图融合这类精修。实际体验时，建议不要只测“生成一张美女图”，而是拿真实工作任务去测，比如“做一张茶叶知识图”“把英文菜单改成中文”“给网页首屏出一版带分层结构的视觉稿”，这样最容易看出它和通用文生图模型的差距。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方把重点明确放在“复杂信息可视化”“交互式精准编辑”“原生多语种输入和生成”上，这意味着图像模型正从一次性出图工具，往设计协作工具和半结构化生产工具走。若这条路线稳定，受影响的不只是海报生成，还包括信息图、商品页、课件封面、轻量 UI 草稿等高频任务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>运营、教育、咨询团队批量制作高信息密度海报、知识卡片和流程图。</li>
+    <li>产品和设计团队快速生成网页首屏、商品详情页、局部改图和多语种物料。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2074878971473469835" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2074850963991748608/img/BUqDTNDYcIimKWcH.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2074850963991748608/img/BUqDTNDYcIimKWcH.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ YTD List Pro</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把 YouTube 订阅频道整理成分类侧边栏的开源浏览器扩展，解决“订阅太多、越看越乱”的老问题。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/lxfater/ytd-list-pro" target="_blank">https://github.com/lxfater/ytd-list-pro ↗</a></p>
+    <p><a href="https://github.com/lxfater/ytd-list-pro/releases/latest" target="_blank">https://github.com/lxfater/ytd-list-pro/releases/latest ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这个项目最友好的地方是“无需构建，下载 Release 就能装”。进入 GitHub Releases 下载最新压缩包后，在 Chrome 或 Edge 打开扩展管理页，开启开发者模式，再“加载已解压的扩展程序”即可。装完以后，它会把 YouTube 左侧订阅列表改造成“分类浏览”模式；你可以先建立几个分类，比如 AI、编程、创业、设计，然后在频道页或视频页旁边直接把频道塞进对应分类。项目还自带 CSV 导入导出，适合把已有订阅做一次系统整理，或者多账号之间迁移自己的观看结构。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是“宏大 AI 平台”，但很典型地体现了现在一波 AI 开发者的产品取向——抓住一个真实、小而高频的痛点，用浏览器扩展快速做出可交付成品。对独立开发者来说，这类轻量工具比大而全 Agent 更容易验证需求，也更容易形成可持续迭代。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>重度 YouTube 用户把分散的技术频道、资讯频道和娱乐频道拆开管理。</li>
+    <li>内容研究者为不同主题建立观察清单，降低信息过载。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2074839241033736341" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMi0P1tagAAJ36V?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMi0P1tagAAJ36V?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Raven</div>
+  <div class="section"><div class="section-label event">一句话</div><p>EverMind 开源的 self-improving agent harness，强调长期记忆、技能沉淀、可复用 agent 模板和主动式工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/EverMind-AI/Raven" target="_blank">https://github.com/EverMind-AI/Raven ↗</a></p>
+    <p><a href="https://raven.evermind.ai" target="_blank">https://raven.evermind.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你平时已经在用 Claude Code、Hermes、Codex 这类终端 Agent，可以把 Raven 当成“另一种 Agent 运行时”来试：先读 README，重点看它关于 memory-first、自我改进、Agent Templates、gateway/TUI 的说明；然后本地跑起来，用一个固定任务做横向比较，比如“生成日报”“维护仓库 issue”“跑定时监控”。测试时不要只看单轮回答质量，更要看它在多次运行后是否能把成功流程沉淀为模板、是否能靠记忆和技能复用减少重复提示。它的价值不在一句 prompt，而在“系统是否会越跑越像团队成员”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>过去很多 Agent 框架的瓶颈是“每轮都像失忆重来”。Raven 这条路线把持久记忆、技能演化、主动执行放到框架中心，比单纯的 tools+loop 更接近真实工作流。如果社区继续沿这个方向迭代，Agent 框架的竞争点会从“谁会调模型”转向“谁更会积累组织记忆”。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做长期运行的研究、监控、内容生产和客服型 Agent。</li>
+    <li>需要把成功工作流模板化、跨成员复用的团队内 AI 基建。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2074781116066849232" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMsRozpbQAA-xpQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMsRozpbQAA-xpQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Confucius4-TTS</div>
+  <div class="section"><div class="section-label event">一句话</div><p>有道开源的多语言/跨语言零样本文本转语音系统，主打“同一个声音切不同语言”以及跨语种配音。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/netease-youdao/Confucius4-TTS" target="_blank">https://github.com/netease-youdao/Confucius4-TTS ↗</a></p>
+    <p><a href="https://confucius4-tts.youdao.com/gradio" target="_blank">https://confucius4-tts.youdao.com/gradio ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最简单的入口不是本地部署，而是先上官方 Gradio Demo，用几秒参考音频测试“保留音色做跨语种配音”的效果，例如把中文口播转成英文或日文。若效果符合预期，再去 GitHub 看 README：仓库给出了推理脚本、依赖、模型目录结构和训练/微调说明。实操时，建议先拿短视频解说、播客片段、课程口播做小样，验证两个关键点：一是跨语言时音色保持得是否稳定，二是字词发音和节奏是否足以直接进剪辑流程。对于做跨境内容或多语配音的人，这是比“只会朗读”更有价值的能力。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>TTS 赛道现在卷得厉害，但 Confucius4-TTS 的亮点在于它把“跨语种零样本配音”做成了开源可试的工程资产，而不是只停留在封闭 Demo。对开发者来说，这意味着可以直接拿来做视频翻译、数字人配音、双语课程和多语播报，而不是被平台 API 完全锁死。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>短视频、课程、播客做跨语种配音和低成本本地化。</li>
+    <li>给客服、讲解员、数字人系统补上多语音色迁移能力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2074736790066630739" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMryA18bEAAzF6_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMryA18bEAAzF6_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ x402</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个试图把 HTTP 402“Payment Required”真正用起来的开放支付协议，让 API、网站和 Agent 可以用原生 HTTP 流程处理按次付费。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/HorizenLabs/coinbase-x402" target="_blank">https://github.com/HorizenLabs/coinbase-x402 ↗</a></p>
+    <p><a href="https://x402.gitbook.io/x402/faq" target="_blank">https://x402.gitbook.io/x402/faq ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你关心“Agent 怎么自己付费调用服务”，x402 很值得从文档和 examples 下手。先读它的典型支付流程：服务端返回 402 与支付要求，客户端补齐支付签名后再次请求，验证和结算可以通过 facilitator 完成。接着选 TypeScript 或 Python SDK，先做一个最小 demo：把某个原本免费的接口改成“按次收费”接口，或者模拟一个 AI Agent 调用外部检索/数据服务时自动过支付闸门。这里的关键不在币圈，而在“程序能否自己完成授权与支付”——这是 Agent 走向真实商业流程的基础能力之一。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>现在很多 Agent 一旦碰到订阅、额度、API Key、支付确认就会卡在人类审批环节。x402 试图把支付也变成一个程序可组合的协议层，如果生态补起来，它可能成为 Agent 经济里的“支付中间件标准件”，尤其适合按次计费、微支付和机器对机器服务调用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 API、数据接口、检索服务加上机器可处理的按次付费能力。</li>
+    <li>构建能够自主购买外部能力的 Agent 或 agent-to-agent 服务网络。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2074852343049601380" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HMtaf-0aQAEwzXz.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HMtaf-0aQAEwzXz.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2071963752803504128/img/EhUQMK6cos3lDVWF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2071963752803504128/img/EhUQMK6cos3lDVWF?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Firecracker</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AWS 开源的 microVM 引擎，擅长在轻量开销下提供比容器更强的隔离，是做 Agent 代码执行沙箱的重要底层候选件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/firecracker-microvm/firecracker" target="_blank">https://github.com/firecracker-microvm/firecracker ↗</a></p>
+    <p><a href="https://firecracker-microvm.github.io" target="_blank">https://firecracker-microvm.github.io ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Firecracker 本身不是“开箱即用的 AI 沙箱产品”，而是底层虚拟化引擎。真正的玩法是把它当成执行隔离层：先读官方文档理解 microVM、KVM、启动速度和最小化设备模型，再结合上层运行时去设计你的执行链路。例如你可以先做一个最小实验：把某段需要联网、读写文件、执行代码的 Agent 任务放进隔离环境里跑，然后观察冷启动、文件挂载、网络限制和回收速度。对多数团队来说，真正的价值不在“装上就能跑”，而在它给了你一个比 Docker 更适合高风险代码执行的底座。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 代码执行和自主 Agent 的关键矛盾之一，是“既要快，又要隔离”。Firecracker 这类 microVM 技术恰好卡在这个矛盾点上：它比传统虚拟机轻得多，又比普通容器更适合承接不可信工作负载。随着更多 Agent 产品进入真实生产环境，执行沙箱不会只是后端细节，而会变成平台能力差异。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给代码生成、自动修复、数据处理 Agent 提供更强隔离的执行环境。</li>
+    <li>搭建需要毫秒级冷启动与多租户安全边界的 AI 任务平台。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2074734509652869383" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Hy3 Preview</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯这支 295B MoE 模型最近重新获得关注，卖点是偏 Agent/推理工作流，且可通过 OpenRouter 低门槛试用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tencent-Hunyuan/Hy3-preview" target="_blank">https://github.com/Tencent-Hunyuan/Hy3-preview ↗</a></p>
+    <p><a href="https://openrouter.ai/tencent/hy3-preview" target="_blank">https://openrouter.ai/tencent/hy3-preview ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果你平时会测模型在真实工作流里的表现，Hy3 更适合拿“多步任务”而不是单题 benchmark 来试。第一步先去 GitHub 看它的部署说明、模型介绍和 code/agent 相关 benchmark 区块，确认它不是单纯聊天模型；第二步可在 OpenRouter 找到对应模型，选几类任务做横测，比如代码改写、长上下文问答、Agent 工具调用前的规划与拆解。测试时尽量记录它在高/低 reasoning 模式下的延迟和稳定性，而不是只看一次输出是否漂亮。这样更容易判断它是否适合被放进真实 agent pipeline。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>国内模型最近真正拉开差距的，不再只是通用问答，而是“能不能顶住真实 Agent 工作流”。Hy3 被反复提到的点正是 agentic workflow、推理和部署友好度。对团队来说，若它在成本、稳定性和工作流适配上取得平衡，会比单纯追旗舰榜单更有现实意义。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>搭建中文优先的代码助手、研究助手和流程型 Agent。</li>
+    <li>在多模型编排中承担高性价比的规划、拆解和中间推理任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2074787452779401526" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMsfw9wbYAAoVL4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMsfw9wbYAAoVL4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMsgBRBbgAAeKS7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMsgBRBbgAAeKS7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMsgFJla8AASOeR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMsgFJla8AASOeR?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMsgJGBaQAA2k3e?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMsgJGBaQAA2k3e?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMjapAiaoAAvV8D?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMjapAiaoAAvV8D?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 实时语音进入“边听边说”阶段</div>
+  <div class="section"><div class="section-label event">事件</div><p>X 上把它称作 GPT-Live，但从 OpenAI 官方资料看，本轮重点其实是新一代 realtime voice models，包括 gpt-realtime、GPT-Realtime-2、Realtime-Translate 和 Realtime-Whisper。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次值得看的不是名字，而是交互范式变化：过去很多语音助手本质上还是“你说完一段，它再回一段”，而全双工/实时流式的方向，意味着模型能边听边理解、边说边调用工具，翻译和转写也不再是附属功能，而是实时对话的一部分。对开发者来说，这会把语音 Agent 从“演示产品”往“真能接工作流”的状态推进一步。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>语音入口会重新变得重要，尤其是翻译、客服、车载、教育陪练、可穿戴设备和现场作业场景。谁能把实时语音和工具调用、业务系统连接起来，谁就更可能拿到下一波 AI 原生交互的入口优势。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2075007263211937861" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Meta 再推 Muse Image / Muse Video，重点押在图像编辑与社交语境</div>
+  <div class="section"><div class="section-label event">事件</div><p>Meta Superintelligence Labs 发布 Muse Image，并预览 Muse Video，X 上讨论点集中在图像生成、精准编辑、多参考图合成和社交上下文能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果这条线落地，Meta 的差异化不一定是“再做一个会画图的模型”，而是把 Instagram/Facebook 生态里的社交语境、参考素材、身份表达、编辑链路串成一套内容生产入口。与很多纯模型厂商相比，Meta 真正的护城河可能不是单点模型能力，而是它能把生成、编辑、分发、反馈闭环放在同一平台里。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会继续拉高“图像模型=内容工作台”的竞争强度。对创业团队来说，未来只做文生图 API 的空间可能越来越窄，更有机会的是围绕编辑、工作流、垂直模板和发布链路做差异化产品。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2075008254149820699" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 工信部发布 Claude Code 安全风险提示，Agent 编码工具开始进入合规审视区</div>
+  <div class="section"><div class="section-label event">事件</div><p>X 上流传工信部关于防范 Claude Code 安全后门隐患的风险提示，引发开发者和安全圈讨论。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>无论具体事件后续如何发酵，这都在提醒一个更大的现实：Agent 编码工具已经不再只是个人效率玩具，而是开始接近企业终端、代码资产和数据边界，因此监管、合规、日志审计、网络回传、权限控制都会成为采购和上线前的硬门槛。接下来行业比较的重点，很可能不只是“谁更聪明”，而是“谁更可控、可审、可管”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业侧 AI Coding 的采购标准会越来越像安全软件和开发基础设施的混合体。具备私有部署、最小权限、清晰遥测说明、审计能力的产品，会比单纯模型效果好的工具更容易进大客户。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2074742987247296624" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2075009306513281335" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2074800241178808456" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2074758348264833131" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2074753826394173491" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/steeve/status/2074772062023950814" target="_blank"><span class="handle">@steeve</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2074827915779580055" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2074730892245786714" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2074712181200048507" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMr3rjSakAAUjQx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMr3rjSakAAUjQx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMuQw2BXUAAJaQd?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMuQw2BXUAAJaQd?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMsrm29bMAAaUJB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMsrm29bMAAaUJB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2074757422581960704/img/J7KgYVLFTwJSiurY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2074757422581960704/img/J7KgYVLFTwJSiurY?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2074757422581960704/img/J7KgYVLFTwJSiurY.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2074757422581960704/img/J7KgYVLFTwJSiurY.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2074753508436484096/img/JrOtMjgzCWMyPYOj.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2074753508436484096/img/JrOtMjgzCWMyPYOj.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMtE_N2aoAASgeC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMtE_N2aoAASgeC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMs5aAvaMAAF-Ja?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMs5aAvaMAAF-Ja?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMs5gxeaMAEUYlQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMs5gxeaMAEUYlQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMs6DOJaoAAw_lP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMs6DOJaoAAw_lP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMrswHNXMAENVqN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMrswHNXMAENVqN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Skill 管理后台开源实践：有开发者把大量 Skill 按运行模式、链路位置、专业领域做标签化管理，并做成 HTML 后台，说明“技能资产管理”正在从个人习惯升级为真正的 Agent 运维问题。 <a href="https://x.com/berryxia/status/2074827915779580055" target="_blank">→</a></li>
+    <li>Chrome 将在 2026-08-31 删除 Manifest V2 扩展：这会直接影响一批老扩展与灰产脚本，也会逼开发者更快迁移到 MV3。对做浏览器自动化和信息工具的人值得提前排查。 <a href="https://x.com/appinn/status/2074730892245786714" target="_blank">→</a></li>
+    <li>AI 校招岗位渗透率上升：脉脉高聘报告称 2026 年前五个月新发校招 AI 岗位量同比增长 47.3%，说明 AI 已从热点叙事转成更稳定的人才结构变化。 <a href="https://x.com/seclink/status/2074712181200048507" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
