@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 09 Jul 2026 00:46:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 00:46:32 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/10 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-10.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-10.html</guid>
+      <description>今天最值得盯的不是又一个“更强模型”口号，而是“能立刻上手”的交付层在加速落地：浏览器端推理、临时部署、原生桌面、视频编辑插件、影视分析工具、开放模型 API 都在往“几分钟就能试”收敛。另一条暗线是，多代理与工具调用正在从论文和 benchmark 退到产品默认能力，谁先把工作流做顺，谁就更容易吃到下一波增量。</description>
+      <pubDate>2026-07-10T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/09 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-09.html</link>

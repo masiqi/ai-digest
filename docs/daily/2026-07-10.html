@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-10</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-10</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得盯的不是又一个“更强模型”口号，而是“能立刻上手”的交付层在加速落地：浏览器端推理、临时部署、原生桌面、视频编辑插件、影视分析工具、开放模型 API 都在往“几分钟就能试”收敛。另一条暗线是，多代理与工具调用正在从论文和 benchmark 退到产品默认能力，谁先把工作流做顺，谁就更容易吃到下一波增量。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ LiteRT.js</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 面向生产 Web 应用推出的高性能浏览器端 AI 运行时，可把 PyTorch/JAX/TensorFlow 模型转成 LiteRT 后直接在 WebGPU/Wasm/WebNN 上跑。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developers.google.com/edge/litert/web" target="_blank">https://developers.google.com/edge/litert/web ↗</a></p>
+    <p><a href="https://developers.google.com/edge/litert-lm/js" target="_blank">https://developers.google.com/edge/litert-lm/js ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 Google AI Edge 的 LiteRT.js 文档，按官方说明安装 `@litertjs/core`，再把 `node_modules/@litertjs/core/wasm/` 目录托管到你自己的静态资源路径。已有模型可直接寻找 `.tflite` 资源，新的 PyTorch 模型则先用 `litert-torch` 转换成 LiteRT 格式，再在浏览器里通过 `loadAndCompile('/path/to/model.tflite', { accelerator: 'webgpu' })` 加载。若你本来就有 TensorFlow.js 前后处理流水线，也可以只替换模型推理层，用 `runWithTfjsTensors` 做兼容迁移。想更快感受效果，可直接试 LiteRT-LM 的 Web API 示例，把 Gemma 4 web 版模型地址填进浏览器端 REPL 示例，观察纯前端文本生成。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是单纯再造一个前端 AI demo，而是在统一 LiteRT 生态：同样的 `.tflite` 模型格式可以跨移动端、边缘端和浏览器复用，减少从 PyTorch 到 Web 的转换折腾。官方还明确支持 WebGPU、Wasm、WebNN 和 TensorFlow.js 互操作，这意味着“浏览器端 AI”正在从玩具演示走向真正可维护的工程栈。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做本地隐私优先的网页端推理应用，例如 OCR、视觉分类、嵌入检索或轻量聊天。</li>
+    <li>把已有 TensorFlow.js 产品迁到更统一的 LiteRT 运行时，降低多端维护成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/googledevs/status/2075325377556205736" target="_blank"><span class="handle">@googledevs</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HM0JbiTW0AAMvia?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM0JbiTW0AAMvia?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Muse Spark 1.1</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Meta 把 Muse Spark 从只在自家产品里可用，推进到开发者可接入的新模型 API 预览，主打编码、工具调用、多代理和多模态推理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.theverge.com/ai-artificial-intelligence/963193/meta-muse-spark-model-api" target="_blank">https://www.theverge.com/ai-artificial-intelligence/963193/meta-muse-spark-model-api ↗</a></p>
+    <p><a href="https://ai.meta.com/blog/introducing-muse-spark-msl" target="_blank">https://ai.meta.com/blog/introducing-muse-spark-msl ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先去读 Meta 官方对 Muse Spark 的能力描述，再结合 The Verge 对 1.1 版本的报道确认目前可用范围。现阶段最现实的玩法不是盲目上生产，而是把它当作“新一条 agent 模型路线”做小规模验证：如果你已有内部 coding agent、自动修 bug、文档问答或多代理编排流程，可以先申请 Meta Model API 预览账号，拿免费 credits 跑同一套 benchmark 或真实任务集，对比它在工具调用、端到端 agent 工作流、图像/文档理解上的表现。如果暂时拿不到 API，也可以先在 Meta AI 的 Thinking 模式里验证任务风格，再决定是否值得排进后续评测队列。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Meta 这次释放出的不是单一聊天模型，而是明确冲着“开发者可接入的 agent 模型位”来。官方和媒体描述都强调了复杂 bug 修复、多代理系统支持和原生多模态感知，这说明竞争已经从“谁更会聊天”转向“谁更适合作为工作流底座”。对开发者而言，这类模型一旦 API 化，影响会比单次榜单波动更大。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给内部编码助手、自动修复流水线、多步业务代理增加新的模型后端做 A/B 测试。</li>
+    <li>在需要图像、文档、工具调用混合的任务里，验证多模态 agent 的真实可用性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AIatMeta/status/2075221088821518394" target="_blank"><span class="handle">@AIatMeta</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMynMisbMAAntmz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMynMisbMAAntmz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ChatCut Agent Plugin</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ChatCut 官方把 Codex 接进视频编辑器时间线，让 AI Agent 能直接导入素材、加字幕、做动效、导出视频，而不是只停留在“给你一个脚本”。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ChatCut-Inc/agent-plugin" target="_blank">https://github.com/ChatCut-Inc/agent-plugin ↗</a></p>
+    <p><a href="https://chatcut.io" target="_blank">https://chatcut.io ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 ChatCut 官网注册账号，熟悉它的在线 AI 视频编辑器，再打开 GitHub 上的 `ChatCut-Inc/agent-plugin` 仓库查看插件结构。插件 README 已给出核心能力：通过托管的 ChatCut MCP 端点连接后，Codex 可以导入媒体、修改项目时间线、创建 motion graphics、生成资产、转录音频、添加字幕并导出视频。实际试用时，建议先做一个最小工作流：创建空项目→导入一段 talking head 视频→让 Agent 自动转录并加字幕→再要求它补一个简单的标题动效→最后导出视频看结果是否真的落在可编辑时间线上。这样能快速判断它是“真插件”还是“伪工作流包装”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 AI 视频工具仍停留在“上传素材后整段重做”的黑箱范式，这个插件的价值在于它把 Agent 接进了真实时间线对象模型。也就是说，AI 不只是帮你出建议，而是能操作可回退、可复查、可继续编辑的多轨工程，这比一次性生成更接近专业创作工具的生产方式。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给短视频团队做半自动粗剪、加字幕、补 B-roll、生成片头动效。</li>
+    <li>把 AI 编辑动作沉淀成固定工作流，让非专业剪辑也能完成首版交付。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2075210258214265055" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMyguVTaEAEjEhH?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMyguVTaEAEjEhH?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 拉片笔记（Lapian Notes）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把电影本地抽帧、自动配字幕、打包给 AI 分析，再生成剧情泳道、结构树和情绪曲线的开源影视分析工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/bkingfilm/lapian-notes" target="_blank">https://github.com/bkingfilm/lapian-notes ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开 GitHub 仓库即可开始。作者给了非常清晰的非程序员启动方式：下载 ZIP 后解压，Windows 双击 `run.bat`，Mac 双击 `run.command`，首次会自动准备 Node 运行环境并在浏览器打开界面。上手顺序推荐按仓库四步走：先导入电影文件，让工具自动抽帧和处理字幕；再把生成的 AI 分析包 ZIP 发送给 ChatGPT 等任意模型；随后把 AI 返回的 JSON 结果导回工具；最后在界面里查看剧情泳道图、结构树、情绪曲线，并对关键段落继续精修或单独深拆。因为数据默认本地保存，所以更适合教学研究、创作者拉片和故事结构学习。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是泛泛的“AI 帮你看电影”，而是把影视叙事分析拆成了可编辑对象：时间轴、段落、剧情线、结构树、情绪曲线都能落地。它把大模型从一个总结器，变成了创作者研究素材的辅助工作台；而且强调本地运行、自己选 AI、自己导回结果，给了用户更强的可控性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>编剧、导演、短片创作者做拉片研究，系统分析经典影片的结构与节奏。</li>
+    <li>影视教育、自媒体拆片、课程设计中，快速生成可复用的分析底稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2075107546143326352" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMxDPPabYAA-KLu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMxDPPabYAA-KLu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMs_99Mb0AAXBJO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMs_99Mb0AAXBJO?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMs_99QbsAAs0qG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMs_99QbsAAs0qG?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Native SDK</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Vercel Labs 开源的原生桌面应用开发工具包，保留 Web 风格的声明式 UI 体验，但不再依赖浏览器或 WebView 作为主体运行时。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/vercel-labs/native" target="_blank">https://github.com/vercel-labs/native ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先去 GitHub 看 `vercel-labs/native` 的 README 与 examples，再确认你的机器是否愿意折腾 Zig 生态。这个项目更适合开发者试玩：先从仓库示例入手，不要一上来迁复杂业务。最实际的验证方式，是挑一个现有小型 Web 工具或内部面板，抽出最小功能做 PoC，对照仓库给出的 examples 跑 `native dev` 之类的本地开发流程，体验它如何把 UI 直接绘制到系统窗口，而不是再包一层浏览器外壳。你可以重点观察三件事：启动体积是否更轻、原生能力接入是否更顺、以及前端团队迁移学习成本是否真的低于 Electron/Tauri 的替代路线。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>过去桌面应用常卡在两难：想保留 Web 开发体验，就得接受 Electron/WebView 的重量；想更原生，就要重写技术栈。这个项目试图把“声明式 UI 作者体验”和“更轻原生运行时”合到一起。即使它还早期，也很可能会催生新一轮“Web 团队做桌面应用”的实验潮。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>内部效率工具、开发者工具、轻量工作台类桌面应用的快速原型验证。</li>
+    <li>把已有 Web 小工具迁成桌面端，测试是否能获得更好的性能和系统集成。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2075023780230144264" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMv3FenbUAAfmMD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMv3FenbUAAfmMD?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMvwgwBXQAAW3TJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMvwgwBXQAAW3TJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare Drop</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cloudflare 新出的拖拽式静态站临时发布工具，不登录也能把 HTML/CSS/JS 站点秒传上线，先给你 1 小时可分享预览，再决定要不要认领成正式项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.cloudflare.com/drop" target="_blank">https://www.cloudflare.com/drop ↗</a></p>
+    <p><a href="https://developers.cloudflare.com/changelog/post/2026-07-08-cloudflare-drag-and-drop" target="_blank">https://developers.cloudflare.com/changelog/post/2026-07-08-cloudflare-drag-and-drop ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最适合的玩法是把它当成“超轻量 demo 验证器”。先在本地准备一个纯静态文件夹或 zip，包含 HTML、CSS、JavaScript、图片等资源，然后打开 Cloudflare Drop 页面直接拖进去。上传后会立即生成一个临时在线地址，你可以把链接发给同事、客户或朋友看效果；如果只是展示 AI 生成的 landing page、活动页或前端原型，这一步基本够了。若确认要继续维护，再点击 Claim 登录或创建 Cloudflare 账号，把临时预览认领成持久部署。建议第一次就用一个几十 KB 的单页 demo 试，看看它能否替代你平时“本地截图+口头解释”的低效分享流程。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它精准卡住了一个高频小痛点——很多人做了个小站、AI 生成了个页面、或临时改了个前端，却不想先配仓库、账号、构建链和正式部署。Cloudflare Drop 相当于把“展示给别人看”这一环缩短到拖文件即可，对 Vibe Coding、原型验证和售前演示都很友好。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 AI 生成的落地页、活动页、可视化原型快速分享给客户或团队。</li>
+    <li>在正式接入 CI/CD 前，先做临时线上验证、可用性评审或异地联调。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2075115024100802797" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GPT-5.6 / ChatGPT Codex / Work 一次性改写竞争焦点</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 同步释放 GPT-5.6 系列、把 ChatGPT 与 Codex 进一步合流，并把“Work”推成更接近能干活的 agent 入口。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这波更新最重要的不是参数名，而是产品层重新排兵布阵：模型分层、编码代理、桌面入口、工作流入口正在被打包成一条连续体验。外部讨论里最明显的信号是，大家开始不再把 Codex 当独立试验田，而是把它看成 ChatGPT 主入口的一部分。对用户来说，这降低了进入 agent 工作流的门槛；对竞争对手来说，则意味着未来拼的不是单模型强弱，而是“聊天、编码、工具调用、长程任务”能否在同一个产品闭环里自然切换。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种合流顺利，AI 编码与通用助理的边界会进一步消失，更多用户会直接在日常聊天产品里接触到代理式能力。对创业团队而言，单点能力若不能嵌入更顺的工作流，价值会被平台型产品快速稀释。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2075288698585809214" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMz76c-bMAAjbW5.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HMz76c-bMAAjbW5.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 多代理编排开始从能力点转向默认配置</div>
+  <div class="section"><div class="section-label event">事件</div><p>从 GPT-5.6 讨论到 Muse Spark 路线，再到社区对 Spark 1.11.1 的描述，今天多个信号都在强调“主代理+子代理并行执行”的系统设计。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>过去多代理更像论文、框架和黑客松展示中的“高级玩法”，而现在它正在成为模型厂商和产品方描述能力时的标准词汇：先收集上下文、先做计划、再拆给并行子代理执行，必要时动态升级角色。这说明行业已经默认，单线程对话式 agent 很难覆盖真实复杂任务。真正的分水岭，会变成谁能把任务边界、上下文管理、工具权限和结果汇总做得稳定，而不是只堆更多“会思考”的宣传词。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对开发者平台和应用层产品来说，接下来值得投入的不是再包装一个“万能助手”，而是设计更可控的编排层、审计层和回滚机制。工作流设计能力的重要性，正在快速追平底层模型能力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2075234408483922024" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMyzNzlaQAAYe4M?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMyzNzlaQAAYe4M?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 “外循环”重新成为 AI 编程时代的护城河</div>
+  <div class="section"><div class="section-label event">事件</div><p>社区在讨论 Codex、Claude Code、Vibe Coding 体验的同时，继续强化一个共识——Agent 可以写代码，但工程师必须守住评审、路线选择、边界判断和后果承担。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是反 AI，而是进入更成熟阶段后的自然纠偏。随着编码代理越来越强，瓶颈不再只是“写不写得出代码”，而是“路线是否选对、改动是否可验证、系统是否可持续”。今天围绕 Codex、Grok、Claude Code 的讨论，本质都在指向这一点：优秀开发者的价值会更多体现在定义任务、挑选方案、审查结果和兜底风险，而不是手敲每一行代码。所谓 Outer Loop，正在从理念变成组织能力问题。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>团队如果还只考核“AI 让人写得快不快”，很容易误判产能。未来更关键的是建立任务拆解、评审、验证、观测和成本归因机制，否则代理规模越大，混乱也会越大。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2075019807276281992" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2075157884564861288" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2075197996132692322" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2075142343100100967" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2075123527750189250" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2075223447983337879" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2075217502536405388" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/ylecun/status/2075102766221996136" target="_blank"><span class="handle">@ylecun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMvzeZ_aYAAv5t3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMvzeZ_aYAAv5t3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMxw9XcXQAAJcbv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMxw9XcXQAAJcbv?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2074850963991748608/img/BUqDTNDYcIimKWcH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2074850963991748608/img/BUqDTNDYcIimKWcH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HMyRobcagAAzJZn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HMyRobcagAAzJZn?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HLZwXmVaEAANDnE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HLZwXmVaEAANDnE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075222349876740097/img/oWgsTrm2W8hM0X-6.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075222349876740097/img/oWgsTrm2W8hM0X-6.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075038380057116672/img/dr6XRwVY5KCRsP3c?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075038380057116672/img/dr6XRwVY5KCRsP3c?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Grok 4.5：社区对其速度、价格和部分编程/前端任务表现评价很高，但今天更多还是体验反馈，建议继续观察系统性测评。 <a href="https://x.com/xiaohu/status/2075217502536405388" target="_blank">→</a></li>
+    <li>ChatGPT 语音/实时交互：即便今天主角是 GPT-5.6，实时语音与工作流融合的产品趋势也越来越明显，后续很可能成为通用 agent 的常驻入口。 <a href="https://x.com/xiaohu/status/2075223447983337879" target="_blank">→</a></li>
+    <li>开源基础模型主权叙事：Yann LeCun 再次强调“AI 主权的唯一解法是开源基础模型”，虽然不是新产品，但在各家平台化加速时，这条路线的政策与产业张力会继续放大。 <a href="https://x.com/ylecun/status/2075102766221996136" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
