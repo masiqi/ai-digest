@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 10 Jul 2026 00:46:32 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 00:40:11 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/11 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-11.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-11.html</guid>
+      <description>今天的信号集中在“模型能力开始直接吞掉应用层工程”：实时同传、混音转 MIDI、桌面端电脑操作和本地 Agent 都在把过去需要多段代码拼接的流程压缩成更短的交互。同时，OpenAI 将 ChatGPT、Work 与 Codex 合并成超级应用的产品命名仍在磨合，开发者更关心的是稳定的 Harness、隔离执行和可控额度，而不是又一个模型名。</description>
+      <pubDate>2026-07-11T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/10 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-10.html</link>
