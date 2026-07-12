@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-12</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-12</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手的主线，是“让智能体拥有可维护的上下文，并把能力直接接入真实工作流”：OpenWiki 把 Gmail、Notion、代码仓库、X、Hacker News 与网页搜索整理成本地知识库，gstack 和 ChatCut Agent Plugin 则把产品评审、浏览器验证、视频剪辑等动作封装成可复用技能。与此同时，多模态开源能力继续下沉，MuScriptor 已把完整混音直接转成分乐器 MIDI；但 GPT-5.6 Sol、Grok 4.5 等模型相关讨论仍有较多社区口碑成分，使用时应优先看官方入口并做好权限隔离。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenWiki</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LangChain 开源的 CLI/智能体记忆工具，可把 Gmail、Notion、Git 仓库、X、Hacker News 和网页搜索等资料整理成本地 Markdown wiki，供 Agent 持续检索和更新。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/langchain-ai/openwiki" target="_blank">https://github.com/langchain-ai/openwiki ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub README，按项目要求安装 openwiki CLI，并准备一个专门的测试目录。首次运行时选择模型供应商并配置 API Key，再授权你愿意接入的资料源；建议先只接一个 Git 仓库或一个 Notion 空间，观察它生成的 wiki 目录和 AGENTS.md/CLAUDE.md 提示。随后让 Agent 根据 wiki 回答“项目最近的决策是什么”“某模块有哪些约束”，再修改一处代码并重新运行更新流程，检查文档是否能反映变化。涉及 Gmail 或 X 时先使用最小权限账号，避免把私人资料一次性暴露给自动化任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“聊天记忆”变成可检查、可版本控制的文件资产，而不是隐藏在某个会话里的摘要。官方资料明确提到 Code Brain 会维护代码文档，Brains 还能从多种工作资料源主动构建上下文；这种本地 wiki 形态更容易审阅、备份、回滚，也更适合多个编码 Agent 共享。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给长期维护的代码仓库生成并持续更新架构、约定和决策记录。</li>
+    <li>把个人邮件、会议资料和项目笔记整理成 Agent 可检索的工作记忆。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2075883734600146993" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HM8E6nfbEAE-_1G?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM8E6nfbEAE-_1G?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ gstack</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Garry Tan 开源的一组 Claude Code 技能与工作流，把 CEO/产品、设计、工程评审、浏览器 QA、发布和复盘等角色拆成可调用命令。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/garrytan/gstack" target="_blank">https://github.com/garrytan/gstack ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在终端执行 README 给出的浅克隆安装命令：git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack，然后进入目录执行 ./setup。把一个小型 Web 项目复制到测试分支，先运行 /plan-eng-review 检查实现方案，再用 /review 找问题，最后用 /qa 或 /browse 打开真实页面验证交互。每次只在测试仓库使用，审阅技能生成的命令和文件变更后再合并；如果你使用 Codex 或其他 Agent，先确认其技能目录和兼容方式，不要直接照搬 Claude Code 的配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是单纯的提示词合集，而是把产品判断、工程实现、设计审阅和浏览器测试串成角色化流程。官方仓库列出了可安装的 review、qa、browse、ship 等技能，能够减少“模型会写代码但不会验收”的断层；不过它带来的自动化权限也更大，安装前应审读脚本并限制生产凭据。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>独立开发者用一套流程完成从需求拆解到浏览器验收。</li>
+    <li>给已有 Claude Code 项目补上设计评审、回归测试和发布前检查。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2075907822680953289" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075907308274806784/img/BRb_yNUPMFKPwT98.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075907308274806784/img/BRb_yNUPMFKPwT98.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ChatCut Agent Plugin</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ChatCut 的 Codex 插件，让 Agent 能在视频项目中导入素材、修改时间线、生成动效与素材、转写、加字幕、导出并检查结果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ChatCut-Inc/agent-plugin" target="_blank">https://github.com/ChatCut-Inc/agent-plugin ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README，安装其中的 Codex plugin 包；准备一个不含隐私素材的 ChatCut 测试项目，首次使用时按 Codex 的登录流程连接托管的 ChatCut MCP endpoint。然后从最小任务开始：导入一段视频，要求 Agent 加一条字幕并导出预览；回到编辑器检查时间线、字幕位置和导出文件，再尝试转写或生成一个简单动效。不要一上来授权整个素材库，也不要让 Agent 自动发布成片；把导出和覆盖原项目设置为人工确认步骤。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它展示了 Agent 技能从“生成代码”走向“操作创作软件”的路线。仓库明确列出插件包、MCP 配置和需要连接 ChatCut 项目的前置条件，说明这不是凭产品名推断出来的能力；如果验证链条稳定，视频剪辑中的重复时间线操作、字幕和素材整理都可能被自然语言编排。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>批量为短视频生成字幕、片段和基础动效。</li>
+    <li>让产品团队用自然语言快速迭代演示视频和社交媒体素材。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2075964821150085570" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075203888580558848/img/PIO9EvWkdUyJEs_e.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075203888580558848/img/PIO9EvWkdUyJEs_e.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole for Mac</div>
+  <div class="section"><div class="section-label event">一句话</div><p>tw93 的 macOS 清理与系统状态工具，覆盖磁盘分析、清理、卸载、维护、实时状态和菜单栏监控，CLI 保持开源并提供 GUI 产品。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole" target="_blank">https://github.com/tw93/Mole ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 GitHub 仓库阅读安装说明，先在终端安装开源 CLI，并使用分析/预览类命令查看缓存、残留文件和磁盘占用，确认路径后再执行清理。若想使用图形界面，可从官网 https://mole.fit 了解 Mole for Mac 版本；首次运行不要直接勾选全部清理项，先对下载缓存、开发构建产物等低风险目录做试验。清理前备份重要项目，观察磁盘空间和应用状态是否正常，再决定是否启用菜单栏监控、低磁盘提醒或蓝牙电池提醒。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把常见“清理软件”的黑箱操作拆成可查看的分析、卸载和维护步骤，并同时提供磁盘地图与实时状态。GitHub 项目和官网都能核对其定位；对经常运行本地模型、编译项目或保存大量缓存的开发者来说，先看清空间构成再清理，比单纯追求一键释放容量更可靠。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定期检查本地模型、构建缓存和开发工具占用的磁盘空间。</li>
+    <li>在不依赖云端清理服务的情况下完成 macOS 基础维护。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2075969301295894565" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MuScriptor</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Kyutai 与 Mirelo 合作发布的开放模型，可从完整的流行、古典、金属或爵士录音中识别多个乐器，并输出分轨 MIDI。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://kyutai.org/blog/2026-07-10-muscriptor" target="_blank">https://kyutai.org/blog/2026-07-10-muscriptor ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先用 Mirelo 的在线 Audio-to-MIDI 页面 https://www.mirelo.ai/models/audio-to-midi 上传一段你拥有版权或明确获授权的音频，观察钢琴卷帘窗里是否分出了人声、鼓、贝斯、键盘等轨道，再导出 MIDI 到 DAW 中修正音符。若需要本地或二次开发，再按 Kyutai 官方博客和开源仓库说明准备模型环境，先用短音频测试显存、速度和转录质量。重点对比完整混音、单乐器和噪声片段的结果，不要把自动转录当成最终乐谱。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方介绍强调它直接面对完整混音，而不是要求预先分离音轨；Mirelo 页面也展示了每个检测到的声部独立进入 piano roll 的工作流。音乐转 MIDI 长期受真实对齐数据不足限制，这个项目把研究模型、在线体验和可编辑输出连起来，对音乐检索、采样分析和编曲辅助都有实际价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把乐队录音快速拆成可编辑的伴奏草稿。</li>
+    <li>为音乐教育、和弦分析或音频检索生成结构化 MIDI 数据。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/kyutai_labs/status/2075540047613276197" target="_blank"><span class="handle">@kyutai_labs</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075537438823362560/img/SchA4x7w7Pd17MLc.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075537438823362560/img/SchA4x7w7Pd17MLc.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 蚂蚁百灵 Ant Ling</div>
+  <div class="section"><div class="section-label event">一句话</div><p>蚂蚁集团开放的 Ling、Ring、Ming 模型与开发者平台，提供 OpenAI 兼容调用、推理、长上下文和多模态能力入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developer.ant-ling.com/en/docs" target="_blank">https://developer.ant-ling.com/en/docs ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在官方开发者文档注册账号并创建 API Key，再用文档中的 OpenAI-compatible SDK 或 HTTP 示例发起最小对话请求。先选一个轻量模型测试文本问答和结构化输出，再根据任务尝试推理模型或多模态模型；把 API Key 放进环境变量，设置单日预算和超时，记录输入输出 token。确认接口稳定后，再接入一个本地脚本或 Agent 的工具调用，不要直接把生产数据和高权限操作接入新模型。模型名称、价格和上下文限制以官方文档当前页面为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不只是“又一个模型 API”，而是把模型家族、兼容调用格式和开发者文档放在同一入口，降低了迁移与试验成本。官方资料明确提供 Ling/Ring/Ming 的能力区分以及 API、流式输出、结构化输出、视觉和语音等文档；但社区推文中的免费额度或特定性能说法未完全核实，应以控制台和官方价格页为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>低成本验证中文推理、代码和多模态应用原型。</li>
+    <li>为 Agent 工作流增加一个可替换的 OpenAI 兼容模型后端。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2075887161123942529" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075886969305944064/img/itwTCgPP8kI_ls_A.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075886969305944064/img/itwTCgPP8kI_ls_A.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GPT-5.6 Sol、ChatGPT Work 与 Codex 的产品边界</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 中多条讨论集中在 GPT-5.6 Sol 的速度/推理档位、ChatGPT Work 与 Codex 的职责区分，以及新额度体系的混乱体验。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这组讨论更像一次产品形态重组，而不只是单模型升级。社区反馈把 Chat 理解为问答、Work 理解为执行任务、Codex 理解为编码，但不同客户端、模式和额度之间的关系仍需要以官方文档和实际界面核对。对用户来说，真正重要的是权限边界、是否能联网或操作本地文件、任务消耗如何计算，而不是只看“最高智能”这样的档位名称。建议先用无敏感数据做可逆任务，逐项验证文件访问、浏览器隔离和额度扣减。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型厂商正在把聊天、代码执行和桌面 Agent 合并进一个产品壳，短期会提高能力密度，也会放大权限、计费和可解释性问题。开发团队需要重新设计评测，不仅测回答质量，还要测执行成功率、误操作率、上下文成本和失败恢复；个人用户则应把高权限动作设为人工确认。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2075652538058109385" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HMz7__qaQAAF1kI.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HMz7__qaQAAF1kI.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Apple 起诉 OpenAI，AI 硬件人才与商业机密争议升温</div>
+  <div class="section"><div class="section-label event">事件</div><p>多条推文转述 Apple 对 OpenAI 及相关前员工提起诉讼，争议焦点涉及硬件人才流动与商业机密。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>目前 X List 里的材料主要是事件转述，具体诉状、指控范围和法院进展不能仅凭截图或二手帖下结论，因此这里把它作为行业信号而非定论。无论诉讼最终结果如何，AI 公司争夺硬件、交互和系统人才已经反映出竞争重心从模型本身延伸到终端形态。对观察者而言，应继续跟踪法院文件、双方正式回应和苹果现有 AI 合作关系是否变化，避免把“人才加入”直接等同于“技术窃取”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果争议持续，AI 硬件公司会更重视离职审计、知识产权隔离、竞业与保密流程；大厂也可能收紧关键岗位的资料访问。创业团队在招聘前员工时，需要明确区分个人经验、公开知识与前雇主受保护的内部材料，否则产品速度和法律风险会同时上升。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2075712647723397452" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/oana_mmm/status/2075468948536201670" target="_blank"><span class="handle">@oana_mmm</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2075757703398621554" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2075775161710879010" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2075938018008174773" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2075793281154445621" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2075764484027932963" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2075740417220616394" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2075661863757746535" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yetone/status/2075517958894596472" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AdamThierer/status/2075237102099251371" target="_blank"><span class="handle">@AdamThierer</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HM5pNkNW8AAxhBo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM5pNkNW8AAxhBo?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075466573931020288/img/7H4XlgprQHlo8l3v.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075466573931020288/img/7H4XlgprQHlo8l3v.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HM2twxra4AAZKwo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM2twxra4AAZKwo?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075774628870660096/img/6ojM2NEJwEFDu8eQ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075774628870660096/img/6ojM2NEJwEFDu8eQ.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HM82ituaIAEjZE4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM82ituaIAEjZE4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HM6xOcibIAA1qEO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM6xOcibIAA1qEO?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075763819222282240/img/DzcTi6UHmkYmDCPs.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075763819222282240/img/DzcTi6UHmkYmDCPs.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HM2126WaQAAJvtR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM2126WaQAAJvtR?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>ChatGPT Work 的联网与本地文件执行边界：适合继续观察官方产品文档和权限设计 <a href="https://x.com/simonw/status/2075740417220616394" target="_blank">→</a></li>
+    <li>AI 增强浏览器的独立隔离问题：安全、隐私与默认浏览器控制权仍未解决 <a href="https://x.com/simonw/status/2075661863757746535" target="_blank">→</a></li>
+    <li>AI 生成产品的“slop”识别：从审美争论转向质量标准和可复用检查清单 <a href="https://x.com/yetone/status/2075517958894596472" target="_blank">→</a></li>
+    <li>开源模型治理：美国政策讨论可能影响模型发布、权重开放和开发者合规 <a href="https://x.com/AdamThierer/status/2075237102099251371" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
