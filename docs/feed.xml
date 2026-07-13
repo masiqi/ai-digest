@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 12 Jul 2026 00:39:49 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 00:36:00 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/13 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-13.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-13.html</guid>
+      <description>今天最值得动手的方向不是“再换一个聊天模型”，而是把模型接进真实工作流：OpenWiki把分散资料变成可持续更新的本地记忆，ChatCut把视频剪辑能力暴露给 Codex，gstack则把规划、开发、审查和发布拆成可复用的工程角色。与此同时，MuScriptor、Mole 等项目说明开源模型和本地工具仍在快速向可交付产品靠近。证据补充脚本本次运行未在规定时间内产出 dated evidence 文件，以下🛠️条目均改用推文与官方 GitHub/官网/文档的交叉证据；HNRSS 补充证据未纳入，弱线索明确标注“证据待补”。</description>
+      <pubDate>2026-07-13T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/12 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-12.html</link>

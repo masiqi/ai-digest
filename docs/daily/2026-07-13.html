@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-13</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-13</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手的方向不是“再换一个聊天模型”，而是把模型接进真实工作流：OpenWiki把分散资料变成可持续更新的本地记忆，ChatCut把视频剪辑能力暴露给 Codex，gstack则把规划、开发、审查和发布拆成可复用的工程角色。与此同时，MuScriptor、Mole 等项目说明开源模型和本地工具仍在快速向可交付产品靠近。证据补充脚本本次运行未在规定时间内产出 dated evidence 文件，以下🛠️条目均改用推文与官方 GitHub/官网/文档的交叉证据；HNRSS 补充证据未纳入，弱线索明确标注“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenWiki</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LangChain 开源的 CLI/Agent 工具，为代码仓库或个人资料生成并维护面向 Agent 的本地 Wiki，让编码 Agent 先读懂项目上下文再修改代码。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/langchain-ai/openwiki" target="_blank">https://github.com/langchain-ai/openwiki ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备 Node.js 环境，在目标仓库中执行 `npx openwiki`，按首次交互提示选择模型提供商、填写 API Key 并选择模型；完成初始化后让它扫描仓库并生成文档，再检查生成的 Wiki 与 AGENTS.md/CLAUDE.md 关联是否符合你的工作方式。随后把 GitHub Action 配置加入项目，让每次代码变更都能自动提出文档更新。最后重新启动 Codex 或 Claude Code，让它先阅读 Wiki 再处理一个小 issue，对比“没有项目记忆”和“有 Wiki 上下文”时的修改质量。若想做个人知识库，可进一步测试 Gmail、Notion、Git、X、Hacker News 和网页搜索等连接器，但权限应从只读、最小范围开始。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“给 Agent 反复解释项目”变成可维护的工程资产，而不是一次性提示词。官方仓库明确支持初始化、生成文档、自动更新，并会把使用 Wiki 的提示追加到 AGENTS.md 或 CLAUDE.md；这让上下文进入代码协作流程。更重要的是，本地 Wiki 可以随项目迭代，降低长会话依赖，也让团队能审查 Agent 实际读取的知识边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给遗留代码库快速生成架构、模块和运行方式说明。</li>
+    <li>为多 Agent 或多人协作提供统一、可审查的项目上下文。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2075883734600146993" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HM8E6nfbEAE-_1G?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM8E6nfbEAE-_1G?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ChatCut Agent Plugin</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ChatCut 的 Codex 插件，把视频项目导入、时间线编辑、动效、素材生成、转录、字幕和导出等动作交给 Agent 调用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ChatCut-Inc/agent-plugin" target="_blank">https://github.com/ChatCut-Inc/agent-plugin ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub 仓库检查 `chatcut/.codex-plugin/plugin.json` 与 `.mcp.json`，确认插件内容和 MCP 端点，再按 Codex 的插件安装方式加载它。首次使用时完成 ChatCut 登录，并准备一个可编辑的视频项目；先用低风险指令测试“导入一段素材、生成转录、添加字幕”，确认 Agent 能在编辑器中看到变化后，再尝试“删掉重复片段、建立章节、添加一段 motion graphics、导出预览”。每一步都在编辑器中人工复核时间线和字幕，最后再执行导出。这个顺序适合先验证权限、项目连接和可见性，而不是一次性让 Agent 改完整成片。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是泛泛的“视频 AI”，而是把编辑器里的具体对象暴露给编码 Agent，并提供验证编辑结果是否在界面中可见的闭环。官方插件仓库列出了 Codex 插件元数据、MCP 配置和项目访问要求；ChatCut 官网也展示了剪辑、字幕、音乐、图像和动效等操作入口。对熟悉代码 Agent 的人来说，关键变化是视频制作开始具备可组合、可复现的工具调用接口。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将访谈或直播素材快速整理为带章节和字幕的初剪。</li>
+    <li>用自然语言批量生成短视频的图表、强调文字和 B-roll。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2075964821150085570" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075203888580558848/img/PIO9EvWkdUyJEs_e.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075203888580558848/img/PIO9EvWkdUyJEs_e.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MuScriptor</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Kyutai 与 Mirelo 开源的多乐器音乐转录模型，把完整录音转换为按乐器区分的 MIDI。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/muscriptor/muscriptor" target="_blank">https://github.com/muscriptor/muscriptor ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先查看仓库 README 和模型许可，在本地安装项目依赖；最简单的验证方式是使用仓库提供的 Web UI 或 CLI，准备一段自己拥有版权或明确可测试的音频，先运行 `muscriptor list-instruments` 查看可用乐器名称，再用 small 或 medium 模型转录。CLI 可选择模型大小、输入音频和目标乐器，模型权重会自动下载并缓存；首次运行应预留磁盘和下载时间。得到 MIDI 后，用 DAW 打开并逐轨试听，重点检查鼓、贝斯、键盘与人声的音符边界，再按需要修正节拍和力度。不要把一次转录直接当成出版级乐谱，先用短片段评估风格适配和错误率。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>以往自动音乐转录常受限于单乐器或干净音轨，MuScriptor 的目标是从真实混音中恢复多轨 MIDI，并且可以按乐器条件控制。官方项目提供 small/medium/large 变体、CLI、Web UI 和自动缓存权重；Kyutai 的发布说明还强调真实对齐音频-MIDI 数据对质量的重要性。它的价值不只在“听懂歌曲”，而在于让已有录音进入编曲、采样和 DAW 后期流程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将自有 demo 转成可编辑的分轨 MIDI，辅助重新编曲。</li>
+    <li>为音乐检索、教学、伴奏提取和自动扒谱建立数据管线。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/kyutai_labs/status/2075540047613276197" target="_blank"><span class="handle">@kyutai_labs</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075537438823362560/img/SchA4x7w7Pd17MLc.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075537438823362560/img/SchA4x7w7Pd17MLc.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole for Mac</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 macOS 的本地清理、卸载、磁盘分析和系统状态监控工具，1.10 版本新增或强化了树状磁盘图、CPU/GPU 采样和提醒能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/mole" target="_blank">https://github.com/tw93/mole ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub README 选择安装方式，安装后在终端执行 `mo --help` 查看命令；先用分析功能查看磁盘树状图和项目构建产物，不要直接清理。确认路径后再使用清理或卸载流程，并逐项取消不想删除的内容；仍在使用的 App 用卸载流程，已经手动删除但残留的 App 才用清理流程。随后打开状态面板观察 CPU、内存、GPU、磁盘、网络和电池，确认它对多 session 的 Claude Code/Codex 工作负载是否有帮助。涉及 sudo、缓存和系统文件时，保留可恢复选项并先做备份。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的亮点是把“清理空间”和“定位开发机瓶颈”放在一个本地工具里，而不是只做垃圾扫描。官方仓库列出了可视化磁盘探索、应用残留清理、卸载、实时系统状态和构建产物清理等能力；官网则强调删除前可勾选、误操作进入系统废纸篓等安全设计。对于同时运行多个 Agent、MCP 和编译任务的 Mac 用户，状态采样比单纯追求释放空间更实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>找出 Xcode、Node、容器或 AI 项目产生的大型构建缓存。</li>
+    <li>观察多 Agent 并行运行时的 CPU、GPU、内存和磁盘压力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2075969301295894565" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075964799926861824/img/jlUkn0uuqfzk_VFl.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075964799926861824/img/jlUkn0uuqfzk_VFl.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ gstack</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Garry Tan 开源的一组 Claude Code 技能，把产品讨论、技术规划、代码审查、QA、发布和复盘组织成“虚拟软件工厂”。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/garrytan/gstack" target="_blank">https://github.com/garrytan/gstack ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库到 Claude Code 的 skills 目录，例如 `git clone https://github.com/garrytan/gstack.git ~/.claude/skills/gstack`，再按仓库说明运行 setup。安装后不要直接让它“做完一个大功能”，而是先用 office-hours 或规划类命令把需求和成功标准写下来，再用 eng/design 角色分别审架构和界面，实施后用 review、qa 或浏览器测试角色复核，最后才进入 ship。每个阶段都把输出保存到仓库，并人工确认范围、权限和数据库变更。可以从一个小型前端 issue 开始，比较单一 Agent 直做与分角色审查的返工差异。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把提示词工程从个人秘方变成一套可复用的角色和门禁。公开资料显示，gstack 的核心思路是让 Claude Code 通过 slash commands 承担规划、代码审查、浏览器测试和发布检查，而不是每次从零描述流程。真正的技术价值在于把“先澄清、再设计、再实现、再验收”固化成可执行步骤，尤其适合独立开发者需要同时承担产品、工程和 QA 的场景。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>独立开发者在上线前获得结构化的产品、工程和安全检查。</li>
+    <li>团队把常见的设计评审、回归测试和发布清单交给 Agent 执行。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2075907822680953289" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075907308274806784/img/BRb_yNUPMFKPwT98.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075907308274806784/img/BRb_yNUPMFKPwT98.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare Drop</div>
+  <div class="section"><div class="section-label event">一句话</div><p>无需账号即可发布静态网页的轻量入口，适合临时展示单页、原型或小型静态产物。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/cloudflare-drop/" target="_blank">https://appinn.com/cloudflare-drop/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官方/产品入口，准备一个不含密钥和个人隐私的静态 HTML、CSS、JavaScript 文件夹；按照页面提示上传或拖入文件，发布后用无痕窗口访问生成的地址，检查资源路径、移动端布局和缓存表现。适合先发布一个自包含的单页原型，再把构建产物压缩后测试。它不应替代正式项目的版本管理、域名、访问控制和 CI/CD；如果页面需要后端、数据库或私有内容，就把它迁移到正式的 Cloudflare Pages/Workers 项目中，并重新配置部署权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它降低了“把一个静态结果给别人看”的操作成本，特别适合 Agent 生成的 HTML/SVG 原型快速验收。推文明确强调无需账号、直接发布静态网页，但当前补充证据不足，未把它描述成完整托管平台，也不推断其配额、持久性或安全承诺。使用时最重要的是把它当作低风险分享入口，避免上传任何凭据、用户数据和未公开源代码。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>分享 Agent 生成的 HTML/SVG 交互原型。</li>
+    <li>临时展示活动页、数据可视化或设计稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2076281076285087916" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNBuot8WwAAHiY3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNBuot8WwAAHiY3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Agent Mail</div>
+  <div class="section"><div class="section-label event">一句话</div><p>QQ 邮箱正在内测的 AI 专用邮箱地址服务，面向 Agent 或自动化流程提供独立邮箱身份。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://appinn.com/qq-agent-mail/" target="_blank">https://appinn.com/qq-agent-mail/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读内测说明，确认入口、资格和可用范围，再注册一个不承载重要个人通信的测试地址。用它做低风险验证：接收测试通知、触发一个需要邮箱确认的开发流程、观察邮件到达和回复行为；不要一开始就绑定支付、生产账号或包含敏感数据的服务。若要让 Agent 使用，先在沙盒项目中限制收件范围和可执行动作，记录邮件处理日志，并人工审批外发内容。内测功能可能变化，正式使用前应重新核对服务条款、API/IMAP 能力和账号回收规则。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 逐渐需要独立身份来接收验证码、订阅通知、处理工单或参与异步工作流，专用邮箱比复用个人邮箱更容易隔离权限和审计责任。当前 X List 只提供“内测、每人可抢注两个地址”的线索，外部材料不足，因此本条只写已知的入口和安全试用方式，不臆测是否提供 API、自动回复或长期稳定性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给测试 Agent 分配独立的通知和工单收件箱。</li>
+    <li>在不暴露个人邮箱的情况下验证自动化邮件流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2076211912736477564" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNAvu4hXEAAzy5q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNAvu4hXEAAzy5q?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 订阅限制开始成为模型竞争的即时杠杆</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 多条消息称，OpenAI 暂时移除 GPT-5.6 Sol/Codex 的五小时使用限制并重置用量，Claude Fable 5 的套餐访问和 Claude Code 周限额也延长或提高到 7 月 19 日。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是简单的“谁更大方”，而是模型效率、GPU 成本和用户迁移速度共同作用下的产品策略调整。推文将限制变化与新模型更省 token、用户增长和竞争压力联系起来，但这些数字和因果关系仍应以官方公告为准。对用户而言，短期开放额度适合做横向任务测试，长期选择则应看稳定配额、上下文质量、工具调用和团队管理能力；对开发者而言，真正值得记录的是单位任务成本，而不是某一天的免费窗口。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>订阅产品可能更多采用动态配额、限时体验和按任务复杂度分层，而不是固定的五小时硬上限。模型厂商需要在算力利用率、用户留存和 API/订阅收入之间动态平衡；用户则应避免把临时政策当作长期 SLA，重要工作要保留可迁移的提示词、代码和多模型备用路径。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2076433351439966415" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HND5HPWb0AAav83?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HND5HPWb0AAav83?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent 的“脚手架”正在变薄，治理和上下文管理变重要</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 转述 Anthropic 关于 Agent 基础设施的对谈，讨论从显式流程控制转向更薄的脚手架，同时社区出现“Agent 治理”和上下文泄露、MCP 常驻进程耗资源等讨论。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>当模型更能自行分解任务时，工程重点会从“把每一步写死”转向定义边界、工具权限、状态记录、失败恢复和验收条件。脚手架变薄并不意味着系统可以少做工程，相反，隐含流程越多，越需要可观测性和审计。今天的 X 线索还暴露出一个实际问题：多个 session 各自运行 MCP/Skill 可能吞噬 CPU，插件也可能泄露不该暴露的标识符。Agent 能力升级必须和资源隔离、最小权限、日志以及人工确认一起推进。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业落地 Agent 时，采购重点会从单一模型效果扩展到权限、连接器、沙盒、审计和成本控制。开发团队应把每个工具调用视为生产依赖，记录输入输出与失败原因；个人用户也应定期清理常驻 MCP、检查凭据范围，避免“能调用”被误当成“应该调用”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2076174130135674907" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2076173574394568704/img/8i0WJkkaoRC_v_MT.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2076173574394568704/img/8i0WJkkaoRC_v_MT.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 从“生成代码”到“生成软件团队”</div>
+  <div class="section"><div class="section-label event">事件</div><p>gstack 通过一组开源技能把规划、设计、实现、审查、QA 和发布拆成多个角色，社区讨论其成为独立开发者的工程工作流。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类工具的核心不是让模型凭空变聪明，而是把软件生产中容易遗漏的检查点显式化。一个 Agent 负责全部工作时，需求澄清、架构决策和验收往往混在同一轮对话里，容易出现自我批准；分角色后，至少能形成不同提示上下文和阶段性产物。不过角色越多，流程成本和重复上下文也越高，不能只看命令数量。值得实际测量的是：同一个 issue 在单 Agent 和分阶段工作流下的返工率、缺陷率、交付时间与 token 成本。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>软件团队可能把 Agent 技能库当成新的流程资产，代码仓库里除了源码，还会沉淀规划模板、审查规则、QA 场景和发布门禁。竞争优势将从“谁能调用模型”转向“谁能把模型稳定嵌入工程制度”；同时，提示词和技能的供应链安全、版本管理与权限审计也会成为新的基础设施问题。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2075907822680953289" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2076447188599910516" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2076144745814822983" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2076211912736477564" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2075966022239326642" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2075938018008174773" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/BrianRoemmele/status/2075755107619344721" target="_blank"><span class="handle">@BrianRoemmele</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075907308274806784/img/BRb_yNUPMFKPwT98.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075907308274806784/img/BRb_yNUPMFKPwT98.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNAvu4hXEAAzy5q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNAvu4hXEAAzy5q?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075866525949693952/img/TS059TELvouRHblP.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075866525949693952/img/TS059TELvouRHblP.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HM82ituaIAEjZE4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM82ituaIAEjZE4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HM6OTg2bkAA0orC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HM6OTg2bkAA0orC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>ChatGPT/Codex 的模型与 effort 选择：关注不同推理档位如何影响额度、速度和任务成功率 <a href="https://x.com/Gorden_Sun/status/2075938018008174773" target="_blank">→</a></li>
+    <li>The Well 物理模拟数据集：15TB 级科学数据集线索，适合关注开放数据如何推动科学 AI 训练 <a href="https://x.com/BrianRoemmele/status/2075755107619344721" target="_blank">→</a></li>
+    <li>docu.md：v5.2.0 更新了首行缩进、Firefox 图表和 PlantUML 兼容性，适合持续观察文档生成工具 <a href="https://docu.md" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
