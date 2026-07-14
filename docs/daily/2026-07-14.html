@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-14</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-14</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“Agent 不再只是聊天窗口，而是开始接管可验证的生产环节”：视频编辑、Skill 评测、图像精修、模型部署和实时语音翻译都出现了更具体的工具接口。另一条主线是效率与治理同时升级——模型压缩、上下文管理、企业知识泄露和动态额度，正在一起决定 AI 工具能否真正进入日常工作。证据 enrichment 脚本本次运行超过 300 秒未产出 dated evidence 文件，因此以下可上手条目均使用 X List 原文与官网、GitHub、官方文档或模型页交叉核验；HNRSS 补充证据未纳入，弱线索明确标为“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ ChatCut Agent Plugin</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ChatCut 的 Codex 插件，把视频项目、时间线、转录、字幕、动效和导出等编辑动作暴露给 Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ChatCut-Inc/agent-plugin" target="_blank">https://github.com/ChatCut-Inc/agent-plugin ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub 仓库，检查 `chatcut/.codex-plugin/plugin.json` 和 `.mcp.json`，确认插件元数据与 MCP 配置；再按 Codex 的插件安装方式加载它。首次使用完成 ChatCut 登录，并准备一个可以修改的视频项目。建议从低风险任务开始：先导入一段素材、生成转录、添加字幕，确认编辑器中确实出现变化，再尝试删除重复片段、生成章节、添加 motion graphics 和导出预览。每次只下达一个动作，在时间线上人工复核结果后再继续；最后用短片段导出验证编码、字幕和音画同步。不要一上来让 Agent 改完整成片，也不要把未授权素材上传到第三方服务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是泛泛的“AI 剪视频”，而是将编辑器中的媒体、时间线和项目状态变成 Agent 可调用的对象，并强调在编辑器中验证改动是否可见。官方仓库明确列出 Codex 插件、MCP 配置和登录前置条件，说明视频制作开始具备类似软件工程的可组合接口：自然语言负责意图，插件负责执行，人工负责验收。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将访谈或直播素材快速整理为带章节和字幕的初剪。</li>
+    <li>批量制作产品介绍视频、演示视频和社媒短片。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2076494081207992657" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2076493607213858816/img/KX42zIgKg3AI9Gg-.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2076493607213858816/img/KX42zIgKg3AI9Gg-.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Skillgrade 2.0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>mgechev 开源的 Agent Skill 评测框架，用确定性检查和 LLM rubric 测试技能是否真的按要求工作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mgechev/skillgrade" target="_blank">https://github.com/mgechev/skillgrade ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并阅读示例 `eval.yaml`，准备一个你自己的 SKILL.md 和一个可重复的任务，例如“修复 lint 错误并运行测试”。执行 `skillgrade init` 让框架生成评测骨架，再把任务、agent、provider、试验次数、超时和通过阈值写入配置。优先先跑 deterministic grader，确认输出结构、文件改动和测试结果，再增加 LLM rubric grader 评估方法质量。用 3-5 次试验观察波动，记录 token 成本、失败类型和评分；只有在本地稳定后，才把评测接入 CI。不要只看一次成功对话，技能升级后要重新跑同一组样例，防止提示词改动破坏原有行为。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent Skill 的问题正在从“写得像不像提示词”转向“能不能稳定交付结果”。Skillgrade 把技能当成可测试的软件资产：确定性 grader 检查可验证结果，LLM rubric 评价过程和质量，还支持 Docker、本地 agent 与多次 trials。它提供了一个比截图展示更可靠的质量门槛，尤其适合团队共享的 Claude Code、Codex 或 Open Agent Skills。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在发布前回归检查代码修复、文档生成和数据处理类 Skill。</li>
+    <li>比较不同模型、不同提示词版本的任务成功率和成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2076472375085011142" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNEcnG_a0AA9HFm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNEcnG_a0AA9HFm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075673202513317888/img/j4IN_MBA2UMoYZcb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075673202513317888/img/j4IN_MBA2UMoYZcb?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Seedream 5.0 Pro</div>
+  <div class="section"><div class="section-label event">一句话</div><p>字节跳动的多模态图像生成与精细编辑模型，强调区域级修改、图层分离、空间语义和多语言文字。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://seed.bytedance.com/en/seedream5_0_pro" target="_blank">https://seed.bytedance.com/en/seedream5_0_pro ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官方页面了解能力，再通过可用的试用入口或 API 平台上传一张自己拥有版权的产品图、海报或草图。先做单变量测试：要求只替换一个物体、只修改一个区域或只改变材质，比较原图与结果的边缘、阴影和文字是否保持稳定；然后再尝试点选、套索、草图补全、多图融合和图层分离。做海报时明确画布比例、文字内容、语言和排版层级，生成后逐字检查，不要默认模型能一次完成商业交付。若走 API，先用低分辨率和小批量验证输入输出格式、计费与延迟，再接入设计流水线，并保留原图和每轮编辑提示。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Seedream 5.0 Pro 的重点从“随机生成一张好看的图”推进到“围绕已有设计进行可控生产”。官方资料强调图像-文字对齐、结构一致性、文字渲染，以及点选、套索、草图和图层级编辑；这使它更接近设计软件中的受控修改，而不是只能反复抽卡的生成器。对电商、营销和视觉原型来说，可复现的局部编辑比单次惊艳更有价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>电商产品换色、换材质和局部修图。</li>
+    <li>制作多语言海报、分镜、信息图和营销视觉。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2076605296416530647" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNGVf2iaYAAEgYN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNGVf2iaYAAEgYN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ NVIDIA Nemotron-Labs-3-Puzzle-75B-A9B</div>
+  <div class="section"><div class="section-label event">一句话</div><p>NVIDIA 基于 Nemotron-3-Super 压缩出的部署优化 MoE 模型，目标是在保留能力的同时提高交互式推理吞吐和长上下文并发。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-BF16" target="_blank">https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-BF16 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Hugging Face 阅读模型卡、许可和硬件要求，不要直接下载大权重。若有合适 GPU，优先用 vLLM、SGLang 或 Transformers 的官方示例启动 BF16、FP8 或 NVFP4 版本之一；先用短提示验证 tokenizer、响应格式和基本代码生成，再逐步增加上下文长度。用固定的 20-30 条任务测量首 token 延迟、吞吐、显存占用和并发数，并与原始 Nemotron-3-Super 做同口径对比。长上下文实验要记录实际 token 数和质量，不要只追求“能塞进去”；生产部署还要加入限流、日志和敏感数据脱敏。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把模型竞争从参数规模拉回到“每台机器能服务多少真实请求”。官方模型页和论文介绍了 Iterative Puzzle 压缩、知识蒸馏、量化及结构裁剪；论文报告在单台 8×B200 节点上交互式吞吐约提升 2 倍，在单张 H100 的百万 token 场景中并发从 1 提升到 8。若质量保持足够接近原模型，这类部署优化会直接改变企业自托管和 Agent 后端的成本曲线。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长上下文代码分析、检索增强和 Agent 推理服务。</li>
+    <li>对延迟和并发敏感的企业内部模型部署。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2076582965988225453" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ GPT-Realtime-Translate</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenAI 的流式语音到语音翻译模型，用于低延迟的连续多语言音频体验。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developers.openai.com/api/docs/models/gpt-realtime-translate" target="_blank">https://developers.openai.com/api/docs/models/gpt-realtime-translate ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方模型文档和 Realtime API 快速开始，创建一个最小的音频流 demo；用浏览器麦克风或一段已获授权的录音输入，指定目标语言，分别记录原始音频、翻译文本和输出语音。先测试短句、多人轮流说话、停顿和打断，再测试电话编解码、噪声和网络抖动。把原文 transcript 保留下来，人工抽查专有名词、数字和否定句，确认翻译错误时能回退到文字或人工接管。涉及客服、医疗、会议时，必须提前说明录音与处理范围，设置速率限制和数据保留策略；不要把 demo 的低延迟表现直接当成生产 SLA。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>实时翻译的难点不只是把文字译对，而是持续处理音频、检测轮次、在说话被打断时及时响应，并同时输出语音和文字。官方文档将它定位为 streaming speech-to-speech translation，Microsoft 的对应说明也强调连续音频、低延迟和语音加 transcript 输出。它让客服、跨语言会议和现场协作有了更直接的实时接口，但生产价值仍取决于延迟、术语准确率、隐私与人工兜底。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>跨语言客服、销售和远程支持电话。</li>
+    <li>会议、直播和现场交流的实时辅助翻译。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2076464115242225793" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2076217883642953728/img/UIZ8CGkgno5fD9wg.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2076217883642953728/img/UIZ8CGkgno5fD9wg.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design</div>
+  <div class="section"><div class="section-label event">一句话</div><p>将内置浏览器、网页截图和 Agent 重建结合起来的设计工作流，目标是输出可编辑的设计文件而非只给一张参考图。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://open-design.ai" target="_blank">https://open-design.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在浏览器中打开一个公开且允许参考的网站或设计案例，使用 Open Design 的内置浏览器截图，再选择你要使用的 Agent 进行重建。第一轮只重建一个页面，检查文字层级、间距、颜色、响应式布局和交互状态；不要把整站一次性复制。然后让 Agent 生成可编辑文件，逐项修改按钮、卡片和导航，并在桌面与移动宽度下对照原始截图。涉及他人品牌、图片和代码时先确认许可，不要把“能截图重建”误当成可以复制商业网站。最后把产物导出到自己的版本库，补上真实内容、无障碍标签、性能优化和正式部署配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它体现了设计工具从“生成一张视觉稿”向“浏览、理解、重建为可编辑产物”移动。推文展示了内置浏览器、截图、Agent 重建和精选设计网站组合，外部页面也将其定位为 AI-native design workflow；不过不同模型的重建质量和导出能力仍需要实测。真正值得比较的是结构可编辑性、跨尺寸一致性和从截图到可维护前端的距离。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速制作网页原型和竞品交互研究稿。</li>
+    <li>将设计参考转成可继续迭代的前端文件。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2076605272131310039" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2076601637272002560/img/8pcMwDZveqHLi2lO.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2076601637272002560/img/8pcMwDZveqHLi2lO.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2075635029393420288/img/oNqpKW0QqQTdXHRQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2075635029393420288/img/oNqpKW0QqQTdXHRQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenAI 官方提示词指南与 Codex 工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenAI 面向 Chat、ChatGPT Work 和 Codex 的提示词与任务拆解指南，强调按需使用结构化要素而不是死套公式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://learn.chatgpt.com/docs/prompting" target="_blank">https://learn.chatgpt.com/docs/prompting ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方指南，选一个真实的小任务作为基线，例如修复一个 bug、把截图变成原型或重构一个函数。先用自然语言说明目标、约束、验收标准和已有上下文，运行一次并保存输出；再只加入一个额外要素，例如输出格式、测试命令或失败处理，比较结果变化。对 Codex 任务要求它先列计划、说明将修改的文件并运行测试，完成后给出变更摘要与未解决风险。把高频任务整理成短模板，但保留“只用有帮助的部分”的原则，避免为了格式而增加无关提示。涉及生产代码时，坚持审查 diff、执行测试和人工批准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方指南的价值不在于提供一条神奇 prompt，而在于把 Chat、Work 与 Codex 的使用场景放到同一套任务设计框架中。它提醒用户根据任务需要选择目标、上下文、约束、验收等要素，减少模板崇拜。随着 Agent 能力变强，真正影响结果的往往是问题边界、工具权限和验证闭环，而不是把提示词写得越来越长。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把重复的修 bug、重构和原型任务变成可复用工作流。</li>
+    <li>为团队建立统一的 Agent 任务说明和验收习惯。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2076629505159180761" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNGrhSkaMAA4U9B?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNGrhSkaMAA4U9B?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 模型厂商开始用动态额度争夺高频用户</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 多条消息称，OpenAI 的 Codex/Work 与 Anthropic 的 Claude 使用限制、重置时间或可用额度在模型更新后出现调整。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这说明订阅层的竞争已经不只是模型榜单，而是用户能否在关键时刻持续完成任务。限额、临时重置和延长窗口既可能是新模型效率提升后的容量释放，也可能是厂商在竞争压力下的留存策略；目前 X List 线索不等于完整官方公告，具体政策仍需以账户页面和官方说明为准。用户评估工具时，应记录同一任务的成功率、耗时、token 消耗和等待时间，而不是只记住一次“突然不限量”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 订阅将更像动态容量产品，额度可能按模型、推理 effort、任务类型和时段变化。个人用户需要保留多模型备用方案，团队则应关注预算上限、配额 API、审计和任务迁移；厂商如果频繁改变规则，也会增加企业对稳定 SLA 和自托管替代方案的需求。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2076478706462367832" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 企业知识正在成为 AI 使用中的“隐性成本”</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 围绕微软 CEO 所说的“反向信息悖论”展开讨论：企业付费使用 AI 的同时，也可能把提示词、工具调用和内部经验暴露给外部系统。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>AI 工具的价值依赖上下文，但上下文恰恰包含最难替代的业务知识。把经验交给模型能换来即时效率，却会带来数据留存、供应商训练、权限扩散和员工离职后的知识归属问题。讨论中提到的五个 C 或治理框架需要进一步核验，不能把二手转述当成微软正式政策；但风险本身很现实：企业应先盘点哪些知识可以发送、哪些只能在内网检索，哪些必须脱敏或禁止外传。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业采购会从模型准确率扩展到数据隔离、训练选择、连接器权限、日志、删除机制和知识资产归属。真正成熟的落地路径不是禁止员工使用 AI，而是建立分级数据策略、最小权限和可审计的 Agent 工作区；同时，技能与提示词也应纳入离职、供应链和版本管理流程。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2076581106154197334" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNF_Mp7a0AA_7ua?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNF_Mp7a0AA_7ua?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 模型部署优化从“压缩参数”走向“重算真实并发”</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA 发布 Nemotron-Labs-3-Puzzle-75B-A9B，官方论文把压缩、量化与交互式吞吐、百万 token 并发直接绑定。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类发布的关键不只是 120B 变 75B，而是压缩后在真实服务约束下能否提高请求数并保持质量。MoE 的激活参数、上下文长度、KV cache、量化格式和硬件拓扑共同决定最终成本；单一 benchmark 或厂商数字不能替代用户自己的负载回放。对 Agent 后端尤其要测工具调用、多轮状态和长输出，因为这些场景的显存与延迟曲线可能与普通聊天完全不同。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果压缩模型能稳定提供更高并发，企业可能减少 GPU 数量，或者在相同预算下承载更多 Agent。模型供应链会更重视部署版本、量化格式和推理引擎兼容性，评测也会从离线准确率扩展到每美元有效任务数、故障恢复和上下文成本。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2076582965988225453" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2076660244818866679" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xieenze_jr/status/2069971590478201154" target="_blank"><span class="handle">@xieenze_jr</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yan5xu/status/2076642648111407484" target="_blank"><span class="handle">@yan5xu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/oran_ge/status/2076634161901920294" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2076664973242360264" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2076677375962857502" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2076547608777261124" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2076670102259343546" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2076515019861414321" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2069970870546960384/img/sHYmE4WOEZaTKnaU.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2069970870546960384/img/sHYmE4WOEZaTKnaU.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNG3YdzacAEyim0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNG3YdzacAEyim0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNG3ZrCaUAA9x-7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNG3ZrCaUAA9x-7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNHLtpXbwAAqWWY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNHLtpXbwAAqWWY?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNHXDo1bYAA8Map?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNHXDo1bYAA8Map?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNFg30fbUAAFEAJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNFg30fbUAAFEAJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNHQcDCXAAEJLME?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNHQcDCXAAEJLME?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNFDZn-aQAAhJ29?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNFDZn-aQAAhJ29?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>AlloyDB 语义搜索：关注数据库原生语义检索与传统 SQL 的结合，以及实际加速数据是否可复现 <a href="https://x.com/xiaohu/status/2076547608777261124" target="_blank">→</a></li>
+    <li>Skills for Design Engineers：围绕动效与交互设计的 Skill 库，观察模型判断与执行分工能否减少前端返工 <a href="https://github.com/emilkowalski/skills" target="_blank">→</a></li>
+    <li>AI 第二大脑：关注个人笔记、项目资料、记忆和规则的分层管理，重点看权限与可迁移性 <a href="https://x.com/appinn/status/2076670102259343546" target="_blank">→</a></li>
+    <li>Grok Build 代码上传风险：在使用会扫描项目的构建工具前，先检查忽略文件、密钥处理和网络上传行为 <a href="https://x.com/op7418/status/2076515019861414321" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
