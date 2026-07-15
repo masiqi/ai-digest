@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-15</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-15</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手的方向，是“能力下沉到本地设备”和“Agent 从会生成变成可验证、可协作的工作流”：一边是 1-bit/稀疏注意力让大模型与长上下文继续向个人设备靠近，另一边是视频、网页应用、代理测试和多代理协作开始出现可以直接运行的工具链。证据补充脚本本次在限定时间内未产出 dated evidence 文件，以下🛠️项目均用原始推文与官方仓库、模型卡或官方文档交叉核对；未完成外部核验的线索明确降级为🌱“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Bonsai 27B 1-bit 本地模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>PrismML 发布的 27B 级 1-bit 模型，目标是在 Apple Silicon、iPhone/iPad 等受限内存设备上运行更大的本地模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/prism-ml/Bonsai-27B-mlx-1bit" target="_blank">https://huggingface.co/prism-ml/Bonsai-27B-mlx-1bit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开模型卡确认设备与内存要求；在 Apple Silicon Mac 上安装 MLX 运行环境，并参考官方文档 https://docs.prismml.com/run/mlx 选择对应的 MLX 权重。下载模型后，用 mlx_lm 或 Bonsai demo 仓库的脚本启动一次短提示词推理，再逐步测试更长上下文和不同温度。若要在 iPhone/iPad 上试用，应使用 PrismML 指向的 mlx-swift 方案和官方应用路径，不要把桌面 MLX 命令直接照搬到手机。第一次体验建议先比较同一问题的响应速度、内存占用和回答质量，并记录 1-bit 模型在长上下文下的实际退化情况。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“本地模型只能做小模型”的边界继续往上推。关键不只是参数量，而是二值权重、KV cache 压缩和 Apple 端推理栈的组合；官方资料也提醒 1-bit 视觉能力仍需谨慎验证，因此它更适合作为端侧效率与模型压缩的实验对象，而不是未经测试的全能替代品。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>无网或隐私敏感环境中的本地问答、摘要与代码辅助。</li>
+    <li>在 Mac/iPhone 上研究低比特权重、缓存和端侧推理性能。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2077183892554170637" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNM70U_bEAQdQFX?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNM70U_bEAQdQFX?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Wan-Dancer-14B 音乐生舞蹈视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>阿里 Wan 系列开源的音乐到舞蹈视频模型，可用人物参考图与音乐生成节奏相关、较长时段的舞蹈视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/Wan-AI/Wan-Dancer-14B" target="_blank">https://huggingface.co/Wan-AI/Wan-Dancer-14B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Hugging Face 模型卡确认显存、依赖和许可证，再执行模型卡给出的下载命令，例如 huggingface-cli download Wan-AI/Wan-Dancer-14B --local-dir ./Wan-Dancer-14B。准备一张角色参考图和一段音乐，进入官方仓库 https://github.com/Wan-Video/Wan2.1 对照推理脚本与目录结构；可以先用官方示例的 Chinese Classical Dance 或 Street Dance 配置跑通，再换自己的音乐。生成后重点检查节拍同步、人物身份保持、长视频连续性和显存峰值，不要只看单帧截图判断质量。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>音乐驱动视频的难点不是“画出会动的人”，而是动作、节奏、身份和时间连续性同时成立。官方模型卡提供多种舞种、全局/局部提示词与步数配置，说明它已经从概念演示走向可复现实验；开源权重也让创作者能够在本地研究可控条件与长时序一致性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>舞蹈编排、音乐可视化和短视频预演。</li>
+    <li>游戏、虚拟角色或广告中的动作草案生成。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2077177242107727986" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MiniMax-M3 长上下文多模态模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>MiniMax 开源的原生多模态模型，官方资料强调 1M 上下文与 MiniMax Sparse Attention 稀疏注意力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MiniMax-AI/MiniMax-M3" target="_blank">https://github.com/MiniMax-AI/MiniMax-M3 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读 GitHub README 的硬件、框架和许可证说明，再从 Hugging Face 模型卡 https://huggingface.co/MiniMaxAI/MiniMax-M3 选择 Transformers、vLLM 或 SGLang 路线。模型体量很大，不建议直接在普通笔记本下载完整权重；更现实的尝试是先使用可用推理服务或具备多卡资源的机器，按 README 的 hf download 命令取得权重。跑通后用同一份长文档分别测试短上下文和长上下文，观察首 token 延迟、显存、检索准确率与 thinking 参数的差异，并把“能放进上下文”与“能稳定回答”分开评估。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>1M 上下文只有在注意力计算与内存成本可控时才有工程意义。M3 把稀疏注意力作为核心卖点，官方 README 给出了相对上一代的 prefill/decode 加速主张；这使它适合关注长文档、代码库和多模态输入的开发者，但超大权重带来的部署门槛同样是必须正视的成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长代码库、合同或研究资料的整体分析。</li>
+    <li>需要同时处理文本与图像输入的企业知识工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2077174836342951963" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2077108272335921152/img/roBPl_SrQMeAgVT9.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2077108272335921152/img/roBPl_SrQMeAgVT9.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ChatGPT Apps SDK</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenAI 面向开发者的框架，用 MCP server、工具、模板与 widget runtime 构建可在 ChatGPT 内交互的应用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developers.openai.com/apps-sdk" target="_blank">https://developers.openai.com/apps-sdk ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方 Apps SDK 文档的概念、MCP server、widget runtime 和部署章节，确认应用需要暴露哪些工具与界面。创建一个最小 MCP server，只提供一个无副作用的查询工具，再按文档接入模板和 widget；在本地开发环境中用测试数据验证工具参数、错误返回和隐私边界，最后才考虑提交插件。建议从“把一个已有 API 包装成 ChatGPT 内可交互卡片”开始，而不是一上来做完整 SaaS；同时逐项检查官方 UX、质量、安全与隐私要求。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 ChatGPT 的入口从纯文本对话扩展为工具、界面和对话共同组成的应用分发层。官方说明其建立在 MCP 标准上，开发者可以复用服务端工具并补上交互式 UI；真正的门槛则从“能调用模型”转向权限、数据边界、错误恢复和审核后的产品体验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把内部查询、排班、知识库等工具封装成对话内应用。</li>
+    <li>为已有 Web 服务增加自然语言入口和交互式结果展示。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2077174836342951963" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2077108272335921152/img/roBPl_SrQMeAgVT9.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2077108272335921152/img/roBPl_SrQMeAgVT9.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude for Teachers</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 面向美国 K-12 教师的项目，认证后提供高级 Claude 能力、教学 skills，并连接按州标准组织的 Learning Commons 课程资料。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://claude.com/solutions/teachers" target="_blank">https://claude.com/solutions/teachers ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>符合条件的美国 K-12 教师可从官方页面进入验证流程；完成资格验证后，先用一个具体年级和学科请求教案，再要求 Claude 标注对应标准、学习目标、材料与形成性评价。把输出当作备课初稿，逐项核对课程标准、学生隐私和事实准确性，再让它生成差异化练习或评分量规。不要直接把学生可识别信息上传，也不要把自动生成材料未经教师审阅就投入课堂；可用同一任务比较接入 Learning Commons 前后的依据质量。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是单纯的“教育优惠”，而是把模型能力、领域 skills 和标准化课程资料绑定在一起。官方页面明确强调教师审阅和决策仍在环路中；产品价值因此取决于能否减少备课检索与格式化时间，同时保持教师对教学目标、内容质量和学生数据的控制。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>按州标准生成并修改教案、测验和学生材料。</li>
+    <li>对班级表现做标准对齐的初步分析和反馈草稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2077172990714986622" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNOZ0w-acAAHua3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNOZ0w-acAAHua3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNMmWvKW4AAju32?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNMmWvKW4AAju32?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Google ADK Agent 评测与 Pytest</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google Agent Development Kit 是开源的代理开发框架，支持构建、调试、评测和扩展多代理系统，当前讨论重点转向测试执行轨迹而不只是最终答案。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk" target="_blank">https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先用官方文档创建一个最小 ADK agent，给它配置一个可观察的工具调用；随后准备一组固定输入和期望结果，把“最终回答正确”“工具是否按预期调用”“调用顺序与参数是否合理”拆成不同断言。结合 pytest 运行重复测试，保存 invocation-level 结果和失败轨迹；对随机性较强的回答，使用结构化字段、工具结果和语义指标，而不是硬编码整段自然语言。最后在修改 prompt、模型或工具实现后重跑回归集，比较失败案例，确认评测确实覆盖了你关心的业务风险。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 的失败经常发生在中间步骤，最终文本看起来却可能合理。ADK 的评测思路把 trajectory、tool use 与 final response 分开，让团队能定位是路由、参数、权限还是总结环节出了问题；这正是从 demo 走向生产时最容易被忽略、但最能降低回归风险的一层工程基础设施。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对检索、数据库查询和多代理委派流程做回归测试。</li>
+    <li>在模型或 prompt 更新后评估行为漂移与工具调用安全性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2077171281879839167" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNCam2tbgAAIbix?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNCam2tbgAAIbix?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mastermind 3D 开源小游戏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个用 Three.js 做的 3D Mastermind（猜颜色）网页小游戏，提供在线体验并准备开源。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/mastermind-3d" target="_blank">https://github.com/joeseesun/mastermind-3d ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问 https://mastermind.qiaomu.ai 先体验桌面端和手机端交互，再克隆 GitHub 仓库到本地，用 Node.js 安装依赖并启动开发服务器。先从颜色数量、反馈提示和胜负逻辑入手读代码，再观察 Three.js 场景、鼠标交互、音效和响应式布局分别如何组织。可以让 Codex/Claude 修改一个小功能，例如增加难度或键盘操作，然后运行项目自带检查并在手机浏览器验证触控；这是一个很适合练习 AI coding 后人工验收的低风险样例。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是基础模型新闻，却很贴近“能不能把想法做成可玩的产品”这一真实能力。小项目把 3D 渲染、交互、音效、移动端适配和发布串在一起，范围可控、反馈即时，适合作为评估 AI 编程是否真正覆盖产品细节，而不只是生成一个能启动的页面。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学习 Three.js、交互状态管理和移动端网页适配。</li>
+    <li>用作 AI coding 代理的端到端小型验收项目。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2077094918359847390" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNNSzqGW8AAhtdB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNNSzqGW8AAhtdB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNMxoVvaAAAc9Dx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNMxoVvaAAAc9Dx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Codex 用户规模与客户端迭代加速</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 中多条消息称 Codex 活跃用户接近或达到 800 万，并持续加入 Computer Use 画中画、可交互 UI 等能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这些数字来自社交平台转述，不能当作经过审计的 DAU/WAU；但多条独立产品体验指向同一个变化：编码代理正在从“在终端生成代码”扩展到能观察浏览器、展示交互结果并参与更完整的软件交付流程。用户规模若属实，会进一步形成使用反馈、模型迭代和生态工具的正循环；对开发者而言，更重要的不是追逐数字，而是验证这些新界面能否减少上下文切换、是否留下可审计的操作记录。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>编码工具竞争的评价指标会从补全速度转向任务完成率、测试通过率、可回滚性和团队协作。企业采用时也必须同步建立权限、代码审查、网络访问和成本上限，否则更强的 Computer Use 可能只是把风险从“写错代码”扩大到“操作错系统”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2077116720263676362" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 端侧大模型进入 27B 与 1-bit 竞速</div>
+  <div class="section"><div class="section-label event">事件</div><p>PrismML 的 Bonsai 27B 与相关 MLX 生态把 1-bit 权重和手机运行能力推到当天讨论中心。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>端侧趋势的核心不是把云端模型原样塞进手机，而是重新设计权重格式、KV cache、编译栈和应用内存预算。Bonsai 官方资料对 1-bit 视觉支持仍有边界说明，这提醒我们区分“能加载模型”“能快速生成文本”和“能稳定完成多模态任务”。如果模型压缩继续改善，隐私、离线可用和低延迟会成为产品优势，但开发者也要接受不同芯片、系统版本和算子支持造成的碎片化。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>云端推理并不会立刻被替代，产业更可能形成云端大模型负责复杂任务、端侧模型负责即时和隐私任务的分层架构。芯片、推理框架、模型格式和应用开发工具之间的协同将比单个模型参数量更关键；评测也应加入真实设备功耗、峰值内存、首 token 延迟和长时间稳定性。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/LocallyAIApp/status/2077087065628414133" target="_blank"><span class="handle">@LocallyAIApp</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNNKw7jXUAAUHdk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNNKw7jXUAAUHdk?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 企业护城河转向模型之上的学习闭环</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 讨论认为，模型快速趋同后，企业真正难复制的是 prompt、纠错、评测以及对“什么叫好”的定义。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条判断虽然是观点而非可量化研究，但对落地团队很有操作性。模型 API 本身越来越像基础设施，差异会沉淀在真实业务数据如何被整理、错误如何被标注、反馈如何回流、评测集如何持续更新，以及组织是否能把这些经验变成可复用流程。只买模型额度而没有建立反馈闭环，往往只能得到短期 demo 提效，无法形成稳定的质量优势。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 项目预算会从单纯购买模型，逐步转向数据治理、评测平台、观察性、人工复核和流程改造。拥有高质量业务反馈的小团队也可能超过拥有更多预算但没有闭环的大团队；反过来，闭环中包含敏感数据，权限、脱敏和供应商数据使用政策必须成为采购与架构评审的一部分。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2077166427065471466" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2077074912435433901" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/HiTw93/status/2077089452430594089" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2077164990390501783" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2077089452430594089" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNOT2pHasAAgrIl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNOT2pHasAAgrIl?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNJSHyzbIAA-NeA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNJSHyzbIAA-NeA?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNM7GB4XgAAvh7C?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNM7GB4XgAAvh7C?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Agent Pulse：围绕 Codex 的开源内容生产流水线，适合观察 Agent 驱动信源聚合与发布自动化 <a href="https://github.com/barretlee/agent-pulse" target="_blank">→</a></li>
+    <li>Workbench：面向 macOS、试图把 Codex 不易理解的功能集中到一个窗口的工具，关注其是否能降低多界面操作成本 <a href="https://x.com/berryxia/status/2077089452430594089" target="_blank">→</a></li>
+    <li>Open Design：从设计生成走向技能、案例和线下社群的产品化路线，关注其与不同模型/工作台的兼容性 <a href="https://open-design.ai/" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
