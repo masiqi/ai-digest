@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-16</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-16</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号分成两条：一是本地优先的“能立刻跑”工具密集出现，视频转录/剪辑、Mac 维护、SEO 审计、设计和 GIF 处理都被封装成了 Agent Skill；二是模型与平台继续向端侧、开放权重和可审计的 Agent 工作流下沉。本次 X List 抓到 107 条推文，证据包筛出 83 个候选并补充 30 条 HNRSS/Hacker News 信号，强条目均尽量交叉到官网或仓库，证据不足的风声降到🌱。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ BaoCut：本地优先视频转录与粗剪</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 macOS Apple Silicon 的本地优先视频工具，把转录、逐词时间轴、翻译、字幕校对和可撤销粗剪放进同一条工作流，也能由 Claude Code 或 Codex 通过 Skill 驱动。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://baocut.app" target="_blank">https://baocut.app ↗</a></p>
+    <p><a href="https://github.com/JimLiu/baocut" target="_blank">https://github.com/JimLiu/baocut ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在官网下载安装 macOS 15+、Apple Silicon 版本，导入一段采访、课程或口播视频；先运行本地转录，检查说话人、逐词时间轴和字幕断句，再用文本编辑方式删掉口头禅、拆分或合并字幕。需要双语时逐句翻译并人工审核，再导出 SRT/VTT/ASS/Markdown 或带字幕视频。想接入 Agent，则安装仓库里的 Skill，让 Claude Code/Codex 调用 baocut CLI 完成 transcribe、polish、translate、export，并保留每一步的可审阅结果，不要一开始就批量覆盖原片。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把大模型聊天框贴在剪辑软件旁边，而是把“文字是唯一事实来源”贯彻到字幕、时间轴和剪辑。转录、说话人识别与对齐可在本机完成，云模型只在用户主动开启时参与；AI 输出先作为建议等待接受，也降低了自动剪辑误删内容的风险。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>采访、播客和课程视频的本地转录、双语字幕与粗剪。</li>
+    <li>对隐私敏感的素材进行离线处理，再由 Agent 批量整理项目。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2077547147629826412" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNTuHMSbgAADgEA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNTuHMSbgAADgEA?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNM7GB4XgAAvh7C?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNM7GB4XgAAvh7C?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole：Mac 终端清理与系统维护工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源的 macOS 终端工具箱，集中处理清理、卸载、磁盘分析、优化和实时系统监控，并强调谨慎的清理边界。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole" target="_blank">https://github.com/tw93/Mole ↗</a></p>
+    <p><a href="https://mole.fit" target="_blank">https://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS 终端执行 `brew install mole`，先运行 `mo --help` 熟悉菜单和子命令，再用 `mo analyze` 查看缓存、日志、残留文件和大文件，不要直接执行破坏性清理。确认结果后，对 clean、uninstall、purge 等命令先使用项目支持的 `--dry-run` 预览，并查看操作日志；需要卸载应用时区分“应用仍在”和“应用已删但残留还在”两种路径。第一次建议只处理明确的缓存和安装包，保留开发工具、活动链接以及正在使用的数据，完成后再用 `mo history` 复核。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Mole 把 CleanMyMac、AppCleaner、DaisyDisk 和系统状态查看器的常用能力收进一个终端工具，并采用保护目录、路径校验、确认和日志等安全设计。对经常运行 Coding Agent、Homebrew 和大型构建任务的人，它不仅能释放空间，还能把维护过程纳入可复核的命令行工作流。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>清理开发缓存、日志、安装包和已卸载应用残留。</li>
+    <li>在 Mac 上排查磁盘、CPU、内存、网络和项目构建产物。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2077535179472621885" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNCaOaebYAA9nmr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNCaOaebYAA9nmr?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SEO Audit Skill：让 Agent 生成结构化 SEO 审计</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个适配 OpenClaw、Claude Code 和其他 Agent 的 SEO Skill，输入网页地址后生成包含站点检查、页面检查和优先级修复建议的 HTML 报告。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JeffLi1993/seo-audit-skill" target="_blank">https://github.com/JeffLi1993/seo-audit-skill ↗</a></p>
+    <p><a href="https://nanoskill.ai/skills/seo-audit" target="_blank">https://nanoskill.ai/skills/seo-audit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先执行 `npx skills add JeffLi1993/seo-audit-skill`，在 Claude Code、Cursor 或支持 SKILL.md 的 Agent 中打开一个网站项目，然后直接输入“audit this page: https://example.com”。基础审计会检查 robots.txt、sitemap、404、URL 规范化、标题、描述、H1、canonical、图片 alt、内部链接和结构化数据，并把结果保存为 `reports/&lt;hostname&gt;-audit.html`；需要更深的 PageSpeed、GSC、竞品和内容质量分析时，再启用 `seo-audit-full`，并按 README 配置 PageSpeed API Key。先拿自己的站点跑一遍，再让 Agent 按优先级逐项修复和复测。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它采用“脚本做确定性检查、LLM 做语义判断”的两层架构，避免让模型凭感觉猜页面速度、HTTP 状态或 XML 内容。输出不是一段泛泛的 SEO 建议，而是带证据、影响、修复方式和优先级的独立 HTML 报告，比较适合把一次性审计变成可重复的工程流程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>发布前快速检查落地页、博客和产品站的技术 SEO 问题。</li>
+    <li>将多个客户站点的审计结果统一保存，交给 Agent 继续生成修复任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2077398066332836255" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNRmgthbAAAXhR7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNRmgthbAAAXhR7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNRmgtQbkAAe5g3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNRmgtQbkAAe5g3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MengTo Skills：设计师与开发者的 75 个 Agent Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Meng To 开源的一套面向 Codex、Claude、Cursor 等 Coding Agent 的设计与前端工作流集合，把设计指令、风格系统、抓取、调试和交付经验整理成可复用 Skill。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MengTo/Skills" target="_blank">https://github.com/MengTo/Skills ↗</a></p>
+    <p><a href="https://aura.build" target="_blank">https://aura.build ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先 `git clone https://github.com/MengTo/Skills.git`，浏览仓库里的 `agent-skills` 目录，挑一个与当前任务匹配的 Skill，而不是把 75 个全部塞进上下文。以网页重构为例，先给 Agent 一张参考图和目标页面，再加载设计优先、组件布局、动画或调试相关的 SKILL.md；让它先输出页面结构、视觉规则和验收点，确认后再改代码。完成后用浏览器预览、截图或本地测试复核，最后把真正稳定的 Skill 复制到团队的 Agent skills 目录，形成项目级规范。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不在于又一组提示词，而在于把设计判断和交付动作沉淀成可版本控制的文件夹。对 Vibe Coding 来说，这能把“让模型做得更好看”变成风格、组件、交互、截图验证和调试的具体流程，也方便团队跨 Codex、Claude 和 Cursor 复用同一套经验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从截图或参考站点快速生成更一致的前端界面和设计系统。</li>
+    <li>将个人的设计提示、调试套路和交付规范变成团队共享资产。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2077335188666044426" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNQtVJkawAAHzBu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNQtVJkawAAHzBu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ baoyu-design：在本地运行 Claude Design 的 Agent Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把 Claude Design 方法打包成本地 Agent Skill 的开源项目，可生成自包含 HTML 的高保真界面、交互原型、线框图、仪表盘、移动端页面和演示文稿。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/baoyu-design" target="_blank">https://github.com/JimLiu/baoyu-design ↗</a></p>
+    <p><a href="https://claude.ai/design" target="_blank">https://claude.ai/design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>执行 `npx skills add JimLiu/baoyu-design -g` 安装到全局 Skill 目录，随后在 Claude Code、Codex、Cursor 或其他支持文件的 Agent 中发起一个具体设计任务。最好同时提供截图、现有代码库、品牌色或 Figma 导出，让它先收集信息并给出页面方案；确认方向后生成自包含 HTML，用本地预览或 Agent 内置浏览器检查布局，再指出具体按钮、间距和组件问题进行第二轮修改。最后把 HTML、素材和必要的说明一起提交到仓库，而不是只保留聊天记录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个项目把设计流程从在线黑盒变成了可以放进本地代码库的 Markdown、参考文档和组件脚手架，输出也可以直接版本控制。它尤其适合与 Coding Agent 的浏览器预览形成“生成—截图—指出元素—修改”的闭环，减少只凭文字描述 UI 导致的反复沟通。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速制作产品原型、落地页、移动端界面和数据看板。</li>
+    <li>将设计探索结果输出为可交接、可迭代的独立 HTML 或演示文稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2077281462433223043" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNP4xhYWsAAxX0_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNP4xhYWsAAxX0_?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNM7GB4XgAAvh7C?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNM7GB4XgAAvh7C?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Video Skills Toolkit：可复用的短视频生产 Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把口播 Remotion、手绘故事和音频转字幕流程整理成 Agent Skills 的开源工具包，不是单个成片，而是一组可复用的视频工程模板。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/bozhouDev/video-skills-toolkit" target="_blank">https://github.com/bozhouDev/video-skills-toolkit ↗</a></p>
+    <p><a href="https://www.remotion.dev" target="_blank">https://www.remotion.dev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并阅读 `skills/` 下的三个目录，选择 `talking-head-remotion`、`sketch-story-remotion` 或 `audio-to-subtitles` 之一，不要一开始混用。准备好脚本、音频、画面比例和输出平台要求，把对应 Skill 放进你的 Agent 工作区，让 Agent 先生成 Remotion 工程结构和素材清单；在本地逐段预览字幕、节奏和画面，再导出视频。音频转字幕流程需要按 README 配置 MediaKit、R2 或 MiniMax 等服务变量，密钥放在本地环境文件里，先用短音频验证，再处理完整素材。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把脚本、配音、字幕、画面节奏和 Remotion 工程结构串成一条可重复的生产线，尤其适合把“做一条视频”的经验变成下一条也能复用的模板。项目还明确区分空白模板、手绘代码绘制和外部字幕服务，边界比只展示最终效果的 Demo 更清楚。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>生产口播解说、课程和产品介绍视频的初始工程。</li>
+    <li>制作不依赖图片素材的手绘故事，或把音频批量变成逐字字幕时间轴。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2077540088247210154" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-tiny-gif：面向公众号规范的 GIF 压缩 Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源 GIF 压缩 Skill，围绕公众号常见的 10MB、300 帧、640 像素和 12–20fps 约束，优先合并静止帧和删除冗余帧，再逐级降低编码成本。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-tiny-gif" target="_blank">https://github.com/joeseesun/qiaomu-tiny-gif ↗</a></p>
+    <p><a href="https://imdb.qiaomu.ai" target="_blank">https://imdb.qiaomu.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先执行 `npx skills add joeseesun/qiaomu-tiny-gif`，按 README 安装 Pillow 和 `gifsicle`，再拿一份原始录屏 GIF 做测试。先查看输入文件的体积、帧数、尺寸和帧率，默认使用 wechat 配置处理；如果素材运动很多，先用 `--no-drop` 做保守版本，再比较合并静止帧、抽取近似帧和调色板/有损压缩的结果。输出后重新检查文件能否打开、动画时长是否变化、文字是否仍可读，最后把结果控制在安全线内再上传公众号，别只看文件大小而忽略关键帧。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是简单地把整段 GIF 粗暴降色或缩放，而是先利用内容变化压缩：长时间静止画面合并、微动段抽帧、超帧率合并，并在达标后停止。对公众号、教程和产品演示来说，这种“画质优先、达到预算即停”的策略比一键压到模糊更实用，也很适合交给 Agent 批处理。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把录屏、教程和产品演示 GIF 压到公众号上传安全线。</li>
+    <li>批量处理超过 300 帧、过大或帧率过高的动图素材。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2077242458627289494" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HNPXpOcWkAA-7nf.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HNPXpOcWkAA-7nf.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ StyleSeed：让 Agent 少生成“千篇一律”的前端 UI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 Claude Code、Codex 和 Cursor 的设计规则引擎，把设计判断、组件、品牌皮肤和动效规则注入 Agent，目标是减少 AI 生成界面的模板化。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/bitjaru/styleseed" target="_blank">https://github.com/bitjaru/styleseed ↗</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=48920888" target="_blank">https://news.ycombinator.com/item?id=48920888 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并按 README 选择对应 Agent 的安装方式，或者把项目中的 Skill 目录加入当前工作区；安装后不要只让 Agent“做一个漂亮首页”，而是同时给出品牌、用户、页面目标和参考截图。先让 StyleSeed 生成设计规则和页面骨架，再让 Agent 按规则实现一个小页面，使用浏览器截图检查层级、密度、对比度、动效和组件重复度。确认有效后把选定的品牌 skin、规则和组件约束固定到项目说明中，再让 Agent 扩展到其他页面，并通过截图或 Lighthouse 复核。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把抗 AI-slop 的问题从审美抱怨转成可执行规则，仓库资料显示其包含几十条设计规则、组件、品牌皮肤和一套动效系统。对于生成式前端，真正稀缺的不是再写一段 JSX，而是持续做出有辨识度、层次和交互节奏的界面，这类规则层可能成为 Agent 的“设计编译器”。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给已有 React/Tailwind 项目补充统一的视觉和动效约束。</li>
+    <li>在 Vibe Coding 前先建立品牌皮肤、组件规则和截图验收标准。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ aict：为 AI Agent 输出 XML/JSON 的 Unix 工具链</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个用 Go 重做常见 Unix 工具的开源 CLI，输出结构化 XML/JSON，让 Agent 不必解析人类友好的列式文本，还内置 MCP server。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/synseqack/aict" target="_blank">https://github.com/synseqack/aict ↗</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=48920681" target="_blank">https://news.ycombinator.com/item?id=48920681 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 用户可以先按仓库说明安装 Homebrew 版本，或执行 `go install github.com/synseqack/aict@latest`，再运行 `aict --help` 确认工具列表。先用 `aict ls --json`、`aict grep --json` 和 `aict stat --json` 对比传统命令的输出，观察绝对路径、文件类型、大小和时间字段是否更方便程序消费；需要连接 Agent 时启动 `aict mcp`，再把 stdio 服务接入 Claude Desktop 或其他 MCP 客户端。建议先在只读测试目录试用，确认 Agent 生成的参数和权限边界后，再替换真实项目中的工具调用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 调用命令行时经常把 token 浪费在猜列宽、解析日期和处理空结果上。aict 把 33 类工具统一成带标签的结构化输出，并明确把错误、空结果、路径和时间规范化，MCP 入口又能省掉一层 shell 胶水；它切中的不是模型能力，而是 Agent 与操作系统之间的数据契约。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 Coding Agent 提供可预测的文件搜索、比较、统计和系统信息。</li>
+    <li>通过 MCP 把只读 Unix 工具安全地暴露给本地 Agent 和自动化脚本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Grok Build CLI 开源与代码外传争议</div>
+  <div class="section"><div class="section-label event">事件</div><p>xAI 已把 Grok Build CLI 作为可安装的终端 Coding Agent 推出，同时围绕其是否会把过多代码上传到云端的安全争议，引发了对透明度和可验证部署的讨论。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方页面显示 Grok Build 面向复杂编码工作，提供计划、子代理、Skills、Hooks、MCP、代码搜索、测试、后台任务和沙箱等完整 Agent 工作流；X List 同时出现“完全开源”和“可独立渲染 Mermaid”等传播信号。外部报道则把焦点放在隐私设置、代码上传范围和凭据暴露风险上，因此“开源”不能自动等同于“安全”：用户仍要检查网络请求、默认权限、忽略文件规则、遥测和数据保留策略，最好在脱敏仓库或隔离环境中试跑。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会把 Coding Agent 的竞争从模型效果进一步拉到供应链和可审计性。企业如果要采用类似工具，采购标准不能只看基准分数，还要看是否能自托管、是否能由第三方复核运行版本、是否有清晰的零数据保留承诺，以及 API Key、Git 历史和私有依赖在异常情况下会不会被一并带走。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2077538326064812398" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Apple 智能获手机端侧生成式 AI 服务备案</div>
+  <div class="section"><div class="section-label event">事件</div><p>中国网信系统 2026 年 7 月 15 日发布 7 款手机端侧生成式人工智能服务备案信息，X List 据此关注到国行 Apple 智能落地的可能性。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>备案公告本身确认的是手机端侧生成式 AI 服务进入合规信息发布流程，说明“端侧 AI”正在从产品演示进入本地化上线前的监管与运营阶段。X List 的相关解读进一步指向阿里千问将为中国区 Apple 智能提供能力，但这部分合作关系仍应以苹果、阿里或后续正式产品说明为准，不能把单条转述当成已经完成的商业发布。无论最终模型供应方是谁，端侧推理、云端兜底、数据跨境和系统权限都会成为体验的一部分。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对手机厂商而言，模型能力不再只是 App 层的下载项，而是与系统、硬件、备案和数据治理绑定的基础设施。对开发者和用户来说，真正值得观察的是哪些能力能离线运行、哪些请求会回云、系统是否开放调用接口，以及合规要求会不会改变模型选择、隐私策略和第三方 Agent 的接入方式。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2077304425153175987" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNQRXPzaAAAxVIf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNQRXPzaAAAxVIf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Thinking Machines 开源 Inkling 多模态 MoE</div>
+  <div class="section"><div class="section-label event">事件</div><p>Thinking Machines 发布首个开源多模态模型 Inkling，总参数约 975B、激活约 41B，支持文本、图像和音频输入，采用 Apache 2.0 许可。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是适合普通笔记本直接下载的“小模型”，而是一个把开放权重、原生多模态和大规模 MoE 组合到一起的基础设施信号。外部资料对其 SWE-bench Verified、语音理解和工具使用表现给出较积极的早期评价，同时也提醒它在部分 Agent 或多模态基准上并非全面领先。它的真正价值在于让研究者和企业能够围绕自有数据做微调、量化和部署实验，而不是只能通过封闭 API 试用一个固定人格。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开放权重模型的竞争将从“能不能开源”转向“能否在不同硬件和成本下被真正使用”。Inkling 这类超大 MoE 会推动 vLLM、SGLang、llama.cpp、量化工具和云端托管一起完善，也会让模型许可、权重规模、推理显存和微调成本成为企业评估开放模型时必须同时计算的变量。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2077523795167129852" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2077384759563489315" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2077371152662708337" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNTY4C6boAAP33u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNTY4C6boAAP33u?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2077371133750583296/img/QMtVpqvN6NNOICHv.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2077371133750583296/img/QMtVpqvN6NNOICHv.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Codex Micro：OpenAI 与 Work Louder 合作的实体 Agent 控制台，用 RGB 状态键、快捷动作和推理旋钮管理 Codex 工作；它测试的是 Agent 是否会从软件界面延伸到物理工作台。 <a href="https://openai.com/supply/co-lab/work-louder/" target="_blank">→</a></li>
+    <li>Claude Code Fullscreen Rendering：X List 用户反馈 2.1.207 的全屏渲染改善长对话闪屏和资源占用，属于体验层的小更新，但可能影响 Coding Agent 的长时间可用性。 <a href="https://x.com/MinLiBuilds/status/2077371152662708337" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
