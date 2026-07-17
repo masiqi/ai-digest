@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-17</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-17</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线不是又一个“模型榜单”，而是模型、Agent 工具链和交付界面一起下沉：Kimi K3 把超长上下文、多模态和推理能力推到可直接试用的产品层，Grok Build、Pipecat、Kami 等项目则把编程、语音和文档生产变成可复用工作流。本次 Agent Reach 多源证据包运行超过 300 秒未产出，以下🛠️项目均改用 X List 原文 + 官网/GitHub/官方文档交叉核验；HNRSS 补充信号本次证据不足，已把较弱线索降到🌱并明确“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Kimi K3：2.8T 参数与百万上下文的多模态模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Moonshot AI 的新一代模型，官方文档称其具备 2.8 万亿参数、原生视觉理解和 1M-token 上下文，面向软件工程、知识工作和深度推理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://platform.kimi.ai/docs/guide/kimi-k3-quickstart" target="_blank">https://platform.kimi.ai/docs/guide/kimi-k3-quickstart ↗</a></p>
+    <p><a href="https://platform.kimi.ai/playground" target="_blank">https://platform.kimi.ai/playground ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 Playground，用手机号或现有账号登录，选择 kimi-k3，先用一段中等规模的代码库说明、产品需求或长文档测试它的长上下文能力。想走 API 时，进入 Kimi API Platform 创建密钥，在本机设置 MOONSHOT_API_KEY，再安装 Python OpenAI SDK，base_url 使用 https://api.moonshot.ai/v1、model 使用 kimi-k3，先做一次普通对话，再把同一轮 assistant 完整消息带回去测试多轮和工具调用。上传图片时不要直接填公开图片 URL，按官方文档转成 base64 或平台支持的资源格式；先用低成本短任务验证，再跑长任务，避免一开始就消耗大额 token。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方资料已经从“传闻规格”变成了可调用模型、Playground 和 Quickstart，2.8T、1M 上下文、原生视觉和强制思考模式组合在一起，直接影响长代码库分析、跨文件重构与复杂研究任务。真正值得观察的不是参数数字本身，而是百万上下文能否在真实工具调用中保持稳定，以及超长输入的成本、延迟和错误恢复是否足以支撑生产工作流。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把产品需求、接口文档和整个仓库摘要放进一次任务，要求 Agent 先规划再修改代码。</li>
+    <li>对长合同、研究资料或多模态材料做跨章节检索、比较和结构化总结。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2077775695795859637" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNW82Dva8AARqwV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNW82Dva8AARqwV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami：给 AI 文档排版的约束式设计系统</div>
+  <div class="section"><div class="section-label event">一句话</div><p>tw93/Kami 是面向 AI Agent 的文档设计系统，用约束、模板和字体层级，把简历、一页纸、长文档、报告、幻灯片等 AI 输出整理成可交付的版式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+    <p><a href="https://kami.tw93.fun" target="_blank">https://kami.tw93.fun ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果使用 Claude Code，可以执行 /plugin marketplace add tw93/kami，再执行 /plugin install kami@kami；如果使用 Codex，则添加仓库 marketplace 后安装 kami 插件。安装后不要先研究复杂参数，直接给它一段真实素材和明确交付物，例如“把这份产品调研做成两页中文白皮书，保留数据表、引用和结论”，让它生成 HTML 或 PDF，再检查分页、中文字体、表格和链接。也可以先浏览官网示例，复制一份一页纸或简历需求，比较默认暖纸色、墨蓝强调色和中文排版效果，再按自己的品牌约束修改。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“让模型写得好看”从审美随机性变成可检查的约束系统：暖色纸张、单一强调色、衬线层级、固定行高和模板化结构都有明确规则。仓库还把插件、参考资料和输出模板放在同一条路径里，适合直接嵌入内容生产链，而不是每次都从提示词赌一次视觉效果；这对报告、简历和方案等需要反复交付的场景尤其重要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将会议纪要、研究结果或产品 PRD 自动整理为一页纸、白皮书或演示文稿。</li>
+    <li>为个人作品集、简历、投研报告建立统一且可重复生成的视觉规范。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2077892786053918758" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNCbQ9ebAAEZulN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNCbQ9ebAAEZulN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Grok Build：开源的终端 AI 编程代理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>xAI 的 Grok Build 是一个 Rust 编写的终端 Agent，能理解代码库、编辑文件、执行命令、搜索网页，并支持 TUI、无头模式、MCP、Skills、插件和子代理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/xai-org/grok-build" target="_blank">https://github.com/xai-org/grok-build ↗</a></p>
+    <p><a href="https://x.ai/cli" target="_blank">https://x.ai/cli ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS、Linux 或 Git Bash 可以先按官方页面执行 curl -fsSL https://x.ai/cli/install.sh | bash，安装后运行 grok --version 检查命令是否可用，再进入一个可丢弃的测试仓库启动 grok。第一轮只给只读任务，例如“解释这个仓库的架构并列出风险”，确认它的文件范围和权限边界；第二轮再让它修改一个小问题、运行测试并给出 diff。需要接入工作流时，阅读仓库内的认证、MCP、Skills、hooks 和 sandbox 文档，先用 headless 输出做 CI 试验，不要把生产密钥或含有秘密的仓库直接交给新安装的 Agent。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>公开仓库把 Agent harness、TUI、工具层和大量 Rust 实现放到了可审计的位置，且不是只有聊天界面，而是把计划、并行子代理、MCP、记忆、代码搜索、测试和沙盒串成完整开发循环。它还包含 Codex、OpenCode 等工具实现的第三方说明，因此既是可用的编程工具，也是研究终端 Agent 如何组织权限、上下文和执行反馈的样本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在终端中让 Agent 先读仓库、制定计划，再完成小型修复并运行测试。</li>
+    <li>用无头模式把代码解释、审查和回归检查接入 CI 或批处理脚本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2077616932594085962" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Pipecat：实时语音与多模态 Agent 框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Pipecat 是开源 Python 框架，用可插拔的音频、视频、LLM、TTS、传输和对话管道构建实时语音及多模态 Agent，也支持多 Agent 协作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/pipecat-ai/pipecat" target="_blank">https://github.com/pipecat-ai/pipecat ↗</a></p>
+    <p><a href="https://docs.pipecat.ai/overview/introduction" target="_blank">https://docs.pipecat.ai/overview/introduction ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub README 和官方文档选择 Quickstart，使用 uv tool install "pipecat-ai[cli]" 安装 CLI，再运行 pipecat init 生成项目骨架。准备好一个语音识别、LLM 和语音合成服务的 API key 后，把它们填入环境变量，先运行最小语音机器人，确认麦克风输入、转写、模型回复和 TTS 输出都能串起来。随后再替换 transport、增加打断和实时转写，最后测试多人会话、超时、断线重连和并发；如果不想依赖云服务，可先把流程中的单个服务换成本地或自托管组件，逐步定位延迟来源。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它关注的是实时 Agent 最难的工程部分——音视频帧、服务调用、传输、打断和对话状态如何低延迟地编排，而不是只展示一个聊天页面。框架同时覆盖单 Agent 和多 Agent handoff、并行 fan-out、共享总线以及自托管/云部署路径，能让开发者把业务逻辑与底层媒体管道分离，适合快速比较不同 STT、LLM、TTS 组合的真实体验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做客服、预约、接待或内部知识问答的实时语音助手。</li>
+    <li>构建能看屏幕、听语音并让多个专业 Agent 协作的交互式产品原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2077743623781965895" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNWgyt0acAEteQ8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNWgyt0acAEteQ8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mermaid ASCII：把 Mermaid 图渲染到终端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AlexanderGrooff/mermaid-ascii 是 Go 工具和库，可把 Mermaid 流程图、序列图等渲染成终端里的 ASCII/Unicode 图形，也提供网页交互入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/AlexanderGrooff/mermaid-ascii" target="_blank">https://github.com/AlexanderGrooff/mermaid-ascii ↗</a></p>
+    <p><a href="https://mermaid-ascii.art" target="_blank">https://mermaid-ascii.art ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub Releases 下载对应平台二进制，或者克隆仓库后按 README 用 Go 构建；准备一个 flow.mermaid 文件，写入 graph LR、节点和箭头，再运行 mermaid-ascii --file flow.mermaid，想要纯 ASCII 时加 --ascii。也可以把 Mermaid 文本通过管道传给命令，观察在 SSH、代码评论或日志环境中的显示效果。遇到复杂节点、主题或不支持的语法时，先把图拆成基础 flowchart 或 sequence diagram，再用 --coords 辅助定位布局问题，确认结果后才放进自动生成文档或 CI 输出。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它解决的是 Agent 和开发者经常遇到但容易被忽略的可读性问题：服务器没有浏览器、终端日志不能显示 SVG 时，结构图仍然需要被快速检查。项目直接解析 Mermaid 并用网格算法转成字符画，既可作为独立 CLI，也可嵌入 Go 工具链；它还能帮助审查模型生成的架构图，降低“语法能渲染但人看不懂”的反馈成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 SSH、代码审查、README 和 CI 日志中查看架构、流程和调用关系。</li>
+    <li>让编码 Agent 在终端里生成并自检流程图，而不必打开浏览器。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2077770800925749388" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Learn UI Name：中英双语 UI 视觉词典</div>
+  <div class="section"><div class="section-label event">一句话</div><p>joeseesun/learnui 是一个纯静态的中英双语 UI 视觉词典，提供 62 个 UI 词条、44 个视觉风格标本、交互示例、搜索和可直接给编码 Agent 使用的术语提示。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/learnui" target="_blank">https://github.com/joeseesun/learnui ↗</a></p>
+    <p><a href="https://learnui.qiaomu.ai/" target="_blank">https://learnui.qiaomu.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开在线 Demo，先从首页或 /styles/ 浏览一个实际界面，再用搜索或快捷键找到对应的正式术语；例如看到半透明遮罩、折叠三角或某种视觉风格时，先读中文解释、英文名称和交互标本，再把项目给出的 prompt 复制到 Claude Code、Codex 或其他编码 Agent。想本地研究时克隆 GitHub 仓库，修改 data/*.json、中文译文或 demos/*.html，最后执行 python3 build.py 重建静态站点，检查搜索、筛选、双语切换和移动端布局。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Vibe Coding 失败并不是模型不会写 CSS，而是需求方只能说“做得像这个”，无法准确命名组件、交互和视觉语言。Learn UI 将真实可交互标本、英文术语、中文对照和 Agent prompt 放在一起，把审美沟通变成可检索的词汇层；它还是无框架、Python 标准库构建的静态项目，适合拿来做团队内部设计词典或二次扩展。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在写前端需求或给编码 Agent 下指令前，快速查清 UI 组件和视觉风格的正式名称。</li>
+    <li>为设计系统培训、前端教学和团队组件库建立中英术语对照。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2077789777546616848" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Codex Dream Skin：不改安装包的桌面 Codex 换肤工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Codex Dream Skin 是社区维护的外部主题工具，通过本机 CDP 注入给 Codex 桌面端切换背景和视觉风格，不修改 .app、app.asar 或 WindowsApps。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Fei-Away/Codex-Dream-Skin" target="_blank">https://github.com/Fei-Away/Codex-Dream-Skin ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 的安全边界和对应平台说明，macOS 用户进入 macos/ 目录双击 Install Codex Dream Skin.command，Windows 用户按文档运行安装和启动脚本。第一次只使用仓库提供的预设主题，确认 Codex 版本、窗口效果和恢复路径都正常，再导入自己的纯背景图；不要把带有完整界面的截图当作背景，也不要在不了解脚本内容时直接以管理员权限运行。使用前后分别记录 Codex 版本和主题配置，若更新后失效，优先用仓库的测试脚本和卸载说明恢复原状。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“Agent 工具的可定制界面”从单纯改 CSS 变成了可复现的外部主题包，并明确声明不碰官方安装包、模型供应商和 API 配置，边界比直接改客户端文件更清楚。仓库同时覆盖 macOS 和 Windows、预设资源、CDP 注入和测试脚本，适合观察社区如何围绕新型 Agent 桌面端补齐个性化与主题生态。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为长时间使用的桌面编码 Agent 设置更易识别的项目主题和工作氛围。</li>
+    <li>在不改变模型供应商配置的前提下，为演示、录屏或个人工作流统一界面风格。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2077660576655032678" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNVUK3Kb0AAFE-8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNVUK3Kb0AAFE-8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Turso：从 SQLite 走向 Agent 友好的数据库平台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Turso 提供 SQLite/libSQL 兼容的云数据库与本地开发工具，官方生态还在探索原生向量搜索、同步和通过 MCP 让 AI 助手操作数据库。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docs.turso.tech/cli/introduction" target="_blank">https://docs.turso.tech/cli/introduction ↗</a></p>
+    <p><a href="https://docs.turso.tech/local-development" target="_blank">https://docs.turso.tech/local-development ↗</a></p>
+    <p><a href="https://github.com/tursodatabase/turso" target="_blank">https://github.com/tursodatabase/turso ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 可以先执行 brew install tursodatabase/tap/turso，随后用 turso auth login 登录；只想本地试验时运行 turso dev --db-file local.db，它会启动本地 libSQL 服务并把数据持久化到文件。也可以先用 SQLite 文件和 @libsql/client 的 file:local.db 连接，等 schema 稳定后再迁移到云端。将一个小型 Agent 项目接进去时，先建 users、runs、messages 三类表，写几条查询和向量检索测试，再阅读 MCP 配置文档，让 Claude Code 或其他 MCP 客户端只拥有开发数据库权限，严禁把生产 token 写进仓库或提示词。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Turso 的价值在于把熟悉的 SQLite 开发体验、边缘/云端部署和 Agent 数据访问放到一条连续路径上：开发者可以本地跑、用同一套 SDK 连接，再按需要迁移到托管服务。对 Agent 应用而言，运行记录、记忆、检索和工具状态都需要低摩擦持久化；数据库原生 MCP 入口和向量能力若继续成熟，会让“模型能调用数据库”从胶水代码变成基础设施能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>存储 Agent 会话、任务状态、用户记忆和工具调用日志，并支持本地开发到云端迁移。</li>
+    <li>为轻量 RAG、边缘应用或多端同步原型提供 SQLite 兼容的数据底座。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2077880571150389751" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 代理科研的真正瓶颈转向现实世界验证</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google DeepMind 提出，AI 代理已经能提出假设、设计实验，但把想法放进现实世界测试的验证环节正在成为新的瓶颈。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这意味着 AI for Science 的竞争焦点不会只停留在谁能生成更漂亮的假设或论文草稿。代理可以在秒级提出大量候选方案，却不能自动跳过实验设备、样本制备、伦理审查、数据质量和同行复核。DeepMind 的文章把问题进一步拆成代理可访问的科学工具、适配 Agent 的数据集、可承载实验的基础设施和能够维持评审质量的制度安排。对创业团队来说，真正可落地的机会可能在实验编排、结果记录、失败复现和验证服务，而非又一个只会写研究摘要的聊天界面。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>科研机构需要同时投资计算代理和现实实验能力，否则模型生成速度越快，积压的未经验证假设越多。实验室自动化、科学数据标准、可追溯的实验日志和开放评测会变成 AI 科研的关键基础设施；能把模型输出稳定接到真实测试闭环的团队，可能比单纯拥有更大模型的团队更早形成壁垒。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/GoogleDeepMind/status/2077372568143642972" target="_blank"><span class="handle">@GoogleDeepMind</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNRPS8CW0AEuufL?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNRPS8CW0AEuufL?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 中美 AI 竞争的瓶颈从模型能力延伸到硬件与人才</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 转述 Anthropic 国家安全政策负责人的观点，认为美国仍有模型和硬件优势，但能源、人才等因素并非同样悬殊。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类讨论值得看作产业结构信号，而不是精确的国家实力统计。模型层面的差距可以通过开源权重、蒸馏、工程优化和应用反馈快速缩短，但数据中心建设、芯片供给、能源成本、人才密度和软件生态的差异，会决定这种追赶能否持续。与此同时，Kimi、GLM、LongCat 等产品的快速迭代让“发布一次模型”变成持续工程竞赛，最终比拼的是训练基础设施、推理效率、开发者入口和商业化分发的组合。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>创业公司和开发者选型时会更重视模型的可获得性、价格、上下文、部署许可和工具生态，而不是只看单次榜单排名。对产业链来说，推理成本、芯片适配、数据中心电力和 AI 人才招聘会与模型发布同等重要；对开源社区来说，公开权重和可复现实验能进一步压低追赶门槛，也会加剧基础设施与服务层的竞争。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2077677480413118840" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 开放权重模型进入集体冲刺期</div>
+  <div class="section"><div class="section-label event">事件</div><p>Sriram Krishnan 认为开源模型正迎来重要时刻，接近前沿的性能、训练血统和资金充足的团队正在同时出现。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条观察的重点不是“开源一定赢”，而是前沿能力的供应方式正在变多。过去只有少数闭源实验室能承担大模型训练和后训练，如今开放权重、可微调、可部署的模型越来越多，社区可以在真实代码库、工具调用和行业数据上快速形成反馈。模型发布后的价值也会从论文成绩转向许可证、推理成本、量化版本、上下文稳定性和 Agent harness 兼容性。对使用者而言，选择空间扩大是好事，但评测必须从静态问答升级到可复现的端到端任务。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型层可能继续降价，应用层的差异化会向数据、工作流、评测和交付迁移；云厂商需要提供更灵活的推理与微调通道，开源团队则要把模型卡、权重、推理脚本和安全边界做完整。未来一段时间，最值得跟踪的不是单个“第一名”，而是哪些开放模型真的能进入开发工具、企业私有部署和长程 Agent 生产环境。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/sriramk/status/2077566845431779766" target="_blank"><span class="handle">@sriramk</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2077905603461263626" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2077904172624798033" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2077657830329364603" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/XchenEvan/status/2077671209366609976" target="_blank"><span class="handle">@XchenEvan</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2077760702480302584" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2077739808726958391" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yetone/status/2077845683307246039" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2077688833194537341" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNYqzaTaIAAQ9Un?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNYqzaTaIAAQ9Un?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2077663527914151936/img/1oGQC6mD8MzXm5hP.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2077663527914151936/img/1oGQC6mD8MzXm5hP.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2077760602760712192/img/JYDqU8VwBhmYTHIm.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2077760602760712192/img/JYDqU8VwBhmYTHIm.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2077429028709945344/img/2S4zgBow9xL_2v2X.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2077429028709945344/img/2S4zgBow9xL_2v2X.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>CodeDrobe codex-skill：把开源项目作为编码 Agent 的可复用技能层，适合观察 Codex 主题之外的 skill 生态如何沉淀 <a href="https://github.com/CodeDrobe/codex-skill" target="_blank">→</a></li>
+    <li>TanStack CLI 的 MCP 与 Agent Skills 化：官方 CLI 已将项目脚手架、MCP Server 和 skills 安装放进同一生态，值得跟踪前端工具链如何被 Agent 原生化 <a href="https://github.com/TanStack/cli" target="_blank">→</a></li>
+    <li>Alma / Cumora：开发者正在围绕 Agent 协作重构产品，当前更像路线信号，后续应关注是否出现公开仓库、可试玩版本和具体协作机制 <a href="https://x.com/yetone/status/2077845683307246039" target="_blank">→</a></li>
+    <li>研究型 Agent Skills：X List 出现“2026 年最佳研究型智能体技能”整理线索，适合后续补齐原始清单、安装方式和实际任务评测 <a href="https://x.com/CoderJeffLee/status/2077688833194537341" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
