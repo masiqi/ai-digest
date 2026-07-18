@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-18</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-18</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线不是又一个聊天模型，而是 Agent 正向“可控执行”下沉：Bionic、Managed Agents、LiveKit/Gemma 等把代码、文档、语音和定时任务变成可直接试用的工作流；Kimi K3 与 RoboTTT 则把上下文规模推向模型和机器人。Agent Reach 多源证据补充在本次运行中超时，工具条目均改用推文 + 官方网站/GitHub/文档人工核验，未核实但有新意的线索明确放入🌱，不把猜测写成结论。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ LM Studio Bionic：开源模型的桌面 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LM Studio 新推出的独立桌面 Agent，可调用本地或云端开放模型处理代码、研究、文档、PDF、演示文稿和表格，并提供本地语音转录。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://lmstudio.ai/blog/introducing-lm-studio-bionic" target="_blank">https://lmstudio.ai/blog/introducing-lm-studio-bionic ↗</a></p>
+    <p><a href="https://lmstudio.ai" target="_blank">https://lmstudio.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官网下载安装 Bionic，注意它是独立于传统 LM Studio 模型浏览器的新应用；启动后新建 Code project，选择一个本地代码目录，让 Agent 先解释项目结构，再要求它只修改一个小问题并逐项检查 inline diff。处理资料时新建 Work project，拖入 PDF、文档或表格，让它先列出引用依据，再生成摘要或初版文件；模型选择上，简单任务先用本地模型，复杂任务再切换 Secure Cloud。还可以从任意应用唤起 Bionic 的 voice keyboard，用本地语音转录输入提示词。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“本地模型运行时”和“真正执行工作”的 Agent 层分开，既保留开放模型的可替换性，也把代码搜索、沙盒文档处理、自动保存和回滚检查点放进同一工作区。官方还明确承诺 Bionic 用户零数据留存且不使用数据训练，适合对隐私、成本和模型控制都有要求的个人开发者。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地仓库中定位陌生模块、生成补丁并人工审阅每一处改动。</li>
+    <li>把一批 PDF、表格和会议材料整理成可继续编辑的研究简报或演示文稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2078239695662948602" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Raven × MiroThinker：可引用的深度研究</div>
+  <div class="section"><div class="section-label event">一句话</div><p>推文展示 Raven 已能启用 deep_research，把复杂开放问题交给 MiroThinker 做更广泛搜索、多来源交叉验证，并返回带引用的研究报告；MiroThinker 官方仓库同时提供开源代码和在线入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MiroMindAI/MiroThinker" target="_blank">https://github.com/MiroMindAI/MiroThinker ↗</a></p>
+    <p><a href="https://dr.miromind.ai" target="_blank">https://dr.miromind.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 MiroThinker 在线入口，选择一个需要比较多个来源的问题，不要只问“总结某主题”，而是明确时间范围、候选对象、必须核验的指标和输出格式；让它先给出检索计划，再检查每条结论后面的来源。若你已经在 Raven 中使用 Agent，按推文所示启用 deep_research，把同一个问题跑一遍并对照引用质量。需要自托管或二次开发时，克隆官方仓库，按 Quick Start 准备环境和模型/API 配置，先用一个小型事实核查任务验证工具调用、引用和失败重试，再扩大到长报告。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不在“把搜索结果拼成摘要”，而在把搜索、证据交叉验证和报告生成组织成可追踪的研究流程。官方仓库明确将 MiroThinker 定位为面向复杂研究与预测的 deep research agent，并提供模型、评测、在线试用和开源实现，适合拿来测试开放模型在长链路研究中的可靠性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做竞品、行业政策或技术路线对比，要求每个关键判断都有可回溯来源。</li>
+    <li>把多篇论文、网页和上传文件合并成带引用的中文研究底稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2078263448975372361" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNdyqxdaIAADOMk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNdyqxdaIAADOMk?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LiveKit Inference + Gemma 4 31B：低延迟语音 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LiveKit Inference 将 Gemma 4 31B 作为面向实时语音 Agent 的推荐模型，通过统一接口接入 STT、LLM、TTS，官方文档给出了 Python 和 JavaScript 的会话配置方式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://livekit.com/products/inference/gemma-4" target="_blank">https://livekit.com/products/inference/gemma-4 ↗</a></p>
+    <p><a href="https://docs.livekit.io/agents/models/inference" target="_blank">https://docs.livekit.io/agents/models/inference ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先注册 LiveKit Cloud 并按文档创建项目，再用 Python 或 Node.js 安装 LiveKit Agents SDK；在 AgentSession 中把 LLM 模型设为 google/gemma-4-31b-it，同时配置一个可用的 STT 和 TTS，先运行官方 hotel receptionist 示例。接着只改一个变量，比较 Gemma 4 与你原来的模型在首字延迟、打断恢复、工具调用和完整通话时长上的差异；确认链路稳定后，再把业务函数作为工具接入。不要只看离线文本评测，必须在真实语音轮次中记录端到端延迟、失败率和每分钟成本，并检查是否需要开启额外的观测数据留存。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方把它定位为由 LiveKit 基础设施托管的延迟优化开放权重模型，且 LiveKit Inference 默认零数据留存，提示词、音频和输出不会被存储或用于训练。对语音 Agent 来说，模型能力只是一个维度，首字延迟、长系统提示词、工具调用和隐私边界同样决定能否上线。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>呼叫中心、酒店前台和预约助手等需要快速接话的实时语音服务。</li>
+    <li>在 LiveKit 的音视频会话中加入可调用业务 API 的多语言语音 Agent。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2078104902040178766" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ browser-harness：把浏览器 Agent 操作录成可复用视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>browser-use/browser-harness 的合并 PR 增加了基于同意的浏览器录制和视频制作流程，包含 browser-harness video init、review、export 等命令，并把录制能力并入项目本身。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/browser-use/browser-harness/pull/532" target="_blank">https://github.com/browser-use/browser-harness/pull/532 ↗</a></p>
+    <p><a href="https://github.com/browser-use/browser-harness" target="_blank">https://github.com/browser-use/browser-harness ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 和 PR 中的安全说明，在一个不含真实账号、支付信息或个人资料的测试浏览器环境里安装当前版本；按流程运行 browser-harness video init，准备一个可重复的浏览器任务，再通过 BH_RECORD=1 或项目提供的显式录制入口开始会话。完成操作后先用 browser-harness video review 检查动作、截图、光标和叙事顺序，确认没有密钥、Cookie 或敏感页面内容，再运行 video export 生成成片。录制前要明确获得同意，导出后还要检查凭据脱敏、下载行为恢复和临时标签页清理是否成功。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“Agent 做了什么”从日志提升为可审阅的视频证据，同时把录制、编辑、渲染和导出收进浏览器工具链。PR 特别强调 consent、secret redaction、真实点击与因果叙事，适合做产品演示、回归复盘和人机协作审计，但不能把录屏当成默认无风险行为。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>生成浏览器自动化任务的教学视频和客户演示。</li>
+    <li>复盘 Agent 的点击路径、失败步骤和最终结果，辅助 QA 与安全审计。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2078075009109836277" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2078074839487889409/img/vXjiOGMWj7ya5TbJ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2078074839487889409/img/vXjiOGMWj7ya5TbJ.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ infocard-skills：让 Agent 生成杂志式信息卡</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个可安装的开源 Agent Skill 包，把自然语言材料整理成适合截图的编辑风格 HTML 信息卡，并可选输出 PNG。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/shaom/infocard-skills" target="_blank">https://github.com/shaom/infocard-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库或把 skills/editorial-card-screenshot 整个目录复制到你的 Agent skills 目录，不要只拷贝单个 SKILL.md；保留 assets、references、scripts 等配套文件。安装后给 Agent 一段会议纪要、产品介绍或文章，直接提出“使用 $editorial-card-screenshot 制作一张 3:4 信息卡”，并明确受众、标题层级、必须保留的数据和画布比例。先要求输出 HTML 检查内容是否溢出，再要求生成 PNG；如果版面拥挤，减少原文、改成 4:3 或 16:9，而不是让模型机械缩小全部文字。仓库也提供示例和内容适配文档，适合从模板开始迭代。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是普通的 Markdown 转图片，而是把内容密度、版式骨架和截图交付封装成可复用技能。仓库目前聚焦 editorial-card-screenshot，支持多种画布比例，并要求安装完整技能包，说明 Agent 的视觉产出正在从一次性提示词走向可版本化、可复用的设计资产。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将日报、课程笔记和研究摘要快速变成适合社交媒体发布的信息卡。</li>
+    <li>为产品发布、数据复盘或内部培训制作统一风格的 HTML/PNG 素材。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2078058861932507150" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNa_U8vaYAADkEA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNa_U8vaYAADkEA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ emilkowalski/skills：给前端 Agent 补上设计判断</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向设计工程师的开源技能集合，把动画和界面设计中的经验规则写成 Agent 可执行的审查与改进流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/emilkowalski/skills" target="_blank">https://github.com/emilkowalski/skills ↗</a></p>
+    <p><a href="https://skills.sh/emilkowalski/skills" target="_blank">https://skills.sh/emilkowalski/skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在前端项目根目录先运行 npx skills@latest add emilkowalski/skills，安装后重新打开你的编码 Agent；先用 improve-animations 让它扫描整个代码库，不要只贴一段 CSS。让 Agent 按目的与频率、缓动与时长、物理感、可打断性、性能、无障碍和一致性列出问题，再挑一项生成可执行计划。确认计划中的文件、曲线、时长和验收方式后，再让 Agent 实施，最后用真实交互逐个检查进入、退出、悬停和键盘操作。这样可以把“看起来不对”变成可讨论的设计决策，而不是盲目增加动效。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它承认通用编码 Agent 往往缺少品味和领域经验，重点不是替人设计，而是把细微但高频的错误变成结构化审查。官方 README 说明 improve-animations 会先调查整个代码库、输出优先级计划且不直接修改源代码，这种“先诊断、后执行”的边界更适合团队协作和代码评审。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在已有 Web 产品中系统检查动画性能、无障碍和交互一致性。</li>
+    <li>给低成本编码 Agent 提供带明确验收标准的 UI 优化计划。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2077955236048879724" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNZguaKa8AAFeuF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNZguaKa8AAFeuF?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Gemini API Managed Agents：免费层、预算护栏与定时触发</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 为 Gemini API Managed Agents 增加免费层、max_total_tokens 预算护栏和内置 cron 定时执行，降低了构建可自动运行 Agent 的试用门槛。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://ai.google.dev/gemini-api/docs/agents" target="_blank">https://ai.google.dev/gemini-api/docs/agents ↗</a></p>
+    <p><a href="https://ai.google.dev/gemini-api/docs/managed-agents-quickstart" target="_blank">https://ai.google.dev/gemini-api/docs/managed-agents-quickstart ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先按 Google AI Developers 的 Managed Agents Quickstart 创建 API 项目和密钥，在最小任务上跑通一个只读 Agent；然后在 agent_config 中显式设置 max_total_tokens，先用较低上限观察任务是否会在合理位置停止，再逐步增加。把搜索、文件读取或业务函数作为单独工具接入，每次只开放完成任务所需的权限。最后再配置内置 cron，让它每天执行一次固定任务，并为失败、超预算和重复执行保留日志。免费层适合原型验证，但仍要监控配额、并发和外部 API 成本，不能因为“免费”就放任 Agent 无限循环。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>过去很多 Agent 原型卡在三个问题上：没有低成本试用入口、任务失控会烧钱、周期性执行还要自己拼调度器。Managed Agents 把这三项放在同一套能力里，尤其是 token 上限和 cron 让“可运行”更接近“可运营”；但权限隔离、幂等和失败恢复仍然需要开发者自己设计。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>每日定时抓取资料、生成摘要并写入团队知识库。</li>
+    <li>在免费额度内验证带工具调用的客服、数据巡检和内部自动化原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2077947615682101579" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNZaVrvbwAACsIv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNZaVrvbwAACsIv?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kimi K3 API：面向长任务的多模态模型入口</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Kimi API 文档显示 Kimi K3 已可通过 OpenAI 兼容接口调用，支持 1M-token 上下文、原生视觉理解、工具调用和面向长周期编程/知识工作的 Agent 场景。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://platform.kimi.ai/docs/overview" target="_blank">https://platform.kimi.ai/docs/overview ↗</a></p>
+    <p><a href="https://platform.kimi.ai/docs/guide/kimi-k3-quickstart" target="_blank">https://platform.kimi.ai/docs/guide/kimi-k3-quickstart ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 Kimi API Platform 创建 API Key，并把它放进环境变量 MOONSHOT_API_KEY；使用 OpenAI Python 或 Node.js SDK 时把 base_url 指向 https://api.moonshot.ai/v1，模型名填 kimi-k3。先在 Playground 用同一组长文档测试上下文保持、图片理解和多轮追问，再在脚本中加入工具调用；需要更强推理时按文档尝试 reasoning_effort=max，并给任务加明确的停止条件。做代码 Agent 时先让它只读分析仓库和测试失败日志，确认输出稳定后再开放编辑、执行和部署权限，同时记录输入缓存、输出长度、失败重试和 API 成本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方把 K3 直接放在长周期编程、知识工作和深度推理入口，而不是只做聊天展示；OpenAI 兼容格式降低了迁移已有 SDK 的成本，1M 上下文和图像/视频输入则适合把长文档、代码库和视觉反馈放进同一任务。真正的差异仍要用自己的数据集验证，不应只根据社区排行榜下结论。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对大型代码仓库、长篇规范和多轮任务进行持续分析与修改。</li>
+    <li>结合图片、日志和工具调用完成产品研究、数据抽取和知识工作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2077942300517507431" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 NotebookLM 更名为 Gemini Notebook</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 宣布 NotebookLM 更名为 Gemini Notebook，产品仍保持独立研究工具定位，同时增加安全云端计算机、代码执行和跨 Gemini/Search 的同步方向。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是简单换 Logo：Google 官方说明原有 NotebookLM 仍是独立产品，但每个 notebook 将获得安全云端计算环境，可直接写代码并执行数据分析；笔记也会逐步进入 Gemini 应用和 Google Search。产品边界从“基于资料问答”向“带计算能力的研究工作区”移动，名称并入 Gemini 则是在统一入口、账号体系和生态分发。对用户来说，最值得观察的不是品牌是否更顺口，而是代码执行结果能否被来源约束、权限是否隔离，以及跨产品同步后资料边界是否仍然清楚。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>研究型 AI 的竞争将从回答质量延伸到资料容器、代码运行、结果复现和生态入口。教育、咨询和分析团队可能减少在笔记、搜索、脚本之间来回搬运的成本，但组织也必须重新审查数据权限、云端执行和 Workspace 合规策略；如果品牌层级继续快速合并，用户教育和产品定位反而可能变得更复杂。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2078006468574634224" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNaPSbxbsAANzvp?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNaPSbxbsAANzvp?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2077803235314896896/img/p59_jo3Rjk99bb7_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2077803235314896896/img/p59_jo3Rjk99bb7_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 RoboTTT：机器人把上下文扩到 8K 时间步</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA、斯坦福和 UT Austin 发布 RoboTTT，将测试时训练引入机器人策略，把视觉运动上下文扩展到 8K timesteps，并用于长时程装配任务。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>RoboTTT 的关键不是简单把更多帧塞进 Transformer，而是让 fast weights 在训练和推理时持续更新，把历史压缩到权重状态中；官方页面称其上下文规模达到现有策略的三个数量级，同时不增加推理延迟。在真实机器人任务上，8K 上下文相对单步基线整体性能提升 87%，并完成了五分钟、十阶段的装配；与 1K 预训练上下文相比，性能提升 62%。这把“上下文长度”从语言模型常见指标变成机器人闭环控制的新缩放轴。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这条路线能在更多硬件和任务上复现，机器人训练将更重视长轨迹、在线适应和失败后的自我修正，而不只是单步动作准确率。它也会提高数据采集、仿真、记忆状态和安全评测的要求：系统必须证明自己能利用历史改善行为，同时在干扰、分布外物体和错误累积时保持可控，不能只展示一段成功视频。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2078079964273115280" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2078079612719108096/img/ESgAMKUs-Uq-JBIL.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2078079612719108096/img/ESgAMKUs-Uq-JBIL.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 实验室的数据训练政策透明度</div>
+  <div class="section"><div class="section-label event">事件</div><p>Simon Willison 连续讨论领先 AI 实验室是否、以及如何使用用户数据训练模型，并转述了 Google 内部员工对专有代码进入训练数据的担忧。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这组讨论的价值在于把“隐私政策”从营销页上的一句不训练承诺，拉回到开发者真正关心的边界：API 请求、聊天记录、代码、调试日志和企业工作区是否分别处理，默认保留多久，哪些产品线规则不同，以及用户能否得到可验证的选择。当前 X List 中主要是讨论与转述，本日报没有把它当成某家公司已被证实的违规事件；更可靠的做法是逐条阅读服务条款、企业合同和控制台设置，再用不敏感样本验证实际行为。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>当模型能力越来越接近生产代码和企业知识库时，数据训练政策会直接影响采购、迁移和架构选型。透明度高的供应商更容易获得高价值工作负载，透明度不足则会推动企业自建网关、脱敏、零保留代理和本地模型；对创业公司而言，清楚记录数据流向本身也会成为销售、合规和事故响应能力的一部分。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2078131930013515836" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2077971008443609251" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2078183471831277778" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yan5xu/status/2077949570248835525" target="_blank"><span class="handle">@yan5xu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/ruanyf/status/2077975724502421557" target="_blank"><span class="handle">@ruanyf</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2078084666666709359" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/uge198568/status/2077983272764858523" target="_blank"><span class="handle">@uge198568</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2077970662191169536/img/1RvUNtNTlW1xM89J.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2077970662191169536/img/1RvUNtNTlW1xM89J.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNcwcfaW0AAtHup?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNcwcfaW0AAtHup?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNZz3d8a0AAg9kP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNZz3d8a0AAg9kP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNZz48rawAAf2cm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNZz48rawAAf2cm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNbW-avaoAA9IYr?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNbW-avaoAA9IYr?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2077946804700848128/img/EeINS8D2lX2I6ytL.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2077946804700848128/img/EeINS8D2lX2I6ytL.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>本地 AI 硬件路线：RTX 5090 独显与 Strix Halo 一体化内存平台的取舍，决定个人运行大模型时是优先显存、带宽还是整机能耗 <a href="https://x.com/ruanyf/status/2077975724502421557" target="_blank">→</a></li>
+    <li>世界模型：定义与路线图：上海人工智能实验室尝试厘清世界模型、空间智能、具身智能与视频生成之间的关系，可作为后续读论文和评估产品的索引 <a href="https://x.com/MinLiBuilds/status/2078084666666709359" target="_blank">→</a></li>
+    <li>AI 生成视频的“人工工作量”边界：社区提醒多模型串联并不等于一键完成，脚本、镜头、素材、剪辑和事实校对仍是实际成本，适合在采购工具前做小样本核算 <a href="https://x.com/uge198568/status/2077983272764858523" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

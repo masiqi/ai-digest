@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 17 Jul 2026 00:46:41 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 00:44:01 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/18 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-18.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-18.html</guid>
+      <description>今天的主线不是又一个聊天模型，而是 Agent 正向“可控执行”下沉：Bionic、Managed Agents、LiveKit/Gemma 等把代码、文档、语音和定时任务变成可直接试用的工作流；Kimi K3 与 RoboTTT 则把上下文规模推向模型和机器人。Agent Reach 多源证据补充在本次运行中超时，工具条目均改用推文 + 官方网站/GitHub/文档人工核验，未核实但有新意的线索明确放入🌱，不把猜测写成结论。</description>
+      <pubDate>2026-07-18T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/17 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-17.html</link>
