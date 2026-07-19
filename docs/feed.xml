@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 18 Jul 2026 00:44:01 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 00:50:44 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/19 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-19.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-19.html</guid>
+      <description>今天的信号很集中：一边是 Kimi K3、Claude Fable 5 带来的前沿模型与订阅权益竞争，另一边是开发者把 AI 编程从“生成代码”推进到可验证、可审计、可持续积累上下文的工程化阶段。本次 X List 抓到 126 条候选，并用 30 条 Hacker News 早期信号补足了值得亲手试的新项目。</description>
+      <pubDate>2026-07-19T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/18 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-18.html</link>

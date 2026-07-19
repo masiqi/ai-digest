@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-19</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-19</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号很集中：一边是 Kimi K3、Claude Fable 5 带来的前沿模型与订阅权益竞争，另一边是开发者把 AI 编程从“生成代码”推进到可验证、可审计、可持续积累上下文的工程化阶段。本次 X List 抓到 126 条候选，并用 30 条 Hacker News 早期信号补足了值得亲手试的新项目。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ 乔木 Goal + AI PRD Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一组面向 Codex/AI 编程助手的工作流 Skill：Goal 把模糊任务整理成带结果、验证、约束、边界和暂停条件的可执行目标，AI PRD 则把一句产品想法展开成 AI 可以落地的产品需求文档。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-goal-meta-skill" target="_blank">https://github.com/joeseesun/qiaomu-goal-meta-skill ↗</a></p>
+    <p><a href="https://github.com/joeseesun/qiaomu-ai-prd" target="_blank">https://github.com/joeseesun/qiaomu-ai-prd ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在支持 Agent Skills 的 Codex、Claude Code 或兼容环境里打开两个仓库的 README，按说明安装；Goal 仓库明确提供 npx skills add joeseesun/qiaomu-goal-meta-skill。安装后先拿一个你平时会直接丢给 AI 的模糊需求，例如“做一个有导入、复习和统计的单词网站”，先让 Goal 生成带验证条件的 /goal，再把同一需求交给 AI PRD 生成速读卡、模块、数据模型、优先级和验收脚本，最后让编程助手按验收脚本实现，而不是直接凭感觉开写。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“提示词写得好不好”转成了更容易检查的任务合同，尤其强调验证证据、写入边界、迭代次数和暂停条件。对于 Vibe Coding 来说，这比再换一个模型更直接地减少跑偏、无限改稿和交付标准不清的问题，也便于把一次性经验沉淀成团队可复用的开发入口。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把一句产品想法快速变成可交给 AI 执行的 MVP 任务书。</li>
+    <li>在修 bug、做重构或发布前，为 AI 补齐验证、边界和停止条件。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2078306596040622424" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenCut Classic：当前可用的开源剪辑线</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenCut 是面向网页、桌面和移动端的开源视频编辑器；当前主仓库正在从头重写，官方 README 明确建议今天要试用时先用 classic 版本，官网仍运行旧版。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://opencut.app/" target="_blank">https://opencut.app/ ↗</a></p>
+    <p><a href="https://github.com/OpenCut-app/OpenCut" target="_blank">https://github.com/OpenCut-app/OpenCut ↗</a></p>
+    <p><a href="https://github.com/opencut-app/opencut-classic" target="_blank">https://github.com/opencut-app/opencut-classic ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官网，用一段不含敏感素材的短视频做小规模试用，重点观察导入、时间线编辑和导出是否满足你的最低需求；不要把主仓库的重写状态误当成已经完成的桌面产品。若想研究它的后续路线，再进入 OpenCut-app/OpenCut 阅读 README，关注 Editor API、插件架构、跨端 Rust 核心、MCP、无头模式和脚本标签等规划；如果要参与开发，按仓库当前的 proto 与本地开发说明启动，而不是直接照旧版教程判断新架构。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个项目的关键价值不是“又一个 CapCut 平替”口号，而是把视频编辑器拆成编辑 API、插件、跨端核心、MCP 和批处理自动化等可组合层。更重要的是，官方主动标明重写仓库与今天可用的 classic 版本边界，降低了用户把路线图当现成功能的风险。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>先用 classic 版本验证个人短视频的基础剪辑需求。</li>
+    <li>研究 AI agent 如何通过 MCP、脚本和无头渲染进入视频编辑流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2078350528099107292" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CodexThemes</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个为 Codex 桌面应用收集、预览、分享和提交自定义主题的主题站，提供按颜色、氛围和风格浏览的可视化入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://codexthemes.ai/" target="_blank">https://codexthemes.ai/ ↗</a></p>
+    <p><a href="https://github.com/mcpso/awesome-codex-themes" target="_blank">https://github.com/mcpso/awesome-codex-themes ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 CodexThemes，从首页的主题集合里按视觉风格挑一个，进入详情页查看完整工作区预览；如果你已经在使用 Codex，再按页面或原推作者给出的 Agent-Native 流程，把主题管理提示词交给 Codex，让它协助创建、查找、安装或启用主题。想自己做主题时，先从站内的“创建主题”入口或 awesome-codex-themes 参考开始，准备主题配置和截图，确认桌面版 Codex 的主题格式后再提交，先在自己的工作区验证配色、可读性和代码高亮。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“给 AI 编程工具换皮肤”做成了可发现、可预览、可分享的目录，而不是散落在社交平台里的截图。对长时间使用 Codex 的人，主题不仅是装饰，也能成为个人工作区识别、团队风格和 Agent 生成主题工作流的低成本实验场；不过主题兼容性仍应以实际桌面版本为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为不同项目或不同工作模式准备独立的 Codex 工作区视觉主题。</li>
+    <li>用主题配置测试 Agent 是否能完成从生成到启用的闭环操作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2078369755678093639" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNfZFtCboAAGfNV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNfZFtCboAAGfNV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ gemma-trainer</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 生态中用于引导本地 Gemma 微调的 Agent Skill/教程路线，目标是让开发者用自己的数据把开放权重 Gemma 调整到特定任务或领域。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://dev.to/googleai/master-local-fine-tuning-with-gemma-trainer-3ipp" target="_blank">https://dev.to/googleai/master-local-fine-tuning-with-gemma-trainer-3ipp ↗</a></p>
+    <p><a href="https://ai.google.dev/gemma/docs/tune" target="_blank">https://ai.google.dev/gemma/docs/tune ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读 gemma-trainer 的教程，确认本机显存、Python/训练框架和目标 Gemma 版本，再准备一小份脱敏、格式一致的任务数据；不要一开始就拿全部业务数据跑。按照 Google Gemma 微调文档选择训练方式与评估集，让 Agent 帮你检查模型类型、数据字段、训练参数和输出目录，完成一次小规模试跑后，用训练前后的固定测试集比较任务准确率、格式遵循和泛化情况。若本地资源不足，先把流程验证清楚，再考虑量化或云 GPU，而不是把“能启动训练”当成效果达标。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把微调从一堆零散命令变成了更适合 Agent 协作的任务流程：模型选择、数据准备、硬件约束和结果检查都被放进同一条路径。Gemma 的官方文档也明确支持针对任务或领域调整模型，因此它的价值在于降低第一次本地适配的门槛；真正效果仍取决于数据质量、评估设计和硬件，不能只看训练成功。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给客服分类、格式化抽取或内部术语任务做小规模领域适配。</li>
+    <li>在本地实验不同数据配方，再决定是否把模型推到更大规模服务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2078330212807569711" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ TrAIcer</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开发者自托管的 AI 编程调用捕获工具：只记录主动经过它路由的支持提供商请求，做脱密、加密并把加密 trace 放到开发者自己控制的 S3 兼容存储，未来可用于受控的 trace 市场交付。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/smashah/traicer" target="_blank">https://github.com/smashah/traicer ↗</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=48957581" target="_blank">https://news.ycombinator.com/item?id=48957581 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库的 Getting Started、Threat Model 和 preview limits，只用非敏感项目做试验；按 CLI 文档启动本地 capture 服务，把一个明确支持的 Anthropic 或 OpenAI 客户端通过 Traicer 网关路由，运行 traicer status 与 traicer traces list 确认服务、存储和待处理清单，再用 traicer explore 主动检查单条加密 trace。重点审阅脱密报告、存储权限、密钥管理和删除流程；不要把它当成覆盖所有流量的 DLP，也不要把生产仓库、真实客户提示词或长期凭证直接接入预览版。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 AI 编程过程的“可复盘数据”与“原始内容留在自己手里”放在同一设计里，强调本地脱密、开发者控制的存储和可追溯清单，而不是把完整会话直接上传平台。与此同时，README 明确提醒它仍是 operator preview、市场账户也未普遍开放，这种安全边界说明本身就是采用前必须看的工程证据。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在脱敏环境中建立 AI 编程调用的本地审计与回放样本。</li>
+    <li>研究如何在不交出工作历史的前提下共享经过筛选的工程 trace。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Scribe</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个单二进制、可自托管的 CLI，读取 Git 历史、Claude Code/Codex 会话和主动提交的 URL，经过 BM25 筛选与两阶段吸收后，把知识写成 Git 中的 Markdown wiki，供下一次 Agent 会话读取。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://getscribe.dev/" target="_blank">https://getscribe.dev/ ↗</a></p>
+    <p><a href="https://github.com/oliver-kriska/scribe" target="_blank">https://github.com/oliver-kriska/scribe ↗</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=48943417" target="_blank">https://news.ycombinator.com/item?id=48943417 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS 上先执行 brew install oliver-kriska/scribe/scribe，再运行 scribe init，让它建立知识库和 Agent handshake；确认生成的配置只指向你愿意处理的项目后，按站点说明安装 cron，让 Git、Claude Code、Codex 会话与自发 URL 进入采集。先用 scribe 的查看、搜索和项目范围命令检查输出，再决定是否开启周期任务；如果希望完全本地运行，按文档把 LLM 操作切换到 Ollama，观察 Markdown、反向链接和 Agent 读取结果是否真的比手写笔记更有用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有把“记忆”包装成必须在线运行的复杂向量服务，而是先用密度过滤、实体化 Markdown、Git 版本和 BM25 检索解决开发者最常见的上下文断裂。跨项目、可审阅、可回滚和支持 Ollama 的设计，特别适合想让 Agent 记住决策原因、又不愿把知识锁进某个 SaaS 的个人开发者。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把多个项目的编码决策、故障修复和链接自动沉淀为可检索知识库。</li>
+    <li>让新的 Claude Code 或 Codex 会话在动手前先读取历史约束与已验证方案。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Forall</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源 AI coding agent，把规格驱动的代码生成与机器可检查证明放在同一工作流中，目前支持 TypeScript、Java 和 Rust，并可通过 MCP 只接入验证能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/astrio-labs/forall" target="_blank">https://github.com/astrio-labs/forall ↗</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=48929654" target="_blank">https://news.ycombinator.com/item?id=48929654 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 GitHub Releases 查看可用版本，阅读 README 后运行仓库提供的安装脚本；安装完成用 forall --version 确认 CLI，再进入一个可回滚的测试 Git 仓库执行 forall init。先从小函数或明确规格开始，观察 Agent 生成的代码与证明报告，再逐步扩大范围。若不想安装完整 CLI，可按文档创建 Forall API key，把 @astrio/forall-mcp 接到 Cursor、Claude Code 或 Codex，先使用 verify-only 路径检查现有改动；务必把账号、模型 API、支持语言和证明失败的处理方式纳入评估。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多数 AI 编程工具把测试、审查和正确性留在生成之后，Forall 把规格与机器可检查证明前置到编码循环里，切中了“看起来能跑”与“可证明满足约束”的差距。它还提供 CLI 与 MCP 两种接入方式，既能完整替换工作流，也能作为现有 Agent 的验证层；但当前支持语言有限，适合从可形式化的小问题开始。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为对边界条件敏感的 TypeScript、Java 或 Rust 代码生成验证证据。</li>
+    <li>在保留现有 Cursor、Claude Code 或 Codex 的情况下增加 MCP 验证环节。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PixelUp</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 Windows 的本地离线 AI 视频放大器，使用 FSRCNN 与 ESPCN 等轻量模型，把低分辨率视频放大到更高分辨率，并支持硬件加速、批处理和音频同步。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://steelsoft.site/software/PixelUp_home.html" target="_blank">https://steelsoft.site/software/PixelUp_home.html ↗</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=48957476" target="_blank">https://news.ycombinator.com/item?id=48957476 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在官方页面先下载免费试用包，解压后在 Windows 机器上用一段可公开的短视频测试；把文件拖入队列，选择目标放大分辨率，观察 CUDA、Vulkan 或 CPU 回退是否正常，再比较处理速度、纹理细节和输出文件的音画同步。确认单个文件效果后再加入多个任务测试批处理。官方页面称它完全离线、无需账号，并提供一次性授权方案；因此适合先做本地画质和成本对比，不要把宣传页的“专业效果”直接等同于你的素材一定会提升。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的卖点是把视频增强放在本地完成，而不是把素材上传云端；同时提供 CUDA、Vulkan、CPU 的回退链和 FFmpeg 音频处理，解决了“能放大但音画不同步”这类实际问题。对有隐私要求、又只需要偶尔处理素材的人，离线试用和一次性授权比订阅型云服务更值得比较。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对家庭视频、课程录屏或旧素材做离线清晰度对比。</li>
+    <li>在不上传原片的前提下批量尝试不同放大目标和硬件路径。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Kimi K3 把开放权重推进到前沿编程竞争区</div>
+  <div class="section"><div class="section-label event">事件</div><p>Moonshot AI 发布 Kimi K3，公开讨论集中在约 2.8T 总参数、百万级上下文、编程/Agent 任务表现与后续开放权重计划。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条信号值得看，但不能把单条 X 推文里的“击败某模型”当成独立评测结论。补充资料显示，K3 已通过 Kimi、Kimi Code 和 API 等入口提供服务，公开分析把它放在前沿模型竞争中，同时也指出它整体排名并非所有维度第一。真正的变化是开放权重模型开始同时争夺长上下文、多模态、长程编码和 Agent 交付体验，开发者可以把价格、可部署性和模型控制权一起纳入选型，而不只比较聊天榜单。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>闭源模型的高价与配额优势会受到更直接的压力，模型供应商可能进一步用订阅层级、API 价格和开放权重节奏争夺开发者。对应用团队而言，应把同一套真实仓库任务、token 消耗、工具调用稳定性和部署成本做成回归集；对个人开发者而言，先体验在线入口，再等权重与推理生态落地，比仅凭宣传参数迁移生产系统更稳妥。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/BrianRoemmele/status/2078115704184926554" target="_blank"><span class="handle">@BrianRoemmele</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNbzNWDaoAAVRrC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNbzNWDaoAAVRrC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Fable 5 的订阅权益从临时加量转成长期分层</div>
+  <div class="section"><div class="section-label event">事件</div><p>公开转述显示，自 7 月 20 日起 Fable 5 将纳入 Max 与 Team Premium，按 50% 限额提供；Pro 与 Team Standard 主要通过额度/积分访问，并获得一次性额度。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是单纯的模型发布消息，而是高算力模型如何被产品化的定价实验。此前的临时延长和周限额加成让用户形成了持续使用预期，新的方案则把“模型可用性”拆成订阅档位、周限额和额外积分三层。它一方面给 Anthropic 更稳定的容量控制，另一方面也会让重度编程用户重新计算每周可完成的任务量、重试成本和切换模型的摩擦，尤其要区分网页聊天、Claude Code 与其他产品入口的真实额度。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 编程订阅正在从“买一个套餐即可无限试”转向按模型能力和算力稀缺程度分层，用户的迁移成本会更多体现在上下文、工作流和额度管理上。团队采购时不应只看月费，而要记录一次完整任务的 token、重试、等待和人工验收成本；个人用户则应准备至少一个可替代模型或本地路径，避免某次权益调整直接打断交付。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2078311802933285059" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GUI 测试正从确定性 E2E 向 Computer Use 补位</div>
+  <div class="section"><div class="section-label event">事件</div><p>开发者讨论指出，Web GUI 测试仍应以 Playwright 等传统 E2E 为主，Computer Use 可覆盖传统脚本难以处理的视觉与真实交互流程，但成本更高、稳定性更差。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这代表 Agent 在软件交付中的位置正在从“写代码”扩展到“像用户一样验收”，但并不意味着用视觉 Agent 替代全部自动化测试。确定性的 DOM、API 和回归测试适合做快速门禁，Computer Use 更适合补充跨应用、复杂状态、视觉布局和真实浏览器流程。工程上应先把可重复的断言留给 Playwright，再把少量高价值、传统脚本难覆盖的流程交给 Agent，并保存截图、日志和重放结果。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>测试团队的瓶颈可能从“有没有测试”转为“如何组合不同可靠性和成本的测试层”。如果把 Computer Use 直接放进每次提交门禁，延迟、模型波动和误报会迅速抬高维护成本；如果完全不用，又会错过跨界面验收的覆盖率。更现实的路线是分层：快速确定性回归、夜间 Agent 探索、人工复核高风险路径。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2078492444270661802" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2078460646245425273" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/ewind_dev/status/2078425328280842590" target="_blank"><span class="handle">@ewind_dev</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2078497295755354359" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/HiTw93/status/2078483084979413436" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNgM0UsbkAAuVk7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNgM0UsbkAAuVk7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNgLXHubsAAtyAD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNgLXHubsAAtyAD?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNhOQ3haUAAa48u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNhOQ3haUAAa48u?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNhAGPxbkAAkk3l?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNhAGPxbkAAkk3l?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNhBNdoboAAR2BV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNhBNdoboAAR2BV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNhBPuMaMAEkx9p?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNhBPuMaMAEkx9p?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNhBWFmbwAAG5S8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNhBWFmbwAAG5S8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>SenseNova U1 Pro：商汤发布的 8K、强调中文文字生成的图像模型，原推称目前缺少实际试用入口，先跟踪开放时间与真实字形稳定性。 <a href="https://sensenova.cn/u1-pro" target="_blank">→</a></li>
+    <li>vlaina：Catime 作者的新作笔记软件，X List 只确认了项目名称和“开源自荐”，功能、平台与安装方式证据待补。 <a href="https://x.com/appinn/status/2078460646245425273" target="_blank">→</a></li>
+    <li>PocketJS：VueConf 现场披露将开源“从零到一创作 Pocket 的 AI coding session”，目前原推未给出公开仓库，等待后续发布。 <a href="https://x.com/ewind_dev/status/2078425328280842590" target="_blank">→</a></li>
+    <li>Openship：被描述为把部署控制台从服务器搬走的开源自部署平台，当前抓到的推文内容不完整，先观察仓库和实际架构。 <a href="https://x.com/Gorden_Sun/status/2078497295755354359" target="_blank">→</a></li>
+    <li>Mole：Mac 工具作者分享了 AI 主动加入设备/电池健康提醒后的使用体验，但本次证据包没有拿到完整产品页，暂不扩展功能描述。 <a href="https://x.com/HiTw93/status/2078483084979413436" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
