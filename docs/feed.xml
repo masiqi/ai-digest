@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 19 Jul 2026 00:50:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 00:46:50 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/20 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-20.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-20.html</guid>
+      <description>今天最值得跟踪的主线，是“可交付的 Agent 工作流”正在替代单点模型炫技：视频剪辑、私人播客、长音频转写、Markdown 协作和长程编码，都开始变成可以直接安装、运行、复现的工具。证据包已完成，但 HNRSS 定向检索有多路 502，早期社区线索因此统一标注“证据待补”，不把传闻当结论。</description>
+      <pubDate>2026-07-20T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/19 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-19.html</link>
