@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-21</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-21</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线是“模型不再孤立竞争，而是被塞进可切换、可审计、可本地运行的 Agent 工作流”：从 OpenCodex 的多模型路由，到长文档 OCR、设计系统、SEO 审计和深度研究，真正能马上动手的开源工具明显增多。本次 Agent Reach 证据包运行超过 600 秒仍未产出，以下🛠️条目均改用 X List 原文 + 官方 GitHub/官网/Hugging Face 页面人工交叉核验；🌱与🎯中的弱线索明确标注“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenCodex：让 Codex/Claude Code 接入任意模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本地 provider proxy，把 Codex 的 Responses API 翻译到不同模型服务，让同一套编码工作流可以切换多个模型与供应商。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/lidge-jun/opencodex" target="_blank">https://github.com/lidge-jun/opencodex ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub README，确认自己的 macOS 架构和 Node.js 环境，再执行仓库给出的 npm 全局安装命令 `npm install -g @bitkyc08/opencodex`。安装完成后运行 `ocx start`，默认本地服务地址是 `http://localhost:10100`；随后按 README 的配置方式把 Codex CLI、Codex App 或 Claude Code 的请求指向本地代理，并填入自己有权限使用的上游 API。第一次不要直接拿生产项目试验，先在一个测试仓库里让代理完成“读取 README、修改一个小函数、运行测试”的闭环，确认流式输出、工具调用、图片/推理请求和错误回退都正常，再逐步加入多账号配额管理。该项目涉及第三方模型代理，务必先核对各供应商条款，不要把账号凭证交给不可信的中转服务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“换模型”从重新适应一套产品，变成编码入口前的一层路由。官方 README 明确支持 Codex CLI、App、SDK 与 Claude Code，并提供本地代理、流式传输、工具调用和多供应商适配；这让模型能力、价格和限额可以按任务切换，但也把合规、密钥保护和供应商风控责任前置给使用者。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用不同模型分别处理前端视觉、后端实现、代码审查和长文档分析，同时保留同一个 Codex 工作流。</li>
+    <li>在本地或远程开发机上统一管理多个兼容 API，减少频繁复制上下文和切换客户端的成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2079239701391675404" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNrvna8WYAExiUS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNrvna8WYAExiUS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNrxTapWgAEPoWV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNrxTapWgAEPoWV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ wx_channels_download：微信视频号本地下载器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Go 编写、支持 macOS 和 Windows 的微信视频号下载工具，通过本地服务在播放页面提供下载入口，也支持分享链接解析。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ltaoo/wx_channels_download" target="_blank">https://github.com/ltaoo/wx_channels_download ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub Releases 下载与你的系统匹配的构建包，按 README 以管理员身份运行；首次启动会安装证书并开启本地代理服务，终端出现“代理服务启动成功”后再打开微信 PC 端。进入视频号页面，播放目标视频后暂停，观察视频下方或页面侧边是否出现下载按钮，选择默认或其他质量并保存到本地。若手头只有分享链接，可以先试项目 README 提供的在线解析入口；如果系统代理残留或微信页面异常，先用 Ctrl+C 正常退出服务，再检查证书和代理设置。使用前确认内容版权与平台规则，不要下载、传播没有授权的内容，也不要在主力系统上直接运行来源不明的二进制文件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目不是只给一个网页解析器，而是把跨平台构建包、本地代理、页面按钮注入和分享链接解析组合成完整流程；官方仓库持续有提交和 Releases，README 也把“播放—暂停—下载”的操作写清楚。对需要保存自有视频、做素材整理或研究网页视频技术的人，它比手动抓网络请求更容易复现，但证书和代理机制也意味着必须谨慎审查权限。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>保存自己发布或已获授权的视频号内容，用于离线观看、归档和后续剪辑。</li>
+    <li>将公开视频素材按质量下载到本地，配合自己的转录、字幕和内容分析流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2079120137773338833" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNp7sujW0AAwWpG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNp7sujW0AAwWpG?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design 0.15.1：把编码代理变成设计工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本地优先、BYOK 的开源设计工作空间，连接 Claude Code、Codex、Cursor、Gemini CLI、OpenCode 等代理，生成并导出网页、原型、幻灯片和其他真实文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最省事的路径是直接访问官网或 GitHub Releases 下载 macOS 版本；如果想参与开发，则克隆仓库后按 README 执行 `corepack enable &amp;&amp; pnpm install`，再启动开发环境。打开后先选择自己已有的编码代理和模型凭证，建立一个空项目，给出一个具体 brief，例如“做一个三页产品落地页，使用已有品牌色，输出可运行 HTML”。先让 Agent 生成设计系统、页面结构和素材清单，再逐个查看结果文件，不要一开始就让它覆盖正式项目。0.15.1 重点改善长会话连贯性、上下文压缩后的恢复、图像细节和并行研究；可以故意进行一次长任务或中断恢复测试，观察它能否保留设计决策，再把产物导出为 HTML、PDF 或 PPTX。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的核心差异不是又一个“聊天式出图界面”，而是把 DESIGN.md、可组合 Skills、本地文件和已有编码代理放到同一条生产链里。官方项目采用 Apache-2.0、BYOK 和 local-first 路线，0.15.1 又针对长流程恢复做了升级；设计结果因此更接近可继续维护的工程资产，而非一次性截图。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用自然语言快速搭建产品原型、营销页、Dashboard 或演示文稿，再由开发者继续维护真实文件。</li>
+    <li>把品牌规范、设计系统和编码代理结合起来，批量生成风格一致的页面和交付物。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2079190607038193854" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2079189783117471744/img/NAsqjSEeWpj3NC0k.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2079189783117471744/img/NAsqjSEeWpj3NC0k.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Unlimited-OCR：一次解析多页长文档的开源 OCR</div>
+  <div class="section"><div class="section-label event">一句话</div><p>百度开源的文档视觉语言模型，主打长文档一次性解析；官方模型卡提供单图、多图和 PDF 转图片后的多页推理路径。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/baidu/Unlimited-OCR" target="_blank">https://huggingface.co/baidu/Unlimited-OCR ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这款模型更适合有 NVIDIA GPU 的开发者。先阅读 Hugging Face 模型卡，准备 Python 3.12、CUDA 和模型所需依赖，或按官方说明选择 vLLM、SGLang、Transformers、Docker Model Runner 等部署方式。第一次实验可把一页包含表格、脚注和多栏排版的 PDF 转成图片，使用 Transformers 加载 `baidu/Unlimited-OCR`，调用单图 `infer` 输出结果；随后把相邻的多页转成图片，调用 `infer_multi` 并使用“Multi page parsing”提示词，比较逐页 OCR 与多页解析的阅读顺序、表格连续性和跨页上下文。资源有限时先使用小样本和低分辨率验证流程，不要直接下载完整权重到没有足够显存的机器；输出后还要人工抽查数字、表格和专有名词，不能把 OCR 结果直接当作财务或法律文档的最终依据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方模型卡把重点放在 one-shot long-horizon parsing，并给出多页/PDF 推理代码和 vLLM、SGLang 部署说明。相比逐页切割再拼接，它试图保留跨页结构与上下文；同时 3B 总参数、约 500M 激活的说法来自原始发布信息，具体速度和显存仍需按硬件实测，不能只看宣传数字。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将多页合同、研究报告、扫描档案和技术手册转成保留结构的可检索文本。</li>
+    <li>处理跨页表格、目录、脚注和长文档问答，减少逐页 OCR 后的人工拼接。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/VaibhavSisinty/status/2079000862962417996" target="_blank"><span class="handle">@VaibhavSisinty</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2079000840921366528/img/R5yXw8xXXRyFeTWD.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2079000840921366528/img/R5yXw8xXXRyFeTWD.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenSEO：可自托管的开源 SEO 与 Agent 工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向人和 AI Agent 的开源 SEO 平台，覆盖关键词、竞品、反向链接和站点审计，并通过 MCP 接入 Agent 工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/every-app/open-seo" target="_blank">https://github.com/every-app/open-seo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 GitHub README 里选择 hosted 版本或 self-host 方案；想快速试用可以访问项目提供的站点，想保留数据和控制部署则准备 Docker/Cloudflare 环境并配置自己的 DataForSEO API Key。建议第一次只做一个站点和少量关键词：先完成域名概览与站点审计，再查看关键词、竞品和反向链接数据，最后把 MCP 接到自己的 Agent，让它根据真实数据生成一份 SEO 计划。注意 OpenSEO 本身开源免费，但数据供应商 API 可能产生费用，README 已提供成本参考；不要让 Agent 在没有人工复核的情况下批量改标题、发布页面或购买关键词服务，先把建议输出为报告，确认数据来源和业务目标后再执行。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不只是“再做一个 Ahrefs 替代品”，而是把 SEO 数据层、MCP 和可复用 Agent Skills 放在一起。官方仓库同时提供托管与自托管路径，并明确采用按需数据成本的思路；对已经使用编程代理或内容代理的团队，关键词和站点审计可以从孤立后台进入可自动化、可复核的工作流。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给独立开发者或 SaaS 团队做站点健康检查、关键词研究和竞品差距分析。</li>
+    <li>让 AI Agent 基于真实 SEO 数据生成内容规划，而不是只凭模型记忆给出泛化建议。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2079011766907109426" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNoho-XakAAQ3ZR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNoho-XakAAQ3ZR?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNko0Q0WUAAUREN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNko0Q0WUAAUREN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ seo-audit-skill：把单页 SEO 检查变成可复用 Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个适配 Claude Code、Cursor 和其他 Agent Runtime 的 SEO 审计 Skill，采用“确定性脚本 + LLM 语义判断”两层架构生成 HTML 报告。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JeffLi1993/seo-audit-skill" target="_blank">https://github.com/JeffLi1993/seo-audit-skill ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装方式以仓库 README 为准，可以先执行 `npx skills add JeffLi1993/seo-audit-skill`，然后在支持 SKILL.md 的 Agent 中输入“audit this page: https://example.com”。第一次建议选择自己拥有的测试站，先运行 basic 审计，检查 robots.txt、sitemap、canonical、标题、描述、H1、Schema、内链和字数等结果，再按需要尝试 full 版本。打开生成的 HTML 报告，逐条区分“可直接验证的事实”和需要人工判断的语义建议；如果要修复页面，让 Agent 每次只处理一类问题并重新审计，而不是一次性重写全站。full 版本涉及 PageSpeed 和更深的检查，先阅读依赖与 API Key 要求，避免把站点数据和密钥放进不受信任的环境。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库明确把 HTTP 状态、XML、字符串匹配等确定性工作交给 Python 脚本，把搜索意图、内容质量和页面类型交给 LLM，从架构上减少“模型凭感觉打分”。报告还是独立 HTML 文件，适合提交、复核和留档；这比一段聊天式 SEO 建议更容易转成工程任务，也保留了对假设和未验证项的标注空间。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对产品官网、落地页和博客页面做上线前的结构化检查。</li>
+    <li>将 SEO 审计接入内容发布或网站迭代流程，持续追踪页面问题是否真正修复。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2079058267754647671" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Learn UI：把知名网站的设计系统喂给编码代理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个可在线浏览的设计参考库，把 74 个知名网站整理成 DESIGN.md 风格的色彩、字体、组件和布局规则，并提供中文解读。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://learnui.qiaomu.ai/sites" target="_blank">https://learnui.qiaomu.ai/sites ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开网站，先按分类或搜索找到一个与你项目气质接近的站点，阅读它的中文解读，再进入对应页面查看完整 DESIGN.md。不要机械复制某个品牌的 Logo、文案或专属素材，而是提取色板、字体层级、间距、按钮形态、内容密度和页面节奏等可迁移规则。把需要的 DESIGN.md 内容复制到自己的项目目录，或者整理成项目级设计约束，再让 Codex、Claude Code 或其他编码代理根据它生成一个小型页面。生成后分别检查移动端、可读性、交互状态和品牌差异，避免把“参考设计”变成侵权仿制；如果要长期使用，可以把提炼出的规则版本化，作为后续页面的设计基线。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是单纯的灵感瀑布流，而是把视觉风格翻译成 Agent 更容易消费的纯文本设计系统。网站说明这些 DESIGN.md 来自开源项目并附有中文解读，用户可以直接把颜色、字体、组件和布局规则放进编码任务；这降低了“审美描述无法执行”的门槛，也适合建立团队自己的设计知识库。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在开始 AI 编程前快速比较不同网站的视觉语言，缩短从灵感到页面草稿的时间。</li>
+    <li>为编码代理提供明确的设计约束，减少生成页面常见的紫色渐变和模板化审美。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2079208964248506534" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNrVFxRXYAAI-pr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNrVFxRXYAAI-pr?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MiroThinker：可研究、可部署的深度调研 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向复杂研究与预测任务的开源深度研究 Agent/模型项目，提供不同参数规模，并强调多轮搜索、工具调用和验证式研究。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MiroMindAI/MiroThinker" target="_blank">https://github.com/MiroMindAI/MiroThinker ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub README 和 Hugging Face 页面了解模型版本、权重、推理依赖与硬件要求；如果没有本地算力，优先体验项目提供的在线研究入口或 API，再决定是否部署。做第一次测试时不要只问“总结这篇文章”，而是给一个需要多来源核验的问题，要求 Agent 列出检索路径、引用来源、冲突证据和最终不确定性。部署本地模型时先用小规模版本跑一个固定问题集，记录搜索次数、工具调用、响应时间、显存和引用质量，再与普通聊天模型比较；对投资、医疗、法律等高风险结论，必须人工打开引用页面复核。项目强调长上下文和大量工具调用，但实际效果会受搜索源、提示词和运行环境影响，不要把 benchmark 直接等同于业务准确率。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把深度研究从“模型回答得像不像”推进到“是否能持续搜索、验证并综合证据”。官方仓库公开了多个规模和基准结果，项目还把 interactive scaling、长上下文与工具调用作为重要方向；这类 Agent 更接近研究助理基础设施，适合拿来做可重复评测，而不是只看一次演示。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对行业、竞品和技术路线进行多来源资料搜集，输出带证据链的研究草稿。</li>
+    <li>让研究团队用固定问题集评估不同搜索 Agent 的检索、引用和推理质量。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2079100856365207689" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNpu9SxbQAA255H?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNpu9SxbQAA255H?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Hugging Face 遭自主 AI Agent 入侵，防守方转向自托管 GLM 5.2</div>
+  <div class="section"><div class="section-label event">事件</div><p>Hugging Face 披露生产基础设施遭一套自主 AI Agent 系统端到端入侵，攻击者利用数据处理链路执行代码、窃取部分凭证并横向移动；调查阶段，团队用自有基础设施运行 GLM 5.2 分析超过 1.7 万条动作记录。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是“AI 参与钓鱼”一类概念演示，而是把数据集处理、工作节点、凭证管理和内部集群连接成了可被 Agent 连续操作的攻击面。官方披露称攻击方在短命沙盒中执行了成千上万次动作，并通过公开服务搭建可迁移的命令控制基础设施；更值得注意的是，防守方最初尝试的商业模型因真实攻击命令、利用载荷和 C2 工件触发安全护栏，无法顺利完成取证，最后改用自托管开放权重模型。这里的关键不是简单比较哪国模型更强，而是安全团队必须同时准备“能分析恶意材料”和“数据不出域”的模型与审计链路。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 平台不能只把数据集和模型当作静态内容审核问题，而要像对待软件供应链和 CI Worker 一样隔离执行环境、缩短凭证权限、记录每个 Agent 动作并准备离线取证能力。对于企业，托管模型的安全护栏与内部事件响应需求可能发生冲突，采购时应把自托管模型、日志留存、密钥轮换和故障演练列入安全预算；对于开发者，任何允许远程代码加载、模板执行或 Agent 自主调用 shell 的组件，都需要默认按高风险边界设计。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2079071371951575127" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 增加屏幕阅读器模式，AI 编程工具开始补齐无障碍入口</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Code 更新文档加入屏幕阅读器模式，可通过 `--ax-screen-reader`、环境变量或设置启用，并针对 VoiceOver、NVDA 等工具调整输出标记和交互提示。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>终端 Agent 的可用性不只由模型能力决定，还取决于屏幕阅读器能否稳定区分用户输入、模型回复、工具动作、错误、权限请求和费用信息。官方文档把这些状态显式标记为 `you:`、`claude:`、`tool:`、`tool error:`、`Permission Required:` 和 `Cost:`，说明 CLI Agent 正在从“能输出文本”走向“能被不同用户可靠操作”。这类更新也提醒开发者，流式输出、动态菜单和权限确认如果没有无障碍语义，视觉上看似正常的产品仍可能让用户无法完成一次完整编程任务。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>无障碍模式会成为开发者工具竞争的新基础设施，而不是边缘功能。企业采购编码 Agent 时，应把 VoiceOver/NVDA 操作、键盘导航、权限提示和错误恢复纳入验收；开源项目则可以借鉴结构化标签、减少动态刷新和提供纯文本回退。更广泛地看，终端 Agent 若能把状态、动作和成本暴露得更清楚，也会同时提升自动化测试、日志解析和团队协作的可观察性。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2079317901085941976" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Kimi K3 登上前端 Web 应用竞技场榜首，模型竞争转向真实交付结果</div>
+  <div class="section"><div class="section-label event">事件</div><p>DesignArena 推文称 Kimi K3 以 1326 Elo 登顶前端 Web 应用竞技场，超过其列出的多款闭源与开源模型；该排名仍应视为社区榜单信号，不能替代独立复测。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果榜单的测试流程和样本能够稳定复现，意义不在于又多了一个“跑分第一”，而在于模型评价开始更接近最终交付：能否理解页面需求、组织组件、处理交互、保持视觉一致，并在多轮修改后留下可运行结果。前端任务也会放大模型在审美、长程规划、浏览器验证和错误修复上的差异，因此比单轮代码题更能反映 Agent 工作流的综合质量。但目前 X List 只提供了榜单宣称，本文不把 Elo、开源权重规模或“领先多少”当作已独立确认的事实，后续应关注测试集、评审规则、代码仓库和复现实验。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型厂商和应用平台会越来越重视面向真实任务的竞技场、可复现评测和用户可见的交付质量；开发团队选型时也应从“哪个模型排行榜高”转为建立自己的任务集，记录首轮成功率、返工轮数、视觉验收和 token 成本。对开源模型来说，前端场景若能稳定胜出，可能直接带动其进入 Codex、设计代理和低代码平台；对用户来说，最稳妥的做法是把榜单当作候选发现器，再用自己的项目做 A/B 测试。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/DesignArena/status/2079243547337974132" target="_blank"><span class="handle">@DesignArena</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2079011035626054081" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2078993539787288918" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/idoubicc/status/2079172040712716764" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/oran_ge/status/2079079643177787448" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HNpjofPaMAAbQr-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNpjofPaMAAbQr-?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNmO0m7b0AEhOhd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNmO0m7b0AEhOhd?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HNqz8gUacAECQK2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HNqz8gUacAECQK2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>termany.sh：推文展示了面向终端 Agent 的 token 消耗统计入口，可能帮助开发者观察任务成本；官方文档、开源仓库和指标口径尚待补齐。 <a href="https://x.com/idoubicc/status/2079172040712716764" target="_blank">→</a></li>
+    <li>CodexThemes：一个围绕 Codex 主题和终端外观的早期项目，适合观察 AI 编程产品是否开始形成可交换的视觉与配置生态；证据待补。 <a href="https://codexthemes.ai" target="_blank">→</a></li>
+    <li>Qwen 3.8：X List 出现了关于新模型能力的讨论，但目前缺少官方发布页和可复现实测；先作为模型路线观察项，不把推文中的比较结论当成事实。 <a href="https://x.com/oran_ge/status/2079079643177787448" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

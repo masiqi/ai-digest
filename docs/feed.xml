@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 20 Jul 2026 00:46:50 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 00:52:38 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/21 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-21.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-21.html</guid>
+      <description>今天的主线是“模型不再孤立竞争，而是被塞进可切换、可审计、可本地运行的 Agent 工作流”：从 OpenCodex 的多模型路由，到长文档 OCR、设计系统、SEO 审计和深度研究，真正能马上动手的开源工具明显增多。本次 Agent Reach 证据包运行超过 600 秒仍未产出，以下🛠️条目均改用 X List 原文 + 官方 GitHub/官网/Hugging Face 页面人工交叉核验；🌱与🎯中的弱线索明确标注“证据待补”。</description>
+      <pubDate>2026-07-21T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/20 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-20.html</link>
