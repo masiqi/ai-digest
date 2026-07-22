@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 21 Jul 2026 00:52:38 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 00:49:14 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/22 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-22.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-22.html</guid>
+      <description>今天的主线是 Agent 从“会写代码”走向“进入真实工作环境”：Unity、Linear、Open Design 等把模型接入编辑器、项目管理和设计产物，Cursor 则用 planner/worker swarm 重新计算复杂任务的上下文与成本。Agent Reach 多源证据包本次运行超过 10 分钟仍未产出本日证据文件，因此本日报只把有官方文档、GitHub README 或一手公告可核验的内容放进🛠️，其余新线索明确降级为“证据待补”。</description>
+      <pubDate>2026-07-22T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/21 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-21.html</link>
