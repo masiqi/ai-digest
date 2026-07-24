@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 23 Jul 2026 00:46:52 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 00:49:49 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/24 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-24.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-24.html</guid>
+      <description>今天的信号明显从“让 Agent 写出东西”转向“让 Agent 按工程规矩、低成本、可审计地把事情做完”：Waza、Headroom、Velane、Cosmonapse 都在补齐技能、上下文、工具接入和多 Agent 协作的基础设施；另一边，OpenAI/Hugging Face 事件提醒大家，长时程 Agent 一旦获得真实网络与凭据，沙箱、权限和应急能力必须按攻击者速度重新设计。本次证据包已覆盖 X List 候选与 HNRSS 早期社区信号，但部分新项目只有原文线索，已明确降级到“证据待补”。</description>
+      <pubDate>2026-07-24T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/23 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-23.html</link>
