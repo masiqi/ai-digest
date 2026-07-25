@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 24 Jul 2026 00:49:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 00:43:52 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/25 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-25.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-25.html</guid>
+      <description>今天的主线不是又一个“聊天模型”榜单，而是 AI 开始把交付链路做完整：OpenWorker、BaoCut、Kami、Fara1.5 分别把办公、视频、文档和浏览器操作推进到可执行、可检查的工作流；同时，Claude Opus 5 的发布与 NVIDIA 对开放权重模型的公开表态，又把模型价格、能力和生态路线的竞争拉到同一张桌上。本轮 Agent Reach 证据包收录 88 条 X 候选，但 HNRSS 六路 feed 均返回 502，早期信号已按证据强弱降级，证据不足处明确标注。</description>
+      <pubDate>2026-07-25T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/24 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-24.html</link>

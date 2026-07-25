@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-25</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-25</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线不是又一个“聊天模型”榜单，而是 AI 开始把交付链路做完整：OpenWorker、BaoCut、Kami、Fara1.5 分别把办公、视频、文档和浏览器操作推进到可执行、可检查的工作流；同时，Claude Opus 5 的发布与 NVIDIA 对开放权重模型的公开表态，又把模型价格、能力和生态路线的竞争拉到同一张桌上。本轮 Agent Reach 证据包收录 88 条 X 候选，但 HNRSS 六路 feed 均返回 502，早期信号已按证据强弱降级，证据不足处明确标注。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ BaoCut：本地优先视频转录、翻译与粗剪</div>
+  <div class="section"><div class="section-label event">一句话</div><p>BaoCut 是一个 macOS 本地视频处理应用，配套开源 Agent Skill，可由 Claude Code、Codex 等代理驱动转录、字幕、翻译、说话人复核和粗剪。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/baocut" target="_blank">https://github.com/JimLiu/baocut ↗</a></p>
+    <p><a href="https://baocut.app" target="_blank">https://baocut.app ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Apple Silicon Mac 上安装 BaoCut.app，再从项目仓库按 README 安装 Agent Skill；推荐命令是 `npx skills add JimLiu/baocut -g -a claude-code codex -y`。打开 Claude Code 或 Codex，给它一段本地 mp4，要求先转写、清理口癖、翻译成中英双语并导出 SRT/VTT，再在 BaoCut 的可视化界面逐句核对时间轴，最后导出字幕或成片。第一次建议用 1–3 分钟、无敏感信息的视频测试，确认 CLI 能找到 BaoCut.app 后再批量处理；翻译和导出结果仍应人工抽查。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“Agent 只会吐文字稿”的断点补上了：自然语言负责批量编排，GUI 负责可视化校对，字幕时间轴、翻译和剪辑输出落在同一条链路里。官方仓库还明确说明它是 macOS 本地应用的开源技能，不是凭产品名推测出来的云端工具；对处理访谈、课程和跨境视频的人尤其实际。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 YouTube、会议或课程视频转成可校对的双语字幕和短视频初稿。</li>
+    <li>在不上传原始素材的前提下，批量清理口头禅、翻译并输出 SRT/VTT。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2080770347977113983" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOBfNS-WgAE2tWY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBfNS-WgAE2tWY?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOBfO0AXwAACzND?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBfO0AXwAACzND?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOBgFteWIAAPbCJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBgFteWIAAPbCJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOBhmTfWcAA1E3P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBhmTfWcAA1E3P?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenWorker：本地运行、交付成品的开源 AI 同事</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenWorker 是运行在桌面上的开源 AI coworker，不只对话，还能围绕文件、工具和连接器交付文档、Slack 回复、日历更新等完成品。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/andrewyng/openworker" target="_blank">https://github.com/andrewyng/openworker ↗</a></p>
+    <p><a href="https://openworker.com" target="_blank">https://openworker.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 GitHub README 的 Download 区选择 macOS Apple Silicon 或 Windows 安装包；打开应用后添加 OpenAI、Anthropic、Google 等模型的 API key，或指向本机 Ollama。先不要一上来授权全部连接器，可以用本地文件夹做小任务：让它读取一份会议记录，生成带数字核对的汇报文档；确认结果后，再逐项启用 Slack、日历或邮箱连接器。也可以按 README 准备 Python 3.10+、Node 20+ 和 Rust 环境，从源码启动，观察本地 agent server、模型调用和连接器权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>OpenWorker 的差异不在“又一个聊天窗口”，而在把 agent loop、连接器、模型选择和本地文件放进一个可运行的桌面产品。官方仓库明确支持多家模型、Ollama 和 25+ 连接器，并强调密钥与会话保存在本地；这让它很适合拿来研究一个真正能交付结果的个人工作台，而不是只比较回答风格。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让代理读取本地资料，整理成可直接发送的周报、邮件或项目文档。</li>
+    <li>把日历、Slack 和文件操作串成需要人工复核的办公自动化流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2080598394213712182" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2080332687571886080/img/lsEwhZahLuR12r0p.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2080332687571886080/img/lsEwhZahLuR12r0p.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami V1.10：让 Agent 生成文档时接受逐页验收</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Kami 是面向 AI Agent 的文档设计系统，用内容合同、编辑模板、渲染和逐页检查，把原始内容变成更接近可交付的 PDF、长文档、简报或幻灯片。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+    <p><a href="https://kami.tw93.fun" target="_blank">https://kami.tw93.fun ↗</a></p>
+    <p><a href="https://github.com/tw93/Kami/releases" target="_blank">https://github.com/tw93/Kami/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官网看模板和示例，再从 GitHub Releases 下载 V1.10.0 对应的安装包，按仓库 README 放入 Claude/Codex 所需的模板和脚本目录。给代理一份原始材料和明确成品类型，例如“把这份研究整理成一页纸”或“做一套演讲幻灯片”，要求它先建立内容合同，再套用模板、渲染 PDF；生成后查看逐页检查结果，重点关注孤行、信息密度、分页和简历式内容的平衡。发现错误时回到源材料或模板重跑，不要只在最终 PDF 上手工打补丁；需要时再用 MCP 让更多代理调用这条流程。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>V1.10 的亮点不是换一套漂亮配色，而是把可靠性写进文档生产流程：架构图保留意图合同和证据检查，PDF 检查遇到空文件或损坏文件能给出清晰错误，安装包也同步了 Claude/Codex 布局。它正面回应了“办公 Agent 批量生成一堆没人愿意读的文档”这个痛点，把审稿和版式验收变成可重复的工程步骤。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把研究笔记、产品方案或会议材料变成可打印的一页纸、报告和演示文稿。</li>
+    <li>为架构文档维护源意图、证据和版本，避免 Agent 重绘时把计划误画成已上线事实。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2080791637337493747" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HN6usPvaIAAuAv0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN6usPvaIAAuAv0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Fara1.5-27B：能看截图并点击浏览器的开放模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Fara1.5-27B 是 Microsoft Research AI Frontiers 发布的浏览器电脑操作 Agent，按截图感知页面并输出点击、输入、滚动、访问网址等结构化动作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/microsoft/Fara1.5-27B" target="_blank">https://huggingface.co/microsoft/Fara1.5-27B ↗</a></p>
+    <p><a href="https://www.microsoft.com/en-us/research/articles/fara1-5-computer-use-agent" target="_blank">https://www.microsoft.com/en-us/research/articles/fara1-5-computer-use-agent ↗</a></p>
+    <p><a href="https://github.com/microsoft/fara" target="_blank">https://github.com/microsoft/fara ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读模型卡的安全限制，优先在 MagenticLite 或独立测试浏览器里运行，不要直接接触个人邮箱、支付页面和含敏感文件的主浏览器。具备合适 GPU 后，可以按模型卡用 vLLM 启动：`vllm serve microsoft/Fara1.5-27B --dtype bfloat16 --max-model-len 262144 --limit-mm-per-prompt image=10`，再给它一个可逆的小任务，例如打开公开网页、搜索资料并把结果整理出来。观察每一步截图和 tool call，遇到登录、提交表单、购买或删除等不可逆动作时强制人工确认；硬件有限时先比较 Fara1.5-4B/9B，而不是盲目部署 27B。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 computer-use 的关键约束说得很清楚：模型不是读 DOM，而是从屏幕截图预测像素级动作；Fara1.5-27B 基于 Qwen3.5-27B，MIT 许可，官方还提供了 MagenticLite 这一更安全的部署路径。能力很适合研究浏览器 Agent，但视觉误判、页面提示注入和多步误差会累积，因此“可玩”与“可上线”之间必须用沙箱、权限隔离和人工确认填上。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在隔离浏览器中自动完成公开网页检索、资料整理和重复性后台操作。</li>
+    <li>作为其他 Agent 的像素级动作模型，验证网页电脑操作与安全拦截流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2080678207054024819" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOANzEYbsAAgNhF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOANzEYbsAAgNhF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN8OFe7aoAApt10?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN8OFe7aoAApt10?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Canvas UI：把真实 DOM 叠加成可交互的 WebGL 视觉组件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Canvas UI 是开源、框架无关的创意组件库，让真实 HTML 保持可选中和可点击，同时叠加 fluid、shader、glass、3D 等 canvas/WebGL 效果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/DavidHDev/canvas-ui" target="_blank">https://github.com/DavidHDev/canvas-ui ↗</a></p>
+    <p><a href="https://canvasui.dev" target="_blank">https://canvasui.dev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在一个 React、Vue、Svelte 或原生 JavaScript 项目中先执行 `npx shadcn@latest init`，再用 `npx shadcn@latest add @canvas-ui/liquid-react` 加入第一个组件；把命令中的 `liquid` 换成文档里其他组件，把 `react` 换成实际框架。启动开发服务器后，分别测试文字选择、链接点击、键盘操作和移动端降级。完整 html-in-canvas 体验目前依赖 Chrome/Edge 140+ 的实验特性开关，生产页面不要默认假设所有浏览器都支持；先用 fallback 渲染方案做兼容，再逐步增加 shader 效果，最后通过 shadcn registry 或 MCP 让编码 Agent 安装组件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把页面截图贴在 canvas 上，而是尝试让真实 DOM 成为可被 WebGL 读取和重绘的纹理，因而兼顾视觉效果与可交互性。官方仓库给出了 24 个组件、四套前端形态、shadcn 源码拷贝方式和 MCP-ready registry；对希望让 Agent 直接生成有设计感的网页、又不想牺牲语义和可访问性的团队很有启发。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为产品官网、作品集和数据可视化页面快速加入液体、玻璃和粒子交互。</li>
+    <li>让 AI 编码 Agent 通过 registry 直接安装并改造可编辑的视觉组件源码。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2080482389718106222" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HN9bozBbUAAn9fp.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HN9bozBbUAAn9fp.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2080222371911233536/img/HjezQfZWUWQtYw_h?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2080222371911233536/img/HjezQfZWUWQtYw_h?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ShinobuTranslator：浏览器内直接翻译漫画图片</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ShinobuTranslator 是 Chrome/Edge 扩展，可在 X、Pixiv 等漫画阅读场景中做文字检测、OCR、去字、翻译和重新排版。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/DonutShinobu/ShinobuTranslator" target="_blank">https://github.com/DonutShinobu/ShinobuTranslator ↗</a></p>
+    <p><a href="https://chromewebstore.google.com/detail/shinobutranslator/pgehhpbnifjlalmmnpiebkjhphojffef" target="_blank">https://chromewebstore.google.com/detail/shinobutranslator/pgehhpbnifjlalmmnpiebkjhphojffef ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最省事的方式是在 Chrome Web Store 安装扩展，然后打开一张自己有权阅读和处理的漫画图片，在扩展设置里选择目标语言和处理模式，先用内置模型跑一次“只识别/只去字”，再开启翻译和排版。需要大模型翻译时，在设置界面填入自己选择的提供商和 API Key；不想上传图片时优先测试浏览器端 ONNX Runtime 的本地路径，并检查 WebGPU、WebNN 或 WASM 的实际速度。开发者也可以克隆 GitHub 仓库、安装依赖并构建 `dist`，从浏览器扩展管理页加载开发版，修改后用 benchmark 和测试用例验证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目把检测、气泡分割、OCR、去字修复和排版拆成浏览器端流水线，README 还明确列出 ONNX 模型资源和 WebGPU/WebNN/WASM 后端，而不是简单调用一个远程翻译接口。它适合快速验证“图片理解 + 本地推理 + 扩展交互”的组合；但第三方模型翻译可能出错，发布或二次使用前必须校对并确认内容授权。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>阅读 X/Pixiv 上的外语条漫，并在原页面上查看中文译图。</li>
+    <li>研究浏览器端 OCR、图像修复和本地视觉模型的组合式产品体验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2080613655750603185" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Hyper3D Rodin BANG to Parts：把完整 3D 模型拆成可用零件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Hyper3D Rodin 提供图像/文本生成 3D、模型编辑和 BANG to Parts 能力，可把整体模型分解为多个独立组件，再用于动画、游戏或 3D 打印流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://hyper3d.ai" target="_blank">https://hyper3d.ai ↗</a></p>
+    <p><a href="https://developer.hyper3d.ai/api-specification/bang_reset_v" target="_blank">https://developer.hyper3d.ai/api-specification/bang_reset_v ↗</a></p>
+    <p><a href="https://www.youtube.com/watch?v=JoNGGlpBIfQ" target="_blank">https://www.youtube.com/watch?v=JoNGGlpBIfQ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Hyper3D Rodin，先用一张物体图片或文字提示生成一个简单资产，也可以上传自己有权使用的模型；生成后进入模型工作区，尝试 BANG to Parts，把整体拆成可单独查看和编辑的零件，再检查每个部件的命名、材质和拓扑。将结果导出或接入 Blender、Unity、Unreal、Godot 等官方列出的插件路径，测试一个可旋转、可换材质或可动画的最小场景。想做自动化时再阅读 API 文档；API 需要 Bearer key，且拆分接口依赖 Rodin 任务 UUID，不要把网页试用和 API 调用混为一谈。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 AI 3D 演示停留在“生成一个看起来像样的网格”，而 BANG to Parts 直接触碰资产可用性：零件级结构决定了动画、材质替换、装配和打印能否继续。官方站点同时列出建模、3D 打印、游戏、动画和多款 DCC/引擎插件，说明它的价值不只在一次性展示；不过拆分结果仍需在目标引擎里检查比例、连接关系和拓扑。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为游戏原型生成可拆分、可换材质和可动画化的道具资产。</li>
+    <li>把概念模型快速拆件后交给 3D 打印、工业设计或动画预演流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2080660118790893712" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2080659193812684800/img/eJx-smIFDgea_g4y.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2080659193812684800/img/eJx-smIFDgea_g4y.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ YouMind：从收藏素材一路推进到成品演示</div>
+  <div class="section"><div class="section-label event">一句话</div><p>YouMind 是 AI Creation Studio，可收集文章、视频和灵感片段，再围绕材料继续思考并生成文章、幻灯片、视频或网页。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://youmind.com" target="_blank">https://youmind.com ↗</a></p>
+    <p><a href="https://chromewebstore.google.com/detail/youmind-ai-web-clipper-yo/cnnenlbocdcjnmpkkbbdgjfejinfffjc" target="_blank">https://chromewebstore.google.com/detail/youmind-ai-web-clipper-yo/cnnenlbocdcjnmpkkbbdgjfejinfffjc ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 YouMind 注册并从“Start for free”创建任务，安装浏览器扩展，把与一个主题相关的文章、视频或截图集中收藏；然后在同一工作区要求它先归纳材料、指出缺口，再生成演示文稿的页级结构和视觉方向。不要直接接受第一版，逐页检查事实、标题和引用，继续用自然语言改写、重排和补充素材；也可以打开 Skills 区，挑一个与研究或 PPT 相关的技能试跑。官网同时提供 iOS、macOS beta 和浏览器入口，先用浏览器完成一次从收藏到成品的闭环，再决定是否安装桌面端。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“灵感收集、上下文积累、推理和创作”放在一个连续工作区里，而不是让用户在剪藏、聊天和 PPT 工具之间反复搬运材料。官网展示的对象覆盖 slides、文章、视频和网页，并提供可复用 Skills；对需要持续做研究、内容策划或市场材料的人，价值在于让 AI 记住材料之间的关系，而不只是一次性生成漂亮页面。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把竞品文章、访谈视频和零散笔记整理成研究简报或汇报幻灯片。</li>
+    <li>围绕同一主题持续收集证据，再迭代生成文章、网页和视频脚本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2080624708542988456" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HN_dIMRbsAAmSzR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_dIMRbsAAmSzR?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN_dIN_asAA9VVk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_dIN_asAA9VVk?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN_dIMbaAAAiqNg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_dIMbaAAAiqNg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN_dIOEbsAAPUcQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_dIOEbsAAPUcQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Opus 5：前沿模型竞争转向“更强能力/更低单价”</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 发布 Claude Opus 5；X List 讨论集中在其 Agent、编程表现以及相对 Fable 5 的价格优势。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Anthropic 官方发布页确认 Opus 5 已上线，并强调它在 Claude Constitution 遵循、欺骗行为率和抗误用诱导等方面的评估表现；X List 中宝玉的转述还给出了每百万 Token 输入 5 美元、输出 25 美元且与上一代 Opus 4.8 相同的价格信息。这里要把“官方已发布”和“社区 benchmark/价格解读”分开看：社交平台的 Fable 5 对比并不是独立复现实验，发布日的测试截图也出现了算术标注争议。真正值得观察的是，模型厂商开始把 Agent 可靠性、安全评估和单位任务成本一起卖，而不是只报一个总榜分数。参考：https://www.anthropic.com/news/claude-opus-5</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果同等任务质量的推理成本下降，Coding Agent、研究 Agent 和企业批处理会更容易从试用进入生产；但更强的主动执行能力也会放大权限、审计和误操作风险。企业采购时应按“完成一次业务任务的总成本、重试率、人工复核时间”比较，而不要只按每百万 Token 标价。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2080701514402730046" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOAifjuWcAESshR.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HOAifjuWcAESshR.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 NVIDIA/黄仁勋首条 X：开放权重模型进入产业路线争论中心</div>
+  <div class="section"><div class="section-label event">事件</div><p>黄仁勋在首条 X 帖文中分享由 NVIDIA 等企业签署的公开信，明确支持开放权重模型与开放生态。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>X List 的多条转述都指向同一封公开信：AI 会改造每个行业、驱动每家公司并由各国参与构建；开放模型被描述为增强安全与网络安全、加速创新扩散和支持主权的基础。外部报道也记录了 NVIDIA CEO 的这一立场，但“开源”与“开放权重”并非完全同义，许可证、训练数据、权重可商用范围和服务商限制仍需逐项核对。这个信号的意义不只是一个 CEO 发帖，而是芯片、云、模型和应用公司开始争夺“开放生态是否应成为国家 AI 能力指标”的解释权。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>若政策和采购环境更偏向开放权重，企业会更重视可自托管、可审计和可迁移的模型栈，模型服务的锁定成本可能下降；同时，硬件厂商也会从开放模型扩散中获得更多推理需求。对开发者而言，短期最务实的动作是保留至少一条本地/开放权重替代路径，长期则要认真看许可证、供应链安全和模型更新责任。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2080659283340087565" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HN_8kembIAAxbru?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_8kembIAAxbru?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN_8kk8bUAAojKx?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_8kk8bUAAojKx?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN_qDVsa4AAI6XJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_qDVsa4AAI6XJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN_qDV1a8AARQwg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_qDV1a8AARQwg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN_qDV1awAAPTlH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_qDV1awAAPTlH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent 生意的矛盾：订阅收入增长可能仍覆盖不了获客与 Token 成本</div>
+  <div class="section"><div class="section-label event">事件</div><p>一条行业经验分享称，某海外 Agent 产品日订阅收入约 6–7 万美元，但每日广告投放约 20 万美元，提示 Agent 商业化不能只看流水。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一则来自从业者交流的未审计案例，不应当当作整个行业的平均值；但它很好地暴露了 Agent 产品的单位经济学问题：广告带来的用户未必能留下，长链路任务会产生持续推理和工具调用成本，客服、退款、内容安全与人工兜底又会继续侵蚀毛利。相比传统 SaaS，Agent 的“使用越多”可能同时意味着价值越高和成本越高，产品必须知道哪些任务值得自动完成、哪些步骤应该缓存、路由或交给更小的模型。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来 Agent 产品的竞争门槛会从“能不能做出 Demo”转向留存、任务完成率、每个成功任务的毛利和可控的获客回收期。创业团队需要把模型路由、缓存、失败重试和人工接管纳入财务指标；投资和采购评估也应要求看到真实任务漏斗，而不是只看订阅额、下载量或单次传播数据。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2080294994842419657" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2080499451576377388" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2080557244090064988" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2080479086481437178" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2080554543981736417" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2080529372260512184" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2080499285335162880/img/6crpPV7YLMTm_Wzg.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2080499285335162880/img/6crpPV7YLMTm_Wzg.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2080557051135266817/img/VxFjTp3an2RRnGhR.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2080557051135266817/img/VxFjTp3an2RRnGhR.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN9YsdkaMAAWvHp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN9YsdkaMAAWvHp?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN3NzY0bMAATCRx?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN3NzY0bMAATCRx?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2080553656336941056/img/A-z_EKQiyPdXWixA.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2080553656336941056/img/A-z_EKQiyPdXWixA.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2080529237140987904/img/q0I5X6MHW28otBmk.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2080529237140987904/img/q0I5X6MHW28otBmk.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Kimi K3 × GPT-5.6 Sol：DeepSWE 对比讨论给出的结论不是谁全面碾压谁，而是路由、级联和多模型搭配可能更优。 <a href="https://x.com/shao__meng/status/2080479086481437178" target="_blank">→</a></li>
+    <li>Codex Live：推文展示实时看屏、语音对话和持续操控电脑的使用方式，适合观察“语音 + screen context”是否会成为 Coding Agent 的常规交互。 <a href="https://x.com/vista8/status/2080554543981736417" target="_blank">→</a></li>
+    <li>Mimo：作者展示用 Mimo 做海外电影寻源运营后台，属于有案例画面但缺少项目入口和可复现步骤的早期线索。 <a href="https://x.com/seclink/status/2080529372260512184" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
