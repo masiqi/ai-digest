@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 25 Jul 2026 00:43:52 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 00:48:44 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/26 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-26.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-26.html</guid>
+      <description>今天的信号集中在“可执行的 AI 工作流”上：桌面 Agent、隔离浏览器、Apple Health/MCP、文档与 PPT 生成，以及 Apple Silicon 本地推理都在把模型能力落到具体动作。证据包脚本本次运行超时，以下🛠️条目均以 X List 原文为线索，并补做了官网、GitHub、Release 或文档核验；证据不足的候选统一降级到🌱，不把推文描述当成已证实功能。</description>
+      <pubDate>2026-07-26T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/25 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-25.html</link>

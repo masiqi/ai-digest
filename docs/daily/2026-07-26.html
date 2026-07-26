@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-26</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-26</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“可执行的 AI 工作流”上：桌面 Agent、隔离浏览器、Apple Health/MCP、文档与 PPT 生成，以及 Apple Silicon 本地推理都在把模型能力落到具体动作。证据包脚本本次运行超时，以下🛠️条目均以 X List 原文为线索，并补做了官网、GitHub、Release 或文档核验；证据不足的候选统一降级到🌱，不把推文描述当成已证实功能。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Bento/乔木 Bento PPT</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把资料变成可编辑、可演示、可离线分发的单文件 HTML Bento 演示文稿的开源 Skill/项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-bento-ppt" target="_blank">https://github.com/joeseesun/qiaomu-bento-ppt ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备 Node.js 和一个支持 Skills 的 Agent，打开仓库 README，执行 `npx skills add joeseesun/qiaomu-bento-ppt` 安装。把文章、产品 brief、会议纪要或一组链接交给 Agent，并明确要求输出单文件 `.bento.html`；生成后直接用浏览器打开，先检查字体、图片、数据和分页，再用左右键或缩略图放映。需要修改时不要手工改一堆 CSS，直接告诉 Agent 哪一页换成对比卡片、哪一页补图表或改成深色主题；仓库的设计是把内容保持为可编辑结构，适合继续迭代和离线转发。X List 里提到的“博客转 PPT”和“明文 JSON/可编辑”方向，与仓库 README 中的单文件可交付思路相互印证，但具体作者关联仍以仓库实际版本为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是只生成截图，而是把研究、提纲、布局、渲染和复核收束成可交付文件。单 HTML 便于归档和分享，结构化内容也更适合让 Agent 二次修改；对不想被传统 PPT 模板限制、又需要保留编辑权的人，比一次性图片生成更实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把产品文档、技术文章或发布说明快速整理成可以直接演示的路演稿。</li>
+    <li>为课程、周报和内部汇报生成可离线打开的图文 deck，并让 Agent 按反馈持续改页。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2081046206592197113" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2081045195479752704/img/Zo4FksohmNXrR6TB.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2081045195479752704/img/Zo4FksohmNXrR6TB.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenWorker</div>
+  <div class="section"><div class="section-label event">一句话</div><p>吴恩达团队开源的桌面 AI coworker，在本机连接文件、终端、日历、Slack 等工具，目标是交付完成品而不只是聊天。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/andrewyng/openworker" target="_blank">https://github.com/andrewyng/openworker ↗</a></p>
+    <p><a href="https://openworker.com" target="_blank">https://openworker.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS Apple Silicon 用户可从 README 的下载入口获取签名版桌面应用，Windows 用户也有对应下载；首次启动后按提示配置自己选择的 OpenAI、Anthropic、Google、开源权重或 Ollama 模型。先给它一个低风险任务，例如“整理某个文件夹里的资料并生成一页摘要”，观察它如何调用本地文件和工具；随后再连接 GitHub、Slack、日历等集成。重要动作会请求确认，不要一开始就授予发送消息、改日历或执行 shell 的权限。开发者也可以按 README 创建 Python 环境，启动 `openworker-server`，再用 Vite 或 Tauri UI 调试本地连接器。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>OpenWorker 把“Agent 能否完成工作”放在产品中心，而不是只比较对话质量。它支持自带模型和本地运行，且把 MCP、连接器、审批门槛和定时自动化放在同一套桌面工作流里；这对希望控制数据边界、又不想把每个 SaaS 集成重新拼一遍的人很有吸引力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把收件箱、Slack、日历和本地文件汇总成晨报，并在发送或修改前保留人工确认。</li>
+    <li>让 Agent 处理一项完整的研究、项目更新或运营任务，交付文档、回复草稿和变更记录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2080983794677662048" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOEjt2aaEAAHURg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOEjt2aaEAAHURg?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ego lite</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 AI Agent 的 Chromium 浏览器，让人和 Agent 在同一个浏览器里使用隔离 Space 并行处理网页任务，同时复用登录态。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/citrolabs/ego-lite" target="_blank">https://github.com/citrolabs/ego-lite ↗</a></p>
+    <p><a href="https://lite.ego.app/document/" target="_blank">https://lite.ego.app/document/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 用户先从仓库 README 下载 Apple Silicon 或 Intel 的 DMG，安装后启动 ego lite；首次启动如果询问是否迁移 Chrome 数据，应先确认自己愿意共享哪些登录态，再决定是否接受。也可以只安装连接层：执行 `npx skills add citrolabs/ego-lite`，让 Claude Code、Codex 或其他兼容 Agent 在第一次任务时引导安装浏览器。随后给 Agent 一个不涉及敏感操作的任务，例如读取公开竞品页面、整理十条网页信息或填写测试表单；在浏览器里为每个任务创建独立 Space，观察快照、点击、填写和等待等动作，涉及提交、购买、发信时仍人工确认。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统浏览器自动化往往需要另装浏览器、重新处理 Cookie，还容易和用户抢同一个标签页。ego lite 把登录态继承、Agent 专属 Space 和并行任务作为浏览器本体的一部分，且通过 `ego-browser` skill 暴露给多个 Agent CLI；它更像“人机共用的工作浏览器”，而非又一个脚本库。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>并行采集多个竞品、客户或招聘网页，同时避免不同 Agent 互相覆盖标签页。</li>
+    <li>让已登录的网页应用执行重复录入、信息核对和资料整理，再把最终提交留给人。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2080963123826360716" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOEQ6whbEAAAHCK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOEQ6whbEAAAHCK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOAvnM9bsAAKX8P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOAvnM9bsAAKX8P?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Somvia</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把用户选择的 Apple Health 数据通过私有 MCP 接口提供给 ChatGPT、Claude、OpenClaw、Hermes 等兼容 AI 客户端。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://somvia.app" target="_blank">https://somvia.app ↗</a></p>
+    <p><a href="https://somvia.app/mcp" target="_blank">https://somvia.app/mcp ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 iPhone 安装 Somvia，并只授权需要分享的健康指标；官网说明支持睡眠、HRV、步数、生命体征，以及训练中的分段、心率曲线、配速、功率和步频等数据。选择要同步的历史范围，日常指标可按 7 到 180 天配置，训练会话也可取相应历史；然后在兼容客户端中添加远程 MCP 地址 `https://somvia.app/mcp`，按页面流程用 Apple 登录或使用私有访问令牌。连接后从具体问题开始，例如比较最近四次间歇跑的配速和心率变化，先让 Agent 列出它读取了哪些数据，再决定是否扩大授权范围。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“AI 看健康数据”从导出 CSV、做每日摘要，推进到按会话和细节序列查询。更重要的是，产品明确强调由用户选择哪些指标离开手机，且通过 MCP 让不同 Agent 复用同一数据接口；不过健康信息敏感，授权、令牌保存和第三方客户端权限必须单独审查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Agent 对比跑步、骑行或力量训练的分段、心率和功率，而不是只看总步数。</li>
+    <li>生成基于个人历史的训练复盘，再由用户或专业人士决定是否采纳建议。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2080944542337933710" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Skill Hub（EverMind）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个强调开放、可编辑、可基准测试和持续改进的 AI Agent Skill 库与浏览入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://evermind.ai/skillhub" target="_blank">https://evermind.ai/skillhub ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Skill Hub，先按 Dev、AI/ML、Testing、Workflow、Writing 等场景筛选，而不要盲目安装整库。查看某个 Skill 的源码、适用任务和评测信息，复制或安装到自己的 Agent 环境后，用一个可重复的小任务做 A/B 测试：记录成功率、失败类型、耗时和 token 消耗，再决定是否保留。对于涉及文件、网络或生产系统的 Skill，先读清楚工具调用和权限边界，最好在测试目录或沙箱中运行；如果要自定义，基于公开源码改名、补测试用例，并保留自己的版本，不要把“榜单分数”直接等同于适合自己的工作流。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Skill 生态的瓶颈正在从“有没有提示词”转向“能否稳定完成任务”。官网把 Skill 的源码开放、真实使用信号和 SkillsBench、Cybench、QwenClawBench、GDPVal 等评测放在一起，至少提供了比单纯收藏 prompt 更可检验的方向；但页面数据和第三方复现仍需持续观察，今天更适合试用和比较，而不是盲信排名。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为团队建立经过任务集回归测试的 Agent 技能目录，减少个人 prompt 经验无法复用的问题。</li>
+    <li>对同一技能的不同版本做成功率和安全性对比，再决定是否放进日常自动化。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2080924431904587999" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HODiEA-asAAXEq9?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HODiEA-asAAXEq9?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Rapid-MLX 0.11.0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 Apple Silicon 的本地 AI 推理引擎，提供 OpenAI/Anthropic 兼容接口、工具调用、提示缓存和 Agent CLI 接入。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/raullenchai/Rapid-MLX" target="_blank">https://github.com/raullenchai/Rapid-MLX ↗</a></p>
+    <p><a href="https://github.com/raullenchai/Rapid-MLX/releases/tag/v0.11.0" target="_blank">https://github.com/raullenchai/Rapid-MLX/releases/tag/v0.11.0 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 M 系列 Mac 上优先使用 Homebrew 安装：`brew install rapid-mlx`；也可以用 `pip install -U rapid-mlx==0.11.0`，或者先阅读官方安装脚本再执行。首次运行可以从 README 的默认模型开始，让它下载权重并进入 REPL；需要给编辑器或 Agent 使用时，用 `rapid-mlx serve qwen3.5-9b-4bit` 启动本地服务，再把客户端的 OpenAI base URL 指向 `http://localhost:8000/v1`。跑 Codex、Claude Code 或其他 Agent 前，先用短提示确认模型、端口和工具 schema 都正常，再逐步启用 prompt cache、reasoning 或更大模型；内存不足时不要直接追求最大权重。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把通用服务器简单搬到 Mac，而是围绕 MLX、提示缓存、工具解析和 OpenAI/Anthropic wire compatibility 做了本地优化。0.11.0 还加入了 reasoning-gated forced tool grammar 等更新；对想在自己的 M 系列机器上运行 Agent、减少云端调用或做隐私敏感原型的人，兼容现有客户端比重新改一套 SDK 更重要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac 本地为 Codex、Claude Code、Cursor 或自建脚本提供低延迟模型后端。</li>
+    <li>用本地模型做文档总结、代码辅助和离线原型，只有复杂任务才切换到云端模型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Raullen/status/2080778221608656927" target="_blank"><span class="handle">@Raullen</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOBowlGagAAF2c2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBowlGagAAF2c2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BaoCut Agent Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让 Claude Code、Codex 等 Agent 驱动 BaoCut macOS 应用完成转录、字幕、翻译、剪辑和导出的视频工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/baocut" target="_blank">https://github.com/JimLiu/baocut ↗</a></p>
+    <p><a href="https://baocut.app" target="_blank">https://baocut.app ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 macOS 版 BaoCut，再确认 Node.js 可用；按仓库 README 执行 `npx skills add JimLiu/baocut -g -a claude-code codex -y`，把 Skill 安装并链接到所用 Agent。准备一段短视频做测试，先让 Agent 转录并检查说话人、时间轴和字幕文本，再要求翻译成目标语言；需要剪辑时明确给出保留片段、清理口头禅、字幕样式和导出格式。BaoCut 的 Skill 负责驱动应用附带的 CLI，不等于把底层音视频引擎打包进仓库，所以首次使用要确认 App 版本和 CLI 路径；导出前人工抽查字幕、专名和画面，确认无误后再批量处理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>视频 Agent 的价值不只在“生成一段视频”，还在把转录、校对、翻译、粗剪和导出串成可复用流程。BaoCut 仓库给出了真实 CLI 和 Agent Skill 的边界，支持自然语言交互，同时保留 macOS App 作为执行端；这比只展示一个翻译 Demo 更接近内容团队每天会用的生产工具链。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将访谈、课程或播客自动转录、翻译并生成可继续在剪映/CapCut 中处理的字幕素材。</li>
+    <li>让 Agent 按规则批量清理口头禅、挑选片段和导出短视频初稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2080770347977113983" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOBfNS-WgAE2tWY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBfNS-WgAE2tWY?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOBfO0AXwAACzND?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBfO0AXwAACzND?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOBgFteWIAAPbCJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBgFteWIAAPbCJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOBhmTfWcAA1E3P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBhmTfWcAA1E3P?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami V1.10</div>
+  <div class="section"><div class="section-label event">一句话</div><p>为 AI Agent 设计的文档排版系统，用统一的纸张、字体、层级和组件把原始内容变成可交付文档。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://kami.tw93.fun" target="_blank">https://kami.tw93.fun ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>根据所用客户端选择安装方式：Claude Code 可执行 `/plugin marketplace add tw93/kami` 和 `/plugin install kami@kami`，Codex 可使用对应的 marketplace/add 命令，通用 Agent 则按官网说明执行 `npx skills add tw93/kami/plugins/kami -a universal -g -y`。安装后直接提出“做一页创业公司介绍”“把这篇研究稿整理成简历”或“设计一份演讲 deck”等任务，先让 Agent 读取原始内容并给出结构，再让它套用文档、流程图、表格或图表组件。生成后检查分页、中文字体、打印效果和事实准确性；需要长期复用时，把品牌色、纸张风格和常用组件写进项目约定，而不是每次重新描述。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>大量 Agent 文档输出的问题不是内容不存在，而是层级、留白、打印和交付格式不稳定。Kami 把暖纸张、单一强调色、衬线层级和可复用组件固化成设计系统，并通过 MCP/Skill 让更多 Agent 使用同一套规则；它更像内容交付的“排版基础设施”，而不是一次性的海报生成器。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把研究笔记、产品资料和会议内容整理成适合打印、分享和归档的正式文档。</li>
+    <li>为简历、方案书、流程图和演示材料建立一致的视觉规范，减少反复手工排版。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2080791637337493747" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HN6usPvaIAAuAv0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN6usPvaIAAuAv0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SGLang v0.5.16 / DSpark</div>
+  <div class="section"><div class="section-label event">一句话</div><p>高性能大模型服务框架的新版本，引入基于置信度调整验证窗口的 DSpark 推测解码，并扩展大模型支持。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/sgl-project/sglang" target="_blank">https://github.com/sgl-project/sglang ↗</a></p>
+    <p><a href="https://github.com/sgl-project/sglang/releases/tag/v0.5.16" target="_blank">https://github.com/sgl-project/sglang/releases/tag/v0.5.16 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这项更新更适合有 NVIDIA/AMD GPU、容器和推理服务经验的人，不建议在普通 Mac 上直接照抄生产命令。先按官方文档安装 SGLang，在测试环境启动一个自己已有的模型服务，用 OpenAI 兼容接口发送基准请求，记录首 token 延迟、吞吐和显存。确认版本后，再根据 v0.5.16 Release 说明尝试 `--speculative-algorithm DSPARK`，并设置 `SGLANG_RAGGED_VERIFY_MODE=compact`，调节 `--speculative-dspark-block-size`；使用相同 batch、输入长度和硬件对比 MTP/基线，避免只拿单个宣传数字下结论。若服务的是大型 MoE 或多模态模型，还要逐项确认官方支持矩阵和并行配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推测解码正在从固定 draft 长度走向由草稿置信度决定验证窗口，目标是在“值得猜测”和“猜测反而浪费”之间动态平衡。官方 Release 给出的 DeepSeek-V4-Pro、TP8、B300 测试数字值得工程师复现，但真正价值在于把算法、缓存、并行和模型支持整合进成熟 serving runtime，而不是单独发表一个 benchmark。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为企业内部模型 API、Agent 后端或多用户推理服务做吞吐与延迟优化。</li>
+    <li>在同一套服务框架中试验推测解码、前缀缓存、MoE 和多模态模型支持。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/sgl_project/status/2080818269326655762" target="_blank"><span class="handle">@sgl_project</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOCMJ6GagAAeFIR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOCMJ6GagAAeFIR?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Opus 5 发布：高端 Agent 模型进入日常调用区间</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 发布 Claude Opus 5，官方定位为面向长时间运行 Agent、编程和专业工作的更强 Opus 级模型，并称其价格与 Opus 4.8 相同。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方公告显示，Claude Opus 5 已可使用，API 价格为每百万输入 token 5 美元、每百万输出 token 25 美元，目标是成为 Claude Max 的默认模型和 Claude Pro 的最强模型；官方文档还列出 1M token 上下文、默认开启 thinking 和 effort 控制等变化。这里需要把“接近 Fable 5”等社区比较与官方可核验事实分开看：真正值得观察的是模型把更深推理、长周期任务和工具使用纳入日常价格带后，Agent 设计是否会从短问短答转向更少人工接管的长任务。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果高能力模型的调用成本和稳定性继续下降，软件团队会更愿意把规划、代码修改、测试、资料检索和文档交付串起来；同时，默认 thinking、努力程度和安全降级等行为会增加成本预测、延迟控制和回归测试难度。应用方不能只看单次榜单，必须用自己的长任务集验证成功率、失败恢复和权限边界。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2080839086085177726" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOCgHCda4AAVNah?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOCgHCda4AAVNah?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOAifjuWcAESshR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOAifjuWcAESshR?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 “Open Weights and American AI Leadership”公开信获得产业联署</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA、Microsoft、Palantir、Replit 等公司及多位行业人物公开支持开放权重模型，主张前沿闭源与前沿开放生态并存。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>X List 中黄仁勋、微软高管和相关转发集中出现同一叙事，微软页面也保留了 open-weight 议题入口。它不等于政策已经落地，也不代表所有签署方对许可证、权重发布和安全责任有完全相同的理解；但从产业信号看，开放权重已经从研究社区的技术偏好，变成芯片、云、开发工具和应用公司都需要表态的竞争力议题。下一步应关注具体承诺：哪些模型会开放、许可证允许什么、如何提供安全更新，以及算力和分发是否真正可得。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开放权重生态若继续获得基础设施公司的支持，将扩大本地部署、领域微调和主权 AI 的选择，压低单一闭源 API 的锁定风险；反过来，权重开放也会带来滥用、责任归属、出口限制和版本维护问题。企业采购时应同时审查模型许可证、训练数据声明、漏洞响应、推理成本和供应链，而不是把“open”直接当成“可商用且无风险”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/JensenHuang/status/2080643682408321103" target="_blank"><span class="handle">@JensenHuang</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2080966627974361133" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2081052820506390680" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HN_qDVsa4AAI6XJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_qDVsa4AAI6XJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN_qDV1a8AARQwg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_qDV1a8AARQwg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HN_qDV1awAAPTlH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN_qDV1awAAPTlH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOEUHTaaQAAl6GJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOEUHTaaQAAl6GJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOFigdRboAAdsn4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOFigdRboAAdsn4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOEsiQwaEAAWE-q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOEsiQwaEAAWE-q?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Mole：原生 macOS 清理、软件管理与状态工具，近期讨论还提到清理过期 git worktree 的需求，适合观察 Agent 与系统维护工具的结合。 <a href="https://mole.fit" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
