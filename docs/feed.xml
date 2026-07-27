@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 26 Jul 2026 00:48:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 00:45:55 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/27 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-27.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-27.html</guid>
+      <description>今天最值得动手的一条线，是 Agent 从电脑端 CLI 向手机、浏览器和单文件文档扩张：OpenMinis、ego lite、Cindy、Bento 把“能执行”分别落到设备、登录态浏览器和可编辑交付物上；同时推理侧继续围绕本地 Apple Silicon、扩散式生成与 serving 优化压缩成本。
+本次 X List 抓到 124 条；Agent Reach 多源证据包在 300 秒限时内未产出，本期🛠️仅纳入已用官方 GitHub、官网、模型卡或文档交叉核验的条目，🌱保留的弱线索标明“证据待补”。</description>
+      <pubDate>2026-07-27T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/26 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-26.html</link>

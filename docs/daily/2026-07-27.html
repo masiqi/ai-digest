@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-27</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-27</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手的一条线，是 Agent 从电脑端 CLI 向手机、浏览器和单文件文档扩张：OpenMinis、ego lite、Cindy、Bento 把“能执行”分别落到设备、登录态浏览器和可编辑交付物上；同时推理侧继续围绕本地 Apple Silicon、扩散式生成与 serving 优化压缩成本。
+本次 X List 抓到 124 条；Agent Reach 多源证据包在 300 秒限时内未产出，本期🛠️仅纳入已用官方 GitHub、官网、模型卡或文档交叉核验的条目，🌱保留的弱线索标明“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenMinis：手机上的开源 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 iOS/Android 的开源 Agent 应用，把模型、设备上的 Linux shell、浏览器自动化、可扩展 Skills、持久记忆和系统集成放进移动端。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/OpenMinis/OpenMinis" target="_blank">https://github.com/OpenMinis/OpenMinis ↗</a></p>
+    <p><a href="https://openminis.app/" target="_blank">https://openminis.app/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>想最快体验，先打开项目 Releases，Android 用户下载最新 APK；想看实现则克隆仓库，README 里按 src/ios、src/android 和 shared 目录分别理解两端结构。首次启动后先配置自己的模型账号或 API，再只授予当前任务需要的权限。可以先让它在工作区里运行一个简单脚本、读取一个本地文件，再测试浏览器操作；涉及健康、日历、通讯录或 HomeKit 时，逐项确认权限和数据边界，不要一上来打开全部系统能力。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把手机当成远程聊天窗口，而是把移动设备本身当作 Agent 的执行环境。官方 README 明确列出设备内 Alpine Linux 沙箱、浏览器自动化、Skills、持久记忆以及 HealthKit、日历、提醒事项、HomeKit 等集成；这种“本地执行 + 原生权限”的组合，正好补上桌面 Agent 到真实生活设备之间的断层。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在手机上处理文件、运行轻量脚本或做随身研究</li>
+    <li>让 Agent 查询日历、提醒事项或健康数据，并在授权范围内形成个人工作流</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2081376569361408461" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOKI9C4bcAAz9TT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOKI9C4bcAAz9TT?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kaku：为 AI 编程准备的开源 Mac 终端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 WezTerm 深度定制的 macOS 终端，提供开箱即用的 AI 编程默认配置、命令生成、错误恢复和多种 CLI 工具配置入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kaku" target="_blank">https://github.com/tw93/Kaku ↗</a></p>
+    <p><a href="https://kaku.fun/" target="_blank">https://kaku.fun/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 用户可以从 GitHub Releases 下载 DMG 拖进 Applications，也可以执行 `brew install tw93/tap/kakuku`。启动后先运行 `kaku doctor` 检查安装、PATH 和 shell 集成；再运行 `kaku ai` 选择提供商并配置模型。日常使用时在提示符输入 `# 你的自然语言需求`，检查它生成的命令后再执行；命令报错时可用 Cmd+Shift+E 让 Kaku 给出修复建议。把 Claude Code、Codex 或其他 CLI 放进同一个终端后，再比较它和现有终端的操作流是否真的更快。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Kaku 的价值不只是换皮终端，而是把 AI 助手、终端复原、lazygit、远程文件和 Lua 定制放到同一套工作环境里。它基于 WezTerm，仍保留可编程性，却用更明确的 AI 编程默认值降低初始配置成本；而且项目强调开源、无账号，AI 请求只发往用户配置的服务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地终端里快速生成、复核并执行开发命令</li>
+    <li>为 Claude Code、Codex、Gemini CLI 等多个编码 Agent 提供统一的 Mac 工作台</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2081374877140025374" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOKE9D6aEAAXeZo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOKE9D6aEAAXeZo?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cindy：把多个 Agent Harness 装进一个开源客户端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的桌面与移动端 AI Agent 客户端，支持在 Claude Code、Codex 等 Harness、不同模型和本地工具之间切换，同时保持工作区、记忆、Skills 和工具连续。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/makecindy/cindy" target="_blank">https://github.com/makecindy/cindy ↗</a></p>
+    <p><a href="https://cindy.app/" target="_blank">https://cindy.app/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>不想先编译的话，直接从 cindy.app 下载对应平台版本，首次登录页选择托管服务、已有 Coding Plan、自有 API Key 或 Local mode。建议先用一个无敏感内容的项目测试：授权工作区后，让它完成一个小改动，观察计划、执行和审查分别由哪个 Harness 完成，再尝试中途切换模型。想研究源码则执行 `git clone https://github.com/makecindy/cindy.git`，随后运行 `git submodule update --init --recursive cindy-protocol`、`git lfs pull` 和 `pnpm install`，再按仓库开发文档启动对应应用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多数 Agent 客户端把模型、Harness 和工作区绑死，Cindy 把它们拆成可以自由组合的层。官方说明既支持现有 Claude Code/Codex 计划，也支持 API Key 和本地模型；客户端本身 Apache-2.0 开源，因而更适合拿来观察“多 Harness 协同”会不会成为下一代 Agent 产品的基础交互。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在一个项目中切换不同编码 Agent，而不丢失记忆、技能和上下文</li>
+    <li>用桌面端处理代码、文件和浏览器任务，再用移动端继续跟进</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2081357216691769523" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ego lite：让任意 Agent 驱动你的真实登录态浏览器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 Chromium 的 Agent 友好浏览器，用隔离 Space 让 Claude Code、Codex、Cursor 等外部 Agent 复用浏览器登录态，同时不抢用户自己的标签页。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/citrolabs/ego-lite" target="_blank">https://github.com/citrolabs/ego-lite ↗</a></p>
+    <p><a href="https://lite.ego.app/" target="_blank">https://lite.ego.app/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官网或 GitHub 安装 macOS 应用，首次启动时按需导入 Chrome 的登录数据、书签和扩展。然后在终端执行 `npx skills add citrolabs/ego-lite` 安装 ego-browser Skill；在支持 Skill 的 Agent 中输入 `/ego-browser`，例如让它打开一个页面、读取 Snapshot、填写表单或完成多步导航。先用不涉及付款和隐私的网页测试，确认 Agent 工作在自己的 Space，再逐步放开登录态访问；需要人工接管时，回到浏览器检查每一步，而不是盲目让 Agent 连续提交。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统 browser-use 或 Puppeteer 往往需要另一个空白浏览器，登录态、验证码和用户标签页都很麻烦。ego lite 把“人用的浏览器”和“Agent 用的隔离空间”放在同一 Chromium 里，并用语义 Snapshot 和批量页面动作减少往返；它不是绑定某一家模型的 AI 浏览器，而是给任意能运行 Skill 的 Agent 提供连接层。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让编码 Agent 在已有登录态下处理后台、工单或资料网站</li>
+    <li>多个 Agent 并行跑网页任务，同时保持个人浏览器标签页不受干扰</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2080963123826360716" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOEQ6whbEAAAHCK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOEQ6whbEAAAHCK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOAvnM9bsAAKX8P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOAvnM9bsAAKX8P?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Bento：把演示文稿做成一个可携带的 HTML 文件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的单文件办公套件，Bento Slides 把编辑器、播放器、演示视图和可读 JSON 文档放在同一个 HTML 文件里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nyblnet/bento" target="_blank">https://github.com/nyblnet/bento ↗</a></p>
+    <p><a href="https://bento.page/slides/" target="_blank">https://bento.page/slides/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 bento.page/slides 直接进入编辑器，或者从 Releases 下载 `Bento_Slides.bento.html`，用现代浏览器打开即可，不需要账号和安装器。先导入或新建几页内容，直接在编辑器里拖拽、编辑、播放并保存；如果要让 AI 改稿，把这个 HTML 文件和修改要求一起交给编码 Agent，让它只改文件顶部的 JSON 文档块，改完重新打开检查布局、动画和图表。分享时直接发送文件，收件人用浏览器打开即可；重要版本建议保留 Git 或文件副本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Bento 把“文件格式”变成了产品 API：文档数据是明文 JSON，运行时、编辑器和播放器又都随文件携带，避免 PPTX 转换、云端账号和版本兼容问题。官方还为 Agent 提供了文档编辑方式，意味着 AI 不必操纵一个脆弱的桌面 GUI，就能直接读写结构化内容并保留可视化结果。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把博客、研究结果或产品方案快速改造成可发送的演示文件</li>
+    <li>让 AI 在本地批量修改页面、图表和演示结构，再人工做视觉验收</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2081046206592197113" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2081045195479752704/img/Zo4FksohmNXrR6TB.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2081045195479752704/img/Zo4FksohmNXrR6TB.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Rapid-MLX：让 Apple Silicon 本地模型接近生产可用</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 M 系列 Mac 的本地推理引擎，提供 OpenAI/Anthropic 兼容接口、工具调用、提示词缓存和面向 Agent 工作流的性能优化。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/raullenchai/Rapid-MLX" target="_blank">https://github.com/raullenchai/Rapid-MLX ↗</a></p>
+    <p><a href="https://pypi.org/project/rapid-mlx/" target="_blank">https://pypi.org/project/rapid-mlx/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Apple Silicon Mac 上先执行 `python3 -m pip install -U rapid-mlx`，或按项目说明使用 Homebrew；然后阅读 README 的启动方式，把它作为本地 OpenAI 兼容端点接到你的编码 Agent 或 API 客户端。先选一个 7B/小型模型验证聊天和工具调用，再打开重复系统提示的任务观察缓存收益，最后才把它接到会改文件或执行命令的长流程。每次升级后重新跑一次工具调用、结构化输出和上下文缓存测试，并记录本机模型、量化方式和并发数，避免把单次宣传 benchmark 当成自己的稳定吞吐。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>本地模型真正进入 Agent 工作流，瓶颈不只在首 token 速度，还在工具调用协议、缓存复用、上下文成本和 API 兼容性。推文给出 0.11.0 在重复 6K 前缀上的缓存收益；项目资料则明确覆盖 Apple Silicon、MLX、OpenAI 兼容和工具调用。它因此更像一个可接入现有工作流的本地推理层，而不是只能展示模型输出的 Demo。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac 上给编码、研究或自动化 Agent 提供本地模型后端</li>
+    <li>对隐私敏感的文本、代码和内部文档做离线或低外传风险处理</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Raullen/status/2080778221608656927" target="_blank"><span class="handle">@Raullen</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOBowlGagAAF2c2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOBowlGagAAF2c2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WorkBuddy：从一句话到可交付的办公研究</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯的全场景 AI 工作台，面向调研、数据分析、文档、邮件和演示等办公任务，能拆解步骤、调用多个专家 Agent 并交付文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.workbuddy.ai/" target="_blank">https://www.workbuddy.ai/ ↗</a></p>
+    <p><a href="https://www.workbuddy.ai/docs/workbuddy/" target="_blank">https://www.workbuddy.ai/docs/workbuddy/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 WorkBuddy 后先用一个边界清晰的问题测试，例如“比较三家未上市公司的公开信息并列出证据”，同时上传允许使用的资料。要求它先给出检索路径和来源，再执行深度调研；完成后逐条检查引用、时间和冲突信息，最后让它输出 Markdown、Word 或 PPT。对于财经、招聘、竞品和舆情类任务，明确要求区分事实、推断和待核实内容，不能因为系统能生成漂亮报告就跳过人工交叉验证。确认流程稳定后，再把固定任务保存成可重复的工作流。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这条线的亮点不是“聊天式写报告”，而是把检索、交叉核验、协作角色和交付格式组合成一条流程。官网明确展示了深度研究、竞品矩阵、策略建议以及 Markdown、Word、PPT 产出；对个人用户来说，它适合验证 Agent 是否能从资料搜集走到可复核交付，而不是只看一段摘要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对未上市公司、行业趋势或竞品做多来源交叉研究</li>
+    <li>把会议、数据和资料整理成可继续编辑的文档或演示稿</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2081409679775965636" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ NaiveTab：用可视化键盘管理浏览器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的新标签页扩展，把书签和浏览器命令映射到可视化键盘，并提供拖拽布局、深度主题定制、专注模式和同步能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/GXFG/newtab-naivetab" target="_blank">https://github.com/GXFG/newtab-naivetab ↗</a></p>
+    <p><a href="https://gxfg.github.io/newtab-naivetab/" target="_blank">https://gxfg.github.io/newtab-naivetab/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开项目主页或 GitHub README，按说明把扩展加载到 Chrome/兼容浏览器的新标签页；第一次使用时只配置十几个最常用书签，给每个键分配稳定的肌肉记忆位置。再设置一个修饰键组合，把切换标签、关闭页面、滚动等命令绑定到字母键，并为高风险页面设置域名白名单。最后试用专注模式、主题和本地备份；如果开启云同步，先阅读权限说明，不要把工作资料或浏览记录直接当作无风险数据上传。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>NaiveTab 把浏览器效率从“收藏夹列表”改成了空间化、可记忆的操作面板，命令键和书签键还可以共存。官方 README 给出了键盘映射、拖拽布局、页面命令、域名黑白名单和多语言等具体能力；它不依赖 AI，却很适合作为 Agent 时代的人机协作底层习惯工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用固定键位快速打开研究、开发和日常工作站点</li>
+    <li>不碰鼠标就完成标签页管理、滚动和页面操作</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2081345879663939681" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SGLang v0.5.16：把推测解码优化带进高并发推理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>高性能 LLM/VLM serving 框架的新版本，加入 DSpark 置信度驱动推测解码，并扩展大模型、扩散模型和缓存支持。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/sgl-project/sglang/releases/tag/v0.5.16" target="_blank">https://github.com/sgl-project/sglang/releases/tag/v0.5.16 ↗</a></p>
+    <p><a href="https://github.com/sgl-project/sglang" target="_blank">https://github.com/sgl-project/sglang ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>有 NVIDIA/AMD GPU 集群的读者先按官方安装文档部署 v0.5.16，并用现有模型跑一组基线，记录输入吞吐、单用户解码、接受长度和显存。然后按 release note 开启 `--speculative-algorithm DSPARK`，同时设置 `SGLANG_RAGGED_VERIFY_MODE=compact`，再用 `--speculative-dspark-block-size` 调整草稿块大小。不要只看单个 tok/s 数字：分别测试短请求、长上下文、不同 batch 和低接受率场景，并检查服务的正确性、尾延迟和回退行为，确认新算法适合你的模型后再进入生产流量。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推测解码的关键不在于“多一个草稿模型”，而在于草稿长度、验证窗口和硬件执行是否匹配。官方 v0.5.16 release note 给出 DSpark 的置信度调度方式和 DeepSeek-V4-Pro 上的测试结果，同时还覆盖 Inkling、LongCat、Mamba/DSA 缓存等 serving 变化；这说明推理优化正在从单一 kernel 竞赛转向模型结构、缓存和服务调度的联合工程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为大模型 API 集群降低解码成本并提高并发吞吐</li>
+    <li>对长上下文、MoE 或推理型模型做 serving 层性能实验</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/sgl_project/status/2080818269326655762" target="_blank"><span class="handle">@sgl_project</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOCMJ6GagAAeFIR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOCMJ6GagAAeFIR?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 开放权重声明从口号走向产业联盟</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA、Microsoft、Cloudflare 等公司和行业人士围绕“Open Weights and American AI Leadership”公开表达支持，开放权重成为一项同时涉及技术、产业和政策的议题。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这里需要区分开放权重、开放源码和完整开放模型：开放权重允许研究者和企业下载、部署、评测或微调参数，但训练数据、训练代码、基础设施和商业服务仍可能保持闭源。X List 中的讨论也暴露了这场争论的边界——支持开放权重不等于把 CUDA、驱动或全部产品栈开源。真正值得观察的是，签署和公开表态正在把模型可下载性从社区偏好推向企业采购、国家竞争力和监管叙事；未来的竞争可能同时存在于权重开放程度、部署成本、许可条款和闭源服务质量。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对开发者而言，可下载权重会扩大本地部署、行业微调和独立评测的选择；对云厂商和模型公司而言，开放权重会压低通用推理的差异化，迫使它们把优势转到数据、工具链、服务可靠性和生态。采购模型时也不能只看“开源”标签，必须检查许可证、训练数据声明、商用限制、更新机制和安全责任边界。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2081407446002946450" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOKk8QjasAA8HHS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOKk8QjasAA8HHS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent Skills 与 Context Engineering 成为新一层工程抽象</div>
+  <div class="section"><div class="section-label event">事件</div><p>围绕 Agent Skills 的讨论升温，Anthropic 的工程文章把上下文工程、渐进式加载、工具设计、压缩、持久笔记和多 Agent 协作列为长流程 Agent 的核心方法。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Agent 变强之后，问题不再只是写一句更好的 prompt，而是每一步到底把哪些高信号信息放进上下文。Skills 的元信息可以在会话开始时作为路由线索，真正需要时再加载完整指令、脚本和参考资料；工具则负责让 Agent 按需读取文件、查询数据和恢复状态。这样的设计把提示词、MCP、工具返回值、项目规则、历史消息和外部文件统一成“上下文系统”，也解释了为什么同一个模型换一套 Skills、检索策略和进度记录后，稳定性会明显不同。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 应用团队需要把 Skill/工具/记忆当作可测试的软件组件，而不是一次性提示词。未来评测应包含上下文污染、长任务恢复、工具失败、权限边界和跨会话一致性；个人用户也可以把重复工作整理成短元数据加按需参考文件，减少每轮重复粘贴。谁能把上下文管理做成可观察、可回滚、可复用的工程层，谁就更可能在模型能力趋同后保住产品差异。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2081225771473879226" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOH_tjGXUAAfjiW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOH_tjGXUAAfjiW?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 扩散语言模型开始对准长上下文 Agent 的可编辑生成</div>
+  <div class="section"><div class="section-label event">事件</div><p>inclusionAI 发布 LLaDA2.2-flash，模型卡将它定义为面向 Agent 的扩散语言模型，并引入 Levenshtein Editing 的 DELETE/INSERT 控制 token，覆盖长上下文工具使用、多轮交互和错误修正。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>自回归模型通常从左到右追加 token，生成早期发生错误后往往要依赖重新生成；扩散式语言模型则可以并行生成，并在序列中间做编辑。LLaDA2.2-flash 的模型卡进一步给出 MoE、128K 上下文和 100B 总参数等信息，说明路线重点不是把“扩散”当成视觉模型的专属技术，而是尝试让 Agent 在工具调用失败、计划变化或输出冗余时局部修改。真正的工程考验仍在推理速度、编辑稳定性、工具协议兼容、长任务评测和硬件成本，不能只凭一条宣传视频判断它会替代自回归模型。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果可编辑生成在真实工具链中稳定，Agent 可能少做一些从头重写，长上下文任务的错误恢复成本也有机会下降；同时 serving 框架、缓存、评测和训练目标都要适配新的生成范式。对应用开发者来说，近期更适合关注模型卡、推理代码和公开 benchmark 是否持续更新，把它当作值得试验的路线，而不是立刻迁移生产系统。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2081409859745186080" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2080944542337933710" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2080983794677662048" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2081384947571400912" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2081228883848802422" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2081052820506390680" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/rogerw0108/status/2080765290061930693" target="_blank"><span class="handle">@rogerw0108</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/RyanLeeMiniMax/status/2080849927962517673" target="_blank"><span class="handle">@RyanLeeMiniMax</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/HaiyuWu1/status/2080693034354933814" target="_blank"><span class="handle">@HaiyuWu1</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2081193598650044785" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOKnOIHbsAAspSQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOKnOIHbsAAspSQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOEjt2aaEAAHURg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOEjt2aaEAAHURg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOFigdRboAAdsn4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOFigdRboAAdsn4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOEsiQwaEAAWE-q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOEsiQwaEAAWE-q?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOAF6gvb0AAgkRM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOAF6gvb0AAgkRM?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOCof01bYAA1g7A?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOCof01bYAA1g7A?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2080320137274781696/img/TC3tb7xv_HhR3fRe.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2080320137274781696/img/TC3tb7xv_HhR3fRe.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>MiniMax Sparse Attention：FireworksAI 相关推文称通过注意力内核加载/存储流水线优化获得约 1.6 倍吞吐提升，需继续等待可复现实验与代码细节。 <a href="https://x.com/RyanLeeMiniMax/status/2080849927962517673" target="_blank">→</a></li>
+    <li>JEPA 视频因果表征与行动学习：X List 讨论了先从互联网视频学习因果关系、再用强化学习教模型行动的路线，成本和效果说法仍需论文或代码验证。 <a href="https://x.com/HaiyuWu1/status/2080693034354933814" target="_blank">→</a></li>
+    <li>Codex 高推理档额度管理：社区反馈 xhigh 推理和子代理会快速消耗周期额度，适合跟踪 Agent 产品从“能力竞赛”转向 token、子代理调度和预算控制的产品设计。 <a href="https://x.com/MinLiBuilds/status/2081193598650044785" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
