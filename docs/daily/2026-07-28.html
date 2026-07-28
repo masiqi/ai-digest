@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-07-28</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-07-28</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线是“开放能力 + Agent 工作流”同时向前推进：Kimi K3 开放权重、Open Secure AI Alliance 试图把防御工具开放化，而开发者侧已经有代码行为手册、移动端 Linux 沙箱、隐私协议 CLI 等可直接上手的工具。Agent Reach 多源证据包本次在 300 秒内未产出，以下🛠️项目均按本次 X List 信号与官方仓库/官网/文档交叉核验；证据不足的新线索已降级到🌱，不把推文猜测当成已证实功能。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Harness Handbook：给代码 Agent 的“行为地图”</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯相关团队开源的 Harness Handbook，可以把代码库整理成按系统行为导航的手册，帮助代码 Agent 从“要改什么行为”定位到可能涉及的实现位置，而不是只在文件树里盲搜关键词。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Ruhan-Wang/Harness_Handbook" target="_blank">https://github.com/Ruhan-Wang/Harness_Handbook ↗</a></p>
+    <p><a href="https://ruhan-wang.github.io/Harness-Handbook/" target="_blank">https://ruhan-wang.github.io/Harness-Handbook/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并创建 Python 3 虚拟环境，按 README 安装 tree-sitter、tree-sitter-language-pack、PyYAML、requests、Markdown 和 Pygments。想先试静态分析，可进入 handbook_generate_large，执行 `python3 run.py --lang auto --source-root 你的代码库 --work-dir work/demo --phase 1`；想生成完整手册，再按 README 配置 OpenAI-compatible 接口，运行 large pipeline。生成的 overview、index、register 和 stages 文件可以作为规划阶段上下文，接着用 handbook_as_helper 把手册构造成 planner skill，让 Agent 先定位行为和代码证据，再决定修改边界。不要把它当自动改代码工具，先在副本里观察它的定位结果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它抓住了 Agent 编程里经常被模型能力掩盖的瓶颈：同一个行为可能分散在提示词、状态机、工具调用、异常路径和多个模块里。项目采用 L1 系统总览、L2 行为单元、L3 代码细节的渐进式导航，并要求候选位置回到当前源码验证。对企业代码库而言，这比单纯增加上下文长度更接近“减少漏改点”的工程问题。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给大型 Agent Harness 建立可审计的行为索引，辅助安全评审和权限逻辑排查。</li>
+    <li>在提交改动前，让编码 Agent 先定位跨文件影响面，减少全仓库无目标搜索。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2081778477150441774" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOP2dw4bEAIaPaU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOP2dw4bEAIaPaU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenMinis：把 Linux 沙箱装进手机的开源 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenMinis 是面向 iOS 和 Android 的开源 AI Agent 应用，让模型在移动端使用本地沙箱里的 Alpine Linux、浏览器自动化、技能、持久记忆以及日历、提醒事项、健康等设备能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/OpenMinis/OpenMinis" target="_blank">https://github.com/OpenMinis/OpenMinis ↗</a></p>
+    <p><a href="https://openminis.app/" target="_blank">https://openminis.app/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>iPhone/iPad 可以先从 App Store 或 TestFlight 入口安装，Android 则从 GitHub Releases 获取 APK；首次使用时接入自己的 Claude、GPT、Gemini 或其他模型账号/API Key。建一个工作区后，先让 Agent 在沙箱中运行 `apk update`、安装一个轻量命令行工具，再让它读取工作区里的 Markdown 文件并整理成笔记；熟悉后再尝试浏览器操作、创建提醒或把研究结果写回文件。想自己编译则克隆时带上 submodule，按 BUILDING.md 先构建 LAME、FFmpeg、iSH/PRoot 和 Alpine rootfs。涉及健康、联系人和家庭设备时，务必逐项检查权限与数据边界。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把手机当作远程聊天窗口，而是给 Agent 一个受限但真实可执行的计算环境，再通过原生 API 把系统能力暴露成工具。官方仓库同时公开了 iSH ARM64、PRoot、rootfs 构建和跨平台目录，说明重点在运行时与权限边界，而不只是换一个聊天 UI。对移动端 Agent 来说，“本地文件 + shell + 原生能力”的组合很可能比单纯语音问答更有粘性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在手机上整理 Obsidian/Markdown 资料、运行脚本并把结果写回工作区。</li>
+    <li>把群聊内容转成待办或日历事件，同时让用户保留逐项授权和确认权。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2081562462537777457" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOMyAh8bcAAc35e?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOMyAh8bcAAc35e?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Termany：让多个编码 Agent 并排工作的终端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Termany 是一个本地优先、面向 Agent 的终端工作台，把真实 shell、分屏、文件树、预览和多个编码 Agent 放进同一套界面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://termany.sh/" target="_blank">https://termany.sh/ ↗</a></p>
+    <p><a href="https://github.com/thinkany-ai/termany" target="_blank">https://github.com/thinkany-ai/termany ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>开发者可先克隆仓库并执行 `npm install`，再用 `pnpm dev:web` 启动 PTY 服务和 Web 界面，浏览器打开 README 指定的本地端口。创建多个 workspace，把不同项目放进 vertical tab，再用 ⌘D/⇧⌘D 分屏；在侧边栏启用 Claude、Codex、Gemini、OpenClaw、Hermes 等已支持的 Agent，让它们分别处理测试、文档或部署。用 ⌘E 切换文件树查看 Markdown、代码和文档，用 usage dashboard 对照会话成本。先从只读任务开始，确认 Agent 的命令权限和工作目录后再交给它部署。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“多个 Agent 并行”落实为可观察的终端状态，而不是只在聊天里描述并发。每个 pane 都是真实 shell，后台 tab 会保留滚动内容，并能显示 working/done/error；UI 与后端之间通过 ITerminalBackend 抽象，为后续桌面或云端沙箱留下切换点。对于已经在用 Claude Code、Codex 等 CLI 的人，迁移成本主要是界面层，而不是重新学习一套 Agent API。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>一个 Agent 写代码、一个 Agent 跑测试、另一个 Agent 检查部署日志，互不覆盖终端状态。</li>
+    <li>在同一工作区内边看文件和成本面板，边回到持久 shell 继续调试。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2081647838799532330" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HON_qwBbgAA3UH0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HON_qwBbgAA3UH0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MuseTalk 1.5：本地音频驱动口型同步</div>
+  <div class="section"><div class="section-label event">一句话</div><p>MuseTalk 是腾讯音乐娱乐 Lyra Lab 开源的实时音频驱动口型同步模型，可把参考视频与语音合成为嘴型匹配的视频，并提供 1.5 版本的推理、训练代码和模型权重。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/TMElyralab/MuseTalk" target="_blank">https://github.com/TMElyralab/MuseTalk ↗</a></p>
+    <p><a href="https://huggingface.co/spaces/TMElyralab/MuseTalk" target="_blank">https://huggingface.co/spaces/TMElyralab/MuseTalk ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>它更适合有 NVIDIA CUDA 环境的机器。先按官方 README 创建 Python 3.10 环境，安装对应的 PyTorch、requirements 和 MMLab 依赖，再准备 FFmpeg；接着运行 `sh ./download_weights.sh` 下载 MuseTalk、VAE、Whisper、DWPose、SyncNet 和人脸解析模型。准备一段自己有权使用的视频和语音后，先用仓库提供的 debug/inpainting 入口检查脸部框选，再执行 `sh inference.sh v1.5 normal` 生成结果。第一次建议使用清晰正脸、短音频和固定机位，逐步调整 bbox_shift；官方 README 推荐 CUDA 11.7/相应 PyTorch 组合，依赖冲突时优先照版本说明排查。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目不是只给一个云端 Demo，而是把训练代码、推理脚本、权重和 Gradio Space 都放出来。其核心是在冻结 VAE 的 latent space 中做单步 inpainting，并用 Whisper 音频表示通过 cross-attention 驱动人脸区域；官方报告和仓库宣称在 Tesla V100 上可达到 30fps+。实际效果仍受脸部角度、遮挡和头部动作限制，但它非常适合用来理解“音频条件视频编辑”从模型到工程管线的完整路径。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为已拍摄的讲解视频做多语言配音和口型同步原型。</li>
+    <li>给虚拟人、教育内容或产品 Demo 制作可控的本地视频后处理流水线。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2081724052817990136" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2081723492303843328/img/wSMt8_M6s4gBk2g5.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2081723492303843328/img/wSMt8_M6s4gBk2g5.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2081569754943565824/img/Enaoadd5rPl4Zd9O?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2081569754943565824/img/Enaoadd5rPl4Zd9O?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ pvcli：一条命令调试 OHTTP 隐私请求</div>
+  <div class="section"><div class="section-label event">一句话</div><p>pvcli 是 Cloudflare Research 开源的类 curl CLI，支持 HTTP/2、HTTP/3、Oblivious HTTP（OHTTP）请求和 CONNECT 代理，方便开发者观察隐私协议链路。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/cloudflareresearch/pvcli" target="_blank">https://github.com/cloudflareresearch/pvcli ↗</a></p>
+    <p><a href="https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/" target="_blank">https://blog.cloudflare.com/open-sourcing-our-privacy-proxy-cli/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确保本机安装 Rust/Cargo，执行 `cargo install --git https://github.com/cloudflareresearch/pvcli`。安装后可先运行 `pvcli --help`，再用普通 HTTPS URL 测试基本请求；要走 OHTTP，可按官方示例执行 `pvcli -vvv --ohttp --first-hop https://relay-cloudflare.ohttp.info --proxy https://gateway.ohttp.info -X POST --header "content-type: application/json" --data '{"test":1}' https://target.ohttp.info/anything`。用 `-v/-vv/-vvv` 逐级增加日志，观察 relay、gateway 和 target 之间的请求封装。不要把生产密钥放进命令行历史；仓库明确提示项目尚未审计，先用 echo 服务或本地 mock gateway 做实验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>OHTTP 同时涉及 relay、gateway、Binary HTTP 和加密封装，传统 curl 很难在一个命令里复现完整路径。pvcli 把 OHTTP、HTTP/2/3 和代理调试放到同一工具中，既能做协议实验，也能帮助隐私产品开发者定位请求在哪一跳失败。Cloudflare 官方博客还说明后续希望加入更多隐私协议，因此它可能成为隐私工程领域的通用诊断入口，而不只是一次性 Demo。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>调试匿名遥测、隐私统计或不希望 relay 看到请求内容的客户端协议。</li>
+    <li>在本地 mock gateway 中验证 HPKE/OHTTP 封装、代理和 HTTP/3 传输行为。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Cloudflare/status/2081727564356182171" target="_blank"><span class="handle">@Cloudflare</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Design：从视觉想法到可交接原型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Claude Design 是 Anthropic 的 Beta 产品，用户可以通过对话创建和迭代视觉设计、交互原型、演示文稿和 one-pager，并把结果交给 Claude Code 或其他工具继续实现。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://claude.com/product/design" target="_blank">https://claude.com/product/design ↗</a></p>
+    <p><a href="https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them" target="_blank">https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在支持的 Claude Pro、Max、Team 或 Enterprise 计划中打开 `claude.ai/design`，先用一句自然语言描述一个页面、产品流程或演示稿，再在右侧 canvas 里通过对话和直接编辑迭代。可以导入代码库、网页捕获、DOCX/PPTX/XLSX，建立品牌色彩和组件约束，确认方向后导出 PPTX、PDF 或 HTML；如果要进入工程实现，再用官方文档里的 `/design-sync` 与 Claude Code 衔接。建议先做一个三屏小型产品原型，比较“从零生成”和“带设计系统生成”的差异，最后人工检查文案、交互和品牌一致性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把设计阶段从“生成一张漂亮截图”推进到可继续编辑、可分享、可导出的工作面，并把设计与编码之间的往返写进产品流程。Anthropic 官方介绍中明确支持从代码或文件导入、在 canvas 迭代以及交给 Claude Code；这意味着 Agent 的上下文不再只是一段 prompt，而可以包含设计系统、组件和可执行的交接关系。对小团队来说，真正的价值在于缩短想法—反馈—实现的循环，而不是替代最终设计判断。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在产品评审前快速做多个 landing page、流程或演示稿方向。</li>
+    <li>让设计原型带着组件和约束交给编码 Agent，减少从截图重新实现的损耗。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2081609024911581558" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HONcXPCboAAkuTA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HONcXPCboAAkuTA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ShipAny Image Agent：可被 Agent 驱动的 AI SaaS 模板</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ShipAny Image Agent 是 ShipAny 模板家族中的图像 Agent 起步项目，目标是把认证、计费、积分、订阅、RBAC、CMS 等 SaaS 基础设施与图像生成交互组合起来，供开发者二次定制。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://shipany.ai/" target="_blank">https://shipany.ai/ ↗</a></p>
+    <p><a href="https://docs.shipany.ai/" target="_blank">https://docs.shipany.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 ShipAny 官方模板页确认 Image Agent 与当前会员权益，再获取对应模板代码并克隆到自己的仓库；按文档安装依赖，配置模型、数据库、支付和存储环境变量，启动本地开发服务。不要一上来就做复杂产品，先用官方 `/quick-start` 工作流把模板改成一个“文字生成海报”小应用，验证登录、积分扣减、生成记录和错误重试，再按需增加多步骤改图、队列和管理后台。完成本地验收后，根据所选 Next、TanStack 或 vinext 模板的文档部署到 Vercel、Docker 或 Cloudflare Workers，并检查密钥只存在服务端。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>许多 AI 产品 Demo 卡在模型调用之外的工程胶水：账号、额度、支付、权限、国际化和内容管理。ShipAny 的官方文档把这些能力作为共享业务核心，并提供面向 Claude Code 的 agent skills 和 `/quick-start` 等操作入口；Image Agent 则把多步骤图像交互作为更具体的产品样板。它适合想验证垂直场景的人，但模板不等于经过业务验证的成品，许可、成本、模型版权和滥用控制仍需要自己审查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速验证海报、商品图、头像或营销素材的生成/改图产品闭环。</li>
+    <li>用统一的积分与权限系统搭建内部图像工作台，再替换为企业自己的模型和存储。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2081583847570092516" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HONEajZbsAEd8-F?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HONEajZbsAEd8-F?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Suno：把哼唱或录音扩展成完整歌曲</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Suno 是浏览器和移动端 AI 音乐创作工具，可以从文字提示、歌词或用户录制/上传的音频开始生成包含编曲和人声的完整歌曲。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://suno.com/" target="_blank">https://suno.com/ ↗</a></p>
+    <p><a href="https://suno.com/hub/how-to-make-a-song" target="_blank">https://suno.com/hub/how-to-make-a-song ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Suno 的 Create 页面，先用 Simple 模式输入“曲风 + 情绪 + 主题 + 人声/器乐”的提示，生成两版后挑选并继续 extend 或 remix；想把自己的旋律带进去，可录制或上传一小段自己演奏/哼唱的音频，再在 Advanced/Custom 模式补充歌词、结构和风格。先做 30—60 秒的小样，比较不同提示对主歌、副歌和音色的影响，再导出并在剪辑软件里试听。涉及翻唱、他人旋律、声音克隆或商业发布时，只使用自己拥有或获授权的素材，并核对当前套餐的商业权利和平台规则，不要把“能生成”误当成“可以随意发布”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把音乐制作里最难入门的编曲、演唱和制作环节压缩成可反复试错的浏览器工作流，同时保留了从简单提示到歌词、音频输入和后续编辑的递进路径。官方页面明确支持录音/上传、重写歌词、调整段落和导出；这让它不仅是一次性玩具，也可以成为创作者做 demo、找旋律和验证风格的草稿工具。真正需要人做的仍是选题、审美、版权判断和最终编曲取舍。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把一段自己的哼唱或乐器录音扩展成广告、播客片头和短视频配乐草稿。</li>
+    <li>为歌词作者快速生成多种曲风小样，再把选中的方向交给专业制作流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2081672514162581745" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2081671538726862848/img/y0dVkaM0FkxE6y3C.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2081671538726862848/img/y0dVkaM0FkxE6y3C.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Kimi K3 开放权重：前沿模型开始把“可下载”变成产品策略</div>
+  <div class="section"><div class="section-label event">事件</div><p>月之暗面发布 Kimi K3 的开放权重版本；官方模型卡称其为 2.8T 参数、原生多模态、支持 1M token 上下文的 Agentic 模型，并在 Hugging Face 提供权重与模型信息。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Kimi K3 的重要性不只在参数规模，而在于开放权重与面向长时程编程、知识工作、推理的产品定位同时出现。开发者可以通过 Kimi 官网/API 先体验，再研究本地或私有化部署路径；但“开放权重”不等于普通个人电脑可以轻松运行，模型文件、显存、并行推理、量化和自定义许可证都会决定真实门槛。今天更值得观察的是生态如何围绕它形成推理服务、量化版本、评测和 Agent 工具链，以及商业推理提供商的许可边界，而不是只比较一个排行榜分数。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开放前沿权重会把模型竞争从 API 价格和聊天体验，进一步推向硬件供应、推理框架、数据主权和企业部署。国内外团队都可能用它搭建长上下文编码或研究 Agent，模型厂商则必须同时面对社区复现、衍生模型和许可证谈判。对采购者而言，评估表里要增加权重可得性、可审计性、部署成本和升级责任，而不能只看闭源 API 的单次调用价。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2081761910010393080" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOPnZjZbwAANC0g?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOPnZjZbwAANC0g?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 NVIDIA 投资 SSI：隐身研究实验室获得数量级算力扩张</div>
+  <div class="section"><div class="section-label event">事件</div><p>Safe Superintelligence（SSI）宣布与 NVIDIA 建立长期战略合作并获得投资，双方称 NVIDIA Vera Rubin 平台将帮助 SSI 在未来 12 个月把算力提升一个数量级；具体产品仍未公开。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一笔“研究方向尚未公开、算力先行扩张”的高信号交易。NVIDIA 不是只提供通用云资源，而是通过资本、下一代平台和技术合作绑定一个由 Ilya Sutskever 领导的研究组织；报道还提到 NVIDIA 在投资前获得了 SSI 研究进展的少见预览。对外界来说，最重要的信息不是据传的投资金额，而是前沿研究组织仍把专用算力、芯片协同和长期保密视为竞争壁垒。SSI 是否能把隐身期成果转化为可验证的模型、论文或产品，才是后续判断的关键。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>算力资本化会继续抬高前沿模型创业的进入门槛，也会让芯片厂商从供应商变成研究路线的战略股东。GPU 平台的代际迁移、软件栈适配和长期供给保障，可能比短期云租赁价格更重要；同时，研究不透明会增加外部评估和安全治理难度。行业需要在“给实验室足够保密空间”和“让社会验证安全承诺”之间建立新的披露机制。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2081745070022365650" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOPYGSKakAAF4UB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOPYGSKakAAF4UB?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Open Secure AI Alliance：开放模型与开放防御工具被放到同一张牌桌</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA 联合 Linux Foundation、Hugging Face、Cloudflare、Microsoft、OpenClaw 等伙伴成立 Open Secure AI Alliance，并公布面向 Agent 测试、追踪、审计和治理的开放安全方向。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这项倡议的核心判断是，防御者不能只依赖少数封闭模型；当攻击者拥有前沿 AI 时，安全团队需要能够检查、适配、私有运行并组合多种开放与闭源模型。NVIDIA 还提到开源 NOOA 框架，用于让 Agent harness 更容易被测试、追踪、审计和治理。它把“开放权重是否安全”的争论转成更工程化的问题：如何把身份、隔离、模型扫描、安全编码和漏洞披露做成可复用的开放栈。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果联盟能持续交付代码、数据和评测，而不是停留在宣言层面，企业安全团队会获得更可审计的 Agent 防御组件，开源项目也可能有更清晰的安全基线。另一方面，多厂商共同维护的模型和工具会带来责任边界、供应链和兼容性问题。未来采购 Agent 平台时，安全能力应从“厂商说有护栏”升级为可观察日志、可复现实验、隔离策略和快速修复流程。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/JensenHuang/status/2081698060330250294" target="_blank"><span class="handle">@JensenHuang</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/iScienceLuvr/status/2081659005529964851" target="_blank"><span class="handle">@iScienceLuvr</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2081766192432488461" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2081651445091475651" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2081790687260070278" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2081747876993233109" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2081632876903428287" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2081770846985851028" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yetone/status/2081464374410330505" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOOQxJYXkAASp1y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOOQxJYXkAASp1y?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOOJ1CCbQAAfrHG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOOJ1CCbQAAfrHG?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOPrQS2bgAENxxs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOPrQS2bgAENxxs?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOOC3abbwAAui-h?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOOC3abbwAAui-h?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOQBl3gagAA6djV?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOQBl3gagAA6djV?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOPapfZaEAAzWcr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOPapfZaEAAzWcr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HONx-BNbgAALezw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HONx-BNbgAALezw?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HONx-BObMAAnDY2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HONx-BObMAAnDY2?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOLYwbIbIAAwoKp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOLYwbIbIAAwoKp?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOLYxLtbsAAYojS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOLYxLtbsAAYojS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOLYyFIboAA3TzK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOLYyFIboAA3TzK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOLYy73agAA1rtH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOLYy73agAA1rtH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>GEO Query Fan-out：AI 搜索会先改写主查询并扩散子查询，内容团队可跟踪真实用户词与模型改写词的差异 <a href="https://x.com/CoderJeffLee/status/2081632876903428287" target="_blank">→</a></li>
+    <li>前沿 AI 论文精选 Newsletter：用筛选后的论文摘要和 RSS 阅读器降低追踪新模型/新方法的门槛 <a href="https://x.com/vista8/status/2081770846985851028" target="_blank">→</a></li>
+    <li>Alma Windows 98 动态组件：Agent UI 仍在探索“终端/窗口是否需要界面”的问题，复古主题是轻量但有辨识度的产品信号 <a href="https://x.com/yetone/status/2081464374410330505" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
