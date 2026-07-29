@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 28 Jul 2026 00:47:41 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 00:47:15 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/29 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-29.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-29.html</guid>
+      <description>今天的信号集中在“AI 代理开始接管完整工作流”：从 Codex Security 的发现—验证—修复，到 CNB 上按 Issue 驱动的 CodeBuddy NPC，再到本地优先的视频与设计工具，AI 正从聊天窗口走向可交付的软件、内容和运维流程。本次 Agent Reach 多源证据包在 300 秒内未生成，以下🛠️项目只保留了推文之外还能由官方仓库、官网或文档核验的条目；证据较弱的新线索明确降级到🌱或🎯。</description>
+      <pubDate>2026-07-29T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/28 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-28.html</link>
