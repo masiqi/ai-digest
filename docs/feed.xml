@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 29 Jul 2026 00:47:15 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 00:43:16 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/30 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-30.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-30.html</guid>
+      <description>今天最值得动手的主线，是“本地可运行的大模型 + 能交付结果的桌面 Agent + 可验证的工程基础设施”同时向前推进：Kimi K3 的激进量化、OpenWorker/CodePilot 的本地工作流，以及 Archify/AsterMem/Linkly 这类围绕上下文、记忆和可解释性的工具，都在把 AI 从聊天窗口推向可复现的工作系统。本轮 Agent Reach 证据包在限定时间内未生成（进程超时，两个日期化证据文件均不存在），因此以下🛠️条目均以 X List 推文为原始线索，并人工用官方 GitHub、官网或文档复核；证据不足的项目降级到🌱或🎯，不把推文描述当成已证实功能。</description>
+      <pubDate>2026-07-30T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/29 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-29.html</link>
