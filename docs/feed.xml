@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 30 Jul 2026 00:43:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 00:43:16 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/07/31 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-07-31.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-07-31.html</guid>
+      <description>今天 113 条 X List 信号里，最值得马上动手的是一批把 Agent 从“会聊天”推进到安全执行、跨工具记忆、跨源数据分析和隔离开发环境的实用项目。Agent Reach 多源证据包本轮超时未生成，因此下文的🛠️项目只采用“推文 + 官方 GitHub/官网/文档”交叉确认，其余新线索降级为🌱并明确证据待补。</description>
+      <pubDate>2026-07-31T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/30 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-30.html</link>
