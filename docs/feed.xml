@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 31 Jul 2026 00:43:16 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 00:50:34 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/01 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-01.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-01.html</guid>
+      <description>今日 X List 抓到 104 条内容；本次 Agent Reach 多源 enrichment 在限定时间内超时，未生成本日 evidence JSON 与 summary，因此下文🛠️项目均以推文信号加官方官网、GitHub、模型卡或开发者文档手工复核，HNRSS 补充信号未能纳入，弱线索统一标注“证据待补”。今天最值得动手的是两条线：一是 DeepSeek-V4-Flash-0731、开源权重与低成本 Agent runtime 把高性能模型的试用门槛继续往下压；二是 GUI Agent、stateless MCP、评测框架和多模态视频工具都在从“演示能力”走向可接入工作流。</description>
+      <pubDate>2026-08-01T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/07/31 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-07-31.html</link>

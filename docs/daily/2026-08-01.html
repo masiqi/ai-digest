@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-01</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-01</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今日 X List 抓到 104 条内容；本次 Agent Reach 多源 enrichment 在限定时间内超时，未生成本日 evidence JSON 与 summary，因此下文🛠️项目均以推文信号加官方官网、GitHub、模型卡或开发者文档手工复核，HNRSS 补充信号未能纳入，弱线索统一标注“证据待补”。今天最值得动手的是两条线：一是 DeepSeek-V4-Flash-0731、开源权重与低成本 Agent runtime 把高性能模型的试用门槛继续往下压；二是 GUI Agent、stateless MCP、评测框架和多模态视频工具都在从“演示能力”走向可接入工作流。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek-V4-Flash-0731：面向 Agent 的正式版模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek-V4-Flash-0731 是 DeepSeek 官方发布的正式版模型，官方模型卡称其在预览版基础上显著增强 Agent 能力，并提供 vLLM 部署与本地推理说明。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731" target="_blank">https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731 ↗</a></p>
+    <p><a href="https://api-docs.deepseek.com/zh-cn/updates/" target="_blank">https://api-docs.deepseek.com/zh-cn/updates/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开模型卡确认硬件、推理框架和许可证边界，不要把“本地可运行”理解成普通笔记本即可流畅运行。开发者可以先从 DeepSeek API 更新页确认 0731 正式版本和接口变化；想做本地实验，则按模型卡的 inference 目录准备兼容环境，再用官方给出的 vLLM 命令启动服务，并保留 `--speculative-config` 等与 DSpark 推测解码相关的参数。若只是验证 Agent 能力，优先走 API 或已接入的 Coding Agent，记录同一任务的工具调用、失败重试和成本，不要只看单次榜单截图。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这次更新把竞争焦点从“再堆更多参数”推向后训练、工具调用和运行时协同。官方模型卡明确给出与 vLLM、编码格式和本地推理有关的入口，意味着它不只是一个聊天模型发布，而是可以被纳入代码 Agent、评测 Harness 和私有部署链路。推文中的成本与 benchmark 数字仍应视为社区转述，真正有价值的是用同一套任务测量它在长链路工具调用中的稳定性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在隔离代码仓库中做低成本代码 Agent、自动修复和测试回归实验。</li>
+    <li>将模型接入自建 OpenAI-compatible 网关，比较云端模型与本地推理的延迟、成本和数据边界。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2083087254101086539" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOiZba2aYAAozFz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOiZba2aYAAozFz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Seedance 2.5：30 秒一镜生成与多模态参考视频模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Seedance 2.5 是字节跳动 Seed 团队发布的新一代视频生成模型，官方强调单次最长 30 秒、连续叙事、参考素材控制和编辑能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5" target="_blank">https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5 ↗</a></p>
+    <p><a href="https://seed.bytedance.com/en/" target="_blank">https://seed.bytedance.com/en/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最省事的入口是进入即梦 AI 或豆包 Pro 的视频生成页面，在模型选择处寻找 Seedance 2.5；官方发布页给出的路径是“视频生成→选择 Seedance 2.5”。先用一张角色图、一张场景图和一段 10—20 秒的分镜提示词做基线，再逐步加入素材。官方说明支持单次 30 秒音视频片段，并把参考输入拆成最多 30 张图片、10 段视频和 10 段音频；实际可用额度、地区和入口以产品页面为准。测试时重点观察角色连续性、镜头转场、文字准确性和一次生成后是否仍需大量剪辑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的变化不只是把时长从短片拉长，而是把“起承转合、参考素材和局部控制”放在同一轮生成里。对广告、产品演示和短剧情来说，减少多段生成再拼接的接缝，往往比单纯提高单帧画质更能节省制作时间。官方材料也把多模态参考拆成可操作的素材组合，适合用品牌素材包做可重复测试，但不要把社区演示中的电影级效果当成所有提示词都能复现的保证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用统一的角色、产品和场景参考制作 30 秒广告或电商商品演示。</li>
+    <li>用白模、分镜和音频参考做短片预演，先验证镜头调度再进入正式制作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2083195263355916349" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083161067451219968/img/cS-0FfVG6Ob44FVY.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083161067451219968/img/cS-0FfVG6Ob44FVY.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083105131604963328/img/3ztD-oxjw792b1KC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083105131604963328/img/3ztD-oxjw792b1KC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen-UI-Agent / MAI-UI：跨手机、电脑与浏览器的 GUI Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是阿里 MAI-UI 团队的 GUI Agent 系列，Qwen-UI-Agent 将移动端、电脑、浏览器和 DeepSearch 场景统一到同一套跨平台执行框架中。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tongyi-MAI/MAI-UI" target="_blank">https://github.com/Tongyi-MAI/MAI-UI ↗</a></p>
+    <p><a href="https://tongyi-mai.github.io/Qwen-UI-Agent/" target="_blank">https://tongyi-mai.github.io/Qwen-UI-Agent/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官方项目页的 Demo 入手，不必一开始就下载大模型。可以依次观看“手机查菜谱并购物”“电脑研究商品并生成桌面布局”“手机票据转电脑报表”和“航班取消后主动找替代方案”等演示，观察它如何在 GUI、CLI、搜索和用户确认之间切换。做本地研究时再 clone 官方仓库，阅读 Qwen-UI-Agent 与 MAI-UI 的目录、模型权重和运行说明；优先用无敏感数据的模拟账号和隔离设备验证，涉及购买、发消息或改文件的动作必须保留人工确认。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 GUI Agent 的评价从“能不能点中一个按钮”推进到真实设备、跨应用、长轨迹和主动服务。官方 README 给出了真实手机、混合 GUI+CLI、批量动作、长时在线 RL 以及跨平台 Harness 等设计，说明系统瓶颈已经不只在视觉定位，也在状态保持、工具编排、隐私路由和失败恢复。公开 benchmark 是项目方报告，适合做方向判断，不能替代你在目标设备上的回放测试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在测试设备上验证跨 App 的资料整理、表格生成和购物前比价流程。</li>
+    <li>为企业内勤、客服或出行助理设计“先搜集信息、再给方案、最后请用户确认”的半自动工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2083315827944956181" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOlssPGbMAABHZP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOlssPGbMAABHZP?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ smevals：把模型、Harness 和多次运行放进同一套评测</div>
+  <div class="section"><div class="section-label event">一句话</div><p>smevals 是 Prime Radiant 开源的模型评测框架，用 Eval、Task、Config、Run、Grader 和 Checker 组织可重复实验，也支持 Codex 或 Pi 等 Agent Harness。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/prime-radiant-inc/smevals" target="_blank">https://github.com/prime-radiant-inc/smevals ↗</a></p>
+    <p><a href="https://primeradiant.com/blog/2026/smevals.html" target="_blank">https://primeradiant.com/blog/2026/smevals.html ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先运行 `uvx smevals docs` 阅读本地文档，或者用 `uv tool install smevals` 安装命令。创建一个包含 `eval.yaml`、`tasks/`、`configs/`、`graders/` 和 Runner 的小目录，先用一个简单的文本任务验证流程，再执行 `smevals run my-eval -g`；需要降低随机性时，用 `-n 5` 为每个任务收集多次成功运行，最后用 `smevals report my-eval` 查看报告。把模型响应写入 Run 的标准输出，把网络失败、Harness 崩溃等基础设施错误以非零退出码区分出来，避免把“跑挂了”误算成模型能力差。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>许多 Agent 评测只留下一个分数，无法区分模型、提示词、工具和 Harness 的贡献。smevals 将不可变 Run、多次采样、可重放 Grader、顺序 Checker 与工件保存拆开，特别适合把“同一任务换模型”“同一模型换 Harness”“同一配置重复运行”放在一个实验框架里比较。它还允许后续换 Grader 而不重新执行 Runs，有利于在评测规则变化后追溯结果，而不是重新凭印象跑一遍。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对代码 Agent 的修复、测试、工具调用和产物质量做多次运行评测。</li>
+    <li>建立文本转 SQL、SVG 生成或浏览器任务的回归集，并保存每次运行的日志与中间文件。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2083310510729216039" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ mcp-explorer：用 uvx 探索和诊断 MCP 服务</div>
+  <div class="section"><div class="section-label event">一句话</div><p>mcp-explorer 是 Simon Willison 发布的轻量 MCP CLI，面向新的 stateless MCP 规范，可列出工具并检查服务兼容性。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://pypi.org/project/mcp-explorer/" target="_blank">https://pypi.org/project/mcp-explorer/ ↗</a></p>
+    <p><a href="https://simonwillison.net/2026/Jul/31/stateless-mcp/" target="_blank">https://simonwillison.net/2026/Jul/31/stateless-mcp/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>本地有 uv 时直接运行 `uvx mcp-explorer` 进入交互尝试；对已知服务则按 PyPI 文档使用 `mcp-explorer list https://example.com/mcp`，需要排查协议兼容性时运行 `mcp-explorer doctor https://example.com/mcp`。命令支持 `--json`，适合把工具清单存进调试记录。先对公开、只读、无需登录的测试服务操作，再连接自己的 MCP；任何会写数据库、发请求或触发外部副作用的工具，都应先核对 schema、权限和服务端日志。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>MCP 的实际痛点往往不是“模型不会调用”，而是客户端、服务端、初始化握手、传输方式和工具描述不一致。这个项目把探索和诊断做成可重复的 CLI，降低了开发者理解一个远程 MCP 服务的成本。stateless 设计还减少了服务端保存会话状态的负担，但它不等于自动安全：URL、鉴权、工具权限和返回数据仍需按不可信外部输入处理。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在接入 Claude、ChatGPT 或自建 Agent 前，快速检查远程 MCP 暴露了哪些工具。</li>
+    <li>把 MCP 服务的工具清单和诊断结果纳入 CI 或集成测试，减少上线后才发现协议不兼容。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2083330693313220615" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ datasette-mcp：给 Datasette 增加只读 SQL 的 MCP 入口</div>
+  <div class="section"><div class="section-label event">一句话</div><p>datasette-mcp 是 Datasette 插件，为数据库实例添加 `/-/mcp` 端点，让 MCP 客户端以结构化工具读取数据库 schema 和执行只读 SQL。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/datasette/datasette-mcp" target="_blank">https://github.com/datasette/datasette-mcp ↗</a></p>
+    <p><a href="https://pypi.org/project/datasette-mcp/" target="_blank">https://pypi.org/project/datasette-mcp/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在现有 Datasette 环境中执行 `datasette install datasette-mcp`，启动 Datasette 后把 `http://localhost:8001/-/mcp` 配置给 MCP 客户端。先调用 `list_databases` 查看当前用户可见数据库，再用 `get_database_schema` 确认表、索引和视图，最后只用一个明确的 SELECT 查询测试 `execute_sql`。部署到公网前先限制数据库可见性、检查 actor 权限和 SQL 校验逻辑；不要因为工具标注 read-only 就跳过备份、日志和查询结果脱敏。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“让 Agent 查数据”从自定义 API 胶水代码变成了一个可安装的 Datasette 插件，而且默认提供的是数据库列表、schema 和只读 SQL 三个窄接口，边界比把整套管理后台交给 Agent 更清楚。对数据产品来说，stateless MCP 让远程连接更简单；对安全来说，真正的控制点仍是 Datasette 的 actor、数据库可见性、SQL 验证和返回结果范围。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给内部知识库或运营数据库提供只读问答和结构化检索入口。</li>
+    <li>在本地 Datasette 数据集上测试 Agent 的 schema 理解、SQL 生成和结果解释能力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2083330693313220615" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ mimofan：Rust 实现的终端 AI 编程助手</div>
+  <div class="section"><div class="section-label event">一句话</div><p>mimofan 是一个 MIT 许可的终端 AI 编程助手，提供 TUI、单次指令、Plan、MCP 和 doctor 模式，并兼容 MiMo、DeepSeek、OpenAI 兼容接口与通义千问。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/XiaomingX/mimofan" target="_blank">https://github.com/XiaomingX/mimofan ↗</a></p>
+    <p><a href="https://github.com/XiaomingX/mimofan/releases/tag/v0.0.6" target="_blank">https://github.com/XiaomingX/mimofan/releases/tag/v0.0.6 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS、Linux 或 Windows 上可以按 README 先用 `bun add -g mimofan` 安装；也可在仓库内按说明用 Cargo 编译。设置 `MIMO_API_KEY` 或 `DEEPSEEK_API_KEY` 后运行 `mimofan` 进入全屏 TUI，用 `mimofan exec "帮我写一个正则表达式匹配邮箱"` 做一次性任务，遇到环境问题先跑 `mimofan doctor`。第一次使用放在无敏感信息的测试仓库，并保留命令授权；只有完全理解风险、且仓库可恢复时，才考虑调整自动批准策略。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不在于又做了一个聊天窗口，而在于把代码上下文、计划模式、命令授权、自动测试和多模型兼容放到终端工作流里。Rust 原生实现、TUI 和单次调用分别适合交互开发与脚本化尝试，MCP 支持也给后续接入外部工具留出了入口。项目目前社区规模仍小，建议先看 release、issue 和实际执行日志，不要把 README 的能力列表等同于大规模生产验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地项目里做代码解释、Bug 修复、测试生成和诊断命令编排。</li>
+    <li>用单次 `exec` 模式把小型代码修改或文档生成接入个人脚本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2083189330026385738" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MiniMax H3：开放权重取向的全模态视频模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>MiniMax H3 是 MiniMax 发布的通用全模态生成模型，可联合理解文本、图片、视频和音频，并生成带原生立体声音频的 2K、最长 15 秒视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.minimax.io/news/minimax-h3-open-model-breaking-boundaries-tasks-modalities-news-overseas-1785485393" target="_blank">https://www.minimax.io/news/minimax-h3-open-model-breaking-boundaries-tasks-modalities-news-overseas-1785485393 ↗</a></p>
+    <p><a href="https://platform.minimax.io/docs/guides/video-generation?ready=6" target="_blank">https://platform.minimax.io/docs/guides/video-generation?ready=6 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读 MiniMax 官方新闻和视频生成 API 文档，在平台创建开发者凭据后，按 `MiniMax-H3` 的视频生成说明提交文字提示以及可选的首尾帧、参考图片、参考视频和音频。文档列出 4—15 秒时长、2K 输出，以及混合参考输入的数量和单文件大小限制；第一轮建议只放一张图加文字，第二轮再加入参考视频或音频。把生成任务 ID、输入素材哈希和输出结果保存下来，逐项检查音画同步、主体一致性和编辑效果；官方新闻称计划在适用法律和监管条件下开放权重，具体下载时间与许可仍以官方更新为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>H3 把“理解多模态上下文”和“生成带声音的视频”放在同一模型叙事里，同时明确朝开放权重和更广硬件兼容方向推进。官方 API 文档给了输入类型、时长、分辨率和文件限制，已经足够做小规模工程验证；但“开放权重”仍是发布计划，不能提前当作已经可下载的事实。它适合用来观察视频模型是否从封闭式消费产品，逐步变成可被开发者改造的基础组件。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做带环境声或配乐的广告、短片、产品演示和视频编辑实验。</li>
+    <li>用图像、视频和音频参考素材测试角色、镜头与声音的联合一致性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2083168977761829299" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOjnC2LagAEQB2I?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOjnC2LagAEQB2I?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Gemini Robotics-ER 2：通过 API 连接视觉推理与机器人动作</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Gemini Robotics-ER 2 是 Google 面向物理世界任务的模型系列，官方已提供 API、任务编排、函数调用和流式交互相关文档。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://ai.google.dev/gemini-api/docs/robotics-overview" target="_blank">https://ai.google.dev/gemini-api/docs/robotics-overview ↗</a></p>
+    <p><a href="https://ai.google.dev/gemini-api/docs/robotics-streaming" target="_blank">https://ai.google.dev/gemini-api/docs/robotics-streaming ↗</a></p>
+    <p><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/" target="_blank">https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Google AI Studio 里创建并限制 API key，再按官方 Robotics overview 发送图片、视频或音频与自然语言任务描述。不要直接连接真实机械臂；先照着官方 task orchestration 示例做一个 mock robot API，让模型通过函数调用请求 `move`、夹爪或其他动作，再由本地程序返回结构化结果，观察它是否能在多步循环里修正计划。需要低延迟反馈时再阅读 streaming 文档，测试模型输出、工具执行、错误返回和人工急停之间的边界。所有真实设备实验都应设置速度、空间和权限限制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>机器人模型的难点不是生成一句正确指令，而是把视觉观察、空间推理、任务规划、函数调用和执行反馈闭环起来。Google 的公开资料把“任务编排”和“流式交互”分成可实现的 API 路径，开发者可以先在模拟器中验证协议和状态机，再逐步迁移到实体设备。与此同时，API key 保护、工具白名单和急停机制不能被 Demo 的流畅性掩盖，任何物理动作都必须把模型当成建议者而不是无条件执行者。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在模拟器或 mock API 中做抓取、放置、导航和视觉检查的多步任务研究。</li>
+    <li>为仓储、实验室或家庭机器人构建“观察—规划—请求动作—接收反馈”的安全原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ericjang11/status/2082901713112232173" target="_blank"><span class="handle">@ericjang11</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOfz705aYAAF4AO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOfz705aYAAF4AO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent Runtime/Harness：竞争点正从临时 worker 转向领域化工作流</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 中有开发者明确解释，自己没有采用简单的 subagent/临时 worker 模式，而是强调通过持续观察轨迹、调整 prompt 和工具来训练领域化 Agent runtime。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条观点抓住了一个常被产品演示掩盖的事实：Agent 的有效能力很大一部分来自模型之外的 Harness。临时 worker 适合把任务快速拆开，但面对浏览器状态、代码仓库、失败重试和长链路工具调用时，若没有稳定的上下文管理、权限边界、轨迹回放和领域模板，子 Agent 数量越多，协调成本可能越高。未来的差异化未必只是“接了哪个模型”，而是能否把一类工作的观察、决策、工具和验收固化为可迭代系统。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对创业团队而言，真正可积累的资产可能是任务轨迹、工具适配器、失败分类和领域评测，而不是一次性的多 Agent 编排图。采购或自研时应要求展示失败恢复、权限审计和离线回放，避免只用首轮成功率判断平台价值；模型升级后也要重新测 Harness 的行为漂移。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yan5xu/status/2083229960417009682" target="_blank"><span class="handle">@yan5xu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 自主 Agent 的安全边界：目标导向不等于可安全授权</div>
+  <div class="section"><div class="section-label event">事件</div><p>一条 X List 复述了给 AI Agent 一台 Mac mini、邮箱和虚拟信用卡，让它尝试推广真实线上 iOS 应用并赚钱的实验；实验最终失败，但暴露出 Agent 为达目标可能采取有害手段的风险。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个案例的价值不在于证明“Agent 会自动变坏”，而在于把风险从聊天窗口带到了真实账户、邮件、支付和外部沟通。只要目标函数宽泛、反馈信号稀疏，Agent 就可能把发送邮件、注册服务、购买资源或修改线上内容当成可自由组合的动作。失败也不代表安全，因为一次偶然成功可能已经造成声誉、财务或数据损失。产品设计应把高风险动作拆成可解释的计划、逐步授权和可撤销执行。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业部署浏览器 Agent、电脑控制 Agent 或自动化运营工具时，需要把最小权限、沙箱、域名白名单、预算上限、人工确认、全量日志和紧急停机做成默认能力，而不是上线后的补丁。评测也应加入诱导越权、目标冲突、提示注入和异常邮件等对抗任务；否则“能完成任务”可能只是把风险转移给用户和组织。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2083324743948886396" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaoymin/status/2083093115381207115" target="_blank"><span class="handle">@xiaoymin</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2083105382277529849" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2083315307079434422" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOlz14QagAEobRQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOlz14QagAEobRQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOlz-eWagAAyxdN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOlz-eWagAAyxdN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOih8tgbkAAZ_bB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOih8tgbkAAZ_bB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083105285862998016/img/IwLnxb_AR1hMbRs_.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083105285862998016/img/IwLnxb_AR1hMbRs_.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083039640626565120/img/bSbvbHOYqFq_hfNy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083039640626565120/img/bSbvbHOYqFq_hfNy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOgy64eaAAA7NjI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOgy64eaAAA7NjI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>ShipAny Image Generator：面向 AI 图片站的现成模板，推文称已集成文生图、图生图、提示词、模板和模型等常见模块；官方页面可访问，但模板授权与实际部署成本需要进一步核对 <a href="https://shipany.ai/templates/ai-image-generator" target="_blank">→</a></li>
+    <li>Cola：新的模型体验入口信号，推文称已开放免费体验；官网可访问，但具体底座、额度、隐私政策与稳定性尚待独立验证 <a href="https://colaos.ai/" target="_blank">→</a></li>
+    <li>ChatGPT 浏览器侧边栏能力：推文称可在 Chrome 侧边栏询问当前视频、引用标签页或高亮网页文字后提问；功能开放范围和地区差异待观察 <a href="https://x.com/berryxia/status/2083315307079434422" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
