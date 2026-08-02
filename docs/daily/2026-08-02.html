@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-02</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-02</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手的方向已经从“单个聊天模型”继续转向可部署的 Agent 工作系统：多人协作 Harness、本地优先 Coding Agent、可验证的 Agent 评测，以及把模型接进真实办公和创作流程。Agent Reach 多源证据包本次运行超时，未生成本日 evidence JSON/summary；因此下文的🛠️项目只采用推文加官方仓库、官网、文档或论文交叉核验，证据不足的新线索统一降级到🌱并标明“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ QM：面向团队的多人 Agent Harness</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Y Combinator 开源的多人 Agent 工作底座，把 Slack 和网页中的个人、频道、项目组织成隔离作用域，并允许同一套核心切换 Pi、OpenCode、Codex 或 Claude Code。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yc-software/qm" target="_blank">https://github.com/yc-software/qm ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备一个可用的云账户和部署目录，进入项目官方 README，执行 npm exec --yes --package=@yc-software/qm@latest -- qm init . --org，让 CLI 生成组织级部署仓库；随后按向导配置数据库、登录方式、连接器和可选的 Slack，再完成部署与验证。第一次实验建议只建一个测试组织和一个成员，先在网页里让 Agent 读一个小型代码仓库或生成一份会议整理，再把同一任务移到 Slack 频道，观察个人作用域、频道作用域、权限和持久化沙箱是否按预期隔离。不要一上来接入生产密钥，先使用 Strict 或需要人工批准的安全姿态。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的关键不是又做了一个聊天界面，而是把“一个人一个 Agent”提升为“一个组织共享 Agent 基础设施”。每个成员和协作空间有自己的记忆、文件、权限、定时任务与持久化沙箱，核心又不绑定单一模型或 Harness。对正在搭企业内部 Agent 的团队来说，这种作用域、连接器和部署层抽象，比单纯追逐模型排行榜更接近真正的生产问题。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Slack 中把财务、法务、工程等重复流程交给不同作用域的 Agent 协作处理。</li>
+    <li>给团队搭建可切换模型供应商的内部研发与知识工作台。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2083382230433620240" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOmpCcZasAArE7k?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOmpCcZasAArE7k?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOkdhV_bQAAOEJ7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOkdhV_bQAAOEJ7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DSCode：DeepSeek 优先的本地 Coding Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DSCode 是一个本地优先、多提供商的终端 Coding Agent，提供会话树、安全补丁、并行 Agent、操作系统沙箱和用量透明度，默认面向 DeepSeek 但也能切换多家模型服务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/thinkany-ai/dscode" target="_blank">https://github.com/thinkany-ai/dscode ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认 Node.js 版本满足官方要求，在终端执行 npm install -g @thinkany/dscode；进入一个可回滚的测试仓库后运行 dscode -C ./repo，首次启动在 TUI 中输入 /login，选择 DeepSeek、OpenAI Codex、Anthropic 或其他已支持的供应商并完成认证。接着先让它做只读任务，例如“扫描项目并列出风险，不要修改文件”，再尝试一个小补丁，让它运行测试并查看 diff。需要更强隔离时保留默认的沙箱策略，网络访问和权限提升都逐项确认；完成后用会话记录、成本统计和 git diff 检查 Agent 到底做了什么。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Coding Agent 只是把不同 API 包在相同聊天壳里，DSCode 的差异在于把 provider-aware 路由、本地 JSONL 会话、原生补丁、并行 Agent 和沙箱放进同一个运行时。官方 README 还明确区分 DeepSeek 的原生 Responses 适配与其他供应商，这让低成本模型试验、跨供应商回退和本地可审计开发变得更容易，而不是被某一家模型锁死。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在个人 Mac 上完成代码理解、补丁生成、测试和 review 的闭环。</li>
+    <li>为开源项目做多模型对比，同时保留本地会话和用量记录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2083428798322852226" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOnSy0jbsAASLjt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOnSy0jbsAASLjt?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WorkBuddy：面向职场流程的多 Agent 工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯 WorkBuddy 是面向办公场景的 AI 工作台，用户用自然语言描述目标后，它可以拆解任务、调用工具并处理文档、表格、演示、数据分析和授权目录中的本地文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cloud.tencent.com/product/workbuddy" target="_blank">https://cloud.tencent.com/product/workbuddy ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方产品页进入下载或试用入口，首次使用先只授权一个测试文件夹，并准备一份小型表格或周报素材。用一句完整目标开始，例如“读取这份销售表，按地区汇总，找出异常值，并输出一页带结论的周报”；在执行过程中检查它拆出的步骤、调用了哪些文件和工具，最后打开结果面板逐项核对数据与生成物。再尝试把同一任务拆成资料检索、数据清洗、文字整理三个并行子任务，比较并行前后的耗时。涉及邮件、云盘或企业知识库时，先使用最小权限和脱敏数据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>WorkBuddy 的价值不在于让用户学习一套复杂 Prompt，而在于把计划、行动、自检和交付物放进同一个办公流程。官方资料同时强调多 Agent 并行、跨文件操作和最终可验证结果，这意味着 Agent 的竞争点正在从“回答得像不像人”转为“能否在权限边界内把跨工具任务真正做完”，更适合非技术岗位试用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自动完成表格汇总、图表分析和周报初稿，再由人复核关键数字。</li>
+    <li>将资料整理、会议纪要、文档改写等跨应用工作串成一次任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2083570173249020350" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Raven：带长期记忆的自进化 Agent Harness</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Raven 是 EverMind 开源的终端优先 Agent Harness，围绕工具、Skills、记忆、沙箱、会话和可复用 Agent Template，让 Agent 能在多次运行中积累可复用能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/EverMind-AI/Raven" target="_blank">https://github.com/EverMind-AI/Raven ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入官方仓库 README 的 Quick Install 段落完成安装，随后运行 raven onboard 配置模型、沙箱、消息渠道和记忆后端；用 raven 或 raven tui 进入交互界面，或者用 raven agent -m "分析这个项目并提出三个可验证改进" 跑一次单任务。建议先在一个独立测试目录中运行，完成后用 raven sessions list 查看会话，用 raven skill list 查看可用 Skills，再试着把一次成功的工作流整理成 Agent Template。需要深度调研时再执行官方文档中的 raven deep-research enable，并用 raven tracing 检查模型、工具和记忆发生了什么。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Raven 把“记忆”从聊天历史升级为能驱动下一次行动的运行时资产：工具、政策、环境、技能和成功轨迹都可以持续演化。它还把深度调研、会话管理、主动提醒和模板化数字员工放在同一生态里。对想研究 Agent 如何从一次性脚本变成长期工作的开发者来说，Raven 是一个比单轮 Demo 更接近真实生命周期的实验对象。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为个人研究、代码维护或资料整理建立可持续改进的数字员工。</li>
+    <li>观察记忆、Skill 和工具策略如何影响跨会话任务质量。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2083358274561417507" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOmIKSgbEAElxBX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOmIKSgbEAElxBX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenArt：在同一画布里生成和编辑图片</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenArt 是面向图片、视频和音频创作的 AI 工作台，支持文字或参考图生成，并在同一画布继续做局部重绘、扩图、换背景、放大和风格调整。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://openart.ai/" target="_blank">https://openart.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网并注册，先进入 Image Generator，输入一个明确的主体、画面关系和风格要求生成多张候选；如果要保持人物或产品一致，上传一张参考图并说明哪些元素必须保留。选中结果后直接进入 Canvas 或 Edit，不要重新开工具，先用 inpaint 修改一个局部，再用 outpaint 扩展画布，最后尝试换背景或放大并下载成品。若使用 ChatGPT 内的 OpenArt 插件，则从官方插件入口安装、授权账户，再在新对话中调用 OpenArt；涉及商用素材时先确认授权与输出限制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“生成”和“返工”放在一个连续工作流里，减少导出、重新上传和上下文丢失。官方页面明确支持参考图、角色一致性、局部编辑、扩图与高分辨率处理，适合把一次好看的随机结果继续加工成广告图、社媒素材或分镜，而不只是生成一张图就结束。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速制作产品海报、社媒封面和营销素材的多轮版本。</li>
+    <li>用参考图维持角色或商品外观，再做局部修图和画布扩展。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2083690276288373127" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ docu.md：把 Markdown 变成可交付文档</div>
+  <div class="section"><div class="section-label event">一句话</div><p>docu.md 是本地优先的 Markdown 阅读与导出工具，能渲染代码、公式和多种图表，并将 AI 生成的 Markdown 一键整理成 DOCX、PDF 或 HTML。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docu.md/" target="_blank">https://docu.md/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网安装适合自己的浏览器扩展、VS Code/Obsidian 插件或移动端版本，然后拖入一个 Markdown 文件、双击本地文件，或直接粘贴一个在线 .md 地址。先检查标题层级、代码高亮、Mermaid/Graphviz 图表和数学公式是否正确，再在预览界面选择导出 DOCX、PDF 或 HTML；如果源文件来自 ChatGPT 或 Claude，建议先让模型输出结构清晰的 Markdown，再用 docu.md 做最后的排版核验。处理含敏感信息的报告时优先使用本地文件和离线流程，导出后打开目标格式检查分页、图片和字体。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它解决的是 AI 生成内容从“能读”到“能交付”的断层。官方项目同时覆盖浏览器、编辑器、笔记应用和移动端，并强调本地处理、图表渲染、可编辑公式及多格式导出。对每天把模型输出变成方案、报告、README 或客户材料的人来说，少一次复制粘贴和手工排版，就能显著降低最后一公里成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将 AI 生成的研究报告、技术文档和 README 导出为正式 PDF 或 Word。</li>
+    <li>在浏览器或 VS Code 中检查 Mermaid、公式和代码后直接分享成品。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2083564306424057895" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ openPangu-2.0-Pro：昇腾 NPU 训练的超大 MoE 模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>openPangu-2.0-Pro 是基于昇腾 NPU 训练的约 505B 参数 MoE 模型，约 18B 参数激活，支持 512K 上下文，并公开了模型卡与部署线索。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/openpangu/openPangu-2.0-Pro" target="_blank">https://huggingface.co/openpangu/openPangu-2.0-Pro ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这不是适合 Mac 直接下载试玩的轻量模型，先在 Hugging Face 模型卡阅读许可证、权重体积、硬件要求和 README，再准备具备昇腾 NPU 与 omni-infer 环境的服务器。按模型卡链接的 openPangu-2.0-Infer 部署说明配置推理框架，先用短提示和小并发完成健康检查，再逐步测试长上下文、批量请求和实际业务输入。若只是想研究能力，不要盲目下载整套权重，可以先阅读技术报告、查看官方推理代码和对比公开评测；部署前确认显存、存储、网络和许可证条件，避免把“开源模型”误解成“个人电脑即装即用”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它同时体现了模型规模、国产加速硬件和推理软件栈的耦合：总参数很大，但 MoE 只激活一部分参数，并将上下文窗口推到 512K。真正值得观察的不只是模型分数，而是昇腾训练、模型格式、推理框架和社区部署能否形成完整链路，这会影响非 NVIDIA 环境下大模型的可获得性与成本结构。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在具备昇腾算力的团队中测试长上下文知识处理和企业级推理。</li>
+    <li>研究 MoE、国产 NPU 训练及大模型部署工具链的协同方式。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2083378163732885902" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOmlYXFa0AAVe2e?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOmlYXFa0AAVe2e?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Supabase Evals：用真实任务评测 AI Coding Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Supabase Evals 是开源的 Agent 评测框架，让 Claude Code、Codex 和 OpenCode 在真实 Supabase 任务上建表、调试 Edge Function 或修复 RLS，并按最终系统状态评分。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/supabase/evals" target="_blank">https://github.com/supabase/evals ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方仓库的 eval 与 experiment 结构，准备 Docker、对应模型供应商凭证和本地测试环境；然后用 pnpm eval -- --eval resolve-dataapi-001-empty-results --experiment claude-code-sonnet-5 跑一个单场景。第一次不要追求横向排行榜，先打开 prompt、scorer、起始状态和 results，确认 Agent 调用了哪些文档、MCP 工具和 CLI。再选两个 Agent 运行同一场景，比较最终数据库状态、测试结果和错误类型；把自己的业务任务复制成独立 eval，接入 CI 做回归，才能判断一次提示词或技能修改是否真的让 Agent 变好。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 质量从“生成的代码看起来不错”推进到“真实环境中的结果是否正确”。官方框架既支持工具模式，也支持带 Docker 和 Supabase CLI 的本地栈，并且可以记录文档检索行为、评分器和回归结果。随着企业越来越多地让 Agent 改数据库和后端，能够复现、比较、回归的评测基础设施会成为发布流程的一部分。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对比不同 Coding Agent 在数据库、权限策略和 Edge Function 任务上的真实完成率。</li>
+    <li>将 Agent 能力回归接入 SDK、插件或内部平台的持续集成流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/supabase/status/2083282155170340898" target="_blank"><span class="handle">@supabase</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOlOFCRW4AABB1K?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOlOFCRW4AABB1K?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Astra：AI 产出十项数学与理论计算机科学新结果</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 公布由内部 Astra 版本模型主导完成的十项数学与理论计算机科学新结果，并为每项结果提供 Lean 形式化材料。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次发布的意义不只是“模型解了十道难题”，而是把结果放进了可审查的证明工程流程。OpenAI 官方列出的领域包括高维球堆积、编码理论、群论、算子代数、量子复杂度、格密码学和极值组合数学；官方同时发布论文、推理说明和 openai/ten-proofs 仓库。Lean 证书不能自动替代数学家对问题建模、定理边界和论文表述的审查，但它把争论从“相信模型的文字解释”推进到“能否由形式化内核复核关键步骤”，这会提高 AI 科研结果的可复现门槛。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种“模型提出候选证明—人类整理—形式系统检查”的链路稳定下来，科研 AI 的评价标准会从答案新颖性扩展到证明可验证性、工具链开放度和失败案例披露。短期内它不会让普通研发团队直接获得自动科学发现能力，因为问题选择、形式化成本和专家复核仍然昂贵；但在密码学、算法、数学软件和形式化验证领域，能够被机器检查的中间产物会更容易进入协作、审稿和后续研究。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2083494076494873046" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google AI Studio：移动端能力转向 Gemini 统一入口</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 放弃单独推出 AI Studio 的 Android/iOS 应用，转而把相关能力并入 Gemini；AI Studio 网页版继续服务开发者和应用原型工作流。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这体现的是产品入口收敛，而不是 AI Studio 能力消失。Google 先前把 AI Studio 的移动端定位成从提示词到代码和应用预览的创作工具，但最新方向是让用户在 Gemini 对话中自然生成临时应用或工作界面，同时保留网页版给需要更强控制的开发者。对用户来说，少安装一个 App、少记一个品牌是好事；对开发者来说，真正要观察的是 Gemini 是否开放足够的导出、运行、权限和数据连接能力，否则“对话中生成应用”可能停留在演示层。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>大厂把独立 AI 工具收回主助手，说明下一阶段的竞争重点是统一身份、上下文、数据和分发入口，而不是不断增加并列 App。这样做能降低产品教育和维护成本，也可能让个人用户更快接触原型生成；代价是平台依赖更强，开发者需要适应一个不断变化的宿主环境，并关注生成应用的持久性、权限隔离、可迁移性与计费边界。AI Studio 网页版是否继续保持面向专业用户的独立能力，将决定这次整合是入口升级还是功能收缩。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2083487065887678834" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2083596965594464471" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tianyi/status/2083519855203078320" target="_blank"><span class="handle">@tianyi</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Hallmark：面向 Claude Code、Cursor 和 Codex 的反 AI 套模板设计 Skill，强调多种版式、主题和 slop 检查，适合观察 AI 前端设计质量控制如何产品化。 <a href="https://github.com/nutlope/hallmark" target="_blank">→</a></li>
+    <li>Grok Imagine API：xAI 正把文字/图片生成视频、编辑和参考素材控制整合成统一视觉 API，开发者可重点观察 1080p、异步任务和成本在真实工作流中的表现。 <a href="https://docs.x.ai/developers/model-capabilities/video/generation" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
