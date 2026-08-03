@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 02 Aug 2026 00:47:55 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 00:48:51 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/03 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-03.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-03.html</guid>
+      <description>今天的主线不是又一个聊天机器人，而是 Agent 正在从“单次对话”变成可长期运行的工作系统：桌面客户端开始把多模型、MCP、Skills、远程控制和记忆装进同一工作台，Codex 也出现了面向长期领域责任与 Agent Team 的组织层。与此同时，DeepSeek V4-Flash 的公开 beta 把模型能力、Harness 和 Responses API 绑在一起，Google TPU 8t/8i 则从硬件层面承认训练与推理已经是两种不同的生意。Agent Reach 证据增强本次运行在限定时间内超时，未生成日期证据包；以下🛠️项目均用本次 X List 推文加官方 GitHub/官网...</description>
+      <pubDate>2026-08-03T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/02 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-02.html</link>

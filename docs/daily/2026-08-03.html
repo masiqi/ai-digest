@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-03</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-03</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线不是又一个聊天机器人，而是 Agent 正在从“单次对话”变成可长期运行的工作系统：桌面客户端开始把多模型、MCP、Skills、远程控制和记忆装进同一工作台，Codex 也出现了面向长期领域责任与 Agent Team 的组织层。与此同时，DeepSeek V4-Flash 的公开 beta 把模型能力、Harness 和 Responses API 绑在一起，Google TPU 8t/8i 则从硬件层面承认训练与推理已经是两种不同的生意。Agent Reach 证据增强本次运行在限定时间内超时，未生成日期证据包；以下🛠️项目均用本次 X List 推文加官方 GitHub/官网人工交叉核验，证据不足的项目降级到🌱并明确标注。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ CodePilot：多模型 AI Agent 桌面客户端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个跨 macOS、Windows、Linux 的多模型 AI Agent 桌面客户端，可连接多家模型服务，管理 MCP 与 Skills，并提供工作区记忆、任务调度和手机远程控制。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/op7418/CodePilot" target="_blank">https://github.com/op7418/CodePilot ↗</a></p>
+    <p><a href="https://www.codepilot.sh/docs" target="_blank">https://www.codepilot.sh/docs ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub Releases 下载对应系统的安装包，首次启动后进入 Settings &gt; Providers，填入 Anthropic、OpenRouter、国产模型、Ollama 或自定义兼容端点的凭据；新建会话时选择工作目录、Code/Plan/Ask 模式和模型。然后到 MCP 页面添加 stdio、SSE 或 HTTP 服务，到 Skills 页面安装或维护技能。想把它变成真正的编码工作台，可额外安装 Claude Code CLI，再测试文件编辑、终端和 Git 操作；如果只想体验聊天、生成 UI、图片或定时任务，则不必安装 CLI。macOS 未公证版本首次启动可能需要在系统安全设置中允许。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“模型选择”从单一聊天窗口提升成了可切换的工作层：README 明确列出 17+ 提供商、MCP/Skills、远程 Bridge、持久化 Assistant Workspace、任务调度和 token 成本统计。更关键的是数据默认落在本机 SQLite，适合希望把多个模型、工具和长期工作偏好放在同一个桌面入口的人。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在同一项目里按任务切换不同模型，并保留会话上下文与成本记录。</li>
+    <li>把 MCP、Skills 和定时任务组合成个人开发或内容生产工作台。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2083827624070234507" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOs5QRYakAAPjoS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOs5QRYakAAPjoS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CodexLoom：把 Codex 线程织成长驻 Agent Team</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个基于 Codex 的本地优先、自托管工作环境，把线程变成拥有稳定身份、领域职责、Profile、协作消息和外部接口的长期 Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yan5xu/codexloom" target="_blank">https://github.com/yan5xu/codexloom ↗</a></p>
+    <p><a href="https://codexloom.ai/zh-cn/" target="_blank">https://codexloom.ai/zh-cn/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 Codex CLI 并登录 ChatGPT 账号，再克隆仓库执行 `make release`，运行 `./bin/codex-loom`，随后打开 `http://localhost:4870`。第一次不要急着搭复杂组织，点击 New agent，给 Agent 一个稳定名称和工作目录，写下最小的 Identity、Domain、Scope，再发送一项真实的长期任务。熟悉 WebUI 后，可用 `./bin/loom agent create research --cwd /path/to/repo` 创建 Agent，用 `loom profile set` 设置责任边界，再通过 `loom thread send` 交办工作；Topics、Messages、Artifacts 和 Needs You 用来留下协作证据与人工决策点。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有重新实现 Codex 的运行时，而是把已有线程提升为长期责任单元，强调稳定身份、边界、压缩后的连续性、Agent 间消息和受治理的外部交付。这个思路比“每个任务开一个新 Agent”更接近团队软件：上下文、偏好和判断可以沉淀，但外部权限、信息披露和人工批准仍被单独建模。仓库也明确说明它是 Elastic License 2.0 的 source-available 项目，不应直接称为 OSI 开源。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给研究、工程、运营等稳定领域各配置一个长期 Agent，减少重复交接背景。</li>
+    <li>在 Feishu、Slack 等外部协作环境中，为团队提供有边界的 Interface Agent。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2083910690134475039" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOhQ1robYAAwbuj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOhQ1robYAAwbuj?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Make Interfaces Feel Better：把界面高级感变成可执行 Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 Claude Code、Codex 等 Agent 的前端设计审查 Skill，把动效、排版、图标、悬停态、光学对齐、圆角、阴影和点击区域等细节整理成可执行规则。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/jakubkrehel/make-interfaces-feel-better" target="_blank">https://github.com/jakubkrehel/make-interfaces-feel-better ↗</a></p>
+    <p><a href="https://skills.sh/jakubkrehel/make-interfaces-feel-better" target="_blank">https://skills.sh/jakubkrehel/make-interfaces-feel-better ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在项目目录执行 `npx skills add jakubkrehel/make-interfaces-feel-better`，安装时保留完整的 Skill 目录，不要只复制 `SKILL.md`，因为它还引用 typography、surfaces、animations、icons 和 performance 等文件。打开 Claude Code 后运行 `/make-interfaces-feel-better quick` 做快速检查，或运行 `/make-interfaces-feel-better full pricing page` 指定页面；在 Codex 中使用 `$make-interfaces-feel-better full pricing page`。把输出中的优先级、具体位置和建议改动交给 Agent 执行，再重新跑一次 review 验证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有把“好看”停留在审美形容词，而是把容易被忽略的微交互和视觉系统拆成可检查、可定位、可复验的规则。对 Vibe Coding 来说，这正好补上“代码能跑但界面像模板”的缺口；GitHub README 还明确要求保留完整目录，说明它把可复现的审查上下文当成了产品的一部分。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 AI 生成的落地页、后台和 SaaS 组件上线前做一轮系统化 UI 复查。</li>
+    <li>把团队的排版、动效、命中区域和可访问性习惯固化为 Agent 可重复执行的检查流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2083886399586222358" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOtznwpbIAAvBVT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOtznwpbIAAvBVT?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole：macOS 一体化清理、卸载与系统监控 CLI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 macOS 开源终端工具，把缓存清理、应用卸载、磁盘分析、系统优化、项目产物清理和实时状态监控放进一个二进制。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole" target="_blank">https://github.com/tw93/Mole ↗</a></p>
+    <p><a href="https://mole.fit/" target="_blank">https://mole.fit/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 14 及以上可先执行 `brew install mole`，也可按 README 的安装脚本安装；第一次不要直接清理，先运行 `mo clean --dry-run` 或 `mo uninstall --dry-run` 查看候选项，再用 `mo history` 检查历史记录。需要找大文件时运行 `mo analyze`，查看机器状态用 `mo status`，清理 Node、Rust、Build 等开发产物用 `mo purge --dry-run`。确认范围后再执行实际操作；README 特别提醒 clean、uninstall、purge、installer 和 remove 都可能产生破坏性文件操作，建议先预览、必要时加 `--debug`，并利用 whitelist 保护长期保留路径。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是只做“删缓存”的脚本，而是把卸载残留、磁盘空间、开发产物和系统状态放进统一 CLI；同时提供 dry-run、路径校验、受保护目录、白名单、操作日志和高风险确认。对于经常被模型或开发工具塞满缓存、node_modules、target 的 Mac，机器可读的 `--json` 输出也方便接入自动化，而不是依赖截图判断。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在开发机上定期预览并清理大型缓存、安装包和构建产物。</li>
+    <li>卸载应用时检查启动项、偏好设置和残留文件，并保留可回溯的操作记录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2083916734214320295" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOuPNQjacAAMrkN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOuPNQjacAAMrkN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SpectralQuant：面向长上下文推理的 KV Cache 压缩</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Python/PyTorch 研究实现，通过校准识别 KV Cache 中更有信号的谱结构，尝试在保持质量的同时降低推理显存与缓存开销。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Dynamis-Labs/spectralquant" target="_blank">https://github.com/Dynamis-Labs/spectralquant ↗</a></p>
+    <p><a href="https://github.com/Dynamis-Labs/spectralquant_package" target="_blank">https://github.com/Dynamis-Labs/spectralquant_package ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>它更适合有 NVIDIA CUDA 环境的开发者，不是普通 Mac 上即可无痛运行的桌面应用。先执行 `git clone https://github.com/dynamis-labs/spectralquant.git`，进入目录后运行 `pip install -e ".[dev]"`，按 README 需要准备 TurboQuant baseline，再用 `PYTHONPATH=src python experiments/run_memory_efficiency.py --quick` 跑快速实验。仓库要求 Python 3.10+、PyTorch 2.2+ 和 CUDA GPU；如果只想尝试封装包，可查看 package 仓库与 PyPI 版本，但应先固定模型、上下文长度和质量指标，不能把 README 的实验结果直接当成所有模型的生产保证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它抓住的是 Agent 推理的现实瓶颈：长上下文不只贵在 token 单价，也贵在 KV Cache 占用的显存和带宽。公开仓库声称跨多种模型观察到 Key 的有效谱维度只占 head dimension 的约 3–4%，并给出 5.95×压缩、相近困惑度和更低延迟的实验结果；这些仍应按脚本、数据和硬件复现，但路线比简单降低所有维度精度更有研究价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在长上下文 RAG、代码 Agent 和多轮推理服务中评估显存压缩收益。</li>
+    <li>用固定模型与固定 prompt 对比 KV Cache 压缩前后的质量、延迟和并发。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/grok/status/2083758211245527452" target="_blank"><span class="handle">@grok</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ HushSnap：把截图与本地 OCR 串成一条 Windows 工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Windows 截图工具，按热键选区后把图片放进剪贴板和缩略图流程，点击缩略图即可本地 OCR、编辑、脱敏或拖拽保存。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tcita/HushSnap" target="_blank">https://github.com/tcita/HushSnap ↗</a></p>
+    <p><a href="https://apps.microsoft.com/detail/9p0qzv5z8njz" target="_blank">https://apps.microsoft.com/detail/9p0qzv5z8njz ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Windows 用户可从 Microsoft Store 安装；启动后在系统托盘中找到 HushSnap，先在 Settings &gt; General、Capture、OCR 检查语言、热键、缩略图停留时间和自动复制设置。默认热键是 Alt+Q，框选屏幕后可直接粘贴图片；点击右下角缩略图触发 OCR，右键则可以静默复制文字或保存到桌面。需要分享敏感截图时，用 Edit 进入编辑器，先打码、裁剪或标注，再复制或另存为 PNG/JPEG/BMP。若要从源码调试，按 README 安装 requirements 后运行 `python HushSnap.py`。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把截图后的 OCR、编辑和脱敏放在本地完成，README 明确说明截图与识别文字不会离开设备；OCR 使用 RapidOCR 调用 PP-OCRv6，统一模型覆盖 50 种语言。对处理合同、报错、表格和隐私截图的人来说，“截取—识别—编辑—复制”比打开多个应用更短，同时本地化也降低了把敏感图像上传到云端的风险。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从网页、PDF 或远程桌面截图后快速提取多语言文字。</li>
+    <li>在把截图发到邮件、工单或群聊前进行局部打码和标注。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2083820955718103466" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ GitHub Stars Curator：把 Star 仓库整理成可维护清单</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个兼容 Codex、Claude Code 等 Agent Skill 的 GitHub Star 整理工具，支持读取 README、分类、漂移审计、计划审阅和安全写回。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Leexunhuan743/github-stars-curator" target="_blank">https://github.com/Leexunhuan743/github-stars-curator ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先把仓库克隆到 Agent 的 skills 目录，并确认本机有 Python 3、已登录且具备 user scope 的 `gh`，再按 README 的顺序执行 `fetch_star_inventory.py`、`fetch_readmes.py` 和分类记录脚本。真正写回 GitHub 前，先生成 offline plan，再生成 online plan，检查 `planHash` 和 listsToRemove，最后只对明确批准的计划执行 `--apply --approved-plan`。第一次建议只处理新增 Star，跑完仓库自带的 `cd scripts &amp;&amp; python -m pytest tests/ -q`，确认 28 个离线测试通过后再扩大范围；不要让 Agent 直接根据仓库名批量移动或删除列表。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它解决的是“收藏越来越多但永远找不到”的长期维护问题，而且把 Agent 自动化最容易出事故的写回环节拆成离线计划、云端漂移审计、哈希校验和人工批准。README 还强调 unmanaged lists 默认保留、意外移除会暂停，这种安全模型比一次性生成一个分类报告更适合真实的 GitHub 账户。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将 AI、Agent、开发工具和自托管服务从长期 Star 清单中重新归档。</li>
+    <li>在不覆盖手工修改的前提下，周期性同步新增与移除的仓库。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2083912761491193975" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MakePlay：一句话生成可玩的浏览器游戏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个在线 AI 游戏构建器，用户用自然语言描述玩法，系统生成美术、音乐、代码和测试，并直接给出可在浏览器运行和分享的游戏。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://makeplay.ai/" target="_blank">https://makeplay.ai/ ↗</a></p>
+    <p><a href="https://makeplay.ai/ai-game-maker" target="_blank">https://makeplay.ai/ai-game-maker ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网进入 Studio，用 Google 或邮箱免费登录，在输入框写一个足够具体的玩法，例如“一个能二段跳、躲避尖刺的柴犬像素跑酷游戏”，然后观察 AI 规划、绘图、作曲、写代码和自测的过程。第一版生成后直接在浏览器试玩，再用聊天继续提出改动，例如增加 Boss、关卡、规则或改变美术风格；满意后点击发布，得到一个公开链接，其他人无需安装或登录即可游玩。官方页面称创建、发布、游玩和分享均免费，但仍应把它当原型工具，复杂玩法要逐步拆成小改动验证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Vibe Coding 从网页和脚本扩展到“可玩作品”的完整闭环，不只生成一个静态 mockup，而是把美术、音乐、规则、代码和自测放到同一次创作里。对没有游戏引擎经验的人，门槛从学习编辑器降到表达玩法；对开发者，它也可以先快速验证一个能玩的原型，再决定是否迁移到正式引擎。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为课堂、活动或社群快速制作可分享的小游戏原型。</li>
+    <li>在正式投入美术和工程资源前验证玩法、节奏与玩家反馈。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2083798020253274484" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOsjMjxaIAA0B3E?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOsjMjxaIAA0B3E?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083039640626565120/img/bSbvbHOYqFq_hfNy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083039640626565120/img/bSbvbHOYqFq_hfNy?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DeepSeek V4-Flash 0731：模型能力开始与 Harness、协议一起交付</div>
+  <div class="section"><div class="section-label event">事件</div><p>DeepSeek 官方更新日志宣布 V4-Flash API 进入 public beta，API 模型名仍为 `deepseek-v4-flash`，同时原生支持 Responses API 并适配 Codex；官方测试还明确使用了即将发布的 DeepSeek Harness minimal mode。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次变化的重点不是简单增加参数规模，而是把“模型本身能做什么”与“模型如何被调用”放在同一发布单元里。官方说明 0731 与 Preview 保持相同架构和规模，主要做了再训练，却在 Agent、Terminal、工具调用相关测评上强调明显提升；这让 Harness 不再只是外围 prompt 模板，而成为模型能力呈现的一部分。对开发者而言，使用旧模型名即可切到新版本，同时还要注意 Responses API 的支持范围、流式事件、工具参数和 Codex 配置是否真正兼容，不能只看模型目录名称。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型竞争将从单项 benchmark 继续向“模型 + Harness + 协议 + 运行时”的整体交付迁移。低价模型如果在常见 Agent 工作流里减少循环次数、工具失败和上下文浪费，实际任务成本可能比单 token 价格更重要；客户端和网关也需要为版本切换、Responses 事件、工具调用和回滚准备回归测试。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2083723034788299074" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google TPU 8t/8i：训练与推理在硬件层面正式分叉</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 发布第八代 TPU 的 8t 与 8i 两套系统，分别面向大规模预训练和低延迟采样、服务与推理。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Google Cloud 官方技术文章给出的逻辑很清楚：训练需要大规模吞吐、嵌入访问和网络扩展，推理则更受 KV Cache、内存带宽、同步和尾延迟约束。TPU 8t 采用更偏训练的 3D torus、SparseCore 和 FP4 路线，TPU 8i 则增加片上 SRAM、采用面向服务的网络并加入 Collectives Acceleration Engine，以降低多步推理中的等待。它们仍共享 Google 的软件栈，可接 JAX、PyTorch、vLLM、SGLang 等，但硬件不再强求“一颗芯片覆盖所有阶段”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会把 AI 基础设施的比较单位从“某 GPU/TPU 峰值算力”推向按工作负载拆分的系统成本：训练集群看有效吞吐、网络与数据供给，Agent 服务看并发、KV Cache、同步延迟和每任务成本。云厂商可能进一步推出训练、后训练、推理、世界模型各自优化的实例，创业团队在选型时也要先测自己的 workload，而不是只看通用榜单。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2083829267797041580" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083828088614612992/img/ew4j81c8J9wWtMf3.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083828088614612992/img/ew4j81c8J9wWtMf3.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOk8Nd7WAAEwgjA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOk8Nd7WAAEwgjA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Opus 5《指环王》3D 测试：从静态生成走向可反馈环境</div>
+  <div class="section"><div class="section-label event">事件</div><p>Karpathy 公开描述了一个新测试：给 Opus 5 一段《指环王》开头和约 100 万 token 预算，让它用 JavaScript/Three.js 生成多个 3D 渲染版本；模型运行约两小时并写出数千行代码，结果还提供了可在浏览器中玩的版本。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个案例的价值不在于“生成一个更炫的网页”，而在于测试环境允许 Agent 连续写代码、运行、观察结果并迭代。代码 Agent 有编译器、测试和日志作为反馈，而 3D 世界还需要把视觉效果、交互和叙事目标变成可检查的环境信号；因此它和近期围绕 Harness 的讨论是同一条线。单次 demo 不能代表通用智能，尤其不能忽略成本、失败次数和人工挑选，但它比固定 SVG 图片题更接近真实创作任务的反馈回路。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型评测会越来越多地从一次性输出转向长任务完成度，包括环境交互、连续修复、预算控制和结果可玩性。对应用开发者来说，真正的差异可能来自“能否构造可验证的任务环境”：如果每一步都有可观测反馈，Agent 才有机会在不增加模型规模的情况下提高成功率；同时也必须记录 token、时间和人工干预，避免把精心剪辑的演示误当成稳定能力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/karpathy/status/2083749667410727319" target="_blank"><span class="handle">@karpathy</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/grok/status/2083806639996436632" target="_blank"><span class="handle">@grok</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/askalphaxiv/status/2083255427421134891" target="_blank"><span class="handle">@askalphaxiv</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/askalphaxiv/status/2082178708425847187" target="_blank"><span class="handle">@askalphaxiv</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2083596965594464471" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2083706942011429094" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2083704964233462075" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083744791876292608/img/tWEKnM_bdE_nlfYD.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083744791876292608/img/tWEKnM_bdE_nlfYD.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOk1xKIXAAAhcP6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOk1xKIXAAAhcP6?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOVifcOWQAAA4MP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOVifcOWQAAA4MP?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>OpenAI Agent 可发现性：Simon Willison 建议公开系统提示词与工具描述，以改善高级用户对 Agent 能力的发现和教学；后续看厂商是否把“工具目录与能力说明”当成正式产品层。 <a href="https://x.com/simonw/status/2083706942011429094" target="_blank">→</a></li>
+    <li>ChatGPT Work / ChatGPT Sites：推文提到移动端和网页端 Work 具备浏览器、截图，并可将网页应用部署到 Cloudflare Workers；值得观察它与现有 Agent、代码执行和部署产品的边界如何变化。 <a href="https://x.com/simonw/status/2083704964233462075" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
