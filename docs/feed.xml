@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 03 Aug 2026 00:48:51 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 00:45:30 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/04 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-04.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-04.html</guid>
+      <description>今天的主线不是单一模型刷榜，而是“模型开放 + Agent 工作流产品化”同时加速：Qwen3.8-Max 与 MiniMax H3 接连把长任务、多模态和视频能力推向开发者，另一边则出现了把语音、屏幕操作、命令输出和网站 SEO 直接封装成 Agent 技能的新工具。Agent Reach 多源证据包本次在限时内未产出，因此可上手条目均改用本次推文与官方仓库/官网手工核验，证据较弱的新线索明确降级到🌱，不把猜测当结论。</description>
+      <pubDate>2026-08-04T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/03 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-03.html</link>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-04</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-04</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线不是单一模型刷榜，而是“模型开放 + Agent 工作流产品化”同时加速：Qwen3.8-Max 与 MiniMax H3 接连把长任务、多模态和视频能力推向开发者，另一边则出现了把语音、屏幕操作、命令输出和网站 SEO 直接封装成 Agent 技能的新工具。Agent Reach 多源证据包本次在限时内未产出，因此可上手条目均改用本次推文与官方仓库/官网手工核验，证据较弱的新线索明确降级到🌱，不把猜测当结论。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ SKI：给 Claude Code / Codex 接上本地双向语音</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款面向编程 Agent 的桌面语音界面，把说话转成指令，也把 Agent 的回答读出来，官方定位是 Mac 与 Windows 本地运行。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://heyski.io/" target="_blank">https://heyski.io/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官网下载安装包，Mac 用户下载 DMG 后拖入应用程序；首次运行按提示选择麦克风、语音和全局快捷键，并授予系统要求的麦克风或辅助功能权限。随后在 SKI 的 Agent 连接入口选择 Claude Code、Codex 或其他已支持的编码 Agent，进入一个实际代码仓库，用语音下达“读取这个项目、实现一个小功能、运行测试”等连续指令，再观察 Agent 的文字与语音反馈。建议先用一个可回滚的练习仓库验证识别准确率、打断回复和项目切换，再决定是否用于生产代码。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把语音停在“听写到输入框”，而是试图闭合“说话—Agent 执行—语音回答”的回路；官网还强调语音识别和合成在设备侧完成、音频不上传。对长时间使用 Claude Code 或 Codex 的开发者，这种交互可能减少频繁在编辑器、终端和聊天窗口之间切换的成本，但本地识别质量和权限边界仍应先实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>双手在键盘或设备调试上时，用语音让编码 Agent 查询日志、改代码、跑测试。</li>
+    <li>在代码评审或方案推演时，用连续口述快速形成任务，再听取 Agent 的进度与结果摘要。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2084305449373811047" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Microsoft Skill Recorder：把一次屏幕操作整理成可复用 Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>微软开源的桌面应用，记录一次真实工作过程，再借助 GitHub Copilot CLI 重建“意图 + 有序步骤”，生成可复用的 SKILL.md 或自动化流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/microsoft/skill-recorder" target="_blank">https://github.com/microsoft/skill-recorder ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库的 Releases 页面，进入最新版本并复制对应平台的固定版本安装命令；它是 source release，会在本机下载固定 Node.js 运行时并构建指定提交，不需要把应用全局安装。首次在 macOS 使用时授予 Screen Recording 权限，点击 Record 后完整做一遍任务，可选录入旁白；结束后点击 Analyze，按提示登录具备 Copilot 权限的 GitHub 账号，检查它重建的意图与步骤，手动修正不准确部分，最后从已确认的分析生成 Skill 或 Automation。先用低敏感、可重复的表单或报表流程测试，别直接录入含密钥和客户数据的任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的关键不是机械回放鼠标坐标，而是把一次操作抽象成可迁移的目标和步骤，并优先让 Agent 使用 gh、web_fetch 等原生工具。这使“专家做一次、Agent 学会一类任务”更接近可维护的技能工程；同时，录制数据在分析时会上传到 GitHub Copilot 处理，隐私边界与人工复核必须纳入上线流程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把内部运营、数据整理或发布流程从屏幕演示沉淀为团队可复用的 Skill。</li>
+    <li>为定时任务建立 Automation，减少只依赖某个员工记忆的重复操作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2084119569036099874" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ RTK（Rust Token Killer）：压缩命令输出，降低 Agent 上下文消耗</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Rust 编写的 CLI 代理，会在命令结果进入 LLM 上下文前做过滤和压缩，官方 README 称常见开发命令可减少 60%—90% 的输出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/rtk-ai/rtk" target="_blank">https://github.com/rtk-ai/rtk ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 直接执行 `brew install rtk`，或者按仓库安装脚本安装；安装后运行 `rtk init -g` 为编码 Agent 初始化原生 hook，再重启 Claude Code 等客户端。用 `rtk init --show` 检查配置，先在一个小项目里执行 `rtk gain` 或 `rtk discover` 查看可压缩的命令类型，再运行 git、测试、包管理和日志命令，对比原始输出与 Agent 实际收到的摘要。遇到过滤不完整的命令，保留原始 shell 路径作为兜底，不要为了省 token 隐藏错误日志或安全审计信息。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它针对的是 Agent 工作流里很容易被忽略的瓶颈：命令输出往往为人类可读而冗长，却会持续吞噬上下文窗口。RTK 采用单一 Rust 二进制、低额外开销并覆盖大量常见命令，属于能直接插入现有编码流程的基础设施；但压缩器的正确性比节省比例更重要，生产使用应抽样核对失败信息、退出码和关键 diff 是否仍可见。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长时间运行测试、git 操作或日志查询时，减少 Agent 反复读取冗余终端输出。</li>
+    <li>在多 Agent 或长任务会话中控制上下文增长，降低因窗口挤满而频繁压缩的概率。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2083938373631377821" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SindriCAD：面向 3D 打印的开源参数化 CAD</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个正在 beta 阶段的跨平台参数化实体建模器，支持 Linux、Windows 和 macOS，主打可编辑历史树与 3D 打印工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MakerViking/sindricad/releases/tag/beta" target="_blank">https://github.com/MakerViking/sindricad/releases/tag/beta ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从仓库 README 的 latest beta release 下载对应的 macOS、Windows 或 Linux 安装包；macOS 版本目前可能需要对未签名应用进行确认，重要文件先保留备份。打开后从二维草图开始，尝试拉伸、旋转、放样、圆角、倒角或阵列，并在 feature tree 中修改早期尺寸，观察后续特征是否随历史重建。完成一个简单支架后，按目标打印机导出 STL 或 3MF；如果需要跨 CAD 协作，再测试 STEP 导出。它仍是 beta，建议先用可重新建模的小零件验证稳定性，不要把唯一的生产设计直接迁移进去。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把模型当作一次性三角网格，而是围绕 OpenCASCADE 与 build123d 做历史化实体建模，修改一个早期参数时后续孔位、圆角和壳体可以随意图重建。对 3D 打印用户来说，免费、开源、跨平台和本地文件是很实际的组合；但项目明确处于持续开发期，功能覆盖、兼容性和未签名安装风险都需要用自己的零件验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为 3D 打印制作需要反复改尺寸的支架、外壳、夹具和连接件。</li>
+    <li>学习参数化建模，并以开放格式把设计交给其他 CAD 或切片器继续处理。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2084375197617098894" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO0wMOoa8AAyBrb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO0wMOoa8AAyBrb?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PixelRAG：不把文档先压扁成纯文本的视觉 RAG</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源视觉 RAG 管线，把 PDF 页面渲染成图像块并用视觉模型检索，尽量保留表格、图表和版式信息。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/YonasBefirdu/pixelrag-complete" target="_blank">https://github.com/YonasBefirdu/pixelrag-complete ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库并按 README 安装依赖，先执行 `python download_models.py` 下载模型，再用 `python render.py path/to/report.pdf` 把 PDF 渲染成页面块，接着运行 `python index.py` 建立 FAISS 索引，最后用 `python query.py "你的问题"` 查询。首次实验可选一份包含表格和图表的公开报告，在 `.env` 中配置 OpenRouter、Gemini、Hugging Face、Groq 或 NVIDIA 等支持的提供方，然后把同一个问题分别交给视觉检索管线和普通文本 RAG，对照答案是否保留了空间关系、图例和表格列含义。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统 HTML/PDF 抽取常把表格展平成行、让图表信息消失，PixelRAG 选择保留页面视觉结构，再用视觉嵌入和重排找相关区域。它的仓库规模和生态成熟度仍有限，不能直接当作生产级方案，但非常适合做一个可复现的 A/B 实验：在文档问答中，版式信息究竟是不是准确率瓶颈，以及单向量检索和视觉重排能否在成本与效果之间取得平衡。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>检索财报、论文、投研材料中依赖图表和表格布局的事实。</li>
+    <li>对比文本 RAG 与视觉 RAG 在复杂 PDF、扫描件和产品手册上的差异。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2084245013484142649" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOy5yyfaYAAH2Wp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOy5yyfaYAAH2Wp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-seo：面向搜索与 AI Search 的 Agent SEO 技能</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个可安装到 Codex、Claude Code、Cursor 等兼容客户端的 SEO Agent Skill，覆盖技术审计、搜索意图、迁移检查和 AI Search 可见性诊断。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-seo" target="_blank">https://github.com/joeseesun/qiaomu-seo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在有 Node.js 的项目目录执行 `npx skills add joeseesun/qiaomu-seo`，再用 `npx skills add joeseesun/qiaomu-seo --list` 确认技能已被发现。打开一个测试网站或本地站点，让编码 Agent 先只读审计 URL、robots、sitemap、canonical、结构化数据和内部链接，要求它把每条结论标成直接观察、合理推断或缺少证据；确认问题后，再明确授权它修改网站代码，并让它返回变更记录、测试结果和回滚方式。不要把“AI 搜索会引用”当作默认承诺，先用真实抓取与站长工具数据验证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是简单检查 title 长度或关键词密度，而是把抓取、渲染、可索引性、搜索意图、站点架构和迁移风险放进一个 Agent 工作流，并强调区分影响与置信度、不编造流量和排名。这个项目刚公开不久，适合尽早试用和反馈；真正的价值取决于它能否在真实站点上给出可验证的修复，而不是生成一份漂亮但不可执行的 SEO 清单。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>网站上线前做技术 SEO、sitemap、canonical 和 JavaScript 渲染排查。</li>
+    <li>改版或域名迁移时生成 URL 映射、重定向与回滚检查清单。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2084220465921609784" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOyib5DboAA4FzX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOyib5DboAA4FzX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOyiwyyasAAaslT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOyiwyyasAAaslT?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole：一条命令管理 Mac 清理、卸载与系统状态</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源 macOS 终端工具，把清理缓存、卸载残留、磁盘分析、系统优化和实时状态监控整合到单个 CLI。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole" target="_blank">https://github.com/tw93/Mole ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 上先执行 `brew install mole`，然后运行 `mo --version` 确认版本。第一次不要直接删除文件，先用 `mo analyze` 查看磁盘占用，再用 `mo uninstall --dry-run` 预览某个应用及其残留；确认路径后再执行对应操作。日常可从 `mo clean` 清理缓存和已卸载应用留下的文件，用 `mo installer` 检查下载目录中的安装包，并在任何破坏性操作前阅读预览和日志。若只想观察 CPU、内存、磁盘和网络，先使用状态/分析命令，不要把“优化”命令当成无条件安全的加速按钮。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Mole 把原本分散在 CleanMyMac、AppCleaner、DaisyDisk 和系统监控工具里的常用任务压到一个免费开源二进制中，而且仍可在终端里审阅和自动化。它已经形成较大的社区与持续发布节奏，适合 Mac 用户马上体验；不过清理和卸载天然带副作用，项目 README 也建议先 dry-run，重要文件与系统目录必须人工复核。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定期检查大文件、安装包、缓存和已卸载应用残留，释放本地磁盘。</li>
+    <li>用终端或脚本把开发机维护、状态查看和卸载流程标准化。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2083916734214320295" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOuPNQjacAAMrkN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOuPNQjacAAMrkN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ShipAny Voice Agent：对话式音频 Agent SaaS 模板</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ShipAny 新增的模板方向，用对话和多步骤工具调用生成、转录或处理音频，并把 OpenAI、ElevenLabs 等供应商接入到可继续开发的 AI SaaS 工程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://shipany.ai/" target="_blank">https://shipany.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在官网的模板区查看 ShipAny Voice Agent 的产品页、价格和获取方式；它不是默认免费的开源仓库，按页面完成会员或模板购买后取得代码。进入项目后按文档配置 OpenAI、ElevenLabs 等音频服务商的 API key，先跑通一个“输入主题—生成语音—返回音频”的最小流程，再让 Claude Code 或其他编码 Agent 修改提示词、存储、队列和前端页面。上线前要限制密钥权限、增加失败重试和音频时长上限，并用一组固定样本检查转录错误、延迟、费用和版权风险。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把语音能力从一次性 API 调用提升到带对话状态与工具调用的产品骨架，适合验证有声书、朗读、播客和垂直语音助手等想法。价值不在“几分钟上线”的宣传语本身，而在预接好的认证、计费、存储和 Agent 技能能否减少样板工程；模板的商业授权、供应商费用和实际可扩展性需要购买前仔细核对。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速搭建朗读、有声书、播客摘要或语音客服的原型。</li>
+    <li>为特定行业接入音频生成、转录、审核和多步骤业务工具调用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2084182555486802255" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOx_nWbbYAAalNA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOx_nWbbYAAalNA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Qwen3.8-Max：旗舰模型先开放 API，权重随后开源</div>
+  <div class="section"><div class="section-label event">事件</div><p>阿里在 2026 年 8 月 3 日发布 Qwen3.8-Max；官方资料称其为 2.4 万亿参数旗舰模型、支持最长约 100 万 token 上下文，目前可通过 Alibaba Cloud Model Studio API 使用，模型权重计划在下一周发布。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次发布的看点不只是参数规模，而是把“长周期自主工作”作为主要叙事：推文提到编程、办公、长任务执行和多模态理解，阿里官方则将其定位为可处理长文档、视频等输入的多模态基础模型。需要把内部演示与外部可复现能力分开看，尤其是 16 天自主编程这类指标，等权重和公开评测出现后才适合判断泛化程度。对开发者而言，现在可以先用 API 测试真实任务，下一周再关注开放权重是否兑现、许可证和部署成本。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果权重按计划开放，Qwen Max 将从“只能调用的旗舰 API”变成可被社区复现、微调和接入 Agent 框架的基础模型，可能进一步压低长上下文与多模态任务的调用门槛。对国内模型厂商来说，闭源 API、开源权重和工作平台之间的组合会成为新的竞争结构；对使用方来说，真正的比较维度会从单轮榜单转向持续运行成本、工具调用稳定性、上下文管理和企业数据边界。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2084139327588802764" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOxZmDRaYAA6hRP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOxZmDRaYAA6hRP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOw1F2ebgAAkpJJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOw1F2ebgAAkpJJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 MiniMax H3：视频模型把“开源”推进到音视频一体化</div>
+  <div class="section"><div class="section-label event">事件</div><p>MiniMax H3 在本次抓取窗口内正式开放模型权重与模型卡，官方称其可统一理解文本、图片、视频和音频，并生成带原生立体声的最高 2K、最长 15 秒视频。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>H3 的开源并不等于所有链路都已本地化。官方模型卡给出 H3-Base 的两类任务检查点，支持文生音视频、首尾帧和多模态参考输入；但负责复杂上下文整理的 H3-Context-IR 仍依赖托管 API，稀疏注意力实现也尚未随首版完全开放。普通家庭机器很难直接承担完整模型，比较现实的实验路径是先用 Hugging Face 下载所需 checkpoint，在有足够显存的环境测试 768p，再把 2K 官方流程与本地部分拆开评估。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>它会加速视频生成从“云端黑盒效果”走向可研究、可改造的模型组件，尤其是原生音频和多模态参考输入，为广告、短片和交互内容提供更完整的实验基座。但社区需要同时面对 499GB 级别仓库、显存门槛、社区许可证的地域限制，以及部分关键模块依赖 API 的现实。短期更可能出现围绕工作流、ComfyUI 节点和量化部署的生态，而不是人人都能在笔记本上运行完整 H3。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2084120898429407464" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084105994301501440/img/CSEfiQF3Na0AEs9h.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084105994301501440/img/CSEfiQF3Na0AEs9h.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 隐式推理：只监控可见思维链可能不足以做安全审计</div>
+  <div class="section"><div class="section-label event">事件</div><p>本次列表中的一条论文解读指出，前沿模型可能在输出 token 中不留下完整可解释痕迹，却仍执行具有实质影响的计算，因此不能只把模型写出的 CoT 当作全部思考过程。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条线索值得关注，但原推文没有附出论文链接或可复现实验，当前只能作为研究方向而不是已验证结论。若模型存在“内部计算与外显解释不一致”，那么通过关键词扫描思维链来判断是否规划了危险行为会有明显盲区；安全评估需要把工具调用、状态变化、最终输出、隐藏中间状态的可观测代理以及对抗性测试放在一起。下一步应先找到论文原文、确认实验设置和模型范围，再讨论工程上是否需要独立的行为监视器。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会影响 Agent 审计、红队评测和企业合规设计：一份看起来合理的解释不应自动被视为安全证明，工具权限、沙箱、审批点和结果验证仍是硬边界。对模型厂商而言，若只优化“可读的思维链”，可能产生审计指标变好但真实风险没有下降的问题；对使用方而言，短期应把解释当作辅助证据，而不是替代权限隔离与可回放日志。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2084227554731577493" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2084373687516725604" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xicilion/status/2084150514237812967" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2084147941053194314" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOyntCIbUAEzs4i?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOyntCIbUAEzs4i?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083614920155762688/img/WjUKW6xnhWUF-9V1.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083614920155762688/img/WjUKW6xnhWUF-9V1.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOw1F2ebgAAkpJJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOw1F2ebgAAkpJJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>35B-A3B：社区再次呼唤中等规模、低激活参数的稀疏 MoE 模型，可能成为本地部署与性价比推理的下一条竞争线；当前只是讨论信号，等待正式模型或评测 <a href="https://x.com/xicilion/status/2084150514237812967" target="_blank">→</a></li>
+    <li>WorkBuddy 的 GEO 可靠性：推文指出播客和访谈内容可能让 AI 搜索过度采信夸张叙事，值得观察检索系统如何处理来源权重、事实核验与营销话术 <a href="https://x.com/seclink/status/2084147941053194314" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
