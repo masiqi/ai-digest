@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 04 Aug 2026 00:45:30 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 00:45:05 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/05 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-05.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-05.html</guid>
+      <description>今天的主线从“模型更大”转向“Agent 真正拥有可持续工作的电脑、上下文和支付边界”：MiniMax H3 把音视频生成带到本地端，Cloudflare Computer、BitFun、MyAgents 和 Headroom 则分别补齐执行环境、桌面入口与上下文成本。Agent Reach 证据脚本在本次运行中超时且没有生成证据包，以下可上手条目均改用推文与官方 GitHub、官网、文档或可信原始页面人工交叉核对；低证据线索明确降级到早期信号。</description>
+      <pubDate>2026-08-05T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/04 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-04.html</link>

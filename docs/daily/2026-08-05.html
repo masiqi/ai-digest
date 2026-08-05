@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-05</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-05</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线从“模型更大”转向“Agent 真正拥有可持续工作的电脑、上下文和支付边界”：MiniMax H3 把音视频生成带到本地端，Cloudflare Computer、BitFun、MyAgents 和 Headroom 则分别补齐执行环境、桌面入口与上下文成本。Agent Reach 证据脚本在本次运行中超时且没有生成证据包，以下可上手条目均改用推文与官方 GitHub、官网、文档或可信原始页面人工交叉核对；低证据线索明确降级到早期信号。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ MiniMax H3 MLX：在 Apple Silicon 本地跑全模态音视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>MiniMax H3 的 MLX 移植版，把文本、图像、视频和音频统一到一个生成管线中，目标是本地生成带原生立体声的音视频；官方模型卡支持最高 2K、最长 15 秒，社区移植仓库则提供 Apple Silicon 推理路径。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/PipeNetwork/minimax-h3-mlx" target="_blank">https://github.com/PipeNetwork/minimax-h3-mlx ↗</a></p>
+    <p><a href="https://huggingface.co/MiniMaxAI/MiniMax-H3" target="_blank">https://huggingface.co/MiniMaxAI/MiniMax-H3 ↗</a></p>
+    <p><a href="https://huggingface.co/pipenetwork/MiniMax-H3-MLX-4bit" target="_blank">https://huggingface.co/pipenetwork/MiniMax-H3-MLX-4bit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub 仓库 README，确认自己的 Mac 内存和磁盘空间，再按仓库提供的命令准备上游 MiniMax-H3 的文本编码器、VAE 与对应的 MLX Transformer 量化权重。想快速试验可以优先下载 4-bit 版本，再用仓库的 `scripts/generate.py` 输入一句英文或中文场景描述，输出 mp4；第一次建议只做最短 5 秒、低分辨率测试，不要直接下载完整 BF16 权重。README 明确提示密集注意力的计算成本很高，量化主要解决能否装下，不会把长视频变成即时生成。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不只是“又一个视频模型”，而是把视频和音频放入同一套扩散生成流程，并公开了 AdaLN 预计算、编码器截断和量化评测等工程细节。外部 README 还明确披露了本地推理的真实瓶颈：注意力 FLOPs 和生成时长，而不是只用“消费级显卡可跑”的宣传语掩盖体验差异。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Apple Silicon 上做本地音视频模型的可复现推理、量化和性能实验。</li>
+    <li>为短视频分镜、音效同步和多模态生成工作流制作离线原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2084783945057767530" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO47y4aasAAHtG2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO47y4aasAAHtG2?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084555735057543168/img/Hx2uxFmJBLmA3tiy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084555735057543168/img/Hx2uxFmJBLmA3tiy?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare Computer：给 Agent 一份带执行后端的持久工作区</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cloudflare 的开源预览项目，为 Durable Object 提供 SQLite-backed 持久虚拟文件系统，并通过容器、Worker Shell 或 Worker JavaScript 后端让 Agent 在同一份文件上读写和执行任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/cloudflare/computer" target="_blank">https://github.com/cloudflare/computer ↗</a></p>
+    <p><a href="https://github.com/cloudflare/computer/tree/main/packages/computer" target="_blank">https://github.com/cloudflare/computer/tree/main/packages/computer ↗</a></p>
+    <p><a href="https://developers.cloudflare.com/" target="_blank">https://developers.cloudflare.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在一个 Cloudflare Workers 项目中安装 `@cloudflare/computer`，创建带 SQLite 的 Durable Object，并按官方 README 加上 `nodejs_compat`；若要运行 Worker Shell 或 Worker JavaScript，再配置 Worker Loader 和 `experimental` 标志。先从只读写文件开始：创建 `/notes.md`，用 `workspace.fs.readFile` 验证持久化；随后选择 Worker Shell 后端执行 `cat` 或测试命令。需要完整 Linux 用户态时再研究 Container 后端，先跑 examples 目录的示例，不要把当前预览 API 直接接入生产账户或敏感数据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“Agent 的电脑”拆成了持久文件系统与可插拔执行面，而不是简单再包一层临时容器。多后端共享同一工作区、运行事件可流式转发、还提供 AI SDK 工具和 typed git 客户端，正好对应长程 Agent 的状态、工具和审计需求；但官方明确标注 PREVIEW ONLY，必须把不稳定 API 和容量限制纳入评估。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Workers 上搭建拥有文件、Git 和可选 Shell 的长程 Agent 原型。</li>
+    <li>对比容器、轻量 Shell 与隔离 JavaScript 在成本、启动速度和安全边界上的差异。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2084549349997150643" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BitFun：本地桌面 Agent，直接进入代码仓库和电脑</div>
+  <div class="section"><div class="section-label event">一句话</div><p>BitFun 是 MIT 协议的桌面 Agent 运行时，提供 Code Agent、Cowork 和 Computer Use，支持 Windows、macOS、Linux，并能在真实仓库、浏览器和桌面软件中执行任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/GCWing/BitFun" target="_blank">https://github.com/GCWing/BitFun ↗</a></p>
+    <p><a href="https://github.com/GCWing/BitFun/releases/latest" target="_blank">https://github.com/GCWing/BitFun/releases/latest ↗</a></p>
+    <p><a href="https://meta.appinn.net/t/topic/89317" target="_blank">https://meta.appinn.net/t/topic/89317 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 GitHub Releases 下载当前平台安装包，首次启动后配置你有权限使用的模型接口，再选一个空的测试仓库或专门的工作目录。先让 Code Agent 做一个可验收的小任务，例如读取项目、列出测试命令、修改一个文档并运行测试；确认权限和回滚路径后，再试 Cowork 的资料整理或 Computer Use 的浏览器操作。Appinn 论坛的项目说明还提示需要自备模型 API，软件本身不收费但调用费用由用户承担；因此不要一开始就把主目录、生产仓库或带凭据的浏览器配置交给它。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把代码 Agent、办公任务和桌面控制放进同一桌面入口，官方仓库还强调 Rust 运行时、长期任务、MCP、Skills 与 Mini Apps 的扩展能力。相比只在聊天框返回代码，它更接近“能进入真实工作环境的执行层”；同时本地权限、模型费用和 AI 生成代码比例都需要用户自己做验收，不能把安装成功当成安全验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地仓库中完成规划、改文件、跑测试和代码审查的连续任务。</li>
+    <li>把调研、文档、PPT 或浏览器操作交给桌面 Agent，再人工验收成果。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2084652657101193557" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MyAgents：本地优先的多模型 Agent 工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>MyAgents 是面向 Windows 和 macOS 的本地优先桌面 Agent 工作台，把文件、终端、浏览器、任务、长期记忆和多模型订阅放到一个工作区，并支持从飞书、钉钉或 Telegram 触发任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://myagents.io" target="_blank">https://myagents.io ↗</a></p>
+    <p><a href="https://github.com/hAcKlyc/MyAgents" target="_blank">https://github.com/hAcKlyc/MyAgents ↗</a></p>
+    <p><a href="https://meta.appinn.net/t/topic/89295" target="_blank">https://meta.appinn.net/t/topic/89295 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官网下载安装包，或阅读 GitHub 的开源说明；论坛项目页标注当前支持 macOS 13+ 和 Windows 10+，并采用 AGPL-3.0-only。首次运行先创建一个不含私密资料的测试工作区，配置自己的模型 API 或订阅，分别试一次文件整理、终端命令和浏览器任务，再检查长期记忆是否只写入你允许的目录。若要接入 IM 或定时任务，先使用低风险的日报生成任务，确认消息权限、并发任务和本地文件边界后再扩大范围；模型费用仍由对应服务商收取。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它抓住了个人 Agent 最容易被忽略的部分：任务状态、工作目录、记忆、技能和远程触发，而不是单纯换一个聊天界面。官网强调本地优先、多标签并行、12 个以上模型提供商和 IM 入口，论坛又给出了开源协议及平台边界；这些信息足够开始试用，但涉及浏览器登录和远程控制时仍应按最小权限配置。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让个人 Agent 长期处理文件整理、周期报告和项目资料维护。</li>
+    <li>在外出时通过 IM 触发本地电脑上的低风险自动化任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2084542012741623829" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Headroom：压缩 Agent 工具输出，减少上下文消耗</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Headroom 是本地优先的上下文压缩层，面向工具输出、日志、文件、RAG 片段和对话历史提供 Python/TypeScript 库、代理、MCP 服务和 Claude/Codex 等客户端封装。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/headroomlabs-ai/headroom" target="_blank">https://github.com/headroomlabs-ai/headroom ↗</a></p>
+    <p><a href="https://pypi.org/project/headroom-ai/" target="_blank">https://pypi.org/project/headroom-ai/ ↗</a></p>
+    <p><a href="https://headroom-docs.vercel.app/docs" target="_blank">https://headroom-docs.vercel.app/docs ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先用 `uv tool install --python 3.13 "headroom-ai[all]"` 安装 CLI，随后执行 `headroom doctor` 检查路由。最稳妥的入门方式是复制一个非生产 Agent 项目，先用 `headroom perf` 或离线示例比较压缩前后的输入，再尝试 `headroom wrap codex`；如果你的客户端不继承 uv 的 PATH，就在 MCP 配置里填 `command -v headroom` 返回的绝对路径。需要零代码接入时可启动 `headroom proxy --port 8787`，但要先确认本地缓存目录、原文可检索机制和代理范围，避免把压缩后的摘要误当成完整事实。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库把 JSON、代码和自然语言分流到不同压缩器，并通过可逆缓存保留原文，目标是减少长程 Coding Agent 的上下文费用和噪音。更重要的是它同时处理“模型读进去的 token”和“模型写出来的冗余”，且公开了工作负载与准确性对照；实际使用仍需针对自己的工具输出做回归测试，不能只看仓库宣传的压缩比例。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>压缩代码搜索、日志、RAG 检索结果，延长 Agent 的有效上下文。</li>
+    <li>给多个 Coding Agent 共用本地记忆和 MCP 检索入口。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2084616087602380897" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ VulcanBench：把 Agent 编码评测从分数拉到成本和可复现轨迹</div>
+  <div class="section"><div class="section-label event">一句话</div><p>VulcanBench 是面向真实多文件软件工程任务的开源 LLM/Agent 基准，提供 Docker 沙箱、隐藏测试、完整 trace、五项指标、成本统计、HTML replay 和本地 dashboard。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/morganlinton/VulcanBench" target="_blank">https://github.com/morganlinton/VulcanBench ↗</a></p>
+    <p><a href="https://github.com/morganlinton/VulcanBench/blob/main/docs/QUICKSTART.md" target="_blank">https://github.com/morganlinton/VulcanBench/blob/main/docs/QUICKSTART.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先 `git clone` 仓库并执行 `make setup`，激活虚拟环境后用 `vulcanbench --help` 检查安装。无需 API key 时先跑 `vulcanbench run --task hello-world --model mock:synthetic --sandbox local`，确认会生成 trace、summary、replay 和 patch；再选择有预算的模型跑单任务，最后用 suite、repeat、`--max-cost` 和 leaderboard 对比。默认 Docker 沙箱关闭网络且更安全，但要先构建 sandbox image；如果只在本机快速实验，明确使用 local 并只放入不敏感仓库，不要把 benchmark 结果当成模型能力的绝对排名。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把成功率、代码质量、安全、类人程度、成本和延迟放进同一条可复现链路，尤其适合检验“Agent 是否真的能交付”而非只看聊天榜单。仓库还记录任务哈希、支持重评分和补齐缺口，能把一次性评测变成持续回归；对企业来说，成本上限和失败闭合的 CI gate 比单一 pass rate 更可操作。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在团队内部比较不同模型、推理努力和 Agent harness 的真实交付能力。</li>
+    <li>为 Coding Agent 的版本升级建立带 trace、成本和安全指标的回归门禁。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/grok/status/2084553288922366035" target="_blank"><span class="handle">@grok</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SindriCAD：面向 3D 打印的开源参数化 CAD</div>
+  <div class="section"><div class="section-label event">一句话</div><p>SindriCAD 是 AGPL-3.0 的历史特征式参数化 CAD，支持 Linux、Windows、macOS，基于 build123d/OpenCASCADE，覆盖草图、拉伸、放样、倒角、纹理、STEP/3MF 导入导出和 Snapmaker U1 多色打印流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MakerViking/sindricad" target="_blank">https://github.com/MakerViking/sindricad ↗</a></p>
+    <p><a href="https://github.com/MakerViking/sindricad/releases/tag/beta" target="_blank">https://github.com/MakerViking/sindricad/releases/tag/beta ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 beta release，按操作系统下载未签名安装包；macOS 首次打开可能需要在系统设置里允许被阻止的应用，具体以仓库 Install 章节为准。打开后先画一个矩形，给尺寸命名，做一次拉伸和倒角，再修改参数观察特征树是否重建；随后导入一个不重要的 STEP 或 STL 文件，试试测量、剖切和 3MF 导出。README 明确提醒项目仍处于 beta，重要文档要保留备份，打印前务必在切片器中检查墙厚、支撑、颜色和机器配置，不要直接把首次生成的 G-code 发给实体打印机。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是只把网格模型套上 AI 生成的外壳，而是保留可编辑的参数和历史特征，并把真实几何交给 OpenCASCADE。纹理是可打印的位移几何，STEP 装配树可往返保留，此外还尝试把多色 3MF、OrcaSlicer 和局域网打印串起来；对希望快速从参数到实体样件的人来说，开源和跨平台比单纯展示渲染图更有价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为 3D 打印制作可反复改尺寸的夹具、外壳和结构件。</li>
+    <li>评估开源 CAD 的参数化建模、STEP 往返和多材料打印流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2084375197617098894" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO0wMOoa8AAyBrb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO0wMOoa8AAyBrb?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CRM：以 Agent 为核心的开源销售研究系统</div>
+  <div class="section"><div class="section-label event">一句话</div><p>trycompai/crm 是单租户、Agent-first 的开源 CRM，Agent 在自己的部署和队列中持续研究联系人、公司和交易，数据库只负责保存它观察到并经过证据约束的事实。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/trycompai/crm" target="_blank">https://github.com/trycompai/crm ↗</a></p>
+    <p><a href="https://github.com/trycompai/crm/blob/main/README.md" target="_blank">https://github.com/trycompai/crm/blob/main/README.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Bun 和 Docker，先 `git clone https://github.com/trycompai/crm.git`，复制 `.env.example` 到 `.env`，填写随机生成的认证密钥、允许登录的邮箱范围以及成对的 Google OAuth 配置，然后执行 `bun install`、`docker compose up -d`、`bun run db:deploy` 和可选的 `bun run db:seed`，最后 `bun run dev` 打开本地 3000 端口。先用假数据查看队列、Agent tab 和证据记录，再接入 Gmail/Calendar；README 明确它是单租户且登录后默认可见全部数据，生产使用前必须阅读 SECURITY.md 并限制部署访问。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“AI CRM”从在数据库旁边加一个聊天框，改成 Agent 自己领取任务、研究、记录事实和安排复查；同时坚持工具报告观察结果而不是让模型填写自信度，弱证据交给人工。这个设计对企业 Agent 很有启发，但外部数据源、OAuth、Sandbox 和单租户授权边界都意味着它更适合技术团队先做受控试验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为小团队搭建可审计的联系人、公司和销售线索研究队列。</li>
+    <li>研究如何用证据账本约束 Agent 写入客户资料的行为。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2084688922400145694" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO5NGGVaIAAotLC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO5NGGVaIAAotLC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOp3Hx7WIAAJFa6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOp3Hx7WIAAJFa6?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WorkBuddy：连接腾讯办公生态的任务执行型 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>WorkBuddy 是腾讯出品的 AI 办公工作台，支持用自然语言拆解任务、调用办公工具、处理多模态资料，并连接文档、邮箱、会议、知识库等腾讯生态。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.workbuddy.cn/" target="_blank">https://www.workbuddy.cn/ ↗</a></p>
+    <p><a href="https://cloud.tencent.com.cn/product/workbuddy" target="_blank">https://cloud.tencent.com.cn/product/workbuddy ↗</a></p>
+    <p><a href="https://apps.apple.com/cn/app/workbuddy-%E4%BD%A0%E7%9A%84-ai-%E5%B7%A5%E4%BD%9C%E5%8F%B0/id6761374913" target="_blank">https://apps.apple.com/cn/app/workbuddy-%E4%BD%A0%E7%9A%84-ai-%E5%B7%A5%E4%BD%9C%E5%8F%B0/id6761374913 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网选择对应的 Mac、Windows、iOS 或其他入口，先用一个不涉及敏感信息的任务测试，例如“把这三份公开资料整理成一页周报并列出待核实数据”。确认它能正确读取输入、调用技能、保存产物并让你复核后，再连接企业文档、邮箱、会议或知识库。腾讯云产品页还展示了任务托管、多个 Agent 并行和 SkillHub 等能力，但企业用户应先问清租户隔离、权限范围、数据留存和计费，再把跨部门资料交给它；不要仅凭日活讨论推断实际效果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它代表国内办公 Agent 的竞争正在从“谁的模型更强”转向“谁能把 IM、文档、邮箱、会议和技能目录串成可验收的成果”。官方页面支持多端入口、生态连接和长任务托管等事实，能支撑实际试用；但社交平台关于日活和竞争排名的说法缺少公开审计，应与产品体验和企业安全条款分开判断。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自动汇总会议、文档和表格，产出可供人工复核的周报或纪要。</li>
+    <li>在招聘、运营、投研等流程中调用技能并持续推进长时间任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2084758412571939157" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cloudflare Wallets：Agent 支付开始拥有身份和额度边界</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cloudflare 公布 Cloudflare Wallets 与 cloudflare.pay，现阶段开放钱包 handle 预订，后续计划让账户钱包和 Agent 的 Virtual Wallets 持有稳定币并支付 API、MCP 工具和内容费用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这件事的重要性不在“又出现一个加密钱包”，而在于 Cloudflare 同时处理了机器身份、支付和权限。官方博客把 Account Wallet 与 Virtual Wallet 区分开，Virtual Wallet 可以由账户所有者设置额度、商户白名单和单笔上限，让 Agent 在授权范围内自主尝试服务。当前完整钱包能力仍是后续开放，不能把 cloudflare.pay 的名称预订误解为已经能自动消费；但如果 x402 等 HTTP 402 支付标准成熟，Agent 调 API 将从预先注册账户逐步转为按需发现、低额试用和可审计结算。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Agent 商业化的瓶颈可能从“会不会调用工具”转到“谁授权、谁付款、出了问题如何止损”。支付额度、稳定身份和商户侧的机器识别会推动 API、MCP 工具和内容服务重新设计定价与风控，也会让私钥、提示词注入、恶意工具和退款争议成为必须提前做的工程问题。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2084657745039700163" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO4xIvZaYAAksCO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO4xIvZaYAAksCO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 收购 Ona：Codex 从本地会话走向云端长任务</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 宣布拟收购 Ona，把其安全、持久的云端执行与编排能力带入 Codex；官方说明交易仍需满足惯常交割条件。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Ona 的价值不是单纯提供一台远程开发机，而是让 Agent 在客户控制的云环境里保留工具、系统、上下文和状态，即使开发者合上笔记本也能继续工作。这样 Codex 的产品边界会从“当前设备上的编码助手”向“有持久工作区的任务执行系统”移动。对企业而言，持续执行必须同时解决隔离凭据、审计轨迹、任务恢复、人工审批和结果回滚，能力演示容易，生产可控才是决定性门槛。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>云端 Agent 会重新定义 IDE、CI、代码托管和企业云权限之间的分工；开发者可能从实时盯着 Agent 改代码，转为提交目标、检查中间证据和验收补丁。基础设施提供商将争夺持久沙箱、可恢复队列和客户自持数据边界，而模型厂商的竞争也会从单次生成质量扩展到长时间任务的可靠性和运营成本。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2084591502559510692" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO30L6obUAAanZy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO30L6obUAAanZy?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GPT-Live：实时语音从轮流对话变成全双工系统</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布 GPT-Live 及其系统架构复盘，强调模型可以同时听和说，并把深度推理、搜索与工具调用放到异步路径。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>全双工的关键不是把语音识别和语音合成拼得更快，而是让实时媒体循环不再被一次慢工具调用阻塞。OpenAI 的工程文章说明，音频持续流入模型、语音持续流出，复杂任务交给后台前沿模型处理；WebRTC、状态化推理和低延迟连接共同维持“还能继续说话”的体验。这种拆分把语音 Agent 变成一个实时系统问题：交互路径追求稳定，深思路径追求正确，两者通过状态和可见结果汇合。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>客服、陪练、会议助手和移动端 Agent 会更看重打断、停顿、延迟和任务不中断，而不是单纯的文字答案质量。与此同时，实时音频留存、误听、越权调用和后台异步任务的告知义务都要纳入产品设计；开发者若照搬“一个请求等一个响应”的架构，工具延迟和网络抖动会直接破坏体验。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2084578272952889493" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Seedance 2.5：AI 视频竞争进入可编辑的长叙事阶段</div>
+  <div class="section"><div class="section-label event">事件</div><p>字节跳动官方发布 Seedance 2.5，主打单次生成最长 30 秒的音视频、参考素材控制、连续扩展和编辑能力，并先在即梦、豆包等入口落地，API 访问后续通过 ModelArk 推出。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次升级的观察重点是“从生成一个镜头到完成一段作品”。官方说明支持音视频联合生成、最长 30 秒单次输出、多轮延展和参考控制，意味着产品竞争开始围绕角色一致性、镜头衔接、素材复用和编辑闭环，而不是单张演示图的惊艳程度。X List 中有人将它用于工业数据和影视制作，但这些具体效果仍应按场景逐项验证，不能把模型发布页的能力描述等同于稳定的生产指标。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>广告、电商、短剧和教育内容会得到更长的试错窗口，制作团队也会重新评估分镜、配音、剪辑和素材版权的分工。真正的商业门槛将落在 API 可得性、价格、队列稳定性、可控编辑和角色一致性；当模型可以连续生成多分钟内容后，版权溯源、训练素材合规和人机协作审片也会变得更重要。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2084780389806305601" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2084458936405737731" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2084656152802119904" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2084506350046851446" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2084667167212245170" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2084597515060433276" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2084626647643570489" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO18VePbIAAB1_c?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO18VePbIAAB1_c?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HOzhvvSbgAAoNs0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HOzhvvSbgAAoNs0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084655774920511488/img/7wfXa-REasF1MKyN.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084655774920511488/img/7wfXa-REasF1MKyN.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO34oJ7WIAIUZMZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO34oJ7WIAIUZMZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO3vF22WoAA7N9P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO3vF22WoAA7N9P?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084555735057543168/img/Hx2uxFmJBLmA3tiy.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084555735057543168/img/Hx2uxFmJBLmA3tiy.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>DeepSeek V4 Flash 的免费试用与云厂商加价：推文声称 Open Design 将提供限时免费使用，另有帖子称云端价格可能显著高于官方价；先核实官方入口、模型名和账单，不要按转发内容充值 <a href="https://x.com/tuturetom/status/2084597515060433276" target="_blank">→</a></li>
+    <li>Lips 口型模型：有创作者分享其在数字人视频中的免费口型同步流程，但本次未拿到模型仓库、许可证和可复现安装信息，暂留作线索 <a href="https://x.com/MinLiBuilds/status/2084626647643570489" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
