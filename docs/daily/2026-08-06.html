@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-06</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-06</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线是 Agent 从“会调用模型”进入“有上下文、有状态、可验证、能跑长任务”的产品化阶段：anydoc、Context.dev、Herdr、Muse Code，以及企业内部的 Kai，分别在补文档数据、实时网页、终端编排、长程编码和组织知识工作流。证据包共纳入 93 项，但 HNRSS 六路抓取均返回 502，且小红书来源仍暂停；因此本文把单推文新线索明确放到🌱，不把未经外部证据支持的宣传当成可上手结论。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Firecrawl anydoc：多格式文档转干净 Markdown</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Firecrawl 开源的 Rust 文档解析库，把 Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV 和 PDF 等格式统一转换为 GitHub 风格 Markdown，并提供 Node.js、Python 绑定与 Agent Skill。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/firecrawl/anydoc；https://www.npmjs.com/package/@firecrawl/anydoc；https://docs.firecrawl.dev/features/document-parsing" target="_blank">https://github.com/firecrawl/anydoc；https://www.npmjs.com/package/@firecrawl/anydoc；https://docs.firecrawl.dev/features/document-parsing ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备一份 DOCX、PPTX、XLSX 或 PDF 样本，尤其建议拿一份包含表格、标题层级、脚注和图片的真实文件做对照。想让编码 Agent 自动识别文档，可先执行 `npx skills add firecrawl/anydoc`；想直接在本机试 CLI，则按官方 README 安装 `npm install -g @firecrawl/anydoc`，再运行 `anydoc --help` 查看当前平台的输入、输出和格式选项，转换后把 Markdown 重定向到文件。随后逐项检查标题、表格、列表、演讲者备注和嵌入资源是否保留；再用 Python 的 `firecrawl-anydoc` 包处理同一文件，对比 CLI、Node 和 Python 路径的结果。扫描 PDF 不能只看转换文本，需另测 Firecrawl Parse 的 OCR 能力。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 RAG 和 Agent 最常见的“文件入口”从多套脆弱解析器收敛到一个文档模型与 Markdown 序列化器。官方仓库把格式检测、结构保留、表格、脚注和嵌入资源都放在同一条路径中；官方宣称单数字毫秒级转换，但这个性能数字仍应在自己的文件集上复测，不能只看宣传。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给知识库、RAG 或编码 Agent 做本地办公文档预处理，减少为 DOCX、PPTX、PDF 分别维护解析链的成本。</li>
+    <li>把企业上传文件快速转成可审阅、可版本控制的 Markdown，再接入摘要、问答、数据抽取或文档对比流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2084818190933369039" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO7DFFobMAADrWk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO7DFFobMAADrWk?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084668784929845248/img/JJEpREQ5Uru-kLz-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084668784929845248/img/JJEpREQ5Uru-kLz-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ open-kimi-ppt-skill：让 Agent 生成可编辑 PPTD/PPTX</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个通过逆向公开 Kimi Slides 行为实现的非官方 Skill，让 Codex、Claude Code、Cursor、WorkBuddy 等兼容 Agent 生成、编辑、复刻、读取并导出可编辑的 PPTD 与 PPTX。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Binaryify/open-kimi-ppt-skill；https://www.npmjs.com/package/open-kimi-ppt-skills" target="_blank">https://github.com/Binaryify/open-kimi-ppt-skill；https://www.npmjs.com/package/open-kimi-ppt-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 18 或更高版本，在终端执行 `npx open-kimi-ppt-skills install`，优先安装到跨 Agent 通用的 `~/.agents/skills/open-kimi-ppt`，不要给每个 Agent 重复安装。然后在项目目录中让 Agent 根据一个明确主题、页数和视觉风格生成 PPT，最好同时提供一份参考 PPT、截图或品牌色规范。生成后执行 `npx open-kimi-ppt-skills serve`，用 Chromium 打开 `http://127.0.0.1:55173/`，选择含 `.pptd`、`pages/` 和 `media/` 的项目目录，在浏览器中检查版式、文字溢出、图片裁切和动画，再手动导出 PPTX。最后在 PowerPoint/WPS 中验证文本框和形状是否仍可编辑；不要把它当官方 Kimi SDK，也不要向不明脚本提供账号令牌。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有把整页渲染成一张图片，而是用 PPTD 作为 Agent 友好的中间层，再交付真实可编辑的 PPTX，并在导出前做视觉质检。这样既保留了模型生成的灵活性，也保留了人类在 PowerPoint/WPS 中继续修改的能力；但项目依赖公开前端协议，Kimi 更新后可能失效。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将研究笔记、产品方案或长文快速变成可继续编辑的汇报初稿，并把版式调整留给浏览器编辑器。</li>
+    <li>给销售、课程、投研和运营团队建立“内容到 PPT”的可重复 Agent 工作流，而不是每次从图片或 HTML 重新拼装。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/binaryify/status/2084944649941324020" target="_blank"><span class="handle">@binaryify</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO8rLqxbAAAkfqq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO8rLqxbAAAkfqq?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO8rPVZbsAAybFF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO8rPVZbsAAybFF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO8whfRaoAAdyQ6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO8whfRaoAAdyQ6?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO81-tgaUAAUIGx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO81-tgaUAAUIGx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Context.dev：给 Agent 的实时网页结构化数据 API</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Context.dev 把网页、公司、产品、站点地图或文件转成干净 Markdown、截图、公司数据或符合 JSON Schema 的结构化数据，并用批处理与监控保持信息更新。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.context.dev；https://docs.context.dev；https://www.ycombinator.com/launches/SPy-context-dev-live-web-data-api-for-ai-agents" target="_blank">https://www.context.dev；https://docs.context.dev；https://www.ycombinator.com/launches/SPy-context-dev-live-web-data-api-for-ai-agents ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网注册账号，官方首页目前提供 500 个免费 credits 且无需信用卡；在控制台拿到 API key 后先不要写入 Git 仓库，而是放进本地环境变量。按照文档从一个小任务开始：提交一个产品官网或 GitHub 仓库 URL，先取 Markdown，再定义字段抽取公司名称、产品类别、价格或文档版本。确认结果后再把多个 URL 放入 Batch，或对一个会变化的网页配置 Monitor，观察更新事件和失败重试。若你在做 Agent，先用一个“输入 URL—返回结构化 JSON—引用原页面”的最小闭环，记录延迟、缓存命中和字段缺失，再决定是否替换自建浏览器、代理、爬虫、队列和缓存系统。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它切中的不是“再做一个聊天机器人”，而是 Agent 获取新鲜外部上下文时最费工程的那一层基础设施。YC 页面披露其服务 400 多个客户，官网还展示了 Mintlify、Klarna 等使用案例；这些是公司自述，真正接入前仍应在目标站点上测试反爬、动态渲染、引用完整性和成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给研究、竞品监控、销售线索和 RAG 系统补充模型训练截止日期之后的实时网页信息。</li>
+    <li>把多个供应商官网、API 文档或公司资料持续抽取成固定 Schema，供下游 Agent 直接调用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2085155900084604995" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085065022733205504/img/GjtLdZopVfWnSskz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085065022733205504/img/GjtLdZopVfWnSskz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Herdr：懂 Agent 状态的终端多路复用器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Herdr 是运行在现有终端里的 Agent multiplexer，保留 tmux 式持久化、分屏、远程 SSH 与重新连接能力，同时显示 Agent 是 working、blocked、done 还是 idle。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://herdr.dev；https://herdr.dev/docs/quick-start；https://herdr.dev/compare" target="_blank">https://herdr.dev；https://herdr.dev/docs/quick-start；https://herdr.dev/compare ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS 或 Linux 终端执行官方安装命令 `curl -fsSL https://herdr.dev/install.sh | sh`，然后运行 `herdr` 创建第一个工作区。先开两个真实项目目录，分别启动 Claude Code、Codex 或其他终端 Agent；观察侧栏如何显示工作状态，并用分屏同时看测试日志、Agent 输出和代码差异。关闭本地终端后重新进入，验证会话是否仍在；再在一台可 SSH 的机器上运行 `ssh 你的主机 herdr`，从另一台终端重新连接。熟悉后可阅读 CLI、Socket API 和 Agent Skill 文档，用脚本创建 pane、读取近期输出、等待任务完成，再把“等待—检查—继续”的流程接进夜间任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>tmux 解决的是进程和终端的持久化，却不会理解某个 pane 里的 Agent 是否卡在等待输入；桌面 Agent 管理器又通常绑定一台机器。Herdr 把语义状态、真实 PTY、远程连接和可编程控制面放在一起，适合多 Agent 并行，但它依赖终端工作流，不能替代代码审查和权限隔离。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac、服务器或云主机上长期运行多个编码 Agent，合上电脑后仍能回来查看进度。</li>
+    <li>为夜间构建、测试修复和多仓库维护搭建一个可观察、可脚本化的终端控制层。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2085153377772540187" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOukpVMaYAAXKQ4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOukpVMaYAAXKQ4?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole：Mac 终端清理与优化 CLI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mole 是 tw93 开源的 macOS 维护工具，集成清理、卸载、磁盘分析、系统优化和实时监控，并把开发工具、语言工具链与 Agent 缓存纳入清理范围。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole；https://mole.fit" target="_blank">https://github.com/tw93/Mole；https://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在有 Homebrew 的 Mac 上先执行 `brew install mole`，不要直接进行高风险删除。先用 `mo clean --dry-run` 查看候选路径和预计释放空间，再检查是否包含项目构建产物、模型缓存、浏览器资料或仍在使用的开发环境；确认后才运行实际清理。随后可以用 Mole 的分析、卸载和监控入口查看大文件、应用残留、CPU/GPU/内存与网络状态。建议第一次只处理一个低风险缓存目录，保存重要工作区和配置的备份，记录清理前后的磁盘空间，再决定是否把它接进定时任务。任何会删除文件的操作都应保留交互确认，不要在不了解路径的情况下用 root 权限扩大范围。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 AI 编码工作流会留下依赖缓存、构建产物、会话日志和 Agent 临时文件，磁盘问题会直接拖慢本地开发。Mole 用单一二进制覆盖清理、卸载、磁盘洞察与监控，并有安全审计和保护目录机制；但它能执行破坏性操作，安全默认不等于无需逐项复核。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>清理长期运行 Codex、Claude Code、编译工具和浏览器后堆积的本地缓存，找回开发机空间。</li>
+    <li>在换机、排查磁盘异常或维护 Mac Mini Agent 节点前，先做可解释的空间盘点与残留卸载。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2085019621497913728" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Muse Code：Meta 的长程终端编码 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Muse Code 是 Meta 发布的 beta 终端编码 Agent，由 Muse Spark 1.2 驱动，面向大型仓库的多文件修改、长时间调试、子 Agent 并行和内置验证。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developer.meta.com/ai/resources/blog/build-with-muse-code；https://dev.meta.ai；https://openrouter.ai/meta/muse-spark-1.2" target="_blank">https://developer.meta.com/ai/resources/blog/build-with-muse-code；https://dev.meta.ai；https://openrouter.ai/meta/muse-spark-1.2 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 Meta 官方博客的 Get started 入口进入 `dev.meta.ai`，按当前页面提供的一键安装方式在测试仓库中安装 Muse Code，并在浏览器完成认证。第一次不要把生产仓库和高权限凭据直接交给 beta 工具，先准备一个可回滚的示例项目，让它完成“理解依赖—修改多个文件—运行测试—解释差异”的完整任务。再按官方 Cookbook 试 Agent fan-out、bundled skills 和 goal tracking，观察多个子 Agent 的隔离工作树、并行工具调用与目标状态。重点检查事件日志：官方强调每个子 Agent、工具调用、steer 和 cancel 都可观察、可回放；将日志、测试结果和最终 diff 一起留存，才算完成一次可审计的体验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的重点不只是又一个编码模型，而是模型与 harness 协同训练、上下文压缩、异步工具调用、持久子 Agent 和可回放事件日志。Meta 官方称 1M token 窗口可容纳大型项目上下文，并开放到 Meta Model API 与 OpenRouter；这些能力适合长程任务，但 beta 的地区、额度、数据保留和价格限制必须以当前账户页面为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对大型代码库做跨模块重构、长时间调试和需要反复测试验证的工程任务。</li>
+    <li>研究“多 Agent 并行 + 事件日志 + 目标跟踪”如何替代只靠单轮 Prompt 的编码流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/finkd/status/2085080750034940201" target="_blank"><span class="handle">@finkd</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HO-xetQW0AAvupU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO-xetQW0AAvupU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design：本地优先的 DeepSeek 设计工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Open Design 是围绕 DeepSeek TUI 的开源、本地优先设计层，把 DeepSeek 的终端编码能力与 Skills、设计系统、项目上下文、可选 Figma MCP 和浏览器验证串成工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://open-design.ai/agents/deepseek-design；https://github.com/nexu-io/open-design；https://open-design.ai/download/" target="_blank">https://open-design.ai/agents/deepseek-design；https://github.com/nexu-io/open-design；https://open-design.ai/download/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 Open Design 官网下载桌面端，或从 GitHub 阅读并克隆项目；准备 DeepSeek API key 后按官方指南配置模型与 API 地址。进入一个前端项目，先建立包含颜色、间距、字体、组件约束和验收清单的上下文文件，再让 Agent 从一个具体页面开始，而不是一句“做得好看”。如果需要设计交接，再配置 Figma MCP；如果需要可靠结果，接入浏览器测试，逐一检查桌面、移动、空状态、加载状态和交互反馈。让 Agent 修改后执行构建、启动本地服务、在真实浏览器验证，并把生成的 DESIGN.md、代码和截图一起提交。DeepSeek TUI 是文本模型，不能凭空理解图片审美，参考描述和验证回路必须由人补齐。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“便宜模型生成前端”转成可复用的设计工程流程：上下文文件提供长期规则，1M token 窗口可以容纳较大的设计系统，MCP 接入真实设计资料，浏览器检查则把审美判断落到可验证的页面状态。官方明确这是独立开源项目，不等于 DeepSeek 官方产品，也不会替用户代理保存 API key。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用较低成本反复迭代落地页、组件库和响应式前端，并让代码遵守同一套设计 token。</li>
+    <li>把 Figma 交接、Agent 编码、浏览器回归和设计规范维护放进一个本地工作区。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2084986587088110004" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084981653026254848/img/8y8T5UkdN_46QHcR.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084981653026254848/img/8y8T5UkdN_46QHcR.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Higgsfield Hell Grind：95 分钟 AI 电影的公开创作档案</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Higgsfield 把 95 分钟 AI 故事片《Hell Grind》的项目页面、提示词、素材和画布公开展示，适合把一次完整长片制作拆成可研究的镜头级工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://higgsfield.ai/@higgsfield.studio/projects/hell-grind；https://higgsfield.ai" target="_blank">https://higgsfield.ai/@higgsfield.studio/projects/hell-grind；https://higgsfield.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先以只读方式打开官方项目页，不急着注册或生成；从场景、角色、镜头和时间线入口逐层查看提示词、资产与画布，挑一个短镜头记录它的角色描述、镜头运动、光线、色彩和连续性约束。把记录整理成自己的镜头表，再用你有权限使用的视频模型复现一个 5—15 秒片段，单独评估角色一致性、构图、动作和剪辑，而不是宣称能一键复刻整部电影。若页面提供公开项目的复制或生成入口，再在个人工作区测试；不要上传他人肖像或未授权素材。最后对比原项目与自己的版本，标注哪些效果来自提示词、哪些来自多次采样和人工剪辑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 视频讨论常停留在几秒 Demo，而 Hell Grind 把“长片”拆成可观察的生产记录。官方页面强调每条提示词、资产和画布都包含在公开项目中，这使它更像一个创作过程样本而不只是成片宣传；但 95 分钟作品不代表普通用户能低成本一次生成，算力、采样次数、版权和人工剪辑仍是主要门槛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为广告、短片或数字人内容建立镜头级提示词、资产管理和连续性检查模板。</li>
+    <li>研究长时长生成视频如何通过大量短片段、重复采样与人工导演流程拼成完整叙事。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2084911004060901585" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Stripe Kai：企业内部 Agent 开始像“AI 同事”一样普及</div>
+  <div class="section"><div class="section-label event">事件</div><p>LangChain 官方披露，Stripe 的 Knowledge AI Platform“ Kai”由一个工程师基于 Deep Agents 在一周内做出，面向全公司员工，并连接内部数据仓库、Slack 和 Google Suite。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这件事真正值得看的不是“一周”这个营销数字，而是它把 Agent 的价值从通用问答转成组织上下文里的持续产出：用户在会话中做数据综合、头脑风暴、文档起草和趋势分析，结果以报告、仪表盘或文档形式沉淀。Stripe 在 Deep Agents 之上增加虚拟文件系统、沙箱和摘要中间件，再用超过 100 个团队贡献的 1000 多个技能承载公司知识。也就是说，通用 harness 解决工具调用、状态和流式输出，企业层负责权限、数据、技能和评估。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业内部 Agent 的竞争点会从“哪个模型更聪明”转向“谁能把权限、上下文、技能和产物闭环做得更稳”。对中小团队而言，最可复制的不是 Stripe 的数据规模，而是先选一个高频工作流，建立文件化上下文、受控执行环境、可追溯输出和人工验收，再逐步扩展技能库；否则“人人可用”很容易变成无人信任。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2085013960991105112" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Wayve GAIA-4：世界模型从生成场景走向闭环安全评估</div>
+  <div class="section"><div class="section-label event">事件</div><p>Wayve 发布 GAIA-4 研究，称其把 Wayve AI Driver 放入世界模型闭环，用反事实回放和多模态生成来评估安全关键驾驶场景。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>过去的驾驶世界模型更像“生成一段看起来真实的视频”，但 GAIA-4 的重点是让策略本身参与回放：系统可以改变自车行为，观察骑行者、行人和环境如何响应，再把结果用于端到端安全测量。Wayve 官方还强调 GAIA-4 将雷达与摄像头共同纳入仿真，这不是简单提高画面逼真度，而是让雾、喷雾、低光等视觉不稳定条件也进入评估。真正的难点仍是反事实是否符合物理和交通行为，以及仿真中的安全指标能否预测真实道路表现。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果闭环世界模型足够可靠，自动驾驶公司可以在不等待稀有危险事件自然发生的情况下，系统性扩展安全测试覆盖，并把“策略—环境—再决策”的循环纳入训练与验证。它也会抬高行业门槛：仅有视频生成 Demo 不再够用，数据闭环、传感器融合、可解释的安全指标和真实道路校准会成为商业部署的重要证据。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/alexgkendall/status/2084992798814539875" target="_blank"><span class="handle">@alexgkendall</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084991358553505793/img/ZOzVWz3UC9mv_IMs.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084991358553505793/img/ZOzVWz3UC9mv_IMs.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084991645544538112/img/feOhTwUkwlJ17koH.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084991645544538112/img/feOhTwUkwlJ17koH.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google AI 重组：顶尖研究组织进入新的权责分配阶段</div>
+  <div class="section"><div class="section-label event">事件</div><p>公开报道显示，Demis Hassabis 从 Google DeepMind CEO 的日常管理岗位转向 Alphabet 首席科学家和 DeepMind 主席，Koray Kavukcuoglu 接任业务领导；Jeff Dean、Sanjay Ghemawat、Oriol Vinyals 和 Quoc Le 等资深成员则离开并筹建新公司。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是单纯的人事新闻，而是大模型竞争进入“研究、产品、算力和创业组织如何分工”的阶段性信号。Google 一方面需要让 Gemini、开发者产品和前沿研究形成更短的交付链，另一方面又要保留 DeepMind 在科学研究和长期方向上的独立性。核心研究者集体离开也说明，顶尖人才对算力、决策速度、研究自由度和创业上行空间的取舍正在变化；但公开信息尚不足以判断这次调整会直接改善或削弱 Gemini 的技术表现。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>大厂 AI 组织可能进一步分成面向产品交付的模型平台、面向长期突破的研究机构，以及由核心科学家发起的独立深科技公司。对产业链而言，人才流动会影响模型路线、开源策略、算力采购和初创投资；对开发者而言，短期更应关注实际 API、模型版本和产品能力，不要把高管变动直接等同于模型胜负。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2085039997795909939" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2085157738829820325" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2084970189834383666" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2085017685159764381" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2084929983924023560" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2085020131445318105" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2085006166648922123" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2084950115089834022" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2084930518664011871" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2085110037287227553" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2084955265716162946" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HDvr7G9bQAARTrX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HDvr7G9bQAARTrX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO9NOwHaEAE7jJP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO9NOwHaEAE7jJP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO5Cqi-awAU6e7i?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO5Cqi-awAU6e7i?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO90S_VbsAAmi1s?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO90S_VbsAAmi1s?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO92v1PbcAIfs74?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO92v1PbcAIfs74?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO8oo6_aQAAvhTF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO8oo6_aQAAvhTF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085005744571817984/img/xyLSScG5Qh3OcQtz.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085005744571817984/img/xyLSScG5Qh3OcQtz.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084555735057543168/img/Hx2uxFmJBLmA3tiy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084555735057543168/img/Hx2uxFmJBLmA3tiy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO87A9iaUAAOvvZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO87A9iaUAAOvvZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO8pQiYWkAA7zok?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO8pQiYWkAA7zok?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO_MhnlbYAEtrBx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO_MhnlbYAEtrBx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO8_iyJWAAA2K9E?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO8_iyJWAAA2K9E?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOw1F2ebgAAkpJJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOw1F2ebgAAkpJJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Cloudflare Wallets：面向 Agent 的身份、支出上限、商户白名单与自动支付方向，若正式 API 和安全边界成熟，可能成为 Agent 购买 API/内容的新基础设施 <a href="https://x.com/appinn/status/2084930518664011871" target="_blank">→</a></li>
+    <li>Cloudflare OS：面向企业内部 Agent、工作空间和业务系统连接的开源平台叙事，值得等待官方仓库、部署文档和权限模型进一步公开 <a href="https://x.com/berryxia/status/2085110037287227553" target="_blank">→</a></li>
+    <li>Qwen 3.8 Max：Open Design 社区称其在 Image-to-WebDev Arena 进入前列，适合后续观察视觉理解、网页生成和成本之间的真实差距 <a href="https://x.com/OpenDesignHQ/status/2084955265716162946" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

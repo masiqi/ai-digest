@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 05 Aug 2026 00:45:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 00:46:40 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/06 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-06.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-06.html</guid>
+      <description>今天的主线是 Agent 从“会调用模型”进入“有上下文、有状态、可验证、能跑长任务”的产品化阶段：anydoc、Context.dev、Herdr、Muse Code，以及企业内部的 Kai，分别在补文档数据、实时网页、终端编排、长程编码和组织知识工作流。证据包共纳入 93 项，但 HNRSS 六路抓取均返回 502，且小红书来源仍暂停；因此本文把单推文新线索明确放到🌱，不把未经外部证据支持的宣传当成可上手结论。</description>
+      <pubDate>2026-08-06T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/05 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-05.html</link>
