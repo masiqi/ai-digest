@@ -77,7 +77,9 @@
   <div class="topic-title">🛠️ Firecrawl anydoc：多格式文档转干净 Markdown</div>
   <div class="section"><div class="section-label event">一句话</div><p>Firecrawl 开源的 Rust 文档解析库，把 Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV 和 PDF 等格式统一转换为 GitHub 风格 Markdown，并提供 Node.js、Python 绑定与 Agent Skill。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/firecrawl/anydoc；https://www.npmjs.com/package/@firecrawl/anydoc；https://docs.firecrawl.dev/features/document-parsing" target="_blank">https://github.com/firecrawl/anydoc；https://www.npmjs.com/package/@firecrawl/anydoc；https://docs.firecrawl.dev/features/document-parsing ↗</a></p>
+    <p><a href="https://github.com/firecrawl/anydoc" target="_blank">https://github.com/firecrawl/anydoc ↗</a></p>
+    <p><a href="https://www.npmjs.com/package/@firecrawl/anydoc" target="_blank">https://www.npmjs.com/package/@firecrawl/anydoc ↗</a></p>
+    <p><a href="https://docs.firecrawl.dev/features/document-parsing" target="_blank">https://docs.firecrawl.dev/features/document-parsing ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备一份 DOCX、PPTX、XLSX 或 PDF 样本，尤其建议拿一份包含表格、标题层级、脚注和图片的真实文件做对照。想让编码 Agent 自动识别文档，可先执行 `npx skills add firecrawl/anydoc`；想直接在本机试 CLI，则按官方 README 安装 `npm install -g @firecrawl/anydoc`，再运行 `anydoc --help` 查看当前平台的输入、输出和格式选项，转换后把 Markdown 重定向到文件。随后逐项检查标题、表格、列表、演讲者备注和嵌入资源是否保留；再用 Python 的 `firecrawl-anydoc` 包处理同一文件，对比 CLI、Node 和 Python 路径的结果。扫描 PDF 不能只看转换文本，需另测 Firecrawl Parse 的 OCR 能力。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 RAG 和 Agent 最常见的“文件入口”从多套脆弱解析器收敛到一个文档模型与 Markdown 序列化器。官方仓库把格式检测、结构保留、表格、脚注和嵌入资源都放在同一条路径中；官方宣称单数字毫秒级转换，但这个性能数字仍应在自己的文件集上复测，不能只看宣传。</p></div>
@@ -101,7 +103,8 @@
   <div class="topic-title">🛠️ open-kimi-ppt-skill：让 Agent 生成可编辑 PPTD/PPTX</div>
   <div class="section"><div class="section-label event">一句话</div><p>一个通过逆向公开 Kimi Slides 行为实现的非官方 Skill，让 Codex、Claude Code、Cursor、WorkBuddy 等兼容 Agent 生成、编辑、复刻、读取并导出可编辑的 PPTD 与 PPTX。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/Binaryify/open-kimi-ppt-skill；https://www.npmjs.com/package/open-kimi-ppt-skills" target="_blank">https://github.com/Binaryify/open-kimi-ppt-skill；https://www.npmjs.com/package/open-kimi-ppt-skills ↗</a></p>
+    <p><a href="https://github.com/Binaryify/open-kimi-ppt-skill" target="_blank">https://github.com/Binaryify/open-kimi-ppt-skill ↗</a></p>
+    <p><a href="https://www.npmjs.com/package/open-kimi-ppt-skills" target="_blank">https://www.npmjs.com/package/open-kimi-ppt-skills ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 18 或更高版本，在终端执行 `npx open-kimi-ppt-skills install`，优先安装到跨 Agent 通用的 `~/.agents/skills/open-kimi-ppt`，不要给每个 Agent 重复安装。然后在项目目录中让 Agent 根据一个明确主题、页数和视觉风格生成 PPT，最好同时提供一份参考 PPT、截图或品牌色规范。生成后执行 `npx open-kimi-ppt-skills serve`，用 Chromium 打开 `http://127.0.0.1:55173/`，选择含 `.pptd`、`pages/` 和 `media/` 的项目目录，在浏览器中检查版式、文字溢出、图片裁切和动画，再手动导出 PPTX。最后在 PowerPoint/WPS 中验证文本框和形状是否仍可编辑；不要把它当官方 Kimi SDK，也不要向不明脚本提供账号令牌。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有把整页渲染成一张图片，而是用 PPTD 作为 Agent 友好的中间层，再交付真实可编辑的 PPTX，并在导出前做视觉质检。这样既保留了模型生成的灵活性，也保留了人类在 PowerPoint/WPS 中继续修改的能力；但项目依赖公开前端协议，Kimi 更新后可能失效。</p></div>
@@ -127,7 +130,9 @@
   <div class="topic-title">🛠️ Context.dev：给 Agent 的实时网页结构化数据 API</div>
   <div class="section"><div class="section-label event">一句话</div><p>Context.dev 把网页、公司、产品、站点地图或文件转成干净 Markdown、截图、公司数据或符合 JSON Schema 的结构化数据，并用批处理与监控保持信息更新。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://www.context.dev；https://docs.context.dev；https://www.ycombinator.com/launches/SPy-context-dev-live-web-data-api-for-ai-agents" target="_blank">https://www.context.dev；https://docs.context.dev；https://www.ycombinator.com/launches/SPy-context-dev-live-web-data-api-for-ai-agents ↗</a></p>
+    <p><a href="https://www.context.dev" target="_blank">https://www.context.dev ↗</a></p>
+    <p><a href="https://docs.context.dev" target="_blank">https://docs.context.dev ↗</a></p>
+    <p><a href="https://www.ycombinator.com/launches/SPy-context-dev-live-web-data-api-for-ai-agents" target="_blank">https://www.ycombinator.com/launches/SPy-context-dev-live-web-data-api-for-ai-agents ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网注册账号，官方首页目前提供 500 个免费 credits 且无需信用卡；在控制台拿到 API key 后先不要写入 Git 仓库，而是放进本地环境变量。按照文档从一个小任务开始：提交一个产品官网或 GitHub 仓库 URL，先取 Markdown，再定义字段抽取公司名称、产品类别、价格或文档版本。确认结果后再把多个 URL 放入 Batch，或对一个会变化的网页配置 Monitor，观察更新事件和失败重试。若你在做 Agent，先用一个“输入 URL—返回结构化 JSON—引用原页面”的最小闭环，记录延迟、缓存命中和字段缺失，再决定是否替换自建浏览器、代理、爬虫、队列和缓存系统。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它切中的不是“再做一个聊天机器人”，而是 Agent 获取新鲜外部上下文时最费工程的那一层基础设施。YC 页面披露其服务 400 多个客户，官网还展示了 Mintlify、Klarna 等使用案例；这些是公司自述，真正接入前仍应在目标站点上测试反爬、动态渲染、引用完整性和成本。</p></div>
@@ -150,7 +155,9 @@
   <div class="topic-title">🛠️ Herdr：懂 Agent 状态的终端多路复用器</div>
   <div class="section"><div class="section-label event">一句话</div><p>Herdr 是运行在现有终端里的 Agent multiplexer，保留 tmux 式持久化、分屏、远程 SSH 与重新连接能力，同时显示 Agent 是 working、blocked、done 还是 idle。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://herdr.dev；https://herdr.dev/docs/quick-start；https://herdr.dev/compare" target="_blank">https://herdr.dev；https://herdr.dev/docs/quick-start；https://herdr.dev/compare ↗</a></p>
+    <p><a href="https://herdr.dev" target="_blank">https://herdr.dev ↗</a></p>
+    <p><a href="https://herdr.dev/docs/quick-start" target="_blank">https://herdr.dev/docs/quick-start ↗</a></p>
+    <p><a href="https://herdr.dev/compare" target="_blank">https://herdr.dev/compare ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS 或 Linux 终端执行官方安装命令 `curl -fsSL https://herdr.dev/install.sh | sh`，然后运行 `herdr` 创建第一个工作区。先开两个真实项目目录，分别启动 Claude Code、Codex 或其他终端 Agent；观察侧栏如何显示工作状态，并用分屏同时看测试日志、Agent 输出和代码差异。关闭本地终端后重新进入，验证会话是否仍在；再在一台可 SSH 的机器上运行 `ssh 你的主机 herdr`，从另一台终端重新连接。熟悉后可阅读 CLI、Socket API 和 Agent Skill 文档，用脚本创建 pane、读取近期输出、等待任务完成，再把“等待—检查—继续”的流程接进夜间任务。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>tmux 解决的是进程和终端的持久化，却不会理解某个 pane 里的 Agent 是否卡在等待输入；桌面 Agent 管理器又通常绑定一台机器。Herdr 把语义状态、真实 PTY、远程连接和可编程控制面放在一起，适合多 Agent 并行，但它依赖终端工作流，不能替代代码审查和权限隔离。</p></div>
@@ -173,7 +180,8 @@
   <div class="topic-title">🛠️ Mole：Mac 终端清理与优化 CLI</div>
   <div class="section"><div class="section-label event">一句话</div><p>Mole 是 tw93 开源的 macOS 维护工具，集成清理、卸载、磁盘分析、系统优化和实时监控，并把开发工具、语言工具链与 Agent 缓存纳入清理范围。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/tw93/Mole；https://mole.fit" target="_blank">https://github.com/tw93/Mole；https://mole.fit ↗</a></p>
+    <p><a href="https://github.com/tw93/Mole" target="_blank">https://github.com/tw93/Mole ↗</a></p>
+    <p><a href="https://mole.fit" target="_blank">https://mole.fit ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>在有 Homebrew 的 Mac 上先执行 `brew install mole`，不要直接进行高风险删除。先用 `mo clean --dry-run` 查看候选路径和预计释放空间，再检查是否包含项目构建产物、模型缓存、浏览器资料或仍在使用的开发环境；确认后才运行实际清理。随后可以用 Mole 的分析、卸载和监控入口查看大文件、应用残留、CPU/GPU/内存与网络状态。建议第一次只处理一个低风险缓存目录，保存重要工作区和配置的备份，记录清理前后的磁盘空间，再决定是否把它接进定时任务。任何会删除文件的操作都应保留交互确认，不要在不了解路径的情况下用 root 权限扩大范围。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 AI 编码工作流会留下依赖缓存、构建产物、会话日志和 Agent 临时文件，磁盘问题会直接拖慢本地开发。Mole 用单一二进制覆盖清理、卸载、磁盘洞察与监控，并有安全审计和保护目录机制；但它能执行破坏性操作，安全默认不等于无需逐项复核。</p></div>
@@ -193,7 +201,9 @@
   <div class="topic-title">🛠️ Muse Code：Meta 的长程终端编码 Agent</div>
   <div class="section"><div class="section-label event">一句话</div><p>Muse Code 是 Meta 发布的 beta 终端编码 Agent，由 Muse Spark 1.2 驱动，面向大型仓库的多文件修改、长时间调试、子 Agent 并行和内置验证。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://developer.meta.com/ai/resources/blog/build-with-muse-code；https://dev.meta.ai；https://openrouter.ai/meta/muse-spark-1.2" target="_blank">https://developer.meta.com/ai/resources/blog/build-with-muse-code；https://dev.meta.ai；https://openrouter.ai/meta/muse-spark-1.2 ↗</a></p>
+    <p><a href="https://developer.meta.com/ai/resources/blog/build-with-muse-code" target="_blank">https://developer.meta.com/ai/resources/blog/build-with-muse-code ↗</a></p>
+    <p><a href="https://dev.meta.ai" target="_blank">https://dev.meta.ai ↗</a></p>
+    <p><a href="https://openrouter.ai/meta/muse-spark-1.2" target="_blank">https://openrouter.ai/meta/muse-spark-1.2 ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>从 Meta 官方博客的 Get started 入口进入 `dev.meta.ai`，按当前页面提供的一键安装方式在测试仓库中安装 Muse Code，并在浏览器完成认证。第一次不要把生产仓库和高权限凭据直接交给 beta 工具，先准备一个可回滚的示例项目，让它完成“理解依赖—修改多个文件—运行测试—解释差异”的完整任务。再按官方 Cookbook 试 Agent fan-out、bundled skills 和 goal tracking，观察多个子 Agent 的隔离工作树、并行工具调用与目标状态。重点检查事件日志：官方强调每个子 Agent、工具调用、steer 和 cancel 都可观察、可回放；将日志、测试结果和最终 diff 一起留存，才算完成一次可审计的体验。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的重点不只是又一个编码模型，而是模型与 harness 协同训练、上下文压缩、异步工具调用、持久子 Agent 和可回放事件日志。Meta 官方称 1M token 窗口可容纳大型项目上下文，并开放到 Meta Model API 与 OpenRouter；这些能力适合长程任务，但 beta 的地区、额度、数据保留和价格限制必须以当前账户页面为准。</p></div>
@@ -216,7 +226,9 @@
   <div class="topic-title">🛠️ Open Design：本地优先的 DeepSeek 设计工作流</div>
   <div class="section"><div class="section-label event">一句话</div><p>Open Design 是围绕 DeepSeek TUI 的开源、本地优先设计层，把 DeepSeek 的终端编码能力与 Skills、设计系统、项目上下文、可选 Figma MCP 和浏览器验证串成工作流。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://open-design.ai/agents/deepseek-design；https://github.com/nexu-io/open-design；https://open-design.ai/download/" target="_blank">https://open-design.ai/agents/deepseek-design；https://github.com/nexu-io/open-design；https://open-design.ai/download/ ↗</a></p>
+    <p><a href="https://open-design.ai/agents/deepseek-design" target="_blank">https://open-design.ai/agents/deepseek-design ↗</a></p>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+    <p><a href="https://open-design.ai/download/" target="_blank">https://open-design.ai/download/ ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 Open Design 官网下载桌面端，或从 GitHub 阅读并克隆项目；准备 DeepSeek API key 后按官方指南配置模型与 API 地址。进入一个前端项目，先建立包含颜色、间距、字体、组件约束和验收清单的上下文文件，再让 Agent 从一个具体页面开始，而不是一句“做得好看”。如果需要设计交接，再配置 Figma MCP；如果需要可靠结果，接入浏览器测试，逐一检查桌面、移动、空状态、加载状态和交互反馈。让 Agent 修改后执行构建、启动本地服务、在真实浏览器验证，并把生成的 DESIGN.md、代码和截图一起提交。DeepSeek TUI 是文本模型，不能凭空理解图片审美，参考描述和验证回路必须由人补齐。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“便宜模型生成前端”转成可复用的设计工程流程：上下文文件提供长期规则，1M token 窗口可以容纳较大的设计系统，MCP 接入真实设计资料，浏览器检查则把审美判断落到可验证的页面状态。官方明确这是独立开源项目，不等于 DeepSeek 官方产品，也不会替用户代理保存 API key。</p></div>
@@ -239,7 +251,8 @@
   <div class="topic-title">🛠️ Higgsfield Hell Grind：95 分钟 AI 电影的公开创作档案</div>
   <div class="section"><div class="section-label event">一句话</div><p>Higgsfield 把 95 分钟 AI 故事片《Hell Grind》的项目页面、提示词、素材和画布公开展示，适合把一次完整长片制作拆成可研究的镜头级工作流。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://higgsfield.ai/@higgsfield.studio/projects/hell-grind；https://higgsfield.ai" target="_blank">https://higgsfield.ai/@higgsfield.studio/projects/hell-grind；https://higgsfield.ai ↗</a></p>
+    <p><a href="https://higgsfield.ai/@higgsfield.studio/projects/hell-grind" target="_blank">https://higgsfield.ai/@higgsfield.studio/projects/hell-grind ↗</a></p>
+    <p><a href="https://higgsfield.ai" target="_blank">https://higgsfield.ai ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>先以只读方式打开官方项目页，不急着注册或生成；从场景、角色、镜头和时间线入口逐层查看提示词、资产与画布，挑一个短镜头记录它的角色描述、镜头运动、光线、色彩和连续性约束。把记录整理成自己的镜头表，再用你有权限使用的视频模型复现一个 5—15 秒片段，单独评估角色一致性、构图、动作和剪辑，而不是宣称能一键复刻整部电影。若页面提供公开项目的复制或生成入口，再在个人工作区测试；不要上传他人肖像或未授权素材。最后对比原项目与自己的版本，标注哪些效果来自提示词、哪些来自多次采样和人工剪辑。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 视频讨论常停留在几秒 Demo，而 Hell Grind 把“长片”拆成可观察的生产记录。官方页面强调每条提示词、资产和画布都包含在公开项目中，这使它更像一个创作过程样本而不只是成片宣传；但 95 分钟作品不代表普通用户能低成本一次生成，算力、采样次数、版权和人工剪辑仍是主要门槛。</p></div>
