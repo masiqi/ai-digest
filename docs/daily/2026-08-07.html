@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-07</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-07</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得追的不是又一个聊天模型，而是“Agent 能否长期、低成本、可验证地工作”：Prime Agent、bb 和一套工程 Skills 都在重做 harness；MerchantBench 则把长期一致性拉到 365 天经营周期。多源证据 enrichment 本次运行在 600 秒内未产出 dated evidence JSON/summary，以下工具均补做了官方站点、GitHub、论文或文档核验；证据较弱的新线索统一下沉到🌱，不把传闻写成事实。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Prime Agent：可自我改进的 RLM 编程 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Prime Intellect 开源的长期任务 Agent，把持久化 Python REPL、递归语言模型（RLM）和可持续改写的 Harness 组合起来，用于编程、研究与需要多轮推进的自主任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank">https://github.com/PrimeIntellect-ai/prime-agent ↗</a></p>
+    <p><a href="https://www.primeintellect.ai/" target="_blank">https://www.primeintellect.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub 仓库的 Quickstart，按文档选择订阅登录、API Key 或自托管模型入口，再在 macOS/Linux 环境准备项目目录和所需运行时。第一次不要直接让它改生产代码，可以给一个有测试的样例仓库，让 Agent 先拆任务、运行测试、保存阶段性结论；随后观察它如何使用持久 REPL、子 Agent 和持续 Harness。完成后再试 `/refine` 一类的提示、技能或记忆迭代，并检查每次改动的 diff、回滚信息和终端日志，确认“自我改进”没有变成无审计的自动改配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 的竞争点从“会不会调用几个固定工具”推进到“能否管理自己的工作环境与经验”。RLM 将上下文当作可操作变量，Continual Harness 则让提示、技能、记忆和子 Agent 具备可追踪的修改路径；这比单纯扩大上下文更接近真实的软件工程。仓库和官方页面都明确其定位是长期编程/研究任务，但 ARC-AGI-3 等成绩仍属于项目方报告，动手时应把 benchmark 与自己的可复现实验分开。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给它一个带测试的中型仓库，比较一次性编码 Agent 与可持续 Harness 在跨天任务上的差异。</li>
+    <li>做需要反复检索、实验、复盘的研究任务，检查记忆和技能是否真的减少重复劳动。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2085319703715856835" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085082284139614208/img/EgIrWm5I4tCFRKND.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085082284139614208/img/EgIrWm5I4tCFRKND.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami：面向 AI Agent 的文档设计系统</div>
+  <div class="section"><div class="section-label event">一句话</div><p>tw93/Kami 是一套让 Agent 生成可交付文档、简历、长报告、幻灯片和落地页的设计约束与模板系统，目标是减少每次输出都回到“灰色通用模板”的漂移。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+    <p><a href="https://kami.tw93.fun/" target="_blank">https://kami.tw93.fun/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看官网示例，再从仓库 README 选择与你的 Agent 相匹配的入口：Claude Code 使用插件市场安装，Codex 使用对应的插件市场命令，通用 Agent 则按 README 的 `npx skills add tw93/kami/plugins/kami` 路径安装。安装后不要只问“帮我做一页 PPT”，而是给出受众、页数、语言、纸张/屏幕用途和事实来源，让它生成一份文档；随后打开 HTML/PDF 或可编辑 PPTX，检查版式、中文字体、图表和引用，必要时让 Agent 按同一套约束迭代，不要把 GitHub Source ZIP 误当成发布的 skill 压缩包。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Kami 的价值不在于又一个提示词，而在于把视觉层级、模板、打印与导出路径固化成 Agent 可以复用的生产约束。官方仓库说明它覆盖多种文档类型、语言和 Mermaid 图表，并提供 Claude、Codex、通用 skills 等多个入口；这让“内容生成”和“交付格式”被放进同一个可检查流程。需要注意的是，推文提到的版本号与公开仓库当前可见发布信息存在差异，使用时以仓库和官网实际版本为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把会议纪要、研究结论或产品 brief 变成可打印的一页纸，而不是一段聊天文本。</li>
+    <li>为简历、投研报告、项目 changelog 建立可重复的视觉模板，并让 Agent 维持一致性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2085512997854904794" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOukl2QaAAA4zlv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOukl2QaAAA4zlv?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AI Skills for Real Engineers：工程化 Agent Skills 集合</div>
+  <div class="section"><div class="section-label event">一句话</div><p>mattpocock/skills 把真实工程中常用的研究、TDD、代码审查、故障诊断、领域建模和工单流程整理成可安装、可复用的 Agent skills。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mattpocock/skills" target="_blank">https://github.com/mattpocock/skills ↗</a></p>
+    <p><a href="https://skills.sh/mattpocock/skills" target="_blank">https://skills.sh/mattpocock/skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入仓库先读 README 的安装说明，二选一使用 Claude Code 官方插件，或运行文档给出的 `npx skills@latest add mattpocock/skills`，并在安装器里只选择当前项目需要的技能，避免同一套文件重复写入。安装后先执行项目初始化/设置流程，明确 issue tracker、文档目录和标签；然后拿一个真实但可回滚的 issue，依次试 `research`、`tdd`、`code-review` 或 `diagnosing-bugs`，观察它是否留下计划、测试、证据和审查结果。最后把 skill 文件纳入版本控制，审阅其提示词与权限范围，再决定是否在团队仓库推广。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这套项目把“Agent 会写代码”改成“Agent 遵守工程流程”。官方 README 明确区分可自动更新的 Claude 插件与写入项目、由团队自行维护的 skills.sh 文件，既方便试用也保留治理边界；v1.2 还扩展了 Codex 与插件生态。对已经使用多个编码 Agent 的团队来说，统一研究、测试、审查和交付语义，通常比再换一个模型更容易形成复利。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为一个新仓库建立从研究、规格、TDD 到 code review 的统一 Agent 工作流。</li>
+    <li>把团队自己的调试套路、领域术语和发布检查固化成项目内可审阅的 skill。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2085193280569168337" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPAYOU-aUAA6JyV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPAYOU-aUAA6JyV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO9Yh5MWUAE7p-b?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO9Yh5MWUAE7p-b?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Hermes Desktop：把同一套 Agent 能力装进原生桌面端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Hermes Desktop 是 Hermes Agent 的原生桌面应用，复用 CLI 的配置、会话、技能和记忆，并提供流式对话、工具活动、文件浏览、侧边预览、语音与设置界面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/NousResearch/hermes-agent/tree/main/apps/desktop" target="_blank">https://github.com/NousResearch/hermes-agent/tree/main/apps/desktop ↗</a></p>
+    <p><a href="https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/desktop.md" target="_blank">https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/desktop.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果本机已有 Hermes，先在终端运行 `hermes desktop`，让它按当前系统构建并启动桌面应用；首次启动按 onboarding 选择已有运行时或连接现有 gateway，再确认 provider、model、tools 和 credentials。打开一个真实项目目录，利用文件浏览器观察 Agent 读取和写入的文件，同时在侧边预览工具输出；先用低风险任务测试配置同步、会话历史和窗口中的工具流，再决定是否把桌面端用于日常工作。推文提到内置浏览器体验，但外部官方文档当前明确核验的是桌面端、预览与文件浏览能力，浏览器细节应以本地版本实际界面为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是另起炉灶的聊天壳，而是把 CLI/gateway 的同一个 Hermes 核心搬到原生窗口，因而配置、API Key、技能、记忆和会话可以互通。官方文档还说明桌面端会启动 `hermes serve` 后端，通过 tui_gateway 的 JSON-RPC/WebSocket 与界面连接；这对需要实时看工具执行、文件变化和预览结果的人比纯终端更友好，也更适合作为团队演示和新手入口。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 macOS 上边聊天边查看 Agent 打开的网页、生成的文件和工具输出。</li>
+    <li>把已经配置好的 Hermes CLI 环境交给不想长期使用终端的协作者。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2085465857363194331" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085019012908597248/img/wl-yXfwqxWVO2wJe.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085019012908597248/img/wl-yXfwqxWVO2wJe.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ bb：能被 Agent 自己操控的 Agentic IDE</div>
+  <div class="section"><div class="section-label event">一句话</div><p>bb-ide 是一个仍在快速迭代的 Agentic IDE，试图让桌面端、Web、CLI 和 HTTP API 都成为可编排界面，并支持多个编码 Agent 协作、接力和实时干预。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/barelyhuman/bb-ide" target="_blank">https://github.com/barelyhuman/bb-ide ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入仓库阅读当前 README 和 active-development 说明，再按项目给出的开发环境步骤启动一个本地实例；不要一开始接入重要仓库，先创建一个练习项目和两个独立任务线程。把一个 Agent 负责分析、另一个负责实现，观察 bb 是否能在界面中实时跟踪、暂停、转交和继续工作；再通过 CLI 或 HTTP API 触发同一个任务，比较不同入口是否共享状态。每次测试都保留运行日志和生成 diff，因为项目明确仍在演进，端口、工作流和界面不能根据旧截图推断。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统 IDE 是人操作、Agent 辅助；bb 的方向是让 IDE 本身成为 Agent 可以调用和被调用的控制面。官方 README 将线程、实时 steering、handoff 以及桌面/Web/CLI/API 多入口列为核心设计，这比“在编辑器旁边放一个聊天框”更接近多 Agent 工作台。它目前仍是 active development，适合做架构观察和低风险原型，不适合未经审查地替换成熟开发环境。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把代码分析、实现、测试和审查拆给不同 Agent，并在同一工作线程中接力。</li>
+    <li>为内部 Agent 平台验证“界面操作”和 API 自动化是否能共享任务状态。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2085404916928197086" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPDT0LLacAE9fak?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPDT0LLacAE9fak?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPDYFimbQAA7hjp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPDYFimbQAA7hjp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ NIGHTRUN：从 U 盘直接启动的本地大模型运行时</div>
+  <div class="section"><div class="section-label event">一句话</div><p>NIGHTRUN 是用 Rust 编写的 UEFI 常驻本地 LLM runtime，可从 USB 或树莓派 5 的 SD 卡启动，不依赖传统操作系统、浏览器或网络栈，在内存中运行量化模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/hardrave/NIGHTRUN" target="_blank">https://github.com/hardrave/NIGHTRUN ↗</a></p>
+    <p><a href="https://nightrun.io/" target="_blank">https://nightrun.io/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 GitHub 仓库和官网读完安装器、目标设备与安全说明；项目要求 Linux、Rust stable/nightly，建议先用 QEMU/OVMF 按 README 构建并运行镜像，确认模型、内存和键盘显示路径没问题。真的上硬件时，选择 x86_64 UEFI USB 或 Raspberry Pi 5 SD，使用安装器的模型校验、SHA-256 和目标确认流程；它会擦写可移动介质，务必逐字核对设备，不要在本机 Mac 的系统盘上执行 `dd`，也不要把“能启动”误解成数据持久化或联网能力。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>NIGHTRUN 把本地推理做成单用途 AI appliance：固件直接启动、模型装入 RAM、存储随后封存，减少操作系统服务和网络面带来的攻击面与变量。官方 README 还公开了 x86_64 与 Pi 5 的支持边界、模型内存要求、QEMU 测试方式和保守闪盘机制。它更像一个研究型离线终端而非日常桌面应用，但对边缘设备、隐私敏感场景和“最小系统能否跑 LLM”很有启发。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在隔离环境中演示没有 Linux 用户态和网络栈的离线问答设备。</li>
+    <li>用 QEMU 研究 UEFI、量化模型加载、内存封存与本地推理的组合边界。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2085282896596664720" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPBpvpaXsAAmnbj?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPBpvpaXsAAmnbj?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek-V4-Flash-0731 + DSpark：本地推理加速路线</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek-V4-Flash-0731 是 DeepSeek V4 Flash 的正式版本，Unsloth 与模型仓库给出了 GGUF、Unsloth Studio、vLLM/llama.cpp 以及 DSpark speculative decoding 的运行入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731" target="_blank">https://huggingface.co/unsloth/DeepSeek-V4-Flash-0731 ↗</a></p>
+    <p><a href="https://unsloth.ai/docs/models/deepseek-v4" target="_blank">https://unsloth.ai/docs/models/deepseek-v4 ↗</a></p>
+    <p><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-DSpark" target="_blank">https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-DSpark ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先检查硬件门槛，不要把“本地”理解成普通笔记本即可运行：Unsloth 文档列出的量化模型仍需要很大的 RAM/VRAM，DSpark 还需要额外余量。最稳妥的试玩路径是打开 Hugging Face 模型页，在 Unsloth Studio 选择合适量化并先做短对话；有多 GPU 环境再按官方 vLLM 配置启用 `speculative-config`，或按 Unsloth 文档下载 GGUF 与 drafter，使用 llama.cpp 的 DSpark 参数比较吞吐。记录模型版本、量化、上下文长度和 tokens/s，避免把不同硬件的宣传速度混为一谈。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这条线的亮点不是单纯发布更大的权重，而是把“能不能部署”和“解码够不够快”同时推进。外部官方/一手资料确认了 V4-Flash-0731 的权重入口、约百万级上下文定位，以及 DSpark 作为同一 checkpoint 附加的投机解码模块；Unsloth 文档给出最高约 2 倍的方向性提升，但实际收益受显存、量化、batch 和上下文影响，不能直接照搬推文中的 120 tokens/s。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在有足够统一内存或多 GPU 的机器上比较标准解码与 DSpark 解码。</li>
+    <li>为代码 Agent 或长上下文应用评估本地部署的成本、延迟和隐私收益。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2085504857432301653" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPEzmombYAA0U7e?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPEzmombYAA0U7e?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPC2xLaaEAA174a?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPC2xLaaEAA174a?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Muse Code + Muse Spark 1.2：模型与编码 Agent 一起发布</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Meta Superintelligence Labs 发布 Muse Code（beta）与面向编码的 Muse Spark 1.2，并通过 Meta Model API 提供开发者入口，重点覆盖代码生成、复杂调试、代码库理解和端到端开发流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2" target="_blank">https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2 ↗</a></p>
+    <p><a href="https://developer.meta.com/ai/resources/blog/build-with-muse-code/" target="_blank">https://developer.meta.com/ai/resources/blog/build-with-muse-code/ ↗</a></p>
+    <p><a href="https://dev.meta.ai/" target="_blank">https://dev.meta.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读 Meta Research 的发布说明，确认所在地区和账户是否具备访问资格；能使用 API 时进入 `dev.meta.ai` 创建 key，按开发者文档选择 Muse Spark 1.2 和兼容的 OpenAI/Anthropic SDK 入口。也可以直接试 Muse Code beta，但要把权限限制在测试仓库。准备三个对照任务：补一个有测试的函数、定位一个已有 bug、解释一个陌生模块；同时记录模型是否能遵守仓库约束、是否正确调用工具、是否产生可审查 diff。不要只凭一次 demo 判断模型实力，尤其要区分公开预览额度、区域和版本变化。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Meta 这次把模型能力与 Agent harness 同时交付，意味着竞争不只在公开 benchmark，也在“模型是否能进入真实开发回路”。官方资料明确提到代码生成、调试、代码库理解和开发者 API；这为 Cline、OpenCode 或自建 Agent 提供了低迁移成本的测试入口。由于它仍是 beta/preview，稳定性、限额、地区和模型 ID 可能变化，正式项目仍需做回归与成本评估。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用同一组代码修复任务对比 Muse Code 与现有编码 Agent 的工具调用和回归质量。</li>
+    <li>通过 OpenAI-compatible API 为内部代码助手做低成本原型验证。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2085280298066219191" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPBnXjOb0AA5NoW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPBnXjOb0AA5NoW?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPBAKzhaYAAwbhm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPBAKzhaYAAwbhm?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 SeedRealtime：音视频全双工模型进入消费级交互</div>
+  <div class="section"><div class="section-label event">事件</div><p>字节 Seed 发布 SeedRealtime，官方将其定位为原生音视频全双工 LLM，能够在连续音频、视频和文本流上同时理解、判断与回应，并已向消费级产品推进。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>传统实时语音助手通常把听、转写、看图、推理和合成语音串成多个模块，轮次判断还常依赖外部 VAD，因而容易出现抢话、停顿和信息损失。SeedRealtime 的核心变化是把声音、画面、时间和表达放进统一的端到端架构，并持续建模对话节奏；这不是简单地给语音模型外挂摄像头，而是让模型在用户尚未完整说完时就结合画面决定是否回应。它与 AI 眼镜、车载助手和视频通话的结合，值得观察其真实延迟、打断策略与错误恢复，而不能只看演示中的“会看会说”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果全双工交互在大规模产品中稳定运行，实时 AI 的产品形态会从“按按钮问答”转向持续陪伴、主动提醒和基于环境变化的协作。对模型厂商来说，竞争门槛将从单轮识别准确率扩展到流式多模态数据、时序记忆、端到端安全和对话节奏控制；对应用开发者来说，摄像头、麦克风和主动发言同时打开也会带来更严格的授权、隐私、误触发和可解释性要求。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2085278368778342892" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085278199714607104/img/R9lVj2lydUmnxymo.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085278199714607104/img/R9lVj2lydUmnxymo.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 MerchantBench：把 Agent 拉进 365 天电商经营考场</div>
+  <div class="section"><div class="section-label event">事件</div><p>阿里相关团队公开 MerchantBench，将 LLM Agent 放进基于 98,843 条真实商品记录、26 个工具和 365 天订单级模拟的长期电商运营环境中。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>多数 Agent benchmark 只测一个短任务是否完成，MerchantBench 反过来考察策略能否跨天保持一致：Agent 要同时处理选品、上架定价、现金流和延迟到达的订单反馈，早期决策还会限制后续选择。公开论文报告在 48 次运行、8 个模型和两种框架中，最佳 LLM 配置的期末净资产只有人类参与者均值的 27.3%；这不等于所有真实电商结果都如此，但它清楚展示了“会调用工具”与“长期经营不崩盘”之间的距离。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>行业评价将更难只用一次成功率和短程轨迹来包装 Agent 能力，长期一致性、目标保持、延迟反馈归因、现金约束和策略恢复会成为新的采购指标。对企业而言，部署自主 Agent 前需要可回放的仿真环境、止损边界和人工接管机制；对研究者而言，MerchantBench 这类有状态环境会推动记忆、规划、评估与工具治理一起进步，也会更早暴露模型在长期任务中的沉默、放弃和策略漂移问题。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2085252625738674666" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPBONAybIAA19Q-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPBONAybIAA19Q-?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HO_7VROaYAA9Er3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HO_7VROaYAA9Er3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 CRAFT：视频 Token 压缩从“按问题筛”转向一次压缩多轮复用</div>
+  <div class="section"><div class="section-label event">事件</div><p>论文 CRAFT 提出面向视频 VLM 的递归自适应 Token 融合，在约 8× 压缩下保留约 97% 的骨干平均准确率，并强调压缩结果与文本问题无关、可跨多轮复用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>长视频理解的瓶颈不只是模型上下文长度，而是视觉 Token 在 prefill 阶段带来的计算和 KV cache 成本。过去的训练免压缩方法常用硬删除或等权平均，查询条件方法又会把压缩结果绑定到某一个问题；CRAFT 把“选哪些 Token”与“如何融合”拆开，用全局相似度做无参数选择，再用位置感知权重和按通道门控学习融合，从而尽量保留原始 Token 分布和时空坐标。论文报告的优势仍需在不同模型、视频类型和真实多轮负载中复核，但路线对 AI 眼镜和长视频 Agent 很直接。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>若这种 query-agnostic 压缩在工程中成立，同一段视频可以先压缩一次，再服务多个问题，缓存复用会降低实时交互的成本和延迟；这也会把系统优化从“换更大上下文模型”转向视觉 Token 管线、缓存策略与问题间复用。对开发者来说，评估时应同时测准确率、压缩比、首 Token 延迟、缓存占用和跨问题稳定性，不能只拿单一 benchmark 的平均分判断是否值得接入。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2085517360178585951" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2085281858858766538" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Mayii0205/status/2085280508091519245" target="_blank"><span class="handle">@Mayii0205</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2085376079687229911" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2085413771770761401" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vishalmisra/status/2085098603425493472" target="_blank"><span class="handle">@vishalmisra</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/oran_ge/status/2085320958781579644" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPCrYGNa8AAHE0E?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPCrYGNa8AAHE0E?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085277880628461568/img/y0JVzta0L4FKV0s2.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085277880628461568/img/y0JVzta0L4FKV0s2.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085278032453836800/img/DrDeBf45-nLHSGIg.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085278032453836800/img/DrDeBf45-nLHSGIg.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2082049770265190400/img/Rd9Rt2qLG6JGI4qz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2082049770265190400/img/Rd9Rt2qLG6JGI4qz?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2082050609025323008/img/b9Q3NcZ6xR7dVYQ6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2082050609025323008/img/b9Q3NcZ6xR7dVYQ6?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>长程 Agent 验证器：不要只看模型会不会提出方案，继续跟踪“谁来验证 Agent 是否真的变好了、是否偏离目标”的工具与 benchmark。 <a href="https://x.com/vishalmisra/status/2085098603425493472" target="_blank">→</a></li>
+    <li>Agent 大众化入口：时间线反复追问为什么科技圈之外的人仍不用 Agent，值得观察下一批成功产品是从模型能力、组织流程还是更低摩擦的任务入口突破。 <a href="https://x.com/oran_ge/status/2085320958781579644" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
