@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-08</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-08</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号从“聊天回答”继续向“直接交付结果”集中：桌面 Agent、可被 Agent 操作的 Office/网页，以及能把 3D、视频和游戏做成可玩成品的工具同时冒头。本次 Agent Reach 证据包在限定时间内未生成，以下🛠️项目均用本次 X List 推文与官网、GitHub 或官方文档逐项交叉核验；🌱条目保留为早期线索，证据不足处已明确标注。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenWorker：把日常任务交付成成品的开源桌面 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Andrew Ng 团队的开源本地优先桌面 AI 同事，接受“准备一份客户简报、整理收件箱、更新日历”这样的结果导向任务，并跨文件、终端和连接器完成工作，而不是只返回聊天答案。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/andrewyng/openworker" target="_blank">https://github.com/andrewyng/openworker ↗</a></p>
+    <p><a href="https://openworker.com" target="_blank">https://openworker.com ↗</a></p>
+    <p><a href="https://download.openworker.com/mac" target="_blank">https://download.openworker.com/mac ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Apple Silicon Mac 直接打开下载页获取签名应用，启动后填入自己的模型 API Key，或连接本机 Ollama。第一次不要只问“你是谁”，可以给它一个可验收的任务，例如“读取这个文件夹里的会议记录，整理成一页客户简报并保存为 Markdown”。让它执行到需要发送邮件、改日历或运行命令时，观察审批检查点；如果想从源码试，按 README 准备 Python 3.10+、Node 20+ 和 Rust，再运行 bootstrap、启动本地 server，最后启动 surfaces/gui 的界面。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 的评价标准从回答质量推进到交付闭环：本地 Agent loop、连接器、MCP、审批和成品文件被放在同一个桌面工作流里。官方 README 明确支持多模型、25+ 工具连接和定时自动化，同时对外部动作保留人工确认，既展示了“AI 同事”的产品形态，也保留了可控边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将会议记录、销售资料和 CRM 信息汇总成可直接分享的客户简报。</li>
+    <li>让每周报告、收件箱分拣和 Slack 值班摘要按计划运行，并在外发前审批。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2085733516126646543" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPIDdsBbIAA5i1F?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPIDdsBbIAA5i1F?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OfficeCLI：让 Agent 能读、改、检查 Word、Excel 和 PowerPoint</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源单文件 Office 自动化 CLI，无需安装 Microsoft Office，就能创建、读取、修改并渲染 DOCX、XLSX、PPTX，内置 HTML/PNG 预览来做“渲染—检查—修复”闭环。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/iOfficeAI/OfficeCLI" target="_blank">https://github.com/iOfficeAI/OfficeCLI ↗</a></p>
+    <p><a href="https://officecli.ai" target="_blank">https://officecli.ai ↗</a></p>
+    <p><a href="https://github.com/iOfficeAI/OfficeCLI/releases" target="_blank">https://github.com/iOfficeAI/OfficeCLI/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS/Linux 可先用 Homebrew 安装 officecli，或从 Releases 下载对应架构的二进制，再运行 officecli install。最短体验路径是执行 officecli create deck.pptx，然后用 officecli add deck.pptx / --type slide --prop title="Q4 Report" 添加页面，再用 officecli view deck.pptx html 打开渲染结果；想观察实时修复则运行 officecli watch deck.pptx，在另一个终端反复 add、set、remove。最后用 officecli close 或 save 将 resident 模式修改写回磁盘。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>真正的亮点不是“让模型写 Office 文本”，而是把文档当成可查询、可修改、可渲染的结构化对象，并把视觉质量检查纳入 CLI。README 还给出 350+ Excel 公式、模板 merge、MCP Server 和 screenshot 能力，能减少 Agent 生成版式时只看 DOM、不知道溢出和重叠的盲区。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从数据库或测试结果批量生成可编辑的汇报 PPT、Word 报告和 Excel 仪表盘。</li>
+    <li>让 Agent 先渲染截图检查版式，再自动修复字体、布局、图表或公式问题。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2085626449910980898" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085620773058981888/img/D-w-cC0TxGgfnsPG.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085620773058981888/img/D-w-cC0TxGgfnsPG.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ KIRI-Maker：把 3D 高斯泼溅变成粒子特效和镜头动画</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源浏览器工具，用公开的 KIRI Engine、Polycam 或 Luma 分享链接加载 3DGS 模型，切换粒子模式与 3D Reality，预览粒子散开、聚合和电影化镜头，并导出视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/willjim/KIRI-Maker" target="_blank">https://github.com/willjim/KIRI-Maker ↗</a></p>
+    <p><a href="https://www.kiriengine.app/features/3d-gaussian-splatting" target="_blank">https://www.kiriengine.app/features/3d-gaussian-splatting ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开项目页面或按 README 的方式部署静态前端，准备一个 KIRI Engine、Polycam 或 Luma 的公开分享链接，粘贴到首页输入框后点击 Load；不想找素材时点击骰子按钮加载内置 KIRI 示例。随后试调粒子大小、密度、亮度、透明度和背景裁剪，选择 16 个镜头预设或录入自定义关键帧，再预览粒子组装和渲染模式切换；浏览器支持时直接导出 1080p、60 FPS 视频，也可以在桌面浏览器打开 MediaPipe 手势控制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 3DGS 从“扫描后只能旋转查看”的资产，变成可编排的视觉内容。项目 README 给出了 9 种粒子散射/组装效果、16 种镜头路径、手势识别与浏览器录制；KIRI 官方页面还提供 3DGS 遮罩、网格转换和 Blender 插件，说明它可以接到更完整的资产生产链，而不只是一个演示页面。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把商品、展品或空间扫描做成可交互的展览开场和社交媒体短片。</li>
+    <li>为游戏、XR、建筑可视化快速制作粒子化转场和镜头预演。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2085853724455678278" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085599312411791360/img/uCjCgnPf6kujQoT1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085599312411791360/img/uCjCgnPf6kujQoT1?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SpotAsk：macOS 菜单栏里的隐私优先 AI 快捷助手</div>
+  <div class="section"><div class="section-label event">一句话</div><p>原生 macOS 菜单栏应用，按快捷键即可从任何位置提问，也能选中 Safari、Notes 等应用里的文字进行翻译、解释、总结和润色，支持自带模型服务密钥。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/shiquda/SpotAsk" target="_blank">https://github.com/shiquda/SpotAsk ↗</a></p>
+    <p><a href="https://github.com/shiquda/SpotAsk/releases" target="_blank">https://github.com/shiquda/SpotAsk/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 15+ 用户从 Releases 下载 arm64 或 x86_64 DMG，启动后在菜单栏打开 Settings，填写 OpenAI-compatible 或 Anthropic 服务地址、模型名和访问密钥，先点 Test Connection。默认按 Option + Space 呼出聊天窗口；在 Safari 或 Notes 里选中文字后，使用旁边的 quick action bar 选择翻译、解释、总结或自定义提示词。若想改功能，可按 README 准备 Xcode 16+，运行 Scripts/make-app-bundle.sh，再 open build/SpotAsk.app。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有把“AI 助手”做成另一个需要切换的网页，而是把全局快捷键、选中文字、附件、Shortcuts/Spotlight 和 BYOK 组合成系统级入口。项目明确说明密钥与设置留在本机、选中文本只发送到用户配置的服务；对不想把所有内容交给第三方工作台、又想降低调用摩擦的人很实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在阅读网页、邮件或文档时，直接对选中段落做翻译、解释和改写。</li>
+    <li>将截图、代码片段或会议笔记快速交给指定模型处理，不必反复复制到浏览器。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2085741165878350086" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ShipAny Video Lite：把 Seedance 2.5 与 MiniMax H3 封装成可上线的视频站</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ShipAny 的生产级 AI 视频 SaaS 模板，集成 Seedance 2.5 和 MiniMax H3，包含文生视频、图生视频、参考媒体、账户、积分、订阅、作品库和管理后台。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://shipany.ai/zh/templates/video-lite" target="_blank">https://shipany.ai/zh/templates/video-lite ↗</a></p>
+    <p><a href="https://shipany.ai/zh/templates" target="_blank">https://shipany.ai/zh/templates ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开模板详情页确认技术栈和功能边界；它不是一个免费试玩模型，而是面向开发者的可购买模板。准备好 ShipAny 会员、模型服务凭证和 Node.js 项目环境后，按模板说明获取代码，配置用户认证、积分/订阅和视频模型接口，再启动本地开发服务。第一轮建议只做一个最小闭环：上传一张参考图，调用图生视频，保存任务状态和生成结果，再补上作品列表；确认成本、队列和失败重试后，才接入多参考素材与后台管理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值在于把模型能力包装成可运营产品，而不是单次生成 Demo。官方页面列出 TanStack Start、React、AI SDK、账户、credits、RBAC 和 admin console 等组成部分；这能让独立开发者把时间从登录、支付、任务状态和作品管理转向体验与分发，但也要先核对模板授权、模型额度和实际调用成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速搭建面向电商、广告或短视频团队的多模型视频生成 SaaS。</li>
+    <li>为不同模型做统一的参考图、作品管理、积分和审核工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2085749591396528478" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPISIK7aIAAPY0E?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPISIK7aIAAPY0E?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MakePlay AI：用一句话把想法变成可玩的浏览器游戏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向非程序员的 AI 游戏构建器，用户负责描述和导演，AI 负责像素美术、代码、音乐与关卡设计，生成后可直接在网页中试玩和继续迭代。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://makeplay.ai" target="_blank">https://makeplay.ai ↗</a></p>
+    <p><a href="https://makeplay.ai/p/ntp54ejmff" target="_blank">https://makeplay.ai/p/ntp54ejmff ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 MakePlay 首页，先用一句明确的游戏导演指令开始，例如“做一个带双重跳跃、三种敌人和计分板的柴犬像素跑酷游戏”；等待生成后先试玩核心循环，再用短指令逐次改一个变量，如“把跳跃手感变轻”“增加一个会追踪玩家的敌人”或“把背景改成霓虹实验室”。试玩满意后再检查手机端布局、碰撞、音效和分享入口。它适合先做小而完整的单屏原型，不要一开始就要求大型开放世界。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方首页把产品定位成“direct games”，强调一行描述即可开始，且创作与游玩形成反馈循环；这使它更像可分享的产品原型工厂，而不仅是代码生成器。对独立开发者来说，关键观察点是自然语言迭代能否稳定修改已有机制，以及作品分享、社区激励和生成成本能否支撑持续创作。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在一天内验证一个小游戏机制、广告创意或活动互动页。</li>
+    <li>为课程、社群和品牌活动快速制作可打开即玩的轻量体验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2083798020253274484" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HOsjMjxaIAA0B3E?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOsjMjxaIAA0B3E?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083039640626565120/img/bSbvbHOYqFq_hfNy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083039640626565120/img/bSbvbHOYqFq_hfNy?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WebMCP：让网站直接向 Agent 暴露结构化工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>WebMCP 是面向 Agent 的浏览器 API 方向，网站可以声明搜索、筛选、预订等带输入参数的工具，减少 Agent 依赖截图、猜按钮和脆弱 DOM 点击。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developers.cloudflare.com/browser-run/features/webmcp" target="_blank">https://developers.cloudflare.com/browser-run/features/webmcp ↗</a></p>
+    <p><a href="https://developer.chrome.com/blog/webmcp-epp" target="_blank">https://developer.chrome.com/blog/webmcp-epp ↗</a></p>
+    <p><a href="https://github.com/GoogleChromeLabs/webmcp-tools" target="_blank">https://github.com/GoogleChromeLabs/webmcp-tools ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 Chrome WebMCP 官方早期预览说明或 GoogleChromeLabs 的公开 demos，优先从酒店、航班或披萨示例开始。在支持 WebMCP 的实验环境里打开 demo，进入 DevTools Console 执行 navigator.modelContextTesting.listTools() 查看工具名、描述和输入 schema，再用 executeTool 调用搜索或筛选动作，执行后重新列出工具观察页面状态如何变化。开发者还可以查看 declarative 与 imperative 两种 demo，把业务动作拆成可验证的 typed input；涉及预订、支付等敏感动作时，保留人工确认。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这条路线把“网页是给人看的界面”改造成“网页同时提供给 Agent 的能力目录”。Chrome 官方说明它包含 declarative 与 imperative 两种 API，Cloudflare 文档则展示了工具发现、参数调用和 HITL 确认；一旦生态稳定，客服、旅游、电商和后台系统的 Agent 接入成本可能从视觉自动化转向更可测试的接口设计。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给电商、旅行和客服网站提供可发现、可校验的搜索与办理工具。</li>
+    <li>在浏览器自动化测试中，用 schema 验证 Agent 是否正确调用了业务动作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2085611576971932156" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek-V4-Flash-0731 双 DGX Spark 部署复现手册</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源部署文档，记录如何用两台 NVIDIA DGX Spark 通过 200GbE 组成集群，以 vLLM 和 TP=2 运行 DeepSeek-V4-Flash-0731，并提供下载、启动、验证和运维章节。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/maliubiao/dgx-spark-2-deepseek-flash-0731" target="_blank">https://github.com/maliubiao/dgx-spark-2-deepseek-flash-0731 ↗</a></p>
+    <p><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731" target="_blank">https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731 ↗</a></p>
+    <p><a href="https://docs.nvidia.com/sync/latest/cluster-assistant.html" target="_blank">https://docs.nvidia.com/sync/latest/cluster-assistant.html ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这不是普通 Mac 可运行的小模型，先按仓库的前置条件准备两台可 SSH 的 DGX Spark、一根 QSFP112 DAC 线和管理网络，再把 VARIABLES.md 中的占位符替换成自己的环境信息。按 01–05 章完成硬件、系统、集群和 NCCL 验证；按 06 章下载约 166.9GB 模型并校验完整性，按 07 章配置 Anemll vLLM 镜像与 TP=2 服务，最后用 curl 访问 OpenAI-compatible /v1/models，再按 08 章做冒烟和压测。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“开源模型能否落地”从模型卡拉回到硬件、网络、量化、KV cache、启动守护和长跑稳定性。仓库把敏感 IP、主机名和凭证脱敏，并将 NVIDIA Sync、NCCL、模型下载、服务启动与排障拆成复现章节；对于想评估本地高上下文 Agent 推理的人，参考价值高于一条只展示速度的截图。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地搭建面向 Agent/Vibe Coding 的高上下文推理服务。</li>
+    <li>验证双机 GPU 集群、量化模型和长时间任务的吞吐与稳定性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2085660575913361781" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPHBO2BbQAEUjCk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPHBO2BbQAEUjCk?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 开始让独立会话直接互相传递摘要</div>
+  <div class="section"><div class="section-label event">事件</div><p>社区观察到 Claude Code 新增跨会话消息能力，当前会话可发现其他会话并发送文本摘要，不必由人手动搬运上下文。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是把两个会话的完整历史合并，而是让一个 Agent 会话把任务状态、错误摘要或下一步建议发给另一个会话。公开报道将其概括为 ListAgents 与 SendMessage 两类能力，同机交付可走本地通道，跨机器场景仍有边界。对实际使用者而言，最重要的是消息粒度：只传递经过压缩的文字，不默认共享文件和完整上下文，因此协作效率提升的同时，仍需要设计命名、权限、摘要格式和失败重试。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>多窗口并行开发会从“人肉中转”走向轻量 Agent 协作，但也会带来状态一致性、错误扩散和审计问题。团队若要采用，应先把会话当成有边界的服务，规定哪些消息可以自动发送、哪些动作必须人工确认，而不是简单地无限增加并行 Agent 数量。
+链接：https://alphasignal.ai/news/anthropic-s-claude-code-lets-ai-sessions-talk-directly-without-human-middlemen</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2085860025919230166" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 公开 ChatGPT 使用结构：从提问到做事仍在渐进变化</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布 ChatGPT 使用研究，给出 Asking、Doing、Expressing 三类行为分布，其中 Asking 约占 49%，Doing 约占 40%，Expressing 约占 11%。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这组数据比“大家都在使用 Agent”更值得冷静看待：近一半消息仍是咨询和建议，Doing 虽已占四成，但其中只有约三分之一与工作相关。也就是说，用户确实在把模型用于写作、规划、编程等实际任务，但从咨询到真正授权执行之间仍有产品、信任和数据连接的门槛。X List 中“让 AI 干活”的观察有方向性，却不能直接等同于完全自主的企业 Agent 已经普及。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开发者不应只追逐更长的自主运行时间，而要把咨询、生成、审阅、执行和审批拆成连续产品路径。对于企业，真正的竞争点会落在权限、连接器、结果格式和可追责性；对于个人工具，则是能否把 Doing 的结果沉淀为文件、日历变更或可复用工作流，而不是停在聊天记录里。
+链接：https://openai.com/index/how-people-are-using-chatgpt</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2085740455522890207" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 把内部风险调查纳入前沿 AI 公司的安全基础设施</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 招聘 Insider Risk Investigator，职责包括调查内部风险、保护 IP 与商业秘密、完善检测队列并与 IT、SecEng、法务和 HR 协作。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>X 上把这个岗位戏称为“锦衣卫”，但官方招聘信息呈现的是一套正规化的 insider-risk 工程：既有人员与流程调查，也有设备取证、DLP/UEBA/SIEM 等检测能力和跨部门响应。它与 Anthropic 已公开讨论的模型安全并不矛盾，反而说明当模型权重、训练数据、研究基础设施和高价值 API 变成核心资产后，传统企业安全中的内部威胁治理会被前沿 AI 公司重新加权。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 创业公司未来不仅要招模型研究员和红队，还要建立能处理人员、硬件、权限、日志与供应链的安全团队。对工具厂商而言，审计、最小权限、密钥隔离、审批和可回放记录会从“企业加分项”变成 Agent 产品能否进入生产环境的准入条件。
+链接：https://job-boards.greenhouse.io/anthropic/jobs/5380744008
+https://www.anthropic.com/responsible-scaling-policy/roadmap</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2085661114495611100" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/ewind_dev/status/2085201788010148349" target="_blank"><span class="handle">@ewind_dev</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2085636358270591354" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2085744926390673569" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2085588610871689546" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2085683002395570358" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/JefferyTatsuya/status/2085861760763105510" target="_blank"><span class="handle">@JefferyTatsuya</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2085873466775834765" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/LandingAI/status/2085394398788096389" target="_blank"><span class="handle">@LandingAI</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2085781426382012497" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPHBsDBb0AAgA40?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPHBsDBb0AAgA40?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085192597035970560/img/x_IlgKwh-F6Lablh.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085192597035970560/img/x_IlgKwh-F6Lablh.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPAXuMGbAAA8-v7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPAXuMGbAAA8-v7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPAXuMEawAE_jti?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPAXuMEawAE_jti?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPAXuMKbAAAIZOU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPAXuMKbAAAIZOU?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPGUq8TasAAImW_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPGUq8TasAAImW_?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HPFETM3boAAk1tV.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HPFETM3boAAk1tV.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085679313874231296/img/PZsiByQOpAGagdrw.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085679313874231296/img/PZsiByQOpAGagdrw.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPDPJYMaQAAMpb_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPDPJYMaQAAMpb_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>GPT 6 Astra：X List 只出现“即将到来”的短线预告，尚无可核验规格，先跟踪官方发布与实际可用性 <a href="https://x.com/dotey/status/2085873466775834765" target="_blank">→</a></li>
+    <li>LandingAI 代理式文档提取 ADE：官方账号展示 Parse/Extract 的同步与异步取数入口，适合观察文档处理 API 是否进一步转向长任务 Agent 工作流 <a href="https://x.com/LandingAI/status/2085394398788096389" target="_blank">→</a></li>
+    <li>Open Code Go Code Plan：DeepSeek-V4-Flash-0731 等模型的套餐额度变化可能影响编码 Agent 的价格/性能选择，具体额度和长期政策仍需以官方账单页面为准 <a href="https://x.com/op7418/status/2085781426382012497" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

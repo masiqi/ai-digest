@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 07 Aug 2026 00:49:15 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 00:43:18 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/08 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-08.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-08.html</guid>
+      <description>今天的信号从“聊天回答”继续向“直接交付结果”集中：桌面 Agent、可被 Agent 操作的 Office/网页，以及能把 3D、视频和游戏做成可玩成品的工具同时冒头。本次 Agent Reach 证据包在限定时间内未生成，以下🛠️项目均用本次 X List 推文与官网、GitHub 或官方文档逐项交叉核验；🌱条目保留为早期线索，证据不足处已明确标注。</description>
+      <pubDate>2026-08-08T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/07 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-07.html</link>
