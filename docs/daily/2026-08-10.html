@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-10</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-10</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号很集中：AI 正从“聊天窗口里的模型”继续下沉为能被 Agent 调用、能在本地运行、能接管真实设备和工作流的基础设施；设计、视频、语音、手机控制与多会话开发都在朝这个方向靠拢。本次证据包已生成，覆盖 83 个 X 候选，但 6 路 HNRSS 请求均返回 502，因此 HN 线索不作为已验证结论；证据不足的新名词统一保留在“刚露头”，不硬凑成工具。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ baoyu-design：本地运行 Claude Design 的 Agent Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 Claude Design 的设计方法打包为可在 Cursor、Claude Code、Codex 等本地 Agent 中运行的 Skill，用自然语言生成高保真界面、交互原型、线框、落地页、仪表盘和演示文稿等自包含 HTML 产物。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/baoyu-design" target="_blank">https://github.com/JimLiu/baoyu-design ↗</a></p>
+    <p><a href="https://github.com/jimliu/baoyu-skills" target="_blank">https://github.com/jimliu/baoyu-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备 Node.js 和一个支持读取项目文件的 Agent，在项目目录执行 `npx skills add JimLiu/baoyu-design`，按 README 将 Skill 安装到对应 Agent。然后在 Agent 中给出一个具体需求，例如“基于这张截图做一个可点击的设置页”，让它先收集设计上下文、生成 HTML，再用本地预览或 Agent 的浏览器检查。把生成物保存到项目的 designs 目录，继续用“指出这个按钮并改成……”的方式迭代；如果要做 PPT、移动端原型或数据看板，再明确写出目标载体和交互流程。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把原本依赖网站订阅的设计流程变成了可版本控制、可复用、可被其他代码 Agent 继续调用的本地资产。官方仓库明确支持自包含 HTML、原型预览和多种导出方向，且仓库在本次证据采集时已有约 3.3k stars；对独立开发者来说，设计稿不再是一次性图片，而是能进入代码仓库的可执行中间层。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在写代码前先生成并反复确认 UI 原型，减少 Agent 直接改坏页面的返工。</li>
+    <li>把产品需求、截图和品牌规范交给 Agent，快速产出可演示的落地页或移动端交互样例。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ios_1261142602/status/2086106228560928837" target="_blank"><span class="handle">@ios_1261142602</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BaoCut：被 Agent 调用的视频转录与剪辑工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>BaoCut 是 macOS 视频工具，配套的开源 Agent Skill 可让 Claude Code、Codex 等 Agent 调用本地 CLI，完成视频转录、字幕、翻译、说话人处理、时间线编辑与导出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://baocut.app" target="_blank">https://baocut.app ↗</a></p>
+    <p><a href="https://github.com/JimLiu/baocut" target="_blank">https://github.com/JimLiu/baocut ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 baocut.app 安装 BaoCut.app，再按官方仓库执行 `npx skills add JimLiu/baocut -g -a claude-code codex -y`，让 Skill 注册到本机 Agent。把一个本地视频交给 Claude Code 或 Codex，先要求“转录并标出说话人”，再要求“翻译成中英双语字幕、删掉指定段落并导出预览”。如果不想打开完整 GUI，也可以让 Agent 使用 `bcut` CLI；先检查输出文本和时间轴，再执行字幕烧录或最终导出，避免把一次错误剪辑直接覆盖源文件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它体现了“App 负责确认和微调、Agent 负责操作”的新交互，而不是再做一个孤立的剪辑聊天框。官方仓库把 CLI、解析器和 Agent Skill 分层，支持 Claude Code、Codex 及兼容 skills.sh 的 Agent；视频处理结果还能回到本地文件和网页界面继续复核，适合把重复的转录、翻译和粗剪流程变成可复用命令。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>批量处理 YouTube、X 或本地访谈视频，先转录再自动生成字幕和重点片段。</li>
+    <li>用自然语言修改说话人、时间段、字幕语言和导出格式，最后人工确认成片。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/LinearUncle/status/2086445635725586513" target="_blank"><span class="handle">@LinearUncle</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPSLJYzakAAgMjV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPSLJYzakAAgMjV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPSLLjLa4AEEt7v?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPSLLjLa4AEEt7v?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPSLPEzbQAAMhjC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPSLPEzbQAAMhjC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Phone Harness：让 Agent 通过 iPhone Mirroring 操控真实 iPhone</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Phone Harness 是一个开源 macOS harness，利用 iPhone Mirroring 窗口、屏幕捕获、Vision OCR 和 HID 级 CGEvent 输入，让 Agent 读取并操作真实 iPhone，不需要越狱、Xcode 或 WebDriverAgent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ShawnPana/phone-harness" target="_blank">https://github.com/ShawnPana/phone-harness ↗</a></p>
+    <p><a href="https://github.com/ShawnPana/phone-harness/blob/main/install.md" target="_blank">https://github.com/ShawnPana/phone-harness/blob/main/install.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先把 iPhone 与 macOS 的 iPhone Mirroring 配对，再克隆仓库到 `~/.phone-harness`，阅读 `install.md` 后执行可编辑安装，并用 `phone-harness skill` 注册 Agent Skill。首次运行必须在 macOS“隐私与安全性”里给终端授予辅助功能和屏幕录制权限，然后执行 `./phone-harness --doctor` 检查窗口、权限和连接状态。连接成功且手机解锁后，可以让 Agent 先调用 OCR 读取 Home Screen，再用 `open_app("Weather")`、`tap_text(...)`、`type_text(...)` 做无害测试；每一步都重新截图确认结果，不要让 Agent 直接执行支付、删除或发消息等不可逆操作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把移动端自动化从脆弱的坐标脚本推进到“截图观察—输入动作—再次验证”的 Agent 闭环，传输层直接复用 macOS 已经能看到的镜像窗口。官方实现还把可编辑的 helper 放进 agent-workspace，方便针对特定 App 补充动作；但它依赖配对和系统权限，适合实验与个人自动化，不应未经确认接管敏感账户。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>测试没有公开 API 的 iOS App 流程，并用 OCR 检查每一步实际界面。</li>
+    <li>让个人 Agent 执行天气、待办、信息检索等低风险手机操作，同时保留人工确认点。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2086473295680192600" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2086376827455516672/img/NjBuhj88dOSsGVPC.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2086376827455516672/img/NjBuhj88dOSsGVPC.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2084555735057543168/img/Hx2uxFmJBLmA3tiy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2084555735057543168/img/Hx2uxFmJBLmA3tiy?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Herdr：带持久会话和状态感知的 Agent 终端运行时</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Herdr 是一个 Rust 编写的终端 Agent runtime/multiplexer，把 Claude Code、Codex 等 Agent 放进可持续的终端会话，支持分屏、鼠标操作、工作状态识别、远程重新连接和 Agent 间协作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/herdrdev/herdr" target="_blank">https://github.com/herdrdev/herdr ↗</a></p>
+    <p><a href="https://herdr.dev/docs/quick-start/" target="_blank">https://herdr.dev/docs/quick-start/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 上可以先执行 `brew install herdr`，然后在项目所在目录运行 `herdr`。在一个 workspace 里创建多个 session 或 pane，分别启动 Claude Code、Codex 或其他受支持的 Agent；用鼠标或 tmux 风格快捷键切换、分屏和查看输出。需要离开电脑时按文档方式 detach，之后在同一台机器或 SSH 中重新运行 `herdr` 连接回来，先查看哪些 pane 处于 working、blocked、done 或 idle，再只处理需要回答的问题。想从脚本或另一个 Agent 管理会话时，再阅读官方 socket API，不要直接依赖未经文档说明的内部协议。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>普通终端 multiplexer 解决的是“窗口还在不在”，Herdr 进一步把 Agent 的工作状态、阻塞状态和注意力管理作为一等对象。官方仓库强调后台运行、断网或合盖后仍可恢复，并提供 CLI 与 socket API；这更接近 Agent 的长期运行时，而不只是把多个聊天窗口拼到一起。对多 Agent 并行开发，减少手动轮询和错过阻塞提问尤其有价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在服务器上同时跑多个编码 Agent，让它们分工实现、测试和审查。</li>
+    <li>合盖或断开网络后保留长任务，回来后按 blocked/working 状态快速恢复工作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2086350996452909182" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole：给 AI Coding 时代清缓存的 macOS 工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mole 是一个开源 macOS 命令行工具，把清理缓存、卸载应用、磁盘分析、系统优化和 CPU/内存/磁盘/网络监控集中到一个终端工具里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole" target="_blank">https://github.com/tw93/Mole ↗</a></p>
+    <p><a href="https://mole.fit" target="_blank">https://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS 14 或更新版本上先执行 `brew install mole`，安装后运行 `mole` 或 `mo` 查看交互式菜单。第一次不要直接清理，先用 `mo analyze` 或磁盘分析功能定位开发工具、浏览器、模型客户端和项目构建目录占用的空间，再查看扫描结果和保护规则；确认白名单后再执行 clean。需要卸载应用时先让 Mole 列出关联的 launch agent、偏好设置和残留文件，逐项确认后再移除。AI Coding 产生的 node_modules、build、venv、target 和缓存很容易反复增长，建议把清理作为每周维护而不是临时救火。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方仓库明确区分了免费的开源 CLI 和独立的商业 Mac App，CLI 本身不依赖云端，适合开发者审计和脚本化维护。它把 AI 工具缓存、开发构建产物和系统状态放在同一套可预览流程里；尤其是 `mo analyze` 先分析、再把文件移入废纸篓的路径，比“清理软件一键全删”更适合 Agent 高频写代码的机器。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>清理 Claude、Codex、浏览器和开发依赖留下的缓存，释放本地磁盘。</li>
+    <li>在多 Agent 长期开发机上查看资源占用，定期处理构建目录和卸载残留。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2086131006013395089" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPNaSIHbEAAahVL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPNaSIHbEAAahVL?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ KeySteer：用键盘和视觉提示定位鼠标与控件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>KeySteer 是 Windows/macOS 原生开源工具，用 hjkl、Grid、Recursive Grid 和 UI Hint 移动、点击、拖拽鼠标，并为按钮、链接、菜单和输入框显示可键入标签。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/dccif/KeySteer" target="_blank">https://github.com/dccif/KeySteer ↗</a></p>
+    <p><a href="https://dccif.github.io/KeySteer/" target="_blank">https://dccif.github.io/KeySteer/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方 Releases 下载与系统和 CPU 架构匹配的 ZIP；macOS 解压后把 `KeySteer.app` 放到 `/Applications`，首次打开前按文档授予辅助功能和屏幕录制权限。进入 Normal 模式后用 `h/j/k/l` 移动，用 `;`、`'` 或右 Shift 点击，用 `n` 切换按住状态来拖拽；按 `g` 进入 Grid，按 `f` 进入递归 Grid，按 `Command+F` 进入 UI Hint，为当前界面控件生成标签。先在普通网页或设置页测试，再按自己的习惯修改 TOML 配置和跨显示器快捷键。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把鼠标动作录成固定坐标，而是把键盘导航、屏幕区域细分和辅助功能树/Vision 提示组合起来，能适应窗口位置变化。官方 README 同时覆盖 macOS Accessibility Tree、Vision、Hybrid 和 Windows UI Automation；这类“可定位的操作层”既能提升键盘用户效率，也可能成为桌面 Agent 进行可验证点击的低层执行器。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在没有完善快捷键的桌面软件里，用键盘快速定位按钮、菜单和输入框。</li>
+    <li>为桌面自动化或 Agent 操作增加可视化标签与人工接管通道。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2086338824284647674" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Rudoc：4–6MB 的 Rust 文档格式转换器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Rudoc 是一个小型、无运行时依赖的 Rust 文档转换器，用单个二进制覆盖 Markdown、HTML、TXT、DOCX、Typst、PDF、PPTX、CSV/XLSX、XML/OPML/JSON 等常见转换。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/asong56/rudoc" target="_blank">https://github.com/asong56/rudoc ↗</a></p>
+    <p><a href="https://github.com/asong56/rudoc/releases" target="_blank">https://github.com/asong56/rudoc/releases ↗</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=49052181" target="_blank">https://news.ycombinator.com/item?id=49052181 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS Apple Silicon 上从官方 Releases 下载 `rudoc-macos-arm64` 压缩包，解压后把二进制放进 PATH；也可以在有 Rust 的环境从源码构建。最简单的用法是 `rudoc notes.md notes.html`，程序按扩展名自动判断输入和输出格式；需要标准输出时再组合管道，做 Markdown 到 HTML、TXT 到 DOCX 或 Markdown 到 PPTX 的小转换。先用 `--help` 查看格式和 PDF 选项，注意 PDF 读取主要是文本提取、复杂 PPTX 格式兼容性有限，不要把它当成 Pandoc 的全功能替代品。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Rudoc 的价值不是格式覆盖最多，而是把“偶尔需要的转换”压缩成一个约 4–6MB、启动很快、没有 GHC 或复杂运行时的二进制。官方 README 给出了静态发布包和明确的格式边界，Hacker News 的 Show HN 讨论也强调了它面向 Markdown/HTML 等日常小流程；对 Agent 来说，小而确定的 CLI 比调用重量级 GUI 更容易组合和复现。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在脚本或 Agent 工作流里把 Markdown 快速转成 HTML、DOCX 或简单 PPTX。</li>
+    <li>在 CI、临时容器或不想安装大型依赖的机器上做轻量格式转换。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2086074624865956048" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Hugging Face Speech-to-Speech：开源本地实时语音 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Hugging Face 的 Speech-to-Speech 提供 VAD→STT→LLM→TTS 的模块化语音 Agent 管道，并通过 OpenAI Realtime 兼容的 WebSocket API 暴露实时对话能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/huggingface/speech-to-speech" target="_blank">https://github.com/huggingface/speech-to-speech ↗</a></p>
+    <p><a href="https://pypi.org/project/speech-to-speech/" target="_blank">https://pypi.org/project/speech-to-speech/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Python 3.10+ 后执行 `pip install speech-to-speech`。想快速体验，可以运行 `speech-to-speech local`，让服务端和麦克风/扬声器客户端在本机回环；也可以先启动 `speech-to-speech serve`，再在另一个终端运行 `speech-to-speech talk --url ws://127.0.0.1:8765/v1/realtime`。默认路径使用本地 Parakeet TDT 做语音识别、Qwen3-TTS 做语音输出，并连接一个 OpenAI 兼容的 LLM；有 Apple Silicon 或合适显卡后，再把 LLM 指向 llama.cpp/vLLM，逐步替换 VAD、STT、TTS 组件并测量延迟。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把语音 Agent 的关键环节拆成独立线程和队列，每个组件都能替换，且客户端无需重写协议就能从托管 Realtime 端点切到自托管服务。官方仓库还说明该管道已用于 Reachy Mini 的对话后端；对想研究实时打断、轮次检测和全本地语音的人来说，既有可运行入口，也有清晰的模块边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地搭建语音问答、语音控制和机器人交互原型，减少对单一云端 API 的依赖。</li>
+    <li>用 OpenAI Realtime 兼容协议测试不同 STT、LLM、TTS 组合的延迟和成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2086097511970983967" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPNOlgrbkAAPGrZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPNOlgrbkAAPGrZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 收购 NextSlide：演示文稿能力向 ChatGPT 汇流</div>
+  <div class="section"><div class="section-label event">事件</div><p>NextSlide 宣布加入 OpenAI，团队成员转入 ChatGPT 相关工作，交易据报道发生在 2026 年更早时候，财务条款未公开。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>NextSlide 原本解决的是把提示词、笔记、文档或研究资料变成精致且可编辑演示文稿的问题。TechCrunch 的报道（https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide）确认了团队加入 ChatGPT 以及产品方向，但这不等于 NextSlide 作为独立产品会继续对外提供。值得看的不是又多了一个 PPT 生成器，而是视觉表达、内容组织和可编辑交付正在成为通用 Agent 的一部分：用户可能不再先打开演示软件，而是直接把研究和目标交给 ChatGPT，再由模型生成、修改并交付可继续编辑的结果。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会把“生成一套页面”从单点生产力功能推向更完整的知识工作流，可能压缩传统演示工具在大纲、版式和初稿环节的差异化空间。对创业团队来说，真正的壁垒会转向企业模板、事实核验、品牌规范、协作和可编辑格式；对用户来说，短期应关注能力是否真正落地，而不是把一次收购直接等同于产品上线。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2086106130095472734" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPNWYAla0AESEgM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPNWYAla0AESEgM?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Evo 设计出 16 种可工作的噬菌体：生成式生物学进入实验证明阶段</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究者用基因组模型 Evo 生成候选病毒基因组，并在实验室合成测试，约 300 个候选中有 16 个被确认能感染并复制于大肠杆菌的噬菌体。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条消息需要把“病毒”与“人类病原体”区分开：CNN 的报道（https://www.cnn.com/2026/08/06/health/ai-viruses-bacteriophages）说明这些是针对细菌的噬菌体，不能感染人类；研究团队还刻意把人类、动物和植物相关病原体数据排除在训练范围外。它的技术意义在于模型不只是从已有序列做分类，而是提出新的完整基因组，再由实验筛选功能。成功率并不意味着模型能随意生成生物体，却证明“模型提出候选—实验验证—再迭代”的闭环正在变得现实。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>医疗上，面向耐药细菌定制噬菌体组合可能打开新的治疗研究路径；安全上，能够生成并筛选完整基因组也提高了双重用途风险，监管、实验室生物安全和模型访问控制必须同步建设。行业评价不能只看 16 个成功样本，还要看数据排除、合成门槛、可复制性和审查机制，避免把论文结果夸大成“AI 已能制造人类病毒”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2086423751491760532" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPR3VTJb0AIUtlV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPR3VTJb0AIUtlV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Apple Intelligence 中文支持千问：本地化模型接入系统级 AI</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 传出国行 Apple Intelligence 配套手册已出现“在 Mac 上配合 Apple 智能使用千问”，Apple 官方支持页已经上线同名中文文档。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Apple 官方手册（https://support.apple.com/zh-cn/guide/mac-help/mchl46b3ab20/mac）至少确认了“Mac 配合 Apple 智能使用千问”这一文档入口；原推文进一步称相关能力将随 macOS 26.6 推进，但具体地区、系统版本、机型和功能范围仍应以设备上的正式更新说明为准。这个变化的关键不只是换一个模型，而是把中文模型放进操作系统级的写作、理解和跨 App 场景，模型选择开始受地区合规、语言质量、隐私和系统体验共同约束。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果落地范围扩大，国内用户获取系统级生成式功能的门槛会下降，也会推动模型厂商从独立 App 竞争转向操作系统入口竞争。对开发者而言，需要重新评估系统 AI 调用、中文内容质量和数据边界；对普通用户而言，先确认自己的国行设备、系统版本和 Apple Intelligence 开关是否满足条件，不要仅凭社交平台截图判断“已全面可用”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2086078429099864472" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2083798020253274484" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2086132292473454940" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2086321744982528258" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2086280112459403382" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xicilion/status/2086425800774176869" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/cnzhihao/status/2086040065458008536" target="_blank"><span class="handle">@cnzhihao</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPM7K2hasAAja5j?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPM7K2hasAAja5j?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HOsjMjxaIAA0B3E?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HOsjMjxaIAA0B3E?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2083039640626565120/img/bSbvbHOYqFq_hfNy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2083039640626565120/img/bSbvbHOYqFq_hfNy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2085889128567377920/img/-0FbUOqwc7riSFeO.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2085889128567377920/img/-0FbUOqwc7riSFeO.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPQZ3XkaoAEd3eJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPQZ3XkaoAEd3eJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPOMgzOWkAAkWvj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPOMgzOWkAAkWvj?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>fastjson2 F1 漏洞线索：推文提出 2.0.64 及以下可能存在 AutoType 绕过，但本次没有找到对应官方安全公告，不要按已证实 0day 传播，先核对官方版本与公告 <a href="https://github.com/alibaba/fastjson2" target="_blank">→</a></li>
+    <li>DeepSeek V4-flash / GLM-5.2 可用性波动反馈：单条用户观察称模型服务表现出现先降级、无响应、切换后恢复，尚不足以判断是模型、路由还是服务端问题，适合留意后续公告与多用户复现 <a href="https://x.com/xicilion/status/2086425800774176869" target="_blank">→</a></li>
+    <li>FDE 的真实交付边界：从业者复盘把 FDE 从“给焦虑老板定心”拉回到能否真正交付的工程问题，值得继续观察 Agent 落地岗位如何从演示转向可验收结果 <a href="https://x.com/cnzhihao/status/2086040065458008536" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

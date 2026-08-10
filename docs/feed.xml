@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 09 Aug 2026 00:50:07 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 00:43:40 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/10 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-10.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-10.html</guid>
+      <description>今天的信号很集中：AI 正从“聊天窗口里的模型”继续下沉为能被 Agent 调用、能在本地运行、能接管真实设备和工作流的基础设施；设计、视频、语音、手机控制与多会话开发都在朝这个方向靠拢。本次证据包已生成，覆盖 83 个 X 候选，但 6 路 HNRSS 请求均返回 502，因此 HN 线索不作为已验证结论；证据不足的新名词统一保留在“刚露头”，不硬凑成工具。</description>
+      <pubDate>2026-08-10T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/09 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-09.html</link>
