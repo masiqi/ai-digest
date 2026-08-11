@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-11</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-11</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线是：开源与本地 Agent 正从“会聊天”转向“能持续执行”——30B 级本地模型、可插拔多模态能力、协作式设计空间和持久化运行时，正在补齐从理解到交付的工作闭环。本次 Agent Reach 多源证据包运行超时且没有产出日期文件，以下🛠️均改用本次 X List + 官方仓库/官网/文档核验；HNRSS 未形成可用证据，🌱条目会明确标注证据边界。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Muse Glimmer：本地运行 30B Agent 模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Meta 的开放权重 30B 多模态模型，针对本地常驻 Agent 的规划、工具调用、错误恢复和长时任务进行了优化。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://ollama.com/library/muse-glimmer" target="_blank">https://ollama.com/library/muse-glimmer ↗</a></p>
+    <p><a href="https://developer.meta.com/ai/models/muse-glimmer/" target="_blank">https://developer.meta.com/ai/models/muse-glimmer/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 Ollama，再在 Apple Silicon Mac 上执行 `ollama run muse-glimmer:30b-mlx` 下载并启动模型；进入交互界面后，用一张截图、一份本地文档或一个需要多步处理的问题测试它的视觉理解和工具规划。想把它接到编码 Agent，可按 Ollama 页面示例运行 `ollama launch claude --model muse-glimmer:30b-mlx`，再让 Claude Code 完成一个小型仓库的查错、修改和测试。首次体验优先用 Mac 上的 MLX 版本；NVIDIA、AMD 等平台的适配以官方后续支持为准，别把社交平台上的量化参数直接当成官方保证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“开放权重模型”与“本地 Agent 运行时”绑定得更紧，不只是回答问题，而是把规划、调用工具、检查结果和失败恢复作为模型定位的一部分。对个人开发者来说，模型可以在自己的机器上运行，减少云端依赖；对 Agent 框架来说，Ollama 已给出接入 Claude Code、Codex、Pi、OpenClaw 和 Hermes 的路径，实际试用门槛明显低于从模型权重自行搭建推理栈。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地仓库中运行代码审查、Bug 定位和多轮修改，验证 Agent 是否能持续完成任务。</li>
+    <li>处理截图、表格或文档，再把视觉信息转成操作步骤、脚本或结构化结果。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MetaforDevs/status/2086758202964951340" target="_blank"><span class="handle">@MetaforDevs</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPUQiska4AEbq8S?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPUQiska4AEbq8S?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen-MM-Plugins：把多模态能力装进 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Qwen 团队开源的插件仓库，把图像、视频、文档、3D/CAD、音视频处理等能力封装为可安装的 Skill 与可选 MCP 服务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/QwenLM/Qwen-MM-Plugins" target="_blank">https://github.com/QwenLM/Qwen-MM-Plugins ↗</a></p>
+    <p><a href="https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/docs/en/installation.md" target="_blank">https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/docs/en/installation.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 uv，再克隆仓库并执行 `bash install.sh`，按向导选择正在使用的 Claude Code、Codex、Qwen Code、OpenClaw 或 Gemini CLI，以及 `core`、`video-edit`、`blender` 等能力包。最适合的第一步是只装 `core`，让 Agent 读取一张图片或一份 PDF，观察它是否能自动选择 OCR、视觉问答或文档理解工具；需要视频编辑、Blender 或 FreeCAD 时，再单独安装对应能力，并按文档启动外部应用或配置所需 API。完成一次成功调用后，再把插件接进自己的 Agent 工作流，而不是一次性安装全部模块。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的关键不是再做一个封闭的多模态聊天产品，而是把“模型知道有这个能力的 Skill”和“真正执行能力的 MCP 服务”拆开，让既有 Agent harness 复用同一套插件。仓库还提供统一安装、配置、验证和卸载路径，降低了多 Agent、多工具重复接线的成本；不过部分能力依赖外部模型或服务，使用内部资料前仍要核对数据流向和 API 费用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给代码 Agent 增加图片、长视频、PDF、OCR 或网页理解能力。</li>
+    <li>让 Agent 驱动 Blender/FreeCAD，做可编辑 3D 建模、渲染或 CAD 文件处理。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2086838929047863429" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2086663463162830848/img/oOe-t00ty3R0DrL-.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2086663463162830848/img/oOe-t00ty3R0DrL-.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design：开源协作 Design Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>本地优先的开源设计工作空间，把 Claude Code、Codex、Cursor 等编码 Agent 变成可生成原型、网页、Dashboard、演示文稿、图片和视频的设计引擎。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+    <p><a href="https://open-design.ai/agents/codex-design/" target="_blank">https://open-design.ai/agents/codex-design/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub 仓库的 Releases 下载桌面应用，或按文档把它接入自己已经在用的 Codex/Claude Code。打开后选择一个设计系统和 Skill，用一句明确的 brief 生成一个小型 landing page 或 Dashboard；再把品牌颜色、字体、组件规则写进项目的 `DESIGN.md`，让 Agent 按同一份设计契约继续迭代。完成后检查本地实时预览，最后选择导出 HTML、PDF、PPTX 或 MP4；如果不想使用 GUI，也可以把它作为 Skill、插件或 MCP 服务放进现有代码仓库。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Open Design 把设计上下文、设计系统、渲染管线和 Agent 适配器放在同一个开源层里，解决了“模型能写前端但每次都从零猜风格”的问题。它支持 BYOK、本地文件和多种 Agent，产物是实际 HTML/CSS 或可导出的文件，而不是只能在平台内查看的图片。协作工作区进一步把多个 Agent 和人放到同一块可视化画布上，适合观察、评审和接力修改。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用 Codex 或 Claude Code 从 brief 生成可运行的网页、原型和演示材料。</li>
+    <li>将现有 Figma/Pencil 或代码项目按统一品牌规范迁移、刷新和交付。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2086829438961119668" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPXi4UlbkAA6wc4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPXi4UlbkAA6wc4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2086748290704412672/img/7IZIPgQF47vJ0hoK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2086748290704412672/img/7IZIPgQF47vJ0hoK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ego (lite)：给 Codex/Claude Code 的真实浏览器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 Chromium 的 Agent 浏览器，让 Agent 在独立 Space 中复用已登录状态，执行点击、输入、下载和网页流程而不打扰人的当前标签页。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://lite.ego.app/" target="_blank">https://lite.ego.app/ ↗</a></p>
+    <p><a href="https://lite.ego.app/document/en/docs/ego-browser" target="_blank">https://lite.ego.app/document/en/docs/ego-browser ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 ego (lite) 官网安装并完成一次浏览器初始化，再在支持 Skill 的 Codex、Claude Code、Cursor、Hermes 或其他 Agent 中安装 `ego-browser` Skill。发起任务时明确要求它使用一个独立 Space，例如“打开已登录的后台，导出本月订单并保存文件”；Agent 会在 Space 中读取页面快照、点击、填写和下载。过程中可以切换到该 Space 审计操作，遇到验证码、二维码登录或支付确认时由人接管，完成后再让 Agent 继续。先用公开或低风险页面测试，不要直接把高权限账户交给未经审查的自动化流程。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值在于复用真实浏览器的登录环境，同时用 BrowserContext 隔离 Agent 的任务，避免为每个网站复制 Cookie 或重新登录。官方文档还把快照、引用定位和批量 JavaScript 流程作为核心交互，能减少把整页 HTML 塞给模型的 token 浪费。对需要处理企业后台、表格、订单或下载文件的 Agent 来说，这比只会访问公开网页的工具更接近真实工作。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>自动完成已登录的后台查询、表单填写、报表导出和文件下载。</li>
+    <li>在独立工作区测试网页产品，让人可以随时观察、接管或回放 Agent 行为。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2086839933462065598" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2086830074012266496/img/D0N21MUGnuuEQpq0.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2086830074012266496/img/D0N21MUGnuuEQpq0.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2086830074012266496/img/D0N21MUGnuuEQpq0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2086830074012266496/img/D0N21MUGnuuEQpq0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Herdr：持久化 Coding Agent 终端运行时</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个后台服务器型的终端运行时，让 Claude Code、Codex、Cursor、OpenCode 等 Agent 在断网、合盖或 SSH 断开后继续工作并恢复会话。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/herdrdev/herdr" target="_blank">https://github.com/herdrdev/herdr ↗</a></p>
+    <p><a href="https://herdr.dev/docs/quick-start/" target="_blank">https://herdr.dev/docs/quick-start/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS 或 Linux 终端执行官方安装命令 `curl -fsSL https://herdr.dev/install.sh | sh`，重新打开终端后运行 `herdr` 创建工作区，再在不同 pane 启动 Claude Code、Codex 或其他已经安装的 Agent。使用 `ctrl+b q` 退出客户端而不停止后台会话，稍后再次运行 `herdr` 重新连接；如果要远程查看，可按文档使用 SSH/remote attach。建议先开两个小任务：一个让 Agent跑测试，一个让它做文档整理，观察 working、blocked、done 状态和重连恢复，再考虑把长时间构建或多 Agent 任务放进去。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不替换现有编码 Agent，而是把终端会话、恢复、远程连接和 Agent 状态管理提升为独立运行时。这样“电脑合盖后任务没了”“SSH 断开后不知道 Agent 做到哪一步”“多个 Agent 同时跑难以观察”等问题有了统一承载层。项目采用单一 Rust 二进制并提供 CLI 与 socket API，后续还能让其他自动化程序直接驱动 pane 和 Agent 协作。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地或服务器上运行持续数小时的测试、构建、迁移和代码审查任务。</li>
+    <li>管理多个 coding agent 的并行工作区，并从另一台机器重新接入。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2086654287556620425" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPVISFmbAAAZbLr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPVISFmbAAAZbLr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPVIcIYboAAaUZ-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPVIcIYboAAaUZ-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Bento Slides：装在单个 HTML 文件里的 PPT</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 MIT 开源的本地优先演示文稿工具，整套查看器、编辑器、演示器和文档数据都封装在一个 `.bento.html` 文件里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nyblnet/bento" target="_blank">https://github.com/nyblnet/bento ↗</a></p>
+    <p><a href="https://bento.page/" target="_blank">https://bento.page/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开 Bento 官网的 Slides 发布页，下载单文件 `Bento_Slides.bento.html`，用浏览器打开即可编辑、保存和演示，不需要账号、安装器或云端服务。先做一个三页小 deck，体验文字、图片、动画和图表；然后把文件交给能读写本地文件的 Agent，要求它只修改文件内的 `#bento-doc` JSON，并在修改后重新打开检查页面。也可以把 `.bento.html` 作为附件交给本地 Ollama、Codex 或其他 Agent，让它根据主题生成和迭代一份可离线打开的演示文稿。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Bento 把“文档”和“应用”合并为一个普通 HTML 文件，收件人不需要安装同一套软件，也不会被账号、云同步或格式转换卡住。文档内容是可读 JSON，给文件型 Agent 留出了直接编辑的接口；同时它保留了演示、图表、视频和离线使用能力。对 AI 生成 PPT 来说，这种单文件、可审计、可携带的分发方式比黑盒导出更容易进入团队协作。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速制作无需登录、可直接发送和演示的产品汇报、课程或提案。</li>
+    <li>让本地 Agent 直接修改演示文稿数据，减少 PPTX 转换和云端上传。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2086823394453115083" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PM Skills Marketplace：产品经理工作流 Skill 集</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把产品发现、策略、执行、调研、增长和 AI 交付方法封装成 9 个插件、68 个 Skill 与 42 个可串联命令的开源市场。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/phuryn/pm-skills" target="_blank">https://github.com/phuryn/pm-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Claude Code 中按仓库 README 添加 `phuryn/pm-skills` marketplace，再只安装自己需要的插件，例如 discovery、strategy 或 ai-shipping；也可以先浏览仓库里的 `skills/` 与 `commands/`，把适合的 Skill 接入 Cursor、Codex 或 Gemini CLI。第一次不要直接让它替你写完整 PRD，先用一个真实产品问题跑一次 discovery，检查它如何拆假设、访谈和实验；再把结果交给 strategy 或 execution 工作流，最后用 ai-shipping 做测试覆盖、安全和发布材料检查，把每一步的产物留在项目仓库中。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“产品方法论”从散落在提示词里的经验，变成可复用、可组合、可审查的 Agent 工作流。仓库的插件划分覆盖从发现到发布的完整链路，又兼容多个编码 Agent；这比单次让模型“像产品经理一样思考”更容易复盘和改进。需要注意的是，Skill 能提供流程骨架，不等于自动产生真实用户证据，关键判断仍要由团队核验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把用户访谈、竞品研究、假设排序和 PRD 生成串成可复用流程。</li>
+    <li>对 AI 写出的产品做测试覆盖、安全审计、性能检查和发布准备。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2086619018287595991" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPUo7RYbMAA4D7g?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPUo7RYbMAA4D7g?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 女娲.skill：把人物思维框架做成 Agent Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 Agent Skills 协议，把人物或主题的公开资料研究、思维框架提炼和验证流程生成可运行的 perspective Skill。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/nuwa-skill" target="_blank">https://github.com/alchaincyf/nuwa-skill ↗</a></p>
+    <p><a href="https://www.skills.sh/alchaincyf/nuwa-skill" target="_blank">https://www.skills.sh/alchaincyf/nuwa-skill ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在已经支持 Agent Skills 的环境中执行 `npx skills add alchaincyf/nuwa-skill`，让安装器自动识别 Claude Code、Codex、Cursor、OpenClaw 或其他 runtime。安装后输入“蒸馏某某人的思维方式”或“用某某视角分析这个问题”，先让它生成研究范围和来源清单，再审阅 6 路采集、跨域验证、Skill 构建和质量测试的中间产物。不要把生成的角色视角当成真人观点的替代品；应保留来源、明确未覆盖的主题，并用一个人物没有公开讨论过的新问题测试它是否会诚实表达不确定性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“给模型一个名人语气”升级为可检查的研究与提炼管线，强调多源采集、跨域复现、预测性、排他性和诚实边界。Skill 还能跨多个 runtime 复用，适合把个人研究方法、产品判断或学习框架沉淀为团队工具。项目本身也展示了 Agent Skills 生态从单个提示词走向可安装、可验证、可持续更新资产的趋势。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把公开人物的决策框架整理成可调用的研究顾问视角。</li>
+    <li>将团队自己的产品、投资或学习方法论沉淀为跨 Agent 的 Skill。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2086812277764985316" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPXYaNJbYAACyy5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPXYaNJbYAACyy5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ColaMD：面向 Agent 的 Markdown 编辑器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 MIT 开源的本地 Markdown 编辑器，重点提供 Agent 修改文件后的实时刷新、所见即所得和轻量阅读编辑体验。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/marswaveai/ColaMD" target="_blank">https://github.com/marswaveai/ColaMD ↗</a></p>
+    <p><a href="https://colamd.com/" target="_blank">https://colamd.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>普通用户可以从 ColaMD 官网下载对应平台版本，打开一个正在被 Claude Code、Cursor 或其他 Agent 修改的 `.md` 文件，观察外部写入是否即时刷新；想参与开发则执行 `git clone https://github.com/marswaveai/colamd.git`、进入目录后运行 `npm install` 和 `npm run dev`。建议先用一个 changelog 或项目说明文件做测试，让 Agent 增加一段内容、改一个标题并保存，确认编辑器能同步反映变化，再尝试 PDF/HTML 导出与文件关联。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有把重点放在再造一个内置聊天机器人，而是承认 Markdown 已经成为 Agent 产物的通用载体，专门解决“人看不见 Agent 正在改什么、改完还要手动刷新”的协作摩擦。实时外部文件同步、无分栏的富文本编辑、富文本复制和轻量界面，适合把生成结果变成可持续审阅的工作文档。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>实时查看 Agent 生成的日报、设计说明、会议纪要和项目文档。</li>
+    <li>在不引入云端协作平台的情况下编辑、审阅并导出 Markdown 内容。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2086690184004096192" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPVkhI0aQAAIxrn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPVkhI0aQAAIxrn?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic Claude 输出开始进入可检测标记时代</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 宣布为新 Claude 模型输出加入机器可读标记，文本使用不可见水印，生成文件可携带数字签名等来源元数据；欧盟 AI Act 第 50 条透明度义务自 2026 年 8 月 2 日起适用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是普通的界面提示，而是把“内容是否由 AI 生成”推进到输出层的技术标记。欧盟官方说明要求音频、图像、视频和文本等合成内容具备有效、可靠、稳健、可互操作的机器可读标记，同时也强调机器标记不能替代面向人的清晰披露。Anthropic 将标记放进模型输出，并据报道覆盖 Claude、API、Claude Code 等产品，意味着开发者即使不直接面向欧盟用户，也可能在全球链路里接收到带标记的文本或文件。检测工具、复制粘贴后的鲁棒性、编辑后的可追踪性和误判责任，都会成为内容平台的新工程问题。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>内容审核、教育诚信、媒体溯源和企业合规将从“猜测文本像不像 AI”转向读取机器可识别信号，但这不会自动证明作者身份，也不能替代人工编辑责任。模型供应商需要公开检测规范和兼容接口；应用开发者则要在存储、转码、二次编辑时尽量保留元数据，并重新评估把模型输出直接发布到公众渠道的流程。
+参考：https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act
+https://interestingengineering.com/ai-robotics/anthropic-claude-text-invisible-watermarks</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2086928989549920678" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPZCva4WMAAXhXf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPZCva4WMAAXhXf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 收购 NextSlide：演示文稿生成并入 ChatGPT</div>
+  <div class="section"><div class="section-label event">事件</div><p>演示文稿创业公司 NextSlide 宣布加入 OpenAI，团队转入 ChatGPT 相关工作，交易金额未披露。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>NextSlide 的产品定位是把提示词、笔记、文档或研究资料变成可编辑的演示文稿，OpenAI 收编团队后，信号并不只是“多了一个做 PPT 的小工具”，而是 ChatGPT 正在继续向办公交付物和视觉沟通入口延伸。演示文稿生成需要理解资料、提炼结构、处理版式、生成图表并支持后续编辑，和单轮文字生成相比，更接近一个带文件、渲染和审阅闭环的 Agent 任务。对独立产品而言，壁垒会从单个模板或生成效果，转向数据入口、企业工作流、可编辑格式和长期使用习惯。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>办公软件市场会更快进入“从原始资料直接到可交付文件”的竞争，传统演示工具需要在 AI 生成、品牌规范、协作审阅和导出兼容性上补课。对用户来说，生成初稿会变便宜，但事实核验、版式一致性、引用来源和品牌风险仍然需要人审；对创业团队来说，单点 PPT 生成能力更容易被平台吸收，围绕企业数据、领域模板和工作流集成建立护城河更重要。
+参考：https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2086823315780636774" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 MCPTox：MCP 工具投毒进入系统化测评</div>
+  <div class="section"><div class="section-label event">事件</div><p>新的 MCPTox 研究基于真实 MCP 服务和工具构造工具投毒基准，系统评估 Agent 是否会被藏在工具元数据中的恶意指令诱导。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>过去很多 Agent 安全讨论停留在“某个恶意工具可能偷文件”的个案，而 MCPTox 把攻击面前移到工具注册阶段：模型在真正调用工具前，就会读取名称、描述和参数 schema；如果描述里混入伪装成安全检查的指令，Agent 可能在用户提出正常请求时主动调用合法工具读取敏感信息。论文报告的风险重点不在恶意工具是否被显式执行，而在合法工具被重新组合来完成未经授权的动作。OWASP 和微软的实践建议也指向同一个边界：第三方 MCP 服务器应被当作供应链依赖，工具描述、返回值和实际运行行为都要审计。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业接入 MCP 时，不能只看工具名称、星标或一次性人工审核；应建立服务器与发布者白名单，限制文件、网络和凭证权限，对工具元数据变更做版本审查，并在高影响动作前增加独立于模型上下文的人工确认。对 Agent 框架来说，后端权限、参数校验、运行时监控和行为沙箱比“在 system prompt 里提醒模型小心”更可靠，安全测试也需要覆盖注册、调用和执行后三个阶段。
+参考：https://ojs.aaai.org/index.php/AAAI/article/download/40895/44856
+https://owasp.org/www-community/attacks/MCP_Tool_Poisoning</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2086735707620680116" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2086762055034618065" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2086834401669677364" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yetone/status/2086727188439843227" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2086828087899988008" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPWqpfJaEAAruv6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPWqpfJaEAAruv6?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPWq3v1aMAAeQEx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPWq3v1aMAAeQEx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPXsTDRW4AA-bbN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPXsTDRW4AA-bbN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPTrOE4WUAA4JSZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPTrOE4WUAA4JSZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>n8n Agents：官方文档显示 Agent Builder 与 self-hosted agents 仍在持续推进，适合观察确定性工作流与开放式 Agent 的边界如何共存；部分能力仍属 Preview/Beta <a href="https://docs.n8n.io/build/build-and-manage-agents" target="_blank">→</a></li>
+    <li>UU 远程：被描述为与具体 coding agent 无关的远程 GUI 验收方案，适合关注手机端进行 Vibe Coding 和结果验收是否会形成新工作流；本次仅有推文证据 <a href="https://x.com/yetone/status/2086727188439843227" target="_blank">→</a></li>
+    <li>Kimi K4：关于 5–6T 参数量级和超大模型价格分档的讨论仍是传闻，不应当作发布信息；可继续观察 Moonshot 的一手公告和实际定价 <a href="https://x.com/shao__meng/status/2086828087899988008" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
