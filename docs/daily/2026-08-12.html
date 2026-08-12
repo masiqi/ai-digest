@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-12</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-12</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>本日最值得动手的信号，是“本地模型 + Agent Harness + 多模态工具层”正在合流：Muse Glimmer、Unsloth Desktop、Qwen-MM-Plugins 与 OpenCodex 都把模型、工具调用和开发工作流进一步拉近。证据包本轮在 360 秒边界内未生成，HNRSS 补充源也未纳入；下文🛠️项目均用本次 X List 推文与官方仓库/文档人工交叉核验，证据不足的线索明确降级到🌱或🎯。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Muse Glimmer：本地运行 30B Agent 模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Meta Superintelligence Labs 发布的 30B 多模态开放模型，定位是能在本地完成长任务、工具调用和图像理解的 Agent 模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://ollama.com/blog/muse-glimmer" target="_blank">https://ollama.com/blog/muse-glimmer ↗</a></p>
+    <p><a href="https://huggingface.co/meta-models/Muse-Glimmer-30B" target="_blank">https://huggingface.co/meta-models/Muse-Glimmer-30B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装最新版 Ollama，再执行 `ollama run muse-glimmer` 下载并启动模型；Apple Silicon 用户优先试 `ollama run muse-glimmer:30b-mlx`，然后用 `ollama launch claude --model muse-glimmer` 把它接入 Claude Code，也可以把同一模型接到 Codex、Hermes 或 OpenClaw。第一次运行前先确认本机有足够统一内存和磁盘空间；想测 Agent 能力时，不要只问知识题，最好给它一个需要读图、修改文件、运行测试并根据结果继续执行的多步任务，再对比云端模型的工具调用稳定性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“开放权重模型”从单纯聊天接口推进到本地 Agent 工作流，模型、图像输入、长上下文、工具调用和失败恢复被放在同一个使用场景里。Ollama 已给出 MLX 运行路径，意味着 Apple Silicon 用户可以低门槛验证本地推理，而不是先搭建完整推理服务；这也让本地模型是否真的能承担持续任务，第一次有了更直接的实践入口。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在不上传源代码和内部截图的前提下，做本地代码问答、截图分析和测试辅助。</li>
+    <li>为 Claude Code、Codex 或个人 Agent 提供一个可切换的本地多模态子模型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/redp314/status/2086930849522409530" target="_blank"><span class="handle">@redp314</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPZDKFGWIAAA1xv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPZDKFGWIAAA1xv?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Unsloth Desktop：本地运行、训练与连接 Coding Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源桌面应用，把本地 LLM、扩散图像/视频、音频模型的运行与训练整合到 macOS、Windows、Linux 和 WSL。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://unsloth.ai/docs/desktop" target="_blank">https://unsloth.ai/docs/desktop ↗</a></p>
+    <p><a href="https://github.com/unslothai/unsloth" target="_blank">https://github.com/unslothai/unsloth ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方文档下载对应系统的 Unsloth Desktop，安装后在“Select model”或 Model hub 中选择适合设备的模型与量化版本，下载完成即可聊天。接着打开 Claude Code 或 Codex 集成说明，把本地模型作为 Agent 后端；也可以先在界面里运行一个小 GGUF 模型，再逐步尝试 MLX、视觉或扩散模型。建议先用一个能跑通的量化模型验证工具调用和 Bash/Python 沙盒，再考虑训练、导出 GGUF 或远程访问，避免一开始就下载超大权重。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是又一个只提供聊天窗口的本地模型壳，而是把模型下载、推理、训练、导出和 Agent 接入放在同一条路径中。官方文档明确提供 Claude Code、Codex、MCP、代码执行和自修复工具调用入口，对想把云端 Coding Agent 逐步迁移到本地的人尤其有价值；同时开源和跨平台特性也方便开发者检查运行边界，而不是被单一闭源桌面应用锁定。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在个人电脑上搭建离线代码助手、文档助手或图像/视频实验环境。</li>
+    <li>用统一界面比较不同量化模型，再把合适的模型接入现有 Agent Harness。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2087201339201724529" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2087174761277538304/img/-4DttctjenMfxyVf.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2087174761277538304/img/-4DttctjenMfxyVf.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen-MM-Plugins：给任意 Agent Harness 加上多模态工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Qwen 团队开源的插件集合，用 Skill 加可选 MCP Server 的方式，把图像、视频、文档、音频、3D、Blender 和 FreeCAD 能力接入 Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/QwenLM/Qwen-MM-Plugins" target="_blank">https://github.com/QwenLM/Qwen-MM-Plugins ↗</a></p>
+    <p><a href="https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/README.zh.md" target="_blank">https://github.com/QwenLM/Qwen-MM-Plugins/blob/main/README.zh.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆官方仓库并查看 README 的能力表，再用 `bash install.sh install` 进入引导安装；不要一次性装全，建议先选 `core`，验证图片/文档读取、OCR 和定位，再按需要安装 `video-memory`、`omni-av`、`video-edit` 或 `blender`。安装后用 `bash install.sh verify` 检查对应 Harness、uv 和配置是否齐全，然后在 Claude Code、Codex、Qwen Code 等支持的客户端中，让 Agent 直接读取一张图片或一段视频，观察它是否能发现并调用正确插件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“模型知道有某项能力”和“系统真的有可调用工具”拆成两个层次，既减少一次性安装大量依赖的问题，也让同一能力更容易跨 Claude Code、Codex、Qwen Code 等 Harness 复用。对 Agent 开发者来说，真正的增量不是多了一个视觉模型，而是把多模态能力包装成可发现、可组合、可审计的工具接口，后续可以继续叠加长视频记忆、视频编辑或 CAD 工作流。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让文本型代码 Agent 读取设计稿、报错截图、PDF 或会议视频并继续执行任务。</li>
+    <li>将 Blender/FreeCAD 的建模、渲染、STEP/STL 导入导出纳入可复用的 Agent 工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2087000193200017530" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPaDmygbUAA8QyK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPaDmygbUAA8QyK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2086663463162830848/img/oOe-t00ty3R0DrL-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2086663463162830848/img/oOe-t00ty3R0DrL-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LTX-2.5：本地生成同步音画视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Lightricks 开源的音频-视频生成模型与推理、训练代码，提供 LTX-2.5 权重、LoRA 和多种推理管线。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Lightricks/LTX-2" target="_blank">https://github.com/Lightricks/LTX-2 ↗</a></p>
+    <p><a href="https://huggingface.co/Lightricks/LTX-2.5" target="_blank">https://huggingface.co/Lightricks/LTX-2.5 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认机器有足够 GPU 与磁盘，官方仓库的 LTX-2.5 快速路径约需 66 GiB 模型文件；然后安装 uv，克隆仓库并执行 `uv sync --extra natten`，再按 README 用 Hugging Face CLI 下载所需的 transformer、文本编码器和音视频 VAE。首次不要直接追求高分辨率，先用 distilled pipeline 和短帧数生成一个文本到视频样例，再尝试 image-to-video、音画同步或 LoRA。Windows/macOS 会跳过 Linux/CUDA 专用的 natten 后端，遇到显存不足时优先使用仓库提供的 offload 与量化选项。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“视频模型开放权重”和“能实际跑起来的工程栈”放在一起，仓库同时覆盖核心实现、推理管线和训练器，并且模型不只生成画面，还把音频纳入同一套音视频基础模型。对创作者和工具开发者而言，真正可贵的是可以本地复现、改 prompt、接 ComfyUI 或训练 LoRA，不必只依赖按秒计费的黑盒视频 API；但模型体量也提醒我们，开放不等于低成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>生成产品演示、概念片和短视频预览，并在本地反复调整镜头描述。</li>
+    <li>作为视频 Agent 的底层生成模块，接入剪辑、配音、字幕和后期合成流水线。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2087285761146048886" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ TwIL-LM3：可在消费级硬件运行的形式逻辑模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>webAI 发布的 3B 形式逻辑推理模型，基于 SmolLM3-3B 经过 LoRA、权重融合和 GRPO 训练，重点面向形式化推理而非通用聊天。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/webAI-Official/TwIL-LM3" target="_blank">https://huggingface.co/webAI-Official/TwIL-LM3 ↗</a></p>
+    <p><a href="https://www.webai.com/blog/webai-releases-twil-lm-a-family-of-formal-logic-models-that-outreason-a-120b-model-and-run-on-an-iphone" target="_blank">https://www.webai.com/blog/webai-releases-twil-lm-a-family-of-formal-logic-models-that-outreason-a-120b-model-and-run-on-an-iphone ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Hugging Face 模型卡，先阅读“限制”和评测协议，再按页面提供的 Transformers、llama.cpp、Ollama 或 Unsloth Studio 路径选择本地运行方式。建议先下载量化版本，在命题逻辑、规则归纳、语义解析和 Lean 形式化题上做一个小测试集；把模型输出与规则验证器的结果分开记录，不要因为某个基准领先就把它当作通用 Coding Agent。若要接入 Hermes 或其他 Agent，先让它只负责结构化推理，再由外部程序检查格式和结论。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它提醒我们，小模型的突破可能来自任务边界和训练目标，而不是盲目堆参数。官方模型卡同时列出形式逻辑成绩、吞吐和严格限制，并明确它没有针对代码生成或工具使用做评测；这种“专门模型 + 可本地运行 + 可验证输出”的组合，很适合做规则引擎前置、自动形式化或 Agent 的低成本审查器。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将自然语言规则转成一阶逻辑、Lean 语句或结构化约束，供后续程序验证。</li>
+    <li>在本地批量筛查推理题、政策规则和知识库中的蕴含关系。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2087006760355954764" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPaJklsawAA4fsH?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPaJklsawAA4fsH?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenCodex：让 Codex/Claude Code 切换任意模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>社区开源的本地 Provider Proxy，把不同厂商或本地模型转换到 Codex、Claude Code、Claude Desktop 与 Grok Build 可使用的接口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/lidge-jun/opencodex" target="_blank">https://github.com/lidge-jun/opencodex ↗</a></p>
+    <p><a href="https://opencodex.me/" target="_blank">https://opencodex.me/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方仓库的 Installation 文档开始安装，再启动本地 proxy 和 dashboard，默认可从本机 10100 端口进入管理界面。先只配置一个你有权限使用的 provider，发送一条短请求验证流式输出、图片和 tool call，再添加 DeepSeek、Gemini、Grok、Kimi 或 Ollama 等其他后端。之后在 Codex 或 Claude Code 中保持原有工作习惯，通过 provider/model 选择器切换模型；生产环境不要把代理暴露到公网，也不要把第三方账号池或密钥交给不可信脚本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“Agent Harness”和“模型供应商”解耦，解决了同一个项目需要不同模型处理前端、多模态、速度或成本任务时的切换摩擦。官方 README 还展示了 Codex、Claude Code、Claude Desktop 与 Grok Build 的路由示例，说明它不只是简单的 OpenAI 兼容转发，而是试图覆盖会话、工具调用、子代理和管理面板；不过项目也明确提示第三方代理可能触发上游服务条款风险，必须先做合规评估。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在同一个 Coding Agent 中按任务切换云模型、本地 Ollama 模型和不同供应商。</li>
+    <li>为团队做模型路由、成本实验和故障转移的本地原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2087020445673341201" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPaVhxeW8AA0XrW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPaVhxeW8AA0XrW?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare OS：面向企业的 Agent 工作空间</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cloudflare 开源的企业 AI 工作空间，让 Agent 在公司上下文中回答问题、创建文档和应用，并用 Gatekeepers 控制外部系统访问。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/cloudflare/cloudflare-os" target="_blank">https://github.com/cloudflare/cloudflare-os ↗</a></p>
+    <p><a href="https://blog.cloudflare.com/cloudflare-os" target="_blank">https://blog.cloudflare.com/cloudflare-os ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>想快速体验可先安装 pnpm，克隆仓库后执行 `pnpm run-local`，再打开 `http://localhost:8787`；这条路径用于本地探索，不是生产部署。进入后先试创建简单文档、幻灯片或井字棋应用，再阅读 Gatekeepers、Gadgets 和部署文档，理解 Agent 如何被限制在沙盒、如何对写操作要求人工批准。若要上线，使用官方 deploy 入口部署到自己的 Cloudflare 账户，逐项接入 Access、AI Gateway 和内部系统，不要把真实凭据直接塞进 Agent prompt。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把企业 Agent 的重点从“接上多少 API”转向“每次访问到底被授予了什么能力”。官方架构用隔离的 Gadget 运行应用，并让 Gatekeeper 代表特定资源、字段和动作，而不是把原始 API key 交给模型；这为企业自建 Agent 提供了一个可研究的安全边界。项目仍处于 early access，适合学习和原型验证，不能把本地跑通直接等同于生产就绪。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在公司内部知识、文档和业务系统之上搭建受控的 Agent 工作台。</li>
+    <li>用沙盒 Gadget 快速生成部门小应用，同时通过权限策略限制数据和写操作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2087178718880084026" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPcl8vvbwAAI94j?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPcl8vvbwAAI94j?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ HyperFrames：用 HTML/CSS 写可渲染的成片</div>
+  <div class="section"><div class="section-label event">一句话</div><p>HeyGen 开源的视频框架，把 HTML、CSS、媒体和可寻址动画转换成确定性的 MP4，并为 Coding Agent 提供专用 Skills。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/heygen-com/hyperframes" target="_blank">https://github.com/heygen-com/hyperframes ↗</a></p>
+    <p><a href="https://hyperframes.heygen.com/guides/skills" target="_blank">https://hyperframes.heygen.com/guides/skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在一个独立项目目录中执行 `npx skills add heygen-com/hyperframes --full-depth`，安装官方当前主分支的核心 Skills；然后让 Coding Agent 先从一个 10 秒的产品介绍开始，用 HTML/CSS 描述画面、文字、转场和时间轴，再按照仓库 README 的 CLI 流程本地渲染 MP4。先验证字体、图片、音频和帧率是否一致，再增加 Seedance 片段、字幕、品牌模板或批量数据驱动内容。安装第三方 Skills 前要审查其脚本和更新策略，尤其不要让 Agent 静默执行未知的自更新命令。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把网页开发者熟悉的 DOM、CSS 和组件思维转成视频制作接口，使“让 Agent 做一支可修改的产品片”比传统时间线软件更容易自动化。确定性渲染、可复用模板、媒体轨道和 Apache 2.0 许可，有利于把视频生成纳入 CI 或内容流水线；同时它的 Skills 生态也提醒我们，创作自动化的安全边界应与代码依赖一样被认真审查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用代码和 Agent 批量生成产品 Launch 视频、教程、广告和数据动画。</li>
+    <li>把已有网页组件、品牌规范和媒体素材复用成可审阅的视频模板。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Mayii0205/status/2087129348771868988" target="_blank"><span class="handle">@Mayii0205</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2086748290704412672/img/7IZIPgQF47vJ0hoK.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2086748290704412672/img/7IZIPgQF47vJ0hoK.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2086748290704412672/img/7IZIPgQF47vJ0hoK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2086748290704412672/img/7IZIPgQF47vJ0hoK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ColaMD：为 AI 编辑 Markdown 的原生桌面编辑器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>免费开源的跨平台 Markdown 编辑器，能实时显示 Claude Code、Codex 等 Agent 对打开文件的修改。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/marswaveai/ColaMD" target="_blank">https://github.com/marswaveai/ColaMD ↗</a></p>
+    <p><a href="https://colamd.com" target="_blank">https://colamd.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方 Releases 下载 macOS 的 `.dmg`、Windows 的 `.exe` 或 Linux 的 `.AppImage/.deb`，打开一个项目目录中的 Markdown 文件。保持 ColaMD 窗口打开，再让 Claude Code、Codex、Cursor 或其他 Agent 修改同一个 `.md` 文件，观察编辑器是否实时刷新；随后试用 WYSIWYG 编辑、任务列表、主题、LaTeX、富文本复制和 PDF 导出。它本身不内置 AI，也不做云同步，所以适合作为 Agent 的可视化编辑端，而不是把它误当成全功能知识库。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Agent 工作流最后仍卡在“模型改了文件，人要手动刷新和检查”的环节，ColaMD 用文件监听和活动指示器把这个反馈回路做得更短。它不追求把 AI 塞进编辑器，而是专注于成为人和 Agent 共同编辑 Markdown 的轻量界面；对写日报、整理 README、维护产品文档的人来说，实时同步、跨平台和 PDF 导出比再增加一个聊天侧栏更实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>一边让 Coding Agent 生成文档、计划或变更说明，一边在桌面端实时审阅和修订。</li>
+    <li>把 Markdown 作为内容源，快速导出 PDF 或复制到邮件、微信等富文本场景。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2087103670160888140" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPbhqg7acAEBGLQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPbhqg7acAEBGLQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPVkhI0aQAAIxrn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPVkhI0aQAAIxrn?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Grok Bot：后台执行任务的通用代理形态</div>
+  <div class="section"><div class="section-label event">事件</div><p>xAI 相关推文称 Grok Bot 进入早期 Beta，可登录外部工具、操作网页或桌面，并在用户关闭电脑后继续推进任务；媒体报道其初期面向部分高阶订阅用户。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次信号的重点不是“又多了一个聊天机器人”，而是 Agent 开始以一个可被委派、可异步跟进的队友形态出现。推文描述了读取 X、邮件、网店客服和 CRM 等工作流，说明产品目标是跨应用执行而非只在单一对话框回答问题。不过目前仍是早期 Beta，权限范围、失败恢复、审计日志和数据隔离都需要实测；能登录工具也意味着凭据、提示注入和误操作风险同步上升，不能仅凭演示视频判断它适合生产。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种模式稳定，办公软件的入口会从“人在每个 SaaS 里点按钮”转向“人给 Agent 任务、Agent 在多个系统里完成并回报”。对企业来说，竞争焦点将从模型回答质量扩展到浏览器/桌面操作、长任务调度、人工审批和可追责性；对个人用户来说，最值得先试的是低风险、可回滚的资料整理，而不是直接让 Agent 处理付款、合同或客户承诺。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2087287436330037299" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2087221157787525120/img/n9OrR6nUrxVZL4oY.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2087221157787525120/img/n9OrR6nUrxVZL4oY.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2087221157787525120/img/n9OrR6nUrxVZL4oY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2087221157787525120/img/n9OrR6nUrxVZL4oY?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Manus 与 Meta 分离：先处理数据迁移再谈产品连续性</div>
+  <div class="section"><div class="section-label event">事件</div><p>Manus 官方公告称将恢复独立运营，部分用户在 2025 年 12 月 29 日之后生成的数据会在 2026 年 8 月 23—24 日（新加坡时间）删除窗口内受影响，用户需在截止时间前备份并在 8 月 25 日恢复。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是普通的产品改版，而是一次会直接改变用户数据可用性的公司结构与合规迁移。官方说明同时强调这并非数据泄露或安全事故，并为受影响账户提供备份和恢复工具；但用户仍应把 Agent 产生的任务记录、文件、知识库和自动化配置视为需要主动导出的资产，而不是默认永久保存在 SaaS 中。对于依赖 Manus 长期积累上下文的人，真正要核对的是账户是否受影响、备份格式是否完整、恢复后权限与外部连接是否需要重新授权。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>事件会提高企业选择 Agent 平台时对数据可携带性、组织变更和退出机制的重视。一个能力再强的 Agent，如果没有可靠导出、版本留存和跨平台恢复，长期工作流仍可能被收购、监管或地区合规变化打断；其他 Agent 厂商也会被要求提供明确的数据保留周期、迁移工具和异常期间的服务承诺，用户则应尽早建立本地归档和凭据重授权清单。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2087198881327022112" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude 内容标记：生成文本开始携带机器可读信号</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 帮助中心说明，2026 年 8 月 2 日及之后在欧盟推出的新 Claude 模型支持在生成文本中嵌入不可见水印，支持的文件还会带数字签名来源元数据；旧模型的支持仍在推进。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这项变化把 AI 内容透明度从产品声明推进到输出层面：读者看不到水印，但标记可能随复制粘贴保留，文件则可通过 C2PA 等来源元数据辅助判断。需要注意的是，“检测到标记”不等于能够证明全部来源，也不代表所有历史 Claude 输出已经统一标记；不同模型、产品、文件格式和编辑流程可能有不同覆盖范围。对开发者而言，应把标记当作合规和溯源的一环，同时继续保留自己的生成日志、人工审核和内容 provenance。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>内容平台、教育机构和企业知识库会逐渐面对“生成内容如何被识别、保存和披露”的工程问题，文本处理管线不能再假设复制粘贴会抹掉所有机器可读信息。另一方面，水印并不能替代事实核验，也不能单独作为处罚依据；真正成熟的治理需要模型标记、C2PA、编辑历史、人工审核和隐私保护共同工作，避免把概率性检测包装成绝对结论。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2087057090225549589" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2087081719090614299" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2087286640507076791" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2087151234608451894" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2087179319026061534" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2087088488675979554" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPbNwoMbMAAt_EK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPbNwoMbMAAt_EK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPeIIbvXcAEBckK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPeIIbvXcAEBckK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPdEEDpacAAnkEv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPdEEDpacAAnkEv?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPcJmwDbQAA61A5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPcJmwDbQAA61A5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPbT64sXEAAofBT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPbT64sXEAAofBT?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>RLHF Book：Nathan Lambert 的 RLHF 与后训练课程，配套章节、讲义和代码，适合系统补齐 SFT、奖励模型、DPO、GRPO 等基础 <a href="https://rlhfbook.com/course" target="_blank">→</a></li>
+    <li>Mole：macOS 终端清理、卸载、分析和监控工具，v1.50 “Honest”强调展示清理对象和失败原因，适合顺手维护本地 Agent 机器 <a href="https://github.com/tw93/Mole" target="_blank">→</a></li>
+    <li>Edit·Video：免费、免登录、无水印的浏览器视频编辑器，编辑在本地浏览器完成，适合快速裁剪和隐私敏感的轻量任务 <a href="https://edit.video" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
