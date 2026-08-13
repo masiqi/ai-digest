@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 12 Aug 2026 00:43:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 00:44:18 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/13 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-13.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-13.html</guid>
+      <description>今天的主线不是单一模型刷榜，而是“模型可切换、Agent 能交付、能力开始下沉到本地与真实工具”：DeepSeek V4 Pro 0813、Grok 4.6、端侧模型和视频 Agent 同时进入可操作阶段。说明：本轮 Agent Reach 多源证据包在限时内未产出，以下🛠️条目均用本次 X List 推文加官方官网、GitHub、模型卡或文档人工交叉核验；证据不足的新线索已放入🌱并标注“证据待补”。</description>
+      <pubDate>2026-08-13T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/12 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-12.html</link>
