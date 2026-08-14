@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 13 Aug 2026 00:44:18 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 00:47:16 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/14 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-14.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-14.html</guid>
+      <description>今天的 X List 共抓到 121 条，主线非常集中：DeepSeek 把 Agent Harness 作为独立的、可插拔的开源运行时推到台前，模型、工具、Skills、沙盒、会话和 UI 都不再被写死在一个产品里。与此同时，Gemini 3.7 Flash、DSCode、Open Design 等项目把“模型能力”继续往真实工作流、设计交付和本地代码执行里落地。Agent Reach 多源证据包本次运行约 9 分钟仍未生成，因此下方🛠️项目均另外用官方 GitHub、官网、README、模型页或官方文档交叉核验；🌱中的线索明确标为证据待补，不把推文单独说成已证实事实。</description>
+      <pubDate>2026-08-14T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/13 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-13.html</link>
