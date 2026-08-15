@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-15</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-15</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在两个转折：开源模型与 Agent runtime 正快速变成可以本地安装、直接评测的工程组件；与此同时，成本控制、权限安全、长上下文评测和代码可解释性，正在从“进阶话题”变成上手门槛。X List 抓到 102 条内容，证据包补充了 30 条 Hacker News 早期信号，下面优先挑能亲手运行或能马上复现的项目。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen3.8-27B：27B 原生多模态开源模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>阿里 Qwen 家族的新一代 27B 稠密模型，提供图像与视频理解、可调推理，以及面向编程、办公和长程任务的本地部署入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank">https://huggingface.co/Qwen/Qwen3.8-27B ↗</a></p>
+    <p><a href="https://github.com/QwenLM/Qwen3" target="_blank">https://github.com/QwenLM/Qwen3 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 Hugging Face 模型卡下载权重，并准备支持 bfloat16 的 GPU、足够的显存和较新的 Transformers 环境；想快速验证可以先用模型卡里的 Transformers pipeline 示例加载一张图片，问它做图像描述或文档理解。需要服务化时安装 vLLM，按模型卡启动 OpenAI-compatible server，再用 curl 或 OpenAI SDK 发送文本与 image_url 混合消息。首次实验建议固定 max_new_tokens、推理开关和上下文长度，分别记录首 token 延迟、吞吐、显存占用和多轮对话是否稳定，不要只凭一张演示图判断模型效果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“本地小模型”从纯文本聊天推进到原生视觉、多模态和 agentic workflow 的组合。官方模型卡给出 27B、原生 262K 上下文并可扩展到 1M 的信息，同时提供 Transformers、vLLM、SGLang 等入口；这意味着个人开发者可以在真实编程、截图理解和办公文档任务上做可重复对比，而不是只看社区口碑。具体效果仍应以自己的硬件和任务集实测为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地对截图、PDF 页面或产品原型做视觉问答与信息抽取。</li>
+    <li>在个人 GPU 或工作站上做代码助手、文档处理和长上下文 agent 原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2088284495678198190" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPsTrOkbQAAphb2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPsTrOkbQAAphb2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek Harness：插件化的本地 Agent 运行时</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek 开源的 Agent harness，把模型、工具、技能、会话、沙箱、存储、循环和 UI 都放进可替换的插件体系中。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">https://github.com/deepseek-ai/deepseek-harness ↗</a></p>
+    <p><a href="https://deepseek.com/harness/en/" target="_blank">https://deepseek.com/harness/en/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 与 pnpm 后克隆官方仓库，进入目录执行 pnpm install、pnpm run build，再按 README 使用 pnpm dsh web 启动本地 Web UI。第一次不要直接接入真实生产仓库，先在测试项目里观察插件树、模型配置、工具权限和 session resume 的行为；随后只添加一个模型或一个工具插件，记录配置改变前后的启动日志与任务结果。官方页面把它定位为 developer preview，因此应锁定提交版本、阅读 docs/development 与架构文档，并把 API 变化和权限边界纳入自己的实验记录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的关键变化不是又一个聊天界面，而是把 Agent 的能力拆成可挂载、可替换的运行时组件。官方仓库明确采用“everything is a plugin”和 Cordis 插件系统，官方介绍还列出模型、工具、skills、sessions、sandboxes、storage、loops、scheduling、UI 等可组合能力。对做 Agent 基础设施的人来说，这提供了研究插件生命周期、权限策略和长期任务编排的真实样本；对普通使用者来说，preview 状态意味着稳定性与安全审查不能省略。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学习如何把工具、技能和会话状态组织成可组合的 Agent runtime。</li>
+    <li>在隔离仓库中试验 headless runner、插件替换和长任务恢复。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2088222932590059869" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPrUNG3bcAE2JDN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPrUNG3bcAE2JDN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design：本地优先的 Agent 设计工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Apache-2.0 的桌面设计工作台，把本机 coding agent、可组合 skills 和 DESIGN.md 设计系统连接起来，输出网页、原型、仪表盘、幻灯片、图片或视频文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+    <p><a href="https://open-design.ai/" target="_blank">https://open-design.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 或 Windows 用户先从官网或 GitHub Releases 下载桌面版，也可以克隆仓库按 README 开发运行；打开后选择一个设计系统和 skill，连接自己已经安装的本地 coding agent，给出一个明确的页面 brief，再让它生成第一版原型。接着把品牌色、组件规则和验收标准写进项目的 DESIGN.md，重新渲染并对比前后结果。建议先用一个静态 landing page 做小实验，确认产物确实落在自己的项目目录，再逐步尝试 dashboard、deck 和 HTML/PDF 导出，避免一开始把复杂品牌项目交给未经验证的自动流程。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“AI 设计”从一次性图片生成转成可版本控制的文件工作流。官方仓库确认项目为 Apache-2.0、本地优先、BYOK，并支持多种本机 CLI 与设计系统；产物是 HTML、PDF、PPTX、MP4 等可继续编辑的文件，DESIGN.md 还可以充当团队的视觉契约。这样的结构更适合工程团队做可复现迭代，也让模型切换和资产迁移不再完全依赖单一云服务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用自己的 coding agent 快速制作可运行的网页、交互原型和品牌页面。</li>
+    <li>将设计系统、组件规则和验收标准保存进仓库，交给团队持续迭代。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2088217123927846916" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPrUNG3bcAE2JDN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPrUNG3bcAE2JDN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ mimofan：带安全审计与记忆能力的 Rust 终端编程助手</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 MIT 协议的 Rust 终端 AI coding agent，默认面向 MiMo，也兼容 DeepSeek、OpenAI、通义千问等模型，并提供计划、记忆、权限确认和 Issue 监控能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/XiaomingX/mimofan" target="_blank">https://github.com/XiaomingX/mimofan ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>可以直接克隆仓库后按 README 构建，或使用项目提供的预编译 release；如果使用默认 MiMo，先配置 XIAOMI_MIMO_API_KEY，再启动 mimofan 进入 TUI，也可以用 mimofan exec 加一句单次任务。建议先在一个可回滚的练习仓库里让它读取项目结构、生成一个小测试并运行验证，再逐步开启 plan、Spec Freeze 或 Issue Monitor。遇到需要执行命令、修改文件或访问外部资源的任务，要先检查审批策略，确认自动模式没有误开，最后用 git diff 和测试结果复核每一次修改。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个项目把“能写代码”与“能安全地写代码”放在同一套终端工作流里。官方 README 明确列出失败关闭的权限分类、提示注入扫描、技能供应链追踪、命令注入模糊测试，以及混合检索和跨会话记忆；同时采用 Rust、MIT、本地优先路线。项目规模仍然不大，Issue 数量也提醒使用者不要盲信自动修复，但它很适合拿来观察安全闸门如何嵌入 coding agent。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地仓库中做代码生成、重构、测试和报错定位。</li>
+    <li>研究权限确认、提示注入防护、技能来源追踪与 agent 记忆的组合方式。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2088223549135933666" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SCBench + RULER：长上下文与 KV Cache 评测双件套</div>
+  <div class="section"><div class="section-label event">一句话</div><p>SCBench 关注共享上下文下 KV cache 的生成、压缩、检索和加载；RULER 则用可配置长度与任务复杂度检验模型是否真的会用长上下文。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/microsoft/MInference/tree/main/scbench" target="_blank">https://github.com/microsoft/MInference/tree/main/scbench ↗</a></p>
+    <p><a href="https://github.com/NVIDIA/RULER" target="_blank">https://github.com/NVIDIA/RULER ↗</a></p>
+    <p><a href="https://huggingface.co/datasets/microsoft/SCBench" target="_blank">https://huggingface.co/datasets/microsoft/SCBench ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆 Microsoft MInference 仓库并进入 scbench，按项目说明创建 Python 环境、安装 requirements，再选择一个小模型和短上下文跑通基线；不要一开始就上满长度，否则显存、下载和运行时间都难以定位。随后下载 SCBench 数据，比较单轮、多轮和多请求下不同 KV cache 方法的准确率与延迟；再克隆 NVIDIA RULER，按 README 配置 synthetic benchmark，逐步提高上下文长度和任务复杂度。最后把模型、GPU、量化、上下文长度、任务集和评分写入表格，避免把“能召回 needle”误当成长上下文理解能力。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这两个项目把长上下文的宣传指标拆成了可测的工程问题。SCBench 官方说明覆盖 12 个任务、共享上下文和完整 KV cache 生命周期，RULER 官方代码则超越简单 NIAH，加入多 needle、多跳追踪、聚合和问答等任务。它们能帮助开发者区分模型能力、缓存策略和 serving 框架的贡献，尤其适合验证压缩、驱逐、检索方案是否真的降低成本而没有悄悄损失任务质量。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为本地模型、vLLM 或自研 serving 层建立长上下文回归测试。</li>
+    <li>比较 KV cache 压缩、检索、加载方案在多轮 agent 任务中的真实收益。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/grok/status/2088263056845369753" target="_blank"><span class="handle">@grok</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ VulnGym + Cybench：给代码 Agent 做安全能力验收</div>
+  <div class="section"><div class="section-label event">一句话</div><p>VulnGym 提供带真实项目、漏洞入口点和证据链标注的仓库级漏洞检测任务；Cybench 提供 40 个专业级 CTF 任务，用来测试更广泛的网络安全推理能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tencent/VulnGym" target="_blank">https://github.com/Tencent/VulnGym ↗</a></p>
+    <p><a href="https://cybench.github.io/" target="_blank">https://cybench.github.io/ ↗</a></p>
+    <p><a href="https://arxiv.org/abs/2608.02001" target="_blank">https://arxiv.org/abs/2608.02001 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在隔离虚拟机或专用测试环境中克隆 VulnGym，阅读 README、数据 schema 和许可证，再从一个小数据子集开始，让 coding agent 只读地定位 entry point、critical operation 和触发 trace；评估时同时保存最终结论与证据路径，不要只统计“猜中漏洞”的数量。Cybench 则按官方任务说明准备依赖和题目环境，先运行一个低难度 CTF 子任务，确认网络、权限和工具调用都在授权范围内，再扩大任务集。每次实验固定模型、提示、超时、工具权限和修复策略，分别记录召回率、误报、证据完整度和耗时。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它们都把安全评测从“模型说得像不像”推进到“能否在真实代码上下文中给出可复核证据”。VulnGym 的论文和仓库给出 184 个 advisory、408 个漏洞条目、23 个真实仓库，并用行级入口点和跨模块 trace 诊断 agent 卡在哪里；Cybench 则覆盖多难度专业 CTF。对安全团队而言，这类基准更接近验收场景，也更能暴露长程探索、工具权限和证据构造的短板。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>验收 coding agent 是否能在真实仓库中定位漏洞并给出完整证据链。</li>
+    <li>对比 SAST、LLM 和 agent 在 CTF、代码审计与修复建议上的差异。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/grok/status/2088267104508084461" target="_blank"><span class="handle">@grok</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ JSEF：可复现的 Java 安全实验与评测底座</div>
+  <div class="section"><div class="section-label event">一句话</div><p>JSEF 是基于 Spring Boot 3.x 的 Java Web 安全实践平台，把漏洞原理、复现、不安全与安全代码对比、修复验证放进一个可运行仓库。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/XiaomingX/JSEF" target="_blank">https://github.com/XiaomingX/JSEF ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先浅克隆官方仓库，阅读 deployment、vulnerability guide 和 secure coding guide，再用 Maven 构建并启动本地实例；官方教程说明项目带有 H2 内存数据库，适合在没有额外中间件的环境里复现。进入一个具体漏洞案例后，先阅读 vuln 与 sec 两份实现，手工复现一次，再让 LLM 或 SAST 工具在相同提示下给出定位、风险和修复建议，最后用项目自带的验证步骤检查结果。推文提到近期新增漏洞狩猎基准，但该部分的具体版本和 52 个检查点仍应以仓库最新提交为准，不要把社交平台摘要当成稳定 API。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方仓库已经提供 35+ 个贴近业务场景的漏洞实例，覆盖 OWASP 常见类型，并强调“原理讲解→漏洞复现→代码对比→修复验证”的完整闭环。它的价值不只是教学，还在于能为 Java 安全工具和 LLM 建立统一、可重复、能看到源码证据的测试底座。对想研究 agent 安全审计的人，JSEF 比一段孤立代码更接近真实工程；对初学者，它又保留了逐案例拆解的可读性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地复现 SQL 注入、SSRF、反序列化等 Java Web 漏洞并学习修复。</li>
+    <li>用同一批案例比较 CodeQL、SAST 工具和 LLM 的误报、漏报与修复质量。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2088103300889747601" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LocalSend CLI：局域网文件传输进入命令行</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LocalSend 在 1.18.0 版本首次提供官方 CLI，可以在不依赖图形界面的场景下，通过局域网在设备之间传输文件或消息。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/localsend/localsend/releases/tag/v1.18.0" target="_blank">https://github.com/localsend/localsend/releases/tag/v1.18.0 ↗</a></p>
+    <p><a href="https://github.com/localsend/localsend/tree/main/cli" target="_blank">https://github.com/localsend/localsend/tree/main/cli ↗</a></p>
+    <p><a href="https://github.com/localsend/localsend" target="_blank">https://github.com/localsend/localsend ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方 v1.18.0 release 下载与你的 macOS、Windows 或 Linux 相匹配的 CLI 包，先阅读 cli 目录的 README 和配置说明；在两台同一局域网设备上分别准备发送端与接收端，先用一个无敏感内容的小文件验证发现、确认、传输和校验流程，再尝试消息或批量文件。服务器、SSH、自动化脚本等无桌面环境，重点检查默认保存目录、设备名、端口和是否需要人工确认；如果设备发现失败，先确认局域网隔离、防火墙和端口，而不是重复发送。涉及隐私文件时仍要核对接收设备和官方校验信息。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>LocalSend 原本就是无需互联网、基于本地网络的开源跨设备传输工具；官方 release 说明 1.18.0 的 CLI 复用了 Rust 核心网络与文件 I/O 逻辑，并把发送/接收能力带到终端和无桌面服务器。这个变化对开发者、NAS 用户和 agent 自动化都很实用：文件传输不再必须操作 GUI，也能放进 SSH、脚本或定时任务，但 CLI 仍要按版本 README 验证命令与安全默认值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac、手机、NAS 或服务器之间快速传输测试文件和构建产物。</li>
+    <li>在 SSH、CI 或无桌面设备上做可控的局域网文件交换。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2088228467162673440" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPrguYnXIAAXI5C?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPrguYnXIAAXI5C?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GLM-5.3：模型竞争从“换底座”转向后训练与安全能力</div>
+  <div class="section"><div class="section-label event">事件</div><p>智谱发布 GLM-5.3，相关讨论强调它沿用上一代基座、主要依靠后训练强化编程、长程任务和网络安全能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条信息的价值不在于复述“超过谁”的榜单口号，而在于它展示了一条越来越清晰的模型迭代路线：基础模型不一定每次都重做，团队可以把更多算力与数据投入到长程任务环境、代码执行反馈和安全场景后训练。Z.ai 的官方文档已经把 GLM-5.3 放进开发者入口；外部报道也指出网络安全成绩尚未独立验证，因此今天更适合把它看成可测试的能力方向，而不是已经被第三方完全证实的结论。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果后训练能稳定改善真实 coding 和防御任务，模型差异会从参数规模转向数据闭环、工具环境和安全评测设计。开源团队、小型安全团队和 coding 产品都可能获得更低门槛的能力，但同时必须关注训练数据泄漏、漏洞能力的访问控制、榜单不可复现，以及模型升级后 API、配额和许可变化带来的迁移成本。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2088259618380403066" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GPT-5.6：Agent 成本优化开始成为产品配置问题</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布面向构建者的 GPT-5.6 使用指南，社区将重点概括为模型选择、推理档位和新 API 开关带来的成本下降空间。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这说明 Agent 的经济性已经不只是“找一个更便宜的模型”，而是由模型层级、reasoning.effort、Responses API、工具调用、prompt cache、上下文压缩和并行策略共同决定。官方部署清单建议按任务成功率、延迟、输入输出与推理 token、缓存写入 token 和单次成功任务成本做对照实验。换句话说，同一个 Agent 通过配置分层，可能在保持结果质量的前提下显著减少无效思考和重复上下文。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对开发者而言，成本控制会从事后看账单变成上线前的评测工程；对 API 厂商而言，竞争指标会同时包括智能、延迟、缓存和可观测性。最值得落地的做法是把低推理用于提取和路由，把中高推理留给规划、调试与安全任务，再用真实业务样本验证节省是否以成功率下降为代价，而不是直接相信单个演示数字。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2088225881475223849" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPrdyHmaIAETgLC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPrdyHmaIAETgLC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI Coding：速度提升后，团队开始失去对代码的解释权</div>
+  <div class="section"><div class="section-label event">事件</div><p>一条团队复盘指出，AI Coding 写得太快，开发者开始难以在站会上清楚解释昨天完成了什么、今天改动了什么以及明天如何联调。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是“要不要用 AI”的二元问题，而是软件工程的控制面发生了变化。生成速度超过人工理解速度后，代码审查、测试覆盖、变更说明和运行时观测必须变成生成流程的一部分；否则团队表面上交付更快，实际却把风险推迟到回滚、线上排障和交接阶段。今天可上手的评测项目也都在强调证据链、回归任务和可复现环境，恰好说明行业正在从炫耀一次成功转向管理持续失败。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来的研发效率指标不能只看提交量或功能上线速度，还要看变更是否可解释、测试是否能复现、权限是否可追踪、失败是否能定位。团队应要求 Agent 输出计划、差异摘要、测试结果和未验证假设，并给长程任务设置人工检查点；这会增加少量流程成本，却能避免把“模型很快”误算成“产品可靠”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/frxiaobei/status/2088299848722424197" target="_blank"><span class="handle">@frxiaobei</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Agent Memory Leaderboard：首批公开的 AI memory systems 文本记忆评测与榜单，关注其系统边界、数据集和复现实验是否持续透明 <a href="https://agentmemoryleaderboard.ai/leaderboard/academic/textual" target="_blank">→</a></li>
+    <li>CrewScore：面向 Agent prompt 覆盖率的早期检查工具，可能帮助团队发现提示词没有覆盖的任务分支，但目前仍应先当作 Show HN 线索验证 <a href="https://crewscore.ai/" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
