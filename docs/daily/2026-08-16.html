@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-16</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-16</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线不是“再来一个聊天模型”，而是 Agent 开始向可组合运行时、可审计上下文、真实设备执行和本地工作流下沉：DeepSeek Harness 把能力拆成插件，Semantica 把记忆与决策变成可追溯图，Phone Harness 则把 Agent 的手伸到真实 iPhone。本次 Agent Reach 证据补充脚本在限定时间内未产出 dated evidence 文件；以下🛠️条目均用本次 X List 候选加官方 GitHub/官网交叉核验，证据不足的新线索统一降级到🌱并标注“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen3.8-27B：本地可跑的原生多模态 27B 开源模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>阿里 Qwen 的 27B 稠密开放权重模型，支持图像/视频理解、长上下文和可控思考，适合在本地或自建推理服务里做代码、办公与多步任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank">https://huggingface.co/Qwen/Qwen3.8-27B ↗</a></p>
+    <p><a href="https://huggingface.co/unsloth/Qwen3.8-27B-GGUF" target="_blank">https://huggingface.co/unsloth/Qwen3.8-27B-GGUF ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官方 Hugging Face 仓库确认发布者是 Qwen，再按你的机器选择路径：有 80GB 级别显存时可下载官方 Transformers 权重并用 vLLM、SGLang 或 TokenSpeed 部署；消费级显卡或 Apple Silicon 则优先选择 Unsloth 的 GGUF 量化版本，用 LM Studio 等本地运行器下载后加载。第一次测试不要只看宣传速度，分别用短提示、图片输入、代码仓库问答和长上下文任务跑一遍，记录首 token 延迟、吞吐、显存/内存占用及回答是否过度思考；需要服务化时再把同一模型接到 OpenAI 兼容接口。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把原生视觉、27B 规模、262K 原生上下文和 MTP 多 token 预测放在同一个开放模型里，部署门槛比超大 MoE 低得多。官方模型卡明确列出 vLLM、SGLang、TokenSpeed 等服务框架，并采用 Apache 2.0；社区量化生态又很快跟上，适合把“先进模型能力”转成个人可复现实验，而不是只能通过网页 Demo 体验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地做带截图、表格和代码的多模态分析，避免资料先上传第三方服务。</li>
+    <li>给个人项目搭一个可控成本的代码助手或长文档问答后端。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2088437440298307790" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPsKxzsbQAAJa4d?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPsKxzsbQAAJa4d?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek Harness：一切皆插件的 Agent 运行时</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek 开源的 Agent Harness，把模型、工具、技能、会话、沙箱、存储、循环和界面都放进可替换的插件树里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">https://github.com/deepseek-ai/deepseek-harness ↗</a></p>
+    <p><a href="https://deepseek.com/harness/en/" target="_blank">https://deepseek.com/harness/en/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 Node.js，再在终端执行 `npx @deepseek-ai/dsh web`，按官方说明打开本机 Web UI；进入后添加模型供应商和密钥，选择一个工作区，先用低风险的仓库总结或 README 改写任务熟悉会话、工具和审批流程。想研究扩展点时，再读仓库里的架构文档和 Cordis 说明，观察模型适配器、工具注册、会话日志与 Agent Loop 如何由插件组合。它仍是 developer preview，升级前要保留配置并接受兼容性变化，不要一上来就把有破坏性的 shell 权限交给无审批的自动运行模式。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不只是多一个终端界面，而是把 Agent 的“能力边界”显式化为可挂载、可卸载、可替换的插件。Cordis 负责依赖、服务和可逆副作用，意味着团队可以替换模型、工具或策略而不必修改整个 Harness；这为多供应商切换、企业权限隔离和可复用 Agent 组件提供了更清晰的工程抽象，但预览期生态与 API 稳定性仍需持续观察。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>研究可组合的 Agent Runtime，试验不同模型、工具和会话后端。</li>
+    <li>为团队内部的代码助手或自动化流程搭建可控的插件式骨架。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2088504194328363089" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ covo-agent：带记忆、权限和工作流的终端 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向日常知识工作、软件开发、自动化和外部系统协作的通用型终端 AI Agent，提供 general 与 code 两种模式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/covoyage/covo-agent" target="_blank">https://github.com/covoyage/covo-agent ↗</a></p>
+    <p><a href="https://github.com/covoyage/covo-agent/releases" target="_blank">https://github.com/covoyage/covo-agent/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方仓库的 Releases 下载与 macOS 架构匹配的版本，或按 README 的安装方式把二进制放到 PATH；首次运行先执行 `covo-agent doctor`，再用 `covo-agent setup` 或 `covo-agent model` 配置 Provider 和模型。进入一个测试项目后直接启动 TUI，先试 `covo-agent -z "总结当前仓库架构"` 这样的单次任务，再尝试 `--headless` 配合明确的 `--tools`、`--allow` 和 `--deny` 规则。把代码审查、测试失败定位、会话恢复和 worktree 并行开发分别跑一遍，确认它的审批策略、持久化路径和模型切换是否符合自己的安全边界。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把终端 Agent 从“能调用几个工具”推进到完整工作流：交互式 TUI、单次/JSON/无头模式、持久会话、记忆、技能、MCP、worktree、cron 和 deny-first 权限控制都在同一运行时里。对本地模型或低价模型尤其有吸引力，因为 Supervisor/Worker、上下文缓存和可调 Harness 强度可以把模型能力不足转化为流程约束，而不是单纯堆更大的模型。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地仓库里做代码审查、测试修复和可恢复的长任务。</li>
+    <li>把一次性 Agent 操作接入脚本、定时任务或团队内部自动化。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2088616313052668351" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ docu.md Markdown Viewer：把 AI 生成的 Markdown 变成可交付文档</div>
+  <div class="section"><div class="section-label event">一句话</div><p>本地优先的 Markdown 阅读与导出工具，支持 Mermaid、Vega、drawio、Canvas、Graphviz、LaTeX 等复杂内容，并可输出 DOCX、PDF、HTML 和图形文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docu.md/" target="_blank">https://docu.md/ ↗</a></p>
+    <p><a href="https://github.com/markdown-viewer/markdown-viewer-extension" target="_blank">https://github.com/markdown-viewer/markdown-viewer-extension ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最省事的路径是在 Chrome、Firefox、Edge、VS Code 或 Obsidian 中选择对应扩展/插件，安装后打开一份包含标题、表格、代码、公式和 Mermaid 图的 `.md` 文件；先检查本地文件访问权限，再切换主题和阅读布局，确认图表是否完整渲染。接着用导出按钮生成 DOCX、PDF 或自包含 HTML，打开结果检查公式是否仍可编辑、图表是否清晰、中文字体和分页是否正常。若你在给 Coding Agent 配套技能，可按官网示例执行 `npx skills add markdown-viewer/skills`，让 Agent 继续以 Markdown 作为源文件、把 docu.md 作为交付前的排版层。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它瞄准的是 AI 工作流里经常被忽略的最后一公里：模型很会写 Markdown，但交付给客户、同事或学校时仍需要排版。docu.md 的渲染和导出在本地完成，复杂图表不必截图粘贴，LaTeX 可保留为可编辑公式，还提供多平台入口和多套主题；对于报告、技术方案和带图文的 README，这比再开一个云端转换服务更容易纳入隐私边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将 Agent 生成的技术报告、方案和课程材料直接导出为 DOCX/PDF。</li>
+    <li>维护含流程图、数据图和公式的项目文档，并保持 Markdown 源文件可版本控制。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xicilion/status/2088641456760316280" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Semantica：给 Agent 加上可追溯的上下文图与决策记录</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的图原生 AI 基础设施，把多源数据、知识图谱、确定性推理、决策链和 W3C PROV-O 溯源接到现有 LLM、向量库和 Agent 框架下面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/semantica-agi/semantica" target="_blank">https://github.com/semantica-agi/semantica ↗</a></p>
+    <p><a href="https://docs.getsemantica.ai/" target="_blank">https://docs.getsemantica.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先按官方仓库或文档安装 `semantica`，从一个小型资料集开始，不要直接把整个企业数据湖接进去。准备几份带明确来源的 Markdown、网页或 JSON，先跑 ingestion 和实体/关系抽取，再查看生成的 Context Graph、冲突记录与 provenance；随后接一个已有的向量库或 MCP 客户端，比较“只做向量检索”和“向量检索加图遍历/决策记录”的回答差异。最后用一个可复盘问题测试 `record_decision`、相似决策检索和因果链追踪，确认每个结论都能回指原始材料，而不是只得到一段看似合理的解释。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它抓住了 Agent 记忆从“把更多文本塞进上下文”转向“知道事实之间如何连接、何时有效、为何做出决策”的变化。图构建、推理和溯源强调确定性，不要求每一步都调用 LLM；同时提供 MCP、REST、CLI、向量存储和多种图数据库接入，使它更像可插拔的治理层。对需要审计、冲突检测、跨会话记忆或多 Agent 共享上下文的系统，这个方向比单纯扩大 RAG 召回更有工程想象力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为研究、法务、金融或企业知识库建立带来源和时间信息的 Agent 记忆。</li>
+    <li>记录多 Agent 的决策依据、后果和复盘结果，支持审计与一致性检查。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2088638226177380592" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPxVWy1agAAXe_S?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPxVWy1agAAXe_S?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ JSEF：用真实漏洞案例训练和评估 Java 安全能力</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 Spring Boot 3.x 的 Java Web 安全实践平台，同时提供漏洞复现、修复对比和用于衡量 SAST/LLM 漏洞挖掘能力的 benchmark。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/XiaomingX/JSEF" target="_blank">https://github.com/XiaomingX/JSEF ↗</a></p>
+    <p><a href="https://github.com/XiaomingX/JSEF/blob/main/TUTORIAL.md" target="_blank">https://github.com/XiaomingX/JSEF/blob/main/TUTORIAL.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>只在自己拥有授权的本地环境或培训实验室里操作。先 `git clone --depth 1 https://github.com/XiaomingX/JSEF.git`，进入目录执行 `mvn clean package -DskipTests`，再按教程运行生成的 Spring Boot jar；打开项目文档，选一个漏洞目录，先阅读 `vuln` 与 `sec` 两份实现，再按说明访问实验接口并观察修复前后的差异。之后可以把 benchmark 目录提供给本地代码模型或 SAST 工具，要求它输出漏洞位置、原因和修复建议，再用项目自带的样本和人工复核检查误报、漏报与 POC 质量，绝不要对第三方系统进行扫描。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多“AI 安全能力”演示停留在几道容易记忆的题上，JSEF 的价值在于把原理讲解、可复现代码、修复版本和评测样本放到同一学习闭环里。项目覆盖多类真实业务漏洞，并在近期版本里强化困难任务，既适合安全工程师训练，也适合比较 LLM 与 SAST 工具在漏洞定位、跨文件推理和修复验证上的差异；它同时提醒人们，自动发现不等于人工验收完成。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在隔离实验室里学习 Spring/Java 漏洞的复现、修复与回归验证。</li>
+    <li>构建本地安全评测集，比较不同代码模型或 SAST 工具的能力边界。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2088461024236360164" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Clip：专注快速浏览的跨平台桌面 RSS 阅读器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 macOS 和 Windows 的开源 RSS 阅读器，提供三栏阅读、订阅管理、全文视图、OPML 导入导出、搜索、笔记和桌面通知。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/clip-rss/clip" target="_blank">https://github.com/clip-rss/clip ↗</a></p>
+    <p><a href="https://meta.appinn.net/t/topic/90093" target="_blank">https://meta.appinn.net/t/topic/90093 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 GitHub Releases 下载对应系统的安装包，启动后先添加两三个自己每天会看的 RSS/Atom 源，不要一开始导入几千条订阅。用左侧源/文件夹树整理分类，在中间文章列表浏览新内容，右侧阅读视图确认全文抓取效果；再试一次 OPML 导入导出、标题/摘要/笔记搜索、文章笔记和新文章通知。若你有开发环境，也可以按仓库说明准备 Go、Node.js、pnpm 和 Wails v3，在本地运行前端与 Go 后端，修改界面后用项目测试命令验证，而不是直接把开发目录当成日常阅读器。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>RSS 工具的价值不在“又一个信息流”，而在于把来源、刷新和阅读顺序交还给用户。Clip 采用 Go/Wails 与本地桌面路线，目标是快速、少干扰的阅读；它既能承接 AI/开发者 RSS，也能成为日报候选来源的人工复核入口。项目还在持续开发，功能细节和平台打包状态要以当前 Release 为准，但开源代码让同步、搜索和隐私边界都可检查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将技术博客、项目更新和行业 RSS 集中到一个本地阅读窗口。</li>
+    <li>用 OPML 和笔记建立可迁移的研究素材池，减少算法推荐噪声。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2088608782234378655" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Phone Harness：通过 macOS iPhone Mirroring 让 Agent 操作真实 iPhone</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个轻量开源 CLI，通过截图与 Vision OCR“看”屏幕、用 HID 级 CGEvents“点击和输入”，让 Claude Code、Codex 或其他 Agent 驱动真实 iPhone。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ShawnPana/phone-harness" target="_blank">https://github.com/ShawnPana/phone-harness ↗</a></p>
+    <p><a href="https://phone-harness.com" target="_blank">https://phone-harness.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>这是 macOS 专属的受监督实验，不适合直接交给不可信 Agent 操作银行、验证码或私人聊天。先确认系统支持 iPhone Mirroring，克隆仓库并阅读 `install.md`；完成一次实体 iPhone 配对，再在系统设置里给运行它的终端授予 Accessibility 与 Screen Recording 权限，重启终端后执行 `./phone-harness --doctor`。连接正常后，从 Notes、Weather 这类无害应用开始，使用仓库的 CLI/技能示例执行“打开应用—OCR 找文字—点击—再次截图确认”的闭环；窗口必须保持可见且手机不要被解锁打断，遇到无文字图标、Face ID、相机或多点触控场景要人工接管。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有假装拥有一个稳定 DOM，而是把真实设备自动化拆成可观察的 See、Act、Verify 三步：Vision OCR 返回带坐标的文字，CGEvents 发送低层输入，再用新截图确认副作用。传输层无后台守护进程、核心代码很小且 Agent 可补充工作区 helper，展示了“薄 Harness + 可持续技能”如何比复杂的封装更快接通真实设备；同时它的权限和隐私风险也必须被当作产品能力的一部分。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>测试 iOS-only 应用、验证手机端界面或执行必须经过真实设备的个人流程。</li>
+    <li>研究视觉 Agent 在受监督移动端任务中的观察、动作与结果验证。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/LawrenceW_Zen/status/2088162882341233078" target="_blank"><span class="handle">@LawrenceW_Zen</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2088162610755878913/img/u1Fodfg3tpNWd2L-.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2088162610755878913/img/u1Fodfg3tpNWd2L-.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design：让本地 Coding Agent 产出可交付的设计文件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源、本地优先的桌面设计工作台，把 Claude Code、Codex、Cursor、DeepSeek Harness 等 Agent 接到可组合技能、设计系统和 HTML/PDF/PPTX/MP4 导出流程中。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+    <p><a href="https://open-design.ai/" target="_blank">https://open-design.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub Releases 或官方文档安装桌面版，在一个空项目里建立 `DESIGN.md`、参考素材和颜色/组件约束，再选择一个自己已经配置好的 Coding Agent。先让它生成一个小型 landing page 或 dashboard，观察技能、设计系统和沙盒预览如何影响结果；然后运行一次 HTML/PDF/PPTX 导出，检查资源是否内嵌、字体和交互是否符合预期。若要试 DeepSeek Harness，先安装官方 dsh，再按 Open Design 的连接说明执行 `od agent setup deepseek-harness`，把“设计契约”和代码放在同一仓库，避免让两个 Agent 各自维护一套视觉规则。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 AI 设计从一次性图片生成拉回到可审阅的工程产物：设计系统提供 tokens、组件和验证规则，Agent 修改的是真实文件，预览与导出又能形成可检查的交付链。多 Agent/BYOK 接入使模型可以按任务切换，DeepSeek Harness 的原生运行时接入则说明 Agent Runtime 和设计工作台正在互相靠近；但项目迭代很快，集成状态应以当前版本和实际本地测试为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让代码 Agent 直接生成可运行的网页、桌面界面、演示文稿和品牌原型。</li>
+    <li>为设计系统、前端实现和导出交付建立一套可复用的本地工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2088475232726135191" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GLM-5.3：后训练把编程与网络安全推到同一张考卷</div>
+  <div class="section"><div class="section-label event">事件</div><p>Z.ai 发布 GLM-5.3，官方称它与 GLM-5.2 共用基座、主要增益来自后训练，并开放 Coding Plan 试用与网络安全能力测试。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次发布值得看的不是单一榜单名次，而是训练目标的变化。官方博客把复杂编程、长程 Agent 任务、漏洞发现和利用链放进同一套环境扩展叙事中，说明模型能力越来越依赖可执行、可验证、接近真实工作的任务环境。GLM-5.3 目前仍处在 API 与权重逐步开放的过渡阶段，社区测试也混杂了不同 Harness、提示词和工具条件，因此“开源 SOTA”要和复现实验区分开；更可靠的观察方式是等待权重、评测脚本和第三方实测齐备后，再看它在真实仓库中的成本、稳定性和安全边界。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种路线持续，模型竞争会从参数规模转向后训练环境、验证器和长程任务数据的生产能力。对开发团队而言，代码 Agent 的评测不能只看一次回答是否像样，还要看能否在多文件仓库中完成修改、测试和交付；对安全行业而言，漏洞发现能力下沉会提升防守效率，也会提高双用途风险，权限隔离、人工验收和可审计执行会成为部署前置条件。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2088141236511064464" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPqGDYVXAAEtyrV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPqGDYVXAAEtyrV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 编程插件生态的责任边界正在变成现实问题</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 中出现对插件化 Agent 生态投毒、后门、作者身份和责任追踪的集中担忧。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>插件化让 Agent 快速获得工具、技能和第三方能力，但也把供应链风险从“模型厂商是否可信”扩展到“每一个可安装组件是否可信”。与传统包管理不同，Agent 插件往往同时拥有文件读写、Shell、联网和凭证接触能力，用户又可能在 vibe coding 中默认批准工具调用，导致恶意行为很难靠一次代码 review 解决。本次素材只是社区讨论，不等于已经发现某个具体后门；真正需要补上的证据包括插件签名、来源信誉、权限声明、沙箱边界、版本锁定和可追溯审计。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会直接影响企业是否允许员工从公开生态安装 Skills、MCP Server 或 Harness 插件。短期内，团队可能更偏好 allowlist、私有镜像、最小权限和安装前静态扫描；长期看，Agent 生态需要像软件供应链一样提供 provenance、SBOM、签名发布、撤销机制和责任主体。谁能把“扩展能力”与“默认可执行权限”分开，谁就更有机会把社区创新转化为生产系统，而不是把每次插件升级都变成安全事件。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2088597264029921374" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 长程任务与长期记忆重新成为 Agent 产品的核心战场</div>
+  <div class="section"><div class="section-label event">事件</div><p>社区讨论把 2026 年的 Agent 竞争焦点概括为长程任务、长期记忆和复杂任务持续推进能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条线索反映了用户评价标准的迁移：从“回答得像不像人”转向“隔天回来还能不能接着做、是否记得决策依据、遇到失败能否恢复”。长上下文只是基础设施，不等于长期记忆；真正可用的记忆需要区分事实、偏好、临时状态和过期信息，还要能在任务中被检索、修改和审计。今天的工具候选里，Semantica 的上下文图和 covo-agent 的会话/记忆能力正好对应这类需求，但二者的真实效果仍要用持续数天的任务而非一次 Demo 验证。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Agent 产品将不得不把会话持久化、压缩策略、记忆治理、任务恢复和结果验证作为一等功能，而不是把它们藏在 prompt 里。对企业来说，记忆越强，合规与删除要求也越复杂：哪些信息能保留、谁能读取、何时失效、模型如何引用旧事实，都需要日志和权限。长程能力最终会把产品竞争从“模型回答质量”拉向“运行时可靠性与组织知识管理”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2088575117194568059" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 多 Agent 的“主管—工人”分工开始被拿来做成本工程</div>
+  <div class="section"><div class="section-label event">事件</div><p>一条实践记录显示，用户让更昂贵的模型负责规划和决策，把编码交给其他模型，工人 Agent 之间还能互相协作解决问题。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是多 Agent 已经普遍可靠的证明，而是一种值得复现的编排模式：高价模型负责拆解、分派和最终验收，便宜模型负责重复性实现；当工人之间可以直接交换局部知识时，主管不必成为所有信息的单点瓶颈。它同时引入了新问题——任务边界如何定义、共享上下文是否污染、谁负责回滚、不同模型的工具权限是否一致。评估这类系统时，不能只看“完成了”，还要记录总 token、失败重试、人工介入次数和最终代码质量。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果角色分工在真实仓库中稳定，AI Coding 的成本模型会从“一个模型包打天下”转向按任务阶段组合模型，模型供应商也会更重视路由、缓存和多 Agent 协议。对团队而言，收益不只是省钱，还包括把规划、实现、审查和测试拆成可替换模块；但协调开销与错误传播可能吞掉成本优势，因此需要 worktree、结构化消息、权限隔离和可重复验收配套。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AxtonLiu/status/2088371936740900875" target="_blank"><span class="handle">@AxtonLiu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2088705596434309189" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2088705594022608963" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/oran_ge/status/2088418325949010320" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2088624979860693213" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/HiTw93/status/2088274560877732134" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/grok/status/2088514524391321754" target="_blank"><span class="handle">@grok</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2088461929354543372" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2088548769772294187" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HPtjNWyXEAAyTiU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPtjNWyXEAAyTiU?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2088337317996204032/img/K1G5loMwXsnadhlR.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2088337317996204032/img/K1G5loMwXsnadhlR.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2088624392968560640/img/HtoxjT-ccd667mTI.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2088624392968560640/img/HtoxjT-ccd667mTI.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2088335224946180096/img/C9N2QeMKgYoe1fyh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2088335224946180096/img/C9N2QeMKgYoe1fyh?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Asimov 1：被描述为面向教育与研究的可维修、可定制人形机器人参考平台，重点观察硬件开放程度和真实控制实验。 <a href="https://x.com/grok/status/2088514524391321754" target="_blank">→</a></li>
+    <li>GPUI：Rust 原生 GUI 技术路线仍在被开发者询问成熟度，适合跟踪其生态、文档和视频编辑等重交互场景表现。 <a href="https://x.com/seclink/status/2088461929354543372" target="_blank">→</a></li>
+    <li>RLTHF：社区出现从 RLHF/RLAIF 继续转向 RLTHF 的说法，训练反馈如何减少专家工时仍缺少可复核定义和一手材料。 <a href="https://x.com/seclink/status/2088548769772294187" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 15 Aug 2026 00:48:59 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 00:46:51 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/16 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-16.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-16.html</guid>
+      <description>今天的主线不是“再来一个聊天模型”，而是 Agent 开始向可组合运行时、可审计上下文、真实设备执行和本地工作流下沉：DeepSeek Harness 把能力拆成插件，Semantica 把记忆与决策变成可追溯图，Phone Harness 则把 Agent 的手伸到真实 iPhone。本次 Agent Reach 证据补充脚本在限定时间内未产出 dated evidence 文件；以下🛠️条目均用本次 X List 候选加官方 GitHub/官网交叉核验，证据不足的新线索统一降级到🌱并标注“证据待补”。</description>
+      <pubDate>2026-08-16T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/15 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-15.html</link>
