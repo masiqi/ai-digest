@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 16 Aug 2026 00:46:51 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 00:48:12 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/17 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-17.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-17.html</guid>
+      <description>今天最值得跟进的主线，是 AI Agent 正从“一个模型配一套固定工具”转向可插拔的运行时、可组合的 Skill/脚本，以及能在本地真正跑起来的模型与桌面工具。X List 抓到的 Agent Reach 多源证据包本次运行超时且没有生成 dated evidence 文件；以下🛠️项目均改用推文 + 官方 GitHub、官网、Hugging Face 或官方文档逐项核验，低证据线索明确降级到🌱，没有把未核实的产品能力写成事实。</description>
+      <pubDate>2026-08-17T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/16 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-16.html</link>
