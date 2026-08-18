@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-18</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-18</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得关注的不是又一个模型榜单，而是 Agent 正在从“聊天窗口里的助手”变成可运行、可协作、可审计的软件系统：Cursor 开始做 Agent 友好的代码托管，DeepSeek 把运行时拆成插件，Cumora 把 Agent 放进团队协作，NVIDIA 则把 Agent 重新表达成 Python 对象。本次 Agent Reach 多源证据脚本在约 9 分钟内未产出本日证据文件，以下🛠️条目均改用推文 + 人工核验的官方仓库、官网或文档，证据不足的线索明确降级到🌱。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Cursor Origin：面向 Agent 的代码托管与协作闭环</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cursor 正式推出 Origin 早期测试版，把 Git 仓库、代码浏览、Pull Request、审查和 GitHub 同步放进 Cursor 的工作流里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cursor.com/docs/origin" target="_blank">https://cursor.com/docs/origin ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认自己使用的是 Cursor Pro、Teams 或 Enterprise 付费计划，并在 Cursor 中寻找 Codebase/Origin 入口；免费计划目前不在支持范围内。第一次体验建议不要迁移生产仓库，而是从一个可公开或低风险的练习项目开始：创建 Origin 仓库，按页面提示安装 CLI，用 git clone 或 git push 上传一个小项目；再从 GitHub 镜像一个已有仓库，打开一个分支和 Pull Request，观察代码浏览、评论、检查与合并流程。若团队已有 GitHub，还可以先把 Origin 当作镜像和 Agent 协作层，保留 GitHub 为源头，再评估权限、数据留存和退出路径。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 写代码、提交变更、接受审查和部署前协作放到了同一处，竞争点不只是“又一个 Git 托管”，而是代码托管是否会围绕 Agent 的并行产出重新设计。早期测试阶段仍要把安全条款、迁移能力和企业治理当成前置检查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用一个低风险仓库测试 Agent 生成分支、PR 和审查评论的闭环。</li>
+    <li>团队继续以 GitHub 为源头，同时用 Origin 观察 Agent 原生协作是否能减少来回切换。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2089489907718738036" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cumora：让 AI Agent 成为聊天群里的正式成员</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cumora 是一个开源的跨平台团队聊天系统，让 AI Agent 与人类共享成员名单、私聊、群聊、看板和日历，并支持云端 Agent 或自带本机 Claude Code/Codex。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yetone/cumora" target="_blank">https://github.com/yetone/cumora ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README，确认本机有 Node.js、Postgres 和 Redis；克隆仓库后安装依赖，准备一个测试数据库和 Redis 服务，再按文档设置 OPENAI_API_KEY，运行 npm install 与 npm run dev:all，浏览器访问本地 Web 端。想试本机 Agent 路线，可以继续阅读 BYOA 文档，用 npx cumora agent computer 把自己的 Mac 或 VPS 接入，再选择本机的 Claude Code 或 Codex CLI。第一次不要接入真实邮箱、生产代码库或敏感凭证，先用空白团队测试 Agent 人设、记忆、任务认领、多人协调和成本记录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把 Agent 当成一个“问一句答一句”的机器人，而是把成员身份、记忆、任务认领、主动发言和真实邮件都纳入团队协作模型。README 还明确区分云端 Agent 与 BYOA，本地订阅可以不把提供商密钥交给服务器；但这也意味着权限、凭证隔离和 Agent 主动行为需要认真审计。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在独立项目房间里让多个 Agent 分别负责调研、实现、测试和汇报。</li>
+    <li>用 BYOA 把已有的本地编码 Agent 接入团队协作，而不立即改造现有 CLI 工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2089329138406760639" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek Harness：一切皆插件的开源 Agent 运行时</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek Harness（dsh）是 DeepSeek 开源的 Agent harness，把模型、工具、沙箱、会话存储、界面乃至 Agent 循环都设计成可替换插件，目前处于快速迭代的开发预览阶段。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">https://github.com/deepseek-ai/deepseek-harness ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 后，先用 npx @deepseek-ai/dsh web 启动官方 Web UI，默认访问 http://127.0.0.1:3080；如果希望读源码和开发插件，则克隆仓库后按 README 安装依赖、构建，再运行 pnpm dsh web。初次体验建议建立一个单独的测试目录和低权限 API Key，只给它一个无敏感文件的项目；先完成一次普通对话，再查看官方文档和社区的 dsh-plugin 主题，理解插件安装、Profile 和 Web/headless 运行方式。它明确提醒开发预览会有兼容性破坏，升级前应锁定版本并保留可回滚环境。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>把“所有东西都是插件”做成运行时原则，会让模型、工具和记忆替换变得更容易，也让 Agent 系统从一套固定脚手架变成可以组合的操作系统式底座。代价是第三方插件拥有本机权限，插件生态越快，供应链、权限边界和升级兼容性越需要工程化管理。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在隔离项目中比较不同模型、工具或会话存储插件的行为。</li>
+    <li>以 dsh 为底座开发自己的编码 Agent、设计 Agent 或插件市场原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2089197131643166927" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ NVIDIA NOOA：把 Agent 写成 Python 对象</div>
+  <div class="section"><div class="section-label event">一句话</div><p>NVIDIA Object Oriented Agents（NOOA）是一个模型无关的 Python Agent 框架，把状态、能力、提示词和类型契约集中表达在一个 Python 类中。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/NVIDIA-NeMo/labs-OO-Agents" target="_blank">https://github.com/NVIDIA-NeMo/labs-OO-Agents ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装项目 README 要求的 Python 环境和依赖，打开 examples 目录的渐进式教程，从最小的 Agent 类开始。把字段当作状态、方法当作能力、docstring 当作提示词，为方法加上明确的类型标注；普通方法保留确定性 Python 实现，需要模型完成的动作再使用项目支持的省略号方法。先用一个只读的小任务测试 typed input/output、自动重试和事件记录，再逐步加入工具、长期记忆、MCP 或 sandbox。运行时必须使用测试 API Key，并把可以被模型执行的 Python 权限限制在临时目录，完成 tracing 和结果校验后再考虑接入真实业务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>NOOA 试图消除提示模板、工具 Schema、回调和工作流图之间的胶水层，让人和模型共享一套普通 Python 接口。类型、对象引用和显式状态有利于测试、重构与审计；但“代码即行动”也意味着执行权限比传统函数调用更敏感，不能把示例代码未经隔离就接入生产。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用一个熟悉的 Python 类快速原型化带状态、工具和记忆的 Agent。</li>
+    <li>对比传统工具 Schema 编排与“对象 + 类型 + 代码行动”在测试和维护上的差异。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2089356754702463167" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HP7i1Z3akAEha1I?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HP7i1Z3akAEha1I?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen3.8-27B：可本地部署的视觉与长上下文开源模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Qwen3.8-27B 是 Qwen 官方发布的 27B 稠密视觉语言模型，官方模型卡给出原生 262,144 上下文、可扩展到 1M，以及可调节的思考强度和本地服务方式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/Qwen/Qwen3.8-27B" target="_blank">https://huggingface.co/Qwen/Qwen3.8-27B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认显存、磁盘和推理框架是否能承受 27B 模型；官方权重在 Hugging Face 的 Qwen 组织下，优先从该页面下载，不要把第三方量化仓库误当成官方发布。可以按 Qwen 官方仓库说明，用 huggingface download 或 git clone 获取权重，再选择 Transformers、SGLang、vLLM 等兼容路线启动 OpenAI 风格接口。第一次建议只跑短文本和小图片，打开或关闭 thinking 做同题对比，记录首 token 延迟、吞吐、显存和长上下文退化；如果是 Mac 用户，推文提到的第三方 MLX/“无审查”构建本次没有独立官方证据，不把它当作已核验结论。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>27B 的体量比超大模型更接近本地开发者的可操作范围，同时具备视觉输入、思考控制和较长上下文，适合做代码、文档和多模态 Agent 的本地实验。真正的门槛不是宣传里的榜单，而是权重格式、显存、量化质量、服务框架与并发下的实际成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地对代码库、截图或文档做不出网的多模态辅助分析。</li>
+    <li>用短上下文、长上下文和不同 thinking 档位做模型路由与成本测试。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2089487589644390890" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Omarchy：Agent 优先的现代 Linux 发行版</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Omarchy 是 Basecamp/DHH 维护的、强调审美和明确默认选择的现代 Linux 发行版，官方仓库同时提供完整手册与安装、AI、开发工具等章节。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/basecamp/omarchy" target="_blank">https://github.com/basecamp/omarchy ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>不要在主力电脑上直接覆盖安装，先准备闲置设备或可回滚的测试环境，阅读官方仓库 manual/ 中的 Getting Started、Coming From Mac or Windows、安装、更新和安全章节。根据 omarchy.org 的入口下载官方镜像，把 ISO 写入 U 盘并从 U 盘启动，按安装器完成磁盘选择；首次进入系统后，先完成网络、更新、终端和快照配置，再逐项阅读 AI、Development Tools、Shell Tools 和快捷键章节。把常用 Agent CLI 放到单独项目目录中，先验证权限、路径和代理配置，再决定是否把它作为日常开发系统。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把操作系统、终端、窗口管理、开发工具与 Agent 使用习惯放在同一套有主见的默认值里，可能降低搭建 Agent 工作站的摩擦。另一方面，发行版的“开箱即用”并不等于适合所有硬件；安装前必须确认驱动、数据备份、更新策略和回滚路径。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用闲置笔记本搭建一个专门运行编码 Agent 的 Linux 工作站。</li>
+    <li>研究“操作系统默认值如何影响 Agent 工具链和开发效率”。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2089289607745884189" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HP6lz9ZaMAEdHgv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HP6lz9ZaMAEdHgv?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Design：开源的 Claude Design 替代品</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Open Design 是本地优先的桌面应用，把编码 Agent、设计系统、技能和渲染工作流组合起来，可生成原型、网页、演示文稿、文档、图片和视频等文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方仓库 README 的 Website/Download 入口安装对应的 macOS 或 Windows 客户端，先选择一个空白工作目录；没有现成模型额度时，按文档配置 BYOK 或连接自己已有的 Claude Code、Codex、OpenCode、Hermes 等 CLI。新建项目后先输入一个小型原型需求，选择 Web prototype 或 deck，观察 Agent 产生的真实 HTML/PDF/PPTX 文件和预览，再用 DESIGN.md 固定颜色、字体、间距和品牌规则。推文提到的 DeepSeek Harness 原生接入可按 README 的 dsh setup 路线尝试，但第一次应使用非敏感目录，并检查 MCP/CLI 权限和输出文件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是只生成图片，而是把设计系统、可复用技能、真实文件和 Agent 运行时放在同一个本地工作区，直接对准“能交付的设计产物”。对开发者来说，输出可继续被代码工具修改；对团队来说，DESIGN.md 可能成为品牌约束。但本地 CLI、模型和插件越多，权限管理和产物审核越重要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用同一套设计系统快速生成一个可运行的网页原型和产品演示稿。</li>
+    <li>把现有编码 Agent 接入设计工作流，验证从需求到 HTML/PPTX 交付的闭环。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2089332584698310954" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HP6rSfdWcAEsVM0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HP6rSfdWcAEsVM0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ JSEF：可复现的 Java Web 安全学习与评测框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>JSEF 是基于 Spring Boot 3.x 的 Java Web 安全实践平台，提供可复现漏洞、原理说明、修复前后代码对比和验证流程，近期还加入了面向漏洞挖掘基准的样本类别。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/XiaomingX/JSEF" target="_blank">https://github.com/XiaomingX/JSEF ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在隔离环境中克隆仓库，按官方 README 使用 Maven 构建并启动；项目文档说明可用内置数据库或 Docker，第一次不要把有漏洞的示例暴露到公网。选择一个 OWASP 类别，先阅读 vuln 与 sec 两套实现，再按漏洞复现手册发送测试请求，记录原始行为、修复后的响应和日志差异。完成单个案例后，再阅读 skill.md 或 benchmark 相关更新，尝试让 CodeQL、SAST 工具或 Agent 对同一案例给出发现与修复建议，最后人工核对误报、漏报和生成补丁是否真的能通过测试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把安全学习从“看一段漏洞代码”推进到可运行、可复现、可验证的闭环，比较适合拿来测试 Coding Agent 的安全能力。官方仓库规模和社区热度仍不算大，不能把项目收录或某个 benchmark 样本直接等同于真实生产安全结论。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 Java 开发团队做本地化的漏洞复现与安全编码训练。</li>
+    <li>用固定样本评估 Agent 的漏洞定位、补丁生成和回归验证能力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2089330492441252208" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ shotsync：自托管的跨设备截图/文字中转站</div>
+  <div class="section"><div class="section-label event">一句话</div><p>shotsync 是部署在 Cloudflare Workers + R2 上的轻量 PWA，把截图、照片和文字放进自己的短期中转池，不需要原生 App 或第三方图床。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Defiabell/shotsync" target="_blank">https://github.com/Defiabell/shotsync ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备 Cloudflare 账号并启用 R2，确认自己接受 Cloudflare 要求的账户开通条件；克隆仓库后 npm install，使用 npx wrangler login 登录，按 README 创建 R2 bucket，再用 openssl rand -hex 24 生成随机 AUTH_TOKEN 并执行 npx wrangler secret put AUTH_TOKEN，最后 npm run deploy。部署后用手机和 Mac 分别打开 Worker URL，输入 Token；可把页面加入主屏幕，上传图片或文字，另一台设备会在刷新后看到。建议立即配置 30 天生命周期规则，并把它限定为自己或可信小群使用，因为共享 Token 拥有查看、上传和删除权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“截图从一台设备到另一台设备”的摩擦压缩成一个自托管 PWA，同时使用客户端缩略图、签名过期分享链接和 R2 生命周期，目标清晰而且部署成本低。安全模型也很诚实：单 Token 不是多租户权限系统，适合个人中转，不适合直接承载长期档案或敏感团队数据。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac、手机和 Windows 之间快速传截图、临时图片和文字片段。</li>
+    <li>给小团队部署一个不经过公共图床的短期素材交换池。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2089138512121438341" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DeepSeek V4 API 开始峰谷定价，开发成本重新成为架构变量</div>
+  <div class="section"><div class="section-label event">事件</div><p>DeepSeek V4-Pro 与 V4-Flash 在 8 月 17 日起采用峰谷时段价格，X List 用户实测账单已经出现明显上升；官方价格页列出了 cache hit、cache miss、输入输出和峰谷价格。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是简单的“模型涨价”四个字，而是把 Agent 工作负载的时间安排和上下文复用直接纳入成本模型。官方页面显示，V4-Flash 与 V4-Pro 的 cache hit、cache miss 和输出分别按峰谷计费，峰时价格明显高于非峰时；这意味着高频 Agent 如果仍然在峰时重复发送长系统提示词，成本会被双重放大。今天就可以把请求按交互、批处理、夜间离线任务分层，增加 cache 命中监控，并把复杂任务在 DeepSeek、其他供应商和本地模型之间做可观测路由，而不是只看单次 token 单价。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型供应商开始用峰谷机制调度算力，应用方需要把“什么时候跑、上下文是否复用、是否值得用大模型”纳入产品架构。对低价模型依赖较深的初创团队，预算、SLA 和模型切换预案应同步更新；对有批处理能力的团队，错峰和缓存反而可能成为新的降本空间。
+外部证据：https://api-docs.deepseek.com/quick_start/pricing/</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2089384107717603578" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Stripe 以超过 70 亿美元收购 OpenRouter，模型网关成为战略资产</div>
+  <div class="section"><div class="section-label event">事件</div><p>多家媒体报道 Stripe 已敲定以超过 70 亿美元收购 OpenRouter；OpenRouter 的价值在于帮助开发者在不同 AI 模型之间选择、切换和统一接入。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果交易最终按报道落地，市场买的不是一个普通 API 转发层，而是模型选择、路由、价格比较、供应商切换和开发者使用数据组成的入口。过去模型网关常被视为“卖水的中间层”，但当模型数量、价格和可用性快速变化时，谁掌握统一调用面，谁就能影响企业的模型采购和支付流。Stripe 进入这一层，也会把支付、账单、风控与 AI 推理消费放到更近的位置。不过报道仍使用知情人士口径，最终价格和交易细节需要等待双方正式确认，不能提前当作已完成并购。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业在选择模型网关时，除了兼容性和单价，还要审查数据留存、故障切换、供应商锁定、账单归属和迁移能力。对创业者而言，单纯“把多个模型接起来”越来越难形成壁垒，真正有价值的可能是路由策略、评测数据、企业控制面和支付闭环。
+外部证据：https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2089162837658935408" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 快手招聘开始把 AI 使用经验显性化，AI 能力进入求职筛选语境</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 讨论快手校招投递中出现 AI 应用经验字段，并称可上传与 AI 的对话记录作为证明；快手公开 AI 招聘页面则持续覆盖大模型、生成式 AI、多模态和 AI 工程等方向。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>需要区分两层事实：推文描述的是具体投递页面的操作体验，官方公开页面目前能直接核验的是快手 AI 团队和相关岗位的长期招聘方向。即便“上传对话记录”仍需以正式投递页为准，这个信号也说明企业对 AI 的评价正在从“会不会使用某个工具”转向“能否把 AI 嵌入真实工作并留下可复盘证据”。一份漂亮的聊天截图不等于能力证明，更有价值的是问题定义、工具选择、验证过程、失败记录、代码或业务结果，以及对隐私和版权的处理。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>求职者和高校可能会更重视可验证的 AI 工作流作品集；企业则需要避免把私人对话、客户数据或未经授权的代码当成简单筛选材料。未来简历中的 AI 能力，可能像开源贡献一样，需要提交任务背景、过程证据、产出物和人工复核说明，而不是只写“熟悉 ChatGPT”。
+外部证据：https://ai.kuaishou.cn/join</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2089283787779973315" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2089384782107173275" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2089289408801325096" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2089289406125310362" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2089154640898404567" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2089401004567707805" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/oran_ge/status/2087818420150731057" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HP6gbjmaUAEiHCa?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HP6gbjmaUAEiHCa?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HP6ggFkaMAAaCRw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HP6ggFkaMAAaCRw?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2089384617761484800/img/y6kE13g40BjJrOxB.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2089384617761484800/img/y6kE13g40BjJrOxB.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2089317297622335488/img/bgkCsqKu6fevOOaM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2089317297622335488/img/bgkCsqKu6fevOOaM?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HP8KPB4bUAAa2Wg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HP8KPB4bUAAa2Wg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPlqx8ybQAAv1bo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPlqx8ybQAAv1bo?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPlq2oHboAEJ3vS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPlq2oHboAEJ3vS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPlq51dbIAAigz-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPlq51dbIAAigz-?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HPlrBtUbcAAHpCE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HPlrBtUbcAAHpCE?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>System Design Notes：开源系统设计笔记仓库，适合与编码 Agent 配合做架构复习、面试准备和方案核对 <a href="https://github.com/liquidslr/system-design-notes" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
