@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 18 Aug 2026 00:49:42 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 00:46:24 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/19 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-19.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-19.html</guid>
+      <description>今天最值得动手的信号，是“本地 Agent 工作台”正在从单纯写代码扩展到设计、文档、协作和安全验证：Open Design、Cumora、AnyDoc、pdf-inspector、JSEF 都把可执行产物或可复现实验放到了工作流中心。本次 Agent Reach 多源证据包在限时内未生成，因此以下 🛠️ 项目均改用 X List 原文 + 官方 GitHub/官网/文档人工核验；HNRSS 补充证据缺失，🌱 条目明确标注“早期信号/证据待补”，不把未核验的功能当成事实。</description>
+      <pubDate>2026-08-19T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/18 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-18.html</link>
