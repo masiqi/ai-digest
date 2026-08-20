@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-20</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-20</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最明显的主线，是 AI agent 正从聊天窗口变成“有电脑、有文件、有记忆、能执行、可审计”的工作空间：OpenBot、Berd、mimofan 等项目都在把模型能力接到真实工具链上。另一条线是能力兑现越来越依赖后训练、Harness 和验证闭环，而不是只看参数规模。本轮 X List 抓到 105 条，证据包补到了 GitHub、官网、YouTube 和 Reddit；HNRSS 的 5 个定向 feed 返回 502，仅保留 1 条有完整讨论链接的 Hacker News 早期信号，弱证据项目已降级。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ CopilotKit OpenBot</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的 AI coworker 平台，让每个 bot 拥有独立电脑、浏览器、文件和工具，并在动作发生前决策、发生后留痕。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/CopilotKit/openbot" target="_blank">https://github.com/CopilotKit/openbot ↗</a></p>
+    <p><a href="https://copilotkit.ai/openbot" target="_blank">https://copilotkit.ai/openbot ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备 Docker、Bun 1.3+、一个 CopilotKit Intelligence 项目和模型密钥，再克隆仓库并创建 .env。进入目录执行 bun install，然后运行 bash scripts/start.sh；脚本会启动数据库、浏览器电脑、监督服务、API 和前端，完成迁移并做健康检查。浏览器打开 http://localhost:3010，进入 /bot，先让 General Assistant 访问 news.ycombinator.com 并告诉你头条，再到 agents.yaml 或 /agents 页面改一个 coworker 的提示词和权限，观察每个动作如何经过治理网关。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“让模型调用工具”推进到“让组织敢把工具交给模型”。OpenBot 的网关会统一处理电脑、文件、MCP 和组件动作，策略缺失或规则出错时默认拒绝；同时保留人工接管、授权和审计轨迹。对想研究 agent 安全边界、企业权限和可回放执行流的人，比单纯聊天 Demo 更接近真实生产问题。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给知识库、浏览器和内部工具配置受控的企业问答 coworker。</li>
+    <li>研究浏览器 agent 的审批、人工接管、MCP 权限和操作审计。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2090224115626000481" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://abs.twimg.com/emoji/v2/svg/1fa81.svg" target="_blank"><img src="https://abs.twimg.com/emoji/v2/svg/1fa81.svg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090126325948518400/img/sUycuiS8VzqUr6_I?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090126325948518400/img/sUycuiS8VzqUr6_I?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ oMLX：Apple Silicon 本地推理服务器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 Apple Silicon 的本地 LLM 推理服务器，提供连续批处理、SSD/KV 缓存、菜单栏管理和 OpenAI 兼容接口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/jundot/omlx" target="_blank">https://github.com/jundot/omlx ↗</a></p>
+    <p><a href="https://omlx.ai" target="_blank">https://omlx.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Mac 用户可以从 Releases 下载 .dmg，拖进 Applications；也可以执行 brew tap jundot/omlx https://github.com/jundot/omlx，再执行 brew install jundot/omlx/omlx。启动应用后先在模型管理界面下载一个适合内存的模型，再用内置聊天或跑分功能确认服务正常；需要接入其他客户端时，按仓库的 CLI Configuration 使用本地 OpenAI-compatible endpoint。想试 MCP 的话，再按 README 安装对应依赖，不要一开始就加载超出机器内存的大模型。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是又一个聊天前端，而是把 Apple Silicon 的内存和磁盘资源变成可复用的本地推理服务。连续批处理、缓存和原生 Swift 菜单栏应用，解决的是多任务排队、模型反复加载和桌面管理成本；同时保留 OpenAI/Anthropic 兼容方向，适合把本地模型接到已有 agent 工作流里做成本和隐私对照实验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac 上给 Claude Code 或其他 API 客户端提供本地模型后端。</li>
+    <li>对比不同量化模型的速度、缓存命中和内存占用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2089914998202229218" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQDdSqUakAABpVZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQDdSqUakAABpVZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qiaomu Learning：苏格拉底式学习 Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把主题、网页、截图、PDF 或笔记变成一次只问一个问题的苏格拉底式学习对话，并根据回答调整下一步。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-learning" target="_blank">https://github.com/joeseesun/qiaomu-learning ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在支持 skills 的 agent 宿主中执行 npx skills add joeseesun/qiaomu-learning，安装后直接说“带我学习某个主题，一次只问一个问题，不要直接告诉我答案”。可以把 Omarchy 手册、课程 PDF 或一段代码作为材料交给它，让 agent 先确认材料范围，再逐步追问；回答后要求它指出推理漏洞、用自己的话复述，并在最后做一次迁移题。仓库还提供静态包验证脚本，想改 skill 时可运行 python3 scripts/validate_skill.py . 检查结构和契约。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“让模型解释”改成“让学习者自己推导”，并把一次一问、渐进黑板、掌握状态和材料边界写进了可复用 Skill。对 agent 用户来说，真正有价值的不只是提示词，而是把学习过程封装成可重复触发、可验证、可退出的工作流，适合测试 Skills 是否能沉淀方法而不是只生成一段漂亮答案。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用本地手册、论文或代码库做主动回忆和逐步学习。</li>
+    <li>为团队培训、技术 onboarding 或复杂概念复习制作交互式学习流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2090102624108601736" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQGHv1PagAA8yan?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQGHv1PagAA8yan?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ JSEF v1.9 Benchmark：可复现的 Java 安全实验框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 Spring Boot 的 Web 安全学习与测试项目，把漏洞原理、复现、不安全实现和修复实现放进可运行的实验环境。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/XiaomingX/JSEF" target="_blank">https://github.com/XiaomingX/JSEF ↗</a></p>
+    <p><a href="https://github.com/XiaomingX/JSEF/releases" target="_blank">https://github.com/XiaomingX/JSEF/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先 git clone https://github.com/XiaomingX/JSEF，再按 README 选择 Maven 或 Docker。Docker 路线可以执行 docker build -t jsef-security-sample:latest .，随后执行 docker run -d -p 8080:8080 --name jsef-demo jsef-security-sample:latest；启动后按项目文档访问实验接口，逐个对照 unsafe 和 safe 路由。想看推文提到的新版 benchmark，则进入 Releases 找 v1.9.0-benchmark，记录样本、checkpoint 和本地运行结果，再把模型生成的修复建议与实际测试结果分开核对。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的亮点不是把“AI 安全”停在口号，而是把可复现样本、漏洞链、代码对照和修复验证放到同一项目里。推文强调了 checkpoint 双重标注和可重复 scorecard，官方仓库则给出 Docker、Spring Boot 和真实业务场景，适合用来评估 SAST、LLM 修复代理在跨漏洞链任务中的真实能力，而不是只看单个漏洞命中率。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学习 Java Web 漏洞原理，并在本地复现和验证修复。</li>
+    <li>为代码安全 agent 构造有标签、可回归、可审计的评测集。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2090103239203344676" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ mimofan：Rust 终端 AI 编程助手</div>
+  <div class="section"><div class="section-label event">一句话</div><p>本地优先的 Rust 终端编程 agent，支持 MiMo、DeepSeek、OpenAI、通义千问等模型，并能读代码、改文件、跑命令和执行验证。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/XiaomingX/mimofan" target="_blank">https://github.com/XiaomingX/mimofan ↗</a></p>
+    <p><a href="https://github.com/XiaomingX/mimofan/releases" target="_blank">https://github.com/XiaomingX/mimofan/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>有 Rust 环境时，在仓库目录执行 cargo install --path crates/tui --locked；不想编译则从 Releases 下载预编译二进制。首次运行 mimofan 会进入配置向导，也可以按 README 在 ~/.mimofan/config.toml 配置 provider。先用 mimofan doctor 检查环境，再用 mimofan 启动 TUI，或执行 mimofan exec "帮我为这个项目写一个测试并运行验证"。建议先用 Plan 模式审阅计划，再给一个小型仓库测试长期记忆、apply_patch、危险操作确认和错误修复，不要直接在重要项目开启 YOLO。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>mimofan 把终端代理的可控性和本地优先放在一起：危险操作先询问、Spec Freeze 防止偏离计划、Issue Monitor 连接 GitHub 问题，近期版本还在加强长期记忆和多模型协作。它的 Rust 单体部署、MIT 协议和多 provider 兼容，让用户可以把“国产模型 + 本地 agent + 可审计执行”作为一条完整路线来试，而不是只能使用闭源桌面产品。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地代码库中完成从读结构、改代码到测试修复的闭环。</li>
+    <li>研究长期记忆、计划冻结、子代理和危险操作审批如何影响编码质量。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2089973766835327417" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ColaMD 1.9.0：Agent Native Markdown 编辑器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 Markdown 当作内容数据库的桌面编辑器，能实时看到 agent 改动，并在 1.9.0 中加入 Word、PDF/HTML 和阅读页导出能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/marswaveai/ColaMD" target="_blank">https://github.com/marswaveai/ColaMD ↗</a></p>
+    <p><a href="https://github.com/marswaveai/ColaMD/releases" target="_blank">https://github.com/marswaveai/ColaMD/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 Releases 下载适合系统的安装包，macOS 可选 Apple Silicon 的 .dmg；不想安装也可以克隆源码后执行 npm install 和 npm run dev。打开一个已有 .md 文件，再让 Claude Code、Cursor 或其他 agent 修改标题、列表和图片，观察 ColaMD 是否实时刷新，并用菜单里的导出功能生成 docx、PDF 或 HTML。最后把同一份 Markdown 同时交给 agent 和 Word 用户，检查格式、图片和标题层级是否保持，体验它作为内容层而不是普通笔记本的差异。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它抓住了 agent 工作流里常被忽略的交付层：模型负责修改 Markdown，人需要实时看到变化、审阅格式，并把结果交给不使用 Markdown 的协作者。官方 README 明确支持 Live Agent Sync、WYSIWYG、富文本复制和跨平台导出，1.9.0 又补上 Word 与文档结构能力，适合验证“文件是接口、编辑器是观察面”的新型协作方式。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 agent 维护产品文档、方案、简历或幻灯片源文件，并实时人工审阅。</li>
+    <li>把 Markdown 内容快速交付为 Word、PDF、HTML 或阅读页面。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2090007780174573613" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQEwpePaoAAVr1w?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQEwpePaoAAVr1w?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQExrFwaoAAOURy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQExrFwaoAAOURy?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Berd：Block 的开源桌面 Agent 工作空间</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Block 开源的桌面 agent 应用，把项目、会话、技能、文件和不同 harness 放进一个本地工作空间，并通过 ACP 连接 Goose 后端。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/block/berd" target="_blank">https://github.com/block/berd ↗</a></p>
+    <p><a href="https://block.xyz/inside/designing-ai-with-character-what-we-learned-building-berd" target="_blank">https://block.xyz/inside/designing-ai-with-character-what-we-learned-building-berd ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>想直接体验可先查看仓库是否提供对应平台构建物；如果要从源码研究，准备 Rust/Tauri、Node 和 just，克隆仓库后执行 just setup，再执行 just dev。启动后创建一个项目，连接本地或已配置的 Goose agent，分别测试新会话、上下文文件、技能和模型切换。把一个小任务交给 agent，观察前端工作空间如何管理会话和文件；再阅读 Goose/ACP 连接配置，确认 UI 层与 agent runtime 的边界，不要把它误当成新的模型服务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Berd 的价值在于把多种模型和 harness 的“使用面”统一起来，同时不吞掉底层 agent runtime。官方仓库说明它用 Tauri 2、React 19，通过 ACP WebSocket 调用 Goose；这为桌面端 agent 的项目持久化、上下文管理、模型切换和企业分发提供了一个可读源码的样本，也提醒我们开源许可证与社区治理并不等价。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在桌面上集中管理多个 agent 项目、会话、文件和技能。</li>
+    <li>研究 ACP、Goose runtime 与桌面 UI 如何分层协作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2089955657231532325" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQEDTrEbEAA5Rw_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQEDTrEbEAA5Rw_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 科学代理走入蛋白质设计与化学分析</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 分享 Claude 在蛋白质 binder 设计和 NMR/LC-MS 分析中的实验结果，推文重点是模型协调开源工具完成科学流程，而不是只生成一段说明文字。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方材料称，Claude 在 15 个可解释目标中的 14 个设计出了结合物，整体命中率按设置约为 22%–35%，并由外部实验室完成湿实验验证；在化学分析任务中，模型用原始数据完成 NMR 与 LC-MS 处理，结果与实验室数据接近。这里真正值得关注的不是“模型会生物学”这一句营销式概括，而是它能选择工具、分配计算、筛选候选、保存决策，再把结果交给实验环节验证。外部实验仍然昂贵且耗时，官方案例也不是同行评审结论，因此应把它看成 agentic science 的强信号，而不是已经能独立研发药物的证明。参考：https://www.anthropic.com/research/Claude-accelerates-protein-design</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类工作流继续稳定，科研软件的竞争点会从单个预测模型转向“模型 + 开源工具 + 计算资源 + 实验反馈”的闭环编排。实验室可能先把重复分析、候选排序和文献/数据整理交给 agent，把专家时间集中到目标选择、风险判断和实验设计；同时，生物安全、数据权限和结果复现会成为商业落地的硬门槛，而不是发布后的附加项。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/alex_peys/status/2089876520848515525" target="_blank"><span class="handle">@alex_peys</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2089839233309773824/img/4ZiaAp-kMK30-vJU.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2089839233309773824/img/4ZiaAp-kMK30-vJU.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GLM-5.3：后训练本身成为编码能力的主战场</div>
+  <div class="section"><div class="section-label event">事件</div><p>智谱/ Z.ai 发布 GLM-5.3，官方强调沿用 GLM-5.2 底座，主要通过长周期任务环境、强化学习和后训练提升复杂编码与 agent 能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条动态的含义不只是又多了一个模型名。Z.ai 官方博客称 GLM-5.3 在内部 Code Bench 上较 GLM-5.2 提升 50%，Terminal-Bench 3.0 从 4.6 提到 28.3，DeepSWE v1.1 从 46.2 提到 66.9；同时官方承认环境生成和验证仍有相当的人工作业。也就是说，收益来自更贴近真实工程生命周期的训练环境：识别问题、实现、运行测试、交付结果，而不是只刷短题。供应商自报数据仍需社区复测，开源权重和许可证的实际可用性也要单独确认。参考：https://z.ai/blog/glm-5.3</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型公司的资源配置会继续从“训练更大底座”转向“构建更好的任务环境、评测和反馈回路”。对开发者而言，选择模型时要看它在具体 harness、上下文长度、工具调用、token 成本和失败恢复上的表现，不能只看通用榜单；对开源生态而言，真正稀缺的可能是高质量长周期任务、可复现执行环境和能防止 benchmark 泄漏的验证集。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2090215153245495489" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 从 Vibe Coding 到付费交付：Demo 不等于产品</div>
+  <div class="section"><div class="section-label event">事件</div><p>围绕 ScreenKite 达到 30 万美元 ARR 的分享，推文转述了一个更现实的判断：Vibe Coding 降低了做 Demo 的门槛，但找到愿意付费的客户、完成交付和持续经营仍然困难。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是在否定 AI 编程，而是在重新划分价值链。代码生成、页面拼装和原型验证正在快速商品化，单个开发者很快就能做出“看起来能用”的东西；但真实客户购买的是稳定性、数据接入、权限、售后、迁移和对结果负责。推文中的 ARR 数字属于作者分享，日报没有把它当作独立审计过的财务事实；真正可复用的信号，是 AI 创业者开始从展示模型能力转向讨论获客、交付和留存，这比又一个 Demo 截图更接近商业现实。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来 AI 工具的竞争会更像软件工程和服务业的结合：谁能把 agent 生成的代码变成可部署、可监控、可升级的产品，谁才有机会形成收入。个人开发者应尽早验证付费场景和运维成本，平台方则需要提供测试、部署、观测、权限和回滚能力；只卖“生成速度”的工具，可能很快被同类功能抹平差异。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/mike_chong_zh/status/2090194486639071547" target="_blank"><span class="handle">@mike_chong_zh</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/jakevin7/status/2090117512675659854" target="_blank"><span class="handle">@jakevin7</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2090094632982184357" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2090078831550074919" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2089923175652209112" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2090107021463089602" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2089947634232606939" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2090007963800871340" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2089994108307644874" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2089994101181612054" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2089940025555239063" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQHasGhaEAADARj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQHasGhaEAADARj?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQHatocacAAT7kK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQHatocacAAT7kK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQHawfea4AAzruc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQHawfea4AAzruc?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQGBtaJaMAEh8Jy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQGBtaJaMAEh8Jy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2089722826442072064/img/son0I2pPp0MMV1XV.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2089722826442072064/img/son0I2pPp0MMV1XV.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQDaX2jaUAA-9qj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQDaX2jaUAA-9qj?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQGMQ7KbwAAdVLW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQGMQ7KbwAAdVLW?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Airtap：推文给出免费体验入口，具体产品形态和可靠外部证据仍待补齐 <a href="https://x.com/MinLiBuilds/status/2089947634232606939" target="_blank">→</a></li>
+    <li>ReadBrief：划词 AI 总结工具，适合观察轻量浏览器辅助工具是否能形成稳定使用习惯 <a href="https://x.com/appinn/status/2090007963800871340" target="_blank">→</a></li>
+    <li>AbiPaint：免付费、免注册、免安装的在线修图工具，先关注隐私与导出能力 <a href="https://x.com/appinn/status/2089994108307644874" target="_blank">→</a></li>
+    <li>Gridly：面向 Mac 标题栏手势的窗口整理工具，值得观察其系统权限和实际交互完成度 <a href="https://x.com/appinn/status/2089994101181612054" target="_blank">→</a></li>
+    <li>OfferLai：把投递、模拟面试、复盘和能力画像放在一起的求职工作台，后续看是否有可验证试用入口 <a href="https://x.com/appinn/status/2089940025555239063" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

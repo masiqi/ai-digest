@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 19 Aug 2026 00:46:24 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 00:47:30 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/20 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-20.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-20.html</guid>
+      <description>今天最明显的主线，是 AI agent 正从聊天窗口变成“有电脑、有文件、有记忆、能执行、可审计”的工作空间：OpenBot、Berd、mimofan 等项目都在把模型能力接到真实工具链上。另一条线是能力兑现越来越依赖后训练、Harness 和验证闭环，而不是只看参数规模。本轮 X List 抓到 105 条，证据包补到了 GitHub、官网、YouTube 和 Reddit；HNRSS 的 5 个定向 feed 返回 502，仅保留 1 条有完整讨论链接的 Hacker News 早期信号，弱证据项目已降级。</description>
+      <pubDate>2026-08-20T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/19 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-19.html</link>
