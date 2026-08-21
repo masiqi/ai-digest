@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 20 Aug 2026 00:47:30 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 00:45:53 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/21 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-21.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-21.html</guid>
+      <description>今天的主线，是 AI 产品从“会回答”继续走向“能执行、可验证、可迁移”：Claude Design、OpenBot、SkillCorpus 把设计、浏览器电脑和 Agent 技能组织成更完整的工作流；MuScriptor、smolvm 与 MangoDisk 则把模型能力落到音乐转谱、安全执行和本地设备维护。本次证据包共整理 112 条候选证据，并额外抓取 30 条 Hacker News 早期社区信号；其中 HNRSS 线索以早期信号为主，避免把尚未充分核验的项目写成成熟产品。</description>
+      <pubDate>2026-08-21T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/20 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-20.html</link>

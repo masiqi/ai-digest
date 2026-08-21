@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-21</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-21</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线，是 AI 产品从“会回答”继续走向“能执行、可验证、可迁移”：Claude Design、OpenBot、SkillCorpus 把设计、浏览器电脑和 Agent 技能组织成更完整的工作流；MuScriptor、smolvm 与 MangoDisk 则把模型能力落到音乐转谱、安全执行和本地设备维护。本次证据包共整理 112 条候选证据，并额外抓取 30 条 Hacker News 早期社区信号；其中 HNRSS 线索以早期信号为主，避免把尚未充分核验的项目写成成熟产品。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Academy：Anthropic 官方免费 AI 学习平台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 面向初学者和已有使用经验者提供的结构化 Claude、Claude Code、MCP 与 AI 协作课程入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://academy.claude.com/courses" target="_blank">https://academy.claude.com/courses ↗</a></p>
+    <p><a href="https://academy.claude.com/help/faq" target="_blank">https://academy.claude.com/help/faq ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开课程页，先从 Claude 101 或 AI Fluency 入门，再按自己的目标进入 Claude Code 101、Claude Platform 101 或 MCP 相关课程。每门课按 lesson 和 quiz 组织，适合边学边在 claude.ai 或本地 Claude Code 里复现；登录免费 Claude 账号可以保存进度并获得完成徽章，但官方 FAQ 说明浏览目录本身不要求登录，也不要求付费套餐。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是又一个 Prompt 清单，而是把“如何使用模型”拆成连续的学习路径，覆盖普通对话、代码代理、平台开发和 MCP。对团队来说，统一学习材料也比口口相传更容易建立共同工作方法；同时免费入口降低了试错成本，适合把课程当作新成员的 AI 入门教材。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给刚开始使用 Claude 的同事安排一套可追踪的入门训练。</li>
+    <li>用 Claude Code 101 和 MCP 课程快速补齐开发者的工具调用基础。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2090584967042511010" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Design：从原型到 Claude Code 的设计工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 的对话式设计工具，可生成原型、演示稿和一页纸，并能把设计意图同步给 Claude Code。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://claude.com/product/design" target="_blank">https://claude.com/product/design ↗</a></p>
+    <p><a href="https://support.claude.com/en/articles/14604416-get-started-with-claude-design" target="_blank">https://support.claude.com/en/articles/14604416-get-started-with-claude-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 claude.ai/design 新建项目，用自然语言先描述页面目标、用户流程和视觉方向，让 Claude 生成第一版原型；随后通过对话、画布编辑和评论继续迭代。若有现成代码库或设计系统，可用 /design-sync 导入组件规范；确定方向后直接选择 hand off to Claude Code，或在 Claude Code 中使用 /design，把设计继续落到本地项目。企业用户还要注意，Enterprise 默认关闭该能力。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把设计阶段的上下文从截图和口头描述，推进到可编辑原型、设计系统和代码交接的一条链路。真正的亮点不是“生成一张漂亮图”，而是让产品经理、设计师和工程代理共享同一份设计意图，减少从原型重新解释成代码时的损耗；不过目前仍是 beta，适合先用于内部原型和探索。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>产品经理快速生成多个功能流和交互原型，再交给工程代理实现。</li>
+    <li>设计系统已经沉淀在代码库的团队，用真实组件做生产前验证。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2090268932548526123" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HP9LXQiasAAoPxJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HP9LXQiasAAoPxJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MuScriptor：把歌曲转成 MIDI、乐谱与指法谱</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Kyutai 与 Mirelo 开源的多乐器音乐转录模型，能从音频识别不同乐器的音符并导出可编辑结果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/muscriptor/muscriptor" target="_blank">https://github.com/muscriptor/muscriptor ↗</a></p>
+    <p><a href="https://muscriptor.kyutai.org" target="_blank">https://muscriptor.kyutai.org ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>想先体验就打开官方网页，上传一段 MP3、WAV 等音频，等待模型输出 MIDI；之后可以在 MuseScore、Logic、Ableton 或 Guitar Pro 中继续编辑。想本地运行则克隆 GitHub 仓库并按 README 安装，先用 small 模型验证流程，再按机器算力选择 medium 或 large；CLI 可以输出 MIDI，也可以用 sheets 模式生成 MusicXML、PDF 乐谱和吉他/贝斯指法谱。Apple Silicon 用户可优先尝试 MPS，长音频建议先截取片段。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>许多自动转谱工具只适合单一乐器或把复杂混音处理得很粗糙，MuScriptor 的定位是面向真实、多乐器音乐的开放模型，并提供音符时间、乐器类别和可编辑格式。官方资料显示它基于大规模真实与合成音乐数据训练，既适合音乐人找扒谱起点，也给音乐信息检索研究者留下了可复现实验入口。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把现场录音或练习录音转成 MIDI，辅助扒谱和编曲。</li>
+    <li>从多乐器歌曲生成分轨乐谱与指法谱，用于教学和排练。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/kyutai_labs/status/2090467946065731840" target="_blank"><span class="handle">@kyutai_labs</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090465126851731456/img/vlLkLWt5hH9w3ZhR.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090465126851731456/img/vlLkLWt5hH9w3ZhR.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Magiviz：开源的端到端 AI 视频创作引擎</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把剧本、角色、分镜、视频生成和成片整理成一条工作流的开源 AI 视频项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ItusiAI/Open-Magiviz" target="_blank">https://github.com/ItusiAI/Open-Magiviz ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 GitHub 仓库阅读 README 和部署说明，确认本地 Node/Python、数据库以及视频模型 API 的要求，再克隆项目并复制环境变量模板。配置自己可用的视频模型 API Key 后，按项目提供的前端入口创建一个短故事，依次填写主题、角色和镜头设定，观察它如何生成分镜并串成成片；首次建议只做十几秒的低成本测试，确认模型供应商、存储和渲染链路都正常后再尝试长视频或批量任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它值得看的是“创作流程编排”而不只是单个视频模型：剧本到角色、分镜再到生成和剪辑，能让开发者直接检查每一步的数据结构并替换模型供应商。仓库公开且定位为开源 AI 视频创作引擎，适合拿来研究多模型工作流；但具体模型数量、时长和部署成本仍应以仓库当前版本为准，不宜只按推文宣传估算。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速制作产品宣传片、短故事和社交媒体视频的初版。</li>
+    <li>作为多模型视频编排的教学样例，二次开发自己的创作后台。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2090448589583487469" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2089986031953317888/img/gBwAhXObj8Sp9Sv1.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2089986031953317888/img/gBwAhXObj8Sp9Sv1.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQD5LUvboAAIVmy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQD5LUvboAAIVmy?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenBot：给 Agent 一台可审计的电脑</div>
+  <div class="section"><div class="section-label event">一句话</div><p>CopilotKit 开源的 AI coworker 平台，让每个 Agent 拥有独立浏览器、文件和工具权限，并记录操作过程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/CopilotKit/OpenBot" target="_blank">https://github.com/CopilotKit/OpenBot ↗</a></p>
+    <p><a href="https://www.copilotkit.ai/openbot" target="_blank">https://www.copilotkit.ai/openbot ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并按 Quick start 准备 Docker、Node 和本地服务，启动 app、server、agent-computer 等组件。然后在管理界面创建一个 Bot，给它配置角色描述、可见性、浏览器或文件权限，再接入一个 AG-UI endpoint；测试时先使用无敏感数据的本地目录，让它执行搜索、页面操作或文件整理，逐条检查动作预览、策略判断和审计记录，遇到需要人工确认的步骤再接管控制权。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>OpenBot 把 Agent 的“能不能调用工具”推进成“它在什么权限下调用、动作是否先被决定、事后能否复盘”。它基于 AG-UI，理论上可以接入 LangGraph、Mastra、CrewAI、Pydantic AI 或手写 Agent，不把治理逻辑锁死在某个框架里。项目明确标注 Alpha，适合学习和内测，不应直接连接生产账号或高权限凭据。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在隔离环境里测试会操作浏览器和文件的 AI coworker。</li>
+    <li>为企业 Agent 原型增加权限策略、人工接管和审计轨迹。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2090348345802002842" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQJoupFakAAEX3W?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQJoupFakAAEX3W?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090125693069991936/img/DsaGvsQFx7aBrjja?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090125693069991936/img/DsaGvsQFx7aBrjja?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SkillCorpus：把分散的 SKILL.md 变成可检索技能库</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 Agent 技能聚合、清洗、质量评估、检索和任务测试的开源基础设施。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/EverMind-AI/SkillCorpus" target="_blank">https://github.com/EverMind-AI/SkillCorpus ↗</a></p>
+    <p><a href="https://arxiv.org/html/2607.15557v2" target="_blank">https://arxiv.org/html/2607.15557v2 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从仓库 README 和发布的论文了解数据格式、许可过滤与评测流程，再用少量本地 SKILL.md 做试验，不要一开始就抓取整个公开生态。可以先把几类技能放入输入目录，运行项目的聚合/去重和质量打分流程，再用一个简单任务测试检索结果是否真的帮助 Agent 完成工作；若要接入自己的 Harness，应记录召回技能、最终选择、执行结果和失败原因，避免只看下载量判断技能价值。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 技能从“到处复制提示词”变成可治理的工程资产。论文报告的方向包括大规模聚合、16 类分类、utility/robustness/safety 三类质量维度，以及检索、重排和选择器的组合；更重要的是，它试图用真实任务验证技能是否产生增益，而不是把市场热度等同于有效性。项目仍在快速演进，使用前要核对当前仓库的发布状态和许可证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为团队建立可搜索、可版本化、可评测的内部 Agent 技能仓库。</li>
+    <li>研究技能覆盖率、检索策略和安全筛选对 Agent 成功率的影响。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2090583786241323298" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HN-Y2e9aQAEKI3d?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HN-Y2e9aQAEKI3d?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ smolvm：用硬件隔离 VM 运行不可信代码</div>
+  <div class="section"><div class="section-label event">一句话</div><p>跨 macOS、Linux、Windows 的轻量虚拟机工具，默认把工作负载、宿主文件、网络和凭据隔开。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/smol-machines/smolvm" target="_blank">https://github.com/smol-machines/smolvm ↗</a></p>
+    <p><a href="https://smolmachines.com/docs/guides/agent-sandboxes-ci" target="_blank">https://smolmachines.com/docs/guides/agent-sandboxes-ci ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在支持 Hypervisor.framework 或 KVM 的机器上安装 GitHub Release 中的 smolvm，先用 Alpine 镜像跑一个无网络的短命令，确认 guest 能启动；再按文档用 `machine run` 指定只读输入目录、可写输出目录、CPU/RAM 限制和超时。需要联网安装依赖时，只放行明确的域名，例如 npm registry，不要直接打开全网访问。做 Agent 沙盒时优先使用 ephemeral run，任务结束删除 VM，并用 GitHub Actions 等具备虚拟化能力的 runner 运行需要 KVM 的测试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>对 Agent 来说，代码执行的关键不是“容器能不能启动”，而是被提示注入或恶意输入后能否把影响面压到最小。smolvm 为每个工作负载提供独立 guest kernel，默认关闭网络，并支持挂载、端口和允许主机列表等显式能力；但官方也提醒它不是完整的多租户控制面，宿主用户、VMM 和被转发的权限仍属于信任边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为 AI 生成的数据转换脚本提供无网络、限资源的执行环境。</li>
+    <li>在 CI 中隔离 Agent 生成的测试代码和第三方依赖安装过程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2090299859693695283" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MangoDisk：可审阅规则的本地磁盘清理工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 macOS 和 Windows 的开源磁盘分析与清理工具，支持大文件、重复文件、缓存和应用卸载整理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/harry0703/MangoDisk" target="_blank">https://github.com/harry0703/MangoDisk ↗</a></p>
+    <p><a href="https://mangodisk.app" target="_blank">https://mangodisk.app ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 用户可以先用 Homebrew 安装桌面版或 CLI，首次只执行扫描，不要直接应用清理建议；在结果页逐项查看路径、文件类别和可回收空间，确认没有项目源码、个人资料或仍在使用的缓存后再选择删除。想自动化时先用 CLI 的 JSON 或 dry-run 输出做审计，建立备份和回滚方案，再考虑脚本化。Windows 用户则从官网或 GitHub Releases 下载安装包，流程同样遵循“扫描—审阅—确认—清理”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多清理器的问题是规则不透明、误删边界难以复核；MangoDisk 把清理规则和 Rust 核心放在公开仓库，桌面应用与 CLI 共用同一套安全优先的扫描逻辑。它同时覆盖空间分析、重复文件和卸载残留，适合开发机这种缓存种类多的环境；开源并不等于可以盲删，任何规则都应先看具体路径和确认提示。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 MacBook 或 Windows 开发机上定位构建缓存和大文件。</li>
+    <li>用可读的扫描结果维护团队测试机、CI runner 的磁盘空间。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2090353805250506758" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQJttU0WYAAK2w4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQJttU0WYAAK2w4?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Raycast AI V2：带记忆、Agent 与语音输入的桌面工作区</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Raycast 新版 AI Chat 将持续对话、个人记忆、可复用 Agent、Skills 和语音听写组合到桌面入口中。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://manual.raycast.com/new-in-v2" target="_blank">https://manual.raycast.com/new-in-v2 ↗</a></p>
+    <p><a href="https://manual.raycast.com/ai/chat" target="_blank">https://manual.raycast.com/ai/chat ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>安装或升级 Raycast 后打开 AI Chat，先在 Settings → AI → Personalization 检查 Profile 和 Memory 的开关，再创建一个只负责某类工作的 Agent，配置模型、指令和所需扩展。对重复任务可以把项目偏好写入 Profile，把长期事实交给 Memory；需要语音时按官方快捷键启用 Dictation，并先授予麦克风和辅助功能权限。使用前阅读隐私说明，敏感项目不要直接写入跨设备同步或模型上下文。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它体现了桌面 AI 从“一次性问答”转成“长期工作伙伴”的方向：Agent 固化角色和工具，Memory 保存可编辑的长期上下文，Skills 自动补充任务知识，语音则降低输入摩擦。官方文档明确提供关闭、编辑和清除记忆的入口，这比不可见的个性化更可控；但记忆仍可能带来隐私和错误继承问题，建议按项目边界管理。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用固定 Agent 处理邮件、写作、代码解释等重复桌面任务。</li>
+    <li>通过语音输入和跨会话记忆减少碎片化记录成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2090460245508415491" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQLOIzLaUAAOY-u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQLOIzLaUAAOY-u?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Stripe 收购 OpenRouter：模型路由层成为企业 AI 成本基础设施</div>
+  <div class="section"><div class="section-label event">事件</div><p>Stripe 已宣布同意收购 OpenRouter；OpenRouter 的产品、使命和现有承诺暂时保持不变，交易仍需满足惯常交割条件。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>OpenRouter 的价值不只是把多个模型放在一个 API 后面，而是把模型选择、故障切换、供应商差异和 Token 成本变成可编程的路由问题。Stripe 看中的正是企业开始把 AI 调用当作长期可优化的支出与基础设施：同一业务请求可以在质量、延迟、价格和可用性之间动态选择。对开发者而言，模型网关的中立性、数据路径、计费透明度和迁移能力会比“支持多少模型”更关键；对 OpenRouter 用户来说，短期应继续观察产品承诺、路由策略和数据治理是否真的维持不变，而不能只把报道中的估值当成技术结论。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这笔交易会提高“AI Spend Management”和模型路由的行业关注度，API 网关可能从开发者工具升级为企业采购的核心层。模型厂商将更依赖可被路由系统比较的价格、延迟和可靠性，应用团队也更有动力把业务代码与单一模型解耦；同时，平台中立性、集中度和对供应商议价的影响会成为新的治理议题。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2090263512811819325" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQIbkYob0AAeTKH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQIbkYob0AAeTKH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Generalist GEN-1.5：机器人开始用“物理提示”学习新动作</div>
+  <div class="section"><div class="section-label event">事件</div><p>Generalist 发布 GEN-1.5，展示机器人从 3—12 秒单次示范中进行上下文学习，并尝试把人的动作直接迁移到机器人执行。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条路线的关键不是传统意义上的再训练，而是把一段传感器、视觉和动作轨迹放进模型上下文，让机器人在不更新权重的情况下立即尝试新任务。Generalist 官方报告在 10 个任务上的单次示范平均成功率为 59%，用 1—10 个梯度步骤和几分钟数据做少样本适配后升到 83%；这些数字仍来自早期、短时域任务，不能等同于通用家务或工业生产能力。但如果“示范即提示”能够跨物体、工具和环境保持一定泛化，机器人部署的编程成本就可能从逐任务写控制逻辑，转向准备高质量示范、约束动作空间和设计恢复机制。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>制造业、高混合小批量生产和服务机器人都可能受益于更快的换线与技能适配，机器人数据采集也会从大规模标注转向少量高信息量示范。短期瓶颈仍是安全、稳定性、长时域规划和失败恢复：59% 的一次成功率在实验展示上很有意义，在真实产线却远远不够。后续应重点关注公开评测、跨本体迁移和异常场景表现，而非只看演示视频。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2090390596800413987" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090390433709125632/img/Od8qNGDHKUUfGMqT.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090390433709125632/img/Od8qNGDHKUUfGMqT.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 TRACES：把“发现未知”纳入 AI 评测</div>
+  <div class="section"><div class="section-label event">事件</div><p>Apodex 发布 TRACES 基准和 Apodex Discovery 框架，评估 AI 在没有现成答案的真实问题中使用工具、修复错误、比较假设并给出可验证结论的过程。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>传统 benchmark 往往把问题、工具和答案边界预先固定，模型只需在答案空间里找到正确项；TRACES 改为提供可执行环境、状态变化、工具反馈和隐藏验证器，让被测对象变成完整 solver——包括模型、Harness、工具和控制策略。它用 Tools、Repair、Alternatives、Coherence、Evidence、Scope 六个维度评估轨迹，意味着“最后答对了”不再足以掩盖中途忽略证据、没有修复错误或过度外推的问题。这个设计尤其适合科学、医药和工程任务，但也要求环境和评分器足够可靠，早期分数应与公开任务细节一起解读。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种过程评测被更多研究团队采用，Agent 竞争会从静态榜单转向可复盘的长任务能力，工具调用记录、证据链和恢复策略会成为产品差异化的一部分。企业在选择科研或分析 Agent 时，也能更具体地区分“会写一份像样报告”和“真的按证据完成调查”。同时，隐藏验证器、任务代表性和评审成本会决定它能否从研究展示走向通用基础设施。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2090420237707747442" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2090270958913241271" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2090464168327750039" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2090347473097425104" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090126038697492480/img/3qJMHYhmDivjb4jL.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090126038697492480/img/3qJMHYhmDivjb4jL.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090279214142648320/img/dImCyEq25cQrxDub.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090279214142648320/img/dImCyEq25cQrxDub.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>OpenDesign Go：低价多模型代理式设计套餐，首月价格和模型组合很有吸引力，但服务热度、额度规则与长期稳定性仍需持续观察。 <a href="https://open-design.ai/pricing/" target="_blank">→</a></li>
+    <li>Qwen3.8 Dense 27B：社区正在重新讨论中等规模 Dense 模型能否在本地 Agent 场景替代更大模型，实际速度、上下文和任务稳定性值得做同机对比。 <a href="https://x.com/MinLiBuilds/status/2090464168327750039" target="_blank">→</a></li>
+    <li>Agent 记忆备份：多条讨论都指向跨 Session 记忆、上下文膨胀和误唤醒问题，记忆导出、版本化和恢复机制可能成为下一批 Agent 基础工具。 <a href="https://x.com/lxfater/status/2090347473097425104" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
