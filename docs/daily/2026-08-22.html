@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-22</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-22</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线是“模型能力开始变成可嵌入的工作流”：DeepSeek 把视觉输入接到兼容 OpenAI 的 API，OpenAI 将 Codex 的 Agent Harness 推向产品集成，MiniMax Design 则把多模态创作拆成可并行协作的 Agent 团队。本轮 X List 共抓到 107 条；Agent Reach 多源证据包在约 5 分钟内未生成，以下🛠️项目均改用推文 + 官方仓库/文档/官网人工核验，证据不足的新线索明确降级到🌱或🎯。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek-V4-Flash-Vision-Exp：兼容 OpenAI/Responses 的视觉 API</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek 的实验性视觉模型，可在文字请求中加入图片，用于读截图、理解图表、提取图片文字或让多模态 Agent 处理视觉输入。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://api-docs.deepseek.com/guides/vision/" target="_blank">https://api-docs.deepseek.com/guides/vision/ ↗</a></p>
+    <p><a href="https://api-docs.deepseek.com/guides/function_calling" target="_blank">https://api-docs.deepseek.com/guides/function_calling ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官方 Vision 文档申请并配置 DeepSeek API Key，再用 OpenAI SDK 或兼容的 HTTP 客户端把 base_url 指向 https://api.deepseek.com，模型名填 deepseek-v4-flash-vision-exp。第一次建议用一张本地截图转成 base64，或提供一个可公开访问的图片 URL，在同一条 user 消息里写“提取表格并指出异常项”；随后再试 Files API 的 file_id 复用同一张图。跑通后可把它接到截图审查、票据识别、图表问答或视觉网页 Agent 的工具链里，注意按官方文档检查格式、大小和请求体限制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不只是“又一个能看图的模型”，而是把视觉输入放进了 OpenAI-compatible Chat Completions、Responses 和 Anthropic-compatible 调用路径，开发者可以沿用现有 SDK、工具调用与 Agent 编排代码。视觉能力以独立实验模型上线，也便于在不改动纯文本主链路的情况下做 A/B 测试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对产品截图、报错截图和数据图表做自动审查与摘要</li>
+    <li>给客服、旅行、设计或研发 Agent 增加图片理解和文件复用能力</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2090734721655550034" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQPIJUSbIAAPhYo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQPIJUSbIAAPhYo?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQPAu99aoAALC1F?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQPAu99aoAALC1F?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenAI Codex Harness：把 Agent 运行时接进自己的产品</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenAI 开源的 Codex 运行时层，围绕上下文、工具调用、沙箱/审批、进度事件和持续会话，为把 coding agent 嵌入业务软件提供基础组件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/openai/codex" target="_blank">https://github.com/openai/codex ↗</a></p>
+    <p><a href="https://developers.openai.com/blog/codex-as-a-platform" target="_blank">https://developers.openai.com/blog/codex-as-a-platform ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先按官方 README 在 Mac 或 Linux 安装 Codex CLI，例如使用 npm 安装 @openai/codex，启动 codex 并完成登录，先熟悉它如何读取项目、调用工具和请求审批。接着阅读 Codex 的 platform 文章与 app-server 文档，把“执行一次任务”与“持久线程、流式事件、审批处理”分开设计；最小实验可以是做一个内部工单页面，让用户提交任务、Agent 在受限目录修改代码、页面展示进度并要求人工批准高风险动作。确认权限边界和日志记录后，再接入 CI、运维后台或客服系统。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Agent 产品失败并不是模型不会回答，而是缺少上下文管理、工具循环、失败恢复、审批和可观察性。Codex Harness 把这些围绕模型的执行机制公开出来，开发者可以复用成熟的 agent loop，而不是从零拼一套“提示词 + shell 脚本”；这也使 Agent 从独立聊天窗口变成可嵌入的业务能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在代码平台、工单系统或运维面板中嵌入受控的执行型 Agent</li>
+    <li>为自动修复、批量迁移和 CI 任务增加审批、进度与沙箱边界</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2090634335812821194" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MiniMax Design：面向商业内容的多模态 Agent 工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>MiniMax 的 AI-native 创作平台，把文案、图片、视频、音频与剪辑串成一个端到端 Agent 工作流，并支持并行的专业 Agent 协作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://design.minimax.io/" target="_blank">https://design.minimax.io/ ↗</a></p>
+    <p><a href="https://www.minimax.io/" target="_blank">https://www.minimax.io/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官方 MiniMax Design 页面并下载桌面端，按提示登录后连接一个本地素材目录。不要一上来只让它“生成一张图”，可以给一个完整 brief，例如“为新品做一条 20 秒电商短片”，再观察主 Agent 如何拆分文案、画面、视频时间线和音频任务。逐步替换参考图、品牌约束和交付规格，在关键检查点人工确认方向，最后检查素材、字幕、配音和成片，再把有效的步骤整理成可复用 Skill。先用低风险的宣传片或短剧片段测试，再迁移到真实项目。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把多模态模型的能力组织成可检查的生产流程，而不是把图片、视频和音频工具孤立地堆在一起。官方页面强调 Agent 能理解创作意图、编排多种模型、在关键节点等待指令，并支持本地文件和可复用 Skills；对内容团队来说，真正的增量是把策划到交付的协作界面统一起来。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>电商广告、品牌短片和短剧的脚本到成片流程</li>
+    <li>需要多轮审稿、素材复用和团队协作的内容生产</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2090696528465957173" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090690896518160385/img/VUxUQRJ9YRvEWR33.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090690896518160385/img/VUxUQRJ9YRvEWR33.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ASu Resume Skills：证据优先的高密度简历生成与审计</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 Codex 的开源 Skills 插件，分别负责把真实经历生成 HTML/PDF 履历，以及把 Owner、指标、Scope 和时间线拆成证据矩阵审计。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Claycui828/ASu-resume-skills" target="_blank">https://github.com/Claycui828/ASu-resume-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README，按其中的提示让 Codex 安装插件并启用 asu-resume-skill 与 asu-resume-audit-skill；然后新建对话，提供自己的简历、项目材料和可公开核验的学校/公司信息。先调用生成 Skill，让它输出来源映射、技术链、模块级 Owner 和 HTML/PDF；再调用审计 Skill，逐条检查“核心作者”“0→1”“最大规模”和指标分母。把内部链接、电话、邮箱和未授权材料先脱敏，审计发现证据不足时补充设计文档、代码记录或看板，不要把团队成果直接写成个人成果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把简历写作从“把话说大”改成“主张—证据—边界”的流程，尤其强调角色强度、个人归因、指标口径和已交付/规划中的时态区别。对于技术管理者、求职者和做招聘核验的人，这类结构化审计比单纯润色更能降低夸大、误归因和无法复核的问题。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>生成技术岗位的高密度中文履历、HTML 简历和 A4 PDF</li>
+    <li>在晋升、招聘或对外发布前审计项目归因与指标证据</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2090775406987362750" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQPsZh9a8AA_SVB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQPsZh9a8AA_SVB?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cursor Team Kit：把严格代码审查和验证流程装进 Cursor</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cursor 官方 Marketplace 中的一组开发 Skills，包含极严格的可维护性审查、Playwright 冒烟测试和基于新证据验证主张等工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cursor.com/marketplace/cursor/cursor-team-kit" target="_blank">https://cursor.com/marketplace/cursor/cursor-team-kit ↗</a></p>
+    <p><a href="https://github.com/cursor/plugins/tree/46125561306434d8a1d7745d540d8932ab0cd2a2/cursor-team-kit" target="_blank">https://github.com/cursor/plugins/tree/46125561306434d8a1d7745d540d8932ab0cd2a2/cursor-team-kit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官方 Marketplace 的 Cursor Team Kit 页面，先安装团队包，再从小范围任务开始试用 `thermo-nuclear-code-quality-review`。给它一个近期改动较多的模块，要求只做审查、不直接改代码，先看它列出的巨型文件、抽象层、条件分支和可维护性问题；随后用 `run-smoke-tests` 跑关键页面或接口的 Playwright 冒烟测试，最后用 `verify-this` 对一条重要修复结论要求基线、处理后产物和明确的 VERIFIED/NOT VERIFIED 结果。将这些步骤写入团队 PR 模板，避免把“Agent 说已修复”当成测试通过。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这套 Skill 的重点不是让模型写更多代码，而是把审查、测试和证据验证变成可重复的质量闸门。它把“代码能跑”与“代码可维护、行为已验证、结论有新证据”区分开，对多人协作和 Agent 高频改动尤其重要，也适合作为现有 CI/PR 流程的人工复核层。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对 Agent 生成或大规模重构的代码做可维护性审查</li>
+    <li>为 Web 产品补充冒烟测试、修复验证和 PR 证据链</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2090775712814993690" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQPtauhbMAA6eeB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQPtauhbMAA6eeB?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Academy：Anthropic 公开的 Claude/API/MCP 学习路径</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 的官方学习平台，覆盖 Claude 产品、Claude Platform、API、工具调用、RAG、Agent 和 MCP 等课程与教程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://academy.claude.com/" target="_blank">https://academy.claude.com/ ↗</a></p>
+    <p><a href="https://www.anthropic.com/learn/build-with-claude" target="_blank">https://www.anthropic.com/learn/build-with-claude ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 Claude Academy 后先从 Claude Platform 101 开始，不要直接跳到 Agent 课程；按课程中的示例完成一次 API 调用，再做一个带工具调用的小练习。随后进入 Building with the Claude API 路径，依次试 Prompt、Tool use、RAG、Agents 和 MCP，每学完一节都把示例改成自己的小任务，例如读取本地知识库或调用一个天气工具。把课程中的请求、权限、错误处理和评估步骤保存成项目笔记，最后再阅读 Claude Code 或 Agent SDK 的官方资料，避免只记住提示词而忽略生产环境的边界。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是单纯的产品宣传页，而是把从“会聊天”到“能构建和评估 Agent”的学习路径公开化。课程将 API、工具、RAG、Agent 和 MCP 放在同一条进阶链路上，适合用来建立团队共同术语和最低实践标准，也能减少开发者只凭碎片化帖子拼接架构的成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从零学习 Claude API、工具调用和 MCP 的开发者</li>
+    <li>为团队建立统一的 Agent 入门、实验和评估训练路径</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2090648370306335229" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mojo + MAX：面向 AI 开发与部署的开源组件集合</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Modular 的开源仓库，同时包含 Mojo 语言和 MAX Framework 的组件，可用于了解 AI 加速库、模型管线和 OpenAI-compatible 推理服务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/modular/modular" target="_blank">https://github.com/modular/modular ↗</a></p>
+    <p><a href="https://mojolang.org/docs/manual/quickstart/" target="_blank">https://mojolang.org/docs/manual/quickstart/ ↗</a></p>
+    <p><a href="https://max.modular.com/get-started" target="_blank">https://max.modular.com/get-started ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆或浏览 Modular 官方仓库，按个人目标二选一：想学 Mojo 就从语言 quickstart 和示例开始，想体验模型部署就打开 MAX quickstart。先运行一个最小示例，记录模型输入输出、依赖和硬件要求，再查看仓库中的 `max/python/max/serve`、模型 pipelines 与 accelerator kernels 目录，理解服务、图和底层算子的关系。不要一开始就改编译器；可以先修改一个示例或标准库相关小模块，跑完官方测试后再比较本地部署和 API 服务的延迟、吞吐与资源占用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把语言、编译器生态、加速库、模型架构和推理服务放在同一个可阅读的开源平台里，适合观察“模型研发”和“部署基础设施”如何衔接。官方 README 还明确区分了 Mojo 与 MAX 的入口及许可证边界，学习者可以从可运行 quickstart 逐步深入，而不是只看概念介绍。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学习面向 AI/加速器的 Mojo 编程和系统级优化</li>
+    <li>试验模型管线、OpenAI-compatible 推理服务与 MAX 加速组件</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2090633440622420070" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ELI5 Skill：把复杂主题变成大图少字的 HTML 解释页</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 社区插件仓库中的一个极简 Skill，接收 `/eli5 &lt;topic&gt;`，要求用面向零基础读者的 HTML artifact 解释主题。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/anthropics/claude-plugins-community/blob/main/eli5/skills/eli5/SKILL.md" target="_blank">https://github.com/anthropics/claude-plugins-community/blob/main/eli5/skills/eli5/SKILL.md ↗</a></p>
+    <p><a href="https://github.com/anthropics/claude-plugins-community" target="_blank">https://github.com/anthropics/claude-plugins-community ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库中的 SKILL.md，按 Claude Code 社区插件的方式启用对应 Skill；如果只想快速试验，也可以把文件内容放进自己的 skills 目录并重新加载 Skill 列表。然后输入 `/eli5 向五岁孩子解释 MCP` 或换成一个团队内部术语，要求输出 HTML artifact。检查生成结果是否真的少术语、有层级、有图示或大字号结构；如果内容仍像论文，就继续收紧受众、限制段落长度，再把效果好的版本用于 onboarding、产品宣讲或课前预习。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的代码几乎只有一条核心提示词，却展示了 Skills 的一个重要方向：把稳定的表达规范封装成可复用入口。它不追求复杂编排，适合用来快速验证 Skill 的安装、参数传递和 HTML 产物链路，也提醒使用者不要为了偶尔一次的简单提示而堆叠不必要的插件。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把复杂技术、产品功能和内部流程改写成新人看得懂的页面</li>
+    <li>为培训、分享和文档预览快速生成可打开的 HTML artifact</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2090933611054731566" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090849386284863488/img/X_zOyelugAM9MP5i.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090849386284863488/img/X_zOyelugAM9MP5i.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 创业公司指南：Agentic Coding 开始沉淀为组织方法</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 发布《Claude Code guide for startups》，基于对十多家快速成长公司的访谈，总结“人人交付、自动化琐事、信任但验证、为重建而构建、原型—试用—生产化”五条原则。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这份材料的意义不在于再宣传一个编码助手，而在于把 Agentic Coding 从个人效率技巧提升到组织运行方式。它强调所有人都参与交付、把重复劳动自动化，同时保留验证和重建机制，说明真正的瓶颈正在从“模型能不能写代码”转向“团队如何定义上下文、验收标准、责任边界和反馈闭环”。对小团队而言，先把一个完整流程跑通往往比同时采购多个 Agent 更重要。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这套方法被更多初创公司采用，工程岗位的分工会更接近产品、验证和系统编排，代码产量不再是唯一指标。企业也会更重视权限、测试、可回滚和知识沉淀；能把 Agent 接入真实交付链路的团队，可能比只在聊天窗口里生成代码的团队更快形成差异化。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2090807312097361941" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 飞猪帮帮：旅行 Agent 越过“推荐”进入真实交易</div>
+  <div class="section"><div class="section-label event">事件</div><p>飞猪推出“飞猪帮帮”，把自然语言旅行规划延伸到机酒预订、退改、值机选座、升房、接送机、入境卡和开票等履约任务，并同步开放面向旅行应用的 AI 能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>旅行场景最难的部分不是生成一份漂亮攻略，而是把用户意图映射到实时库存、订单、规则和异常处理。飞猪帮帮的产品路径说明垂直 Agent 的竞争点正在从“回答得像不像人”转向“能否在授权后真正完成事务”。对于其他行业，关键启发是先寻找可验证的交易或业务动作，再围绕身份、权限、库存、人工接管和失败补偿设计 Agent，而不是只做一个通用问答入口。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>一旦旅行 Agent 能稳定处理预订和售后，OTA 的入口、搜索和客服边界都会被重新划分，用户可能从浏览多个页面变成直接提出目标。产业上，这会抬高数据、交易系统和行业规则的整合门槛，也让“接入真实供给”和“对结果负责”成为 Agent 产品的核心护城河。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2090781361980469424" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/oran_ge/status/2090635985331818920" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/seclink/status/2090825919351119952" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2090647059611439360" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2090745260418670977" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2090830056927240576" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2090650118966145231" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2090731095331332509" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2090761680867229910" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2090641529861980618" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQNt-eRbUAAkKg0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQNt-eRbUAAkKg0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQN22PzasAEq8U_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQN22PzasAEq8U_?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQN22zhbUAAqL4L?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQN22zhbUAAqL4L?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQN23f_aAAAGRGl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQN23f_aAAAGRGl?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQN25SlbEAEtF25?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQN25SlbEAEtF25?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQKcK_EbgAA99VN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQKcK_EbgAA99VN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQKcV0cbMAAFzeW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQKcV0cbMAAFzeW?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQKcX5pbkAAsBQH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQKcX5pbkAAsBQH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQQdzmZaUAAlkcr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQQdzmZaUAAlkcr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQQLLSxW0AAXiz9?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQQLLSxW0AAXiz9?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQQLLSwWsAA8A3y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQQLLSwWsAA8A3y?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQQLLSzWkAAA5l1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQQLLSzWkAAA5l1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQQLLSwWwAAiJDm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQQLLSwWwAAiJDm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090527918770589696/img/9t7A103zuSejaKVs.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090527918770589696/img/9t7A103zuSejaKVs.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2090760927624757248/img/G-LACfqiiLWOMeQ1.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2090760927624757248/img/G-LACfqiiLWOMeQ1.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQMVJ0_WgAAoq7L.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HQMVJ0_WgAAoq7L.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Sub2API：围绕订阅额度共享和统一代理入口的使用案例，可能继续推动 AI 服务的个人网关化，但合规、账号安全和服务稳定性需单独核验 <a href="https://x.com/MinLiBuilds/status/2090731095331332509" target="_blank">→</a></li>
+    <li>Agent Mail：把 Agent 的邮箱身份与人机协作作为产品方向的讨论，值得观察它最终是基础设施、工作流还是新的通知入口 <a href="https://x.com/berryxia/status/2090761680867229910" target="_blank">→</a></li>
+    <li>GPT-Image-2 透明背景 API：透明背景从设计软件功能变成模型 API 能力的信号，适合关注电商抠图、素材批处理和品牌内容自动化的落地速度 <a href="https://x.com/Gorden_Sun/status/2090641529861980618" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
