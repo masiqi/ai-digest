@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 22 Aug 2026 00:45:23 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 00:49:53 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/23 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-23.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-23.html</guid>
+      <description>今天最值得跟进的主线，是 coding agent 正在从“会写代码”走向“能查到一手工程证据、能被评测、能看懂真实界面”：Firecrawl Developer Index、Is Agentic、Cursor Team Kit 和视觉模型都在补齐这条链路。Agent Reach 多源证据脚本本次运行超过 540 秒仍未生成 dated evidence 文件，因此以下🛠️条目全部改用 X 原文 + 官方文档、GitHub、官方产品页或一手技术页面交叉核验；没有把证据不足的社交媒体说法写成事实。</description>
+      <pubDate>2026-08-23T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/22 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-22.html</link>
