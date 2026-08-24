@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 23 Aug 2026 00:49:53 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 00:52:15 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/24 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-24.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-24.html</guid>
+      <description>今天的信号集中在“让 Agent 真正持续工作”这条线上：一边是 Munder Difflin、Nowledge Mem 这类把多 CLI、记忆和协作编排落到本地的工具，一边是 ThinkingBox、FigmaTrace、AutoResearchEval 这类把过程、状态和失败纳入评测的数据基础设施。本次 Agent Reach 多源证据包在限时内未生成，以下🛠️条目均以本次 X List 候选为线索，并补做了官网、GitHub、Hugging Face 或官方文档核验；证据不足的项目明确降级到🌱。</description>
+      <pubDate>2026-08-24T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/23 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-23.html</link>
