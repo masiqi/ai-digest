@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 24 Aug 2026 00:52:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 00:49:59 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/25 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-25.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-25.html</guid>
+      <description>今天的 X List 共抓到 95 条推文，最值得上手的信号集中在“Coding Agent 运行时、可组合 Harness、Agent as Code、本地 MoE 推理和可验证工具调用”这条线上。Agent Reach 多源证据包本次在限定时间内超时且没有生成日期文件，所以下文的🛠️项目均改用推文加官网、GitHub、官方文档、官方状态页或可信媒体人工交叉核验；🌱部分明确标注“证据待补”。</description>
+      <pubDate>2026-08-25T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/24 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-24.html</link>

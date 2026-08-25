@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-25</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-25</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的 X List 共抓到 95 条推文，最值得上手的信号集中在“Coding Agent 运行时、可组合 Harness、Agent as Code、本地 MoE 推理和可验证工具调用”这条线上。Agent Reach 多源证据包本次在限定时间内超时且没有生成日期文件，所以下文的🛠️项目均改用推文加官网、GitHub、官方文档、官方状态页或可信媒体人工交叉核验；🌱部分明确标注“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Herdr：让多个 Coding Agent 常驻后台的终端运行时</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Herdr 是一个面向 Claude Code、Codex、Pi、OpenCode 等 Coding Agent 的后台终端运行时和工作区管理器，让 Agent 在真实终端里持续工作，人离开、断网或关闭终端后仍可回连。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/herdrdev/herdr" target="_blank">https://github.com/herdrdev/herdr ↗</a></p>
+    <p><a href="https://herdr.dev/docs/quick-start/" target="_blank">https://herdr.dev/docs/quick-start/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 可以先执行 `brew install herdr`，然后在项目目录运行 `herdr`，它会启动或接入默认后台会话；在工作区里的 pane 中启动 `claude`、`codex`、`pi` 或 `opencode`，Herdr 会自动识别 Agent，并在侧栏显示 working、blocked、done、idle 等状态。用 `Ctrl+B` 进入前缀模式，可用 `prefix+v`、`prefix+-` 分割 pane，用 `prefix+c` 新建标签页，用 `prefix+q` 脱离会话；重新运行 `herdr` 即可回到原来的 Agent。先拿一个需要运行十几分钟的代码重构任务测试断开和重连，再尝试多工作区并行。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是另一个包裹模型的 Agent 产品，而是把“终端、会话、状态和远程回连”做成基础运行时。对同时使用多个 Coding Agent 的人来说，真正的瓶颈常常不是模型能力，而是任务在后台是否持续、是否能快速发现卡住的 pane，以及能否保留完整 shell 和日志。Rust 单二进制、无 Electron、兼容既有 Agent 的路线也更适合长期放在开发机或服务器上。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>同时运行 Claude Code、Codex 和开源 Agent，分别负责实现、测试与代码审查。</li>
+    <li>在远程机器上启动长时间构建、评测或数据处理任务，断开 SSH 后稍后回连。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2091857170224836778" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2087171038421635072/img/K0IhfjRVZ6ATSzOV.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2087171038421635072/img/K0IhfjRVZ6ATSzOV.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2091773517402615808/img/gkk5NsQBiC9-HaTM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2091773517402615808/img/gkk5NsQBiC9-HaTM?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ElevenLabs CLI：把语音 Agent 当成代码管理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ElevenLabs CLI 是 ElevenLabs voice agents 的命令行和配置管理工具，可把 Agent 配置、工具、测试和分支放进版本库，并通过 push 与 CI/CD 同步到平台。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://elevenlabs.io/docs/eleven-agents/operate/cli" target="_blank">https://elevenlabs.io/docs/eleven-agents/operate/cli ↗</a></p>
+    <p><a href="https://github.com/elevenlabs/cli" target="_blank">https://github.com/elevenlabs/cli ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 16 或更高版本后执行 `npm install -g @elevenlabs/cli`，在一个空目录运行 `elevenlabs agents init` 初始化 `agents.json`、`tools.json`、`tests.json` 和配置目录；接着执行 `elevenlabs auth login` 完成认证，再用 `elevenlabs agents add "My Assistant" --template assistant` 创建模板 Agent。编辑 `agent_configs` 中的提示词、模型、语音和工具后，先运行 `elevenlabs agents push --dry-run` 预览差异，再运行 `elevenlabs agents push` 发布；还可以用 `agents pull`、`agents status` 和 `agents widget` 做同步、检查和网页嵌入。把配置提交到 Git，再把 API Key 放在 CI 密钥中，不要写入仓库。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>语音 Agent 正从“网页控制台里的配置”变成可审查、可回滚、可自动部署的软件资产。CLI 提供模板、hash 变更检测、工具管理、分支同步和 widget 生成，意味着团队可以像维护后端服务一样维护语音交互逻辑。它还提供 `generate-skills` 为 Coding Agent 生成命令说明，降低了让其他 Agent 参与维护的上下文成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为客服、销售或预约电话 Agent 建立 staging/production 两套可审查配置。</li>
+    <li>将语音 Agent 的提示词、工具和评测流程接入 GitHub Actions，发布前自动 dry-run。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2091940966764552639" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2091890683523002368/img/CLzs_hrW9tNbgtuD.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2091890683523002368/img/CLzs_hrW9tNbgtuD.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek Harness：Everything is a Plugin 的可组合 Agent 基座</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek Harness（dsh）是 DeepSeek AI 开源的 Agent Harness，基于 Cordis 插件系统，把模型、工具、Skills、Session、Sandbox、存储、循环、调度和 UI 等能力拆成可替换组件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">https://github.com/deepseek-ai/deepseek-harness ↗</a></p>
+    <p><a href="https://deepseek.com/harness/en/" target="_blank">https://deepseek.com/harness/en/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 Node.js，在终端执行 `npx @deepseek-ai/dsh web` 直接启动 Web UI；如果想研究实现或二次开发，则运行 `git clone https://github.com/deepseek-ai/deepseek-harness.git`，进入目录后按仓库说明执行 `pnpm install`、`pnpm run build` 和 `pnpm dsh web`。启动后先用 Standard mode 做普通工具调用，再对比 Minimal mode 的 shell 加文件编辑器、Code mode 的模型生成代码编排，以及 Creator mode 的插件组合。接着选一个模型、工具或 Session 插件替换，记录同一任务在不同组合下的行为差异；项目仍是 developer preview，实验时要固定版本并保留日志。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 的扩展边界从“在固定循环旁边挂钩子”推进到“运行时本身由能力组件组成”。如果模型、工具、上下文压缩、持久化和调度都能独立替换，开发者就能针对不同任务构建不同 Harness，而不是被某个预设 Agent 的产品形态锁定。更重要的是，这种架构将可复现性、插件 ABI 和会话日志放到核心设计里，适合做 Agent 框架研究和实验性基础设施。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>组装一个只允许有限 shell 与文件编辑的最小评测环境，测模型的基础工具能力。</li>
+    <li>为不同团队接入不同模型、MCP 工具、Skills 和持久化方式，形成可配置 Agent 平台。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2091996016631300366" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ FreeToken：让消费级硬件尝试运行大规模 MoE</div>
+  <div class="section"><div class="section-label event">一句话</div><p>FreeToken 是面向边缘设备的 MoE 推理引擎，把 GPU、CPU、主机内存和互连视为统一资源，目标是在个人电脑或工作站上服务大型开源 MoE 模型，并提供 OpenAI 与 Anthropic 兼容接口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/FlashML-org/FreeToken" target="_blank">https://github.com/FlashML-org/FreeToken ↗</a></p>
+    <p><a href="https://github.com/FlashML-org/FreeToken/blob/main/docs/quickstart.md" target="_blank">https://github.com/FlashML-org/FreeToken/blob/main/docs/quickstart.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>它主要面向 Linux/Windows 和 NVIDIA GPU，先克隆仓库并创建环境：`git clone https://github.com/FlashML-org/FreeToken.git &amp;&amp; cd FreeToken`，随后按 README 用 `uv venv` 和 `uv pip install -e ".[accel]"` 安装。准备一个受支持的 Hugging Face 模型后，按 quickstart 启动服务，看到 `API server is ready to serve on 127.0.0.1:1919` 再访问 `/v1/models` 确认模型 ID；然后用 OpenAI 客户端或 curl 调用 `/v1/chat/completions`，也可以用 `ft shell` 进入终端聊天。第一轮建议从较小 MoE 和短上下文开始，逐步观察显存、主机内存、PCIe 传输和 token 延迟，不要直接把 290B 级模型当作普通笔记本任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>FreeToken 的关键不是简单把权重塞进 CPU，而是根据带宽动态决定 CPU 执行与 GPU 缓存填充，并用专家缓存和语义边界检查点减少 Agent 多轮编辑后的重复计算。官方仓库还明确提供 OpenAI/Anthropic 兼容 API，这让本地引擎可以接到 Codex、Claude Code、OpenCode 或其他工具调用客户端。它代表一条“软件重新编排已有硬件”路线，可能比单纯等待更大显存更现实。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在游戏 PC 或工作站上运行本地 MoE 模型，给 Coding Agent 提供可控的推理后端。</li>
+    <li>研究 Agent 上下文编辑、专家缓存和 CPU/GPU 协同对本地推理延迟的影响。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2091896634326286583" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQfozOgagAAf8sR?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQfozOgagAAf8sR?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Apodex AgentHarness：可复现 Deep Research 的开源评测框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Apodex AgentHarness 是 Apodex 团队开源的评测 Harness，用标准 ReAct 设置复现 Apodex 模型在 BrowseComp、DeepSearchQA、HLE 等公开 Deep Research 基准上的结果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ApodexAI/AgentHarness" target="_blank">https://github.com/ApodexAI/AgentHarness ↗</a></p>
+    <p><a href="https://www.apodex.com/" target="_blank">https://www.apodex.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub 克隆仓库，按 `pyproject.toml` 使用 uv 建立 Python 环境并安装依赖；随后准备一个 OpenAI 兼容的模型服务，在 `.env` 中配置 `OPENAI_BASE_URL`、`OPENAI_API_KEY`、`OPENAI_MODEL`，需要联网检索、网页读取和代码沙箱时再分别配置 Serper、Jina 与 E2B。下载仓库要求的公开基准数据，先运行一个 smoke test，确认单题可以产生轨迹，再选择 BrowseComp、BrowseComp-ZH、DeepSearchQA 或 WideSearch 执行批量评测。官方仓库把每道题放进独立子进程，便于追踪失败；若只想体验产品，可先访问 Apodex 官网或 Hugging Face 页面，区分在线服务与本地复现实验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Apodex 的公开材料把重点放在“验证每一步、对外部证据做主动检索和让结果可审计”，而 AgentHarness 则把这种主张落成了可运行的基准流程。对 Deep Research 来说，最终答案看起来合理并不等于搜索路径、证据和结论可靠；把模型服务、工具、数据集和评测配置拆开，才能比较不同模型或不同 Harness 的真实差异。需要注意的是，仓库公开说明主要对应 Apodex-1.0 的可复现实验，1.1 的具体模型与接口版本应以官方最新页面为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对比不同模型在网页检索、证据核验和长链路研究任务上的 pass rate。</li>
+    <li>为自己的 Research Agent 增加可重复的 benchmark、失败轨迹和回归测试。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2091929476724851130" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2091914519971086336/img/tpO8Ti_mHQaxqOu3.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2091914519971086336/img/tpO8Ti_mHQaxqOu3.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ThinkingBox-Bench：用最终状态而不是漂亮回答评估 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ThinkingBox 是微软开源的 MCP 工具环境、模拟用户和 Agent 评测框架，ThinkingBox-Bench 则提供 507 个跨零售、旅行、保险、银行支持和 IT/HR 的有状态业务任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/microsoft/thinkingbox" target="_blank">https://github.com/microsoft/thinkingbox ↗</a></p>
+    <p><a href="https://github.com/microsoft/thinkingbox-data" target="_blank">https://github.com/microsoft/thinkingbox-data ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>项目目前主要测试 Linux，macOS 用户可以在 Linux 虚拟机或 WSL 环境中尝试。先克隆 `microsoft/thinkingbox`，按官方推荐用 Python 3.12 和 uv 安装，再用仓库自带的 `cloud_drive` 场景验证安装：一个终端运行 `uv run tb mcp-start`，另一个终端用 `uv run tb infer` 执行测试，最后用 `uv run tb pp output.yaml` 查看对话和断言。要跑真实 benchmark，再单独克隆 `thinkingbox-data`，按 release README 准备任务、工具服务器和配置，记录 pass@1、pass@20 与全 20 次成功率。先从一个场景开始，确认工具副作用和终态断言都能复现，再扩大批量。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Agent 评测只看最终文本或单次工具调用，容易把“说已经完成但数据库根本没改”的失败当成成功。ThinkingBox 为每次运行提供固定初始状态、受控 MCP 工具、可响应的模拟用户和干净环境，并对最终后端状态及副作用执行断言。507 个任务覆盖真实业务常见的多轮澄清、政策约束和不可逆操作，能把 Agent 的偶然成功与稳定可靠区分开。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>评测客服、IT 支持或企业流程 Agent 是否真的修改了正确记录并完成副作用。</li>
+    <li>为工具调用 Agent 生成离线训练数据、强化学习轨迹和可回归的可靠性指标。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HuggingPapers/status/2091929883337535919" target="_blank"><span class="handle">@HuggingPapers</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQgHJJGbgAA6NW8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQgHJJGbgAA6NW8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Addy Osmani Agent Skills：把工程规范装进 Coding Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Addy Osmani 的 agent-skills 仓库把前端、API 设计、测试驱动开发等工程方法写成可被 Coding Agent 读取和触发的 SKILL.md 操作规程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/addyosmani/agent-skills" target="_blank">https://github.com/addyosmani/agent-skills ↗</a></p>
+    <p><a href="https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md" target="_blank">https://github.com/addyosmani/agent-skills/blob/main/skills/frontend-ui-engineering/SKILL.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最直接的方式是进入自己的代码项目，运行 `npx skills add https://github.com/addyosmani/agent-skills --skill frontend-ui-engineering`，然后查看生成的 skill 文件和项目约定是否被正确安装；也可以直接克隆仓库，先阅读 `skills/frontend-ui-engineering/SKILL.md`，再把其中适合团队的规则复制到自己的 Agent Skills 目录。用一个真实页面改造任务做对照实验：第一遍不加载 Skill，第二遍加载后要求 Agent 同时完成组件结构、响应式、WCAG 2.1 AA 和视觉验收，比较计划、代码和测试结果。不要把所有 Skill 一次性塞进全局上下文，按任务选择并锁定版本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这类 Skill 不是一段泛泛的提示词，而是把触发条件、工作步骤、质量门槛和反例组织成可复用的行为规范。它解决了“模型会写代码但总是产出相同 AI 味界面”以及“团队经验无法稳定传给 Agent”的问题。对工程团队而言，Skill 文件还可以像代码一样评审、版本化和逐步迭代，把隐性的设计与测试标准变成可审计资产。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为前端 Agent 统一接入可访问性、响应式布局和组件架构要求。</li>
+    <li>将团队的 API 设计、测试、发布和代码审查流程沉淀成可复用技能。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2091879859769545215" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQfZoRqa4AA4m1Q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQfZoRqa4AA4m1Q?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LDA-1B：用异质具身数据训练机器人基础模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LDA-1B 是一个机器人基础模型和开源研究项目，在 3 万小时以上的人类与机器人交互数据上联合学习动力学、视觉预测和动作策略，并提供代码与预训练权重入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/jiangranlv/latent-dynamics-action" target="_blank">https://github.com/jiangranlv/latent-dynamics-action ↗</a></p>
+    <p><a href="https://pku-epic.github.io/LDA/" target="_blank">https://pku-epic.github.io/LDA/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆 `https://github.com/jiangranlv/latent-dynamics-action`，按仓库的 Python/环境说明安装依赖，再从 Hugging Face 下载 LDA-pretrain 或 RoboCasa 模型。项目依赖 Qwen3-VL 和 DINOv3，第一次建议不要直接接真实机器人，而是使用仓库 `playground/demo_data` 做数据加载和 open-loop 评估；确认样本、视觉特征和 action chunk 能跑通后，再阅读 `examples` 与 RoboCasa 配置，替换数据目录和训练参数。若只有 Mac 或没有 CUDA，优先阅读项目页面、运行数据预处理或静态检查，完整训练和闭环控制应放到有合适 GPU 与机器人仿真环境的 Linux 机器上。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>LDA-1B 的研究路线不是只扩大高质量遥操作数据，而是让不同质量的数据承担不同角色：高质量轨迹用于策略，低质量轨迹帮助动力学学习，无动作视频用于视觉预测，并在结构化 DINO 潜空间中预测未来状态。这样可以减少像素级外观变化对训练的干扰，也为把公开视频、模拟数据和真实机器人数据统一起来提供了更清晰的工程接口。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在仿真环境中测试跨物体、跨视角和长时程操作的动作预测。</li>
+    <li>研究低质量或无动作视频如何帮助机器人学习可迁移的世界模型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/RoboPapers/status/2091877173292356012" target="_blank"><span class="handle">@RoboPapers</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2091873512751341568/img/qnKY74SwyRuQmomS.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2091873512751341568/img/qnKY74SwyRuQmomS.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude 多模型故障：云端 Agent 的共享依赖再次暴露</div>
+  <div class="section"><div class="section-label event">事件</div><p>8 月 24 日 Anthropic 状态页记录了多个 Claude 模型请求错误及登录问题，影响范围涉及 Claude.ai、Claude API、Claude Code 与 Claude Cowork；官方随后标记相关事件恢复或进入监控。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次事件的重要性不只在于某个模型短暂不可用，而在于多个模型和产品面同时出现错误。官方状态页记录了 Mythos 5、Fable 5、Opus 5、Opus 4.8 等模型的 elevated errors，也记录了 Claude.ai 和 Claude Code 登录链路的问题。用户在 X 上描述的 529、长程任务 API error 和数小时恢复，与“模型能力很强”形成了明显反差：当聊天、编程 Agent、API 和协作产品共享路由、认证或容量层时，单一基础设施故障会同时放大到不同工作流。具体根因若官方没有公开，就不能把它简单归因于过载、缓存或某个模型发布。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对个人用户，关键任务不应只依赖一个云端模型，至少要准备可切换的模型、可重放的任务日志和指数退避；对企业，SLA 不能只看 API 200/非 200，还应监控模型路由、工具调用、认证和长任务恢复率。Coding Agent 尤其需要 checkpoint、幂等工具和中断后续跑机制，否则一次供应商故障可能留下半完成的代码和不可追踪的副作用。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2091813020884472071" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQecTyPbEAAFmlX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQecTyPbEAAFmlX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQdpBx0bEAA_Jvo?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQdpBx0bEAA_Jvo?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 字节整合 TRAE 与扣子：办公 AI 从多产品试探转向统一入口</div>
+  <div class="section"><div class="section-label event">事件</div><p>字节跳动据报道将 TRAE、扣子（Coze）团队并入豆包体系，TRAE Work 与扣子能力向工作场景整合，TRAE IDE/CLI 则继续作为豆包品牌下的编程产品线发展。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是简单的团队调动，而是产品入口和资源分配的重新排序。TRAE 原本偏 AI 编程，扣子偏 Agent 构建与工作流，二者进入豆包体系后，字节更可能把模型、办公助手、连接器、远程控制和编程能力放进同一个分发入口。外部报道还提到“豆包工作”品牌可能独立推出，但现阶段应把它视为媒体报道和公司整合方向，不要把尚未正式发布的功能当成既成事实。对于开发者，最值得观察的是 TRAE IDE/CLI 的品牌变化是否伴随模型、插件、账号和计费体系迁移。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>国内办公 AI 的竞争会从单点写作、单点 IDE 或单点 Bot，转向“统一模型入口 + 连接器 + Agent 工作流 + 企业权限”的组合。统一入口有利于降低用户切换成本，但也可能带来供应商锁定和产品边界模糊。团队在选型时应把项目导出、API 兼容、数据权限和模型替换能力列为硬指标，不能只看一次演示中的自动化效果。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2091806178728636491" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQeWOZraMAAddXV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQeWOZraMAAddXV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Hugging Face 被曝探索出售：开源模型基础设施的估值考验</div>
+  <div class="section"><div class="section-label event">事件</div><p>Reuters 转述 Business Insider 称，Hugging Face 正探索出售，潜在估值可能达到 130 亿美元或更高；报道强调仍处于早期接触阶段，没有最终协议。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Hugging Face 的特殊性在于它既是模型与数据集托管平台，也是开源社区、推理生态和企业服务的入口。若估值从 2023 年融资时的 45 亿美元附近上升到 130 亿美元级别，市场定价的就不只是一个代码仓库网站，而是模型分发、数据协作、权重访问、企业部署和开发者网络的基础设施价值。与此同时，出售传闻不能等同于交易已确定，也不能据此推断平台会改变开放政策。更值得跟踪的是潜在买家是否希望把模型仓库、推理服务和云平台绑定，以及社区如何看待治理独立性。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对开源项目维护者，短期仍应按现有许可证、模型卡和服务条款使用，不要因为估值传闻提前迁移或恐慌囤权重；对企业，重要模型和数据应保留镜像、版本锁定与可替代下载路径。若最终发生并购，模型托管平台可能进一步商业化，带来更强的企业 SLA，也可能带来访问策略、隐私和生态中立性的重新评估。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2091778939551412539" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 小米 AI Cube：自研芯片押注桌面本地大模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>小米展示由玄戒 O3、O100、D100 三颗芯片组成的 AI Cube Prototype，公开报道显示原型机可在本地部署 120B 与 3B 模型，并支持快慢系统切换。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这台设备更像工程原型而非已经可以买到的消费产品，但它释放了清晰的硬件路线：用手机 SoC、专用 AI 加速芯片和智驾芯片组合统一内存与带宽，把大模型推理从云端和独立 GPU 服务器拉回桌面终端。公开报道提到 O3 具备 NPU，O100 强调高带宽 AI 计算，D100 则面向高性能智驾和大容量统一内存；不同媒体对参数和功耗口径略有差异，因此目前应关注架构方向，不宜把宣传规格当成第三方实测。真正决定产品价值的仍是软件栈、模型量化、散热、价格和生态兼容。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类本地 AI 主机最终能以合理价格交付，它会给企业内网、隐私敏感场景和开发者工作站提供云端之外的选择，也会加剧国产芯片与 NVIDIA 统一内存小型工作站之间的竞争。对开发者而言，最值得观察的不是“能不能跑 120B”一句话，而是是否提供稳定的 OpenAI 兼容接口、模型转换工具、调试能力和长期驱动支持；在正式产品与实测出现前，适合列入跟踪而非立即采购。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2091780906965242131" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/LinearUncle/status/2091771520339325356" target="_blank"><span class="handle">@LinearUncle</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2091925806612459642" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2091922269161300113" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/oran_ge/status/2091826731565101524" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2091773301710262576" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2091775430386745744" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2091750583988555953" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2091801702978707785" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2091900649533538578" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQd_pF_b0AAwaKc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQd_pF_b0AAwaKc?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQf-GoXbsAEk7aH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQf-GoXbsAEk7aH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2091839757433335808/img/6jSJwQnvsbdKtnYe.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2091839757433335808/img/6jSJwQnvsbdKtnYe.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQepUR2aoAAraq8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQepUR2aoAAraq8?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQd4J2CW4AAxyQX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQd4J2CW4AAxyQX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2091775151746461696/img/B2q5-tntYlV9yqQP.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2091775151746461696/img/B2q5-tntYlV9yqQP.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQdkDN4bcAENOwG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQdkDN4bcAENOwG?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQfsiyQa0AAC_mm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQfsiyQa0AAC_mm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQfsiviagAAdyrK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQfsiviagAAdyrK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQfsiyObUAAwDOG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQfsiyObUAAwDOG?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>OpenClaw → Codex 内容创作工作流：一台 Mac 上运行多个不同人设的 Agent，再通过 WhatsApp/Telegram 远程下指令并汇总会议和 YouTube 数据，适合观察“多 Agent 个人工作室”的实际编排方式 <a href="https://x.com/shao__meng/status/2091750583988555953" target="_blank">→</a></li>
+    <li>企业 AI 转型的七项决策：Bain 指南把“试点很多但竞争优势很少”的问题拉回治理、流程和组织决策，值得与工具采购清单对照阅读 <a href="https://x.com/xiaohu/status/2091801702978707785" target="_blank">→</a></li>
+    <li>AI 短剧自动化流水线：推文提到短剧生产平台被程序化薅用并意外暴露提示词、参考图和生成结果，值得跟踪其对内容工厂、权限隔离和成本控制的启示 <a href="https://x.com/Gorden_Sun/status/2091900649533538578" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
