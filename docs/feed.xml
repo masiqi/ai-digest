@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 28 Aug 2026 00:50:05 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 00:42:20 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/29 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-29.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-29.html</guid>
+      <description>今天最值得注意的不是又多了几个聊天模型，而是“模型 + Harness + Skills + 原生工具接口”正在变成可复用的生产力栈：腾讯 Hy4 preview、GLM-5.3 系列继续把开源模型推向真实工作任务，Pi、Grok Bot、Taste Skill 与 WebMCP 则分别从运行时、协作方式、界面质量和网页工具接口补齐 Agent 的落地环节。本次 Agent Reach 多源 enrichment 在限定时间内未产出本日 evidence JSON/summary，因此下文的可上手项目均以本次 X 推文加官网、GitHub、官方文档或可信技术页面交叉核验；证据不足的候选明确降级...</description>
+      <pubDate>2026-08-29T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/28 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-28.html</link>

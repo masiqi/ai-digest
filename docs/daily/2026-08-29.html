@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-29</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-29</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得注意的不是又多了几个聊天模型，而是“模型 + Harness + Skills + 原生工具接口”正在变成可复用的生产力栈：腾讯 Hy4 preview、GLM-5.3 系列继续把开源模型推向真实工作任务，Pi、Grok Bot、Taste Skill 与 WebMCP 则分别从运行时、协作方式、界面质量和网页工具接口补齐 Agent 的落地环节。本次 Agent Reach 多源 enrichment 在限定时间内未产出本日 evidence JSON/summary，因此下文的可上手项目均以本次 X 推文加官网、GitHub、官方文档或可信技术页面交叉核验；证据不足的候选明确降级到“刚露头”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ GLM-5.3 / GLM-5.3-Flash：开源权重与 Agent 编程模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>智谱 GLM-5 系列面向复杂编程、长程任务和 Agent 场景；官方仓库同时列出 GLM-5.3、GLM-5.3-Flash 及对应 API、Hugging Face 和 ModelScope 入口，Flash 版本以更少的激活参数换取更低的服务门槛。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/zai-org/GLM-5" target="_blank">https://github.com/zai-org/GLM-5 ↗</a></p>
+    <p><a href="https://huggingface.co/zai-org/GLM-5.3-Flash" target="_blank">https://huggingface.co/zai-org/GLM-5.3-Flash ↗</a></p>
+    <p><a href="https://docs.z.ai/guides/llm/glm-5.3.md" target="_blank">https://docs.z.ai/guides/llm/glm-5.3.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>想快速体验，不要先被完整 GLM-5.3 的超大权重吓住：先注册 Z.ai，按官方文档配置 API，然后用 OpenAI 兼容接口把模型接进 OpenCode、Claude Code 或自己的脚本；若要做本地实验，再从 Hugging Face 的 GLM-5.3-Flash 页面确认权重、精度和运行时要求，先用小请求验证 tokenizer、上下文长度和工具调用，再逐步增加并发。推文里的“756G”是社区表述，实际下载前以官方模型卡和仓库当前列表为准，避免把 Flash 与完整模型混装。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方仓库明确把 GLM-5.3 的提升归因于后训练，并把复杂编码、长程任务和 Agent 工程作为重点；Flash 版本则采用稀疏激活与更适合长上下文服务的架构。它的价值不只是榜单分数，而是同一系列同时覆盖 API、编程 Agent 和开源权重，方便把“在线试用—代码助手—本地部署”串成一条验证链。需要注意的是，完整模型规模仍然很大，普通个人电脑不应把“开源”误读为“轻量”。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>接入 OpenAI 兼容接口，测试浏览器控制、代码修改和多步工具调用任务。</li>
+    <li>用 GLM-5.3-Flash 做长上下文代码审查、知识库问答或低成本 Agent 原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2093357450233893122" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ0WAnyXIAENtQA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ0WAnyXIAENtQA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Hy4 preview：腾讯混元面向真实生产力的开源 MoE 模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Hy4 preview 是腾讯混元发布的新一代开源 MoE 模型，总参数 770B、每 token 激活 49B，上下文超过 1M，官方定位覆盖编程、办公和科研，并已接入 WorkBuddy、CodeBuddy 等产品。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tencent-Hunyuan/Hy4-preview" target="_blank">https://github.com/Tencent-Hunyuan/Hy4-preview ↗</a></p>
+    <p><a href="https://www.tencent.com/zh-cn/tencent-releases-and-open-sources-tencent-hy4-preview/" target="_blank">https://www.tencent.com/zh-cn/tencent-releases-and-open-sources-tencent-hy4-preview/ ↗</a></p>
+    <p><a href="https://www.workbuddy.ai/" target="_blank">https://www.workbuddy.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最省事的路径是打开 WorkBuddy 或 CodeBuddy，直接在模型选择或新任务入口体验 Hy4 preview；官方公告说明它上线后提供限时免费试用，适合先做文档整理、代码解释、表格分析和长材料总结。想本地研究的开发者应先读 GitHub README，再根据显存、量化格式和推理框架选择 Hugging Face 权重，不要在普通消费级电脑上直接下载完整模型。若需要接入程序，可查看官方公告提到的腾讯云 TokenHub 或 OpenRouter，再用一个小型 JSON 输出任务检查上下文和工具调用是否符合预期。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Hy4 preview 的看点在于把超大 MoE、百万级上下文和真实生产力协同放在同一发布里。官方仓库还给出了 Apache 2.0 许可、Hugging Face/ModelScope 权重和 vLLM、SGLang 相关运行路径，说明它不是只有演示页面的封闭模型。与此同时，它仍是 preview，长任务过度思考、服务成本和硬件要求都需要实际压测；先在线体验再决定是否本地部署，比盲目追求参数规模更稳妥。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用 WorkBuddy 快速测试长文档、办公协作和代码任务。</li>
+    <li>在具备合适 GPU 集群的团队中评估开源权重、量化和自托管推理。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2093236669818495237" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQyrpWyaIAAOGOb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQyrpWyaIAAOGOb?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQyfABta8AAq3x7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQyfABta8AAq3x7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ FreeToken：让个人硬件运行大规模 MoE 的本地推理引擎</div>
+  <div class="section"><div class="section-label event">一句话</div><p>FreeToken 是面向消费级和工作站硬件的边缘原生 MoE serving engine，把 GPU、CPU、主机内存和 PCIe 统一调度，尝试在本地运行此前更像数据中心专属的开放权重模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/FlashML-org/FreeToken" target="_blank">https://github.com/FlashML-org/FreeToken ↗</a></p>
+    <p><a href="https://pypi.org/project/freetoken/" target="_blank">https://pypi.org/project/freetoken/ ↗</a></p>
+    <p><a href="https://arxiv.org/html/2608.16157v1" target="_blank">https://arxiv.org/html/2608.16157v1 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 GitHub README 和 PyPI 页面确认当前版本、支持的 CUDA/驱动及模型清单，再在有 NVIDIA GPU 的 Linux 机器上安装 freetoken，优先从较小的 MoE 模型和官方示例开始。启动服务后，用它提供的 OpenAI 或 Anthropic 兼容接口接入一个简单聊天客户端，观察首 token 延迟、生成速度、显存和主机内存占用；确认链路稳定后，再尝试开启 offload 或 hybrid 路径。不要直接拿 700B 级权重做第一次测试，先用可控模型验证 CPU/GPU 分工、缓存和量化格式是否匹配自己的硬件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它解决的是“模型权重放得下但 GPU 放不下”的实际问题。论文和项目说明了带宽自适应的 CPU-GPU 协同、专家缓存、预填充流水线，以及面向 Agent 多轮上下文的状态复用；缺失专家不一定只能通过 PCIe 搬运，也可以在 CPU 侧计算。这个思路把本地推理从静态分层加载推进到按机器带宽动态调度，尤其适合愿意折腾工作站、游戏主机或多设备内存组合的开发者，但性能高度依赖硬件和驱动，必须自己实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在单张工作站卡或游戏 PC 上试运行超出显存容量的 MoE 模型。</li>
+    <li>为本地 coding agent 提供 OpenAI/Anthropic 兼容的私有推理后端。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/virushuo/status/2093190153699246459" target="_blank"><span class="handle">@virushuo</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Pi Coding Agent：可改造的极简 Agent Harness</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Pi 是一个强调可改造性的最小 Agent Harness，提供交互、print/JSON、RPC 和 SDK 模式，可通过扩展、Skills、提示模板和主题适配自己的编码工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://pi.dev/" target="_blank">https://pi.dev/ ↗</a></p>
+    <p><a href="https://github.com/earendil-works/pi" target="_blank">https://github.com/earendil-works/pi ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS 或 Linux 终端执行官方安装脚本，或者按官网选择 npm/pnpm/bun 安装方式；首次启动后先完成一个只读任务，例如让 Pi 总结当前仓库，再授予它明确的工作目录和测试命令。接着用 `/model` 在不同供应商之间切换，试着创建一个小型 extension，把项目检查、提交信息生成或固定的测试流程变成命令。Pi 的重点不是开箱即用地替你规划所有事情，而是让你通过 Skills、AGENTS.md、扩展和包把它塑造成自己的工作台，适合边用边改。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方定位刻意避开“功能越多越好”：不内置强制的 sub-agent、plan mode、待办系统和后台 bash，而把这些能力留给扩展和用户工作流。这样做减少了隐式编排，保留了多供应商切换、树状可分享会话和统一工具循环，便于开发者观察每一步并按需要加控制。对想研究 Agent Harness 的人，它是一个足够小、足够透明的实验底座；对普通用户，初期需要接受“很多能力要自己配置”的学习成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为个人代码仓库搭建可复用的测试、审查和提交工作流。</li>
+    <li>作为多模型 Agent SDK，开发带自定义工具和 TUI 的内部助手。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2093179374942249108" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQx3d3PasAAQaNq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQx3d3PasAAQaNq?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ vgpu：为 Agent 准备的跨运行时 WebGPU 库</div>
+  <div class="section"><div class="section-label event">一句话</div><p>vgpu 是 Vercel Labs 开源的 TypeScript WebGPU 库，主打浏览器、无头 Node.js 和确定性 mock 之间的同一套代码，并提供 shader、3D、GPU tensor、神经网络和数学可视化相关能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/vercel-labs/vgpu" target="_blank">https://github.com/vercel-labs/vgpu ↗</a></p>
+    <p><a href="https://vgpu.sh/" target="_blank">https://vgpu.sh/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在一个独立的 TypeScript 项目中执行 `pnpm add vgpu`，再安装 `@webgpu/types`，从官网 Getting started 示例开始。先在浏览器运行一个最小 draw 或 compute 示例，确认浏览器 WebGPU 可用；随后用项目提供的 Node/Dawn 适配器尝试无头运行，再切换到 mock 适配器为 shader 或数据处理逻辑写确定性测试。开发过程中可以使用 `vgpu` CLI 的文档、shader check 和 doctor 命令，最后把同一份 WGSL 模块接到真实 GPU、CI mock 和 Agent 生成的实验脚本中。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 生成 GPU 代码时，真正难的是运行环境不一致和测试不可重复。vgpu 把 typed shader imports、WGSL 模块化、浏览器/Node/mock 三种目标和一组面向性能的默认实践放进同一套 API，降低了“能在我电脑上跑”到“能在 CI 验证”的落差。它目前仍是早期项目，API 和生态都可能变化，但对需要让 Agent 生成并反复验证 WebGPU 代码的团队，比直接拼装底层 API 更值得做一次小实验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用 Agent 生成并测试浏览器端 WebGPU shader、粒子效果和数据可视化。</li>
+    <li>在无头 Node 或 CI 中验证 GPU 计算逻辑，减少只能手工开浏览器复现的问题。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2093151962565095751" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQxel8tbMAA4KVp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQxel8tbMAA4KVp?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2092999146655645696/img/FgRJeSsf_c3kJSlF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2092999146655645696/img/FgRJeSsf_c3kJSlF?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Taste Skill：给 Claude Code/Codex 的 Anti-Slop 前端技能包</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Taste Skill 是可安装的 Agent Skill，通过设计语言推断、排版、间距、动效和预检规则，帮助 AI 生成不那么模板化的前端界面，也包含图像生成参考板相关技能。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Leonxlnx/taste-skill" target="_blank">https://github.com/Leonxlnx/taste-skill ↗</a></p>
+    <p><a href="https://tasteskill.dev/" target="_blank">https://tasteskill.dev/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在项目目录执行 `npx skills add https://github.com/Leonxlnx/taste-skill`，让 Skills CLI 安装仓库中的技能；如果只想装默认前端技能，可按 README 指定 `--skill design-taste-frontend`。然后把一个真实页面 brief 交给 Claude Code、Codex 或 Cursor，要求先读技能、写设计系统地图，再生成页面并运行预检。第一轮不要只看截图，重点检查响应式、键盘可用性、字体层级、动效降级和是否误用默认组件；若 v2 实验版不符合项目约束，再固定到仓库提供的 v1 变体。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“审美”从一句模糊的提示词变成可重复加载的工程约束：先理解 brief，再选择设计方向，最后用 audit 和 pre-flight 检查结果。官方 README 还把代码输出和图像生成拆成不同技能，并提供面向 Codex/GPT 的变体，适合团队把页面质量标准写进 Agent 工作流。需要注意的是，它偏重 landing page、portfolio 和 redesign，并非所有后台表格或多步骤产品 UI 都适合直接套用；应该把它当作可审计的设计起点，而不是万能 CSS 模板。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 AI 生成的营销页、作品集和产品官网加入统一的视觉约束。</li>
+    <li>在 redesign 任务中先做界面审计，再让 Agent 按规则重构组件。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2093148263621017886" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQxbPXsawAAn1Sr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQxbPXsawAAn1Sr?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Ophel Atlas：把长 AI 对话变成可导航的本地知识库</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Ophel Atlas 是浏览器扩展，为 ChatGPT、Gemini、Claude 等 15 个 AI 平台增加实时大纲、会话文件夹、标签、搜索、提示词库和导出功能，默认把数据保存在本地浏览器。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://ophel.app/" target="_blank">https://ophel.app/ ↗</a></p>
+    <p><a href="https://docs.ophel.app/" target="_blank">https://docs.ophel.app/ ↗</a></p>
+    <p><a href="https://chromewebstore.google.com/detail/ophel-atlas-ai-chat-navig/lpcohdfbomkgepfladogodgeoppclakd" target="_blank">https://chromewebstore.google.com/detail/ophel-atlas-ai-chat-navig/lpcohdfbomkgepfladogodgeoppclakd ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网或 Chrome Web Store 安装扩展，打开任意受支持的 AI 站点并刷新页面；先找一条包含多个 Markdown 标题的长对话，观察侧边栏是否自动生成可点击的大纲，再用书签和文件夹保存关键节点。随后在 Prompts 中建立带变量的常用模板，用全局搜索按 folder、tag 或 type 过滤历史，并尝试把一条研究对话导出为 Markdown 或 JSON。若你同时使用多台设备，可在理解本地数据和同步边界后再配置 WebDAV；不想联网同步时，保持默认本地存储即可。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>重度使用 AI 的瓶颈经常不是生成能力，而是几周后找不到曾经得到的好答案。Ophel 把用户问题和模型回复标题转换为可跳转结构，再叠加文件夹、标签、导出和提示词复用，直接改善研究、写作和代码讨论的回收效率。官方站点与扩展商店都强调本地优先和无需账号，这对包含内部资料的对话更友好；但它依赖各 AI 网站的页面结构，站点改版后仍可能出现适配延迟，重要内容要保留独立备份。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>管理长期研究、课程学习和项目讨论中的 AI 对话。</li>
+    <li>把反复使用的提示词、分析过程和最终答案整理成可迁移资料。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2093261948154479063" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cohere Parse 5：面向批量企业文档的视觉解析模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cohere Parse 5 是专用文档解析 VLM，把 PDF、图片、演示文稿等非结构化材料转换成机器可读的 Markdown 或结构化 blocks，并针对表格、图片和多语言企业文档做高吞吐处理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cohere.com/blog/parse" target="_blank">https://cohere.com/blog/parse ↗</a></p>
+    <p><a href="https://docs.cohere.com/v2/docs/parse-quickstart" target="_blank">https://docs.cohere.com/v2/docs/parse-quickstart ↗</a></p>
+    <p><a href="https://docs.cohere.com/v2/reference/parse" target="_blank">https://docs.cohere.com/v2/reference/parse ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Cohere 控制台创建 API key，再按官方 quickstart 安装 SDK，选用 `parse-v5.0`，把一页 PDF 或文档图片作为 base64 data URI 或官方支持的文档输入提交到 Parse endpoint。第一次测试建议同时请求默认 Markdown 和 `output_format="blocks"`，对比正文、表格、图片说明和边界框是否满足自己的下游 schema；然后把输出写入 Markdown、搜索索引或 RAG 管道。批量任务先抽样十几页检查扫描件、复杂表格和语言混排，再评估 API 成本、Model Vault 或云市场部署方式，不要直接把未经清洗的输出送进生产数据库。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>企业文档的难点不只是 OCR，而是版面、表格、图片和语义结构一起保留。官方资料显示 Parse 面向高吞吐场景，支持 Markdown 与 blocks 两类输出，并可用于文档索引、RAG 和 Agent 检索；公开定价按页计费，也更容易做预算。它适合把“文档进入知识库”变成一条可测量流水线，但不同扫描质量和表格样式仍会显著影响结果，必须以自己的材料做准确率和成本评估。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把合同、报告、发票和 PPT 转成供 RAG/Agent 使用的结构化资料。</li>
+    <li>在高文档量企业流程中替代手工清洗，保留表格与视觉元素的机器可读表示。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2093157587017675068" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQxjuDMaIAAqI65?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQxjuDMaIAAqI65?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQuv7F2W0AAw5mp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQuv7F2W0AAw5mp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Grok Bot：能登录工具并持续执行工作的 AI 同事</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Grok Bot 是面向桌面和 iOS 的持久化 Agent 产品，官方定位是让 Bot 登录用户的工具、并行处理工作、保存流程为 routine，并在需要批准时返回结果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.ai/bot" target="_blank">https://x.ai/bot ↗</a></p>
+    <p><a href="https://x.ai/bot/guides" target="_blank">https://x.ai/bot/guides ↗</a></p>
+    <p><a href="https://docs.x.ai/grok-bot/overview" target="_blank">https://docs.x.ai/grok-bot/overview ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官方入口下载 macOS 版本或打开可用客户端，创建一个职责单一的 Bot，例如“每天整理 GitHub Trending 并输出摘要”，只给它完成任务所需的网站和账号权限。先让它观察你手工做一遍流程，再要求它复现一次并检查结果；确认输出稳定后保存为 routine，设置低风险的定时运行，并把发邮件、发布内容、修改生产数据等动作保留人工批准。官方指南还提供多 Bot、项目频道、Notion 看板、移动开发和 GTM 等案例，适合从“读并准备”开始，逐步增加可执行动作，而不是第一次就授予所有账号权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 从一次性聊天推进到“有自己的电脑、账号和长期工作流”。官方文档强调 Bot 是持久、命名的 Agent，指南则展示了 PM、设计、GTM 和多团队协作的具体模式；这与传统只返回文本的 Copilot 不同。真正的挑战也更明显：账号权限、隐私、失败重试和外部副作用都必须设计审批边界。它值得作为 computer-use 和长期 routine 的实测对象，但不应在无监督状态下处理不可逆操作。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>监控榜单、整理研究资料、准备日报等低风险重复工作。</li>
+    <li>把一次演示过的桌面流程保存为可复用 routine，再由人审核最终动作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2093161568154575272" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQxmzt7bwAABO9c?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQxmzt7bwAABO9c?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 网络安全开始进入“集体防御”阶段</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI、Anthropic、Google、Microsoft 及大量网络安全、云和金融机构共同签署公开倡议，呼吁企业与政府提升 AI 时代的网络防御能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是普通的模型发布合作，而是产业对攻击能力扩散速度的集体回应。公开报道显示，倡议要求提高防御工具的安全标准、为资源不足的关键基础设施提供支持，并推动企业、政府和 AI 实验室共享威胁信息。AI 公司一方面在训练更强的模型，另一方面又必须证明这些模型不会让医院、水务和互联网基础设施暴露在更大风险中，因此“模型能力”和“模型可监控、可追责、可安全接入”会越来越难以分开讨论。对开发者来说，Agent 上线前的权限隔离、日志、审计和回滚不再是锦上添花。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来安全预算可能从单纯买检测产品，转向“模型访问控制 + Agent 行为监测 + 自动修复 + 人工响应”的组合。大厂联合倡议有助于形成最低安全基线，也可能加速面向关键行业的合规门槛和责任划分。与此同时，签署倡议并不等于风险已经解决，尤其要警惕供应商既提供攻击/防御能力又负责自我评估的利益冲突；采购方仍应要求可验证的日志、红队结果、权限模型和事故通报机制。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2093174611261477218" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQwXk34asAAZ3WZ?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQwXk34asAAZ3WZ?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 WebMCP：网页正在从“可被看见”转向“可被 Agent 调用”</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 与 Microsoft 参与推动的 WebMCP 提案，尝试让网站通过 JavaScript API 或 HTML 表单声明带有结构化 schema 的工具，供浏览器 Agent 更可靠地执行操作。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>传统浏览器 Agent 需要先看页面、猜按钮含义、定位输入框，再通过多步点击完成任务；WebMCP 的方向是让网站主动声明“我能提供哪些工具、需要什么参数、执行后返回什么”，把一部分不确定的视觉操作变成结构化调用。Chrome 官方文档已提供本地开发和早期预览相关说明，但规范页面明确它仍是 Community Group 草案，并非 W3C 正式标准。这个状态很重要：现在适合做原型和兼容性实验，不适合把它当作已经稳定的跨浏览器基础设施。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果逐步成熟，电商搜索、客服表单、旅行预订、后台筛选等网站功能会从“给人操作的 UI”增加一层“给 Agent 调用的接口”，可能重写 SEO、AEO、转化和自动化测试的边界。网站开发者需要同时考虑 schema 设计、用户可见性、权限确认、跨站滥用和工具注入安全；Agent 平台则要处理发现、授权、执行和错误回传。早期参与者的优势在于能把业务动作抽象成稳定工具，但也必须跟踪提案变化，避免过早锁定私有实现。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2092785665239060598" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQsRbtxakAAjmjY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQsRbtxakAAjmjY?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2092698065710759936/img/-f093uVMYgZkMNml?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2092698065710759936/img/-f093uVMYgZkMNml?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 工程基础从“会写代码”转向“会设计 Harness”</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 中同时出现 Andrew Ng 的 AI 工程技能地图、Agent = Model + Harness 实战手册，以及针对模型控制浏览器完成真实数据任务的连续测试。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这些信号共同指向一个变化：模型本身只提供推理能力，真正决定 Agent 是否可用的，是上下文如何组织、工具如何暴露、状态如何保存、错误如何恢复以及结果如何验证。模型横评仍然重要，但把几个模型放进同一个浏览器任务后，速度、数据读取、长程规划和最终报告质量可能完全不同；这说明“模型排行榜”不能替代端到端 Harness 评测。Skills、扩展、结构化文档和可重复测试，正在从提示词技巧升级为软件工程基础设施。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>团队招聘和研发流程会更多需要 Agent 设计、评测、权限和运行时能力，而不是只会调用一个模型 API。短期内，最容易产生收益的不是重新训练模型，而是把常见任务拆成可观察的状态机，补上工具契约、失败重试、人工审批和回归样例。长期看，模型供应商的竞争也会被 Harness 生态放大：谁能让开发者低成本切换模型、复用 Skills 并持续验证真实任务，谁就更可能进入生产工作流。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AndrewYNg/status/2093388974194872781" target="_blank"><span class="handle">@AndrewYNg</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2093350817118011444" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2093377204533240209" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2093227929761161394" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2093227927601091042" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2093217719470706985" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2093153711501840452" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2093309107289608386" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/_akhaliq/status/2093154284095295685" target="_blank"><span class="handle">@_akhaliq</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ0TasRakAAgdfm?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ0TasRakAAgdfm?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQxgKXzaMAAGgLn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQxgKXzaMAAGgLn?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQzoxC3WUAE-hEd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQzoxC3WUAE-hEd?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQxgnEcW8AA4CCH?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQxgnEcW8AA4CCH?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>OpenDesign：GLM-5.3-Flash 已被社区提到接入的前端设计体验入口，适合观察模型在设计到代码链路中的实际表现； <a href="https://x.com/tuturetom/status/2093309107289608386" target="_blank">→</a></li>
+    <li>VGI-Bench：面向视频生成模型视觉智能的评测线索，适合跟踪视频模型是否从“画面好看”走向可验证的时空理解与任务能力； <a href="https://x.com/_akhaliq/status/2093154284095295685" target="_blank">→</a></li>
+    <li>xposter：将博客内容关联到 X 发文的 Chrome 插件开源线索，适合关注个人发布自动化和内容工作流的轻量工具； <a href="https://github.com/nevertoday/xposter" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
