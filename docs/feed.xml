@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 29 Aug 2026 00:42:20 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 00:45:35 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/08/31 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-08-31.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-08-31.html</guid>
+      <description>今天 X List 的核心信号从“让 Agent 写代码”继续向“让 Agent 拥有可积累的知识、技能和生产环境”推进：Google Research 的 WikiSkill 把经验、知识与可执行 Skills 分层，Uber 则公开了企业级 Agent 软件工厂的成本方程与运营数字。证据 enrichment 脚本本次运行超过 300 秒未生成日期化证据包，以下可上手项目均改用本次推文与官网、GitHub、论文或产品页逐项人工交叉核验；证据不足的线索已降级到“刚露头”。</description>
+      <pubDate>2026-08-31T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/29 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-29.html</link>
