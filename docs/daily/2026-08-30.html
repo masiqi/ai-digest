@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-08-30</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-08-30</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>2026-08-30（Asia/Shanghai）的 67 条 X List 素材，集中指向三个变化：第一，Agent 从“一次性回答”转向有角色、记忆、工具和审批边界的持续工作单元；第二，设计、语音、视频理解与系统维护开始以可执行代码或本地模型直接进入个人工作流；第三，当代码生成越来越便宜，工程瓶颈转移到规范、验证、上下文、评审和运行治理。本次 evidence enrich 已有界运行 240 秒，但没有生成 dated evidence JSON 或 summary，因此以下“可上手”项目均改用本次推文与官方 GitHub、官网或文档逐项交叉核验；无法取得稳定官方证据、权限/额度口径不清或复现门槛过高的线索，已降级到“刚露头/早期信号”或“值得关注”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ VoxCPM：本地试跑连续空间语音生成与声音克隆</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenBMB 开源的 tokenizer-free TTS 系统，直接生成连续语音表征；官方仓库当前推荐 VoxCPM2，支持 30 种语言、自然语言 Voice Design、可控声音克隆、48kHz 输出和流式生成。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/OpenBMB/VoxCPM" target="_blank">https://github.com/OpenBMB/VoxCPM ↗</a></p>
+    <p><a href="https://voxcpm.readthedocs.io/en/latest/" target="_blank">https://voxcpm.readthedocs.io/en/latest/ ↗</a></p>
+    <p><a href="https://huggingface.co/openbmb/VoxCPM2" target="_blank">https://huggingface.co/openbmb/VoxCPM2 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在隔离的 Python 3.10–3.12 环境执行官方 `pip install voxcpm`，只用一小段文本跑通普通 TTS；确认模型下载、显存与输出采样率后，再用自己录制或明确获授权的短音频测试 `reference_wav_path`，最后比较普通克隆、带风格指令的可控克隆和带准确转写的 Ultimate Cloning。NVIDIA GPU 用户可记录首包延迟和实际 RTF；Apple Silicon 或 CPU 用户应先把目标设为“可生成”，不要把官方 RTX 4090 数据外推到自己的机器。所有输出明确标注 AI 生成，严禁用于冒充、诈骗或未经授权的身份复制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>离散语音 token 往往以压缩换稳定性，也可能丢掉呼吸、音色纹理与细微表达；连续空间路线直接针对这类信息损失。官方仓库不仅给出最小 Python/CLI/Web Demo，还列出 vLLM-Omni、Nano-vLLM 与 GGUF/端侧生态，意味着它既能做个人实验，也有向服务化延伸的路径。真正效果仍取决于语言、参考音频质量、硬件与推理后端，应通过盲听和延迟实测判断。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为课程、播客或视频制作多语言旁白，并在授权范围内保持统一音色。</li>
+    <li>在本地搭建语音交互、无障碍朗读或品牌声音原型，减少原始录音外传。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2094072341152014410" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ-jqkxaYAAuazU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ-jqkxaYAAuazU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Agent Native Design：用可运行页面替代静态设计稿</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Builder.io 开源的 Agent 原生 Web 设计工具，让 Agent 直接生成自包含 HTML、Tailwind 样式与 Alpine 交互；预览和导出使用同一份页面代码，而不是先画静态图再翻译成前端。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.agent-native.com/apps/design" target="_blank">https://www.agent-native.com/apps/design ↗</a></p>
+    <p><a href="https://github.com/BuilderIO/agent-native" target="_blank">https://github.com/BuilderIO/agent-native ↗</a></p>
+    <p><a href="https://www.builder.io/blog/agent-native-design-figma-alternative" target="_blank">https://www.builder.io/blog/agent-native-design-figma-alternative ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开 hosted Design 页面，给一个包含真实状态的窄任务，例如“做一个 320px 也可用的账号设置页，包含加载、空、错误和成功状态”；生成后用自然语言逐项修改层级、间距、色彩与交互，再导出 HTML 检查源码。要自托管时，克隆官方仓库并严格按 README 启动；要接设计系统时，先接一个公开组件仓库或 Markdown 规范，检查生成结果是否真的复用 token 和组件。验收不能只看桌面截图，至少测试移动断点、键盘导航、表单错误与空状态。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把交付物从“屏幕的图片”改为“屏幕本身”，让响应式与交互问题在产品评审而不是 staging 阶段暴露。官方说明支持索引组件、图标与 design tokens，使 Agent 从真实设计系统生成，而非套通用审美。边界同样明确：它不是矢量插画工具，组件实例治理、变量体系和原生 App 工作流仍不等于成熟 Figma；最适合 Web 原型、产品验证和开发前对齐。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在写业务代码前验证响应式布局、空/错状态和关键交互。</li>
+    <li>把可点击原型与同源 HTML 交给设计、产品和前端共同评审。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2093866290083688666" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ7oPiUa0AASrGn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ7oPiUa0AASrGn?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenAI Building Agents：按官方学习路径搭一个有边界的 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenAI 官方开发者学习路径把 Agent 拆成模型、工具、知识/记忆、控制逻辑、状态、编排与护栏，并提供 Responses API、Agents SDK、示例应用和生产可靠性建议。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://developers.openai.com/tracks/building-agents" target="_blank">https://developers.openai.com/tracks/building-agents ↗</a></p>
+    <p><a href="https://developers.openai.com/api/docs/guides/agents/quickstart" target="_blank">https://developers.openai.com/api/docs/guides/agents/quickstart ↗</a></p>
+    <p><a href="https://github.com/openai/openai-agents-python" target="_blank">https://github.com/openai/openai-agents-python ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>不要一开始就堆多 Agent。先按学习路径做一个目标窄、可判定成功的单 Agent：配置模型，包装一个只读 function tool，用结构化输出固定结果 schema，并保存 run history。第二轮再加入一个需要人工批准的副作用工具，观察审批前后事件；第三轮才把“检索”和“执行”拆成两个 specialist，通过 handoff 或 agent-as-tool 协作。每次都记录成功率、工具参数错误、延迟和成本，并用一组固定输入做回归；生产前补齐输入/输出 guardrails、预算、权限与 tracing。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方路径把“能调用一次工具的 demo”与“可运营 Agent”区分开：多 Agent 的价值是职责分离、并行和独立评测，而不是把复杂度藏进更多提示词。Structured Outputs、审批、状态和观测能力决定输出能否进入应用链路。SDK 提供运行机制，但不会替团队定义业务正确性或权限边界，因此最值得练习的是从单任务验证闭环逐步扩权。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做一个带人工审批的资料检索、表格处理或客服建议 Agent。</li>
+    <li>用 tracing 复盘模型选择、工具调用、handoff 与失败恢复，建立最小评测集。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2093946078085406793" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ8w1yIacAEy_4O?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ8w1yIacAEy_4O?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole：先预演再清理、分析和维护 macOS</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mole 是面向 macOS 的开源 CLI，整合缓存与残留清理、应用卸载、磁盘分析、维护优化和系统状态监控；官方强调危险操作应先 dry-run，并记录清理历史。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/mole" target="_blank">https://github.com/tw93/mole ↗</a></p>
+    <p><a href="https://mole.fit/" target="_blank">https://mole.fit/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>通过官方 Homebrew 方式执行 `brew install mole`，先只运行帮助与版本检查；第一次清理使用 `mo clean --dry-run`，逐项查看候选路径，不要直接确认删除。需要维护时先用 `mo optimize --dry-run` 查看会执行和跳过什么；磁盘告急时用 `mo analyze` 找大文件，再由人确认是否移到废纸篓。把需要保留的缓存或路径加入 whitelist，并在 `~/Library/Logs/mole/operations.log` 或 `mo history` 中复核操作。工作机上先备份关键数据，不把“AI 时代的自动维护”误解成无人值守删除。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>当 Agent 生成代码与依赖的速度提升，`node_modules`、构建产物、缓存和测试文件也更快膨胀；系统维护必须同时提高可观察性与防误删能力。官方仓库把 dry-run、路径校验、系统目录保护、确认和历史记录写进安全边界，这比单纯追求“清出多少 GB”更重要。X 推文还从项目维护角度讨论大量 AI 生成代码如何长期迭代，值得把测试与维护成本一起看。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定期审查开发机缓存、构建产物和已卸载应用残留。</li>
+    <li>在执行 macOS 维护前预演变更，并保留可追溯操作日志。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2094015568101921254" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ9uovPbEAAGtHk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ9uovPbEAAGtHk?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SakuraAIPlayer：在 Windows 本地测试实时视频增强</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LIGA 在 Steam 发布的 AI 视频播放器，官方产品页列出实时超分、最高四倍插帧、语音识别字幕、字幕翻译、磨皮与换脸等能力；除字幕翻译外，多数功能声明为本地模型运行。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://store.steampowered.com/app/3999870/SakuraAIPlayer/" target="_blank">https://store.steampowered.com/app/3999870/SakuraAIPlayer/ ↗</a></p>
+    <p><a href="http://liga.tech/SakuraAIPlayer/" target="_blank">http://liga.tech/SakuraAIPlayer/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Steam 核对当前价格、版本和硬件要求，用一段自己拥有版权的 30–60 秒视频做基准。分别单独开启超分、插帧与语音识别，记录 GPU 占用、帧率、声音同步、字幕准确率和高运动镜头伪影，再尝试组合功能；字幕翻译若需外部模型 API，只使用不含隐私的素材并记录调用成本。换脸、磨皮或去马赛克只能用于明确授权的封闭实验，输出应显著标识处理痕迹。官方仍写明 macOS 版本“coming soon”，因此当前不要按 Mac 工具规划。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把过去需要先离线转码的增强、插帧和字幕处理放进播放链路，适合验证“边播边处理”是否真的改善体验。Steam 页面给出具体功能、最低/推荐硬件和 AI 内容披露，比只有演示视频更可核验；但“本地运行”不等于所有硬件都实时，也不等于结果可靠，必须逐功能实测并留意潜在滥用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>观看低清旧视频时比较超分与插帧对画质、延迟和功耗的影响。</li>
+    <li>为外语公开视频即时生成字幕和翻译，再人工校对专有名词。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2094057206568059031" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PlantUML：让 Agent 把架构图当文本随代码维护</div>
+  <div class="section"><div class="section-label event">一句话</div><p>PlantUML 用纯文本描述时序图、组件图、部署图等，并提供 CLI、stdin/stdout、语法检查和多种导出格式，适合把图表纳入 Git diff、代码评审与自动验证。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://plantuml.com/command-line" target="_blank">https://plantuml.com/command-line ↗</a></p>
+    <p><a href="https://github.com/plantuml/plantuml" target="_blank">https://github.com/plantuml/plantuml ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先新建一个最小 `.puml` 文件描述当前模块的三个组件与依赖，用官方 `java -jar plantuml.jar file.puml` 生成图片；随后在 CI 中增加 `--check-syntax`，让错误图表像错误代码一样阻断合并。给 Coding Agent 的要求应是“先读代码和现有设计文档，只更新受本次变更影响的节点与连线，并解释依据”，而不是让它凭空重画整个系统。评审时同时查看 `.puml` diff 与渲染结果，定期对照真实路由、接口或部署清单校正漂移。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>可视化编辑器产生的二进制或复杂 XML 很难让 Agent 精准修改，也占用更多上下文；文本图表则能检索、diff、生成和做语法检查。官方 CLI 还支持目录处理、stdin、SVG/PDF 和 Docker 镜像，使其容易接入自动文档流水线。风险在于“图能渲染”不代表“图与系统一致”，所以验证必须包含源代码或基础设施事实。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Agent 在修改模块时同步更新时序图、组件图和部署图。</li>
+    <li>把设计文档纳入 Git review，并在 CI 中自动检查图表语法。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xicilion/status/2093740129198457090" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ33_z-a0AEPPbf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ33_z-a0AEPPbf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LeVJEPA：直接加载开放权重做视频特征实验</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LeVJEPA 是视频自监督预训练研究的官方实现，以单编码器、SIGReg、随机 token dropping 与 block-causal attention 简化训练；官方同时发布了可直接加载的 303M 参数 VideoMix-Large 特征模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MLO-lab/LeVJEPA" target="_blank">https://github.com/MLO-lab/LeVJEPA ↗</a></p>
+    <p><a href="https://arxiv.org/abs/2608.27395" target="_blank">https://arxiv.org/abs/2608.27395 ↗</a></p>
+    <p><a href="https://huggingface.co/galilai-group/LeVJEPA-VideoMix-Large" target="_blank">https://huggingface.co/galilai-group/LeVJEPA-VideoMix-Large ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果只想用特征，不要先复现大规模训练；按官方模型卡用 Transformers `AutoModel.from_pretrained(..., trust_remote_code=True)` 加载权重，输入一段约两秒、16 帧、224px 且按 ImageNet 统计归一化的视频，读取 `pooler_output` 做相似度、检索或简单线性探针。务必保留默认 `block_causal` attention，官方警告改成 full attention 虽不报错但会降低特征质量。只有确认下游任务收益后，再用仓库的 uv/Hydra 配置跑单 GPU smoke test；加载 remote code 前先审查仓库版本与代码。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方结果声称，相比重新训练的基线可用更少总预训练算力达到相当或更高表现，并给出单张消费级 GPU 的小规模实验。但这仍是早期研究：仓库规模小，部分模型代码为 CC BY-NC 4.0，checkpoint 更适合冻结特征提取而非开箱分类。将它纳入可上手项，是因为权重、模型卡和最小加载路径都已公开，不代表论文全部结论已被独立复现。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用冻结视频特征做镜头检索、相似片段聚类或下游轻量探针。</li>
+    <li>在消费级 GPU 上验证随机 token dropping 对训练成本的影响。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/hillbig/status/2093874477767754000" target="_blank"><span class="handle">@hillbig</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AngelSlim：从小模型开始验证低比特量化工具链</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯混元 AI Infra 团队开源的大模型压缩工具箱，覆盖 PTQ、QAT、蒸馏、剪枝和推测解码；官方仓库已经公开 1.25-bit STQ1_0 内核、文档与多类模型支持。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tencent/AngelSlim" target="_blank">https://github.com/Tencent/AngelSlim ↗</a></p>
+    <p><a href="https://angelslim.readthedocs.io/" target="_blank">https://angelslim.readthedocs.io/ ↗</a></p>
+    <p><a href="https://huggingface.co/AngelSlim" target="_blank">https://huggingface.co/AngelSlim ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>不要从推文中的超大 Hy4 模型开局。先按官方文档创建隔离环境，选一个仓库明确支持、且单机能放下的小模型，分别跑 FP8/INT4 或已有低比特权重的最小推理；用相同提示集记录加载内存、首 token 延迟、吞吐和任务正确率，再逐步尝试 PTQ 配置。只有拥有多卡和足够 CPU 内存时，才研究 Hy 系列极低比特 GGUF 与 llama.cpp 路线。推文中的“约 200GB、2 tok/s”等属于单个用户设备实测，不应当作所有机器或所有任务的官方基准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>极低比特量化正在把“模型能否装进本地硬件”与“模型是否仍有任务能力”放进同一个工程问题。官方项目给出代码、技术报告、模型权重和 llama.cpp PR，证据链较完整；但低比特平均分、个别 demo 成功与生产质量之间仍有巨大距离。最可靠的用法是先在小模型上建立自己的质量/内存/速度基线，再决定是否值得投入重型硬件。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>比较同一模型 BF16、FP8、INT4 或更低比特版本的成本与质量变化。</li>
+    <li>为受限显存环境筛选可接受的本地推理方案，并建立任务级回归集。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2093936977192374372" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2093936828500045824/img/gkBvaKP7SJpgc9Vv.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2093936828500045824/img/gkBvaKP7SJpgc9Vv.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI-native SDLC：代码加速后，瓶颈移到计划、验证与治理</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 汇总 Google、OpenAI、Anthropic 与 LangChain 的 AI 原生研发资料；本次可稳定核验到 OpenAI 的工程团队指南和 Anthropic 的官方 SDLC playbook。两者都强调 Coding Agent 已覆盖规划、实现、测试、评审与运维，但人仍负责产品意图、架构、风险与最终批准。
+链接：https://developers.openai.com/codex/guides/build-ai-native-engineering-team
+https://claude.com/blog/the-ai-native-sdlc-playbook</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>过去围绕“人写代码”设计的串行交接和逐行评审，会在 Agent 批量生成 diff 后形成新排队点。官方材料提出的共同方向不是取消治理，而是让 intent/spec、测试、政策与技能变成机器可读、可版本化、可自动触发的控制面；人从机械实现转向定义目标、边界、例外与高风险决策。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>团队不应只统计生成代码量或 PR 数，而应衡量需求返工、评测覆盖、回滚率、审查队列、单位完成任务成本与生产事故。最快的落地方式不是重写整个流程，而是挑一个重复环节，把输入、成功标准、权限和人工升级条件固定下来，再逐步扩展。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2094007486974157130" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 NVIDIA Windows 10 驱动收尾：常规优化与安全更新分轨</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 转发称 NVIDIA 将在 2026 年 10 月发布最后一款支持 Windows 10 的常规 Game Ready 驱动。NVIDIA 官方支持条目“GeForce Support Plan for Windows 10”可定位，但本次抓取官方正文返回 Technical Difficulties；多家硬件媒体转述的口径是，2026 年 11 月起新常规 Game Ready/Studio 驱动不再支持 Windows 10，关键安全更新按季度延续至 2029 年 10 月。
+链接：https://nvidia.custhelp.com/app/answers/detail/a_id/5695/~/geforce-support-plan-for-windows-10
+https://www.techpowerup.com/352020/final-nvidia-geforce-game-ready-driver-for-windows-10-goes-out-in-october</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是显卡在截止日突然失效，而是“新游戏优化、功能和常规修复”与“关键安全修复”分离。还要区分操作系统支持与 GPU 架构支持：较老架构已有自己的生命周期，不能只凭 GTX/RTX 名称判断。由于官方正文当前不可读，具体适用 GPU、驱动分支和日期应在迁移前再次查看 NVIDIA 支持页。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>仍依赖 Windows 10 的创作与游戏工作站，应提前盘点 GPU 架构、专业软件、插件与外设兼容性，保存最后稳定驱动和回滚方案，并在 10 月前完成 Windows 11 或替代系统测试。不要为了追新驱动在生产机上跳过兼容性验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2093991496143835366" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ9aK25W0AAGih4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ9aK25W0AAGih4?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 周额度变动：高频 Agent 工作流开始受容量治理影响</div>
+  <div class="section"><div class="section-label event">事件</div><p>本次素材中多条独立账号转述同一通知：临时 150% 周额度将在 9 月 14 日后调整为原始额度的 125%；按 150 降到 125 计算，相对当前临时额度约少 16.7%。本次检索没有获得可稳定引用的 Anthropic 官方公告正文，因此这条只作为待官方 usage 页面复核的产品运营信号，不把它写成所有套餐和模型都适用的确定规则。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>订阅额度正在成为 Agent 工程中的调度约束。重度用户感受到的变化取决于套餐、模型、任务长度、缓存、重试和重置窗口，不能只用一个百分比代表实际可完成工作量；“永久增加 25%”与“相对临时活动减少约 17%”是同一数字的不同基准。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>个人用户应给长任务设置 checkpoint，并准备低成本模型或本地工具处理检索、格式转换等子任务；团队则应监控每个成功任务的模型消耗、失败重试和峰值并发，避免把交付绑定在单一订阅权益上。最终口径以 Claude 官方账户、支持文档和本人 usage 页面为准。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2093843732777070870" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2093876905355497477" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2094057210766614946" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2093911245682335982" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2093971515230351597" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2093948954756960492" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2093936688905261316" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2094027833505144919" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2094057649616650681" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2093746454481502542" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2094013696645505236" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ7ADP5bIAAEfOy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ7ADP5bIAAEfOy?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQ8oNiHaUAEo0Rg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ8oNiHaUAEo0Rg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQ-WUbObwAAaUmt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ-WUbObwAAaUmt?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Agentic Engineering Patterns：关注“代码边际成本下降”后，知识资产、验证闭环与认知债如何沉淀为可执行工程规范。 <a href="https://x.com/shao__meng/status/2094027833505144919" target="_blank">→</a></li>
+    <li>AI 芯片内存墙：关注矩阵算力增长快于数据搬运后，GPU、互联、缓存与高带宽内存路线如何分化；推文属于科普总结，具体数字需回到芯片厂商资料核对。 <a href="https://x.com/Gorden_Sun/status/2094057649616650681" target="_blank">→</a></li>
+    <li>Qwen3.8 Flash 本地表现：社区 M4 实测称 prefill 很快但 decode 不到 30 token/s，属于单机、单构建结果；后续应统一量化、上下文和任务集再比较。 <a href="https://x.com/fankaishuoai/status/2093746454481502542" target="_blank">→</a></li>
+    <li>Codex 80/20 学习法：把新领域压缩成关键概念、代表案例和可验证练习的学习框架值得实验，但 Agent 选出的“关键 20%”仍需教材、专家或测验纠偏。 <a href="https://x.com/lxfater/status/2094013696645505236" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
