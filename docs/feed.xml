@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 31 Aug 2026 01:16:53 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 00:46:27 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/01 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-01.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-01.html</guid>
+      <description>今天的信号集中在“Agent 从会生成，走向可控、可验证、可持续运行”：OpenClaw 2.0 把权限、记忆、工作流和多端执行继续产品化；OJO、ColaMD 等项目则分别从设计约束和人机协作界面补齐工程链路。另一条明显支线是多模态能力继续下沉——DeepSeek 把视觉输入接入 Agent API，Hyper3D 尝试把单张图片提升为可编辑、可交互的三维场景。
+
+说明：本次 X List 抓取成功，共 103 条；Agent Reach 多源证据脚本运行超时，未生成日期限定的 evidence/evidence-summary 文件。因此，正文中的可上手项目均补查了官网、GitHub、官方...</description>
+      <pubDate>2026-09-01T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/08/31 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-08-31.html</link>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-01</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-01</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“Agent 从会生成，走向可控、可验证、可持续运行”：OpenClaw 2.0 把权限、记忆、工作流和多端执行继续产品化；OJO、ColaMD 等项目则分别从设计约束和人机协作界面补齐工程链路。另一条明显支线是多模态能力继续下沉——DeepSeek 把视觉输入接入 Agent API，Hyper3D 尝试把单张图片提升为可编辑、可交互的三维场景。
+
+说明：本次 X List 抓取成功，共 103 条；Agent Reach 多源证据脚本运行超时，未生成日期限定的 evidence/evidence-summary 文件。因此，正文中的可上手项目均补查了官网、GitHub、官方文档或可信网页；证据较弱、只有 X 线索的内容统一放入“🌱 刚露头/早期信号”，不把猜测写成已证实功能。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenClaw 2.0：把个人 Agent 做成可持续运行的系统</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenClaw 是可自托管的个人 AI 助手与 Agent 运行时，2.0（官方版本号为 v2026.8.1）重点扩展了会话搜索、跨设备/云端执行、持久进度卡、交互式组件、凭据保护、自动化权限、记忆、MCP、插件和多端客户端。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.1" target="_blank">https://github.com/openclaw/openclaw/releases/tag/v2026.8.1 ↗</a></p>
+    <p><a href="https://openclaw.ai" target="_blank">https://openclaw.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>想快速试用，先看官方仓库的安装说明；正式安装可使用 npm 安装最新版本，或克隆仓库后按 pnpm workspace 流程安装并构建。第一次运行不要直接接入真实账号和高权限目录，先准备一个测试工作区，配置一个低权限模型和单独的 API 凭据，再让 Agent 完成“读 README、列出文件、生成测试计划”这类可回滚任务。重点体验会话进度、权限确认、MCP 连接和跨设备执行；升级到 v2026.8.1 前先备份配置与状态，并运行 doctor 检查迁移结果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是单一聊天壳，而是在向 Agent 操作系统靠拢。官方更新同时覆盖模型路由、凭据隔离、会话记忆、工作板、MCP、插件信任、云端 Worker 和权限模式，说明竞争焦点已从“模型能不能回答”转为“能不能长期运行而且出了问题可追踪、可恢复”。不过版本变更面很大，OpenProse 和 OpenAI 路由均有迁移事项，不能把一次升级当成无风险更新。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 Telegram、网页和本地终端统一成一个可审计的个人工作 Agent。</li>
+    <li>为代码维护、定时巡检、资料整理等任务建立带审批和恢复能力的自动化流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2094310176572784731" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRB7_OkaIAAHP4B?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRB7_OkaIAAHP4B?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OJO Design Skills：给 Coding Agent 加一套设计决策协议</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OJO Design Skills 是面向 Codex、Claude Code、ZCode 等 Coding Agent 的开源 UI/UX skill 包，用设计方向、设计 token、组件规范、交互状态和反 AI-slop 规则约束页面产出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/touchine-ojo/OJO-Design-Skills" target="_blank">https://github.com/touchine-ojo/OJO-Design-Skills ↗</a></p>
+    <p><a href="https://ojo.art" target="_blank">https://ojo.art ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在一个前端测试仓库里阅读 README 和 references，再用官方安装脚本按目标客户端安装；例如 Codex 可执行 `curl -fsSL https://raw.githubusercontent.com/touchine-ojo/OJO-Design-Skills/main/scripts/install.sh | bash -s -- --target codex --force`。安装后让 Agent 先对现有页面做设计审计，再要求它给出两到三个风格方向，选择一个方向后生成 token、组件和页面。最后用浏览器截图或实际交互逐项验收颜色、间距、空状态、错误态、移动端适配，不要把“装上 skill”误当成设计质量已经保证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不在于再提供一套漂亮提示词，而在于把“凭感觉做页面”拆成可复用的判断步骤。仓库明确提供 Convention 和 Innovation 两条路线，并加入反渐变、真实图片、交互状态和 spring motion 等护栏，尝试把审美偏好转成 Agent 可读取的工程约束。项目规模仍小，适合当作实验性基线，不宜直接视为成熟企业设计系统。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Vibe Coding 生成的落地页、后台和产品原型保持统一品牌语言。</li>
+    <li>在多人协作中把设计评审标准沉淀成仓库内可复用的 Agent skill。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2094446342848512180" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRD3vcTa8AAO081?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRD3vcTa8AAO081?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek-V4-Flash-Vision-Exp：把视觉输入接入 Agent API</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是 DeepSeek 的实验性多模态模型，除文本 Agent、推理和知识能力外，可接收图片并用于截图理解、图表分析、OCR 辅助和视觉 Agent 工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://api-docs.deepseek.com/news/news260821" target="_blank">https://api-docs.deepseek.com/news/news260821 ↗</a></p>
+    <p><a href="https://api-docs.deepseek.com/guides/vision" target="_blank">https://api-docs.deepseek.com/guides/vision ↗</a></p>
+    <p><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp" target="_blank">https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 DeepSeek API 文档申请密钥，使用官方模型名 `deepseek-v4-flash-vision-exp`，优先从 Vision 指南中的 OpenAI 兼容 Chat Completions 示例开始。准备一张不含隐私的截图或图表，用 URL、Base64 或 Files API 传入图片，再要求模型输出结构化 JSON，例如“识别表格列名、读取关键数值并标注不确定项”。随后接入一个只读工具，让 Agent 根据截图提出下一步操作但不自动执行。图片按最多 384 tokens 计费，模型仍标注为 experimental，生产使用要准备文本模型或传统 OCR 的回退路径。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方文档给出的组合方式很实用：同一个模型同时支持混合文本+图片输入、Chat Completions、Messages 和 Responses，还能复用 Files API 中的图片。这样视觉理解不必再单独拼一个“图片描述器”，可以直接进入工具调用和任务规划。需要注意的是，官方能力宣称与实际业务准确率不是一回事，尤其是密集 OCR、小字截图和复杂图表，必须用自己的样本集验收。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让代码 Agent 读取界面截图、报错截图和流程图，再生成修复或测试计划。</li>
+    <li>对发票、仪表盘、商品图等图片做初步结构化抽取，并交给人工复核。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2094402151569080363" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRDPo7hbQAAspiK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRDPo7hbQAAspiK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Hyper3D WorldGen：从一张图走向可拆解的三维场景</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Hyper3D 展示的 WorldGen 目标不是只生成一个孤立 3D 资产，而是从场景图片中重建多个独立物体、空间关系和物理约束；目前官方公开入口更明确的是 Hyper3D Rodin 的图生 3D/API，WorldGen 的具体开放范围仍需以官方页面为准。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://hyper3d.ai/" target="_blank">https://hyper3d.ai/ ↗</a></p>
+    <p><a href="https://developer.hyper3d.ai/" target="_blank">https://developer.hyper3d.ai/ ↗</a></p>
+    <p><a href="https://www.leiphone.com/category/ai/0H6Hce7AH5b0wRLZ.html" target="_blank">https://www.leiphone.com/category/ai/0H6Hce7AH5b0wRLZ.html ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Hyper3D 官网注册，进入 Rodin 的 Image To 3D 工作区，用一张主体清晰、背景干净的物品照片生成 GLB/GLTF 等资产，观察网格、材质和可编辑性；如果需要自动化，再阅读 API 文档，按“提交任务—轮询状态—下载结果”的异步流程接入自己的脚本。对于 WorldGen 本身，先把 X 帖子中的场景案例当作能力演示，不要默认每个账号都能调用；可先用客厅、桌面或产品陈列图做人工评估，分别记录物体分离、遮挡补全、尺度关系和碰撞合理性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>如果生成结果真的包含独立 Mesh、场景布局和物理属性，3D 生成的价值就从“做一张好看的图”提高到“给仿真、游戏、XR 和空间设计提供可继续加工的世界”。Hyper3D 公开资料也显示 Rodin 已覆盖图生 3D、文本生 3D、API 和多种导出格式。当前最大的不确定性是 WorldGen 的公开可用性、稳定性和复杂场景误差，先把它当作值得实测的早期产品，不宜直接按宣传效果估算生产成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从房间或展台照片生成可用于 XR/装修原型的三维草模。</li>
+    <li>为机器人仿真、游戏关卡和影视预演快速建立可拆分场景资产。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2094454368619872470" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094453463262679040/img/daidlmNIPDfcprHJ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094453463262679040/img/daidlmNIPDfcprHJ.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094432437258571776/img/idJmfMcXYYoKYrfi?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094432437258571776/img/idJmfMcXYYoKYrfi?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ColaMD 2.0：让人和 Agent 同时盯着 Markdown 工作</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ColaMD 是开源、跨平台的 Agent Native Markdown 编辑器；Agent 修改打开的 `.md` 文件时，编辑器实时刷新，并提供所见即所得、Mermaid、任务列表、主题、PDF/HTML/Word 导出和多窗口等能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/marswaveai/ColaMD" target="_blank">https://github.com/marswaveai/ColaMD ↗</a></p>
+    <p><a href="https://colamd.com/" target="_blank">https://colamd.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS、Windows 或 Linux 用户直接进入 GitHub Releases 下载对应安装包；也可以克隆仓库后按 README 执行 `npm install` 和 `npm run dev`。打开一个专门的 Markdown 项目目录，在 ColaMD 中载入文件，再让 Claude Code、Codex 或其他 Agent 修改同一个文档，观察实时同步和标题栏 Agent Activity Indicator。先用日报、会议记录或项目设计文档测试，再试 Mermaid、PDF/HTML/Word 导出；涉及重要文档时保留 Git，因为实时刷新解决的是观察问题，不等于替你做版本管理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Agent 工作流的痛点不是生成不出文字，而是人不知道 Agent 正在改什么、改完是否落盘、如何快速审阅。ColaMD 把 Markdown 当作内容层，把编辑器当作可视化协作面，既不要求迁移到云端，也不内置一个黑盒 AI。对经常让 Agent 改 README、方案、简历和知识库的人，这种“边写边看”的反馈环很直接；但项目仍在快速迭代，建议先在副本中使用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Agent 维护项目文档、日报、知识卡片并实时人工验收。</li>
+    <li>把 Markdown 直接导出成网页、PDF、Word 或可分享的阅读页。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2094384239492071611" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRC8OR8bQAAr1CZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRC8OR8bQAAr1CZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole 1.13：macOS 上的清理、卸载与状态检查工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mole 是 macOS 开源 CLI，集清理缓存、卸载残留、磁盘分析、优化、项目产物清理和系统状态监控于一体；免费 CLI 与收费原生 Mac App 是两个产品形态。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole" target="_blank">https://github.com/tw93/Mole ↗</a></p>
+    <p><a href="https://mole.fit/" target="_blank">https://mole.fit/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在终端执行 `brew install mole` 安装稳定版，然后先运行 `mo --version` 和 `mo analyze` 了解当前磁盘情况。任何删除动作都先使用 `mo clean --dry-run`、`mo uninstall --dry-run` 或 `mo installer --dry-run` 查看候选路径，确认不会误删开发缓存、同步目录或业务文件后再执行；需要清理项目构建物可单独用 `mo purge`。如果偏好 GUI，可到 mole.fit 试用原生 Mac App，但要注意它和 GPL-3.0 的 CLI 不同，收费与许可规则也不同。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它与生成模型不是同一类工具，却正好补上本地 Agent 工作站的基础设施：模型下载、构建缓存、日志和旧安装包会持续吞噬磁盘，卸载软件还常常留下 LaunchAgent 和偏好文件。Mole 把清理前预览、残留关联和系统状态放在同一套工具里，尤其适合开发者机器。不过清理工具拥有删除能力，任何“可安全”判断都不能替代人工复核和备份。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定期清理本地模型、Node/Python 构建物和安装包留下的磁盘占用。</li>
+    <li>在运行长时间 Agent 或编译任务前后快速检查 CPU、内存、磁盘和网络状态。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2094432269909815471" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HQ7xXy5bQAA6Q00?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ7xXy5bQAA6Q00?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQ7xXy1aEAAcIH0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ7xXy1aEAAcIH0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQ7xXy5bwAA0A5R?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ7xXy5bwAA0A5R?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HQ7xXzLboAAik-m?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HQ7xXzLboAAik-m?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Miya.fm：把 X 帖子或照片变成可分享的音乐视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Miya.fm 是一个处于 Beta 的社交化 AI 音乐产品，官网提供 Playground；官方页面描述为把生活素材变成音乐，X List 用户实测的主要玩法是输入 X 帖子、个人页或图片生成带歌词的吐槽式歌曲/视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://miya.fm/" target="_blank">https://miya.fm/ ↗</a></p>
+    <p><a href="https://miya.fm/playground" target="_blank">https://miya.fm/playground ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网进入 Playground，先用一条不含私人信息的公开 X 帖子或一张普通照片测试；根据页面提供的创作模式粘贴链接或上传素材，补充希望的情绪、吐槽角度或音乐方向，再提交生成。第一次建议只做短内容，记录生成等待时间、歌词是否误读原文、是否出现不适合公开的个人信息，以及成品能否下载/分享。官网当前标注 Beta 期间免费，并提示桌面端仍在准备中，因此不要把 X 账号授权、付费规则和长期可用性想当然，发布前先人工检查版权与隐私。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“音乐生成”从写提示词改成了社交内容再创作：用户不需要先懂曲风，只要提供一个已有素材，产品就把它转成歌曲和视频。这种入口更适合短视频、朋友互动和内容二创，也更容易形成传播。另一方面，引用真实人物帖子会带来肖像、隐私、诽谤和版权边界，产品越是低门槛，越需要在分享前做人工审核。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把公开帖子、活动文案或照片快速变成社交平台上的趣味短视频。</li>
+    <li>为品牌活动、播客片段和个人纪念内容做低成本音乐化草稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2094358865332846872" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094340253498875904/img/wwtjOdKlDplqpYpR.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094340253498875904/img/wwtjOdKlDplqpYpR.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ fal.live：尝试“观众提示词驱动”的实时互动直播</div>
+  <div class="section"><div class="section-label event">一句话</div><p>fal.live 是 fal 生态推出的互动 AI 直播网站，X 帖子描述的玩法是选择频道、输入接下来想发生的事情，然后观看内容实时生成；fal 官方开发平台同时提供统一的图像、视频、音频、音乐和实时模型 API。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://fal.live/" target="_blank">https://fal.live/ ↗</a></p>
+    <p><a href="https://docs.fal.ai/introduction" target="_blank">https://docs.fal.ai/introduction ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 fal.live，先浏览公开频道，确认页面是否允许直接观看或需要登录；进入可交互频道后，用短而明确的提示测试，例如改变场景天气、镜头方向或下一段事件，不要一上来输入复杂长剧本。记录提示提交到画面变化之间的延迟、是否能连续保持角色/场景一致、互动次数限制和是否有内容过滤。开发者则先在 fal Sandbox 里比较模型，再按官方文档使用统一 API；任何面向公众的实时生成都要设置预算、速率限制、内容审核和超时回退。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把生成式媒体从“一次生成一个文件”推进到“边看边影响剧情/画面”，产品形态更接近游戏、直播和互动叙事。fal 的统一模型入口降低了搭建实验的门槛，但实时场景的难点不只是模型质量，还包括延迟、状态保持、并发成本和不确定输出。当前 X 帖子对 fal.live 的具体频道和限制描述有限，适合亲自点开验证，不宜据此推断完整商业能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做互动直播、观众参与式剧情和实时视觉实验。</li>
+    <li>为游戏原型、展览和品牌活动测试“提示词即控制器”的体验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/iamtonyzhu/status/2094425124732862899" target="_blank"><span class="handle">@iamtonyzhu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/ext_tw_video_thumb/2094286060456914944/pu/img/EzrVLLP_Dx-Q_r8Y.jpg" target="_blank"><img src="https://pbs.twimg.com/ext_tw_video_thumb/2094286060456914944/pu/img/EzrVLLP_Dx-Q_r8Y.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Uber 把 Agent Coding 做成可度量的软件工厂</div>
+  <div class="section"><div class="section-label event">事件</div><p>Uber 官方工程文章披露，超过 70% 的 Pull Request 可归因于本地或云端 Agent，内部已建立 3600 多个 skills，每天执行超过 3 万次。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条信息的价值不只在“70%”这个比例，而在于 Uber 同时公开了成本方程和度量方法：用户数、会话数、每会话轮数、每轮请求数、Token 数和单价共同决定 Agent 总成本。官方还把代码生成、验证、部署、观察和维护拆成层级，并建设包含数千万节点和边的上下文图。它说明大规模采用的瓶颈并不是再买一个更强模型，而是让 Agent 找得到上下文、能被验证、出了问题有人工升级路径。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业软件开发会从采购单点 Copilot，转向建设内部上下文图、skill 注册表、评测集、权限边界和成本看板。对中小团队而言，不必复制 Uber 的规模，但可以先追踪每个 Agent 任务的成功率、返工次数、人工审查时间和单位成本；否则“提交量增加”很容易掩盖维护负担和低质量代码。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2094207625139568933" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRAetGwacAAJOB_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRAetGwacAAJOB_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Gemini Notebook 改为按计算量滚动刷新使用额度</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 官方公告称，Gemini Notebook 将采用与提示复杂度、对话长度、来源数量和所用功能相关的计算型额度，并从 2026-09-02 起向消费者 Web 和移动端逐步推出。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>X 帖子把它概括成“五小时限制”，但官方原文的准确表述是额度每五小时刷新一次，且不同任务消耗并不相同；达到额度时，Video Overviews 或 Slide Decks 等输出可以延后生成，并支持通知。这个变化反映出长上下文、来源检索和多媒体生成的产品计费，正在从简单的“每天几次”转向按计算预算管理。用户体验可能更连续，但也更难凭一次任务直观预测还能用多少。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>研究、教育和内容生产用户需要把“额度”纳入工作流设计，长报告可拆分、重输出可排队、素材数量要控制；产品方则必须把消耗原因、剩余额度和延后任务讲清楚，否则用户会把复杂度相关的限制理解成降级或变相涨价。对 Agent 产品来说，这也是按任务预算和优先级调度的先例。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2094333705057914935" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRCRAtda4AA8ELY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRCRAtda4AA8ELY?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent 速度不等于 tok/s：本地模型竞争转向“完成任务的效率”</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 的本地实测比较显示，Qwen 与 GLM 在 token 速度和任务完成速度上可能出现相反结果；讨论焦点从单纯吞吐转向停止规则、返工次数和最终交付质量。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这只是社区实测线索，不是严格控制变量的基准测试，但它抓住了 Agent 场景的关键：模型每秒吐多少字，只能衡量生成速度，不能衡量它是否找对文件、是否反复修改、是否在任务已经完成后继续发散。对于带工具调用的任务，真正的总时延还包括规划、执行、测试、回滚和人工确认。因而本地部署评测应至少记录端到端完成时间、有效变更比例、测试通过率和超预算停止次数，而不是只看 tok/s。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型厂商会更重视默认停止策略、工具调用稳定性和长任务控制；使用方也需要建立自己的任务集，比较“每个成功交付的成本”和“每小时有效产出”。这会削弱单一榜单的解释力：一个速度更快但经常过度加工的模型，未必比速度较慢但更克制、可预测的模型更适合生产。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2094443155202646139" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2094365493666689444" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2094364214689190382" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2094359400224096518" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2094338369702826419" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2094547857336598781" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/LeoKharon/status/2094395060636803122" target="_blank"><span class="handle">@LeoKharon</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lijigang/status/2094354652347379770" target="_blank"><span class="handle">@lijigang</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2094359072669585658" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRCoRLJbsAAqX-n?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRCoRLJbsAAqX-n?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRCTBKVbkAECR9j?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRCTBKVbkAECR9j?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRCUwQKa4AE-OQZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRCUwQKa4AE-OQZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRCVDdwacAI8mIq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRCVDdwacAI8mIq?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRCVGXsbkAAgNry?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRCVGXsbkAAgNry?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRFUJNBXMAAh-QJ?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRFUJNBXMAAh-QJ?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/ext_tw_video_thumb/2094395033734553600/pu/img/I7cwaoTr99x4DiZD.jpg" target="_blank"><img src="https://pbs.twimg.com/ext_tw_video_thumb/2094395033734553600/pu/img/I7cwaoTr99x4DiZD.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRCkvjRWMAATanf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRCkvjRWMAATanf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>GitLab 上下文驱动的 AI 开发工作流：把 AI 编程瓶颈从工具能力转向上下文管理、判断力和工具打磨，适合与 Uber 的软件工厂实践对照阅读 <a href="https://about.gitlab.com/blog/building-an-ai-dev-workflow/" target="_blank">→</a></li>
+    <li>OpenDesign “牛客松”：围绕 Agent 和 Open Design 做可点击 Demo 的 Hackathon，适合观察 Agent 设计工具从展示走向创作社区的速度 <a href="https://x.com/tuturetom/status/2094359072669585658" target="_blank">→</a></li>
+    <li>Simon Willison 的 Agentic Engineering Patterns：持续整理 Agent 工程中的上下文、工具、测试和工作流模式，适合作为长期跟踪的实践资料 <a href="https://simonwillison.net/guides/agentic-engineering-patterns/" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
