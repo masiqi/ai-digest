@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-02</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-02</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“Agent 不再只是聊天窗口”：一端是 Claude Fable 5.1、Gemini Agentic Video Understanding 这类模型把长任务和长视频的成本/可靠性往前推，另一端是 OpenDesign、Cohub、EverOS、LoopArena 把设计、持久工作空间、记忆和“管理另一个 Agent”变成可组合的工程层。世界模型也开始从生成视频/3D 场景伸向实时界面，但 Atlas 与 Solaris 目前都仍以早期访问或研究发布为主。
+
+说明：本次 X 抓取成功得到 96 条推文；Agent Reach 多源证据脚本在 300 秒内超时，HNRSS 补充包未生成。下列🛠️项目均以本次推文和可访问的官网/GitHub/官方文档交叉核验；🌱条目中未能补齐外部证据的线索明确标注“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Fable 5.1</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 面向编程、知识工作和长周期 Agent 任务的新旗舰模型；Fable 5.1 普遍可用，Mythos 5.1 是同一模型但面向可信访问计划、采用更宽松的特定领域安全策略。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank">https://www.anthropic.com/claude-fable-and-mythos-5-1 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果只是体验模型，先在 Claude 产品中选择 Fable 5.1；若要接入自己的程序，打开 Anthropic API 文档与控制台，使用模型 ID `claude-fable-5-1`，把一个真实的长任务拆成“读取资料→执行工具→检查结果→继续”的循环。建议先用一个有测试或明确验收条件的代码仓库做小规模试跑，分别比较 High、Medium、Low effort 的完成质量、耗时和 token 消耗，再决定是否迁移生产流量。长上下文任务可以启用 prompt caching，并重点观察缓存读取费用，而不是只看单轮输入输出价格。Mythos 5.1 不要当作普通公开模型使用，按 Anthropic 的可信访问要求申请。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的变化不只是榜单分数提高，而是把长程 Agent 的单位经济性作为发布重点：官方称缓存读取价格降至每百万 token 0.25 美元，典型工作负载成本约降 25%，复杂编程和高度 Agent 化任务最高约降 45%。同时 1M 上下文、128K 最大输出和可调 effort 使“同一模型在难点多想、常规步骤少想”更容易落地，适合把模型调用放进持续运行的工程循环。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长时间运行的代码维护、测试修复和根因定位。</li>
+    <li>大型资料库上的多步研究、报告、表格或演示文稿初稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2094940791030554969" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenDesign Workspace</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本地优先、开源且 BYOK 的 Agent 设计工作空间，把 Claude Code、Codex、Cursor 等本地 coding agent 接到原型、网页、幻灯片、图片和视频等真实文件产出上。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README，按项目要求准备 Node/pnpm 环境并克隆仓库；启动本地工具后，让它检测 PATH 中已有的 Claude Code、Codex、Cursor、Gemini CLI 或其他适配器，再在工作空间中创建一个项目。第一轮不要只说“做得好看”，而是给出目标用户、页面/交付物类型和参考素材；随后把品牌规则写进 `DESIGN.md`，让 Agent 生成原型或 deck，直接在预览中提出“改间距、换层级、补空状态”等迭代要求。最后检查生成的 HTML/CSS 或导出的 PDF/PPTX/MP4，并把真实文件交给工程 Agent 继续开发。没有本地 coding agent 时，也可以按 README 的 BYOK 方式连接兼容端点，但不要把它误解成无需配置的在线 SaaS。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>OpenDesign 把“设计稿”和“能继续交付的代码文件”放在同一条 Agent 链路里，核心不是又一个聊天式出图工具，而是可编辑的 skills、可复用的 design systems 与品牌契约 `DESIGN.md`。官方仓库还提供沙箱预览、HTML/PDF/PPTX/MP4 导出和 MCP 接口，意味着设计结果可以被后续 Agent 读取、检查和改写，减少从图片到工程实现的翻译损耗。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用统一品牌规范批量生成落地页、仪表盘和产品原型。</li>
+    <li>将研究结果快速整理成可预览、可导出的汇报 deck 或长文档。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2094716440649880040" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRHtYNzbcAAaUNP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRHtYNzbcAAaUNP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRHtYN-bMAAbYzu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRHtYN-bMAAbYzu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRHtYN0b0AAcbaO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRHtYN0b0AAcbaO?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRHtYN6aIAAVE1i?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRHtYN6aIAAVE1i?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094710840662396929/img/Nik0subEac-L8zx9?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094710840662396929/img/Nik0subEac-L8zx9?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami</div>
+  <div class="section"><div class="section-label event">一句话</div><p>tw93 开源的 Agent 文档排版技能与设计系统，把简报、长文、简历、投研报告、幻灯片等内容渲染成更稳定的纸张式文档。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在本地按 README 的方式安装技能：Claude Code 可通过插件市场安装，通用 Agent 可用 `npx skills add tw93/kami -a universal -g -y`，也可以下载 release 中的 `kami.zip`。安装后直接用自然语言提出任务，例如“把这份事实材料整理成中文一页纸”或“将投研笔记排成 equity report”，不必先记 slash command。让 Agent 填充对应模板，再运行项目提供的内容检查与视觉检查；中文文档要特别检查字体、分页、表格溢出和长标题断行。需要被其他 Agent 调用时，可按 developers 文档启动本地 MCP server，让渲染、结构检查和截图成为可复用工具，而不是只依赖一次对话输出。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Kami 的价值在于把“好看”变成可验证的约束：统一的暖纸张画布、墨蓝强调色、衬线排版、模板 schema、事实覆盖检查和视觉 QA 共同限制 Agent 的漂移。它还提供 WeasyPrint PDF、可编辑 PPTX、Mermaid/SVG 图表及 MCP 工具链；对中文长文尤其有意义，因为输出是否完整、分页是否可读，常常比单纯生成一段漂亮文案更决定能不能交付。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将会议纪要、研究材料和日报整理成可打印 PDF。</li>
+    <li>快速生成简历、投研报告、产品 changelog 或汇报幻灯片。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2094792220155285685" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRIx5LYboAALBa0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIx5LYboAALBa0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRIx5LibsAAXn30?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIx5LibsAAXn30?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRIx5LqbMAAiHhj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIx5LqbMAAiHhj?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRIx5LkaMAA8___?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIx5LkaMAA8___?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cohub</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向人和 Agent 的持久化共享工作空间，把对话、文件、会话、任务、沙箱、保存点和可发布 Work 放在同一个 Space 中。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/talesofai/cohub" target="_blank">https://github.com/talesofai/cohub ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最省事的入口是先打开 https://cohub.live/ 创建一个 Space，再按“与 Agent 对话→编辑文件→在 Sandbox 执行→保存 Checkpoint→发布 Work”的顺序走一遍。开发者可以克隆仓库按 README 的 pnpm 工作区说明运行，也可以先阅读文档理解 Space、Session、Sandbox、Checkpoint 和 Work 的关系。实际试用时，给 Agent 明确文件路径，例如“修改 `src/page.tsx` 并运行测试”，然后在右侧打开文件和预览核对改动；达到可回滚的里程碑后保存 Checkpoint，再把 HTML、目录站点或公开端口发布为 Work。需要自动化时再接 CLI/SDK/Channels，避免一开始就把复杂部署和产品体验混在一起。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多数 Agent 产品把上下文锁在聊天记录里，Cohub 则把文件和运行环境当作长期项目状态，并用不可变 Checkpoint 支持恢复、分叉和分享。公开仓库还显示它把 Agent runtime、Go 沙箱、任务调度、外部频道和 Web 工作区组合起来；这使它更像“可持续工作的 Agent 操作面”而不是单轮 prompt 包装器，也更适合需要多次返工和多人协作的项目。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Agent 在一个有文件、预览和测试的真实项目中连续工作。</li>
+    <li>把一次性原型保存成可分叉、可分享、可自动化的交付物。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2094829401859059898" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRJTMAnbwAMO3Db?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRJTMAnbwAMO3Db?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ EverOS</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本地优先、Markdown 原生、用户拥有的 Agent 长期记忆运行时，将对话、文件和轨迹写成可读文件，并用 SQLite/LanceDB 做检索与演化。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/EverMind-AI/EverOS" target="_blank">https://github.com/EverMind-AI/EverOS ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并进入目录，按 README 执行 `uv sync`，再用 `uv run everos demo --plain` 跑不需要 API key 的教育性 demo。确认本地流程后，再执行 `uv run everos init` 配置模型提供商；从少量、低敏感度的项目资料开始，观察记忆如何写入 Markdown、如何被关键词/混合检索召回。接入自己的 Agent 前，先明确 user、agent、project、session 的边界，并检查生成的 Markdown 是否真的可读、可编辑、可 Git 版本控制。若要测试 reflection 或 embedding 等高级功能，按项目说明补齐可选依赖，不要直接把个人全部历史对话导入生产实例。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>EverOS 把“记忆数据库”和“用户可拥有的源文件”分开处理：Markdown 是事实层，SQLite/LanceDB 负责索引，用户轨迹和 Agent cases/skills 也有不同的一等表面。项目同时公开 LoCoMo、LongMemEval-S 等评测入口和 reflection 机制，至少给了工程师一条从 benchmark 到本地运行时的验证路径；对需要审计、迁移、回滚或跨 Agent 复用记忆的系统，这种可读源文件比封闭向量库更容易建立信任。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为 coding agent 保存项目背景、决策和长期任务上下文。</li>
+    <li>构建跨应用、跨设备的个人知识与 Agent 记忆层。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/elliotchen100/status/2094711941352612196" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LoopArena</div>
+  <div class="section"><div class="section-label event">一句话</div><p>专门评测“一个模型如何管理另一个 coding agent”的 Loop Engineering 基准，将 Controller、Worker、Reporter 和可验证的执行结果拆开。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/AMAP-ML/LoopArena" target="_blank">https://github.com/AMAP-ML/LoopArena ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库的 protocol 与 benchmark 目录，再按 Quick Start 安装 Python 依赖。最小试验可以先跑 Type I，理解模型如何从 Evidence Packet 中选择下一份 Loop Contract；之后再用公开案例尝试 Type II task slice，最后才考虑完整的 Type III。把自己的 Agent 流程映射成“Controller 只做决策、Worker 修改仓库、Reporter 只读总结”的角色边界，记录每轮任务、验证、恢复和停止原因。比较时固定 Worker、工具、预算和 evaluator，不能只看最终成功率；还要记录 token 成本、验证是否被跳过以及失败发生在哪一轮。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>LoopArena 把过去常被混在一起的“模型会不会写代码”和“模型会不会管理长流程”分离出来。公开结果显示完整任务的最高 Strict Success Rate 只有 24.69%，而 Type II 相对 Type III 的估算推理成本平均降低 64.4%；这说明局部任务切片可以便宜地比较控制策略，但不能替代完整任务的恢复、验证和停止能力。它对设计小赫这类调度中心尤其有参考价值：真正的上限可能在证据包、状态判断和回滚策略，而不只是换一个更强模型。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>评测“规划 Agent + 执行 Agent”架构在长任务中的控制质量。</li>
+    <li>为自动编码、自动修复和持续验证循环建立可复现实验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2094590893319995541" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRF7TYLaAAAvC5q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRF7TYLaAAAvC5q?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094511394481668096/img/vAeBsNZv8Tp9PjY_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094511394481668096/img/vAeBsNZv8Tp9PjY_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Gemini Agentic Video Understanding</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Gemini 的视频 Agent 能动态决定看哪些片段、用帧/音频/转录哪种信号，而不是固定按帧扫描整段视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini" target="_blank">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Google AI Studio 或 Gemini API 文档，准备一个公开视频或本地长视频，先用普通静态处理做基线，再将视频处理配置设为 `agentic`。问题要写成需要定位证据的任务，例如“找出 3 个关键公告并给出时间戳”“统计某动作发生次数并列出异常片段”，而不是只让模型泛泛总结。长视频优先使用 Files API 或 YouTube 输入，后续追问时保留 API 要求的上下文步骤；对快动作、细小文字和逐帧审计仍要补充更高采样率或专门的视频处理。试跑结束后记录 token、费用、响应时间和漏检片段，和静态模式做同一视频对照。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Google 官方披露，在标准视频分析基准上，Agentic Video Understanding 最多可减少 88% token 消耗、降低 66% 成本，同时准确率提升最高 7%。关键不是简单压缩视频，而是让模型根据问题主动导航到相关片段，并联合视觉帧、音频和转录取证；这使 10 分钟教程、90 分钟课程、会议录像等长视频的检索式分析更接近可用的工程服务，而不是昂贵的一次性摘要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>会议、课程、发布会视频的关键片段定位与带时间戳问答。</li>
+    <li>质检、安防、体育或操作培训中的异常检测与计数。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2094936000497889365" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRK1J-ya8AAKbSB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRK1J-ya8AAKbSB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094829723788419072/img/S-m4SqSuw4Fnshnb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094829723788419072/img/S-m4SqSuw4Fnshnb?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ bilingual_book_maker</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的 AI 双语 EPUB 制作工具，可以把英文电子书翻译成双语阅读版本，并支持多种 OpenAI-compatible API/模型配置。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yihong0618/bilingual_book_maker" target="_blank">https://github.com/yihong0618/bilingual_book_maker ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub 克隆仓库，阅读 README-CN.md 与免责声明，准备 Python 环境和一个自己有权处理的 EPUB 文件。安装依赖后，先拿短章节或测试书运行，选择源语言、目标语言和模型端点；如果使用自建中转，确认它兼容项目要求的 OpenAI API 格式，再通过命令行传入书籍路径和接口配置。生成后用 Calibre、Apple Books 或其他 EPUB 阅读器检查目录、章节顺序、脚注、代码块、专有名词和中英文对照位置。长书不要直接全量跑，先测一章的译文质量和 token 成本，固定术语后再分批处理，并保留原始 EPUB 与中间结果以便回滚。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个项目把“模型 API 能做翻译”变成了一个可重复的文件工作流：输入 EPUB、逐章处理、生成双语电子书，且允许替换 OpenAI、Azure 或其他兼容端点。它的价值不只在 9.6k stars，而在于可以把 Agent 的语言能力落到一个能在阅读器里使用的交付物；对中文阅读、语言学习和个人资料整理来说，离线保留文件、可重跑和可切换模型都比一次聊天翻译更实用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将有版权或授权的英文书籍制作成中英对照阅读版。</li>
+    <li>批量处理技术文档、课程材料和个人研究资料。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yihong0618/status/2094681968667767175" target="_blank"><span class="handle">@yihong0618</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRHOJOKbIAA1Vni?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRHOJOKbIAA1Vni?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRHOJL7bwAAybLb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRHOJL7bwAAybLb?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 World Labs Atlas：世界模型向空间智能推进</div>
+  <div class="section"><div class="section-label event">事件</div><p>World Labs 于 9 月 1 日发布 Atlas，称其从零预训练、原生处理文本/图像/视频/3D，并统一用于世界生成、重建与仿真；目前为选择性早期访问。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Atlas 的重点不是把多种输入简单拼成一个多模态聊天接口，而是把输入放进共享的“空间上下文”，让模型在三维位置和时间关系中继续生成。官方列出的方向包括相机控制生成、稀疏图像空间重建、视频驱动的时空仿真以及机器人 real-to-sim。推文把它描述为“多模态自回归扩散 Transformer”，但实际可用性仍取决于早期访问资格、输出稳定性、场景长时一致性和是否开放 API，今天不宜把演示能力等同于普通用户可直接调用的产品。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果空间上下文路线成熟，创意生产、数字孪生和机器人训练的数据生成方式可能从“拍很多素材再重建”转向“少量观测加可控世界生成”。对应用开发者而言，短期更现实的影响是要关注 3D/视频模型是否开始提供相机、几何和时空状态等结构化控制，而不只是比较单张图像的审美质量；对机器人公司，仿真数据的成本和覆盖范围可能成为新的竞争变量。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2094938101768737161" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRK3FJ4acAAufXF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRK3FJ4acAAufXF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094829307273396230/img/6R12oZNwKyLuREue?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094829307273396230/img/6R12oZNwKyLuREue?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Runway Solaris：界面本身开始被当作世界模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>Runway 公布 Solaris，提出 Interface World Model：应用或网站不再先生成 HTML/CSS 再渲染，而是根据用户动作逐帧生成界面；当前官方仍通过早期访问申请推进。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Solaris 与传统 vibe coding 的区别非常关键：它不是更快写 React，也不是把视频加上可点击热点，而是把“界面如何响应操作”交给世界模型连续生成。Runway 的官方说明把点击、拖拽和输入看作下一帧的条件，并强调把渲染与交互联合起来。这样可以产生更开放、更像物理场景的体验，但也把可测试性、可复现性、文字准确性、延迟、权限边界和数据持久化都变成必须重新解决的问题；目前没有公开 API、定价或普遍注册入口。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>软件界面可能出现一条不同于代码生成的路线：对于教程、虚拟展厅、游戏化产品和动态购物体验，生成式界面可以突破固定页面流程；但企业系统、支付和高风险操作仍需要确定性的状态机、审计日志和可回归测试。工程团队现在更应该把 Solaris 当作“交互运行时”的研究信号，观察它能否从漂亮 demo 走向低延迟、可访问、可恢复的真实应用，而不是马上替代浏览器和前端框架。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2094791182815764913" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094790988070043648/img/Z_-IP_F-YBWFXBO7.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094790988070043648/img/Z_-IP_F-YBWFXBO7.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 应用服务商培育专项：规模化交付能力成为政策信号</div>
+  <div class="section"><div class="section-label event">事件</div><p>一条 X 推文转述工信部拟开展人工智能应用服务商培育专项行动，并提到 2026、2027 年服务商资源池数量目标；本次运行未补齐对应政务原文，具体数字待核验。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>目前能确认的只是推文所转述的政策方向，不能把转述中的数量目标当作已核验的正式文件。若原文属实，政策关注点并非单纯增加模型数量，而是培育能进入复杂行业场景、完成交付和持续服务的应用服务商，这与今天 Agent 产品从 demo 走向工作流、数据治理、部署运维和安全验收的趋势一致。对企业采购者而言，服务商是否有真实案例、可控成本、数据隔离和上线后的责任边界，可能比模型宣传语更重要。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>产业链可能从“模型能力竞赛”进一步转向“交付网络竞赛”：谁能把通用模型接进制造、政务、金融、医疗和客服流程，谁才更容易形成持续收入。但由于本条只有推文转述，暂不据此判断政策落地节奏、入池资格或市场规模；后续应以工信部官网正式通知、申报指南和入池名单为准，并区分官方服务商与仅借政策概念营销的项目。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2094794971509624990" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2094690935162695828" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2094785782791676359" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2094814140544254136" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2094746093984895032" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2094746728759169176" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2094700080716734631" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2094765781129011363" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2094755775273136464" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRI0jb2bEAAgUIQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRI0jb2bEAAgUIQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRHWSSra0AAxnsg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRHWSSra0AAxnsg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRIsjNLbsAAltQv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIsjNLbsAAltQv?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094810938537050112/img/bNl0HvDNOIPhtg1t.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094810938537050112/img/bNl0HvDNOIPhtg1t.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRH8jN4bkAA8qrb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRH8jN4bkAA8qrb?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094441329849962497/img/Ytt93rdoknjUI72H.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094441329849962497/img/Ytt93rdoknjUI72H.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2094698953900253184/img/HyqOjDPXvd0vA2SL.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2094698953900253184/img/HyqOjDPXvd0vA2SL.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRIaWs6WUAAVQWO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIaWs6WUAAVQWO?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRIaXI1XwAEyQqz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIaXI1XwAEyQqz?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRIaXiQWEAA4r40?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIaXiQWEAA4r40?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRIaX8LW0AAuzwa?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIaX8LW0AAuzwa?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRIRN7BasAIvQZF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRIRN7BasAIvQZF?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>豆包手机：推文称 9 月正式开售，值得后续核对官方发布、实际渠道与可用 Agent 能力，避免把传闻当成上市事实 <a href="https://x.com/vista8/status/2094755775273136464" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
