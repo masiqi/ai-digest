@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 02 Sep 2026 00:44:39 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 00:43:46 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/03 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-03.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-03.html</guid>
+      <description>今天的信号很集中：模型能力继续向“长程执行、工具调用、可验证交付”推进，但真正拉开差距的正在从单一模型分数转向 Agent harness、上下文记忆、工具设计和成本控制。与此同时，空间智能、视频理解和本地设计工作流都出现了可以亲手试用或申请体验的新入口；低证据传闻仍然不少，以下已把它们单独放到早期信号区。</description>
+      <pubDate>2026-09-03T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/02 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-02.html</link>
