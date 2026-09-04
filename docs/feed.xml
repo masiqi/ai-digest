@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 03 Sep 2026 00:43:46 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 00:44:45 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/04 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-04.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-04.html</guid>
+      <description>AI 工具正在从“一问一答”转向可持续工作的系统：持久化 Agent 负责长期任务，本地检索与上下文管理负责让它们少走弯路，端侧推理则把隐私与延迟重新拉回设备。与此同时，Astra 的官方信息更准确地指向“高能力、强安全门槛、分阶段开放”，不应把 X 上的 GPT-6 体验帖直接等同于全面发布。</description>
+      <pubDate>2026-09-04T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/03 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-03.html</link>
