@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 04 Sep 2026 00:44:45 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 00:45:16 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/05 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-05.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-05.html</guid>
+      <description>今天最值得留意的不是又一个“模型榜单第一”，而是 AI 正从单次对话进入可持续执行：一边是 GPT-6 Astra、Grok Bot 把 Computer Use、持久记忆和后台工作推向产品化，另一边是 HarnessDev、Autoresearch Bench 等项目开始评测代理如何搭建并改进自己的执行基础设施。对个人开发者而言，真正可以马上动手的机会集中在多模态检索、客户洞察、设计 Skill、实时视频和开源模型部署。
+
+说明：本次 X List 抓取成功，共 108 条；Agent Reach 多源 enrich 运行超过 300 秒后超时，未生成本次 evidence/evidence...</description>
+      <pubDate>2026-09-05T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/04 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-04.html</link>
