@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-06</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-06</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号从“更强的模型”进一步转向“能长期完成任务的系统”：一边是 GPT-6 Astra、Blender 与电脑操作把复杂软件变成可由自然语言驱动的工作台，另一边是 Paseo、goal-driven、Cursor evals 和验证闭环把 Agent 从一次性聊天推进到可编排、可验收的持续执行。与此同时，WeMM-Embedding、PageIndex Flash 和 RWKV7-G1 说明本地多模态检索、结构化文档推理与非 Transformer 路线仍在快速冒头。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ show-me：让 Coding Agent 用图示解释复杂问题</div>
+  <div class="section"><div class="section-label event">一句话</div><p>HumanLayer 开源的 Agent Skill，要求编码代理用简洁图示、代码形态草图或聚焦的 HTML 页面帮助用户“看见”当前问题，而不是堆满长篇说明。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/humanlayer/skills" target="_blank">https://github.com/humanlayer/skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 Node.js 与 skills CLI，在终端执行 `npx skills add humanlayer/skills --skill show-me`，然后进入 Claude Code、Codex 等支持 Skills 的编码代理。在已有代码仓库里输入 `/show-me`，或直接说“用 show-me 把这个请求链路做成 HTML 解释页”。建议从一个真实问题开始，例如让它画出登录流程、某个 API 的调用树，或把一个难懂的 PR 变成组件关系图。生成后检查图中的组件名、分支条件和数据流是否对应代码，再让 Agent 根据反馈缩小到一个最关键的视图。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“解释能力”变成可复用的上下文组件，而不是临时提示词。Skill 明确限制铺垫和文字长度，并把 Mermaid、伪代码与单页 HTML 作为不同表达工具，适合代码审查、架构沟通和教学。对长程 Agent 而言，先把状态可视化也能降低人类验收成本；但它仍只是表达层工具，不能替代测试、日志和事实核验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让新成员快速理解陌生仓库的请求链路、状态机和依赖关系。</li>
+    <li>在 PR 审查或事故复盘时，把复杂变更压缩成可讨论的流程图和证据页。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096392245993959574" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRfhoNIboAA7GRV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRfhoNIboAA7GRV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PageIndex Flash：本地 PDF 树状索引与推理式 RAG</div>
+  <div class="section"><div class="section-label event">一句话</div><p>VectifyAI PageIndex 新增的本地 Flash 索引模式，从 PDF 自带版式中启发式提取层级树，减少让视觉模型从零猜文档结构的成本。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/VectifyAI/PageIndex" target="_blank">https://github.com/VectifyAI/PageIndex ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备一份有清晰标题层级的 PDF，先安装依赖并运行 `pip install -U pageindex`；也可以直接按仓库说明执行 `python3 run_pageindex.py --mode flash --pdf_path /path/to/your/document.pdf`。观察生成的树结构，重点检查章节、页码和跨页标题是否正确；再用本地模式接入自己的 LLM key，针对“只回答第几章的条件”“列出某条规则的出处”等问题做检索测试。用同一份 PDF 和传统向量切分各跑一遍，比较召回段落是否完整、引用是否落到页级，并把错树的样本保存下来调整文档预处理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>PageIndex Flash 把索引阶段和推理阶段拆开，结构提取主要依赖 PDF 布局启发式方法，速度和结果可预测性更强；完整本地模式还支持树索引、推理式检索、文档对话和页级引用。它特别适合规章、技术手册、合同等“章节关系本身就是信息”的长文档，不过扫描件、排版混乱的 PDF 仍可能需要 OCR 或人工校正。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为法律、合规、投研和技术手册建立带页码依据的问答入口。</li>
+    <li>在本地处理敏感文档，减少把完整 PDF 上传到第三方服务的需要。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096080603951362445" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRbGMCzboAIticK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRbGMCzboAIticK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WeMM-Embedding：腾讯开源通用多模态向量模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯微信视觉团队开源的多模态 Embedding 系列，面向文本、图片和视频的理解与检索，提供 2B、4B、9B 等规模。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tencent/WeMM-Embedding" target="_blank">https://github.com/Tencent/WeMM-Embedding ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 和模型卡，选择显存能够承受的尺寸；下载权重和推理依赖后，分别准备同一批图片、短视频帧、商品描述或问题文本。先做最小实验：用文本查询图片库，记录 Top-k 结果；再做“文本找视频片段”和跨模态相似度测试。对 2B 与更大模型分别测编码速度、显存、Recall@k 和中文查询效果，最后把向量写入 FAISS 或你已有的向量库。仓库外已有 ONNX 和 MLX 转换项目，但应先核对版本与权重来源，不要把社区转换结果当作官方发布。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方仓库确认它是面向多模态理解与检索的模型家族，社区传播的榜单成绩则显示小尺寸模型也有竞争力。对个人开发者而言，2B 规模比超大视觉模型更容易做本地原型，能覆盖图片库、视频素材、知识库和商品检索；真正落地仍需用自己的领域数据测评，不能只依据榜单排名判断。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地照片、视频素材库的自然语言搜索和去重。</li>
+    <li>电商商品图、说明文档和用户问题的跨模态召回。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096095085977063861" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRbTXFHboAAGILb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRbTXFHboAAGILb?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Paseo：从桌面和手机编排多个 Coding Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的自托管 Agent 工作台，把 Claude Code、Codex、Copilot、OpenCode、Pi 等代理放到同一界面，可从桌面、手机、Web 和 CLI 管理并行任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/getpaseo/paseo" target="_blank">https://github.com/getpaseo/paseo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 https://paseo.sh/download 下载对应平台版本，或使用 GitHub Releases；打开应用后让本地 daemon 管理你的开发环境。先连接一个已有的 Coding Agent，在测试仓库里创建两个互不冲突的小任务，例如一个写 API、一个补测试；观察它们的日志、工作区和结果，再尝试用 CLI 的 `paseo run --background` 创建后台任务并用 `paseo wait` 等待完成。最后从手机或 Web 查看任务状态，确认权限、工作区隔离、模型配置和网络暴露范围，再考虑接入真实项目。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不在再造一个聊天窗口，而在统一不同 Harness、模型和设备的任务生命周期。官方 README 强调本地运行、无强制登录和多提供商，CLI 文档还支持 Agent 生成并管理子 Agent；这与“把一个任务拆开并行、最后由人验收”的工作方式直接匹配。自托管也意味着凭据、端口和远程访问需要由使用者自己负责。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在家中 Mac 上跑长任务，同时用手机查看构建、测试和代理进度。</li>
+    <li>将需求拆成实现、测试、文档三个子任务并行推进。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2096232312442851509" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRdOWDzaEAAyMcK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRdOWDzaEAAyMcK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRdQGWLbsAAWUiW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRdQGWLbsAAWUiW?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRdQGWLa4AA8K2d?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRdQGWLa4AA8K2d?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Casbin Gateway：集中管理 AI 编程助手并校验中转 API</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Apache Casbin 相关的开源 AI 与 MCP 安全网关，把多个 AI 编程助手的 HTTP 接入集中到一个面板，并提供在线演示和中转 API 检查能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/apache/casbin-gateway" target="_blank">https://github.com/apache/casbin-gateway ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README、许可证和默认配置，不要直接把生产密钥填入在线演示。克隆仓库后按文档启动本地服务，准备一个低权限测试 API；逐项配置模型供应商、路由和访问策略，再从一个无敏感代码的测试项目发起请求。检查网关日志是否记录模型、用户、耗时和错误，确认密钥是否只在服务端保存，并用故意错误的 base URL 或模型名验证它能否明确报错。完成最小验证后，再评估是否需要给不同 Agent 设置额度、审计和 MCP 工具权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 编程工具正在从单一 CLI 变成一组供应商、模型和 MCP 工具，入口集中后才有机会统一审计、限流和策略。GitHub 仓库的描述明确指向 AI 与 MCP 安全网关，并提供在线 demo；但“能验证中转 API”是推文场景，具体检测范围仍应以源码和部署文档为准，不能把它当成完整安全审计产品。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>团队统一管理多个 Coding Agent 的模型路由、额度和访问日志。</li>
+    <li>在接入自建中转服务前做连通性、模型名和策略配置检查。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2096230263428681739" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ RWKV7-G1：纯 RNN 路线尝试复杂推理与工具调用</div>
+  <div class="section"><div class="section-label event">一句话</div><p>BlinkDL 发布的 RWKV7-G1“GooseOne”纯 RNN 推理模型，延续 RWKV 的线性时间、常量空间和无 KV cache 特性，探索非 Transformer 架构在推理与 Agent 任务中的可用性。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/BlinkDL/rwkv7-g1" target="_blank">https://huggingface.co/BlinkDL/rwkv7-g1 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 Hugging Face 模型卡确认权重、许可证、模型尺寸和推理方式，再按 RWKV-LM 的 RWKV-v7 示例安装环境。用一张本地 GPU 能承受的量化权重做三组对比：长上下文逐步对话、简单函数调用、固定提示词下的吞吐与显存。记录首 token 延迟、持续生成速度、上下文增长后的显存变化和工具调用成功率；不要只看单张 RTX 5090 的宣传数字。若要做 Agent 原型，先把工具 schema 固定，并对错误参数、长历史和中断恢复单独测试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>RWKV-LM 官方资料把路线概括为线性时间、常量空间、无 KV cache、可并行训练的 RNN，这些性质在长上下文和本地部署上有潜在优势。RWKV7-G1 又把“推理模型”与工具使用放进同一实验方向，值得作为 Transformer 主流之外的对照组；不过社区榜单与单机速度不能直接等同于通用能力，必须用同一硬件和同一任务集实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在显存受限的本地设备上测试长上下文摘要或持续状态任务。</li>
+    <li>研究不依赖注意力缓存的 Agent 推理和工具调用方案。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2096271147843383613" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Grok Bot：带持久云电脑的可委派任务代理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>xAI 的 Grok Bot 面向“交给它一件完整工作”，每个 Bot 运行在带浏览器、文件系统和终端的持久云 VM 中，也可通过连接器或 MCP 使用真实工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.ai/bot" target="_blank">https://x.ai/bot ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认账号套餐和地区是否满足早期 beta 条件，进入 Grok Bot 页面创建一个低风险任务。不要从邮箱、支付或生产后台开始，先让它在公开网站完成资料汇总，要求它列出访问过的页面、下载的文件和待人工确认的动作。再给一个有明确完成标准的任务，例如整理公开竞品信息并输出表格；检查它是否会在权限不足时停下、是否保留中间状态、是否把外部操作和草稿区分开。确认审计和审批机制后，才逐步接入团队工具。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方文档把它定义为拥有自己计算机的 AI teammate，能在持久云 VM 中使用浏览器、文件系统、终端和可用连接器，这比只返回文本的助手更接近“委派工作”。但能力越接近真实电脑，权限边界、登录态、提示注入、数据外泄和动作审批越关键；目前仍应把它当 beta 生产力工具，而不是无人值守员工。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>处理公开资料搜集、表格整理和重复性浏览任务。</li>
+    <li>在人工审批前，准备跨多个网页和工具的长流程草稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2096035656019689965" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic：Claude 完成费马大定理的 Lean 形式化证明</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 表示，Claude 与多 Agent harness 在约 11 天内完成费马大定理的端到端、机器可检查 Lean 形式化，并公开了代码和复核材料。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是“模型凭空发现了一个新数学定理”，而是把已有的人类证明转译、补齐并组织成 Lean 能够逐步检查的程序。Anthropic 的官方说明称，工作由多个 Agent 协作，产生约 1300 万行 Lean、约 2.95 万个中间定理，并借助 Prove2Me 管理共享依赖图和任务分配。价值在于它把长程 Agent 的关键难点暴露出来：状态追踪、依赖管理、失败恢复和独立验证比单轮答案更重要。公开材料也强调了完整树重编译、Lean kernel 和独立 checker 等复核边界，因此日报不把它简化成“Claude 已经独立解决数学”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>形式化数学可能成为检验 Agent 长程协作和可验证产出的高标准场景。对软件工程的启发是，复杂任务要把中间产物变成可检查节点，允许多个 Agent 并行但必须由确定性工具验收；对模型评测而言，最终文本不再够用，构建是否通过、依赖是否闭合和是否存在未证明占位符都应进入指标。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2096263013615677581" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2095946062741860352/img/YrmIldXbYwUDRBSB.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2095946062741860352/img/YrmIldXbYwUDRBSB.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 World Labs Atlas：从多模态输入走向可生成、重建和模拟的世界模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>World Labs 发布 Atlas，定位为原生处理文本、图像、视频和 3D 的 omni world model，并开放早期合作伙伴申请。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Atlas 的官方介绍强调共享的空间上下文：模型把多种输入放入同一空间表征，再生成与已观察内容保持 3D 一致的后续视图或世界状态。它的意义不只是“生成更好看的 3D”，而是把渲染、重建和模拟放进同一条产品路线，目标包括创意制作、环境仿真和机器人规划。现在仍是 early access，公开资料缺少可独立复现的权重、完整基准和价格，因此应把它视为方向与能力边界的信号，而非已经可随时部署的通用引擎。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果空间上下文能在生成、交互和动作规划之间稳定传递，3D 内容生产、机器人训练和数字孪生的工具链可能被重新组合；同时，训练数据中的真实空间、物理规律和动作轨迹比普通图像数据更稀缺，模型的视觉一致性也不等于物理可用性。短期内最值得观察的是开发者开放程度、可导出资产格式、交互 API 和真实任务评测，而非宣传视频。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2096261091982737497" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2095879098920734725/img/YlzcggHnL_FF7oVP.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2095879098920734725/img/YlzcggHnL_FF7oVP.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Microsoft MAI-Image-2.6-Flash：图像编辑进入质量与吞吐并重阶段</div>
+  <div class="section"><div class="section-label event">事件</div><p>微软公布 MAI-Image-2.6 与 2.6-Flash，主打多图参考编辑、网页 grounding、动态画幅和更低延迟的生产部署。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>微软官方模型卡和公告显示，MAI-Image-2.6 是扩散式文生图与图像编辑模型，支持对象移除、替换、属性改变、局部修补和迭代一致性；2.6-Flash 则针对延迟敏感、高吞吐场景。官方称 Flash 相比 GPT-Image-2-Medium 生成速度提高 2.8 倍，并在效率指标上有优势，但这些是厂商发布口径，仍需看实际 API 限额、地区可用性、计费和复杂编辑样本。它更值得关注的变化，是图像模型开始把参考图、网页信息和布局控制作为组合工作流，而不是只比单张海报的审美。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>设计、电商和营销团队可能把图像生成从创意草稿推进到可批量修改的生产环节；开发者则需要同时评估一致性、文字正确率、版权与网页 grounding 的来源边界。质量与速度被拆成两个型号，也会推动企业按任务路由模型，减少所有请求都使用最贵模型的做法。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2096219819280625814" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRdEKAxagAAoOwA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRdEKAxagAAoOwA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cursor：Coding Agent 的竞争焦点转向验证闭环</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cursor 的公开资料把 Agent SDK、评测、代码审查、风险分级和 CI 证据串成一套更完整的工程闭环。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>今天 X List 中关于 Cursor 的两条内容共同指向一个变化：Coding Agent 的可用性不再只看它能否生成代码，而看它能否在真实环境运行、拿出测试和行为证据、接受审查，并把人类指出的漏检转为新的规则或 eval。Cursor 文档已提供可编程 Agent loop、结构化事件、并行云运行与结果元数据；其 Agent Review、Bugbot 和风险路由又把不同风险的变更分流给自动化或人工。这里的核心不是“让 Agent 永远自动合并”，而是定义何种证据足够支撑何种权限。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业引入 Coding Agent 时，投资重点会从提示词库转到测试环境、可观测性、风险策略和回归样本。小团队也可以从窄任务开始：依赖升级、文档校验、CI 修复和测试补全都有明确输出，适合建立“生成—执行—验证—复盘”闭环。没有这些证据，模型能力越强，错误传播速度反而越快。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096194208688484611" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2096187402708766768" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2096292546700079426" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2096044384513147283" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2096205141187956887" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2096218165265285153" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096193339595124736/img/548tMCcjMBcFV3in.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096193339595124736/img/548tMCcjMBcFV3in.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096187212337762304/img/KG5EKrcYHqHhdw8p.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096187212337762304/img/KG5EKrcYHqHhdw8p.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096084445942181888/img/-qEq4Wkn4kB8DWeg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096084445942181888/img/-qEq4Wkn4kB8DWeg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HReFvvnawAA2h0L?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HReFvvnawAA2h0L?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRalIcIasAAWXxn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRalIcIasAAWXxn?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRalPn_awAAUQyb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRalPn_awAAUQyb?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096204966549663744/img/Uzdz8t2v75PQhifx.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096204966549663744/img/Uzdz8t2v75PQhifx.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096187212337762304/img/KG5EKrcYHqHhdw8p?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096187212337762304/img/KG5EKrcYHqHhdw8p?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>AI 代理的安全边界：DseWiki 编辑事件与持久云电脑产品都提醒要关注权限、提示注入和审计，而不是只看“能不能自动完成” <a href="https://x.com/xiaohu/status/2096218165265285153" target="_blank">→</a></li>
+    <li>uBlock Origin MV3 移植：浏览器扩展生态仍在围绕 Manifest V3 寻找功能完整度与权限边界的平衡 <a href="https://appinn.com/ublock-origin-mv3/" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

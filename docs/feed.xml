@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 05 Sep 2026 00:45:16 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 00:46:43 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/06 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-06.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-06.html</guid>
+      <description>今天的信号从“更强的模型”进一步转向“能长期完成任务的系统”：一边是 GPT-6 Astra、Blender 与电脑操作把复杂软件变成可由自然语言驱动的工作台，另一边是 Paseo、goal-driven、Cursor evals 和验证闭环把 Agent 从一次性聊天推进到可编排、可验收的持续执行。与此同时，WeMM-Embedding、PageIndex Flash 和 RWKV7-G1 说明本地多模态检索、结构化文档推理与非 Transformer 路线仍在快速冒头。</description>
+      <pubDate>2026-09-06T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/05 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-05.html</link>
