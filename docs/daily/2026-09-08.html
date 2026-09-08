@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-08</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-08</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“Agent 从聊天窗口走向可执行工作流”：一边是 OpenDesign、Impeccable、视频分析 Skill 这类可直接装进开发代理的能力层，另一边是 OpenAI 内部研究流程显示并发 Coding Agent 正在成为日常基础设施。值得注意的是，工具质量的竞争点开始从“模型会不会生成”转向“上下文、路由、测试与可复用工作流是否扎实”。
+
+本次 Agent Reach 证据包生成命令运行超过 300 秒并超时，未生成本日 evidence JSON/summary；以下可上手项目均用推文与官网、GitHub、官方文档或可信网页进行人工交叉核验。HNRSS 补充源因此未纳入，早期信号中明确标注“证据待补”的项目不能视为已完成尽调。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Impeccable：给 AI 编码代理用的前端设计工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 AI coding agent 的设计指导 Skill，配套 23 个命令、实时浏览器迭代和 61 条确定性检测规则，目标是减少千篇一律的 AI 前端界面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/pbakaus/impeccable" target="_blank">https://github.com/pbakaus/impeccable ↗</a></p>
+    <p><a href="https://impeccable.style/" target="_blank">https://impeccable.style/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在一个前端项目根目录执行 `npx impeccable install`，然后在你使用的 Claude Code、Codex、Cursor、Gemini CLI 或其他兼容代理中运行 `/impeccable init`。先让它读取项目并生成产品与设计上下文，再用 `/impeccable audit` 检查页面问题，用 `/impeccable polish` 做局部收尾，用 `/impeccable critique` 做完整设计复盘。最好准备一个能启动的本地页面，让代理在浏览器中反复查看真实渲染结果；先基线截图，再逐次执行命令，比较布局、层级、字体、颜色和响应式变化。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“审美提示词”拆成可复用 Skill、命令体系和确定性检测器，而不是只给模型一段泛泛的设计描述。规则可以在没有额外 LLM 调用时发现一部分问题，工作流也覆盖初始化、审计、润色和批评，适合把偶然的好页面沉淀成团队级工程流程。它同时支持多种代理，降低了被单一模型锁定的风险。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用于已有 SaaS 后台、落地页或仪表盘的系统化视觉审计，先找出 AI 生成页面的重复卡片、字体和层级问题。</li>
+    <li>在让 Coding Agent 生成真实前端代码后，用浏览器迭代和确定性规则做第二轮质量门禁。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096919498838483265" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRnBKada4AAOOu-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRnBKada4AAOOu-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AI Engineering from Scratch：从基础到 Agent 的开源学习路线</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个公开的 AI 工程学习仓库，按阶段组织数学、机器学习、深度学习、LLM、MCP、Agent、多智能体和生产基础设施等内容。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank">https://github.com/rohitg00/ai-engineering-from-scratch ↗</a></p>
+    <p><a href="https://aiengineeringfromscratch.com/" target="_blank">https://aiengineeringfromscratch.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>不想先克隆整库时，可以在任意支持 Skills 的 Coding Agent 环境运行 `npx skills add rohitg00/ai-engineering-from-scratch`，再运行 `/start-learning` 开始学习；也可以直接打开 GitHub，先看 README 的阶段索引，再挑一个小模块进入对应 lesson。建议先用 `/find-your-level` 估计起点，选择一个 30—60 分钟的小课，要求 Agent 先解释概念，再从零实现，最后运行仓库给出的代码并用 `/check-understanding` 做自测。每学完一个模块，把代码、错误和复盘留在自己的项目目录中，而不是只看文字。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把框架 API 目录简单堆在一起，而是强调从第一性原理实现，再进入框架版本，并把课程、项目、检查理解和深度构建路线组织成可被 Agent 调用的学习 Skill。仓库公开的贡献规范要求代码能按依赖运行，这使它更接近“可执行教材”，对想补齐 LLM、MCP、Agent 工程基础的人比零散教程更容易形成连续路径。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为转向 AI Agent 开发的后端或全栈工程师建立从数学、模型到生产部署的自学主线。</li>
+    <li>把 Coding Agent 变成带代码练习和测验的个人导师，用真实运行结果检验是否理解。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096742186297720975" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRkf5YHbkAAD8-8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRkf5YHbkAAD8-8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Video Analysis Skill：让 Codex、Claude Code 等代理真正分析视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一份可复制的 Agent Skill，借助 Gemini API 分析本地视频的画面、音频、对白和时间点，输出带时间戳的摘要、定位和解释。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://agentnative.inc/resources/give-agents-video-analysis-skill" target="_blank">https://agentnative.inc/resources/give-agents-video-analysis-skill ↗</a></p>
+    <p><a href="https://aistudio.google.com/apikey" target="_blank">https://aistudio.google.com/apikey ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备一个 Gemini API Key，并只在运行代理的环境变量中设置 `GEMINI_API_KEY` 或 `GOOGLE_API_KEY`，不要把 Key 写进提示词或命令参数。把网页中的 `video-analysis` Skill 内容交给 Codex、Claude Code 或 GrokBot，再提供本地 MP4、MOV、M4V、WebM 等视频路径和明确问题，例如“找出所有出现产品故障的时间段”。让代理先用 ffprobe 检查时长、音轨和视频流，再通过 Gemini Files API 上传并等待文件变为 ACTIVE，完成后要求它区分观察与推断、标出不清楚的语音，并删除云端上传文件。长视频要按官方限制处理，不能把截图或文字转录冒充完整视频理解。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把多模态能力封装成 Agent 可复用的任务规范，而不是每次临时写一段“请看视频”的提示词。Skill 明确要求使用原始视频和音频、返回时间戳、处理失败状态并清理上传文件，因而更接近可审计的工具链。对现有能读文件、跑代码的代理来说，接入成本主要是 API Key 和一次 Skill 安装，能快速扩展到视频检索、字幕核对和演示复盘。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对课程、访谈、产品演示进行时间戳摘要，并快速定位某个动作或一句话出现的位置。</li>
+    <li>让 Agent 检查录屏中的 UI 操作、客服视频或实验过程，输出可复核的片段清单。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096747113766113681" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRkkYG4asAAh69L?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRkkYG4asAAh69L?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRjHK50boAA5Itr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRjHK50boAA5Itr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRjHLFSb0AAjdbh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRjHLFSb0AAjdbh?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenDesign：本地优先的 AI 产品设计工作空间</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Apache-2.0 开源的本地设计工作空间，把现有 Coding Agent 接入从创意、原型、网页和幻灯片到可运行文件的迭代流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://open-design.ai/" target="_blank">https://open-design.ai/ ↗</a></p>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官网 Download 下载桌面应用，或按 GitHub README 选择适合自己的发行版；启动后让它自动发现 PATH 中已有的 Claude Code、Codex、Cursor、Gemini CLI 等代理。新建项目时先用一句话描述目标，再选择模板和视觉方向，导入截图、Figma 导出或已有代码仓库作为上下文，让 Agent 生成真实可运行的 HTML、页面或演示文件。随后在预览中逐轮修改，把品牌约束沉淀到 DESIGN.md；如果要接自建中转或其他模型，使用 BYOK 配置自己的 base URL、API Key 和 model，并先在无敏感数据的测试项目中验证权限与成本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的差异点不是另一个只生成图片的网页工具，而是把设计系统、模板、代理适配器、本地文件和可运行产物放到同一条链路中。官方资料强调本地优先、BYOK、Apache-2.0、可接入 21 个以上 Coding Agent，并支持原型、网页、幻灯片和 HTML 视频。这样可以把视觉方向和品牌记忆保存为项目资产，减少每次换模型或换代理都从零描述设计要求。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用已有 Coding Agent 快速做产品原型、落地页、后台仪表盘或演示文稿，并保留可交接的真实文件。</li>
+    <li>将截图、Figma 导出和 DESIGN.md 组合成品牌约束，持续迭代多个页面而不是一次性生成图片。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2096928834750758958" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096928460274884608/img/tI6aYkdSicE-l7tI.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096928460274884608/img/tI6aYkdSicE-l7tI.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096928478335475712/img/DeUdAZ5tALiDnIWi.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096928478335475712/img/DeUdAZ5tALiDnIWi.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096928548539756545/img/MOZ2scBHl77mwCoa.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096928548539756545/img/MOZ2scBHl77mwCoa.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096921495884992512/img/Ug6dKv_ruSwO7j0K?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096921495884992512/img/Ug6dKv_ruSwO7j0K?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qiaomu AI RSS：把 AI Newsletter 和博客阅读接进 Obsidian</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Obsidian 社区插件，把精选 AI Newsletter、独立博客 RSS 和本地 Markdown 文件聚合到笔记库中，并支持翻译改写与阅读沉淀。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://community.obsidian.md/plugins/qiaomu-ai-rss" target="_blank">https://community.obsidian.md/plugins/qiaomu-ai-rss ↗</a></p>
+    <p><a href="https://github.com/joeseesun/qiaomu-ai-rss" target="_blank">https://github.com/joeseesun/qiaomu-ai-rss ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Obsidian 设置→社区插件中搜索“Qiaomu AI RSS”或“qiaomu”并安装；若客户端暂时搜不到，就从 GitHub Releases 下载 `main.js`、`manifest.json`、`styles.css`，在当前 Vault 的 `.obsidian/plugins/qiaomu-ai-rss/` 中创建目录后启用插件。打开侧边栏 RSS 图标，点击顶部“+”进入探索，先添加少量自己长期会读的 AI Newsletter，再测试翻译、改写和收藏流程。需要接入自己的资料时，用“本地文件夹”添加 Markdown 来源；建议先复制一个测试 Vault，确认 API、笔记写入位置和原文链接都符合预期，再迁移到正式知识库。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把外部资讯入口和 Obsidian 的本地知识管理连接起来，官方目录页可核验安装、版本审核和本地文件夹来源等细节。推文提到的 46 个精选 AI Newsletter、1000 多个独立博客订阅，配合本地 Markdown 沉淀，适合把“发现资讯”直接变成可搜索、可回顾的知识卡片。对于已经使用 Obsidian 的人，这比每天在多个网页之间切换更容易形成长期信息复利。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>每天聚合 AI Newsletter 和技术博客，在 Obsidian 内完成筛选、翻译、标注和归档。</li>
+    <li>将已有项目笔记或本地 Markdown 文件作为频道阅读，建立项目相关资料的统一入口。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2096995036563144899" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRoFqolaEAAlFgo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRoFqolaEAAlFgo?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRoFw7Aa4AAGKco?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRoFw7Aa4AAGKco?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Clay Safari：可直接试玩和改造的黏土风 3D 双语小游戏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源的儿童互动认知世界，用户可以在黏土风格 3D 场景中点击动物，听中文/英文名称和叫声。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://clay-safari.lanshuagent.com" target="_blank">https://clay-safari.lanshuagent.com ↗</a></p>
+    <p><a href="https://github.com/cclank/clay-safari" target="_blank">https://github.com/cclank/clay-safari ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开在线体验地址，在场景中移动视角并点击动物，观察双语标签、声音和交互反馈；想研究制作方式时再打开 GitHub README，克隆仓库到本地，按项目说明安装依赖并启动开发服务器。建议先不改代码，完整走一遍“进入场景—找到动物—点击—切换语言或播放声音”的用户路径，再挑一个动物的名称、颜色或交互事件做小修改，重新运行验证。若要扩展内容，先从 README 已说明的制作方法和资源结构入手，新增一个简单对象后再处理模型、音效和移动端性能，不要一开始就重做整个场景。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它同时提供线上体验、开源代码和制作方法，降低了“看演示但无法复现”的门槛。项目页面明确将其定位为黏土风格、3D、双语和儿童认知世界，适合拿来观察 AI 生成式开发如何把视觉资产、交互和教育内容组合成一个可玩的成品。它的价值不只在游戏本身，也在于给零基础开发者一个范围小、反馈快、容易继续扩展的前端实验样本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>作为儿童英语启蒙或互动展陈的轻量原型，替换动物、语言和音效内容。</li>
+    <li>作为 AI 辅助开发的练习项目，学习从在线 Demo 反推代码结构并做小步扩展。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/LufzzLiz/status/2096960220346175561" target="_blank"><span class="handle">@LufzzLiz</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096959787007418368/img/__JnJFgt5GoP4TJh.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096959787007418368/img/__JnJFgt5GoP4TJh.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2096495327574687744/img/VuDTvaEjemE7pkyB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2096495327574687744/img/VuDTvaEjemE7pkyB?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Frontier AEO Tracker：观察模型如何推荐产品</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Latent.Space 发布的公开实验平台，使用 7 个模型、6 组提示变体和 161 个品类测量 AI 答案引擎中的产品推荐、提及与负面推荐。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://aeo.latent.space/" target="_blank">https://aeo.latent.space/ ↗</a></p>
+    <p><a href="https://latent.space/p/aeo" target="_blank">https://latent.space/p/aeo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读方法说明，理解它不是传统搜索排名，也不是购买转化数据，而是对模型回答中的首选、备选、提及和反向推荐进行统计。打开 categories，挑一个自己熟悉的品类，分别查看不同模型的推荐结果，再打开 sources 页面追溯哪些来源影响了模型回答。做自己的小实验时，先固定问题、地区、语言和模型，记录首选与备选，再换一种同义问法重复几次；最后把结果与官网、文档、真实用户反馈对照，区分“被模型提到”与“真的适合采用”。如果你运营 AI 产品，可把它作为内容和品牌可见性的观察入口，而不是直接当作 SEO 排名工具。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把过去难以观察的“AI 会推荐谁”变成了可浏览的实验数据，并且公开了模型、类别、提示变体和方法论入口。平台还抽取影响推荐的引用来源，并报告失败案例，帮助团队从“多写热门关键词”转向检查自己的主题是否与产品实体、证据和用户问题匹配。需要注意其覆盖模型和实验设置有限，结果是研究信号，不等同于市场份额或商业效果。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>检查一个 AI SaaS 在不同答案引擎中的品牌提及、替代品位置和负面描述。</li>
+    <li>用固定问题集做月度复测，观察官网文档、案例和第三方引用是否改变模型的推荐依据。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2097109581268992021" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRpt3l_asAA54rS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRpt3l_asAA54rS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI：Coding Agent 正在进入研究工作的主循环</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 公开描述研究员日常使用 Coding Agent 的方式发生变化，并把研究流程拆成 Decide、Design、Build、Run、Analyze 等连续环节。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条信息的重要性不在于“研究员也在用代码助手”，而在于 Agent 被放进了实验闭环，而不只是 IDE 里的补全工具。公开文章称研究员会在一天中并发使用多个 Coding Agent，会更快写代码、运行实验，也会把代理交给更复杂且更容易成功的任务。对普通团队来说，真正可复制的不是宣传中的单次 Demo，而是把任务拆成可验证阶段：先明确问题和评估指标，再让 Agent 生成实现、运行测试、分析结果，最后由人决定是否进入下一轮。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种流程持续扩散，竞争重点会从模型单次回答质量转向任务编排、实验基础设施、测试覆盖、权限隔离和结果留痕。研发组织可能需要重新设计代码审查、算力预算和知识沉淀方式；个人开发者也会更像管理多个并发执行单元，而不是等待一个聊天窗口逐条回复。与此同时，Agent 输出更快并不等于研究结论更可靠，评估和安全检查会成为新的瓶颈。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096760512914841745" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRkufP9boAAiA1P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRkufP9boAAiA1P?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRkvftDakAA8U-2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRkvftDakAA8U-2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 SkillZip Pro：Agent Skills 压缩的难点是保留路由</div>
+  <div class="section"><div class="section-label event">事件</div><p>阿里和浙大团队的论文讨论如何在渐进加载的 Skill Bundle 中动态压缩内容，并指出生产 Skill 是目录化执行单元而非单条 Prompt。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>论文标题和摘要把问题从“少写一点提示词”推进到“压缩后 Agent 还能否找到并调用正确能力”。根目录 SKILL.md、references、subskills、scripts 等文件承担不同的触发和执行职责，直接按字符数裁剪可能会删除关键路由、依赖关系或验证步骤。这个视角对已经拥有大量 Skill 的团队尤其重要：压缩目标不应只是 token 数，还要测量命中率、工具选择、失败恢复和任务完成率。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>随着 Agent 技能目录变大，加载成本、上下文污染和错误路由会直接影响可用性与推理费用。未来的 Skill 管理更像软件包构建与编译优化，需要保留入口、依赖、权限和回退路径，并用真实任务回归测试压缩前后的行为。对个人用户而言，整理 SKILL.md 时也不能只追求短，应该把“何时触发、依赖什么、如何验证”写清楚。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096773908494180492" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRk8vqObgAAF61E?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRk8vqObgAAF61E?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 从 IDE 到 Agent 工作流：工程师的价值转向测试与系统设计</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude Code 团队工程师访谈被转述为一线案例：有客户长时间不再亲手写代码，系统提示词和示例反而需要大幅精简，测试量则要显著增加。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这里最值得关注的是投入结构的变化，而不是“工程师会不会失业”的口号。代理能够承担更多实现工作后，人类需要把时间转移到需求边界、架构约束、测试设计、运行环境和结果验收。提示词越长不一定越好，示例过多也可能限制模型；真正有效的上下文应当服务于任务路由和可验证输出。对团队而言，先把测试、日志、回滚和权限边界补齐，再扩大 Agent 的执行范围，往往比盲目追求更长的自动化链条更稳妥。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>软件组织可能减少重复编码环节，却增加测试工程、评估工程、工具平台和领域建模的需求。个人开发者的护城河也会从“记住多少 API”转向能否把模糊目标拆成可验证任务，并判断 Agent 产物是否真的满足约束。短期内，拥有高质量代码库、测试集和运行反馈的团队更容易从 Agent 获得复利，只有模型而没有工程闭环的团队则可能得到更多不可控代码。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2096962248808001608" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2096912604476125242" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2096919017244311941" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yetone/status/2096881214070386692" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2097003962763239841" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2096804625705763260" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2096968390409949488" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2096887887640023071" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRm64cxbQAEpvra?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRm64cxbQAEpvra?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRnzKY0a0AA2L8G?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRnzKY0a0AA2L8G?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRlWpLtb0AA3_Tn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRlWpLtb0AA3_Tn?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRmkafcbsAE5J3c?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRmkafcbsAE5J3c?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRmSriGbEAAjXgh?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRmSriGbEAAjXgh?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>huashu-chrome：开发者称其浏览器操作可减少对正常浏览的干扰，并能把重复试错学习成更短的执行路径；当前仅有推文案例，后续应重点看仓库、安装方式和安全边界。 <a href="https://x.com/AlchainHust/status/2096968390409949488" target="_blank">→</a></li>
+    <li>Google Calendar Computer Use：GPT-6 Astra 被展示为在 Calendar 网格中完成图形化操作的案例，适合跟踪 Computer Use 在非代码界面的稳定性，但展示性强于可复现实验。 <a href="https://x.com/shao__meng/status/2096887887640023071" target="_blank">→</a></li>
+    <li>Agent 研究基础设施：OpenAI 文章、SkillZip Pro 论文和 CS329A 课程线索共同指向“评估—工具—路由—反馈”这一层，后续值得观察是否出现可公开复用的 benchmark、Skill registry 或执行日志标准。 <a href="https://openai.com/index/research-acceleration-view-inside-openai" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

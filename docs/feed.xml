@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 06 Sep 2026 00:46:43 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 00:42:44 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/08 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-08.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-08.html</guid>
+      <description>今天的信号集中在“Agent 从聊天窗口走向可执行工作流”：一边是 OpenDesign、Impeccable、视频分析 Skill 这类可直接装进开发代理的能力层，另一边是 OpenAI 内部研究流程显示并发 Coding Agent 正在成为日常基础设施。值得注意的是，工具质量的竞争点开始从“模型会不会生成”转向“上下文、路由、测试与可复用工作流是否扎实”。
+
+本次 Agent Reach 证据包生成命令运行超过 300 秒并超时，未生成本日 evidence JSON/summary；以下可上手项目均用推文与官网、GitHub、官方文档或可信网页进行人工交叉核验。HNRSS 补充源因此未...</description>
+      <pubDate>2026-09-08T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/06 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-06.html</link>
