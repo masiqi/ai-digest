@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 08 Sep 2026 00:42:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:46:42 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/10 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-10.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-10.html</guid>
+      <description>今天的主线不是又一个更大的聊天模型，而是 AI 正在被重新做成“可执行的软件基础设施”：文档抽取开始为 Agent 提供逐行、逐词可追溯的结构化证据，生成式 UI 与浏览器内小模型把交互推到本地，扩散式 LLM 则把检索、语音和 Agent 的响应延迟压到新的区间。与此同时，推理内核、GEO 内容工程和面向真实工作的 Harness 仍是决定产品能否落地的关键。说明：本轮 Agent Reach 证据包生成超时，HNRSS 补充未纳入；下文的可上手项目均补充核验了官网、GitHub 或官方文档，早期线索会明确标注证据边界。</description>
+      <pubDate>2026-09-10T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/08 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-08.html</link>
