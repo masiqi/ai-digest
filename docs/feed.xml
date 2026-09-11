@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Sep 2026 00:46:42 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 00:47:38 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/11 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-11.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-11.html</guid>
+      <description>今天的信号集中在“模型只是零件，Harness、文档解析、检索评测和浏览器执行才决定 Agent 能不能真正干活”：DeepSeek 把模型适配、工具、会话、沙箱和执行循环做成可组合基础设施，其他团队则分别从代码模式、可审计文档和 Agentic RAG 的评测补齐工程链条。与此同时，SWE-2 的发布和 Miro 被收购说明，AI 能力正在被包装进工作流与 SaaS 资产，而不是停留在单纯的模型榜单上。
+
+说明：本次 X List 抓取成功 116 条；Agent Reach 证据增强脚本在 300 秒内超时，未生成证据包。因此下文的🛠️项目只采用本次推文与人工核验到的官网、GitHub、官...</description>
+      <pubDate>2026-09-11T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/10 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-10.html</link>

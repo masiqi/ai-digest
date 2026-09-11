@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-11</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-11</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“模型只是零件，Harness、文档解析、检索评测和浏览器执行才决定 Agent 能不能真正干活”：DeepSeek 把模型适配、工具、会话、沙箱和执行循环做成可组合基础设施，其他团队则分别从代码模式、可审计文档和 Agentic RAG 的评测补齐工程链条。与此同时，SWE-2 的发布和 Miro 被收购说明，AI 能力正在被包装进工作流与 SaaS 资产，而不是停留在单纯的模型榜单上。
+
+说明：本次 X List 抓取成功 116 条；Agent Reach 证据增强脚本在 300 秒内超时，未生成证据包。因此下文的🛠️项目只采用本次推文与人工核验到的官网、GitHub、官方文档、Hugging Face 或论文交叉证据；没有外部证据的线索明确放入🌱，不把推文中的宣传数字直接当成独立验证结论。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek Harness v0.1.5：把 Agent 的“运行时”也做成可插拔组件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek Harness（dsh）是一个开源 Agent harness，用来连接模型、文件系统、Shell、工具调用、会话、沙箱和执行循环；本次推文提示 v0.1.5 已针对 DeepSeek V4.1 Flash 的不同配置做了专项适配，并开放实验性的 Agent Teams。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">https://github.com/deepseek-ai/deepseek-harness ↗</a></p>
+    <p><a href="https://www.deepseek.com/harness/en" target="_blank">https://www.deepseek.com/harness/en ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub 仓库 README，按仓库当前说明准备 Node.js/pnpm 等开发环境，再克隆代码并阅读 Developer preview、SAFETY 和启动文档。建议不要一上来把它接到真实生产目录：先在测试仓库里启动一个会话，让 Agent 完成“读文件—修改一个小函数—运行测试—输出结果”的闭环；然后分别试用模型、工具、Skill、会话和沙箱等插件的替换。若要验证推文所说的 v0.1.5 与 V4.1 Flash 的结合，必须以仓库当前 release 和配置示例为准，记录版本号、模型配置、是否启用 Agent Teams 以及失败日志，不要只凭截图判断效果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“模型能力不足”之外的系统因素显式化了。模型、工具注册、上下文、存储、循环和 UI 都能作为插件挂载，适合研究 Agent 如何在真实环境中长期工作；但官方仍标为 developer preview，且仓库提示可能有不兼容变更，安全说明也提醒尚未完成安全审计，测试时必须隔离权限。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地代码仓库中搭建可替换模型的编码 Agent，并比较不同 Harness 配置对任务完成率和 token 消耗的影响。</li>
+    <li>把会话、Skill、沙箱或远程调用拆成独立插件，验证多 Agent 协作和长任务执行的工程边界。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tianyi/status/2097919769878135053" target="_blank"><span class="handle">@tianyi</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek 部署工具链：recipe、DeepSelect 与 DeepJIT 让大模型落地更工程化</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek 官方账号介绍了一组新代码仓库，目标是更容易部署 V4.1 Flash 及后续开源模型；本次可核验到的仓库包括 deepseek-recipe、DeepSelect 和 DeepJIT。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deepseek-ai/deepseek-recipe" target="_blank">https://github.com/deepseek-ai/deepseek-recipe ↗</a></p>
+    <p><a href="https://github.com/deepseek-ai/DeepSelect" target="_blank">https://github.com/deepseek-ai/DeepSelect ↗</a></p>
+    <p><a href="https://github.com/deepseek-ai/DeepJIT" target="_blank">https://github.com/deepseek-ai/DeepJIT ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先分别打开三个仓库，先看 README、许可证、硬件要求、模型下载地址和示例命令，再决定是否运行。建议从 recipe 中的最小示例开始，在单独的 Python 虚拟环境或容器里固定依赖；随后用 DeepSelect 检查模型/配置选择逻辑，用 DeepJIT 观察编译或推理优化是否需要特定 GPU、驱动和 CUDA 版本。每一步都先用小模型或短输入验证，再逐渐增加上下文长度；把显存、启动时间、首 token 延迟、生成速度和错误信息记录下来。若当前仓库文档仍在快速变化，就以 commit/release 为实验版本，避免把“能打开 GitHub”误认为“本机一定能跑”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>模型发布的瓶颈越来越从“有没有权重”转向“能不能稳定部署”。这三个官方仓库分别对应配方、选择与性能/编译路径，说明模型团队正在把训练产物、推理栈和 Agent 使用方式一起交付；对本地部署者而言，真正的价值是减少自行拼装依赖的成本，但硬件门槛与版本兼容仍需实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为企业内网或实验室搭建可复现的 DeepSeek 模型部署流程，并把依赖和性能指标纳入 CI。</li>
+    <li>在 Mac、工作站或 GPU 服务器上比较不同推理配置，找出成本、速度和质量之间的可用平衡点。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tianyi/status/2097993855778046379" target="_blank"><span class="handle">@tianyi</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ North-Small-Translate-1.0：218B 总参数、25B 激活的翻译专用 MoE</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cohere/Cohere Labs 发布了面向机器翻译的 North Small Translate 1.0，是稀疏 MoE 解码器模型，官方模型卡给出 218B 总参数、25B 激活参数，并提供 Hugging Face 权重和推理示例。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/CohereLabs/North-Small-Translate-1.0" target="_blank">https://huggingface.co/CohereLabs/North-Small-Translate-1.0 ↗</a></p>
+    <p><a href="https://cohere.com/blog/north-small-translate" target="_blank">https://cohere.com/blog/north-small-translate ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>想先体验而不是本地扛权重时，优先阅读 Cohere 官方文章和 Hugging Face 模型卡，确认语言覆盖、许可证和可用的 demo/API 入口；想自托管则先下载模型卡列出的量化版本，按示例安装 transformers、cohere_melody 或 vLLM，并严格按文档设置 chat template 与 greedy decoding。准备一组包含产品术语、长句、数字、专名和中英混排的平行文本，先测短句，再测长文；把基准翻译、术语一致性、延迟和显存占用与现有服务比较。注意 CC BY-NC 4.0 及模型卡的研究/非商业限制，不能因为“开源权重”就直接用于商业生产。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它体现了主权化、多语言翻译模型的另一条路线：用稀疏激活控制单 token 的计算量，同时保留大规模专家容量；官方还提供近无损量化和企业翻译产品路径。不过 218B 总参数意味着本地部署并不轻量，且非商业许可会限制落地方式，所以它更适合作为翻译质量与 MoE 推理的研究样本，而不是普通电脑上的即装即用工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对多语言产品文案、技术文档或客服语料做术语一致性和质量对照测试。</li>
+    <li>在非商业研究环境中评估大规模稀疏 MoE 的量化、并行和推理成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2098085387398987961" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HR3lht-awAEZWvZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR3lht-awAEZWvZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LandingAI ADE Gen2：让 Agent 读取 PDF 时保留结构和来源位置</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LandingAI 的 ADE 是文档智能平台，ADE Gen2 使用 DPT-3 解析模型，把复杂文档转成结构化数据，并提供 Parse、Extract、Ground 三类 API；Ground 可把抽取字段映射回页面位置。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docs.landing.ai/dpt3/overview" target="_blank">https://docs.landing.ai/dpt3/overview ↗</a></p>
+    <p><a href="https://docs.landing.ai/ade/ade-parse-models" target="_blank">https://docs.landing.ai/ade/ade-parse-models ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入官方文档注册或选择可用的试用入口，准备一份包含表格、扫描页、印章/签名和多栏排版的 PDF。第一步调用 Parse，把文档转成结构化 Markdown 或解析结果；第二步用 Extract 指定字段，例如合同编号、付款期限和金额；第三步用 Ground 回查每个字段在原页的坐标或来源片段。把同一份文档交给普通 OCR、通用多模态模型和 ADE 比较，重点检查表格是否错列、字段是否漏抽、页码引用是否准确。不要只看 JSON 能否返回，要把原 PDF、抽取结果、页面定位和人工复核结论一起保存，才能判断它是否适合进入 RAG 或审批链路。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>当文档的主要读者从人变成 Agent，单纯“识别出文字”已经不够，结构恢复、表格单元格、图章以及可追溯定位都直接影响后续检索和决策。ADE 把 Parse、Extract、Ground 分层，便于把抽取、验证和引用拆成可审计步骤；这比让 Agent 直接阅读一整页 OCR 文本更接近企业财务、医疗和合规工作流，但仍需用自己的文档集验证错误率。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从合同、发票、研报和合规材料中抽取字段，并为每个答案保留页码和原文证据。</li>
+    <li>为 Agentic RAG 建立文档预处理层，减少表格错位和引用无法回溯的问题。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2097822699204857879" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRz2ncUbYAA8ucu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRz2ncUbYAA8ucu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2097726281681080320/img/i6g1y72z1yVqaHA3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2097726281681080320/img/i6g1y72z1yVqaHA3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ diagram-design：给 Claude Code、Codex 和 Pi 的编辑型图解 Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>diagram-design 是一个面向 AI coding agent 的图解 Skill，官方仓库描述为 38 种编辑型图表、自包含 HTML+SVG，并支持品牌化样式与本地画廊预览。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/cathrynlavery/diagram-design" target="_blank">https://github.com/cathrynlavery/diagram-design ↗</a></p>
+    <p><a href="https://cathrynlavery.github.io/diagram-design/" target="_blank">https://cathrynlavery.github.io/diagram-design/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库或按 README 的插件/Skill 安装方式加入你的 Claude Code、Codex 或 Pi 环境；不要直接让 Agent“画一张好看的图”，先给它一份真实的架构说明、流程约束和项目色板。让 Skill 先判断图解语义，再选择流程、时序、分层、队列或治理等类型，生成 HTML+SVG；打开本地 gallery 对比 light、dark 和 editorial 变体，检查文字溢出、箭头方向、颜色对比度和移动端缩放。最后把 SVG 导出到文档或演示文稿中，核对字体、透明色和导入兼容性。首次在新项目中使用时，按仓库的 onboarding 规则提供 style-guide.md，避免默认皮肤悄悄进入品牌项目。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它抓住了 Agent 产出中经常被低估的“表达层”：Mermaid 能表达结构，却不一定能直接交付给客户或评审会。自包含 SVG、语义模式、品牌色和导出检查让图解更像可维护的设计资产，而不是一次性截图；同时 Skill 本身也展示了如何用约束、反模式和静态回退提高生成结果的稳定性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把系统架构、数据流、时序和 Agent 工作流快速转成可编辑的设计文档。</li>
+    <li>为产品评审、技术方案和培训材料批量生成风格一致的图解，并保留 SVG 源文件。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2097878125573194173" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HR0pB4XaUAAuf3o?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR0pB4XaUAAuf3o?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Browserbase Code Mode：用可执行代码替代浏览器 Agent 的逐点击循环</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Browserbase 提出的 Code Mode 让浏览器 Agent 通过代码进行页面交互、数据过滤和跨服务组合，目标是减少中间工具结果、上下文传输和重复决策。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.browserbase.com/blog/evolving-computer-use-with-code" target="_blank">https://www.browserbase.com/blog/evolving-computer-use-with-code ↗</a></p>
+    <p><a href="https://browserbase.com/blog/code-mode-is-all-you-need" target="_blank">https://browserbase.com/blog/code-mode-is-all-you-need ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方文章，再从 Browserbase 的免费入口或 Stagehand/浏览器 Agent 示例开始，创建一个隔离的测试浏览器会话。先让 Agent 完成低风险任务，例如打开公开页面、提取表格并保存 CSV；随后把“读取页面—筛选数据—调用另一个服务—生成摘要”写成一段可审查的代码，而不是让模型每一步都发一个 click/type 工具调用。给浏览器会话设置域名白名单、只读凭据和人工确认点，记录每次脚本执行的输入、页面状态和输出。最后用同一任务对比截图点击模式与 Code Mode 的 token、耗时、失败重试和提示注入表现，确认节省的上下文没有换来更大的权限风险。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>浏览器 Agent 的核心问题不仅是“看懂屏幕”，还包括上下文膨胀、控制流不稳定和跨系统组合困难。代码可以在执行端先过滤、聚合并写盘，只把必要结果返回模型，也能把控制流固化在 TypeScript 中；但代码执行拥有更强副作用，登录、支付、外链提交等操作必须保留审批和最小权限，不能把“更快”直接等同于“更安全”。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>读取公开网页或后台报表，清洗数据后写入 CSV、数据库或内部 API。</li>
+    <li>把浏览器操作与文件、CRM、数据仓库组合成可审查的业务自动化流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2097838012260585560" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HR0EidyaAAARVBi?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR0EidyaAAARVBi?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SWE-2：只在 Devin 工作流中可用的低成本编码模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cognition 发布 SWE-2，官方文章称其从 Kimi K3 做后训练，并在 Devin Desktop 与 CLI 提供使用，Web/Fusion 版本陆续推出；它不是独立公开权重或通用 API 模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cognition.com/blog/swe-2" target="_blank">https://cognition.com/blog/swe-2 ↗</a></p>
+    <p><a href="https://devin.ai/" target="_blank">https://devin.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果已经有 Devin 账户，先在 Desktop 或 CLI 的模型/任务设置中选择 SWE-2，拿一个可回滚的小型真实仓库做基线：让它先读 issue、制定计划、修改代码、运行测试，再检查 diff、依赖变化和测试日志。至少准备三类任务——单文件 bug、跨文件功能和需要搜索外部文档的任务——分别记录人工介入次数、执行轮数、完成时间和最终测试通过率。不要把官方 benchmark 或“低成本”直接换算成你的项目成本；还要确认你的订阅层级、地区和上线批次是否已开放。涉及敏感代码时先使用脱敏仓库，所有合并动作保留人工 review。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>SWE-2 的看点不只是模型分数，而是“模型与 Harness 一起交付”。官方称更强的工程判断减少了绕路和重复读取，并在特定 FrontierCode 任务上降低执行轮数和平均成本；但这些结果来自 Cognition 自己的运行环境，模型只在 Devin 产品内提供，不能与公开 API 或本地权重直接类比，采购前必须用自己的代码库复测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在有测试覆盖的代码仓库中，让编码 Agent 承担 issue 分析、实现和回归测试准备工作。</li>
+    <li>比较不同模型在长时间编码任务中的执行轮数、人工接管点和每个可合并变更的成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2098089254010405115" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HR3oX-3awAMpMKj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR3oX-3awAMpMKj?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Q2D-Web：为 Agent 改写查询重新测量第一阶段检索器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Perplexity 发布 Q2D-Web 基准，用 Agent 改写后的搜索查询评估大规模 Web 检索中的 embedding/第一阶段召回；论文描述了约 1.9 亿网页文档和近 7 万条查询规模，并公开方法与结果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://arxiv.org/abs/2609.08887" target="_blank">https://arxiv.org/abs/2609.08887 ↗</a></p>
+    <p><a href="https://www.perplexity.ai/hub/blog/q2d-web" target="_blank">https://www.perplexity.ai/hub/blog/q2d-web ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先下载或阅读论文中的数据构造、查询改写、正例标注和评测协议，把它当作检索工程的测试设计参考，而不是直接把排行榜名次当成生产结论。对自己的知识库或公开语料，先记录用户原问题，再让 Agent 生成主查询和支持查询；分别测召回率、首屏精度、重复文档比例、跨语言表现和引用覆盖。为每条查询保留人工相关性判断及“主题相似但实体/日期/版本错误”的困难负例，再比较 BM25、现有 embedding 和候选模型。最后把离线指标与真实 Agent 的回答正确率、检索 token 和延迟关联起来，避免只优化第一阶段分数却损害最终答案。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统检索基准常假设查询由人直接提出，而 Agentic RAG 往往会先拆解、改写并生成多个查询；检索器在这种分布下可能表现完全不同。Q2D-Web 把生产搜索结果、Agent 查询和更密集的相关性标注结合起来，提醒团队把“查询生成—召回—重排—引用”作为一条链评估。论文数据规模很大，个人不必照搬全量，但其困难负例和查询日志方法值得立即用于内部评测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为企业知识库或网页搜索建立更接近 Agent 使用方式的离线评测集。</li>
+    <li>定位“模型回答错”究竟来自查询改写、第一阶段召回、重排还是引用拼接。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2097832538563920180" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HRz_f7XbwAA5FqT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRz_f7XbwAA5FqT?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Bending Spoons 签约收购 Miro：SaaS 资产进入“组合运营”阶段</div>
+  <div class="section"><div class="section-label event">事件</div><p>Bending Spoons 于 2026 年 9 月 10 日宣布以 13.55 亿美元企业价值收购协作白板平台 Miro，交易预计在 2026 年第四季度完成，仍需监管批准。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是一笔可以简单归结为“AI 公司收购 AI 公司”的交易。Miro 的核心资产是团队协作、视觉规划、知识沉淀和企业分发渠道；Bending Spoons 则在持续收购成熟互联网/SaaS 产品并进行组合运营。真正值得观察的是，收购方能否把 Miro 的协作数据、模板和工作流与其平台技术结合，同时保持企业客户需要的稳定性、权限和数据边界。对 AI 工具创业者而言，分发、留存、现金流和可被整合的工作流资产，可能比一个孤立的模型功能更接近退出价值。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>行业可能更重视拥有明确使用频率和组织级数据沉淀的 SaaS，而不是只看短期 AI 热度。用户侧要关注合同主体、数据处理、价格与产品路线是否变化；开发者侧则应把 AI 功能设计成可迁移、可审计的工作流能力，避免把商业价值完全押在某个模型 API 或一次性插件上。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2098201264308040108" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HR2t--2a4AAiVwE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR2t--2a4AAiVwE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR2uEyFbkAAHnyA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR2uEyFbkAAHnyA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 威胁情报报告：模型安全正在变成持续运营能力</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 发布新的威胁情报报告，披露其识别和阻断的 Claude 滥用案例，覆盖网络攻击、影响力行动、监控、生物学与武器相关活动。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>报告的重要性不在于某个“AI 已经自主犯罪”的叙事，而在于它展示了模型公司如何把滥用检测、账号处置、情报共享和护栏迭代串成运营闭环。推文中的 154 页是传播中的篇幅说法，正式解读应以 Anthropic 官方报告为准。企业接入 Agent 时，也需要把威胁建模从提示词扩展到工具权限、网络访问、凭据、日志保留和异常行为检测；否则模型本身拒答做得再好，外部工具仍可能放大风险。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>安全、合规和采购评估会从“模型有没有安全政策”转向“供应商能否持续发现并响应真实滥用”。对开发团队而言，沙箱、域名白名单、最小权限、人工审批、可追溯日志和密钥轮换不再是上线后的补丁，而应成为 Agent 架构的默认组件；同时要区分厂商自报案例与独立验证，避免用宣传材料替代风险评估。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AnthropicAI/status/2098097512544444447" target="_blank"><span class="handle">@AnthropicAI</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 HarnessDev：评测对象从“模型完成任务”转向“模型能否造出可进化的 Harness”</div>
+  <div class="section"><div class="section-label event">事件</div><p>ByteDance Seed 发布 HarnessDev 研究，要求 Agent 从最小可运行种子和少量案例出发构建执行系统，再利用反馈迭代改进，并在留出任务上评估能力与成本。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这项工作把评测单位向上移动了一层：模型不只负责给答案，还要设计工具调用、上下文管理、执行循环和结果校验。论文摘要显示，自建 Harness 在代码和搜索/研究任务上仍明显落后于成熟人工系统，在写作和机器学习实验任务上则可能达到或超过参考系统；而且进化收益不稳定、跨模型迁移有限。它因此更适合被看作研究议程和诊断框架，而不是“Agent 已能自动造出生产系统”的证明。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来比较 Agent 框架时，单看某个模型的 benchmark 可能越来越不够，团队还要测 Harness 的可维护性、迁移性、失败恢复、执行 token 和安全边界。对平台工程来说，这会推动“模型—Harness—任务集”三者联合评测，也会让固定脚手架、工具设计和交付校验成为可量化的产品差异。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2098053941800100294" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2098061099048309222" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2098008127614419208" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2098032095457120391" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2097954026612547605" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2097948458565218743" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2098116466285682757" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2097984126460527101" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2098199199569613108" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HR3I46hbEAAifSR?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR3I46hbEAAifSR?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR1otIWbcAA1VPm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR1otIWbcAA1VPm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR1oub4bsAEqkNE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR1oub4bsAEqkNE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR1ovfqbkAAmpX4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR1ovfqbkAAmpX4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR4AQ48acAAu4uq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR4AQ48acAAu4uq?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR4BOToboAARCP2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR4BOToboAARCP2?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR4BbgIaAAAwpM5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR4BbgIaAAAwpM5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR4BpYKaMAA6nJq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR4BpYKaMAA6nJq?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR2B0D-bYAAcZzt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR2B0D-bYAAcZzt?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR1UyHiaAAAtpqw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR1UyHiaAAAtpqw?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>OpenDesign：推文称已上线 DeepSeek V4.1 Flash，并宣称设计任务成本/得分对比；缺少本次独立可复现实验，先留意其公开基准和试用入口。 <a href="https://x.com/OpenDesignHQ/status/2097984126460527101" target="_blank">→</a></li>
+    <li>Agent Eval 方法论：Meta AI 负责人整理的十篇 Agent 评测工程实践，适合作为评测团队建立策略、组织、迭代和长期演进清单的入口；本次未逐篇核验原始系列，先作阅读索引。 <a href="https://x.com/shao__meng/status/2098199199569613108" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
