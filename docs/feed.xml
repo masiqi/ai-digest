@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Sep 2026 00:47:38 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 00:48:51 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/12 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-12.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-12.html</guid>
+      <description>今天最值得关注的变化，不是又多了一个“会聊天”的模型，而是模型公司开始把 Agent 的运行时、云端执行、上下文管理和多代理协作一起产品化：OpenAI 将 Codex harness 变成 Agents API，Cursor 把一个协调 Agent 调度多个子 Agent，DeepSeek 则围绕 V4.1 Flash 补齐部署与推理工具链。另一条实用主线是“把 AI 当成可操作的软件入口”：WorkBuddy、Raycast、OpenDesign 和本地工具正在把模型接入代码、文件、设计与日常工作流。</description>
+      <pubDate>2026-09-12T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/11 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-11.html</link>
