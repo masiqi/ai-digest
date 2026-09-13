@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-13</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-13</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号从“会生成内容”继续向“能在真实环境里持续完成任务”迁移：一边是 GPT-6 Astra、DeepSeek-V4.1-Flash 这类模型把电脑操作、长上下文和 Agent 循环推到更实用的区间，另一边是训练工具开始把沙箱、验证器、轨迹和异步 rollout 作为标准基础设施。对个人开发者而言，今天最值得直接上手的不是再换一个聊天机器人，而是把 Agent 的行为、上下文和任务环境变成可观测、可复现、可迭代的工程系统。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ IP as Logo Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个遵循 Agent Skills 开放格式的图像生成 Skill，把指定 IP 变成极简、圆润、在 32×32 像素仍可识别的吉祥物形象。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/s1dashu/ip-as-logo-skill" target="_blank">https://github.com/s1dashu/ip-as-logo-skill ↗</a></p>
+    <p><a href="https://ipaslogo.com" target="_blank">https://ipaslogo.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备支持图像生成的兼容 Agent，再在终端执行 `npx skills@latest add s1dashu/ip-as-logo-skill`；如果希望全局可用，追加 `--global`。安装后给 Agent 一个明确主体和背景，例如“生成一个深海军蓝背景、从右下角探出的圆润小赫形象”，先让它提出三种方向，再确认生成六张独立的 1:1 候选图。也可以直接打开 https://ipaslogo.com 浏览和下载现成作品。注意它是图像生成工作流，不是普通插画提示词；需要可用的高阶图像模型，输出后自行检查商用场景与品牌一致性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“好看”拆成可复用的设计约束：大轮廓、少形状、有限语义色、低复杂度和固定构图策略，并以开放 Skill 格式适配多个 Agent。仓库约有 5.1K stars、258 forks，官网还提供可商用下载的现成素材，说明 Agent Skill 正从个人提示词逐渐变成可安装、可迁移的创作组件。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为个人项目、开源仓库或小程序快速做一套一致的 IP/吉祥物候选。</li>
+    <li>把产品属性转成可复用的图像设计流程，供设计评审或 Agent 批量生成素材。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2098606409717887237" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HR-_YewaYAA_4Jo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR-_YewaYAA_4Jo?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Training Agents：Hugging Face 后训练实战系列</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Hugging Face 团队公开了一套从 SFT、蒸馏、GRPO 到环境 RL 的 Agent 后训练课程、直播回放和代码仓库。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/burtenshaw/training-agents" target="_blank">https://github.com/burtenshaw/training-agents ↗</a></p>
+    <p><a href="https://huggingface.co/blog/sergiopaniego/rl-environments-2026" target="_blank">https://huggingface.co/blog/sergiopaniego/rl-environments-2026 ↗</a></p>
+    <p><a href="https://github.com/huggingface/trl" target="_blank">https://github.com/huggingface/trl ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并阅读 `README.md`、`program.md`，再按顺序做最小实验：先用 TRL 对一个小模型和对话/工具调用数据做 SFT，然后用成功轨迹做蒸馏或偏好数据，接着为可验证任务写 reward function，用 GRPO 训练，最后把终端、浏览器或 API 任务接到 OpenEnv 风格环境中。课程仓库明确说明它提供的是可复用的上下文、Skills、指南和例子而不是完整训练代码；权重、数据集、日志应放在外部 workspace。没有 GPU 时先读代码和运行小规模 smoke test，不要把课程中的 benchmark 直接当成自己的实测结果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这套内容把 Agent 训练的难点从“换模型”拉回到可执行结果：轨迹、验证器、沙箱和异步 rollout。Hugging Face 的配套文章复盘了 13 家实验室的公开报告，并指出环境成本已成为扩大后训练的核心瓶颈；因此它对想做 Coding Agent、工具调用或本地小模型训练的人，提供了从概念到可复现实验的连续路径。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为内部 Coding Agent 构建可验证的训练任务和回归评测。</li>
+    <li>用小模型复现实验，学习 SFT→蒸馏→GRPO→环境 RL 的完整工程链。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2098915616719778303" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSDYnfgaoAAAJ2s?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSDYnfgaoAAAJ2s?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR8NImZXYAIgT2h?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR8NImZXYAIgT2h?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Grok Bot for Engineering</div>
+  <div class="section"><div class="section-label event">一句话</div><p>SpaceXAI 分享的工程实践指南，用多个专长不同的 Bot 管理 Cursor Cloud Agents、读取 transcript、检查 PR 证据并持续跟进卡住的任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.ai/bot/guides/grok-bot-for-engineering" target="_blank">https://x.ai/bot/guides/grok-bot-for-engineering ↗</a></p>
+    <p><a href="https://api2.cursor.sh/updates/download/stable/darwin-arm64/grok-bot-bd824e1890d8b96f" target="_blank">https://api2.cursor.sh/updates/download/stable/darwin-arm64/grok-bot-bd824e1890d8b96f ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方指南中的五个 Bot 分工和反馈闭环，再下载 macOS 版本或从页面的 engineer bot 入口开始。把一个边界清晰、可验证的任务交给单一领域 Bot，要求它启动 Cloud Agent、附带完成标准和需要回传的截图/测试证据；让它轮询 transcript 和产物，发现环境卡住时排队发送 follow-up，而不是同时向所有 Agent 广播模糊指令。实践时先从一个仓库、一个 worker、一个低风险 PR 开始，并为权限、网络、密钥和合并动作设置人工审批。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它展示的不是“一个更聪明的 Agent”，而是一种可运营的 Agent 组织：专长隔离、上下文按域保存、主 Bot 做调度、Cloud Agent 执行、证据回传和失败解阻塞组成闭环。官方页面还描述了专用 worker、截图核验和 Slack 触发方式，这对多 Agent 团队的关键启发是把监控、复核、重试和权限边界作为产品能力，而非依赖人盯终端。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>夜间并行处理多个低风险 issue、测试修复和 PR 初审。</li>
+    <li>在有专用 Mac mini/私有 worker 的团队中运行需要特定环境的自动化任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2098598407795544076" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HR-4HQjakAAzPVw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR-4HQjakAAzPVw?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DreamDojo</div>
+  <div class="section"><div class="section-label event">一句话</div><p>NVIDIA 等团队发布的通用机器人世界模型，从大规模人类第一视角视频学习物理与环境知识，再生成动作条件下的机器人视觉 rollout。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://dreamdojo-world.github.io" target="_blank">https://dreamdojo-world.github.io ↗</a></p>
+    <p><a href="https://github.com/NVIDIA/DreamDojo" target="_blank">https://github.com/NVIDIA/DreamDojo ↗</a></p>
+    <p><a href="https://arxiv.org/abs/2602.06949" target="_blank">https://arxiv.org/abs/2602.06949 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在项目主页阅读方法图、视频样例和下游应用，再克隆官方代码仓库，按 `pyproject.toml` 与 README 的依赖说明建立独立 Python 环境。优先复现公开 demo 或读取预处理数据，不要一开始就尝试完整训练；这个项目面向 GPU 研究环境，训练规模与 44k 小时视频数据不适合普通笔记本。重点观察 action-conditioned rollout、模型蒸馏和 policy evaluation 的接口，再把一个简单的机器人动作序列作为实验输入，比较模型生成的环境变化与真实轨迹。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>DreamDojo 把机器人训练从昂贵、慢迭代的 3D 仿真，推进到由视频预训练的世界模型路线。官方项目声称使用约 44k 小时多样化人类第一视角视频，经过蒸馏后可实现 10 FPS、超过一分钟的长时自回归交互，并覆盖多个机器人形态与环境；真正的价值在于让策略评估和规划先在可生成世界中迭代，再决定是否上实体设备。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在真实机器人部署前做策略评估和模型式规划。</li>
+    <li>为具身 Agent 研究构建动作—视觉反馈的模拟数据生成器。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2098669376056824221" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole</div>
+  <div class="section"><div class="section-label event">一句话</div><p>macOS 上的开源清理、卸载、磁盘分析与优化工具，CLI 免费开源，并另有原生 Mole for Mac 应用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/mole" target="_blank">https://github.com/tw93/mole ↗</a></p>
+    <p><a href="https://mole.fit" target="_blank">https://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS 终端先执行 `curl -fsSL https://raw.githubusercontent.com/tw93/Mole/main/install.sh | sh`，然后用 `mo --help` 查看命令；建议先从 `mo clean --dry-run` 或项目清理的预览模式开始，核对待删除路径，再执行清理。需要卸载应用时先用 `mo uninstall --dry-run` 检查关联文件；开发者可以关注 `mo purge` 对项目构建产物的整理。不要把模型权重、虚拟环境、共享配置或正在使用的缓存一并删除，任何带 sudo 的动作都应逐项确认；原生 App 可从 https://mole.fit 试用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 和本地模型开发会大量制造 Rust target、`.next`、`dist`、Xcode DerivedData、旧版应用包和下载缓存，磁盘管理已经成为 AI 工作流的隐形成本。Mole 的亮点是把清理、卸载、分析、优化和状态监控整合进一个原生 macOS 工具，同时在新版本中更谨慎地区分依赖、模型数据、工具缓存与可删除构建产物，适合开发者先预览再清理。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定期回收本地 Agent、多轮编译和模型下载产生的构建垃圾。</li>
+    <li>卸载 AI 工具时清理残留，同时保留共享依赖和必要配置。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2098662031096422778" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2098658376490315776/img/vMH3xwWfDr6I9WfC.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2098658376490315776/img/vMH3xwWfDr6I9WfC.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AI Engineer Coach</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Microsoft 开源的 VS Code 扩展，读取本地 AI 编程会话日志并生成使用分析、反模式与上下文健康洞察，默认不把日志上传到外部。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/microsoft/AI-Engineering-Coach" target="_blank">https://github.com/microsoft/AI-Engineering-Coach ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并准备 VS Code、Node.js/npm，再执行 `npm ci`、`npm run build`，按仓库文档安装生成的 `.vsix`；或者用 Dev Container 完成构建。安装扩展后打开 Dashboard，选择本地已有的 Copilot/相关会话日志，查看 Timeline、Coding Moments、Output、Patterns 和 Anti-Patterns。注意它不是通用的云端 Agent 监控平台，部分 Skill Finder、Learning Center 和 Context Health AI review 依赖 VS Code 内置模型；如果目标 harness 没有被支持的本地日志，先查对应 parser 与 issue，别把“没有会话”误判成使用率为零。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 工程的评测对象从“代码最后能否运行”扩展到“人和 Agent 如何协作”。仓库提供 Dashboard、时间线、模式/反模式和 Agentic SDLC 视图，并强调只读、本地解析、无专有遥测；开发者可以据此发现上下文反复丢失、提示词模式不佳、工具调用失败等问题，再用数据改进工作流，而不是凭感觉换模型。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>复盘团队使用 Copilot、Codex 或终端 Agent 的真实协作效率。</li>
+    <li>在不上传源码和会话日志的前提下，建立本地 AI 编程习惯审计。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2098840834942652505" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek-V4.1-Flash</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek 的开源多模态 MoE，支持最多 1M token 上下文，并用 Causal Encoder-Decoder 与稀疏注意力压缩长上下文 Agent 的 KV cache。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://modelscope.cn/models/deepseek-ai/DeepSeek-V4.1-Flash" target="_blank">https://modelscope.cn/models/deepseek-ai/DeepSeek-V4.1-Flash ↗</a></p>
+    <p><a href="https://huggingface.co/deepseek-ai" target="_blank">https://huggingface.co/deepseek-ai ↗</a></p>
+    <p><a href="https://chat.deepseek.com" target="_blank">https://chat.deepseek.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 ModelScope 模型卡阅读技术报告、推理和评测说明，再用官方 Chat 入口做文本/图片/长文档小试验；若要本地部署，先确认显存、权重下载空间和推理框架满足要求，按模型卡的 inference README 做权重转换，不要直接把约 500GB 级别权重下载到系统盘。用同一个 Coding Agent 任务分别测试低、中、高 reasoning effort，记录首 token 延迟、总 token、工具调用成功率和失败重试次数；把 1M context 当上限而非默认配置，真实吞吐仍取决于硬件、量化和服务端实现。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“长上下文”转成了更具体的系统指标：模型卡描述 552B backbone、8B/16B 每 token 激活、最高 1M context，并通过 CED、CSA2、FP4 KV cache 和稀疏索引把全局 KV cache 压到约 890 bytes/token。对输入远多于输出的 Coding Agent，这种设计直接对应读取文件、日志和历史轨迹的成本；但模型体量仍然很大，公开 benchmark 也依赖具体 harness，不能只看榜单判断本地体验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Coding Agent 读取大型仓库、长日志和多轮工具轨迹。</li>
+    <li>在可控 reasoning effort 下探索准确率、延迟和成本的工程折中。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2098840834942652505" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GPT-6 Astra：电脑使用进入更强的工程化阶段</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布 GPT-6 Astra，并将电脑操作、浏览、软件工程和专业工作能力作为核心卖点，逐步开放 ChatGPT、Codex、API、Azure 与 Bedrock。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次更新的真正信号不是又多一个模型名，而是模型开始被当作可以接管完整工作流的执行层。官方展示包括填写表单、更新 CRM、研究并写入文档、生成网站和运行前端 QA；开发者侧还加入异步工具调用与 steering。对 Agent 系统来说，关键验收标准会从单轮答案质量变成任务完成率、是否越权、是否能在真实软件中恢复和是否能提供证据。OpenAI 页面给出的指标应视为厂商自测，落地前仍要在自己的浏览器、权限和数据边界下做回归。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>电脑使用能力成熟后，软件入口的价值会从 API 延伸到 GUI 和企业内部系统，自动化覆盖面扩大，但安全审计、确认策略、可撤销操作和凭据隔离也必须同步升级。低风险、重复性、可验证的工作最适合先交给 Agent；涉及付款、删除、权限和对外发送的动作仍应保留人工门槛。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2098840834942652505" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 长上下文竞争转向 KV Cache 与服务调度</div>
+  <div class="section"><div class="section-label event">事件</div><p>DeepSeek-V4.1-Flash 的技术说明和 Together AI 的 CPD 研究都把 KV cache、prefill/decode 分离与缓存感知调度放到性能中心。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>当 Agent 每一步都把文件、终端输出和历史轨迹重新送回模型，长上下文的瓶颈不只在参数量，也在 prefill 计算、显存占用、首 token 延迟和重复上下文的调度。DeepSeek 选择从架构、稀疏注意力和低精度 KV 入手，Together 则按 warm/cold 请求拆分资源，避免大冷请求阻塞能够复用缓存的热请求。两条路线共同说明：未来模型服务的核心竞争力会是模型、缓存、网络和调度的联合优化，而非只比较生成 tokens/s。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业自建 Agent 平台需要开始记录 cache hit rate、prefill 时间、TTFT、上下文增长和每个工具回合的 token 消耗，并按冷/热请求做路由。对用户侧而言，1M context 并不等于可以无成本塞入 1M token；合理的上下文摘要、分层记忆、前缀稳定化和工具结果裁剪，往往比盲目扩大窗口更能降低费用和延迟。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2098840834942652505" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 具身智能训练开始从“仿真器”转向“可生成世界”</div>
+  <div class="section"><div class="section-label event">事件</div><p>DreamDojo 展示了以大规模人类视频预训练机器人世界模型，并用蒸馏实现长时、实时的动作条件生成。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>传统机器人训练依赖精细 3D 引擎，建模成本高且模拟到现实的差距难消除；DreamDojo 的路线是先从人类视频中学习更广泛的物理与交互先验，再针对目标机器人做后训练。这样做不意味着仿真器消失，而是把世界模型作为策略评估和规划层，帮助研究者低成本筛掉明显失败的策略。其真正难点仍在动作可控性、失败样本、真实传感器对齐和安全验证，公开 demo 不能直接证明可部署性。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果世界模型能稳定生成长时、动作条件一致的 rollout，机器人公司可以把更多策略搜索、回归测试和数据合成前移到数字环境，减少实体机磨损与实验等待。产业竞争也会从单一机械臂控制器，扩展到视频数据、动作标注、世界模型、评测基准和 sim-to-real 闭环；但数据许可、物理幻觉和安全责任会成为商业化门槛。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2098669376056824221" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Anthropic“让前沿发展放慢”的治理讨论：Dario Amodei 的公开主张把前沿能力、国家安全与监管节奏放在同一议题上，适合继续核对原文与政策回应 <a href="https://www.anthropic.com/news/paris-ai-summit" target="_blank">→</a></li>
+    <li>OpenAI MRC 网络协议：OpenAI 与 AMD、Broadcom、Intel、Microsoft、NVIDIA 合作推进 800Gb/s 集群网络的 Multipath Reliable Connection，可能影响大规模训练与推理网络设计 <a href="https://openai.com/index/mrc-supercomputer-networking" target="_blank">→</a></li>
+    <li>AI Agent 训练环境与验证器：Harbor、OpenEnv、Repo2RLEnv 等项目正在把任务、harness、sandbox 和 verifier 解耦，值得观察是否形成跨实验室接口 <a href="https://huggingface.co/blog/sergiopaniego/rl-environments-2026" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

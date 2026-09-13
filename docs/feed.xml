@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 12 Sep 2026 00:48:51 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 00:44:44 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/13 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-13.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-13.html</guid>
+      <description>今天的信号从“会生成内容”继续向“能在真实环境里持续完成任务”迁移：一边是 GPT-6 Astra、DeepSeek-V4.1-Flash 这类模型把电脑操作、长上下文和 Agent 循环推到更实用的区间，另一边是训练工具开始把沙箱、验证器、轨迹和异步 rollout 作为标准基础设施。对个人开发者而言，今天最值得直接上手的不是再换一个聊天机器人，而是把 Agent 的行为、上下文和任务环境变成可观测、可复现、可迭代的工程系统。</description>
+      <pubDate>2026-09-13T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/12 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-12.html</link>
