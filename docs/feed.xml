@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 14 Sep 2026 00:55:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 00:44:42 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/15 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-15.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-15.html</guid>
+      <description>今天最值得关注的不是又一个“更会聊天”的模型，而是 AI 开始被装进可持续运行的工作系统：一端是把多个编码 Agent、工作树、远程主机和成本放进同一工作台，另一端是把设计规范、事件响应、机器人控制和芯片 RTL 数据做成可验证的专用流程。可上手项目明显偏向“让 Agent 少写废话、留下证据、可被人接管”。
+
+说明：本次 X List 抓取成功，共 103 条；Agent Reach 证据增强在 300 秒内未完成，因此没有把未核验的候选硬写成事实。下列🛠️项目均有本次推文与已访问的官网、GitHub、官方文档或可信技术页面交叉支持；🌱中的条目明确标注“证据待补”。</description>
+      <pubDate>2026-09-15T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/14 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-14.html</link>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-15</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-15</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得关注的不是又一个“更会聊天”的模型，而是 AI 开始被装进可持续运行的工作系统：一端是把多个编码 Agent、工作树、远程主机和成本放进同一工作台，另一端是把设计规范、事件响应、机器人控制和芯片 RTL 数据做成可验证的专用流程。可上手项目明显偏向“让 Agent 少写废话、留下证据、可被人接管”。
+
+说明：本次 X List 抓取成功，共 103 条；Agent Reach 证据增强在 300 秒内未完成，因此没有把未核验的候选硬写成事实。下列🛠️项目均有本次推文与已访问的官网、GitHub、官方文档或可信技术页面交叉支持；🌱中的条目明确标注“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Termany：把多个编码 Agent、终端、工作树和远程主机放在一扇窗口里</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本地优先的 Agent 原生终端，可并排运行 Claude、Codex、Gemini、OpenCode、Hermes 等会话，并在同一界面查看文件、Git diff、会话状态、端口、SSH 主机与用量。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/thinkany-ai/termany" target="_blank">https://github.com/thinkany-ai/termany ↗</a></p>
+    <p><a href="https://termany.sh/" target="_blank">https://termany.sh/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官网下载安装桌面版，或按仓库 README 从源码运行；启动后在 Settings → Agents 中点击 Detect，让它探测本机已有的 Claude、Codex、Gemini 等命令。新建一个 workspace，把同一项目按页面、标签页和 pane 拆开，在不同 pane 分别启动编码 Agent；用 ⌘D/⇧⌘D 分屏，用文件视图或 Git diff 检查改动，用 Activity Monitor 看 CPU、内存和端口。若有开发机，可给每个 pane 配置 SSH，先测试连接，再把长任务放到远端，最后通过状态标签定位需要你处理的会话。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“多 Agent 并行”从几个终端窗口的手工管理，提升为可观察的工作空间问题。working、done、needs attention 等状态让后台任务具备可见性，工作树、端口和远程连接又把真正容易失控的工程上下文放回同一界面。仓库采用 AGPL-3.0，适合先试用再评估团队部署和二次修改的许可边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>同一代码库并行跑功能开发、测试修复和代码审查，并快速比较各自 diff。</li>
+    <li>将需要长时间运行的 Agent 放到 SSH 开发机，避免笔记本休眠后丢失上下文。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2099358601731256371" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2099357992630267904/img/-bVbmleFxnUzqKPQ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2099357992630267904/img/-bVbmleFxnUzqKPQ.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ pstack：把 Cursor 变成强调验证和多模型分工的工程团队</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cursor 官方插件，提供 poteto-mode 及一组工程 Skills/Playbooks，用于把复杂编码任务拆成调查、架构、TDD、评审、去脏和验证等可重复步骤。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/cursor/plugins/tree/main/pstack" target="_blank">https://github.com/cursor/plugins/tree/main/pstack ↗</a></p>
+    <p><a href="https://cursor.com/marketplace/cursor/pstack" target="_blank">https://cursor.com/marketplace/cursor/pstack ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Cursor 中执行 `/add-plugin pstack`，安装后先运行 `/setup-pstack` 选择可用模型，再用 `/poteto-mode` 描述目标和验收方式，而不是只说“帮我改代码”。例如明确写“先复现重复行问题，再修复，并用测试证明重试不会再次插入”；让模式自动选择调查、bug fix、TDD、review 等 playbook。完成后打开对应 diff、测试结果和工作记录，检查 Agent 是否真的复现了问题、是否验证了边界条件；复杂任务可以在多个 worktree 中并行，但每条分支都要保留可回放的证据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“模型能力”与“工程流程能力”分开处理。仓库 README 明确强调少写但写得更高质量，并通过不同模型承担精确代码、机械执行和判断任务；这比单纯追求 token、代码行数或一次性大生成更接近真实生产研发。注意它是 Cursor 插件生态，不是通用 CLI，且部分技能依赖 cursor-team-kit。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对关键 PR 强制加入复现、设计推演、测试和审查环节，降低 Agent 代码的返工率。</li>
+    <li>给夜间自动化任务配置明确的验收条件，早晨优先检查有证据的失败点。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2099300148874707297" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSI2WMKbAAAYvR-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSI2WMKbAAAYvR-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LottieFiles Motion Design Skill：让编码 Agent 先理解动效意图，再写动画代码</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LottieFiles 开源的通用动效设计 Skill，把时序、缓动、编排、情绪和 Disney 动画原则整理成可供 Agent 使用的设计知识，且不绑定 CSS、Framer Motion、GSAP 或 Lottie。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/LottieFiles/motion-design-skill" target="_blank">https://github.com/LottieFiles/motion-design-skill ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在项目或个人 Skills 环境执行 `npx skills add LottieFiles/motion-design-skill`，然后让 Claude Code、Cursor、Codex 或其他兼容 Agent 先阅读该 Skill，再提出具体任务，例如“为表单按钮设计 loading→success→error 的状态过渡”或“让卡片按主次关系依次进入”。让 Agent 先写出动效人格、触发条件、持续时间、缓动、元素顺序和无障碍降级方案，再生成实现代码；完成后在浏览器中检查快速重复点击、低性能设备、prefers-reduced-motion 和移动端触控，避免只看静态截图就宣称完成。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把动效从“凭感觉加几个 transition”变成了可复用的设计决策层。仓库采用 MIT 许可，包含核心清单、动效哲学、常见模式和质量检查表，官方说明支持 40 多种 Agent。对 AI 生成前端尤其有价值，因为模型常能写出能运行的动画，却容易忽略节奏、层级、情绪和减少动态效果等体验约束。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Agent 为后台、表单和数据加载状态生成统一的品牌动效规范。</li>
+    <li>在代码审查中检查动画是否过度、是否破坏可访问性和性能，而不是只检查语法。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2099372086565498886" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSJ3xmzasAA9AVM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSJ3xmzasAA9AVM?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Heeler：用 iPhone 远程查看和接管运行中的编码 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 herdr 的原生 iOS Agent 控制台，通过 SSH、真实终端渲染、QR 配对和推送通知，让你在手机上查看并操控电脑或服务器上的编码 Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ZingerLittleBee/Heeler" target="_blank">https://github.com/ZingerLittleBee/Heeler ↗</a></p>
+    <p><a href="https://testflight.apple.com/join/aXSxRn4r" target="_blank">https://testflight.apple.com/join/aXSxRn4r ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 iPhone 上从 App Store 或 TestFlight 安装 Heeler；在运行 herdr 的 Mac/Linux 主机上确保 Node &gt;=20、herdr &gt;=0.7.5，并开启 OpenSSH Remote Login，然后按仓库说明安装插件并执行 `herdr plugin action invoke heeler.pair`。用 Heeler 扫描终端弹出的配对二维码，确认主机指纹和 SSH 授权；连接后从状态排序的列表打开某个 Agent，阅读 live terminal，在 Composer 中编辑完整提示词后一次发送，也可以用工具键盘发送 Esc、Tab、方向键和 Enter。先用无副作用任务测试接管，再把推送通知、权限和 Jump Host 配置纳入自己的安全边界。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它解决的是 Agent 自动化之后非常实际的“人在哪里接管”问题，而不是再造一个聊天框。仓库使用 SwiftUI、libghostty 和 Metal 终端渲染，配对密钥放在 iOS Keychain，通知采用端到端加密设计；Agent 被阻塞或完成时，用户无需守在终端旁。iPad 支持仍在规划，且必须有可用的 herdr 主机与 SSH 环境。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在通勤或会议间隙处理需要确认的编码 Agent，而不必打开电脑恢复终端。</li>
+    <li>统一查看多台开发机上处于 Blocked、Working 或 Done 状态的任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2099481633560654072" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Tag + oncall-kit：把 CI/CD 值班做成可读、可审、人工决策的 Agent 流程</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Claude Tag 将 Claude 放入 Slack 频道并连接组织工具；Anthropic 的 oncall-kit 则提供从事故历史生成分诊手册、只读诊断、人工批准和复盘学习的参考实现。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://claude.com/docs/claude-tag/overview" target="_blank">https://claude.com/docs/claude-tag/overview ↗</a></p>
+    <p><a href="https://claude.com/blog/ai-ci-cd-on-call" target="_blank">https://claude.com/blog/ai-ci-cd-on-call ↗</a></p>
+    <p><a href="https://github.com/anthropics/oncall-kit" target="_blank">https://github.com/anthropics/oncall-kit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果组织拥有 Claude Team 或 Enterprise，先由组织 Owner 在 Claude Tag 管理设置中配置身份、Slack 频道、GitHub 和只读监控连接，再把 `@Claude` 邀请进试点事故频道。可直接从 oncall-kit 仓库开始：克隆项目，用 `test-fixtures/RUNBOOK.md` 在虚构历史上跑一遍，理解 STACK、playbook、lessons 和人工 gates；迁移到真实环境时，先只授予日志、指标和仓库读取权限，让 Claude 输出带证据链接的初步诊断。把修复、回滚和发布明确留给人或受控审批，等验证指标恢复后再让 Agent 记录经验，不能把演示流程直接接到生产写权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Anthropic 官方案例称 Claude Tag 在其 CI 事故中通常能在 15 分钟内给出第一份分析；参考 kit 又明确规定 Claude 负责收集证据、提出方案、验证和沟通，人类负责决定缓解与部署。它展示了企业 Agent 更可信的落地方式：工具访问有边界，结论有链接，动作有审批，学习内容进入可审查的 Git 文件，而不是藏在不可见的长期记忆里。oncall-kit 本身是参考代码，仓库注明不维护、不接受贡献，部署前应自行审查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对 CI 失败、特性开关和合并队列异常进行自动初筛，并把证据贴回事故频道。</li>
+    <li>把历史事故沉淀为可版本控制的分诊手册，缩短新成员值班时的定位时间。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2099414562516943276" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2099410783478382592/img/5kICdNZLiKFibIOB.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2099410783478382592/img/5kICdNZLiKFibIOB.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ YouWare 3D 全球电台：一个可以立即打开的 Vibe Coding 成品体验</div>
+  <div class="section"><div class="section-label event">一句话</div><p>由 YouWare 生成并上线的 3D 网络收音机体验，支持全球电台、随机播放、收藏和交互式界面，适合直接观察自然语言生成的产品完成度。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://radio.youware.app" target="_blank">https://radio.youware.app ↗</a></p>
+    <p><a href="https://www.youware.com/" target="_blank">https://www.youware.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开 `radio.youware.app`，先允许页面加载资源，再尝试随机切换电台、搜索或分类浏览，旋转 3D 收音机并调整音量，记录加载速度、音频可用性和移动端触控体验。想复刻时进入 YouWare，先用一句话描述产品目标，再补充电台数据源、播放/暂停、收藏、主题、响应式布局和错误状态；生成第一版后逐项要求它修复交互，而不是一次塞入所有细节。YouWare 官方平台支持从文本或多模态输入生成网站、应用和游戏，也支持继续编辑与部署；不要把体验页的宣传效果等同于可维护的生产代码。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不只在“做了一个好看的收音机”，而在于把 AI 生成从静态 landing page 推到了可点击、可播放、带状态和数据源的完整小产品。对产品经理或开发者来说，直接拆解一个成品比看宣传截图更容易发现 Agent 在状态管理、第三方数据、异常处理和移动适配上的真实边界；同时也能快速验证一个交互概念是否值得继续投入。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用作 Vibe Coding 的端到端样板，测试从需求描述到部署成品的时间和缺陷。</li>
+    <li>为活动页、互动展览、内容导航和个人作品集快速制作可用原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2099436739886739932" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2099434941385986049/img/opjV2US1mgfUNKor.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2099434941385986049/img/opjV2US1mgfUNKor.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2099434941385986049/img/opjV2US1mgfUNKor?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2099434941385986049/img/opjV2US1mgfUNKor?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Grok Bot 本地出口路由：让云端 Agent 的部分请求经过本机网络</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Grok Bot 文档中出现的 beta 能力，可在 Bot 的云端电脑之外，让部分网络流量经过成员自己的电脑出口，以应对数据中心 IP 被目标站点拦截的情况。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docs.x.ai/grok-bot/teams-and-enterprises" target="_blank">https://docs.x.ai/grok-bot/teams-and-enterprises ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读 Grok Bot 的团队文档、网络策略和安全 FAQ，确认你的账号或组织确实显示该 beta 设置；在没有敏感凭据的测试 Bot 上创建最小任务，先访问一个你自己控制的回显服务，比较默认云端出口和本地出口看到的 IP，再测试目标站点是否仍需要登录或人工验证。企业环境要同时检查 Network Controls、MCP 连接器、Team Setup 和审计要求；不要因为“流量经过本机”就认为云端 Bot 获得了本地全部权限，也不要把生产内网、支付和个人浏览器会话直接暴露给测试任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 的“能不能访问某个网站”从模型能力问题变成了网络身份与信任边界问题。官方文档确认云端电脑使用共享静态出口，而自有网络客户端、Tailscale 或 Cloudflare Tunnel 等路径需要单独规划；本地出口路由可以减少数据中心 IP 被拦截，但也增加了本机网络审计、权限、数据泄露和责任归属的复杂度。适合做小范围网络实验，不适合未经审批的绕过控制。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>访问只允许家庭/办公网络出口的测试服务或内部开发环境。</li>
+    <li>验证云端 Browser Agent 在不同出口 IP、Cookie 和企业网络策略下的行为差异。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2099409639234289914" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSKZVEkawAAMYkr?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSKZVEkawAAMYkr?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Puul.ai：面向 AI 芯片设计的 RTL 数据与可验证训练环境</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个专门面向芯片设计 AI 实验室的数据服务，覆盖 Verilog、VHDL、SystemVerilog、完整项目上下文以及通过编译、仿真、综合等 EDA 流程验证的 RL 任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://puul.ai/" target="_blank">https://puul.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在官网按芯片类型浏览资料，区分 RTL 代码、测试平台、约束、Makefile、综合脚本和 RL 环境，不要只看“代码库数量”这一宣传指标。若你在做 RTL 生成、验证或 PPA 研究，可先明确目标任务、语言、芯片类别、许可方式和所需 EDA 工具，再向服务方申请样本或报价；拿到样本后，用 Verilator/Yosys/仿真流程独立复核 manifest、许可证、可编译性和 reward 计算方式。个人研究者没有预算时，可把官网描述当作数据产品需求清单，再用公开 RTL 数据集搭建小规模对照实验，不能把 Puul 的商业数据当作已公开下载资源。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI for EDA 的瓶颈往往不是再换一个通用模型，而是训练样本是否包含完整工程上下文、结果是否可执行验证、许可证是否清楚。Puul 把编译、仿真、综合、面积、功耗、时序和覆盖率等信号放进数据产品叙事，代表芯片 Agent 正从“生成一段 Verilog”走向“生成后必须通过硬件行为检查”。不过官网披露的规模和客户信息主要是供应方自述，仍需采购审查、抽样复现与知识产权核验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>构建 RTL 生成、修复、验证和优化的训练/评测数据管线。</li>
+    <li>为芯片设计 Agent 设计可重复的编译、仿真、综合和 reward gate。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/seclink/status/2099513893836226720" target="_blank"><span class="handle">@seclink</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OM-1：机器人基础模型开始强调“一套人类数据接口，适配多种机体”</div>
+  <div class="section"><div class="section-label event">事件</div><p>Reward AI 发布 OM-1，推文称其从人类操作数据学习，不依赖遥操作或特定机器人数据，并面向机械臂、工业机器人和人形机器人部署。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条线索的真正变化在数据接口，而不只是模型名字。传统机器人策略经常被采集设备、机器人形态和场景绑定，换一台机械臂就要重新收集或微调；OM-1 的叙事是先把人的动作变成统一输入，再让同一策略适配不同身体。外部技术报道同时指出，目前没有公开权重、代码、数据集或 API，公开材料也缺少可复现实验的成功率和统一基准，因此应把它看成有清晰路线的产品/研究演示，而不是今天就能下载的开源模型。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种“人类示范→通用动作策略→多机体控制”的接口最终能在公开基准上成立，机器人数据采集和跨硬件迁移的成本结构可能改变，硬件厂商也会更重视传感器接口和控制抽象层。但在安全关键动作、长时序任务、失败恢复和不同身体动力学上，演示视频无法替代系统评测；短期更值得跟踪是否发布论文、权重、数据格式和跨平台成功率。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2099582146608320776" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2099553771978375168/img/E_Ei4hDtmdluRzeF.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2099553771978375168/img/E_Ei4hDtmdluRzeF.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent 评测从“会不会做”转向“能做多久、值多少钱、是否可信”</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 中的课程解读把 METR、GDPval、DeepScholar-Bench 等工作归纳为智能体评测的时长、价值和可信度三要素。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>当 Agent 从一次问答变成数小时甚至数天的工作，单一 pass rate 很难说明真实生产力。短任务答对，可能不代表它能保持上下文、管理工具、处理失败、交付可用结果；反过来，完成任务也不代表经济价值足够，更不代表过程可审计。把时长、价值和可信度分开，有助于企业建立更接近实际的验收：任务是否完成、节省了多少人时、错误是否可追责、关键动作是否需要人工批准，以及 Agent 是否能在环境变化后稳定恢复。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>评测供应商和企业采购会逐步从“模型榜单第一”转向任务集、成本、延迟、人工接管率和回滚能力。对开发团队而言，长时程任务需要持久状态、检查点、幂等操作和证据日志；对使用者而言，选择工具时要问清楚失败如何暴露、结果如何验证，而不是只看演示成功率。这个方向也会推动编码 Agent、研究 Agent 和业务自动化采用不同的基准，避免用一个分数覆盖全部能力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2099397038412644519" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 FDE 的价值争论转向“前线经验能否回流平台”</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 对 Forward Deployed Engineer 的讨论指出，FDE 不应只做客户最后一公里的咨询或外包，还要把部署现场的认知反馈到平台，让下一次交付更快。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>AI 产品的真实壁垒越来越多地出现在部署现场：数据权限、流程例外、组织协作和失败模式，往往不在公开 benchmark 里。FDE 如果只按项目收费、一次性交付，团队得到的是人力密度更高的咨询；如果能把客户问题抽象成连接器、评测集、提示模板、权限策略和产品反馈，才可能形成可复用的部署资产。这个讨论也提醒买方区分“有人帮我做成一次”和“产品因此变得更容易持续使用”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 厂商的交付团队会更接近产品和平台团队，销售承诺、客户定制与核心产品边界之间的管理难度会上升。对求职和组织设计来说，真正有价值的 FDE 经历应能说明问题如何沉淀为标准能力、部署周期如何缩短、哪些需求被拒绝以及为什么；对客户来说，合同中应明确交付物、知识回流、数据隔离和后续维护责任，避免把平台建设成本隐含成无限期人力服务。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2099646187326648825" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2099641395355246627" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2099433692083212573" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2099482796498829413" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2099287315898401170" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2099447356580348144" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2099384535033033030" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2099275387595592189" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSNxDS-acAAZb_G?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSNxDS-acAAZb_G?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSNstZpbkAADKZ7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSNstZpbkAADKZ7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2099429445153234944/img/TN_WdLGLe8ZivTmW.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2099429445153234944/img/TN_WdLGLe8ZivTmW.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSLcdvKaEAEDCDU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSLcdvKaEAEDCDU?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2099449822746968065/img/yVh9VbR3Qz8derWA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2099449822746968065/img/yVh9VbR3Qz8derWA?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSIqrRdbAAIhaT4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSIqrRdbAAIhaT4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR5YS3HWYAUqGX2?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR5YS3HWYAUqGX2?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSK8O6BaUAA9jZR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSK8O6BaUAA9jZR?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSKDHCfWAAAwHDS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSKDHCfWAAAwHDS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSIf1BdagAA4OYp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSIf1BdagAA4OYp?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HR-EkLSakAAl_xS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HR-EkLSakAAl_xS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>OpenLLM-RTL：公开的 RTL 数据集与评测框架，包含生成、断言验证和经过检查的样本，可作为商业芯片数据服务之外的研究对照基线。 <a href="https://arxiv.org/html/2503.15112" target="_blank">→</a></li>
+    <li>RTL-BenchLS：面向 RTL 推理、生成和仓库级修复的大规模基准，强调形式验证与更长的任务链，适合观察芯片 Agent 是否真的超越玩具级 Verilog 题。 <a href="https://arxiv.org/html/2606.08976v1" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
