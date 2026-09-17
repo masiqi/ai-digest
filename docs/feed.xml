@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 16 Sep 2026 00:44:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 00:48:24 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/17 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-17.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-17.html</guid>
+      <description>今天的 X List 信号明显转向“Agent 进入真实环境后的可控性”：浏览器、终端、语音流、视觉输入和开发工具都在从聊天窗口走向可执行工作流；与此同时，模型厂商和基础设施团队开始把后台任务、搜索存储、机器人控制与 AGI 讨论做成更完整的系统。值得亲手试的项目集中在“让 Agent 能行动、能恢复、能留下证据”，但本次 Agent Reach 证据增强命令运行 300 秒后超时，未生成证据 JSON/summary；因此本文仅把 X List 与已人工核验的官网、GitHub、论文、官方文档或可信技术报道作为依据，HNRSS 只作为早期线索补充，证据不足处明确标注。</description>
+      <pubDate>2026-09-17T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/16 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-16.html</link>
