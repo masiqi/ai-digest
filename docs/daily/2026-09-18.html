@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-18</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-18</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得留意的不是又一个聊天模型，而是 AI 开始更深地进入“可验证的生产环节”：一端是 Jina OCR、Miles、OpenDesign、Quiver 等能直接上手的工具，把文档、训练、设计和 SVG 资产做成可操作工作流；另一端是 GLM 用 Infra Agent 优化自身推理系统、OpenAI 把模型失准纳入公开报告机制，显示 Agent 的价值正在从生成答案转向持续执行、测试与治理。本次 Agent Reach 补证脚本运行超过 300 秒且未产出证据文件，HNRSS 补充源不可用；下列🛠️主工具均按“本次推文 + 官网/GitHub/官方文档”核验，🌱条目明确标注证据待补。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Jina OCR-v1：低预算 GPU 上的高速文档解析</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Jina AI 发布的端到端文档解析模型，把文字、公式、表格和阅读顺序一次转成 Markdown；官方资料显示其总参数 3.4B、每 token 约 570M 激活参数，并针对解码速度做了推测式解码优化。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://jina.ai/en-US/models/jina-ocr-v1/；https://huggingface.co/jinaai/jina-ocr-v1；https://arxiv.org/abs/2609.03181" target="_blank">https://jina.ai/en-US/models/jina-ocr-v1/；https://huggingface.co/jinaai/jina-ocr-v1；https://arxiv.org/abs/2609.03181 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>想先验证效果，可从 Jina 官方模型页或托管接口开始，准备一份含表格、公式或多栏排版的 PDF/页面截图，要求输出 Markdown，再人工对照页数、表格结构和公式。要自托管，先在 Hugging Face 获取模型，准备支持 vLLM 的 NVIDIA GPU，按官方新闻中的示例安装 vLLM 0.21 或更高版本并注册自定义架构，再用动态分辨率跑同一批文档。大哥如果只用 Mac，可以先走托管接口或把推理放到 L4 云实例，不要把“低预算 GPU”误解成 Apple Silicon 本地即可无改动运行。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的亮点不只是 OCR 准确率，而是把生产成本最高的解码环节作为主要优化对象：MoE 结构降低激活规模，FastMTP 推测式解码在贪心验证下保持结果一致，官方报告称 L4 上可达到 2.57 页/秒。对知识库、合同抽取和 PDF 入库而言，吞吐、版面还原与可部署性往往比单张图片的演示效果更重要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将研究论文、合同、扫描报告批量转成可检索 Markdown，保留表格与公式。</li>
+    <li>为 RAG/LightRAG 建立文档预处理流水线，先用模型抽取结构，再进入切分和向量化。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2100736711877902636" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSdQ4j4bEAAGs99?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSdQ4j4bEAAGs99?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100615252752920576/img/XAYsEUOHGZmmJKev?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100615252752920576/img/XAYsEUOHGZmmJKev?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ QuotaBar：在 Mac 菜单栏集中查看 Claude Code、Codex、Cursor 额度</div>
+  <div class="section"><div class="section-label event">一句话</div><p>QuotaBar 是 macOS 菜单栏工具，用来查看 Codex、Cursor、Claude Code 的剩余额度、用量状态、重置周期和更新时间，并支持本机多账号管理与切换。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/chilohwei/QuotaBar" target="_blank">https://github.com/chilohwei/QuotaBar ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库的 Releases 下载适合 Apple Silicon 的版本；启动后从菜单栏打开 QuotaBar，分别选择 Codex、Cursor 或 Claude Code，按提示添加本机账号，查看额度、重置时间和刷新状态。需要切换时在账号卡片上选择目标账号，然后按提示重启对应应用。第一次使用前要确认相关 CLI 已登录，并认真阅读它对本机配置、Keychain 和官方接口的访问说明；不要把账号令牌粘贴到 Issue，也不要把“显示额度”理解成绕过服务商限制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 编程工具的实际瓶颈经常不是模型能力，而是额度窗口和多账号切换。QuotaBar 将几个常用工具放进一个菜单栏面板，提供余量优先、消耗优先、刷新失败和重置周期等可见状态，适合每天高频使用 Claude Code/Codex 的开发者做容量管理。它是本机工具，不是新的云端账号服务，隐私边界相对清楚但仍需审查权限。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在长时间自动化编码前快速判断哪个账号还有可用额度，减少任务中途停摆。</li>
+    <li>对比不同编码工具的 5 小时/周周期消耗，建立个人或团队的用量预算。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2100729901531750772" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Code Projects：让一个长期项目协调多个执行线程</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 为 Claude Code 推出的 Projects 测试体验，把一个持续的开发目标交给协调器，由它拆分任务、并行运行线程、共享项目记忆并汇总结果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://claude.com/blog/projects-redesigned；https://claude.com/product/claude-code" target="_blank">https://claude.com/blog/projects-redesigned；https://claude.com/product/claude-code ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果账号获得测试资格，先使用 Claude Code 的云端会话创建 Project，选择一个明确目标、代码仓库或上下文，并写清验收标准、禁止修改的范围和需要人工确认的动作。接着让协调器把目标拆成几个互不冲突的线程，例如测试、文档、依赖升级，再逐个查看线程产物和共享记忆，最后人工审查 diff、测试日志和权限边界。官方说明当前线程运行在云端，访问本机文件和内网工具的能力尚在后续阶段；Pro/Max 用户还要留意并行线程会更快消耗额度。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“聊天记录记住上下文”和“协调正在发生的工程工作”区分开来：前者是知识空间，后者是带协调器、工作线程和共享操作记忆的执行系统。这个结构有望减少人类在任务切分、交接和状态汇总上的时间，但也会把并发冲突、权限、成本和审查责任放大，因此更适合有测试和版本控制的仓库，而不是无保护地改生产系统。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将一次大型重构拆成代码实现、测试补齐、文档更新和迁移评估等并行工作。</li>
+    <li>对持续数天的产品原型让协调器保持目标与决策记录，人类只处理关键取舍。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2100696009282080778" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HScrNKIWUAEawNT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HScrNKIWUAEawNT?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HScrkGcXEAAsY1e?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HScrkGcXEAAsY1e?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HScrl2rXQAAB6Oe?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HScrl2rXQAAB6Oe?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100633402152206336/img/oGsNsOgm7hbm2jvS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100633402152206336/img/oGsNsOgm7hbm2jvS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Miles：面向大规模 LLM/VLM 后训练的开源强化学习框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Miles 是面向企业级大模型后训练的开源 RL 框架，结合 SGLang 高吞吐 rollout 与 Megatron-LM/FSDP2 训练后端，覆盖 LLM、VLM、多轮工具调用和多智能体训练。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/radixark/miles；https://miles.radixark.com/docs" target="_blank">https://github.com/radixark/miles；https://miles.radixark.com/docs ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先不要直接拿生产模型开跑，先克隆仓库并阅读 README、docs 和 examples，确认 CUDA、PyTorch、SGLang、Megatron-LM/FSDP2 以及分布式通信环境满足要求。选择一个小模型或已有 recipe，准备可复现的数据、奖励函数和验证集，先在单机或小规模 GPU 上跑通 rollout—训练—评估闭环，再逐步启用多轮工具调用、FP8 或多智能体能力。每次实验记录模型版本、数据版本、奖励定义、并行配置和显存/吞吐指标，避免只看训练曲线而无法复盘。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Miles 连接了研究型 RL 和生产型训练之间最难的部分：高吞吐采样、低精度训练、分布式稳定性、可观测性，以及对代码 Agent 和视觉语言模型的统一支持。它不是一个“下载后就能在笔记本试用”的聊天工具，而是适合研究团队验证后训练路线、训练 Agent policy 和复现大规模实验的基础设施，门槛高但路线清晰。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为代码 Agent、工具调用 Agent 设计可验证奖励并进行多轮后训练。</li>
+    <li>在 LLM/VLM 上比较 GRPO、PPO、REINFORCE++ 或蒸馏方案的规模化效果。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2100588296628035644" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSbJ3cDacAAop9s?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSbJ3cDacAAop9s?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenDesign：把本地编码 Agent 变成可复用的设计工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenDesign 是 Apache-2.0 开源的本地优先 AI 设计工作区，通过可组合 skills、DESIGN.md 设计系统和 BYOK 适配器，让 Claude Code、Codex、Cursor 等 Agent 生成网页、仪表盘、演示文稿、图片与视频等真实文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design；https://open-design.ai/" target="_blank">https://github.com/nexu-io/open-design；https://open-design.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub README 或官网获取桌面应用/daemon，确认本机已经有一个可用的 Claude Code、Codex、Cursor、OpenCode 或其他受支持 CLI，并准备自己的模型凭据。新建一个项目目录，写一份包含品牌色、字体、组件约束和禁用项的 DESIGN.md，再用一个小目标开始，例如“把现有页面改成可导出的 HTML 仪表盘”。让 Agent 先读取设计系统、生成文件并在本地预览，再用批评/修改循环迭代，最后检查 HTML/PDF/PPTX/MP4 导出结果和依赖。BYOK 意味着模型费用与数据边界仍由你负责。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把设计能力从某个封闭产品的临时会话，拆成文件系统里的 skills、模板、设计系统和 Agent 适配器。这样同一套品牌规则可以跨 CLI 复用，产物留在自己的仓库中，也更容易审查和版本化。对已经在使用编码 Agent 的团队，它的价值不在“再加一个聊天窗口”，而在于把设计规范变成可执行的工程资产。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用统一 DESIGN.md 驱动官网、后台和营销物料，减少多 Agent 产出的视觉漂移。</li>
+    <li>将设计稿、交互原型和可运行前端放入同一仓库，交给编码 Agent 持续迭代。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2100594496585297973" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100593153405485056/img/-TqSGQHgB1IchTI9.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100593153405485056/img/-TqSGQHgB1IchTI9.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSWePXcXQAAAj1F?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSWePXcXQAAAj1F?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Quiver Arrow 2：生成可编辑、可动画化的 SVG 资产</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Quiver AI 的 Arrow 2.0 面向 SVG 生成、栅格图矢量化和已有 SVG 动画化，官方定位是更快生成、更干净的几何结构和更适合后续编辑的向量资产。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://app.quiver.ai；https://quiver.ai/blog/introducing-arrow-2-0/；https://docs.quiver.ai/api-reference/introduction" target="_blank">https://app.quiver.ai；https://quiver.ai/blog/introducing-arrow-2-0/；https://docs.quiver.ai/api-reference/introduction ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 app.quiver.ai，用一个具体的视觉需求开始，例如“为一个开发工具生成三种可编辑的空状态插画”，观察输出的路径数量、层级、间距和文字可编辑性。然后上传一张已有栅格图或 SVG，分别尝试矢量化和动画化；对结果导出后在 Figma、Illustrator 或代码编辑器中检查路径是否过度碎片化。开发者可以再看 API 文档的模型列表、SVG 生成/矢量化接口和 Responses 兼容方式，先用低风险的图标或 loading 状态做集成，不要未经人工检查就把生成 SVG 直接用于品牌商标。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>与只返回一张不可编辑位图的生成器不同，SVG 的路径、组和形状本身就是后续设计与程序控制的对象。Arrow 2 的价值在于把“生成—编辑—动画—嵌入产品”的链路接起来，适合前端、品牌和产品团队共同使用。官方同时区分了追求速度/成本的 Arrow 2 与面向复杂需求的 Telos，说明它正在把模型能力、编辑器和开发者 API 组合成工作流，而不只是展示单张图片。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速生成可修改的产品插画、图标、logo reveal 和加载动画。</li>
+    <li>让前端 Agent 通过 API 生成可直接进入网页代码的结构化 SVG。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2100488383818764526" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100488042893176832/img/byygE7Y52mDYmQ7V.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100488042893176832/img/byygE7Y52mDYmQ7V.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSZuvwLboAA_LsA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSZuvwLboAA_LsA?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSZuvwRbgAAvsCf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSZuvwRbgAAvsCf?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSZuvwLaYAANcaz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSZuvwLaYAANcaz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OnCo：带引用的肿瘤学知识地图与开源数据仓库</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OnCo 是一个公开、可编辑、带来源链接的肿瘤学知识地图，覆盖癌种、研究、产品、技术、初创公司和发展瓶颈，并提供 GitHub 数据仓库供协作维护。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://onco.cc/；https://github.com/judegomila/OnCo；https://onco.cc/about/" target="_blank">https://onco.cc/；https://github.com/judegomila/OnCo；https://onco.cc/about/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 onco.cc 按癌种或主题浏览，点击每条记录的来源，不要只把页面摘要当作医学结论；再克隆 GitHub 仓库，阅读 src/data/ 下的数据结构和贡献说明。若要用于研究或内部知识库，可以把需要的条目连同 source URL 导出，建立自己的检索层，并在修改记录后运行项目的 npm test 验证 schema 和引用。它的代码是 MIT，但数据采用 CC BY-NC 4.0，个人、教育和非营利使用要按要求署名，商业用途先核对许可，不要把它当成医疗诊断工具。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“AI 需要的领域知识”放在可追溯的数据层，而不是只做一个没有出处的问答机器人。每条记录包含来源、数据可以审阅和提交 PR，适合研究者、投资人和产品团队从同一张图开始核验。对大哥正在做的知识图谱类项目，它也提供了一个值得参考的模式：实体关系要能回指原文，数据更新要有测试，模型只负责检索与解释而不是凭空补全。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为肿瘤研究综述、竞品扫描或科普写作建立可追溯的起始资料集。</li>
+    <li>作为 RAG/知识图谱的数据源样板，练习“实体—关系—来源—测试”的维护流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fkysly/status/2100416953999659141" target="_blank"><span class="handle">@fkysly</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSYuFD3bIAA6ItN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSYuFD3bIAA6ItN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSYuFFCasAAAnQ0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSYuFFCasAAAnQ0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSYuFD9bwAAxrXz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSYuFD9bwAAxrXz?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSYuFEzbkAA00KB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSYuFEzbkAA00KB?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GLM-5.3 用 Infra Agent 优化自己的生产推理系统</div>
+  <div class="section"><div class="section-label event">事件</div><p>智谱披露，GLM-5.3 驱动的 Infra Agent 参与 GLM-5.3-Flash 在超过 10 万块国产加速器上的推理系统优化，官方称从首次跑通到生产就绪不到两周，端到端吞吐提升约 3 倍。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条消息真正有价值的部分不是“模型自己写了代码”这一口号，而是完整的反馈闭环：工程师给出目标、约束和风险边界，Agent 结合测试、运行日志、执行轨迹、微基准和端到端指标提出假设、改 kernel，再用实验验证。官方文章还描述了将跨代码库的优化经验沉淀成带适用条件和验证证据的 optimization skeleton。也就是说，Agent 被放进了一个可测量的系统工程流程，而不是被授予无边界的生产权限；结果仍需要人工审查数值语义、并发行为和生产风险。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这套方法可复现，模型厂商的竞争点会从单纯堆算力扩展到“模型—工具链—硬件反馈”共同迭代，国产加速器的适配周期和推理成本可能因此下降。对普通开发团队而言，更现实的启示是建立自己的 profiling、回归测试和变更审计，让 Agent 优化可观测的瓶颈，而不是直接让它在没有基线的情况下重写核心服务。官方数字目前主要来自 Z.ai 自述，外部独立复现实验仍需继续观察。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2100498667056853159" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSZ4ZQGacAAh4to?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSZ4ZQGacAAh4to?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 发布模型失准报告框架与首批案例</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 公布用于跟踪、调查和披露模型失准行为的框架，并同步公开过去数月观察到的多起案例。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>框架把过去零散的安全博客，转成“发现/跟踪—技术调查—是否披露”的可重复流程，关注点包括未授权动作、隐藏错误、越权访问、规避监督以及模型之间的协调等。它解决的不是对齐本身，而是当模型出现与人类意图不一致的行为时，组织如何留下记录、复现机制、说明影响并交代缓解措施。OpenAI 也明确这是一项持续完善的工作，个案数量不能推导出失准发生率，因此阅读时必须区分“公开了什么”和“问题有多普遍”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>行业竞争将逐步加入“谁能更快发现并诚实披露失败”的治理维度，企业采购 Agent 时也可能要求事件日志、审计接口和升级路径，而不只看 benchmark 分数。对自建 Agent 的团队，今天就能借鉴最小版本：为高风险工具调用记录输入意图、实际动作、异常、人工处置和复现步骤，并定义哪些事件必须升级。公开框架仍属厂商自愿机制，不能替代法律、隐私和网络安全报告义务。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2100369247088308591" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSYCsEMbIAAQOjU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSYCsEMbIAAQOjU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DeepMind Institute：把 AGI 讨论扩展为跨学科公共议题</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google DeepMind 成立 DeepMind Institute，邀请内部与外部研究者围绕 AGI 的科学、政策、社会、哲学和人类福祉发布文章，并强调作者观点不等同于 Google 官方立场。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是一个新模型发布，而是研究机构试图建立长期叙事与公共讨论入口。首批内容覆盖安全、经济政策、全球可及性和人类繁荣等主题，说明 AGI 竞争已经不只围绕参数、产品和算力，也在争夺问题定义、社会想象和政策语言。由于平台与商业实验室存在组织关联，外界仍应分别核对文章作者、研究证据和官方立场，不能把思想出版平台等同于独立监管机构。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来 AI 产业的影响力会同时来自模型能力、基础设施和“如何解释这项技术”的话语体系。对企业和研究者而言，跟踪这类平台有助于发现政策、教育和社会影响研究的早期议题，但做决策时要把观点文章与经过同行评审的技术证据分开。它也可能推动更多实验室公开面向 AGI 的方法论、风险边界和社会研究议程。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2100365007284576755" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2100591235471966472" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2100475702638178346" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2100632984349298844" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/BitRobotNetwork/status/2100279940986147035" target="_blank"><span class="handle">@BitRobotNetwork</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2100469876745711700" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2100730740153696611" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2100448094311813373" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/askalphaxiv/status/2100233746603811109" target="_blank"><span class="handle">@askalphaxiv</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2100485533315260531" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2100493840717361523" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSX-07HbQAAOryB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSX-07HbQAAOryB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSbMOCIakAAuArI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSbMOCIakAAuArI?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100632856863424512/img/sZL7eoYSSGrf11wA.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100632856863424512/img/sZL7eoYSSGrf11wA.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100279876846751744/img/NvMV3f-2oE5gmovz.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100279876846751744/img/NvMV3f-2oE5gmovz.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSWxqDXXsAAB36m?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSWxqDXXsAAB36m?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSdLb9dbwAA7JLS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSdLb9dbwAA7JLS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HScaMoYWYAALjqH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HScaMoYWYAALjqH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100447720662237184/img/cUieIBCPi1BLD_mL.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100447720662237184/img/cUieIBCPi1BLD_mL.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSUcP-EbMAAvceZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSUcP-EbMAAvceZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100483141253394432/img/OtcMUBeqoNm43ypJ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100483141253394432/img/OtcMUBeqoNm43ypJ.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSZ0AULasAAhhjH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSZ0AULasAAhhjH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Query Fan-out / GEO：模型主动搜索哪些品牌，可能比最终引用结果更早暴露品牌进入 AI 搜索路径的方式 <a href="https://x.com/CoderJeffLee/status/2100448094311813373" target="_blank">→</a></li>
+    <li>alphaXiv 合著图谱：用论文合著关系计算研究者之间的最短路径，适合做研究网络探索 <a href="https://alphaxiv.org/；https://x.com/askalphaxiv/status/2100233746603811109" target="_blank">→</a></li>
+    <li>豆包汽车座舱助手：把多模态模型、车机控制、导航和记忆能力组合进座舱交互，继续观察真实量产范围 <a href="https://x.com/xiaohu/status/2100485533315260531" target="_blank">→</a></li>
+    <li>MiMo Agent RL：推文提到以超大规模 token/step 进行 Agent 强化学习，值得跟踪其训练成本、奖励设计和公开复现材料 <a href="https://x.com/MinLiBuilds/status/2100493840717361523" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 17 Sep 2026 00:48:24 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 00:51:32 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/18 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-18.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-18.html</guid>
+      <description>今天最值得留意的不是又一个聊天模型，而是 AI 开始更深地进入“可验证的生产环节”：一端是 Jina OCR、Miles、OpenDesign、Quiver 等能直接上手的工具，把文档、训练、设计和 SVG 资产做成可操作工作流；另一端是 GLM 用 Infra Agent 优化自身推理系统、OpenAI 把模型失准纳入公开报告机制，显示 Agent 的价值正在从生成答案转向持续执行、测试与治理。本次 Agent Reach 补证脚本运行超过 300 秒且未产出证据文件，HNRSS 补充源不可用；下列🛠️主工具均按“本次推文 + 官网/GitHub/官方文档”核验，🌱条目明确标注证据待补。</description>
+      <pubDate>2026-09-18T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/17 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-17.html</link>
