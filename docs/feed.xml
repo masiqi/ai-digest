@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 18 Sep 2026 00:51:32 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 00:44:19 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/19 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-19.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-19.html</guid>
+      <description>今天的信号集中在“AI 从会生成，转向可落地、可审计、可控边界”：一边是文档解析、浏览器操控、设计规范和 OCR 这类能马上装起来的基础工具继续下沉；另一边，代码 Agent 的项目指令开始走向跨工具标准化，但 ZCode 全仓快照争议和军事情报误判又同时提醒大家，权限边界、数据出站与人工复核不能被“Agent 自动化”掩盖。证据增强脚本本次运行超过 300 秒未产出证据包，以下可上手条目仅纳入已用官方仓库、官方模型页、项目 README 或可信网页交叉核验的内容；🌱栏目保留原文线索并标注证据状态。</description>
+      <pubDate>2026-09-19T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/18 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-18.html</link>
