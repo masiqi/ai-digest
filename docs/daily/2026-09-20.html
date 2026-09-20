@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-20</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-20</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的高价值信号不是又一个“更大的聊天模型”，而是 AI 正在被拆成可嵌入工作流的决策层、评测层和执行层：Jev/AutoJev 试图让 Agent 在路由、审批和验收前先做结构化判断，SoL-Pi 则把长期运行 Agent 的成本问题推到 harness 层；与此同时，文档解析、实时翻译和视频工作流都出现了可以直接试用或部署的项目。
+
+本次 X List 抓取到 112 条记录。Agent Reach 增强脚本运行超过 300 秒超时，未生成本次 evidence JSON/summary，因此本文不把 HNRSS 条目冒充成已核验素材；🛠️条目均只采用 X 原文加本次独立读取到的官网、GitHub、官方文档或论文证据，证据不足的线索放入🌱并明确标注。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ AutoJev（Jev 决策层）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 TypeSafe 的 Jev 结构化决策模型接入 Agent，通过 MCP、REST API 或 Skills，在模型路由、工具调用、研究核验和任务完成前输出选择、概率或审核建议，而不是再生成一段泛化文字。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://autojev.ai" target="_blank">https://autojev.ai ↗</a></p>
+    <p><a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank">https://typesafe.ai/blog/introducing-system-one-models-and-jev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 AutoJev 的 Playground，创建 access key，再从官方文档选择一种接入方式。最短路径是把 `https://autojev.ai/mcp` 配成 Streamable HTTP MCP 服务，并把密钥放在环境变量中；随后用“模型路由”“工具调用保护”或“研究核验”预设提交一份真实但不含敏感信息的任务状态，观察 decision、guidance、answers、概率和模型版本。若想嵌入自己的 Agent，再改用 REST 的 `/api/v1/decisions/{preset}`，先在只读或低风险流程中比较“直接让大模型判断”和“先由 Jev 给结构化门控”的差异，不要一开始就把自动批准权限交出去。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Jev 的产品定位不是替代生成式模型，而是把分类、路由、评分和门控从自然语言输出中抽出来。AutoJev 页面明确给出了 MCP、REST、Skills 三条接入路径，以及 allow/confirm/review/deny 等工具保护结果。这个方向的价值在于把 Agent 的关键判断变成可记录、可复核的接口；但 TypeSafe 仍处于早期访问阶段，具体准确率、成本和领域迁移能力要用自己的任务集验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在自动化发邮件、退款、发布、改库前先判定 allow、confirm、review 或 deny。</li>
+    <li>根据任务的上下文、成本、延迟和工具需求，从批准过的模型集合中选择路由。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2101138540449132676" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSi-OvrasAAjmvQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSi-OvrasAAjmvQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ParseBench</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 AI Agent 的文档解析评测基准，把 PDF/企业文档转结构化结果的质量按表格、图表、内容忠实度、语义格式和视觉定位等维度进行比较，而不只看文本相似度。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/run-llama/ParseBench" target="_blank">https://github.com/run-llama/ParseBench ↗</a></p>
+    <p><a href="https://parsebench.ai/" target="_blank">https://parsebench.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Python/uv 环境后执行 `git clone https://github.com/run-llama/ParseBench`，进入目录运行 `uv sync --extra runners`，先用 `uv run parse-bench pipelines` 查看可用解析管线，再用 `uv run parse-bench run &lt;pipeline_name&gt;` 跑一个已有管线；数据集下载和第三方模型 API 按 README 配置。跑完后用 `uv run parse-bench serve &lt;pipeline_name&gt;` 查看 HTML 报告，再挑一个自己的 OCR、VLM 或 Docling 管线接入比较。建议先只跑少量样本核对费用和输出格式，再做完整基准，避免把单一排行榜分数误当成生产质量。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方页面和仓库都把目标定义为“让 Agent 能可靠行动的解析结果”。公开资料显示它覆盖约 2000 页人工校验的企业文档、超过 16 万条确定性规则，并提供 90 多条预配置 pipeline、数据集、评测代码和论文。它把常被隐藏在 Agent 失败里的第一步——读错表格、公式、版式或视觉关系——单独量化，适合在采购解析服务或选择本地模型前建立可复现实验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为合同、财报、发票、技术手册等进入 RAG/Agent 的文档解析链路做选型。</li>
+    <li>比较本地 VLM、专用解析器和云 API 在结构保真与成本之间的取舍。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101454555112514033" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSndxRyboAAOSln?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSndxRyboAAOSln?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSmeg4oaIAA_FMw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSmeg4oaIAA_FMw?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WeVisDoc</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯微信视觉团队的端到端文档解析模型，输入整页文档图片，直接输出包含 Markdown、LaTeX 公式和 HTML 表格的结构化结果，提供 2B 与 4B 版本。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://tencent.github.io/WeVisDoc/" target="_blank">https://tencent.github.io/WeVisDoc/ ↗</a></p>
+    <p><a href="https://huggingface.co/tencent/WeVisDoc-2B" target="_blank">https://huggingface.co/tencent/WeVisDoc-2B ↗</a></p>
+    <p><a href="https://huggingface.co/tencent/WeVisDoc-4B" target="_blank">https://huggingface.co/tencent/WeVisDoc-4B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从项目页选择 2B 或 4B checkpoint；有 vLLM 环境时按 Hugging Face 模型页的脚本启动服务，例如先用 2B 做单页测试，再把 PDF 渲染成逐页 PNG/JPG 后批量送入模型。若机器不适合 vLLM，则按模型页的 Transformers 推理说明加载 checkpoint，并限制 max tokens。测试时应准备同时含正文、表格、公式和复杂版式的页面，逐项检查 Markdown 层级、表格 HTML、公式 LaTeX 和页内阅读顺序；不要只拿干净的单栏文字页判断效果。2B 适合先验证吞吐，4B 再用于质量对比。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是“先 OCR、再切块、再分别识别”的拼装流程，而是针对整页图像直接生成结构化文档。官方项目页强调了覆盖扩展、结构保持退化合成和残差诊断驱动的数据构建；论文页面报告 WeVisDoc-4B 在相关文档解析评测中取得很强的整体成绩。对本地化部署而言，2B/4B 两档也给出了质量与显存之间的实际选择空间，但中文、扫描件和超长页面仍需自行做回归测试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把扫描合同、研究报告、课件和表格转换为可编辑 Markdown/HTML。</li>
+    <li>为本地知识库、RAG 或文档 Agent 提供比纯 OCR 更完整的结构输入。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2101324586633629846" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2101324307817472000/img/kpKE8CNL8xrsA5NW.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2101324307817472000/img/kpKE8CNL8xrsA5NW.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen3.8-LiveTranslate</div>
+  <div class="section"><div class="section-label event">一句话</div><p>阿里云提供的实时音视频翻译模型，支持音频与图像输入、文本与语音输出，官方资料称可识别 60 种语言并支持 29 种语言语音输出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.alibabacloud.com/help/en/model-studio/qwen3-8-livetranslate-flash-realtime" target="_blank">https://www.alibabacloud.com/help/en/model-studio/qwen3-8-livetranslate-flash-realtime ↗</a></p>
+    <p><a href="https://docs.qwencloud.com/developer-guides/speech/realtime-translation" target="_blank">https://docs.qwencloud.com/developer-guides/speech/realtime-translation ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Alibaba Cloud Model Studio 开通对应模型访问后，按官方实时翻译文档使用 WebSocket Realtime API，模型 ID 填 `qwen3.8-livetranslate-flash-realtime`，连接官方 endpoint，并用 Bearer token 鉴权。先用短音频验证源语言识别和译文文本，再设置 `session.output_modalities` 获取文本或音频；需要处理视频时，把音频流与对应图像帧按文档要求送入，观察说话人区分、原文转写和译文延迟。第一轮建议录制中英双人对话，核对 speaker diarization、术语、音色保留和断线重连，再决定是否用于直播或会议，不要只凭宣传视频评估。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“听完再翻译”改成流式的 Thinker–Talker 双模块与交错处理思路，官方文档还明确给出了 WebSocket 调用形式、输出事件和多语言范围。对于直播字幕、跨语言会议和视频口译，端到端延迟比离线 BLEU 更关键；但云端 API、网络抖动、说话人重叠和专业术语仍可能改变真实体验，正式接入前应保留原文字幕并设置人工兜底。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>多语种会议、直播或访谈的实时字幕与语音翻译。</li>
+    <li>视频播客、课程和短视频的跨语言配音与内容整理。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2101339335564181619" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2101324711611478017/img/4t66PZ0ua73Xjjyt.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2101324711611478017/img/4t66PZ0ua73Xjjyt.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-download</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向 Agent 的通用视频下载与媒体提取 Skill，以 yt-dlp 为核心，统一处理 YouTube、B站、X、抖音、TikTok、Instagram 等链接，并在下载后用 ffprobe 验证媒体。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-download" target="_blank">https://github.com/joeseesun/qiaomu-download ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>确认本机有 Python 3.10+、yt-dlp、ffmpeg 和 ffprobe 后，执行仓库给出的 `npx skills add joeseesun/qiaomu-download` 安装 Skill。之后直接把一个自己有权访问和保存的公开视频链接交给 Agent，明确要视频、MP3、字幕或媒体信息；它会根据站点选择 yt-dlp extractor，下载后检查最终文件是否可播放。第一次建议只测试一个公开的 YouTube 或 B 站链接，再检查返回的绝对路径、画面尺寸、编码、音频和时长；登录内容、付费内容、DRM 和平台限制不要用它绕过。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的重点不是再做一个网页解析器，而是把平台探测、yt-dlp 更新、下载、临时分片清理和 ffprobe 验证串成 Agent 可调用的工作流。仓库还对微信视频号单独设置了本地捕获和权限边界，并明确不自动点击微信客户端。对日常资料整理、字幕提取和视频研究很实用，且“验证文件确实能播放”比只返回一个看似成功的下载路径更可靠。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把研究视频下载、转音频、提字幕并交给后续转写或知识库流程。</li>
+    <li>在 Agent 工作流中统一处理多平台素材，并在交付前验证文件完整性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2101265049885254054" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2101263455114412032/img/mzN31MHVGo7ByXzg.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2101263455114412032/img/mzN31MHVGo7ByXzg.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Bespoke Nimble</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Bespoke Labs 开源的本地结构化决策模型项目，公开数据、模型权重和训练配方，试图用 9B 模型复现 Jev 类“快速回答受限问题”的能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/bespokelabsai/nimble" target="_blank">https://github.com/bespokelabsai/nimble ↗</a></p>
+    <p><a href="https://huggingface.co/bespokelabs/Bespoke-Nimble-9B" target="_blank">https://huggingface.co/bespokelabs/Bespoke-Nimble-9B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆 `https://github.com/bespokelabsai/nimble` 并阅读仓库 README，按项目说明安装依赖；再从 Hugging Face 获取 `Bespoke-Nimble-9B`，用仓库提供的示例输入一段文本和一组类型受限的问题，观察它返回的分类、选择或置信结果。建议用同一批问题分别测试 Nimble、一个通用 LLM 和简单规则系统，记录准确率、延迟、显存占用以及问题改写对结果的影响。9B 权重可能对显存有要求，先做小样本离线实验，不要直接把未经验证的输出接到生产审批链路。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Jev 的热度把“模型必须生成长文本”这一默认假设重新摆到台面上，而 Nimble 提供了一个公开可研究的对照对象。GitHub 仓库将项目定位为 local typed decisions、contrastive data curation 和 model evaluation，且公开仓库与 9B 权重，开发者可以检查数据配方和推理边界，而不是只能调用闭源 API。它是否真的接近 Jev、在哪些问题上退化，需要用同一评测集复现，不能把“复刻”直接等同于能力相同。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地对文本做分类、路由、风险分级和字段判断。</li>
+    <li>研究结构化决策模型与生成式模型在成本、延迟和可解释性上的差异。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101098840971776173" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSiaP7bboAEF3hs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSiaP7bboAEF3hs?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSg0OwLbwAAyKxp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSg0OwLbwAAyKxp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CMU 11-768：AI Agents</div>
+  <div class="section"><div class="section-label event">一句话</div><p>卡内基梅隆大学 2026 秋季 AI Agents 课程，覆盖工具使用、上下文管理、Skills、记忆、规划、评测、训练、安全和 Agent 框架，并公开课程网站与部分视频资料。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.cmu-agents.com/" target="_blank">https://www.cmu-agents.com/ ↗</a></p>
+    <p><a href="https://youtube.com/watch?v=UwfjzyLnvMg&amp;list=PLSN0qpDfUvTM" target="_blank">https://youtube.com/watch?v=UwfjzyLnvMg&amp;list=PLSN0qpDfUvTM ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从课程网站的 schedule 和 lecture 页面开始，按顺序看工具调用、上下文管理和 Agent harness 相关内容；同时下载公开 slides，照着课程作业思路在本地写一个最小 ReAct 循环：限制步数、记录工具调用、处理工具错误，再加入技能发现和上下文压缩。后续可用一个小型代码修复任务测试“模型本身”和“harness 设计”的差异。课程是研究生级别，完整作业可能需要 OpenAI-compatible API、Modal 等资源；先做公开材料和离线单元测试即可，不必立刻购买算力。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 工程中经常被拆散的几件事放在一门课里：先构建可运行的 harness，再设计评测，最后讨论 SFT/RL 和安全。官方课程页明确以多步感知、推理、规划和行动为对象，适合把社交媒体上的零散经验转换为可复现实验。对已经在用 Claude Code、Codex 或自建 Agent 的开发者，最值得学的是如何记录轨迹、定义失败模式和控制长任务，而不是简单换一个模型名称。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>系统学习 Agent loop、工具调用、上下文压缩和评测设计。</li>
+    <li>为自己的代码 Agent 或研究 Agent 建立可复现的课程式实验框架。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101274875218608376" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Android Bench 2.0：从“会写代码”转向“能完成真实 Android 工程任务”</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google Android 官方推出 Android Bench，使用 Signal、Bitwarden、Pocket Casts、WordPress、Now in Android 等真实生产级应用场景衡量模型完成 Android 开发工作的能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类基准的重点不在单个代码片段是否漂亮，而在模型能否理解真实仓库、遵循 Android 最佳实践、修改多个文件、运行测试并在重复实验中完成任务。官方页面按成功率、置信区间、完成 100 个任务的平均时间和成本展示结果，还把模型与具体工程执行过程绑定。对使用 Coding Agent 的团队而言，榜单分数只能作为入口，真正有价值的是看任务定义、失败类型、耗时和成本是否接近自己的代码库；如果只比较一次性 SWE 问答，容易高估生产可用性。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型评测会继续从“静态题目正确率”转向“模型+工具+harness+仓库”的系统成绩，厂商的宣传口径也会更难只靠 demo 支撑。企业采购或自建代码 Agent 时，应该保留自己的代表性 Android/后端任务集，记录首次成功率、回归测试、人工介入次数和每任务成本，而不是直接照搬任何公开排名。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101297657834766834" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSlPEl8a8AASXIV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSlPEl8a8AASXIV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSbowExXwAArwAN?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSbowExXwAArwAN?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 原生读取 AGENTS.md</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 传播的版本信息显示，Claude Code 从 2.1.277 起可在没有 CLAUDE.md 时读取 AGENTS.md，并可在配置中调整相关行为。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果该行为与本地版本实测一致，它意味着不同 Agent 工具之间正在围绕共享的项目指令文件形成更强的兼容性。AGENTS.md 可以承载构建、测试、目录边界和提交规范，减少团队为 Claude Code、Codex 或其他 Agent 维护完全不同规则文件的成本；但“自动读取”也会带来作用域、继承关系和提示注入风险，尤其是仓库内不可信目录或嵌套规则。当前本条证据主要来自 X List，发布前应在实际 Claude Code 版本中用一个无副作用项目检查 `config`、规则优先级和冲突行为。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>项目级 Agent 规范可能逐渐从某个厂商的私有文件名变成跨工具协作约定，代码审查和 CI 也会更关注这些指令文件的变更。团队应把 AGENTS.md 当作受版本控制的工程配置来评审，明确允许的命令、测试门槛、敏感目录和人工审批边界，避免把“读取规则”误认为“Agent 一定遵守规则”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101095211904672129" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSiW8wLaQAAaPSd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSiW8wLaQAAaPSd?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Qwen3.8-Omni-Flash：音视频模型开始直接参与工具型工作流</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 介绍阿里发布 Qwen3.8-Omni-Flash，面向文本、音频和视频输入，强调长上下文、视频剪辑与短剧翻译等工具调用场景；官方介绍链接指向 Qwen 博客。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条产品信号与实时翻译模型不同：它更像一个能理解长音视频上下文、再规划或调用工具完成任务的 API 模型。若官方描述成立，视频处理链路可以从“先人工挑时间点、再分别调用多个模型”转向由一个多模态模型先理解素材、拆任务、调用剪辑或翻译工具。但 X List 中的信息包含“1M 上下文、减少 token”等宣传性表述，本文不把这些数字当成独立验证结果；实际使用前应以 API 文档、可用区域、价格、输入限制和工具调用 schema 为准。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>视频 Agent 的竞争点会从单项生成质量扩展到长视频读取、时间轴定位、跨模态检索和外部工具编排。内容团队可以先用短片建立字幕、镜头、术语和成本基线，再判断是否需要长上下文；平台方则必须处理音视频隐私、版权、长任务失败恢复和调用权限，不能因为模型能“看懂视频”就默认它能安全地自动发布成片。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2101325024607297567" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2101152767863849401" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2101314081500418541" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2101146387736142138" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2101328738114002978" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2101153501548253386" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2101324262644875264/img/2pjrG3suqJsR8rDR.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2101324262644875264/img/2pjrG3suqJsR8rDR.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2101149399426678784/img/VHd8duA8zM5Q4zL7.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2101149399426678784/img/VHd8duA8zM5Q4zL7.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100500125034672128/img/jRZOoCSm8XFT2sh1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100500125034672128/img/jRZOoCSm8XFT2sh1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSld4uHbUAAw1gx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSld4uHbUAAw1gx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100648456348200960/img/SX-ko4uDqWE8XSL-.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100648456348200960/img/SX-ko4uDqWE8XSL-.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>SoL-Pi：NVIDIA、NTU、MIT 团队研究在 Agent harness 层自动搜索动作执行、上下文压缩、观察处理和委派阅读机制；论文报告在相近效果下减少约 44.7%–49.0% token traffic，但应先读论文并等待实现/复现实验。 <a href="https://arxiv.org/abs/2609.20519" target="_blank">→</a></li>
+    <li>TypeSafe Agent Skills：围绕 Jev/System One 的决策设计方法与 Skills 目录，值得观察其是否会成为结构化决策 Agent 的共享接口。 <a href="https://github.com/typesafe-ai/skills" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

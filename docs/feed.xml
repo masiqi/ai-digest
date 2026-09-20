@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 19 Sep 2026 00:44:19 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 00:43:44 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/20 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-20.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-20.html</guid>
+      <description>今天的高价值信号不是又一个“更大的聊天模型”，而是 AI 正在被拆成可嵌入工作流的决策层、评测层和执行层：Jev/AutoJev 试图让 Agent 在路由、审批和验收前先做结构化判断，SoL-Pi 则把长期运行 Agent 的成本问题推到 harness 层；与此同时，文档解析、实时翻译和视频工作流都出现了可以直接试用或部署的项目。
+
+本次 X List 抓取到 112 条记录。Agent Reach 增强脚本运行超过 300 秒超时，未生成本次 evidence JSON/summary，因此本文不把 HNRSS 条目冒充成已核验素材；🛠️条目均只采用 X 原文加本次独立读取到的官网、Gi...</description>
+      <pubDate>2026-09-20T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/19 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-19.html</link>
