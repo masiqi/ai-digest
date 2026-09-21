@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-21</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-21</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线从“更大的模型”转向“更可落地的系统”：一边是 Qwen-Image-2.1 把高质量生成、编辑与透明通道压到 7B 视觉生成组件，并在开源生态中快速获得 Day-0 支持；另一边是文档边界判断、实时语音、System One 决策模型与推理工程教育，正在把 Agent 从会聊天推进到能稳定执行、可测量、可审计的工作流。本次 Agent Reach 证据增强脚本超时，正文只纳入已用官方 GitHub、官网或项目页人工核验的条目，HNRSS 补充信号未据此编造。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen-Image-2.1：7B 视觉生成组件的生成、编辑与透明图一体化模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Qwen 开源的新一代统一图像生成与编辑模型，支持文生图、图像编辑、最多 10 张参考图、多主体合成，以及原生 RGBA 透明图输出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/QwenLM/Qwen-Image-2.1" target="_blank">https://github.com/QwenLM/Qwen-Image-2.1 ↗</a></p>
+    <p><a href="https://huggingface.co/Qwen/Qwen-Image-2.1" target="_blank">https://huggingface.co/Qwen/Qwen-Image-2.1 ↗</a></p>
+    <p><a href="https://huggingface.co/spaces/Qwen/Qwen-Image-2.1" target="_blank">https://huggingface.co/spaces/Qwen/Qwen-Image-2.1 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备带 CUDA 的 Python 环境，按仓库 README 安装 PyTorch、Transformers、Diffusers、Accelerate 和 Pillow；再用 Hugging Face 登录或下载模型权重。在 Python 中加载 QwenImage21Pipeline，设置 torch_dtype=torch.bfloat16，把设备切到 cuda，先用 1024×1024 或官方推荐尺寸跑一张文生图，再把 image 参数换成一张本地图片测试“改背景”。想测透明能力，可在提示词里明确“这是带透明背景的 RGBA 图像”，并保存输出检查 alpha 通道。也可以直接打开官方 Hugging Face Space，不装环境先试效果；有 ComfyUI 的用户则可使用官方工作流模板。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是只追求榜单分数，而是把生成、编辑、透明通道和多参考图放在同一套模型能力里，减少工作流拼接。README 明确给出 7B 视觉生成组件、2K 原生尺寸、最多 10 张参考图，并列出 Diffusers、ComfyUI、vLLM-Omni、SGLang 的 Day-0 支持；这让它更像可接入生产管线的开源底座，而不是只能在线试玩的演示模型。实际显存、速度和长图稳定性仍需按本机硬件实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>电商与游戏美术：用多张角色或商品参考图做一致性合成，再输出透明 PNG 素材。</li>
+    <li>本地内容生产：在不上传原图的前提下进行换背景、局部修改和 2K 海报草稿生成。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101810563391340754" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSshjnSbAAAsa0r?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSshjnSbAAAsa0r?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSqWS--aYAAi5G0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSqWS--aYAAi5G0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DocJev：用自然语言规则给 PDF、DOCX、PPTX 分类并按边界拆包</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个独立开源的文档分类与拆分工具，先本地提取页面文本，再让 Jev 判断类别或文档边界，并返回页码范围与复核标记。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/jerryjliu/docjev" target="_blank">https://github.com/jerryjliu/docjev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Python 3.11+，克隆仓库后执行 uv sync，再运行 uv run docjev doctor --smoke 检查环境。接着导出 TYPESAFE_API_KEY，先用仓库 examples/real/classify/rules.yaml 对单个 PDF 做 classify；若要处理一个混合文件包，使用 split 命令和 examples/real/split/rules.yaml，并指定 --export-dir 输出拆出的 PDF、--output 保存 JSON。规则文件用稳定的 category id 和自然语言描述类别，还可以写明“相邻但不同的出版物要拆开”等边界原则。DOCX/PPTX 需要 LibreOffice；默认 LiteParse 在本地提取文本，但决策调用仍走 Jev 服务，不能误解为完全离线。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>文档自动化真正难的往往不是 OCR，而是判断“这一页属于哪份文件”。DocJev 将 OCR、决策、拆分、导出和指标分开，保留页码、来源与复核信息；仓库还提供 40 份真实公共部门 PDF 的小规模测试，并明确区分准确率试验与演示数据。它适合接入发票、财报、监管材料的收件箱，但样本规模有限，且 Jev 是托管服务，企业部署前要评估密钥、数据合规与边界误拆风险。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>财务与法务收件箱：把混合扫描包分类、拆分并交给人工复核。</li>
+    <li>企业知识库预处理：先按自然语言规则切出独立文档，再进入 OCR、索引或归档流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101819032970399906" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSspQrAa8AACtWU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSspQrAa8AACtWU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Confucius4-R2T2：面向真实流式转写的低延迟语音模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>网易有道开源的实时 ASR，支持 80 毫秒到 2 秒可配置分块，并以 append-only 方式提交稳定前缀，避免已显示字幕反复改写。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/netease-youdao/Confucius4-R2T2" target="_blank">https://github.com/netease-youdao/Confucius4-R2T2 ↗</a></p>
+    <p><a href="https://r2t2.youdao.com/demo" target="_blank">https://r2t2.youdao.com/demo ↗</a></p>
+    <p><a href="https://huggingface.co/netease-youdao/Confucius4-R2T2" target="_blank">https://huggingface.co/netease-youdao/Confucius4-R2T2 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最省事的入口是先打开官方 Demo，直接用麦克风观察实时字幕是否稳定；需要本地部署时，克隆仓库并按 README 选择 uv、Conda 或 Docker 安装，准备模型权重后运行最小推理示例。若要接入应用，优先看 vLLM 后端和 WebSocket Server 部分：客户端持续发送音频块，服务端返回已经确认的文本；再根据会议字幕、语音输入或同传的需求选择 160ms、320ms 等分块参数，在延迟与识别准确度之间取平衡。中文和英文先做自己的噪声、口音、多人说话测试，不要只看仓库给出的对比图。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>普通“流式”识别常常会回改前文，导致字幕闪烁、下游 Agent 重复触发。R2T2 把稳定前缀学习作为核心设计，已提交的文本不再修订，并把 chunk 大小暴露成可调参数；官方 README 给出平均 200–600ms 延迟、离线精度不因流式支持明显牺牲、vLLM 与 Transformers 后端等信息。它特别适合需要“边听边做事”的系统，但官方评测仍应结合业务音频重新验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>会议与直播：输出不回滚的实时字幕，并把稳定句段送给摘要或行动项 Agent。</li>
+    <li>语音交互：用于低延迟语音输入、同声传译前端或下游 NLP 管道。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2101686298507624960" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ grokbot-field-notes：从 72 小时实战中提炼 Agent 工程规则与失败记录</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源仓库，整理 xAI Grok Bot 团队长时间直播构建产品时使用的规则、playbook、机器人角色和失败日志，可直接把 AGENTS.md 放进项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/unicodef1wn/grokbot-field-notes" target="_blank">https://github.com/unicodef1wn/grokbot-field-notes ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库，阅读 README 和 AGENTS.md，重点看它如何拆分角色、定义交付边界、记录失败以及要求 Agent 在代码库内留下可复核产物。不要直接把全部规则无差别复制到生产项目；先挑一条与你当前仓库最接近的工作流，例如“从空仓库开始做一个小功能”，把约束放入项目级 AGENTS.md，然后让 Agent 完成一个可回滚的小任务。任务结束后对照失败日志检查：是否有明确验收条件、测试证据、变更摘要和人工复核点，再逐条改写为团队自己的 playbook。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Agent 教程只展示成功截图，却不公开过程中的角色分工、失败模式和工程约束。这个仓库的价值在于把“怎么让 Agent 干活”从口号变成可复制的项目文件，并将失败日志纳入方法论。它并不是一个运行时框架，也不能证明所有流程在不同模型上都同样有效；适合当作工程制度的素材库，用小任务验证后再扩大范围。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>团队 Agent 开发：把角色、检查点和失败复盘沉淀进仓库。</li>
+    <li>个人 Vibe Coding：为一次性项目增加可回滚、可验收的最小流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2101602857397199019" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2100884320957214720/img/6AiqSrwqLQXtmCIc.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2100884320957214720/img/6AiqSrwqLQXtmCIc.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ TypeSafe Agent Skills：为 System One 决策模型提供可安装的工作流知识</div>
+  <div class="section"><div class="section-label event">一句话</div><p>TypeSafe 官方开源的 Agent skills 仓库，帮助 Agent 设计 typed decisions 与 probabilities 工作流，并提供 Claude Code 插件和 skills.sh 安装路径。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/typesafe-ai/skills" target="_blank">https://github.com/typesafe-ai/skills ↗</a></p>
+    <p><a href="https://docs.typesafe.ai/agent-skill#installation" target="_blank">https://docs.typesafe.ai/agent-skill#installation ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果使用 Claude Code，可按仓库 README 添加 marketplace 并安装 typesafe 插件；其他 Agent 则可用 npx skills add typesafe-ai/skills --skill typesafe-ai，按提示选择安装目标。安装后不要从“让模型替你做所有决定”开始，先设计一个低风险路由任务，例如按部门分类支持工单，并规定不确定时必须转人工。让 Agent 输出类别、概率和人工复核条件，再用一批你已知答案的数据做离线检查，观察概率是否只是排序信号而非校准置信度。仓库是技能与方法，不等于免费模型权重；调用 TypeSafe 服务仍要按其文档配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它代表一种与通用 LLM 不同的组合方式：LLM 负责开放式理解，System One 负责快速、结构化、可约束的判断。官方仓库把安装、调用场景和 typed decisions 入口做成 Agent skill，降低了接入门槛；但概率是否校准、错误如何处理、什么时候必须人工接管，都需要在业务数据上验证，不能把“有概率”直接等同于可靠性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>工单、邮件和内容路由：输出结构化类别与复核门槛。</li>
+    <li>多 Agent 编排：把快速判断模型放在前置分流，减少昂贵模型的无效调用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101454555112514033" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSndxRyboAAOSln?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSndxRyboAAOSln?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSmeg4oaIAA_FMw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSmeg4oaIAA_FMw?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ zero-to-sglang：从零手搓 mini-sglang 的中文推理工程课程</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Datawhale 与 RadixArk 联合发起的开源教程，从 KV Cache、prefill/decode 讲起，逐步实现 mini-sglang，再回到真实 SGLang 源码与 PR 流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/datawhalechina/zero-to-sglang" target="_blank">https://github.com/datawhalechina/zero-to-sglang ↗</a></p>
+    <p><a href="https://datawhalechina.github.io/zero-to-sglang/" target="_blank">https://datawhalechina.github.io/zero-to-sglang/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开在线课程，从 Part 0 的环境与第一个 SGLang 服务开始；没有 GPU 也可以先学习 Part I 概念，并在 CPU 上调试大部分 Part II 代码。建议按“读一章、跑一个最小实现、记录 TTFT/TPOT/显存变化”的节奏推进，而不是只看概念。完成 KV Cache、Continuous Batching、Paged KV Cache 和 RadixAttention 相关章节后，再对照真实 SGLang 源码阅读对应模块；有 GPU 的读者可最后部署 Qwen3-0.6B 做一次真实推理，再尝试 profiling 和提交小 PR。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推理成本和尾延迟正在成为 Agent 应用的实际瓶颈，但很多资料只讲 API，不解释引擎为何快。这门课把抽象概念落到代码：从前向、生成、KV Cache、HTTP 服务一路做到批处理与缓存，再回到生产级 SGLang 的优化与贡献流程。官方 README 明确说明 Part I 不需 GPU、Part II 大部分可 CPU 调试，适合把“会调用模型”升级为“看懂推理系统”，但完整性能测试仍需要 GPU。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>推理服务工程：理解缓存、批处理和长上下文成本，优化自建模型服务。</li>
+    <li>Agent 平台研发：为并发、延迟、吞吐和硬件选型建立可测量的基础。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101463483414098192" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSnl5FUb0AAQ5-0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSnl5FUb0AAQ5-0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSllkNZbcAAKZN6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSllkNZbcAAKZN6?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare Quick Tunnels：一条命令把本地服务临时变成公网 HTTPS 预览</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cloudflare 提供的免费临时隧道，用 cloudflared tunnel --url 将本机应用通过 trycloudflare.com 地址分享出去，不需要账号、域名、开放端口或配置文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://try.cloudflare.com" target="_blank">https://try.cloudflare.com ↗</a></p>
+    <p><a href="https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/" target="_blank">https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 cloudflared，官方支持从下载页或包管理器安装；然后在本机启动一个 HTTP 服务，例如让前端监听 localhost:8000。新开终端执行 cloudflared tunnel --url http://localhost:8000，等待命令行打印 trycloudflare.com 临时地址，用浏览器或手机访问它并把链接发给同事。调试结束后回到终端停止进程，临时地址随之失效。它适合演示和联调，不要把内部管理后台、未鉴权 API 或含敏感数据的服务直接暴露出去，也不要把 Quick Tunnel 当作生产发布方案。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>本地 Agent 生成的网页、原型和 API 常常卡在“只能打开 localhost”。Quick Tunnels 把分享预览的摩擦降到一条命令，并由 Cloudflare 处理 HTTPS、证书和边缘转发，不要求先买域名或打开入站端口。官方页面明确定位为开发预览；临时性、无账号和无固定地址也意味着访问控制、稳定性、审计和长期运维能力有限，安全边界必须由使用者补上。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Vibe Coding 评审：让远程同事直接查看本地生成的网页原型。</li>
+    <li>Webhook 与移动端联调：临时接收第三方回调，结束后立即关闭。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101505099571032547" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSoLvbSaIAA5lty?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSoLvbSaIAA5lty?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Jev-like System One 决策模型正在形成独立于通用 LLM 的新层</div>
+  <div class="section"><div class="section-label event">事件</div><p>围绕 Jev 的讨论出现了开源 Kev、TypeSafe skills、浏览器决策和机器人任务演示，行业开始把“快速选择/判断”从“生成长文本”中拆出来。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>今天的多条信号共同指向一个架构变化：LLM 负责开放式理解、规划和解释，另一个更快、更便宜、输出更窄的模型负责在候选动作中做选择。它更像编排系统里的 System One，而不是通用聊天模型的缩小版。对开发者来说，价值不在于把所有任务都交给分类器，而在于把动作空间、约束和失败回退先定义清楚，再用小模型承担高频低风险判断。当前证据主要来自项目发布与社区演示，Kev 的仓库和基准资料尚未完成独立核验，因此不把它写成已证实的成熟产品。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这条路线成立，Agent 的单位成本和响应延迟会下降，浏览器操作、路由、机器人控制、素材选择等场景可能出现大量专用判断层。基础模型厂商之外，真正的竞争点会转向动作空间设计、概率校准、人工接管和系统观测性；但过度依赖未经验证的“快模型”也会放大错误决策，企业需要保留回退到通用模型或人工的机制。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101814622529651168" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSslPTEbgAA_ycX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSslPTEbgAA_ycX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSrJjHrXIAA0TFD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSrJjHrXIAA0TFD?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Step 5 Preview：Agentic 工作模型把长上下文、视觉与成本控制放到同一张牌桌</div>
+  <div class="section"><div class="section-label event">事件</div><p>阶跃星辰发布 Step 5 Preview，官方推文定位为面向代理式工作的新旗舰，并强调 600B 总参数/27B 激活、1M 上下文与视觉能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条发布信号与近期开发者反馈中的“让模型真正完成软件和专业知识工作”相呼应：上下文长度解决材料装载，视觉能力覆盖界面和文档，MoE 激活规模则试图控制单次任务成本。但目前本次运行只核验到官方 X 发布内容，尚未取得可独立复现的公开基准、价格和服务条款，因此应把它看作值得跟踪的产品发布，而不是性能结论。真正要看的是长任务成功率、工具调用稳定性、并发限制和失败恢复。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果它在软件工程、金融文档和多步 Agent 任务上兑现定位，国内开发者会多一个可与海外模型比较的长上下文选项，也会加剧 API 价格、上下文配额和工具生态的竞争。企业采购不能只看参数规模，应要求供应商提供真实任务集、数据处理边界、日志可观测性和持续服务承诺。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/StepFun_ai/status/2101510462685003786" target="_blank"><span class="handle">@StepFun_ai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2101814622529651168" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2101703766395310508" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/jakevin7/status/2101610837136003577" target="_blank"><span class="handle">@jakevin7</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2101559031005356261" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2101600179753451623" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2101454555112514033" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSoQn-1bQAAtzol?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSoQn-1bQAAtzol?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSoQn-1boAA9r0Z?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSoQn-1boAA9r0Z?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSslPTEbgAA_ycX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSslPTEbgAA_ycX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSrJjHrXIAA0TFD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSrJjHrXIAA0TFD?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSpiOBYaMAASGEz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSpiOBYaMAASGEz?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSndxRyboAAOSln?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSndxRyboAAOSln?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSmeg4oaIAA_FMw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSmeg4oaIAA_FMw?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Bilibili AI Infinite Arena：一个可检索的 B 站 AI 竞技场项目索引，适合观察真实任务型模型评测案例 <a href="https://github.com/joeseesun/bilibili-ai-arena" target="_blank">→</a></li>
+    <li>Qwen-Image-2.1 生态适配：ComfyUI、SGLang、vLLM-Omni 的 Day-0 接入值得继续跟踪实际工作流和显存优化 <a href="https://github.com/QwenLM/Qwen-Image-2.1" target="_blank">→</a></li>
+    <li>Agent 工程验收：grokbot-field-notes 的失败日志与规则文件可作为个人/团队 Agent 项目的流程素材 <a href="https://github.com/unicodef1wn/grokbot-field-notes" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

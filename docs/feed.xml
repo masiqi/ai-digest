@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 20 Sep 2026 00:43:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 00:45:24 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/21 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-21.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-21.html</guid>
+      <description>今天的主线从“更大的模型”转向“更可落地的系统”：一边是 Qwen-Image-2.1 把高质量生成、编辑与透明通道压到 7B 视觉生成组件，并在开源生态中快速获得 Day-0 支持；另一边是文档边界判断、实时语音、System One 决策模型与推理工程教育，正在把 Agent 从会聊天推进到能稳定执行、可测量、可审计的工作流。本次 Agent Reach 证据增强脚本超时，正文只纳入已用官方 GitHub、官网或项目页人工核验的条目，HNRSS 补充信号未据此编造。</description>
+      <pubDate>2026-09-21T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/20 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-20.html</link>
