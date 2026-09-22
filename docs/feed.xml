@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 21 Sep 2026 00:45:24 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 00:44:19 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/22 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-22.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-22.html</guid>
+      <description>今天的信号集中在“AI 从生成结果走向可执行工作流”：Pexo 把视频制作包装成可对话的代理，Hyper3D 开始强调 Agent-Ready 的 3D 流程，DocJev/ Kev 则把文档处理和判断任务拆成更窄、更可验证的模型能力。与此同时，MiMo 的公开训练过程和 CodeMidas 的源码造 RL 任务，说明开源竞争点正在从“放出一个模型”转向“公开训练方法、验证器和工程闭环”。
+
+本次 X List 成功抓取 92 条。Agent Reach 多源证据脚本本轮运行超过 300 秒未产出证据包，因此以下内容只纳入能够用推文加官网、GitHub、论文或官方文档交叉支撑的项目；证据不足的...</description>
+      <pubDate>2026-09-22T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/21 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-21.html</link>

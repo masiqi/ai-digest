@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-22</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-22</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“AI 从生成结果走向可执行工作流”：Pexo 把视频制作包装成可对话的代理，Hyper3D 开始强调 Agent-Ready 的 3D 流程，DocJev/ Kev 则把文档处理和判断任务拆成更窄、更可验证的模型能力。与此同时，MiMo 的公开训练过程和 CodeMidas 的源码造 RL 任务，说明开源竞争点正在从“放出一个模型”转向“公开训练方法、验证器和工程闭环”。
+
+本次 X List 成功抓取 92 条。Agent Reach 多源证据脚本本轮运行超过 300 秒未产出证据包，因此以下内容只纳入能够用推文加官网、GitHub、论文或官方文档交叉支撑的项目；证据不足的新线索明确放入早期信号，不把推文中的宣传语当成已验证事实。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Pexo：把视频制作变成可对话的 AI 视频代理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Pexo 不是只生成一段素材的模型界面，而是让用户用自然语言描述目标，代理协助规划镜头、选择后端模型并交付可发布的视频；官方页面列出的方向包括产品广告、社交内容、解释视频和品牌视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://pexo.ai/video-agent" target="_blank">https://pexo.ai/video-agent ↗</a></p>
+    <p><a href="https://github.com/pexoai/pexo-skills" target="_blank">https://github.com/pexoai/pexo-skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官方 Video Agent 页面，先用一句明确的结果描述开始，例如“做一条 30 秒、面向中文开发者的产品介绍视频”，再补充受众、比例、时长、品牌色和参考 URL/图片。先接受或修改它给出的创意方案，再逐段检查脚本、镜头和素材，最后要求它生成成片。若想在代码代理中试用，可阅读开源 skills 仓库的 README，确认当前安装方式、权限和模型依赖后再接入 Claude Code 等支持 Agent Skills 的客户端；不要把未经审查的素材直接用于商业发布。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把视频工具的竞争从“哪个模型出图更漂亮”推向“谁能把策划、分镜、素材选择、生成和修改串成一条可复用流水线”。官方资料明确强调可从文字、URL、图片、视频或音频开始，并由代理在后台选择模型。对小团队而言，真正节省的可能不是一次生成时间，而是减少反复切换模型和剪辑工具的沟通成本；但成片质量、版权和可控性仍需逐条验收。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为新产品快速制作一版可迭代的官网、社媒或广告预告片。</li>
+    <li>把已有 URL、PDF、产品截图和品牌素材交给代理，先做内部评审版再人工精修。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Pexoai_offical/status/2102020852984471993" target="_blank"><span class="handle">@Pexoai_offical</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2102016463246970880/img/vpzT7txiv2L36c-A.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2102016463246970880/img/vpzT7txiv2L36c-A.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Hyper3D Rodin Agent-Ready：让 3D 建模进入代理工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>推文展示了 Hyper3D 面向 Agent 的自主 3D 工作流；官方 Rodin 页面则可核验其从文字或图片生成接近可用 3D 资产、支持材质和多种创作流程的产品定位。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://hyper3d.ai/use-cases/animation" target="_blank">https://hyper3d.ai/use-cases/animation ↗</a></p>
+    <p><a href="https://hyper3d.ai" target="_blank">https://hyper3d.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 Hyper3D 官网并使用免费入口，准备一张产品图、角色多视图或工业参考图。先做一次普通图生 3D，下载或预览模型后，再把任务拆成“生成资产—调整比例—补材质—导出”的连续要求，观察 Agent-Ready 模式是否能自己选择参数。做游戏或电商原型时，先从单个道具开始，检查网格、纹理、比例和导出格式，再尝试多视图或工业图纸；不要把演示中的“接近生产可用”直接等同于可绑定、可动画的最终资产。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>3D 生成的瓶颈往往不只是模型能不能出一个形状，而是参考图理解、参数选择、拓扑、材质和导出能否连续完成。推文强调 Agentic Mode 会理解多视图、工业图纸和电商图并自行判断建模方式，官方资料则对 Rodin 的资产生成和动画场景给出可核验说明。如果这条路线成熟，设计师交付给代理的将不再是一句 prompt，而是一组参考资料和验收标准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>游戏、美术和电商团队快速生成道具、角色或产品展示原型。</li>
+    <li>用多视图和工业参考图做 3D 打样前的概念验证。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2102059922544599314" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2102048461231448066/img/F_cW_s94fI8xfKnw.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2102048461231448066/img/F_cW_s94fI8xfKnw.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen-Image-2.1：7B 级开源图像生成、编辑与透明通道试玩</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Qwen-Image-2.1 的公开试玩入口支持通过文字生成图像，或描述性地修改最多 10 张上传图片；外部 ComfyUI 资料还核验了 7B、原生 2K、透明通道和多图编辑等定位。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/spaces/Qwen/Qwen-Image-2.1" target="_blank">https://huggingface.co/spaces/Qwen/Qwen-Image-2.1 ↗</a></p>
+    <p><a href="https://blog.comfy.org/p/qwen-image-21-in-comfyui-open-weight" target="_blank">https://blog.comfy.org/p/qwen-image-21-in-comfyui-open-weight ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Hugging Face Space，先只输入文字生成一张带中文标题的海报，观察文字排版和主体一致性；第二轮上传一张产品图，明确要求只改背景、不改变产品轮廓；第三轮逐步增加参考图，测试最多 10 张图片时角色、产品、背景和风格是否能保持一致。若本地有 ComfyUI，再按其官方支持说明加载对应工作流，先用小尺寸和低步数确认显存与速度，再开 2K 或透明通道。每轮都保存原图、提示词和输出，便于比较模型到底改了什么。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>一个 7B 级权重同时覆盖生成、编辑和 RGBA 透明通道，意味着很多原本要在生成器、抠图工具和图像编辑器之间来回切换的任务可以合并测试。多参考图输入对电商商品、角色设定和系列海报尤其有价值。需要注意的是，开源权重不等于低门槛：显存、量化版本、ComfyUI 节点兼容性和中文字形质量都应通过自己的素材验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>商品图换背景、透明素材和多张参考图融合。</li>
+    <li>带大量中文文字的海报、信息图和系列视觉资产制作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101810563391340754" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSshjnSbAAAsa0r?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSshjnSbAAAsa0r?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSqWS--aYAAi5G0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSqWS--aYAAi5G0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DocJev：用小而专的决策模型做文档分类与拆分</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DocJev 是 LlamaIndex 作者 Jerry Liu 发布的开源文档分类/拆分工具：给它 PDF、DOCX 或 PPTX，再给一组自然语言分类规则，它可以判断类别，或找出合并文件中的子文档边界和页码范围。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/jerryjliu/docjev" target="_blank">https://github.com/jerryjliu/docjev ↗</a></p>
+    <p><a href="https://www.explainx.ai/blog/docjev-llamaindex-document-classification-split-2026" target="_blank">https://www.explainx.ai/blog/docjev-llamaindex-document-classification-split-2026 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Python 3.11 或更高版本，克隆仓库并严格按 README 创建虚拟环境、安装依赖和配置 TypeSafe API key。先拿一份包含发票、合同和附件的合并 PDF，写出“按文件类型和业务部门分类”的自然语言规则，让 DocJev 输出类别；第二轮把同一文件包交给拆分流程，检查它给出的起止页是否真的对应子文档。把结果和人工标注逐页对照，尤其检查扫描页、目录页、附件和跨页表格；不要只看速度数字，错误边界会污染后续 OCR、RAG 和引用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>文档代理常常把解析、检索和回答混在一起，错了以后很难定位。DocJev 把“分类/找边界”单独交给决策模型，并把解析与判断分离，适合做企业文档管线的前置路由。外部介绍转述了仓库和基准报告中的速度主张，同时也提醒样本规模和错误边界是限制；这正是它值得实测的原因：它可能降低长文档处理成本，也可能把一个不易察觉的切分错误放大到整条问答链路。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将合同包、发票包、尽调资料和扫描档案自动分类。</li>
+    <li>在进入 OCR、向量库或知识图谱前，先按页码拆出可追溯的子文档。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101822461973336171" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSssYW5aYAAikHh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSssYW5aYAAikHh?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2101738161546391552/img/aTJ-mBG_YeF98yMQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2101738161546391552/img/aTJ-mBG_YeF98yMQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kev：本地可训练的“只做判断、不写字”小模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Kev 是一个 Jev-inspired 决策模型：把一份文档和多组 typed questions 一次性输入，在单次 prefill 中并行输出选项概率、置信度或分数，不负责生成长文本。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/jaredpalmer/kev" target="_blank">https://github.com/jaredpalmer/kev ↗</a></p>
+    <p><a href="https://github.com/jaredpalmer/kev/blob/main/README.md" target="_blank">https://github.com/jaredpalmer/kev/blob/main/README.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 和 model cards，选择适合设备的 0.6B、4B 或 8B 版本，按项目说明安装依赖并准备一段真实但已脱敏的文档。为同一文档定义多组结构化问题，例如部门、优先级、是否需要升级、情绪等级和风险类型，然后一次运行并记录每题的概率分布。把输出与人工标签比较，再做问题顺序置换和“无此选项”测试，检查模型是否稳定；只有在准确率、校准和延迟都满足要求后，才考虑接入客服分流或文档路由。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多业务并不需要模型写一篇文章，只需要低延迟地对同一份状态做几十个稳定判断。Kev 的 block-causal mask 让每个问题能看文档、但不看其他问题，pointer head 输出选项概率，工程上更接近可测试的分类器而不是聊天机器人。它还支持 LoRA 和本地运行路线，适合研究“窄任务小模型”能否在成本、可解释性和吞吐上替代通用 LLM；不过概率校准和领域迁移必须自己验收。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对一份工单、合同或客服对话并行打标签、分级和路由。</li>
+    <li>在 RAG 之前筛选文档类型、风险等级和是否需要人工介入。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2101814622529651168" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSslPTEbgAA_ycX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSslPTEbgAA_ycX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSrJjHrXIAA0TFD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSrJjHrXIAA0TFD?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cove：把 Mac 桌面做成可互动的开源休息场景</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cove 是推文介绍的开源 Mac 互动桌面项目，包含钓鱼屏保、追逐鼠标的兔子等轻量互动场景，定位更像可运行的桌面玩具而不是生产力 Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tonychuhai/cove" target="_blank">https://github.com/tonychuhai/cove ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub 仓库，先阅读 README、发行版和权限说明，确认当前版本是否支持你的 macOS 与 Apple Silicon；如果没有预构建包，再按仓库给出的开发环境和启动步骤本地运行。先只启用一个场景，观察屏保、鼠标交互、音频和后台资源占用，再尝试角色旋转或换装等功能。桌面应用需要谨慎授予辅助功能、输入监控或网络权限，测试完应检查是否有常驻进程和登录启动项；不要从评论区或不明镜像下载替代包。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这类项目不一定是生产力工具，却代表了 AI/Vibe Coding 社区正在把“可运行的小创意”快速做成完整桌面体验。Cove 的价值在于开源、可检查和有明确的互动反馈，适合用来观察一个多媒体桌面项目的资源管理、系统权限和发布方式。对开发者来说，它也是一个比纯网页 Demo 更接近真实产品的练习样本；对用户来说，安全审查比新奇效果更重要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Mac 屏保、桌面休息和短暂放松场景。</li>
+    <li>学习桌面互动、系统权限和多媒体应用打包流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tonychuhai/status/2101844327706333341" target="_blank"><span class="handle">@tonychuhai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2101843467731423233/img/AiJj1gOeP9oyI2Jv.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2101843467731423233/img/AiJj1gOeP9oyI2Jv.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 MiMo-V2.6：开源竞争开始公开训练过程与 Agentic RL</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 多条信息集中讨论小米 MiMo-V2.6，并提到模型信息、训练策略、系统细节和团队组织形式；外部资料可确认 MiMo 官方 GitHub 组织与公开 RL dashboard 线索，但训练细节仍是分批公开而非一次完整披露。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这件事的重点不只是又一个模型发布，而是把训练过程本身变成可观察对象。公开资料显示，MiMo 生态已有模型代码和权重仓库，外部发布整理还指出 RL dashboard 会展示训练中的 reward 曲线，同时提醒完整方法论并未一次性放出。若团队能持续公开数据配比、验证器、失败样本和成本，社区才有机会判断“规模变大”与“方法变好”分别贡献了多少；目前不能仅凭社交媒体中的 SOTA 描述下结论。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开源模型的竞争门槛可能从参数量和 benchmark 榜单，进一步移动到训练透明度、复现实验和 Agent 任务数据。对企业用户，公开训练细节有助于评估模型是否适合代码、视觉、工具调用等具体场景；对研究者，它提供了观察 RL scaling 的窗口。短期内，资源规模和评测口径仍会影响可比性，不能把 dashboard 或单次榜单直接当成生产稳定性证明。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2102184583605469411" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSx1ui6aEAA6SVz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSx1ui6aEAA6SVz?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSxiBKkWQAA1LpY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSxiBKkWQAA1LpY?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 CodeMidas：直接从已有源码构造可执行的 Agent RL 任务</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 转述的研究把已实现的开源代码功能转成可执行 RL 环境；论文显示其从 3,185 个代码库构造 5,545 个任务，并用执行验证和反复 rollout 过滤任务。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>CodeMidas 试图绕开对 issues、commits 等开发产物的依赖，先让 Agent 探索源码、写出行为规范，再基于原代码生成测试并验证候选任务。这种方法的关键不是“让模型多做题”，而是把已有软件的隐含行为转成可判分的环境。论文报告在 DeepSWE、ProgramBench 和 Terminal-Bench 等任务上的提升，但这些结果属于论文实验，不能直接外推到所有代码库或商业仓库；真正值得复现的是任务生成、泄漏检测和过滤流程。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果源码本身就能成为 RL 数据的主要来源，编码 Agent 的训练数据获取会从人工编写 issue 扩展到大规模行为抽取，覆盖修复、翻译、程序构造和终端操作。它也会抬高验证器质量的重要性：错误测试会把错误行为奖励给模型，源码许可、训练数据合规和测试泄漏同样需要治理。对工程团队而言，可先把自己的核心库做离线任务生成实验，而不是直接把生产代码上传到第三方训练管线。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/grok/status/2101999121477357811" target="_blank"><span class="handle">@grok</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 应用供给暴增，但用户付费没有同步跟上</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 转述 a16z 数据称，2025 年 2 月后 iOS 新增应用、Chrome 插件和 Android 应用供给明显增加，但相关讨论同时指出用户使用和付费增长并未等比例发生。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这组信号与今天工具层的密集发布相互印证：生成式 AI 降低了“做出一个能上架的东西”的成本，却没有自动解决分发、留存、信任和付费。由于本条目前只核到 X List 对报告的转述，具体数字和样本口径应回到 a16z 原始报告复核，不能把帖子中的估算当成审计数据。更稳妥的结论是，AI 产品供给正在过剩，产品差异化开始由模型能力转向工作流、渠道和结果责任。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>个人开发者和小团队可以更快试错，但“上线”本身的稀缺性下降，获客成本、留存率和真实结果会成为更硬的筛选器。企业采购也会更看重数据边界、集成成本、可审计性和出现错误后的责任归属。对工具猎手来说，值得优先跟踪的是能嵌入已有流程、提供可验证产物或拥有稳定分发渠道的项目，而不是仅凭一段 Demo 判断商业潜力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tonychuhai/status/2102054400814374983" target="_blank"><span class="handle">@tonychuhai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2101944326788153739" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2102039343770517786" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tuturetom/status/2101978848346914825" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2102089012483706936" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2101956698374131917" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2101826882270568471" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HSv_U36bkAA_eba?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSv_U36bkAA_eba?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSv_T_kaYAErcGL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSv_T_kaYAErcGL?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSubNeRbIAAwxG3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSubNeRbIAAwxG3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSuL4KkbgAAC1rO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSuL4KkbgAAC1rO?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSvxlnpbQAAKvTt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSvxlnpbQAAKvTt?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSvqfSgaoAARRLF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSvqfSgaoAARRLF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSu4bDaakAA5Oyk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSu4bDaakAA5Oyk?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSwLcNqXIAAwNtz?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSwLcNqXIAAwNtz?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HSswZk4aEAAKkCG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HSswZk4aEAAKkCG?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Grok 4.7：X List 多条帖子称新版本先在 Grok CLI 等入口可用，并展示了自然语言生成可玩的简单网页游戏；官方发布说明和稳定入口仍需继续核验 <a href="https://x.com/dotey/status/2102089012483706936" target="_blank">→</a></li>
+    <li>LogLens：小众软件转发的开源 Windows 日志查看器，主打 1 GB 日志和 JSONL 原生查看；项目直链在本轮抓取中仍是 t.co，先保留原文观察 <a href="https://x.com/appinn/status/2101956698374131917" target="_blank">→</a></li>
+    <li>INDEXX：Grok Bot 模板方向，目标是把多年 Instagram 视频整理成本地可搜索、可问答的 Markdown 媒体维基；模板权限、数据导出和隐私边界需要先审查 <a href="https://x.com/shao__meng/status/2101826882270568471" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
