@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 22 Sep 2026 00:44:19 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:52:10 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/23 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-23.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-23.html</guid>
+      <description>今天的信号集中在“模型价格—能力曲线下移”与“Agent 进入真实工作流”两条线上：X List 同时出现 Claude Opus 5.5、GPT-6 Sol/Luna 的发布讨论，开发者开始把注意力从单次聊天转向设计、代码索引、机器人开发和本地推理等可执行环节。需要说明的是，本次 Agent Reach 证据包在限时内未生成，以下🛠️项目均以 X List 原文加官网、官方文档、GitHub 或厂商原文人工交叉核对；HNRSS 补充证据缺失，指标和社区热度不应被视为完整统计。</description>
+      <pubDate>2026-09-23T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/22 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-22.html</link>
