@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 23 Sep 2026 00:52:10 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 00:42:26 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/24 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-24.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-24.html</guid>
+      <description>今天的信号很集中：AI 产品正在从“生成一个结果”转向“直接完成一段工作流”——实时翻译、音频对话、视频生产、编码代理和本地生图都在降低从想法到成品的距离；与此同时，Claude Opus 5.5、GPT-6 Sol/Luna、StepFun 等新模型密集出现，模型差异越来越体现在长任务稳定性、成本和工具链，而不只是跑分。本次 Agent Reach 多源补充脚本在抓取阶段超时，未形成可读取的 evidence summary；因此下文的可上手条目均另用官网、GitHub、Hugging Face 或官方文档交叉核验，早期线索保守标注“证据待补”。</description>
+      <pubDate>2026-09-24T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/23 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-23.html</link>
