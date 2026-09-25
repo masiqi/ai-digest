@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 24 Sep 2026 00:42:26 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 00:45:05 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/25 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-25.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-25.html</guid>
+      <description>Claude Opus 5.5 把“模型直接交付成品”的上限再往前推，但更值得跟进的是配套工程正在补齐：确定性代码审查、模型路由网关、分支级预览环境和轻量决策模型，让 Agent 从会生成，走向可切换、可验证、可上线。与此同时，DeepSeek Harness 桌面端和一批个人 Agent/内容工具仍处在快速扩散期；由于本次 Agent Reach 证据补充脚本未能在时限内产出证据包，只有外部资料可核验的项目进入“可上手”，其余线索明确标为证据待补。</description>
+      <pubDate>2026-09-25T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/24 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-24.html</link>
