@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 25 Sep 2026 00:45:05 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 00:43:25 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/26 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-26.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-26.html</guid>
+      <description>今天最值得跟进的变化，不是又一个“模型更会聊天”，而是 Agent 开始进入可运行、可恢复、可审计的基础设施层：Google AX 把长任务 Agent 做成可分布式恢复的运行时，Docker 则尝试把 Agent 的权限、工具和网络边界封装成可版本化的 OCI 工件。另一条明显支线是生成式媒体从“生成一段视频”走向“可交互、可持续编辑的媒介”，但其中不少演示仍是预生成或早期信号，不能把展示效果直接当成成熟产品能力。</description>
+      <pubDate>2026-09-26T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/25 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-25.html</link>

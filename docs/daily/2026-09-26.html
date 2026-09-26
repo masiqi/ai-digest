@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-26</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-26</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得跟进的变化，不是又一个“模型更会聊天”，而是 Agent 开始进入可运行、可恢复、可审计的基础设施层：Google AX 把长任务 Agent 做成可分布式恢复的运行时，Docker 则尝试把 Agent 的权限、工具和网络边界封装成可版本化的 OCI 工件。另一条明显支线是生成式媒体从“生成一段视频”走向“可交互、可持续编辑的媒介”，但其中不少演示仍是预生成或早期信号，不能把展示效果直接当成成熟产品能力。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Google AX（Agent Executor）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 开源的分布式 Agent 运行时，用于隔离执行、持久化事件、失败恢复和在 Kubernetes 上运行长生命周期 Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/google/ax" target="_blank">https://github.com/google/ax ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备一个可用的 Kubernetes 集群、Docker 或 Podman、Go 环境以及 AX README 中要求的 Agent Substrate/事件日志依赖；然后执行 `go install github.com/google/ax/cmd/ax@latest` 获取 CLI，阅读仓库中的部署说明和 manifests，先用本地或测试环境跑通 `ax --server=localhost:8494 --input="hello, who are you?"`。实际试用时建议先创建一个最小任务，观察任务状态、事件日志、暂停/恢复和失败重试，再逐步加入自定义 harness、MCP 工具和网络策略，不要一开始就把生产凭据放入实验集群。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AX 的关键不在于再包一层 Agent SDK，而在于把 Agent 看成可能暂停、恢复、等待人工批准且需要审计的有状态执行单元。README 明确提到事件日志、单写者架构、隔离环境和恢复机制，这正好对应企业 Agent 从 Demo 走向长期运行时最容易失控的部分；不过它是自托管基础设施，部署复杂度和对 Agent Substrate 的耦合需要单独评估。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Kubernetes 上运行可中断、可恢复的研究或代码 Agent，并保留可审计执行轨迹。</li>
+    <li>为多租户 Agent 平台提供隔离的工作区、工具和网络出口管理。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2103325254487888248" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTCDKReboAAExUx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTCDKReboAAExUx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Audio8 ASR Infinite</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Edge0 发布的低延迟流式语音识别模型，面向中英文连续转写，支持可选择的音频时钟与会话延迟。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/Edge0/Audio8-ASR-Infinite" target="_blank">https://huggingface.co/Edge0/Audio8-ASR-Infinite ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认机器有适合的 CUDA 环境和约 8.17GB 模型权重空间，再按模型卡安装对应的 Transformers/PyTorch 依赖；想快速验证可以使用 Hugging Face 模型仓库或 Space，想部署服务则阅读仓库中的 vLLM 路径和 WebSocket 示例。下载后用一段中文和英文混合音频测试 80/120/160ms 音频时钟以及不同 `target_delay_ms`，对比延迟、断句、长时间运行是否漂移；不要只用十秒样音频下结论，连续会议或播客才是它的真实测试场景。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“实时 ASR”具体化成可调的时延—质量取舍，而不是只给一个离线转写接口。模型卡给出了 30 秒滚动 KV 窗口、无限长度转写、双语支持和 vLLM 实时服务路径，并提供了公开评测指标；这使它适合被接进语音 Agent、字幕和长时间监听管线，但 8GB 级别权重、GPU 需求及远程代码依赖仍然是落地门槛。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地会议、直播或播客的低延迟中英字幕与检索索引。</li>
+    <li>语音 Agent 的持续输入通道，配合 VAD、TTS 和可中断对话。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2103504739220771085" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Docker Sandbox Kit Specification v3</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Docker 提出的 Agent 权限开放规范，把 Agent、工具以及它请求访问的主机、凭据、卷和网络规则放进普通 OCI 镜像，并计划交由 CNCF 中立治理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.docker.com/blog/docker-sandbox-kit-spec/" target="_blank">https://www.docker.com/blog/docker-sandbox-kit-spec/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读规范仓库和 Docker 的两篇说明，重点看 `vnd.docker.sandbox.kit.descriptor` 注解、`provides/requires`、网络策略和凭据能力页面；再用 `docker buildx build` 构建一个只包含最小工具集的 Kit，给它设置明确的网络白名单和只读卷，在测试环境中用 Docker Sandbox 运行，检查镜像摘要、权限声明与实际拦截行为是否一致。最后尝试修改一项权限并重新构建，观察审查、签名、扫描和回滚流程，而不是把它当成普通 Dockerfile 直接上线。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 安全目前常被拆成提示词、沙箱和平台策略三套不一致的配置，迁移运行时就容易丢失“它究竟被允许做什么”的边界。Sandbox Kit v3 把权限声明与 Agent 内容绑定为可签名、可扫描、可固定摘要的 OCI 工件，理论上能让权限差异进入代码审查和供应链流程；但规范刚进入开放治理阶段，跨运行时的真正兼容性仍要看实现和一致性测试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为团队内部 Agent 发布带有固定网络、凭据和文件访问边界的可审查运行包。</li>
+    <li>在多种 Agent 运行时之间迁移工具时，保留同一套权限声明和供应链证据。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2103450618195288492" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTD1LLOa0AATqOk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTD1LLOa0AATqOk?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTAxl2PXgAAzcIg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTAxl2PXgAAzcIg?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Zuse</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的桌面 Agent 工作台，把 Claude Code、Codex、Grok、Gemini、Cursor 和 OpenCode 等 CLI Agent 放进持久化、项目感知的统一界面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/swarajbachu/zuse" target="_blank">https://github.com/swarajbachu/zuse ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装仓库要求的桌面依赖并启动 Zuse，然后确认本机已经安装并登录至少一个支持的 Agent CLI；打开一个真实 Git 仓库，选择 Agent，先让它完成一个小型、可回滚的任务，再查看会话历史、文件查看器、终端输出和 diff。接着为两个任务分别创建 Git worktree，测试并行修改是否互不污染；如果要自动化，再研究它的 CLI/脚本能力，把“启动会话—附加上下文—读取结果—人工检查”串成可重复流程，所有合并动作仍保留人工闸门。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有重新训练或重造一个 Agent，而是把当前多家 CLI Agent 的碎片化工作流收拢到项目、会话、终端和 Git worktree 这一层。对已经订阅多个 Agent 的开发者来说，持久上下文、并行 worktree 和可见 diff 比再增加一个聊天窗口更实用；同时，桌面宿主需要处理本地凭据、终端权限和多 Agent 状态一致性，适合先以个人仓库试用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在同一代码库中比较多个 Coding Agent 的实现和修复结果。</li>
+    <li>将规划、执行、审查拆成持久会话，并行运行而不覆盖工作目录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2103448864410005649" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTDzlU0bQAA-fow?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTDzlU0bQAA-fow?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2103156841652117509/img/3bn1lIzs_KEsMnZU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2103156841652117509/img/3bn1lIzs_KEsMnZU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Pirate Face</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把符合许可条件的 Hugging Face 开源模型做成带 SHA-256 校验和的 BitTorrent 磁力链接，为模型下载增加去单点和可验证分发层。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://pirateface.co/how-it-works" target="_blank">https://pirateface.co/how-it-works ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Pirate Face 模型目录中挑选一个体积可控、许可证明确的模型，阅读其页面上的磁力链接、官方 Hugging Face 来源和校验说明；使用官方来源的 Transmission 或 qBittorrent 导入磁力，下载完成后执行强制 recheck，再把本地文件与页面提供的 SHA-256 清单逐项比对。确认文件确实来自目标 revision 后，才考虑持续做种；不要因为“去中心化”四个字就跳过许可证、恶意权重、模型卡和运行时安全检查，也不要把社区磁力当成官方质量背书。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>模型权重越来越大，单一托管平台的下架、限流、策略变化或服务故障都会影响复现。Pirate Face 的设计把 Hugging Face web-seed 作为首选来源，再用 BitTorrent swarm 和 SHA-256 验证作为冗余，解决的是“如何长期拿到同一份字节”而不是“模型是否可信”。这对研究归档、离线部署和开源模型供应链有启发，但其价值依赖做种规模、许可审核和实际可用性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为实验室或团队保存可复现的模型权重副本，降低单一下载源风险。</li>
+    <li>为大模型镜像分发增加哈希校验和点对点带宽来源。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2103456592431628318" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ huashu-chrome</div>
+  <div class="section"><div class="section-label event">一句话</div><p>由 MCP 服务和 Chrome 扩展组成的开源浏览器操控工具，让支持 MCP 的 Agent 使用用户自己的 Chrome 登录态执行网页操作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/huashu-chrome" target="_blank">https://github.com/alchaincyf/huashu-chrome ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库的隐私、安全和权限说明，在专门的 Chrome 配置或低风险账号上安装，执行 `npx huashu-chrome install` 让它检测并配置 Agent，再用 `npx huashu-chrome doctor` 检查连接。浏览器扩展仍需用户在 `chrome://extensions` 中手动加载或确认；首次只测试公开网页和无副作用表单，逐步验证读取、填写、预览和提交四类动作。涉及支付、账号设置、求职投递或删除数据时，必须保留人工确认，并把登录态、扩展权限和 MCP 日志当成敏感资产管理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这条路线绕开了“自动化浏览器拿不到真实登录态”的长期痛点，让终端 Agent 可以复用用户已经打开的网页身份；外部仓库明确给出 MCP、扩展、多个 CLI Agent 和备份配置的安装路径。它的价值与风险是同一个来源：Agent 能看到什么、能点击什么取决于真实浏览器权限，因此必须按站点、账号和动作分级，不能把成功操控网页误认为安全完成业务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在人工确认下处理需要登录的后台查询、资料整理和低风险表单草稿。</li>
+    <li>让 Coding Agent 复现网页端测试流程并读取真实浏览器中的结果。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2103455579385770460" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ YouWare</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向浏览器 Web 应用的 AI App Builder，从自然语言生成可交互项目，并支持继续编辑、数据库/认证能力和一键发布。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.youware.com/features/ai-app-builder" target="_blank">https://www.youware.com/features/ai-app-builder ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 YouWare 的创建入口，先用一句具体需求描述目标用户、页面、数据字段和关键交互，例如“做一个带搜索、收藏和用户登录的食谱分享应用”；等待初版生成后，逐项测试表单、导航、数据读写和异常状态，再用对话、可视化编辑或代码编辑器改一轮。需要后端时明确要求数据表、认证和工作流，发布前用无敏感数据的测试账号验证；官方快速开始建议从创建、编辑、发布三步走，适合先做内部工具或 MVP，不要把未审计的生成代码直接接入生产数据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>X List 中的演示强调“从一句话到 App”，官方文档则补足了可验证的边界：它目标是浏览器 Web 应用，支持 React 代码、YouBase 后端能力以及发布，而不是凭产品名推断出的万能原生 App 生成器。对非开发者和产品原型来说，真正的价值在于生成后还能检查代码、持续修改和快速发布；生产使用仍需自行审查认证、权限、数据模型和部署锁定。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速制作团队内部登记、查询、反馈和内容管理工具。</li>
+    <li>用一个可运行原型验证产品流程，再导出或重构关键部分。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2103488549991686397" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Renoise AI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向创作者和 Agent 的视频/图像生成工作台，把多种视频模型放到同一画布，并提供面向 Claude Code、Codex 的 Skill 接入。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://renoise.ai/docs" target="_blank">https://renoise.ai/docs ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 Web 控制台注册并创建一个短视频任务，使用一张授权图片或自有素材作为首帧，明确镜头时长、画幅和目标平台；在同一画布分别尝试 Seedance、Kling 或其他官方列出的模型，记录生成时延、分辨率、参考图一致性和音画效果。想接入 Coding Agent 时先按官方文档安装 Skill，再用一个 4–15 秒产品镜头验证自然语言到生成结果的链路，最后人工检查素材版权、人物肖像、音频授权和平台水印，不要把营销演示当作模型基准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的差异不是声称自己训练了新的视频模型，而是把多个模型、画布式编辑和 Agent 入口合到一个创作工作流里。官方页面明确区分了平台能力与底层模型，并给出分辨率、时长、参考视频和口型同步等选择依据；这对需要反复改镜头的产品宣传和短视频创作更有价值，但成本、队列、地区可用性和模型版本变化必须实际测试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将产品页面、更新说明或脚本快速变成多个风格的宣传片草稿。</li>
+    <li>在视频 Agent 中用同一画布比较模型并迭代镜头、画幅和参考素材。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2103439794324087079" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 macOS 的开源清理、卸载、磁盘分析、优化和系统监控 CLI，并配套原生 Mac 应用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/mole" target="_blank">https://github.com/tw93/mole ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果是 macOS，先用 Homebrew 安装 `brew install mole`，或者阅读官方安装脚本后再决定是否使用；首次执行 `mo clean --dry-run`、`mo uninstall --dry-run`、`mo analyze` 和 `mo status`，逐项查看它准备处理的路径和占用情况。优先在测试用户或已备份机器上运行，给模型权重、虚拟环境、浏览器缓存和开发目录设置白名单；确认预览结果后再执行清理，完成后检查开发工具、Agent 沙箱、外接磁盘和系统服务是否正常。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Mac 清理、卸载残留、构建产物清理和系统状态放进一个可审查的命令行流程，尤其适合经常下载模型、创建 node_modules 和运行多套 Agent 环境的开发者。仓库提供 dry-run、whitelist 和对运行中应用的保护说明，降低了盲删风险；但清理工具天然带有破坏性，任何“能回收空间”的宣传都必须以实际预览和备份为前提。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定期清理 Mac 上的构建产物、安装包和已卸载应用残留。</li>
+    <li>快速分析开发机、模型盘和缓存目录的空间构成。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2103408753525887169" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2103408685984976896/img/N1c9mx55FkaPDcuf.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2103408685984976896/img/N1c9mx55FkaPDcuf.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google Project Suncatcher 开始从概念走向在轨验证</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 正推进 Project Suncatcher，计划用搭载 TPU 的太阳能卫星测试太空 AI 计算基础设施，官方资料称早期原型任务将验证芯片面对发射、辐射、热环境和星间激光通信的可行性。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是“马上把数据中心搬上太空”，而是一项把能源、散热、辐射容错、编队飞行和高带宽通信同时捆绑的长期工程。Google 的公开材料把近乎连续的太阳能和低轨环境视为潜在优势，但也承认目前只是原型学习任务；X List 的中文转述容易把研究愿景说成已经建成的轨道计算中心，因此本日报按“在轨验证前的工程推进”处理，而不是按商业服务发布处理。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果芯片在轨可靠性、发射成本和星间通信最终过关，AI 算力的能源与部署边界可能被重新定义，云厂商也会获得一种不同于地面数据中心的扩容路线。但在多年验证完成前，地面电力、散热、维护和网络仍具明显优势；短期更值得观察的是原型数据、发射结果和是否形成可复用的辐射测试标准。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2103494457891111008" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 ACTx486：视频从播放窗口变成可交互媒介</div>
+  <div class="section"><div class="section-label event">事件</div><p>ACTx486 发布研究演示，让用户在现有播客/视频中提问、改变场景、加入物体、切换语言并延续多轮上下文。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方页面明确说明，当前演示中的完整交互是预先生成的，一次响应仍需数分钟，并非已经达到实时对话。因此它真正展示的是一种产品范式：原视频提供叙事、节奏和语境，生成系统让观众像“微型导演”一样在局部改变内容，而不是从空白聊天框开始创作。其技术难点也被同时暴露出来，包括角色肖像与声音的授权、研究后再生成、跨轮状态保持以及如何标记合成片段。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果生成时延和安全层能显著下降，教育视频、播客、纪录片和品牌内容可能从固定成片变成可问答、可分支的媒介；但任何使用真人脸声的产品都面临深度伪造、误归因和内容责任问题。现阶段应把它看成研究方向和交互设计样片，不能据此推断已经具备可规模化的实时生产能力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2103433891398746536" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2103433250953924608/img/nqZZuWkRGtLS1AfQ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2103433250953924608/img/nqZZuWkRGtLS1AfQ.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Opus 5.5 正在重塑“产品宣传片”的生产链</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 中多个创作者连续展示 Opus 5.5 根据产品官网、主题和音乐要求制作宣传视频、动画、混音和节奏卡点的案例。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这里最值得注意的不是单条视频“看起来很震撼”，而是工作流边界在移动：模型被要求理解产品定位、寻找官网素材、安排镜头、生成视觉和声音，再通过 Skill 固化成可复用流程。与此同时，案例仍主要来自创作者自述和展示视频，缺少统一输入、成本、失败率、版权链路和可复现工程的公开评测，因此更适合把它视为生产方式的早期信号，而不是“视频模型已被淘汰”的结论。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>产品团队可能减少从文案、分镜到初版视频之间的人工交接，个人开发者也能低成本做出过去需要制作团队才能完成的宣传草稿；相应地，品牌真实性、素材授权、音乐版权和审稿责任会变得更重要。真正的竞争点会从“谁能生成一条漂亮视频”转向“谁能稳定读取真实产品、保留视觉一致性并支持可审计修改”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2103488476591399234" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2103629881590645105" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xicilion/status/2103584488777556267" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2103500433654472798" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/localhost_4173/status/2103454978220470708" target="_blank"><span class="handle">@localhost_4173</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2103332060513665133" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2103148288400924827" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2103488009001984001/img/rLp0FaEQGlMowB_1.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2103488009001984001/img/rLp0FaEQGlMowB_1.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HStYUlobQAAbqmd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HStYUlobQAAbqmd?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTEYA_pasAIrORJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTEYA_pasAIrORJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTEifdFbQAATw95?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTEifdFbQAATw95?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTD36hDaYAAGk6_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTD36hDaYAAGk6_?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTCJR-DbwAAdlkh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTCJR-DbwAAdlkh?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2103148138681024512/img/knodmHP20IylJnAD.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2103148138681024512/img/knodmHP20IylJnAD.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2101149399426678784/img/VHd8duA8zM5Q4zL7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2101149399426678784/img/VHd8duA8zM5Q4zL7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>GPT-6 Astra：继续观察它在前端视觉、视频和 3D 任务上的可复现性，不以单个对比视频判断模型优劣。 <a href="https://x.com/op7418/status/2103148288400924827" target="_blank">→</a></li>
+    <li>Agent 权限供应链：继续关注 OCI、签名、策略扫描和跨运行时兼容性是否形成共同标准。 <a href="https://www.docker.com/blog/docker-sandbox-kit-spec-cncf/" target="_blank">→</a></li>
+    <li>长任务运行时评测：建议把失败恢复、上下文保真和成本放进同一张基准表，而不是只看一次任务成功率。 <a href="https://github.com/google/ax" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
