@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 27 Sep 2026 00:48:34 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 08:01:03 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/09/27 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-27.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-27.html</guid>
-      <description>今天最值得注意的变化，不是又多了一个聊天模型，而是 AI 工具正在把“可执行能力”拆成更细的工程组件：终端入口、轻量决策模型、可验证训练环境、语义路由和可复用 Skill。与此同时，OpenAI 代理误触政府网站、Agora-2 把多人共享世界做成实时模型，也说明能力扩张必须与边界、审计和仿真一起推进。</description>
+      <description>今天最值得关注的变化，是 AI 工具继续从“展示一个效果”走向“把工作流真正交给用户”：Obsidian 工作台、macOS 系统维护、浏览器剪贴板和开源视频风格库都已经可以亲手试；另一边，Muse、Agora-2 与 OpenAI 代理事件则把个人 Agent 的执行边界、共享环境和安全审计推到台前。</description>
       <pubDate>2026-09-27T08:30:00+08:00</pubDate>
     </item>
     <item>
