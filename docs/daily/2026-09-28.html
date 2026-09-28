@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-28</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-28</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手的主线，是“代码代理开始直接进入创作与桌面工作流”：一端是 Kaku、magpie 这类把多模型和 Agent 能力嵌进终端的开发工具，另一端是 Opus 5.5、ElevenCreative、Google Vids、Qwen-Image-2.1 把视频、图像和宣传内容的生产链压缩到自然语言与可复现代码里。本次 Agent Reach 多源证据包在限定时间内未产出，以下可上手条目均改用 X 原文 + 官方仓库/产品页/模型卡人工核验；证据较弱的新线索单独放入“刚露头”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Kaku：面向 AI 编程的开箱即用 macOS 终端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Kaku 是一款面向 AI coding 的 macOS 原生终端，把标签页、分屏、Shell 工具和 AI 助手配置放在一个开箱即用的终端里；官方仓库还列出了自然语言生成命令、失败命令修复建议、终端输出对话等能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kaku" target="_blank">https://github.com/tw93/Kaku ↗</a></p>
+    <p><a href="https://kaku.fun" target="_blank">https://kaku.fun ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 macOS 上安装 Homebrew，再执行 `brew install --cask kaku`，打开 Kaku 并完成 Shell integration；如果想直接试 AI 功能，可以在终端输入 `#` 后写一句自然语言需求，让它生成待审阅的命令，而不是直接替你执行。遇到命令失败时，用官方快捷键调出修复建议，检查命令后再粘贴回提示符；按 `Cmd+L` 可围绕终端输出和项目文件继续对话，按 `Cmd+Shift+A` 打开 AI 面板。建议先在一个测试项目里体验“生成命令—人工审阅—执行”的闭环，再把常用模型和 API 配置迁移到正式工作环境。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把一个聊天窗口贴在终端旁边，而是把 AI 建议、命令审阅、终端上下文和项目操作放到同一个工作面。对经常在 Claude Code、Codex 或其他 coding agent 之间切换的人，少一次复制粘贴就少一次上下文损失；同时保留“先审阅再执行”的交互，比完全自动执行更适合真实开发机。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地项目中让 AI 根据报错生成修复命令，并由开发者审阅后执行。</li>
+    <li>用同一终端窗口管理多个 Agent 会话、项目目录和调试输出。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2104359430406250695" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Awesome Opus 5.5 Videos：282 个可复现的 Claude Opus 5.5 视频案例</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是一个收集 Claude Opus 5.5 生成视频案例的开源仓库，每个案例配有原始作品、精确提示词和可查看的复刻结果，覆盖 Canvas、SVG、GSAP、Three.js、GLSL、像素风和可交互页面等方向。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yihui-dev/awesome-opus5-5-videos" target="_blank">https://github.com/yihui-dev/awesome-opus5-5-videos ↗</a></p>
+    <p><a href="https://skillry.dev/ai-videos/opus-5-5/" target="_blank">https://skillry.dev/ai-videos/opus-5-5/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README，按 Motion graphics、Explainers、Games &amp; interactive 等目录挑一个案例；进入具体条目，先看原始视频和 Prompt 文件，再把提示词复制到 Claude Code 或其他能生成项目文件的 coding agent 中。第一次不要直接改成自己的产品，先要求 Agent 原样复刻一个 Canvas 或 SVG 动画，并让它把所有资源留在一个可运行目录；复刻成功后，再只修改文案、颜色和品牌元素。这样可以清楚判断结果来自模型能力、提示词结构还是后续人工调整，也便于把成功案例沉淀成自己的宣传视频模板。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“模型能不能做视频”的宣传演示，转成了可下载、可阅读、可复刻的提示词与代码样本。更重要的是，许多案例并不是传统意义上的视频生成，而是由 HTML、Canvas、SVG、WebGL 等前端技术逐帧绘制或实时交互，意味着产品演示、数据动画和小游戏可以共享同一套 Agent 编程工作流。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为开源项目或 SaaS 产品快速制作可交互的产品介绍动画。</li>
+    <li>学习 Canvas、SVG、GSAP 与 Agent 协作生成视觉内容的提示词套路。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2104153913029169581" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Awesome Claude Video Skills：面向 Claude Code/Codex 的视频技能与工具目录</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是一个按类别整理的开源视频技能和工具包目录，覆盖剪辑、宣传片、解释视频、短视频、动效、数字人、故事动画等，并对收录仓库做了安全分级；它不是单一视频生成器，而是给 coding agent 选择视频工作流组件的索引。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/zhuyansen/awesome-claude-video-skills" target="_blank">https://github.com/zhuyansen/awesome-claude-video-skills ↗</a></p>
+    <p><a href="https://agentskillshub.top/best/claude-video-skills/" target="_blank">https://agentskillshub.top/best/claude-video-skills/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 README 的分类表，不要一次安装 180 个仓库；根据目标选择一个小类，例如“Editing”用于已有素材粗剪，“Promo &amp; demos”用于产品宣传，“Explainers”用于课程和知识视频。点击具体仓库，先阅读 README、安装说明和权限要求，再在隔离目录里让 Claude Code 或 Codex 只执行一个最小任务，例如从一段素材生成带字幕的 10 秒片段。确认输入输出、依赖和脚本行为后，再把它加入自己的 Agent skills 目录；遇到需要 MCP、浏览器或本地媒体权限的项目，逐项审阅配置，不要把未知脚本直接接入主工作区。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>视频自动化真正的瓶颈往往不是“能不能生成一段画面”，而是素材整理、字幕、剪辑、配音、渲染和交付之间的连接。这个目录把分散在 GitHub 上的技能按任务拆开，并提供安全分级，降低了从“看演示”到“搭工作流”的搜索成本；对希望让 Agent 操作真实视频工程的人，比单纯的模型排行榜更有行动价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为短视频账号搭建从脚本、素材整理到字幕和导出的半自动流水线。</li>
+    <li>为产品团队筛选可审计的视频 MCP、插件或 Remotion 类工具。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2104342679677292662" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qwen-Image-2.1：支持生成、编辑、透明图与多参考图的开源图像模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Qwen-Image-2.1 是 Qwen 的统一文本生图与图像编辑模型，官方模型卡显示视觉生成组件为 7B 参数，支持文字渲染、图像编辑、透明 RGBA 图像和多参考图等工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/QwenLM/Qwen-Image-2.1" target="_blank">https://github.com/QwenLM/Qwen-Image-2.1 ↗</a></p>
+    <p><a href="https://huggingface.co/Qwen/Qwen-Image-2.1" target="_blank">https://huggingface.co/Qwen/Qwen-Image-2.1 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>有 NVIDIA GPU 时，按 Hugging Face 模型卡安装 PyTorch、Transformers、Diffusers、Accelerate 和 Pillow，加载 `QwenImage21Pipeline` 后先用官方最小文本生图示例生成一张 1024×1024 图片；再把 `image=` 参数接入编辑流程，测试“保留主体、替换背景”这类可验证任务。若使用 Apple Silicon，可沿 X 原文提到的 MFLUX/本地转换路线尝试，但要先确认对应仓库和权重格式，不要把 33GB 下载量当成所有机器的固定要求。第一次实验建议固定随机种子，分别比较文字排版、透明背景和参考图数量，记录显存、耗时和输出质量。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不只是又一个文生图模型，而是把生图、编辑、文字渲染、透明输出和参考图一致性放到同一模型家族中。对本地工作流尤其重要的是，官方提供模型卡、权重和推理入口，开发者可以从 API 试玩进一步走向 ComfyUI、Diffusers 或自定义 Agent 调用，而不必完全依赖封闭式网页产品。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>批量制作带准确中文/英文标题的社交媒体配图和产品海报。</li>
+    <li>在本地为 Agent 提供产品图改背景、换风格和透明素材生成能力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2104182121888448449" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ magpie：把多个 coding agent 的模型统一到一个本地网关</div>
+  <div class="section"><div class="section-label event">一句话</div><p>magpie 是 yetone 开源的本地 AI agent 模型路由工具，让 Claude Code、Codex、OpenCode 等客户端指向同一个本地端点，再从统一目录选择不同供应商和模型，兼容 OpenAI Chat Completions、Responses 与 Anthropic Messages API。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yetone/magpie" target="_blank">https://github.com/yetone/magpie ↗</a></p>
+    <p><a href="https://skillsllm.com/skill/magpie" target="_blank">https://skillsllm.com/skill/magpie ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 和配置示例，确认本地网关端口、登录方式及各客户端配置文件位置；启动 magpie 后，把一个非关键测试项目的 Claude Code 或 OpenCode 指向 `http://127.0.0.1:3425/v1`，只配置一个模型并先做一次普通对话。随后再增加第二个供应商，分别测试流式输出、工具调用、图片输入和长上下文，确认转换层没有丢失参数。最后再把 Codex 接入同一目录，并给不同任务设定不同模型。不要一开始替换所有生产配置，先保留原始配置备份，并检查日志中是否出现密钥或完整代码上下文。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多模型使用已经从“选哪个聊天网页”变成了开发团队的基础设施问题。magpie 的关键不在于再提供一个模型，而在于用本地兼容层把不同 Agent 的认证、模型选择、API 方言和流式工具调用集中管理；这样可以按任务切换模型，降低供应商锁定和重复配置成本，同时把路由控制留在开发者自己的环境中。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让 Claude Code、Codex 和 OpenCode 共用一套模型目录与中转配置。</li>
+    <li>在同一个项目中对比不同模型的编码、审查和长任务表现。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2104118248631648360" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ElevenCreative Studio 4.0：在同一时间线内生成、编辑和导出视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>ElevenLabs 官方介绍的 Studio 4.0 把视频、图像、配音、音乐和音效生成放进同一个项目时间线，并支持镜头原地重生成、字幕编辑与最终导出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://elevenlabs.io/blog/introducing-studio-4" target="_blank">https://elevenlabs.io/blog/introducing-studio-4 ↗</a></p>
+    <p><a href="https://elevenlabs.io/studio" target="_blank">https://elevenlabs.io/studio ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 ElevenCreative 的 Studio，先新建一个产品介绍或知识讲解项目；不要只写“生成一个好视频”，而是用分镜式描述指定镜头目的、时长、画面主体、旁白语言、语气和字幕内容。让系统先生成一个短片段并落到时间线，再单独修改某个镜头，观察它是否能保留上下文而不必整条片重做；随后补充旁白、背景音乐和音效，像剪辑软件一样调整片段顺序、字幕和音量，最后导出一个 30—60 秒版本。对于商业发布，必须再核对模型授权、声音使用权、水印和套餐限制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它代表的方向是从“分别生成素材，再下载到剪辑软件”转向“生成即入时间线”。这会减少素材搬运和版本管理，也让自然语言更像一种粗剪与协作接口；但它的真正生产力仍取决于镜头可控性、局部修改是否稳定、声音与画面的版权边界，因此适合先做低成本社媒片和内部原型，再评估正式广告流程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将产品卖点、旁白、配乐和字幕快速组合成一版社交媒体短片。</li>
+    <li>为课程或播客把已有脚本拆成可编辑的镜头和声音时间线。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2104216565981794465" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Google Vids + Gemini Omni：面向普通 Google 账号的免费 AI 视频入口</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 官方称 Google Vids 已扩大到任何 Google 或 Workspace 账号，用户可以用 Gemini Omni 1.1 Flash 免费生成 HD 视频，并通过模板、镜头延展和创意控制完成基础制作；AI 片段带有数字水印。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://vids.new" target="_blank">https://vids.new ↗</a></p>
+    <p><a href="https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/" target="_blank">https://blog.google/products-and-platforms/products/workspace/gemini-omni-in-google-vids/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在桌面浏览器打开 `vids.new` 并登录 Google 账号，先用一个明确的单页任务测试，例如“为一个开源项目制作 30 秒功能介绍”：写出受众、三段镜头、每段时长、画面风格、字幕语言和行动号召。生成初稿后，逐段检查事实、字幕、配音和镜头连续性，再使用延展场景或编辑能力处理单个镜头；不要直接把输出当最终成片，尤其要检查 AI 水印、素材来源和中文支持情况。若使用 Workspace 账号，先确认管理员是否开放 Gemini 功能；个人账号和企业账号的功能范围可能不同。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Google Vids 的门槛低，适合快速验证“文字到可分享视频”的实际效果，而不是先安装复杂本地链路。它把模板、脚本、镜头和协作放进 Google 工作区，可能成为非专业创作者接触 AI 视频的入口；但当前重点仍是快速草稿和营销/社区内容，复杂连续叙事、精确品牌资产和高端后期仍需人工软件补齐。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把产品文档或活动方案快速转成内部演示视频初稿。</li>
+    <li>为社区活动、课程通知和小型产品发布制作低成本 HD 视频。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2104216832869822590" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole 1.15：免费开源的 macOS 清理、卸载与系统监控工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mole 是 tw93 开源的 macOS CLI，同时提供原生 Mac 应用，覆盖清理、卸载、磁盘分析、优化和实时状态监控；官方站点记录了逐一测试的 709 款 Mac 应用，重点检查卸载残留、启动项和进程使用情况。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/mole" target="_blank">https://github.com/tw93/mole ↗</a></p>
+    <p><a href="https://mole.fit/zh/#tested-apps" target="_blank">https://mole.fit/zh/#tested-apps ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在终端执行 `brew install mole` 安装 CLI，先运行帮助命令和只读的分析功能，确认它将要处理的缓存、残留和启动项范围，再决定是否执行清理或卸载。对不熟悉 Terminal 的用户，先阅读官方命令说明并备份重要数据；不要把清理工具当成“无条件加速器”，每次删除前都要核对路径和应用归属。想看图形界面或菜单栏状态监控，可从官方站点了解原生 Mac 应用；还可以打开 Tested apps 页面，查看自己常用软件是否经过卸载残留测试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 工具越来越多，开发者机器上常常堆积多个 CLI、模型缓存和桌面客户端，卸载残留与磁盘占用本身就成了实际问题。Mole 的优势是把免费开源 CLI、可视化原生应用和公开测试清单连接起来；709 个逐一检查的应用清单提供了比“支持很多软件”更可核验的参考，但删除操作仍应由用户逐项确认。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>清理反复试用 AI 工具后留下的缓存、启动项和卸载残留。</li>
+    <li>用命令行和菜单栏监控定位 Mac 磁盘、内存或进程占用问题。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2104199434666148242" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenRouter 的多模型路由从“套壳”走向基础设施</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 上的讨论称 OpenRouter 已服务大量开发者并产生很高的 Token 用量，创始团队把“未来一定是多模型”作为核心判断。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>即使暂不把社交媒体中的规模数字当成独立审计数据，这条信号仍反映了模型使用方式的结构变化：开发者不再只绑定一个最强模型，而是按编码、速度、成本、上下文和工具调用选择不同供应商。模型路由层的价值也因此从简单转发升级为 API 兼容、计费聚合、故障切换、模型评测和策略控制。magpie 等本地网关的出现，与 OpenRouter 这类云端路由服务属于同一大方向，但前者强调本地控制，后者强调供应商覆盖和即用性。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来 Agent 平台的竞争不只看单模型榜单，还会看路由质量、故障恢复、工具调用兼容性、隐私边界和成本透明度。对团队而言，尽早把模型选择从业务代码里抽出来，建立可替换的 Provider 层与任务评测集，比追逐一次性的榜单第一更能降低长期迁移成本。规模与消耗数字来自 X 帖子的转述，本文不把它们视为本日报独立核验的统计结论。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2104240783910170641" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 “Agent 负责把目标之间的一千件破事做掉”成为产品叙事</div>
+  <div class="section"><div class="section-label event">事件</div><p>围绕 Muse 的讨论把 Agent 描述为连接人的目标与计划、邮件、电话、资源和流程的执行层，而不只是聊天机器人。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类叙事的关键变化，是产品价值单位从“回答一个问题”转向“完成一项跨应用任务”。如果 Agent 真要接管中间的一千件事，就必须具备长期记忆、权限分层、任务状态、失败恢复、可观察日志和人工接管；单次生成质量再高，也不能自动解决授权、隐私和外部系统不稳定的问题。今天的终端、视频编辑和本地图像工作流都在尝试把 Agent 从对话框推到实际操作面，但成熟度需要看可回滚性和可审计性。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业采购 Agent 时，应该先从边界清晰、可验证、失败成本低的流程开始，例如整理资料、生成草稿、创建待审任务，再逐步开放发送邮件、修改生产数据等高风险动作。对创业团队来说，真正的差异化可能不在“会调用多少工具”，而在于能否把目标拆解、审批、权限和结果验收做成可靠产品；否则“AI 员工”容易退化成需要人不断照看的自动化脚本。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2104206982156788067" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 MIT Universal AI：AI 素养从模型使用扩展到系统理解</div>
+  <div class="section"><div class="section-label event">事件</div><p>MIT Open Learning 推出 Universal AI 路径，五门基础课程覆盖编程、机器学习、深度学习、大语言模型、决策、可解释性与伦理，并提供面向行业的延伸课程。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是又一个“如何写提示词”的短课，而是把 AI 能力拆成从底层概念到行业应用的模块化学习路径。MIT 官方信息显示，首门 Fundamentals of Programming and Machine Learning 课程可免费向全球学习者开放；完整基础路径则包含五门课程，另有医疗、创业、能源等垂直方向。对正在使用 Agent 的团队，这类课程的意义在于帮助非算法人员理解数据、评估、偏差和系统限制，从而减少把模型输出误当事实或把自动化误当智能的风险。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>随着 AI 工具变成日常生产软件，企业培训需求会从“会不会用一个产品”转向“能不能评估一条 AI 工作流”。拥有共同的技术和伦理语言，有助于产品、工程、运营和管理者讨论模型适用边界、成本和责任。它也提示个人学习者：工具会快速变化，能迁移的长期能力仍包括编程基础、实验设计、模型评估和对不确定性的判断。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2104182096797553082" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2104331769097134164" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2104182620804530304" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2104152582692241721" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/tianyi/status/2103821968944533526" target="_blank"><span class="handle">@tianyi</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2104138489268670941" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2104111348388941915" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2104244123196887214" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/berryxia/status/2104201374082998273" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Qiaomu Agent：与 RSS 阅读插件结合的文章处理与外部动作自动化方向，适合关注其如何把阅读、信息抽取和 Spotify/信息图等工具调用串起来 <a href="https://x.com/vista8/status/2104244123196887214" target="_blank">→</a></li>
+    <li>WorkBuddy 互动课程产品：围绕蓝皮书和 Agent 学习材料的互动课程化尝试，值得观察“长教程→可操作练习→Agent 辅导”能否形成可持续产品 <a href="https://x.com/berryxia/status/2104201374082998273" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
