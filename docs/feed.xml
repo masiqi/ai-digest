@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 28 Sep 2026 00:43:03 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 00:53:34 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/09/28 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-28.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-28.html</guid>
-      <description>今天最值得动手的主线，是“代码代理开始直接进入创作与桌面工作流”：一端是 Kaku、magpie 这类把多模型和 Agent 能力嵌进终端的开发工具，另一端是 Opus 5.5、ElevenCreative、Google Vids、Qwen-Image-2.1 把视频、图像和宣传内容的生产链压缩到自然语言与可复现代码里。本次 Agent Reach 多源证据包在限定时间内未产出，以下可上手条目均改用 X 原文 + 官方仓库/产品页/模型卡人工核验；证据较弱的新线索单独放入“刚露头”。</description>
+      <description>今天最值得动手的主线，是“代码代理开始直接进入创作与桌面工作流”：一端是 Kaku、magpie 这类把多模型和 Agent 能力嵌进终端的开发工具，另一端是 Opus 5.5、ElevenCreative、Google Vids、Qwen-Image-2.1 把视频、图像和宣传内容的生产链压缩到自然语言与可复现代码里。本次 Agent Reach 多源证据包已经生成，但 HNRSS 的部分补充条目仅作为早期信号参考；可上手工具优先采用 X 原文 + GitHub/官网/官方文档支持，证据不足的新线索单独放入“刚露头”。</description>
       <pubDate>2026-09-28T08:30:00+08:00</pubDate>
     </item>
     <item>
