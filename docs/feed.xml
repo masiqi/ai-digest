@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 28 Sep 2026 00:53:34 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 00:45:15 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/09/29 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-09-29.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-29.html</guid>
+      <description>今天的信号集中在“能直接替人完成事情”的 Agent 基础设施：Manus 2.0/Cue 把个人 Agent 推向拥有电话、邮箱、钱包和独立电脑的执行者，OpenWorker 与 NVIDIA OpenShell 则分别补上桌面交付和沙箱权限控制。与此同时，模型竞争继续向更便宜、更快、更适合真实工作流的方向推进；本次 X 抓取到 111 条，Agent Reach 证据包在限时内未产出，以下🛠️条目均使用推文之外的官方官网、GitHub、模型卡或可信网页人工核验，HNRSS 补充证据待补。</description>
+      <pubDate>2026-09-29T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/28 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-28.html</link>

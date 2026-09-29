@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-09-29</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-09-29</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“能直接替人完成事情”的 Agent 基础设施：Manus 2.0/Cue 把个人 Agent 推向拥有电话、邮箱、钱包和独立电脑的执行者，OpenWorker 与 NVIDIA OpenShell 则分别补上桌面交付和沙箱权限控制。与此同时，模型竞争继续向更便宜、更快、更适合真实工作流的方向推进；本次 X 抓取到 111 条，Agent Reach 证据包在限时内未产出，以下🛠️条目均使用推文之外的官方官网、GitHub、模型卡或可信网页人工核验，HNRSS 补充证据待补。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Manus 2.0 / Cue：把个人 Agent 做成有身份的执行者</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Manus 2.0 是一次架构和产品重做，加入 Manus Studio、Video Editor、Game Dev、Automations 与 Cloud Computer；独立应用 Cue 则让个人 Agent 拥有自己的电话、邮箱、钱包和电脑，在授权边界内持续完成生活与工作任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://manus.im/blog/introducing-manus-2-0" target="_blank">https://manus.im/blog/introducing-manus-2-0 ↗</a></p>
+    <p><a href="https://cue.im/" target="_blank">https://cue.im/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 Manus 2.0 官网或下载桌面端，尝试用一个明确结果描述任务，例如“把这份产品资料做成 30 秒宣传片”或“把一个小游戏做成可分享的网页”。需要个人 Agent 场景时进入 Cue 官网，使用早期体验邀请码 MEETCUE（名额和平台可用性以页面实际状态为准），再给 Agent 配置允许使用的邮箱、电话、电脑工作区和预算。第一次建议从查资料、拟邮件、整理行程等可回滚任务开始；涉及付款、外发消息或修改文件时，逐项检查确认边界，不要一上来授予全部权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不只是把聊天窗口换成 App，而是把 Agent 的“身份、工具、执行环境和持续工作”组合起来。官方同时展示了事件触发自动化、可编辑视频时间线、游戏多人云电脑和授权后的 Computer Use，说明产品竞争点正在从回答质量扩展到能否在真实服务之间把任务闭环。需要注意的是，Cue 仍处于早期体验，电话、支付和外部服务能力带来的安全与责任边界必须人工审查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>个人旅行、预约、邮件和日程的半自动办理。</li>
+    <li>从产品 brief 到视频初剪、可编辑时间线和可分享小游戏的连续创作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2104614931962232959" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2104592111224176640/img/wN9aiit6wVRIkxqU.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2104592111224176640/img/wN9aiit6wVRIkxqU.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenWorker：本地优先、交付成品的开源桌面 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenWorker 是运行在桌面的开源 AI coworker，连接本地文件、终端、Slack、GitHub、日历等工具，目标不是只给建议，而是产出文档、报告、代码修复和可审阅的外部动作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/andrewyng/openworker" target="_blank">https://github.com/andrewyng/openworker ↗</a></p>
+    <p><a href="https://openworker.com/" target="_blank">https://openworker.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 macOS Apple Silicon 上直接从官网下载安装包，打开后配置自己的 OpenAI、Anthropic、Google、DeepSeek 等 API Key，或连接本地 Ollama。先选一个不涉及外部写入的任务，例如“检查这个仓库的依赖和 CI 风险并生成报告”，让它读取文件、运行检查并产出文件。确认结果后再尝试连接 GitHub 或 Slack；发送消息、运行命令、开 PR 等动作会进入审批步骤，先看差异、证据和目标对象，再决定批准。想研究实现，可 clone 仓库，重点看 coworker 后端、MCP 客户端和 Tauri/React 桌面壳。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“本地运行、模型自带、可审批动作、交付物落盘”放在一个完整产品里，且底层基于 aisuite 统一不同模型提供商，降低了被单一模型锁定的成本。官网展示的安全 coworker 还强调云环境只读、修复以 PR 形式交付，这种把发现、证据、补丁和审批拆开的设计，比单纯让 Agent 获得一把高权限终端更接近可控生产流程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本机完成代码审计、依赖检查并生成可审阅修复分支。</li>
+    <li>把 Slack、GitHub、日历和本地资料汇总成真正可交付的工作成果。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AndrewYNg/status/2104660347730969087" target="_blank"><span class="handle">@AndrewYNg</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTSuRsKaUAE1VGz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTSuRsKaUAE1VGz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ NVIDIA OpenShell：给自主 Agent 加上可审计的沙箱边界</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenShell 是 NVIDIA 开源的自主 Agent 运行时，通过内核级隔离和声明式 YAML 策略限制文件、网络、进程和模型提供商凭据访问。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/NVIDIA/OpenShell" target="_blank">https://github.com/NVIDIA/OpenShell ↗</a></p>
+    <p><a href="https://docs.nvidia.com/openshell/latest/" target="_blank">https://docs.nvidia.com/openshell/latest/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方 Overview 和 Quickstart，确认系统、内核与平台支持矩阵，再按官方安装方式部署。创建第一个 sandbox 时只声明一个测试仓库目录和必要的模型端点，使用网络策略禁止未批准的出站地址，用文件系统规则阻止访问 SSH key、云凭据和其他用户目录。运行 Claude Code、OpenCode 或 Codex 这类需要终端的 Agent，观察它能否完成编译、测试和读取允许文件，同时尝试访问禁止路径验证拦截结果。把 YAML 策略提交到版本库，变更前后用同一组测试记录审计结果；不要把真实生产凭据直接放进实验环境。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>OpenShell 处理的是 Agent 进入真实系统后最容易失控的部分，而不是再做一个提示词护栏。官方把文件、网络、进程和 provider credentials 分成独立保护层，并把策略写成可审阅、可版本化的配置；这为企业运行编码 Agent、私有模型端点和长任务提供了比“相信模型会自律”更明确的控制面。它也提醒开发者：沙箱隔离必须覆盖侧信道、出站网络和凭据注入，而不只是限制当前目录。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在隔离环境中运行会安装依赖、改代码和调用工具的编码 Agent。</li>
+    <li>为企业内部 Agent 建立最小权限、网络白名单和审计记录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AndrewYNg/status/2104660347730969087" target="_blank"><span class="handle">@AndrewYNg</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTSuRsKaUAE1VGz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTSuRsKaUAE1VGz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Ming-Image-0.1-Design：面向海报、UI 和信息图的可编辑设计模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Ming-Image-0.1-Design 是 6B 文生图模型，重点面向 UI、信息图、海报等文字密集设计，并支持 RGBA 透明背景；配套 Ming-Image 仓库还提供设计图层分解路线。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/inclusionAI/Ming-Image-0.1-Design" target="_blank">https://huggingface.co/inclusionAI/Ming-Image-0.1-Design ↗</a></p>
+    <p><a href="https://github.com/inclusionAI/Ming-Image" target="_blank">https://github.com/inclusionAI/Ming-Image ↗</a></p>
+    <p><a href="https://huggingface.co/inclusionAI/Ming-Image-0.1-Design-Layer" target="_blank">https://huggingface.co/inclusionAI/Ming-Image-0.1-Design-Layer ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开模型卡确认硬件预算，再 clone 官方 Ming-Image 仓库并安装 requirements。使用仓库里的 prompt 示例运行 `python infer.py --model inclusionAI/Ming-Image-0.1-Design --task text-to-image --resolution 2048 --output-dir outputs/t2i`，先做一张带中文标题的活动海报或产品卡片。得到结果后再研究透明背景提示词，最后用 Design-Layer 模型和 layer-decompose 任务，把扁平设计拆成计划数量的 RGBA 图层。单张 48G 显存设备更现实；不要把“6B”误解成普通笔记本即可流畅运行，完整管线还包括多模态编码器、Connector 和 VAE。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的差异不只是画面好看，而是把生成结果往设计工作流推进：文字、主体、贴纸和背景可以被当作可继续处理的设计结构，透明 RGBA 又方便进入海报、网页和视频合成。官方模型卡同时给出 companion repo、1024/2048 分辨率桶和图层分解模型，证据链比单条演示推文完整。不过显存门槛和推理速度仍然是个人部署前必须核实的现实成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>活动海报、中文标题、产品 KV 和 UI 概念稿的首版生成。</li>
+    <li>把平面设计拆成可独立调整的 RGBA 图层后继续合成。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2104568117611679805" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2104565147222290432/img/N8MWvWC4zD0KVCLT.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2104565147222290432/img/N8MWvWC4zD0KVCLT.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Eleven v4 / v4 Turbo：把可控情绪带进实时语音 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Eleven v4 面向高表现力长内容，支持 90 多种语言、多个说话人、音效和脚本内情绪标签；v4 Turbo 面向实时对话，官方给出的中位推理延迟约 100ms、首字语音约 150ms。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://elevenlabs.io/v4" target="_blank">https://elevenlabs.io/v4 ↗</a></p>
+    <p><a href="https://elevenlabs.io/docs/overview/models" target="_blank">https://elevenlabs.io/docs/overview/models ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入 Eleven v4 页面或 Playground，先用一段 30 秒中文旁白测试 `[whispers]`、`[laughs]`、`[excited]`、`[door slams]` 等自然语言标签，比较普通叙述、情绪叙述和多角色对白。需要长音频时，把同一角色放进多段文本，检查上下文 stitching 和重复生成后的音色稳定性。需要语音 Agent 时切换到 v4 Turbo 的 API 或 ElevenAgents，采用双向流式输入，让 LLM 生成到半句就开始回传音频；生产前要核验声音授权、语音克隆同意、语言口音、成本和 AI 生成音频标识。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>语音模型的竞争点正在从“能不能说话”转向导演控制和对话节奏。v4 把动作、情绪、音效和多说话人上下文写进脚本，Turbo 又针对 Agent loop 做低延迟流式设计，能够覆盖短视频配音、长篇叙事和电话式交互三类需求。官方还明确说明声音克隆需要被克隆者验证同意，这为追求自然度的产品提供了比较清晰的合规边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>有声书、课程、短视频和游戏角色的长内容配音。</li>
+    <li>客服、预约、电话回访等需要低延迟和情绪变化的语音 Agent。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2104582357345018330" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2104570419005296642/img/K9raydqB0cdrBuy4.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2104570419005296642/img/K9raydqB0cdrBuy4.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AutoJev：把模型选择变成可观察的本地网关</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AutoJev 是一个桌面端本地模型网关，集中管理提供商和模型，并为 Codex、Claude Code、Hermes 等 Agent 提供统一端点、智能路由、负载均衡、故障转移、日志和成本统计。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/thinkany-ai/autojev" target="_blank">https://github.com/thinkany-ai/autojev ↗</a></p>
+    <p><a href="https://autojev.ai" target="_blank">https://autojev.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 GitHub Releases 下载对应系统安装包，启动后在 Providers 中添加兼容 API 地址和密钥，再录入模型 ID、价格和上下文长度。然后在 Routes 中建立 `fast`、`quality` 或 `cheap` 候选组，选择智能选择或负载均衡，最后在 Agents 中连接本地客户端。用 Debug 发起几次相同请求，观察实际选中的 provider、耗时、token 和估算成本，再用 Logs 检查失败重试、session affinity 和 cooldown 是否符合预期。实验时先用测试密钥；README 明确提示当前配置中的 key 以未加密形式存储，不能把这台网关直接暴露到局域网。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“换模型”从每个 Agent 的私有配置提升为一个本地可观测控制面，尤其适合同时使用中转、DeepSeek、OpenRouter 和本地模型的人。除了速度、质量、成本偏好，项目还支持 OpenAI Responses、Chat Completions 和 Anthropic Messages 协议转换，并记录路由、用量和失败情况。更重要的不是自动选模型本身，而是能用日志验证自动选择是否真的节省成本、是否破坏了工具调用能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为多个编码 Agent 统一管理不同供应商、路由和故障转移。</li>
+    <li>对模型延迟、费用、上下文与协议兼容性做本地对比实验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2104545729918451816" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTTXfGNasAAFjyC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTTXfGNasAAFjyC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ IvyCraft：从一份资料生成多种可编辑内容</div>
+  <div class="section"><div class="section-label event">一句话</div><p>IvyCraft 是以已有资料为起点的 AI 创作工作空间，可导入 PDF、Word、网页、图片或视频，生成 PPT、信息图、播客、视频、漫画等内容，并支持引用关联和继续编辑。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://ivycraft.cn" target="_blank">https://ivycraft.cn ↗</a></p>
+    <p><a href="https://www.appinn.com/ivycraft/" target="_blank">https://www.appinn.com/ivycraft/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 IvyCraft，先上传一份有明确结构的论文、行业报告或产品说明，不要用空白提示测试。先让它生成一份 PPT，检查每页标题、数据和引用是否能回到原始资料，再对一页文字过多的页面进行编辑。随后用同一份素材生成信息图和播客，比较它是否保持同一事实口径；如果需要视频或社交媒体轮播，再从已生成的结构继续改编。适合把“阅读—整理—表达”连起来，但涉及学术结论、财务数字和对外发布时，仍要回看原文逐项核对，不要把自动生成结果当作引用替代品。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不在于再做一个聊天框，而是把一份资料变成多种下游成品，减少重复上传和反复解释背景的成本。官网强调输出与原始内容绑定、可追溯参考来源，并把 PPT、信息图、音频、漫画和视频放在同一素材工作流里。对研究、培训和内容再利用尤其有吸引力，但生成质量、引用完整性和不同内容形态之间的事实一致性仍应人工验收。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把论文、报告转成组会/项目汇报 PPT 和科研信息图。</li>
+    <li>把课程、长文或行业资料改造成播客、讲解视频和社交媒体内容。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2104503238951125238" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTSyi0JWcAEA4tK?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTSyi0JWcAEA4tK?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AMD 以约 82 亿美元收购 World Labs</div>
+  <div class="section"><div class="section-label event">事件</div><p>AMD 宣布以全股票交易收购李飞飞领导的 World Labs，交易预计在 2026 年底前完成，仍需监管批准。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>AMD 官方公告把这笔交易定义为增强未来 AI 计算能力的布局，而 World Labs 官方则强调团队会继续研究世界模型、软件、平台和开放模型。它的重要性不只在金额，而在芯片厂商开始把模型研究团队直接纳入基础设施战略：如果世界模型要服务机器人、空间理解和物理环境模拟，硬件、编译栈、训练系统与模型结构需要共同设计。对开发者而言，短期不应把收购等同于产品已落地；更值得观察的是 World Labs 的研究路线、模型开放程度，以及 AMD 是否会把模型工作负载优化反哺到 ROCm 和系统级产品。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 芯片竞争可能从单纯的算力和价格，进一步转向“围绕新模型形态共同设计软硬件”。这会增加研究型团队对硬件厂商的战略价值，也可能加速机器人、3D 生成和物理智能领域的资本集中。行业用户应关注交易完成、团队保留、模型开放承诺和实际开发工具，而不是只看收购估值。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2104695874328912364" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2104632612983918592/img/4BzTFhPtXy8fhwG8.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2104632612983918592/img/4BzTFhPtXy8fhwG8.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Sonnet 5.5 发布，模型价格性能竞争继续前移</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 多条推文称 Anthropic 发布 Claude Sonnet 5.5，并讨论其在编码基准、速度、成本和免费层可用性上的变化；本轮检索到 Claude 官方产品入口，但未找到可直接引用的 Sonnet 5.5 专题公告页。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条动态的事实层应区分“模型已发布”的推文信号与具体 benchmark 数字：本日报不把推文中未经官方页面复核的分数当作定论。若 Sonnet 5.5 的速度、价格和能力定位确如多条推文所述，市场会进一步压缩中高端模型之间的价差，开发者可以用更便宜的模型承担长上下文、代码和内容生产，再把更难任务升级到 Opus 或其他推理模型。免费层是否真的使用该模型、所谓安全路由和防蒸馏机制如何工作，也需要 Anthropic 后续文档确认。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型采购将从“选最强模型”转向按任务分层、按失败代价做路由。模型供应商需要同时竞争能力、延迟、单位成本、免费入口和滥用防护；应用团队则应建立自己的真实任务回归集，不要只根据社交媒体 benchmark 或单次体验改动生产模型。该条证据目前低于有官方发布页的项目，后续以 Anthropic 正式文档为准。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2104638801905955166" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTUthyeWIAAInna.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HTUthyeWIAAInna.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI DevDay 2026 今日举行，产品传闻等待官方揭晓</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 官方 DevDay 页面确认 2026 年 9 月 29 日在旧金山举行，主旨演讲由 Sam Altman 主持并提供免费直播；X List 传播“20 个新东西”和个人 Agent 方向，但具体发布清单尚未由官方页面确认。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>今天的重点不是把传闻当新闻，而是观察 OpenAI 是否把模型能力继续封装成开发者可组合的产品。官方页面确认活动有 API、工具、技术分会场和动手环节，这意味着真正有价值的信号应包括 SDK、Agent 运行时、工具调用、模型价格、部署权限和企业控制，而不是单个演示名称。X 上关于 GPT Bot 或“o”个人 Agent 的说法目前只能作为早期线索；在没有官方发布说明、产品文档或可用入口前，不应把其能力、上线时间和收费模式写成事实。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果 OpenAI 发布新的 Agent 组件，开发者会重新评估与现有编码 Agent、MCP 和桌面自动化框架的关系；如果只是模型或 API 增量更新，竞争重点仍会落在成本和可用性。今天适合在官方直播和发布页出现后再补证，不适合提前围绕未确认产品做集成决策。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2104721207396544930" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2104591536319053923" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2104523694890438840" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2104484613703770159" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/elliotchen100/status/2104650816430948759" target="_blank"><span class="handle">@elliotchen100</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2104574674038579221" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2104568607443218580" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2104545158201295261" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2104532854629957951" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2104503399924601138" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2104650907795476482/img/0Sz8vOcJnOmrkG47.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2104650907795476482/img/0Sz8vOcJnOmrkG47.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTTy8QXagAAMkxv?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTTy8QXagAAMkxv?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HKIm_n-akAEzLEx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HKIm_n-akAEzLEx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTTs6koaMAAXqZ3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTTs6koaMAAXqZ3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTTYpn7bQAEZD7a?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTTYpn7bQAEZD7a?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HS6qX9wbwAA8Nnn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HS6qX9wbwAA8Nnn?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTTNW9UbEAASNnl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTTNW9UbEAASNnl?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTSGfnHXUAAwVQS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTSGfnHXUAAwVQS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>机器人后训练：VLA 与世界—动作模型的预训练逐渐规模化，行业下一阶段可能转向让动作能力稳定、可复用、可验证的后训练方法。 <a href="https://x.com/shao__meng/status/2104545158201295261" target="_blank">→</a></li>
+    <li>GPU 学习入口：Modal 发布的 GPU 术语手册把硬件、设备软件、主机工具链和性能分析串成可交叉阅读的知识地图，适合补齐 CUDA 与推理优化基础。 <a href="https://x.com/shao__meng/status/2104532854629957951" target="_blank">→</a></li>
+    <li>Agent 人机协作边界：关于 Agent 是否应频繁停下来等待确认的讨论仍没有统一答案，值得关注审批粒度、可逆动作和移动端交互如何共同解决效率与安全冲突。 <a href="https://x.com/fankaishuoai/status/2104503399924601138" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
