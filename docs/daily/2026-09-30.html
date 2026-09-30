@@ -70,9 +70,9 @@
   <div class="date">2026-09-30</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>今天最值得注意的变化，不是又多了几个聊天机器人，而是 AI 开始被包装成“持续工作的执行单元”：OpenAI 用 Dots 把常驻云端 Agent 推向个人工作流，开源项目则在本地协作、模型路由、长期记忆和多轮验收上补齐基础设施。与此同时，决策模型、超大规模语音数据和“用 Agent 开发 Agent”的工具正在降低落地门槛；但个人数据边界、额度规则和安全防护仍然需要单独核验。
+    <p>今天最值得注意的变化，不是又多了几个聊天机器人，而是 AI 开始被包装成“持续工作的执行单元”：OpenAI 用 Dots、云端 Codex 和结构化决策接口把个人与企业工作流串起来，开源项目则在本地协作、模型路由、长期记忆和多轮验收上补齐基础设施。与此同时，一批更贴近本地工作流的项目开始冒头，个人数据边界、额度规则和安全防护仍需单独核验。
 
-本次证据说明：X List 抓取到 103 条内容，证据增强包整理出 80 个候选。HNRSS/Hacker News 补充源本次返回 502，未把其内容当作事实；正文中的可上手项目均有推文和至少一个外部官方/仓库/可信页面交叉支持。</p>
+本次证据说明：X List 抓取到 103 条内容，证据增强包整理出 80 个候选。HNRSS/Hacker News 补充源本次 6 个 feed 均返回 HTTP 502，未把其内容当作事实；正文中的可上手项目均有推文和至少一个外部官方、仓库或可信页面交叉支持。</p>
   </div>
 </div>
 <div class="topic">
@@ -82,11 +82,11 @@
     <p><a href="https://github.com/thinkany-ai/douchat" target="_blank">https://github.com/thinkany-ai/douchat ↗</a></p>
     <p><a href="https://douchat.ai" target="_blank">https://douchat.ai ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先访问官网下载适合自己系统的安装包；macOS Apple Silicon、Intel、Windows 和 Linux 都有公开构建。首次打开后登录 Douchat 账号，在 Local agents 中刷新已安装的 Claude Code、Codex、Gemini、OpenCode 或 Hermes 等 CLI，再创建一个带明确角色和权限的 Agent。可以先开一个直接对话，让它完成一个小任务；随后建群，把两个 Agent 拉进来，用 @ 指定负责人或让 Lead Agent 分派工作。若想用自己的模型，在设置里添加 OpenAI-compatible 或 Anthropic-compatible provider。源码试用则按仓库执行 npm ci、cp .env.example .env、npm run dev；不要把真实密钥提交进 .env。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“多个 Agent 各自有一套窗口、上下文和凭据”的碎片化体验，收敛成桌面工作区。官方仓库明确支持群聊、主题、Agent 间私信、任务移交、本地 CLI、定时任务和自定义模型；聊天记录、记忆和配置主要留在本机，且本地文件工具有目录限制。对已经使用 Codex、Claude Code 等工具的人，最大的价值不是多一个聊天框，而是可以在一个可回看的线程里组织协作和权限边界。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先访问官网下载适合自己系统的安装包；仓库说明提供签名桌面构建，源码试用也可以按 Quick start 操作。首次打开后登录 Douchat 账号，在联系人列表中查看云端 Agent 和本地 Agent，先开一个直接对话完成小任务，再创建群聊，把两个 Agent 拉进来，让一个负责拆解、另一个负责补充或检查。每个 Agent 都可以编辑身份、记忆、技能、权限和模型。若用源码开发，按仓库说明执行 npm ci、复制 .env.example 为 .env，再运行开发命令；不要把真实密钥提交进 .env。第一次建议只给它非敏感资料和小型代码任务，观察任务移交、上下文保留和失败处理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“多个 Agent 各自有一套窗口、上下文和凭据”的碎片化体验，收敛成一个可回看的桌面工作区。官方仓库明确支持云端与本地 Agent、群聊、Agent 间消息和可编辑的 Markdown 身份/记忆；GitHub 当前能看到项目仍在持续更新。对已经使用 Codex、Claude Code 或其他 CLI 工具的人，价值不是再多一个聊天框，而是能在一个线程里组织协作，并把模型、权限和数据边界显式化。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>让研究 Agent 查资料、让代码 Agent 改项目，再由一个 Lead Agent 汇总结果。</li>
-    <li>把个人模型 API、已登录的本地 Agent CLI 和团队群聊放进同一台电脑，减少复制上下文。</li>
+    <li>让研究 Agent 查资料、代码 Agent 改项目，再由 Lead Agent 汇总结果。</li>
+    <li>把本地 Agent 与云端模型放进同一联系人列表，比较隐私、速度和成本。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -101,12 +101,13 @@
 
 <div class="topic">
   <div class="topic-title">🛠️ Unsloth Laya Decision Model</div>
-  <div class="section"><div class="section-label event">一句话</div><p>在本地运行 Laya 决策模型，把文本转换成选择、是/否或分数，可通过 Jev API 供应用调用。</p></div>
+  <div class="section"><div class="section-label event">一句话</div><p>在本地运行 Laya 决策模型，把文本转换成选择、是/否或分数，可通过兼容 Jev 的 API 供应用调用。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://unsloth.ai/docs/models/decision-laya" target="_blank">https://unsloth.ai/docs/models/decision-laya ↗</a></p>
+    <p><a href="https://unsloth.ai/download" target="_blank">https://unsloth.ai/download ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载并安装 Unsloth Desktop，支持 macOS、Windows 和 Linux。打开 Settings → API → Decision API，开启 Serve requests，确认下载默认的 Multilingual 模型；它约 678 MB、最低 4GB RAM，支持 100 多种语言和 1024 token 上下文。然后在 API 页面复制 Access token，或者仅在 localhost 测试时开启 Keyless API access。向本地端点提交一段文本，并在请求中定义 team、refund、urgency 这类结构化决策，返回结果会包含选择、置信度、概率或分数。先用邮件分类、工单路由等无风险样例测试，再接入业务系统；GPU 只在需要更低延迟时打开。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统 LLM 调用往往输出一段需要二次解析的自然语言，决策模型直接把“允许的选项”和概率作为接口契约，适合自动化系统消费。官方文档还强调 CPU、统一内存和 GPU 都可运行，并提供 TypeSafe-compatible Jev API，因此可以在数据不出设备的前提下做分类、路由和标签。它不等同于通用聊天模型，价值在于可测量、可约束、可替换的决策节点。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载并安装 Unsloth Desktop，支持 macOS、Windows 和 Linux。打开 Settings → API → Decision API，开启 Serve requests，确认下载默认的 Multilingual 模型；官方文档给出的模型约 678 MB、最低 4GB RAM，支持 100 多种语言和 1024 token 上下文。然后在 API 页面复制 Access token，或者仅在 localhost 测试时开启 Keyless API access。向本地端点提交一段文本，并在请求中定义 team、refund、urgency 这类结构化决策，观察返回的选择、置信度、概率或分数。先用邮件分类、工单路由等无风险样例测试，再接入业务系统；GPU 只在需要更低延迟时打开。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统 LLM 调用往往输出一段需要二次解析的自然语言，决策模型直接把“允许的选项”和概率作为接口契约，适合自动化系统消费。官方文档强调 CPU、统一内存和 GPU 都可运行，并提供 TypeSafe-compatible Jev API，因此可以在数据不出设备的前提下做分类、路由和标签。它不等同于通用聊天模型，价值在于可测量、可约束、可替换的决策节点；置信度仍需用自有标注集校准，不能直接当作业务正确率。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
     <li>把客服工单分到 billing、technical、sales 等队列，并给紧急程度打分。</li>
     <li>在本地对邮件、Agent trace 或安全事件做初筛，减少敏感文本外发。</li>
@@ -125,16 +126,16 @@
 
 <div class="topic">
   <div class="topic-title">🛠️ Magpie</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个开源本地 AI Gateway，让 Codex、Claude Code、Gemini CLI 等 Agent 共享 DeepSeek、Kimi、GLM、Qwen、OpenRouter、Ollama 等模型。</p></div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源本地 AI Gateway，让 Codex、Claude Code、Gemini CLI 等 Agent 共享不同厂商和本地模型。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/yetone/magpie" target="_blank">https://github.com/yetone/magpie ↗</a></p>
     <p><a href="https://usemagpie.ai/" target="_blank">https://usemagpie.ai/ ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS、Windows、Linux 都可以先访问官网下载安装；也可以在终端执行 `curl -fsSL https://usemagpie.ai/install.sh | sh`，安装后使用 `magpie` 命令。打开菜单栏或 TUI，先在 Providers 中添加一个供应商，填写对应 Key；本地 Ollama 等服务可以不填云端 Key。再选择 Codex、Claude Code 或其他已安装 Agent，为它指定模型，必要时用 Profiles 保存“省钱/专注”等整套配置。Gateway 默认监听本机 `127.0.0.1:3425`，可以先用一个简单的问答或代码任务确认流式输出和工具调用，再逐个切换正式工作流。密钥只在 Magpie 中配置，不要复制到项目环境变量或日志。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Magpie 解决的是 Agent 生态的协议错配：Codex 偏 OpenAI Responses，Claude Code 偏 Anthropic Messages，其他 CLI 又有自己的配置格式。官方说明它在本地做协议翻译，覆盖流式、工具调用和推理，并能精细修改 settings.json、config.toml、config.yaml 而尽量保留注释、顺序和缩进。它还是轻量原生应用，不是 Electron；对有多个订阅、多个中转和多个 coding Agent 的用户，能显著减少逐个改配置的成本。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS、Windows、Linux 都可以先访问官网下载安装；也可以执行官网给出的安装命令 `curl -fsSL https://usemagpie.ai/install.sh | sh`，安装后使用 magpie 命令。打开菜单栏或 TUI，先在 Providers 中添加一个供应商，填写对应 Key；本地 Ollama 等服务可以不填云端 Key。再选择 Codex、Claude Code 或其他已安装 Agent，为它指定模型，必要时用 Profiles 保存“省钱/专注”等整套配置。Gateway 默认监听本机 `127.0.0.1:3425`，可以先用一个简单问答或代码任务确认流式输出和工具调用，再逐个切换正式工作流。密钥只在 Magpie 中配置，不要复制到项目环境变量或日志。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Magpie 解决的是 Agent 生态的协议错配：Codex 偏 OpenAI Responses，Claude Code 偏 Anthropic Messages，其他 CLI 又有自己的配置格式。官方页面说明它在本地做双向协议翻译，覆盖流式、工具调用和推理，并能精细修改 settings.json、config.toml、config.yaml 而保留注释、顺序和缩进。它是小体积原生应用，不是 Electron；对有多个订阅、多个中转和多个 coding Agent 的用户，能减少逐个改配置的成本，也方便按任务比较模型质量、延迟和花费。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
     <li>用低价或本地模型跑日常代码阅读，让高价模型只处理关键架构任务。</li>
-    <li>为不同 Agent 保存统一的模型 Profile，比较同一任务在不同供应商上的质量、延迟和成本。</li>
+    <li>为不同 Agent 保存统一模型 Profile，比较同一任务在不同供应商上的效果。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -146,15 +147,15 @@
 
 <div class="topic">
   <div class="topic-title">🛠️ AI Fitness OS</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个本机运行的个人训练工作区，用 3D 人体、训练时间线、YAML 数据和 AI 教练整理训练计划与实际记录。</p></div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本机运行的个人训练工作区，用 3D 人体、训练时间线、YAML 数据和 AI 对话整理训练计划与实际记录。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/liuchuan01/trainng" target="_blank">https://github.com/liuchuan01/trainng ↗</a></p>
+    <p><a href="https://github.com/liuchuan01/Fitness-OS" target="_blank">https://github.com/liuchuan01/Fitness-OS ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>按仓库 README 准备 Git、Node.js 24 和 npm 11，然后执行 `git clone https://github.com/liuchuan01/trainng.git`、`cd trainng`、`npm ci`。先把个人数据放在代码仓库之外，例如设置 `export WORKSPACE_ROOT="$HOME/my-fitness-workspace"`，再执行 `npm run fitness -- init` 和 `npm run dev`，用浏览器打开 `http://127.0.0.1:5173`。首次使用进入配置后台，在 DeepSeek 卡片填入自己的 API Key；没有 Key 仍可浏览人体和训练界面，但无法使用 AI 对话。之后建立训练档案，确认 AI 整理的摘要，再讨论第一份计划；训练结束时单独录入真实动作、组次和负重，不要把计划当成已完成记录。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把健身问答套在聊天窗口上，而是把训练数据放到可读、可备份的 YAML 工作区，并把“计划”和“实际完成”分离，再通过本地程序校验写入。README 同时明确标注了当前边界：单人本地试用，模型上下文会发送到服务商，真实模型建档和生产部署仍未完全验收。这种把数据主权、状态模型和 AI 对话拆开的设计，比单纯生成一份训练计划更适合作为个人 Agent 产品原型观察。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>按仓库 README 准备 Git、Node.js 24 和 npm 11，在项目根目录安装依赖并启动开发服务器；打开 `http://127.0.0.1:5173`。为避免误用仓库内的默认空工作区，先设置自己的 WORKSPACE_ROOT，再运行 `npm run dev`。首次使用先浏览 3D 人体和训练时间线，建立一个自己的工作区，录入一次训练、动作、组数和身体指标；然后试着用对话整理一个训练目标，检查内容是否写入可读的 YAML 文件。模型调用需要自行配置，建议先用虚构数据熟悉流程；正式使用前备份 fitness/，不要把 config/ 中的凭据提交到公开仓库。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把健身问答套在聊天窗口上，而是把训练数据放到可读、可备份的 YAML 工作区，并把计划和实际完成分开，再通过本地服务校验写入。README 说明前端使用 React、TypeScript、Vite 和 Three.js，本地 Node 服务负责数据契约与写入，AI 会话由 DeepSeek Harness 提供；同时明确提示真实模型建档和生产部署仍未完成完整验收。因此它更适合观察“结构化个人数据+本地 Agent”的产品原型，不应被当作医疗或健身诊断系统。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>以自己的器械条件和训练时间建立长期训练档案，复盘肌群分布和动作记录。</li>
-    <li>研究“结构化个人数据 + AI 教练 + 本地工作区”的产品形态。</li>
+    <li>为长期训练建立可迁移的动作、组次和身体状态档案。</li>
+    <li>研究如何把结构化 YAML 数据与对话式训练计划结合。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -169,16 +170,16 @@
 
 <div class="topic">
   <div class="topic-title">🛠️ Raven</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个面向递归自我改进的多 Agent Harness，能组织研究、代码、设计和无人值守工作流，并把每轮结果交给下一轮验证。</p></div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向长任务和递归自我改进的多 Agent Harness，把研究、代码、设计和验证拆成可观察的多轮工作流。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/EverMind-AI/Raven" target="_blank">https://github.com/EverMind-AI/Raven ↗</a></p>
     <p><a href="https://evermind-ai.github.io/Raven/" target="_blank">https://evermind-ai.github.io/Raven/ ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS、Linux 或 WSL2 可先执行 `curl -fsSL https://raven.evermind.ai/install.sh | bash`；若希望隔离环境，克隆仓库后执行 `docker compose -f docker/docker-compose.yml up`，再打开 `http://localhost:18793`。安装完成后先配置一个低风险的小任务，例如让 Raven 生成一个静态页面或整理一份本地资料，并给出明确的验收标准和轮数上限。通过 `raven web` 打开 WebUI，观察任务依赖、子 Agent、文件输出和验证结果；确认工作流可控后，再尝试代码修复或实验优化。它目前仍是 pre-alpha，必须检查每轮变更和权限，不要直接给生产目录或敏感凭据。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Raven 的差异不只是“能调多个模型”，而是把 Memory、Planning、Capability、Action 四个策略模块拆开，并让 Curator 在验证通过后改进 Agent Harness。官方展示了 42 轮规划/开发/验证完成 Godot 射击游戏，也展示了 7 轮训练实验和工程仿真；这些是项目自述的 showcase，不应当等同于普适性能保证。对 Agent 开发者而言，真正值得拆解的是它如何记录轮次、隔离失败变更、保留长期记忆，以及把一次性提示变成可复用的验收流程。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方 Quick Start，再在 macOS、Linux 或 WSL2 上安装；如果希望隔离环境，可按仓库 Docker 文档启动 Compose，并打开本地 WebUI。第一次不要直接交给它生产目录，而是配置一个低风险小任务，例如生成静态页面、整理本地资料或修一个独立测试。给任务写清验收标准、最大轮数、允许访问的目录和模型提供商，在 WebUI 里观察子 Agent、任务依赖、文件输出和验证结果。确认每一轮的变更都能回看、失败能停住后，再尝试代码修复或实验优化。项目 README 明确标注 pre-alpha，配置和界面可能快速变化。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Raven 的差异不只是“能调多个模型”，而是把 Memory、Planning、Capability、Action 等策略模块放进一个可持久化的 Harness，并配有文档、WebUI、Docker 和插件目录。官方展示了长轮次规划/开发/验证案例，但这些 showcase 不能等同于普适性能保证。真正值得拆解的是它如何记录轮次、隔离失败变更、保留长期记忆，以及把一次性提示变成带验收节点的可复用流程；高权限无人值守运行仍需要严格沙箱。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
     <li>把长任务拆成可观察的规划、实现、测试循环，研究 Agent 如何持续修正。</li>
-    <li>让研究、编程、设计 Agent 在同一个 DAG 中并行工作，再由验证节点汇总。</li>
+    <li>让研究、编程、设计 Agent 在同一个工作流中并行，再由验证节点汇总。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -197,11 +198,11 @@
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/joeseesun/qiaomu-obsidian-dev" target="_blank">https://github.com/joeseesun/qiaomu-obsidian-dev ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>确保 Node.js LTS、GitHub CLI 和一个独立的 Obsidian 测试 Vault 已准备好，然后执行 `npx skills add joeseesun/qiaomu-obsidian-dev`。安装后不要只让 Agent “写一个插件”，而是明确要求它先查 Obsidian 官方 API、示例和同类 GitHub 项目，再给出 Go、Revise、Stop 或 Contribute 结论。进入实现阶段后，让它把插件装进测试 Vault，重载并执行真实交互；发布前分别核对构建、PR/CI、GitHub Release 资产、官方社区目录和客户端可安装状态。仓库自带 `validate_skill.py`、`audit_release.py` 等只读检查脚本，可以按 README 对版本、资产大小、SHA-256 和公开 Release 做回读。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它针对的是 AI 编程最容易被忽略的最后一公里：能编译不代表真实宿主能用，Release 存在也不代表用户能安装。Skill 把 API 调研、竞品和许可证比较、状态所有权、生命周期、真实 Vault fixture、公开资产回读串成一个门禁流程，尤其适合 Obsidian 这类插件运行时差异明显、移动端边界复杂的生态。它的价值不在“多写几行代码”，而在把交付从模型自报完成改成证据驱动验收。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>确保 Node.js、Git 和一个独立的 Obsidian 测试 Vault 已准备好，然后执行 `npx skills add joeseesun/qiaomu-obsidian-dev`。安装后不要只让 Agent“写一个插件”，而是先要求它查 Obsidian 官方 API、示例和同类 GitHub 项目，再给出 Go、Revise、Stop 或 Contribute 结论。进入实现阶段，让它把插件装进测试 Vault，重载并执行真实交互；发布前分别核对构建、GitHub Release 资产、官方社区插件目录和客户端可安装状态。仓库的 references、evals、scripts 和 tests 可作为检查入口，最后把 GitHub Release 与官方市场可用性分开记录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它针对的是 AI 编程最容易被忽略的最后一公里：能编译不代表真实宿主能用，Release 存在也不代表用户能安装。Skill 把 API 调研、维护中的先例、架构选择、真实 Vault 验证和发布证据串成门禁流程，尤其适合 Obsidian 这类插件运行时差异明显、移动端边界复杂的生态。它的价值不在多写几行代码，而在把交付从模型自报完成改成证据驱动验收。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>用它从零开发或审查 Obsidian 的阅读、RSS、AI、编辑器增强插件。</li>
-    <li>对已经能构建但无法稳定安装/上架的插件做发布链路审计。</li>
+    <li>用 Agent 辅助开发、调试、评审和发布 Obsidian 插件。</li>
+    <li>对已经能构建但无法稳定安装或上架的插件做发布链路审计。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -220,8 +221,8 @@
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://meta.appinn.net/t/topic/92634" target="_blank">https://meta.appinn.net/t/topic/92634 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Obsidian 1.7.2 或更高版本打开 Settings → Community plugins，关闭受限模式后搜索并安装 LaTeX Autofill；也可以从插件作者的公开介绍进入安装信息。新建或打开 Markdown 笔记，在行内公式或 `$$...$$` 环境中输入“定积分”“矩阵”“偏导数”，或输入 integral、matrix、partial 等关键词，按回车插入完整模板，再用 Tab/Shift+Tab 在占位符间移动。遇到不记得命令的情况，用插件提供的 Σ 搜索窗口查找，回车插入或使用 Ctrl/⌘+Enter 复制。建议先在测试笔记里确认快捷键与现有编辑器插件没有冲突。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的定位很克制：不是调用 AI 猜公式，而是离线、可预测地把关键词映射到模板，因此不会把隐私笔记发送到云端，也更容易复现结果。项目介绍称内置约 236 条常用写法和约 1000 条命令表，覆盖理工科笔记中频繁出现的积分、矩阵、微分和符号输入。对需要在 Obsidian 中长期写数学内容的人，可靠的占位符编辑体验可能比一次性生成复杂公式更实用。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Obsidian 1.7.2 或更高版本打开 Settings → Community plugins，关闭受限模式后搜索并安装 LaTeX Autofill；若搜索不到，再从开发者自荐帖进入官方安装信息。新建或打开 Markdown 笔记，在行内公式或 `$$...$$` 环境中输入“定积分”“矩阵”“偏导数”，也可以输入 integral、matrix、partial，按回车插入完整模板，再用 Tab/Shift+Tab 在占位符间移动。遇到不记得命令的情况，打开插件的 Σ 搜索窗口，回车插入或使用 Ctrl/⌘+Enter 复制。先在测试笔记里确认快捷键与现有编辑器插件没有冲突。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的定位很克制：不是调用 AI 猜公式，而是离线、可预测地把关键词映射到模板，因此不会把隐私笔记发送到云端，也更容易复现结果。开发者介绍称内置约 236 条常用写法和约 1000 条命令表，已上架 Obsidian 社区插件目录。对需要在 Obsidian 中长期写数学内容的人，可靠的占位符编辑体验可能比一次性生成复杂公式更实用。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
     <li>在数学、物理、统计学习笔记中快速插入规范公式环境。</li>
     <li>给不熟悉 LaTeX 命令的学生提供离线模板入口，降低持续记忆成本。</li>
@@ -241,8 +242,8 @@
     <p><a href="https://huggingface.co/datasets/espnet/yodas3" target="_blank">https://huggingface.co/datasets/espnet/yodas3 ↗</a></p>
     <p><a href="https://huggingface.co/blog/espnet/yodasv3" target="_blank">https://huggingface.co/blog/espnet/yodasv3 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Hugging Face 数据集页阅读许可、目录结构和元数据字段，再按实际研究规模选择下载，不要直接把整个数据集拉到本机。数据按语言和 WebDataset shard 组织，单个 tar 约 8GB；可以先只取 `zh` 或 `en` 的一个 metadata parquet，检查 transcript、translation_en、length 和时间戳字段，再用 Hugging Face datasets 或 Parquet 工具做抽样统计。做 ASR、TTS 或语音表示实验时，先根据语言、时长、转写存在性和音频质量过滤，建立小型验证集后再扩展。使用和再发布前要按 CC-BY-3.0 及论文要求保留署名，并注意网页抓取音频的质量和语言标签并非绝对准确。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>YODAS v3 把多语言语音实验的“数据起步成本”大幅压低：官方资料称它覆盖 100 多种语言，约 75% 音频有转写，非英语数据中约 60% 有英文翻译，约 95% 转写包含词级时间戳。它不仅是数量大，还提供语言、时长、声道、估计带宽等可筛选元数据，便于构造更可控的训练和评测集。真正的工程难点会从“找不到数据”转移到清洗、采样、版权遵循和防止弱标签噪声污染。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Hugging Face 数据集页阅读许可、目录结构和元数据字段，再按研究规模选择下载，不要直接把整个数据集拉到本机。数据按语言和 WebDataset shard 组织，单个 tar 约 8GB；可以先只取 zh 或 en 的一个 metadata parquet，检查 transcript、translation_en、length 和时间戳字段，再用 Hugging Face datasets 或 Parquet 工具做抽样统计。做 ASR、TTS 或语音表示实验时，先按语言、时长、转写存在性和音频质量过滤，建立小型验证集后再扩展。使用和再发布前按 CC-BY-3.0 及论文要求保留署名，并注意网页抓取音频的质量和语言标签并非绝对准确。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>YODAS v3 的价值不只是数据量大，还提供语言、时长、声道、估计带宽和句子/词级时间戳等可筛选元数据。官方资料称它覆盖 100 多种语言，约 75% 音频有转写，非英语数据中约 60% 有英文翻译，约 95% 转写包含词级时间戳，适合构造更可控的训练和评测子集。工程难点会从“找不到数据”转移到清洗、采样、版权遵循和弱标签噪声控制。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
     <li>训练或评测多语言 ASR、TTS、语音表示和跨语言对齐模型。</li>
     <li>按语言、时间戳和音频质量构造可复现实验子集，研究长尾语言覆盖。</li>
@@ -256,26 +257,26 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 OpenAI 把常驻个人 Agent 推向主产品：Dots</div>
-  <div class="section"><div class="section-label event">事件</div><p>OpenAI 在 DevDay 2026 介绍 Dots，把能够持续工作、使用云端电脑和浏览器、连接外部应用的 Agent 推向个人与企业工作流。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>官方介绍把 Dots 定义为“always-on agents”，重点不再是一次问答，而是记住用户偏好、持续推进任务、在关键节点请求批准，并在出错时尝试补救。X 上关于“无限额度”和订阅是否扣量的说法相互矛盾，不能直接采信；更稳妥的事实是，OpenAI 官方另文确认它是持续工作的 Agent 产品，并在合资格市场面向 Pro、Business Premium 等计划开放，企业、教育和医疗需要管理员开启 beta。它代表产品竞争从模型能力转向长期上下文、浏览器操作、责任边界和“在用户不在线时继续执行”。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>个人助理一旦拥有自己的浏览器、应用连接和长期记忆，隐私泄露、错误操作和授权撤销会成为产品成败的核心，而不只是模型聪不聪明。对开发者而言，新的竞争壁垒可能是任务状态、审批点、审计记录和失败恢复；对用户而言，必须区分“能自主推进”与“可以无监督地替你做高风险决定”。</p></div>
+  <div class="topic-title">📡 OpenAI DevDay 2026：个人 Agent、云端 Codex 与开放生态一起推进</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 在 9 月 29 日 DevDay 发布 Dots、云端 Codex、Decisions API、Codex CLI 更新、代码审查与 Marketplace 等一组产品能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这次发布的关键不是单个新模型，而是把“持续在线的个人 Agent”“远程可复用的开发环境”和“让模型做结构化选择的 API”放在一个产品组合里。Dots 被定位为可持续承担任务的 Agent，云端 Codex 则把开发环境从本机扩展到手机和云端；Decisions API 试图让应用在选项集合中返回决定，而不是每次生成长文本。对开发者来说，工作流会从一次请求一次响应，转向状态、权限、工具、环境和人工批准共同组成的长期系统。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>软件产品的竞争点会从“接入哪个模型”向“谁能把 Agent 安全地嵌入真实工作”迁移。个人 Agent 需要读取邮件、文件、浏览器和第三方应用，隐私与授权边界会变成核心产品能力；云端 Codex 和自动代码审查会降低协作门槛，但也会放大权限配置、供应链和审计要求。企业选型时应同时比较任务成功率、可恢复性、数据保留、工具调用成本和人工接管路径，而不是只看 benchmark。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/dotey/status/2105022202047553957" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2105035958831718416" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2105022069867950080/img/xsL1tcQhyt1XrZgz.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105022069867950080/img/xsL1tcQhyt1XrZgz.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105032579472674816/img/68Xu4jJNCXzLWISP.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105032579472674816/img/68Xu4jJNCXzLWISP.jpg" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 GPT-6.1 Sol：把接近旗舰的 Agent 能力压到更低单位成本</div>
-  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布 GPT-6.1 Sol，官方称其在编码、文档理解、电脑使用和专业工作上接近 GPT-6 Astra，并以更低价格提供 API 访问。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>官方页面给出的重点不是单项跑分，而是长链路任务的成本/能力平衡：它在 DeepSWE、GDP.pdf、AutomationBench、OSWorld 2.0 和 Terminal-Bench Science 等测试中相对上一代 Sol 有改进，部分场景接近 Astra；API 标价为每百万 token 输入 2 美元、缓存输入 0.10 美元、输出 10 美元。需要注意的是，这些 benchmark 由官方选择并在特定推理强度和工具环境下测得，不能直接等于所有中转、框架或生产任务的效果。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果“中高能力 + 低成本”组合稳定，Agent 应用会更容易从演示进入持续运行：更多轮规划、工具调用、代码验证和文档处理不再被单次成本立即卡住。模型供应商之间的竞争也会进一步转向缓存、吞吐、工具调用和每个成功任务的实际成本，而不只是上下文长度或榜单名次。对自建中转用户，仍需实测总延迟、流式稳定性、缓存命中和限流策略。</p></div>
+  <div class="topic-title">📡 GPT-6.1 Sol：把高能力 Agent 推理压到更低的 API 成本</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 发布 GPT-6.1 Sol，官方称其在 Agentic coding、computer use 和专业工作上接近 Astra，标准输入/输出价格约为 Astra 的五分之一，并提供 gpt-6.1-sol API。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Sol 的价值在于把“能完成复杂任务”的模型从高价旗舰档拉到更适合批量运行和长流程编排的成本区间。官方页面给出的价格是每百万 token 输入 2 美元、缓存输入 0.10 美元、输出 10 美元，并列出代码、复杂 PDF、自动化工作流、电脑操作和科学任务评测。真正落地时，平均成本还取决于上下文复用、工具失败重试、推理强度、人工复核和任务是否需要 Astra 级别的极限能力。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Agent 产品可以更大胆地把规划、工具调用和验证拆成多轮，而不必每一步都使用最贵模型；同时，低价高能力会加快客服路由、文档处理、代码维护和后台自动化的规模化。对团队而言，应该建立按任务类型分层的模型路由和成本账本，独立测量成功率、延迟、缓存命中、工具调用次数与错误恢复，不要直接把厂商 benchmark 当作自己的生产 SLA。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -291,23 +292,26 @@
   <div class="topic-title">📡 Anthropic 警告 GLM-5.3 的网络安全滥用风险</div>
   <div class="section"><div class="section-label event">事件</div><p>Anthropic 发布研究称，其在隔离环境中测试 GLM-5.3 与 GLM-5.3-Flash 时观察到较强的漏洞利用与攻击程序开发能力，并认为防护容易被绕过。</p></div>
   <div class="section"><div class="section-label analysis">解读</div><p>Anthropic 的报告不是对真实世界攻击事件的独立取证，而是其自设沙箱、评测方法和安全立场下的研究结果；因此“能在测试环境完成 exploit”与“现实中已经造成同等规模危害”必须分开。报告关注的是模型能否把公开漏洞信息、补丁和攻击链组合起来，尤其是较小模型也可能被用于已知漏洞的 N-day 利用。它把开源模型的可得性、默认安全限制和滥用门槛重新放到同一张风险表上。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>安全团队需要把模型评测从“会不会写代码”升级为“能否形成可执行攻击链、是否会泄露工具调用、限制能否被提示绕过”。开源模型发布者如果只展示通用能力而缺少滥用测试，可能面对更高的供应链和监管压力；防守方则可把同类模型用于离线补丁验证、代码审计和漏洞复现，但必须严格隔离目标、凭据和网络出口。该条目前最可靠的结论是风险信号增强，不是简单宣布某模型“等于攻击者”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>安全团队需要把模型评测从“会不会写代码”升级为“能否形成可执行攻击链、是否会泄露工具调用、限制能否被提示绕过”。开源模型发布者如果只展示通用能力而缺少滥用测试，可能面对更高的供应链和监管压力；防守方则可把同类模型用于离线补丁验证、代码审计和漏洞复现，但必须严格隔离目标、凭据和网络出口。当前最稳妥的结论是风险信号增强，不是简单宣布某模型等于现实攻击者。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
       <a class="source-link" href="https://x.com/dotey/status/2105073744951586841" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/dotey/status/2105065658149208338" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/2512185195Zhu/status/2104961832393855073" target="_blank"><span class="handle">@2512185195Zhu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2104908622421459112" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2104762281141973033" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/shao__meng/status/2104753647401992648" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/shao__meng/status/2104738828338807231" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/hq4ai/status/2104921854213599353" target="_blank"><span class="handle">@hq4ai</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/xiaohu/status/2104987338678096045" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/tuturetom/status/2104912040544649651" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/vista8/status/2104939565744271492" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/ccatalini/status/2104709927831048560" target="_blank"><span class="handle">@ccatalini</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
     <a href="https://pbs.twimg.com/media/HTa5WO8XMAAqZWD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTa5WO8XMAAqZWD?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HTZ6Dv2bAAAEavG.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HTZ6Dv2bAAAEavG.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTZTm-kWYAEJEg4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTZTm-kWYAEJEg4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTWeIQua0AAigos?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTWeIQua0AAigos?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HTWWRkmagAA9rt-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTWWRkmagAA9rt-?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HTTnpZPXIAAdtKD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTTnpZPXIAAdtKD?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/amplify_video_thumb/2104738697480732673/img/yzup_UC6aXt8B7FB.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2104738697480732673/img/yzup_UC6aXt8B7FB.jpg" loading="lazy" /></a>
@@ -317,6 +321,8 @@
     <a href="https://pbs.twimg.com/media/HTZqh2baQAATNU-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTZqh2baQAATNU-?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HTYlAPwbIAAhOLt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTYlAPwbIAAhOLt?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HTYBrnCagAAhi_i?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTYBrnCagAAhi_i?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTVr-yHagAAY7iF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTVr-yHagAAY7iF?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTVsAuwbsAAQH0K?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTVsAuwbsAAQH0K?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
@@ -324,9 +330,8 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>OpenAI Ultrafast：Codex/API 的高速生成模式，关注它对长任务吞吐、额度和成本的实际影响。 <a href="https://x.com/xiaohu/status/2104987338678096045" target="_blank">→</a></li>
     <li>OpenDesign Go：主打低价设计 Agent 订阅，适合观察“模型选择与真实设计任务结果”如何影响用户迁移。 <a href="https://x.com/tuturetom/status/2104912040544649651" target="_blank">→</a></li>
-    <li>Obsidian Agent 开发工作流：除 qiaomu-obsidian-dev 外，继续关注真实宿主测试、Skill 复用和插件上架门禁是否形成标准。 <a href="https://x.com/vista8/status/2104939565744271492" target="_blank">→</a></li>
+    <li>AI 与应届就业：一项被 X 转发的研究认为 AI 尚未明显抢走应届大学毕业生岗位，后续可继续追踪样本、时间窗口和行业差异。 <a href="https://x.com/ccatalini/status/2104709927831048560" target="_blank">→</a></li>
   </ul>
 </div>
 

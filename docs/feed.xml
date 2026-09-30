@@ -5,15 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 30 Sep 2026 00:45:53 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 00:49:32 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/09/30 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-30.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-09-30.html</guid>
-      <description>今天最值得注意的变化，不是又多了几个聊天机器人，而是 AI 开始被包装成“持续工作的执行单元”：OpenAI 用 Dots 把常驻云端 Agent 推向个人工作流，开源项目则在本地协作、模型路由、长期记忆和多轮验收上补齐基础设施。与此同时，决策模型、超大规模语音数据和“用 Agent 开发 Agent”的工具正在降低落地门槛；但个人数据边界、额度规则和安全防护仍然需要单独核验。
+      <description>今天最值得注意的变化，不是又多了几个聊天机器人，而是 AI 开始被包装成“持续工作的执行单元”：OpenAI 用 Dots、云端 Codex 和结构化决策接口把个人与企业工作流串起来，开源项目则在本地协作、模型路由、长期记忆和多轮验收上补齐基础设施。与此同时，一批更贴近本地工作流的项目开始冒头，个人数据边界、额度规则和安全防护仍需单独核验。
 
-本次证据说明：X List 抓取到 103 条内容，证据增强包整理出 80 个候选。HNRSS/Hacker News 补充源本次返回 502，未把其内容当作事实；正文中的可上手项目均有推文和至少一个外部官方/仓库/...</description>
+本次证据说明：X List 抓取到 103 条内容，证据增强包整理出 80 个候选。HNRSS/Hacker News 补充源本次 6 个 feed 均返回 HTTP 502，未把其内容当作事实；正文中的可上手项目均有推文和至少一个外部官方、仓库或可信页...</description>
       <pubDate>2026-09-30T08:30:00+08:00</pubDate>
     </item>
     <item>
