@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-01</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-01</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“Agent 从单体聊天走向可组合工作台”：DeepSeek Harness 把模型、工具、技能、会话与运行模式都做成插件，社区已经出现 Paseo 多 Agent 编排和 RSS 伴读等配套；另一条实用支线是把 AI 编程过程变成可检索、可审查的本地资产。X List 抓取到 100 条候选；本轮证据增强脚本在 300 秒内未产出证据包，以下🛠️项目均改用推文与官方 GitHub/官网交叉核验，🌱项目明确标注“证据待补”。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Spotcat：macOS 原生启动器，把应用、文件、网页和 AI 放进一个入口</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Spotcat 是免费开源的 macOS 原生启动器，用 ⌥Space 呼出，可模糊搜索应用与文件、打开网页、调用 AI 对话，并通过 HTML/JS 扩展增强工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/thinkany-ai/spotcat" target="_blank">https://github.com/thinkany-ai/spotcat ↗</a></p>
+    <p><a href="https://spotcat.ai" target="_blank">https://spotcat.ai ↗</a></p>
+    <p><a href="https://github.com/thinkany-ai/spotcat/releases/latest" target="_blank">https://github.com/thinkany-ai/spotcat/releases/latest ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 Releases 下载最新的 Spotcat-0.4.0.dmg，打开后把应用拖进 Applications；首次启动后按 ⌥Space，输入应用名或文件名并回车。想试 AI，在 Settings → Models 添加 Anthropic 或 OpenAI-compatible 服务商、API key 和模型；想试扩展，可进入 Settings → Extensions 安装，或按 README 的 manifest.json + index.html 结构写一个本地扩展。建议先用“file *.pdf”搜索下载目录，再用一个带 ai 权限的简单扩展验证上下文对话，最后检查模型 key 仍只保存在本机。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是套壳网页，而是 Swift/AppKit 原生浮窗，支持 Apple silicon 与 Intel，且扩展接口采用普通 HTML/CSS/JS，降低了 macOS 工具开发门槛。官方 README 还明确说明 API key 以 600 权限保存在本机，GitHub 发布页提供签名和公证的通用安装包；对已经在 Raycast、Spotlight 与浏览器之间频繁切换的人，实际价值在于把搜索、AI 与小工具组合到同一个键盘入口。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用统一快捷键查找项目文件、启动开发工具，并把选中的文本交给 AI 解释。</li>
+    <li>为团队写一个内部 HTML/JS 小扩展，把编码规范、翻译或 URL 编解码接到日常搜索流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2105253265453838405" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTdcAVDaAAAqYNp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTdcAVDaAAAqYNp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SeshBuddy：本地浏览和审查 Claude Code、Codex 等 AI 编程会话</div>
+  <div class="section"><div class="section-label event">一句话</div><p>SeshBuddy 是 macOS/Windows 桌面工作台，读取多个 AI 编程 CLI 已写入磁盘的会话日志，提供统一浏览、全文搜索、归档、代码 diff 与本地流量检查。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/huangy7/seshbuddy" target="_blank">https://github.com/huangy7/seshbuddy ↗</a></p>
+    <p><a href="https://seshbuddy.huangy.top/en/" target="_blank">https://seshbuddy.huangy.top/en/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开项目主页下载 macOS 或 Windows 版本；如果想从源码试验，准备 Node.js 20+、稳定 Rust 工具链和对应 Tauri 前置依赖，执行 git clone、npm install、npm run tauri dev。启动后让它扫描本机已有的 Claude Code、Codex、Gemini、Antigravity、WorkBuddy 或 DSH 会话，再用统一搜索检索某次提示词、工具调用或代码块。需要审查网络请求时，单独启用 seshbuddy-proxy，先观察请求/响应、延迟和 token 用量，确认无误后再恢复原始 endpoint。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Agent 工具把会话当成一次性聊天，SeshBuddy 把它们当成可复盘的工程资料：本地 Tantivy 索引覆盖 prompt、回复、工具调用和代码块，Monaco 提供 diff，桌面助手还能引用具体会话来源。官方说明会话不离开本机、无账号和 telemetry；可选出站请求范围也写得很清楚，因此更适合做成本追踪、失败复盘和团队编码审计，而不是只看一次生成结果。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>搜索过去生成过的配置、命令或 bug 修复，避免重复让模型探索。</li>
+    <li>在合并前集中查看 Agent 改动、请求延迟和 token 使用，建立轻量审查流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2105321438794133505" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek Harness：一切皆插件的开源 Agent 运行框架</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek Harness（dsh）是 DeepSeek AI 发布的开发者预览版 Agent harness，把模型、工具、技能、会话、沙箱、存储、循环、调度和 UI 组织为可替换插件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">https://github.com/deepseek-ai/deepseek-harness ↗</a></p>
+    <p><a href="https://deepseek.com/harness/" target="_blank">https://deepseek.com/harness/ ↗</a></p>
+    <p><a href="https://deepseek-harness.github.io/deepseek-harness/" target="_blank">https://deepseek-harness.github.io/deepseek-harness/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 后，先用 npx @deepseek-ai/dsh web 启动本地 Web UI，默认访问 http://127.0.0.1:3080；如果要改源码，克隆仓库后执行 pnpm install、pnpm run build、pnpm dsh web。首次体验建议先使用标准模式跑一个小型代码任务，再切换 PTC 模式观察模型如何用 Code Mode SDK 组合多步工具调用；随后打开 Trajectory 视图检查系统提示、工具调用、子 Agent 调度和上下文注入，最后再按官方文档尝试安装一个社区 dsh-plugin。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“Agent 能力如何组装”从框架内部实现问题变成配置与插件问题，允许替换模型、工具、沙箱和 UI，而不必改核心源码。官方介绍还强调追加式会话日志、恢复/分叉/检索/回放共享同一事件流，以及标准、PTC、极简、创造四种运行模式。这使它更像可观测的 Agent 基础设施，而不仅是又一个聊天界面；但项目仍是 developer preview，存在兼容性破坏，生产使用应隔离环境。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为不同任务组合不同工具、权限和模型，做可复现实验型 Agent。</li>
+    <li>研究工具调用轨迹、子 Agent 和上下文注入，构建企业内部 harness 原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2105214111181369729" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTc4tCWbAAEfzKx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTc4tCWbAAEfzKx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Paseo DSH Direct：让 DeepSeek Harness 接入多 Agent 编排桌面</div>
+  <div class="section"><div class="section-label event">一句话</div><p>paseo-dsh-direct 是 Paseo 的 DeepSeek Harness 原生 Provider 插件，跳过 ACP 桥接，直接调用本地 dsh，并保留流式输出、审批卡片、会话导入与斜杠命令。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Jecvay/paseo-dsh-direct" target="_blank">https://github.com/Jecvay/paseo-dsh-direct ↗</a></p>
+    <p><a href="https://github.com/getpaseo/paseo" target="_blank">https://github.com/getpaseo/paseo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装并确认本机 dsh 与 Paseo daemon 可用，再在 Paseo 的 Settings → Plugins → Install Plugin 中粘贴 npm:paseo-dsh-direct；如果本机 dsh 属于 0.1.x，应按 README 使用对应 release/0.1 分支，0.2.x 则使用默认 npm 线。安装后创建 DeepSeek Harness provider 对话，选择配置好的模型与 preset；如果要本地开发，可 clone 仓库、npm ci、npm run build，再执行 paseo plugin install "$PWD/paseo-dsh-direct"。测试时先确认 dsh 版本匹配，避免把会话交给错误兼容线。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>普通 ACP 适配往往会损失原生 Agent 的交互语义，而该插件把 dsh 的思考流、工具审批、用户提问、slash command 和会话恢复映射到 Paseo 自己的界面。官方 README 明确列出了 0.1.x/0.2.x 兼容关系，并说明插件使用独立 paseo profile，不修改 Paseo 或 DSH 核心；这为“终端 Agent + 可视化编排 + 原生审批”提供了一个相对低侵入的组合方式。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用桌面界面统一管理多个 DSH Agent 会话和审批动作。</li>
+    <li>把已经存在的 DSH 原生会话导入 Paseo，继续运行而不丢失会话身份。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2105328106580087073" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTegsZHasAAAvsq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTegsZHasAAAvsq?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTegsZIa8AAooB1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTegsZIa8AAooB1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTegsZWa0AA_mo0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTegsZWa0AA_mo0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 乔木 RSS：在 DeepSeek Harness 里阅读文章并带上下文追问</div>
+  <div class="section"><div class="section-label event">一句话</div><p>qiaomu-rss-dsh 是 DeepSeek Harness 社区插件，把 RSS/Atom 订阅、原文/译文/改写阅读和原生 AI 伴读放进同一工作区。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-rss-dsh" target="_blank">https://github.com/joeseesun/qiaomu-rss-dsh ↗</a></p>
+    <p><a href="https://github.com/joeseesun/qiaomu-rss-dsh/releases/latest" target="_blank">https://github.com/joeseesun/qiaomu-rss-dsh/releases/latest ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备 DeepSeek Harness 0.2.0-rc.2，下载 Release 中的 .tgz 与同名 .sha256 文件，在下载目录执行 shasum -a 256 -c qiaomu-rss-dsh-0.5.2.tgz.sha256，然后用 dsh plugin --profile desktop add "$PWD/qiaomu-rss-dsh-0.5.2.tgz" 安装；使用 Web profile 时把 desktop 换成 web。重启对应 profile 后打开“乔木 RSS”，从精选频道或探索订阅添加 RSS/Atom，打开文章并点击魔法棒，让右侧原生对话带着文章全文上下文回答。先不配置模型也可以阅读已有内容，生成译文或伴读回答则需要宿主模型配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“信息摄取”和“Agent 对话”连接起来：文章、选中文本、译文和改写版本都能成为当前会话上下文，用户不用来回复制网页。官方 README 同时披露了实际验证范围、插件不是 DeepSeek 官方维护、订阅数据存储位置以及没有 Obsidian 式笔记功能，边界比许多演示型插件更清楚。对长期读技术 RSS 的人，最值得试的是从一篇文章直接追问、比较和复盘，而不是单纯生成摘要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>每天阅读 AI/工程 RSS，直接在文章旁追问术语、实现细节和反例。</li>
+    <li>把播客或博客订阅集中管理，再让 Agent 按文章上下文生成中文学习笔记草稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2105323962674856009" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTebj1obUAA84AU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTebj1obUAA84AU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ pdfcn：可复制进 React 项目的开源 PDF 组件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>pdfcn 提供基于 Takumi 与 Forme 的免费 React PDF 组件和 blocks，支持表格、表单、图表、发票与报告等可组合文档。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/shadcn-labs/pdfcn" target="_blank">https://github.com/shadcn-labs/pdfcn ↗</a></p>
+    <p><a href="https://pdfcn.vercel.app/docs" target="_blank">https://pdfcn.vercel.app/docs ↗</a></p>
+    <p><a href="https://pdfcn.vercel.app/docs/installation" target="_blank">https://pdfcn.vercel.app/docs/installation ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在一个 React 项目中先打开官方文档的 Installation 页面，按指引安装依赖；也可以直接浏览 Components/Blocks，挑一个 invoice、table 或 report 组件，把源码复制进自己的项目后替换数据与主题。建议先做一个最小发票页，分别试 Takumi 与 Forme 两种渲染基础，再用浏览器中的 live preview 检查分页和字体；确认输出稳定后，再把组件封装成项目自己的模板。由于它采用 shadcn/ui 相近的 registry 思路，团队可把组件当作源码资产维护，而不是依赖一个不可见的模板服务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>PDF 生成常被当作一次性模板，导致布局原语、样式和分页逻辑难以复用；pdfcn 反其道而行，把 PDF 视为可组合、可主题化的 React 组件。官方仓库明确列出双渲染基础、零配置、实时预览、shadcn/ui 兼容和表格/图表/报告 blocks，且采用 MIT 许可。它适合需要快速产出报价单、审计报告或数据简报、又希望保留源码控制权的前端团队。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 SaaS 后台把发票、运营报表和合同附件统一成可复用 React 组件。</li>
+    <li>将 AI 生成的结构化数据接入模板，批量产出可审阅的 PDF 草稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2105145739903107161" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTb64f3bwAAfv1x?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTb64f3bwAAfv1x?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2104839168828551168/img/0j4S5p-56CTWZZZj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2104839168828551168/img/0j4S5p-56CTWZZZj?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Matt Pocock Skills：面向真实工程流程的可组合 Agent Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Skills For Real Engineers 是 Matt Pocock 发布的工程技能集合，覆盖需求澄清、TDD、调试、架构改进、代码审查和任务拆解等流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mattpocock/skills" target="_blank">https://github.com/mattpocock/skills ↗</a></p>
+    <p><a href="https://skills.sh/mattpocock/skills" target="_blank">https://skills.sh/mattpocock/skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果主要使用 Claude Code，可执行 claude plugins install mattpocock-skills；如果使用 Codex 或其他 Agent，可执行 npx skills@latest add mattpocock/skills，选择要安装的技能，并确保包含 setup-matt-pocock-skills。安装后在一个真实仓库运行 /setup-matt-pocock-skills，配置 issue tracker、标签和文档位置；再从 /grill-me 或 /grill-with-docs 开始，把一个小需求先变成共享术语和决策文档，随后用 /tdd 驱动红绿重构，最后用 /code-review 检查标准与规格一致性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有把 Agent 能力包装成“自动完成一切”，而是把软件工程中最容易失控的反馈环拆成小而可组合的技能：先对齐需求，再建立术语，按小步测试，最后审查架构与实现。官方仓库强调技能可编辑、可组合、适用于不同模型，并区分 Claude Code 的托管只读插件和 skills.sh 的本地可改文件。对已经能写代码、但经常遭遇需求误解、测试缺失和代码熵增的人，这种流程化资产比再换一个模型更值得实验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为个人或团队建立从需求澄清到测试、审查的统一 Agent 工作流。</li>
+    <li>把成熟的调试、架构和代码审查习惯沉淀成可迁移的项目技能。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2105127081449562149" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTbp4xAacAAnb-6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTbp4xAacAAnb-6?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude.dev：Anthropic 面向开发者的新内容入口</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Claude.dev 是 Anthropic 面向 Claude 开发者的技术内容站，集中发布 Claude Code、API、上下文工程、Skills 与 Agent 工作流经验。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://claude.dev" target="_blank">https://claude.dev ↗</a></p>
+    <p><a href="https://code.claude.com/docs" target="_blank">https://code.claude.com/docs ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问 claude.dev，先按主题浏览 Claude Code、API 或 Skills 文章，再回到 code.claude.com/docs 对照正式文档。推荐从“Lessons from building Claude Code: How we use skills”和“A harness for every task: dynamic workflows in Claude Code”开始，边读边把其中一个工作流改写成自己的项目 README 或 skill；如果要验证文章中的工程建议，开一个独立小仓库，记录上下文长度、工具调用次数和失败恢复方式，不要直接在生产仓库替换整个流程。它更像持续更新的工程经验入口，不是一个新的模型 API。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方站点把产品文档之外的实践经验单独组织起来，内容覆盖 prompt caching、工具设计、动态 harness、Skills 和上下文工程，能补足“文档告诉你参数，文章告诉你如何组织系统”的空白。它的价值不在于发布一个独立工具，而在于给 Agent 开发者提供一手工程方法和团队实践；大哥若关注长期可复用的 Agent 经验，这个站点值得加入 RSS，而不是只在模型发布日访问。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为团队制定 Claude Code/Agent 的上下文、工具和技能规范。</li>
+    <li>对照官方实践改造一个可观测、可恢复的长任务工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2105431620769427549" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105391045345468416/img/eVcBmx8_2vyTsv-I.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105391045345468416/img/eVcBmx8_2vyTsv-I.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Gemini 4 Argon：长输出上限把前沿模型竞争推向长时程任务</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 多条信息称 Google 发布 Gemini 4 Argon，并将单次输出上限从 64K 提升到 100 万 tokens，首批面向 Fairwind 网络安全防御人员开放。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果这些首发规格最终由 Google 官方文档完整确认，核心变化不是又一次跑分领先，而是模型开始针对“一个任务持续很久、一次性产出完整代码库或报告”的代理工作流设计。百万级输出会降低长任务中断、摘要压缩和上下文拼接的频率，但也会把验证、成本、权限和失败回滚变成更大的工程问题。目前本日报能确认的是 Google 官方 X 帐号确实发布了 Gemini 4 Argon 的长时程软件工程定位；定价、全面开放时间与全部跑分仍应以官方开发者文档为准。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型供应商的竞争会从“回答一轮问题”继续转向长任务吞吐、上下文保持和代理可靠性。开发团队若要评估这类模型，不应只测单题准确率，还要测长代码库修改的中途恢复、输出截断、工具调用预算和审查成本；百万 token 上限也不等于应该无条件生成百万 token，任务规划与分段验收仍是必要控制点。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Google/status/2105388146665890056" target="_blank"><span class="handle">@Google</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTfViXzWcAAi4IL?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTfViXzWcAAi4IL?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Pro 额度补偿：高价订阅的“用量权益”正在变成产品信任问题</div>
+  <div class="section"><div class="section-label event">事件</div><p>多条推文称 OpenAI 向受额度调整影响的 200 美元 Pro 用户补赠一次 reset 与约 62,500 积分，积分预计在年底过期。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这件事的技术含量不如新模型，但对 AI 工具采购很重要：用户买的已经不是单一模型，而是一个带倍率、重置、积分、模型路由和第三方调用边界的使用权套餐。一次性补偿能缓和短期情绪，却也暴露了额度单位难以被普通用户理解的问题；不同模型、Agent 子任务和外接 API 是否扣同一账户额度，用户仍需要在账单与实际运行日志中核对。本日报将“约 62,500”视为 X List 用户反馈，具体资格、到期日和积分折算不作独立确认。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来 AI 订阅的竞争会越来越像云服务计费，而不是传统软件买断。企业和个人都需要保存用量变化、模型路由和额度规则的版本记录，不能只按月费比较“便宜/昂贵”；供应商若不能在调整前解释清楚倍率和 reset 规则，补偿成本可能小于信任损耗。对 Agent 用户而言，预算应同时设置模型调用上限和业务级停止条件。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2105289078971437268" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTd9DI9aUAABq49?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTd9DI9aUAABq49?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GLM-5.3 安全争议：开源前沿能力与可滥用风险同时下沉</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 转述 Anthropic 对 GLM-5.3 的网络安全能力与防护弱点进行评测，称其接近前沿端到端自主漏洞利用能力且自由可获取。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条线索的价值在于提醒行业：当高水平网络安全能力以可下载模型形态出现时，风险边界不再由少数 API 网关控制，模型权重、微调、工具权限和部署环境会共同决定实际危险程度。当前可确认的是推文引用了 Anthropic 研究页面，不能仅凭转述判断完整测评方法、样本和结论；因此更适合作为安全工程议题而不是“某模型一定危险”的定论。部署类似模型时，应把网络访问、代码执行、凭据读取和自动化攻击链拆开审计。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>开源模型评测会从通用能力榜单扩展到能力—防护双轴，模型发布者需要提供更可重复的红队方法、缓解措施和部署建议。企业采购或自部署时，不能只看许可证与 benchmark，还要验证模型在隔离网络、最小权限、人工审批和日志留存条件下的行为；研究者也应区分“模型有能力”与“模型在真实环境可造成影响”。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2105177178882342935" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2105291537555083564" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2105109877437960568" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2105109471903297894" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2105305595163418945" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2105290923924226150" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2105279963922338258" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2105220710301925440" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2105296667847348513" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/ElliotChen/status/2105408394723287109" target="_blank"><span class="handle">@ElliotChen</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTd_fWjboAAkGd5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTd_fWjboAAkGd5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTbaROGaQAAkffd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTbaROGaQAAkffd?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTbZ5hKbgAAzVmP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTbZ5hKbgAAzVmP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTeMNtCbQAAJXKh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTeMNtCbQAAJXKh?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTd03X7aIAAyj0w?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTd03X7aIAAyj0w?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTCJR-DbwAAdlkh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTCJR-DbwAAdlkh?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTfV2KTa0AAVcsh?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTfV2KTa0AAVcsh?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>TinyOwl：本地图片压缩并上传 R2/S3/OSS/COS 的 macOS 工具，功能方向实用但本轮未找到足够官方项目证据。 <a href="https://x.com/appinn/status/2105220710301925440" target="_blank">→</a></li>
+    <li>WorkBuddy：围绕 Agent 生态与开发小程序的讨论升温，建议关注其插件、模型和企业工作流边界。 <a href="https://x.com/AlchainHust/status/2105296667847348513" target="_blank">→</a></li>
+    <li>1M token 长任务：即使不立即使用 Gemini 4 Argon，也应开始为长上下文 Agent 设计分段验收、预算与恢复策略。 <a href="https://x.com/ElliotChen/status/2105408394723287109" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

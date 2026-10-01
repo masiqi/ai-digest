@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 30 Sep 2026 00:49:32 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 00:42:41 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/01 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-01.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-01.html</guid>
+      <description>今天的信号集中在“Agent 从单体聊天走向可组合工作台”：DeepSeek Harness 把模型、工具、技能、会话与运行模式都做成插件，社区已经出现 Paseo 多 Agent 编排和 RSS 伴读等配套；另一条实用支线是把 AI 编程过程变成可检索、可审查的本地资产。X List 抓取到 100 条候选；本轮证据增强脚本在 300 秒内未产出证据包，以下🛠️项目均改用推文与官方 GitHub/官网交叉核验，🌱项目明确标注“证据待补”。</description>
+      <pubDate>2026-10-01T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/09/30 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-09-30.html</link>
