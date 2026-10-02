@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-02</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-02</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得注意的变化，是 AI Agent 正从“会聊天的模型”转向可持续运行的工作系统：一端用 49Agents、visual-edit、游戏构建 Skills 把多个 Agent、真实页面和代码放进可操作的工作台；另一端用 OpenCode Go、JEV-27B-VL、TwIL-LM3-Pro 等低成本或本地模型，把长时间自动任务、视觉决策和专业推理拉回开发者可控的环境。与此同时，语音 Agent 的瓶颈、政府 AI 入口和 Dots 的云电脑形态，说明竞争焦点正从单次回答转到“能否可靠完成闭环”。本次 Agent Reach 证据 enrichment 超时未产出文件，以下可上手条目均单独用官方页面、GitHub 或 Hugging Face 复核；HNRSS 补充证据缺失，早期信号已明确标注证据边界。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ 49Agents IDE</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源的二维无限画布 IDE，把多个 AI 编程 Agent、终端、项目和机器放在同一张可缩放画布上管理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://49agents.com" target="_blank">https://49agents.com ↗</a></p>
+    <p><a href="https://github.com/49Agents/49Agents" target="_blank">https://github.com/49Agents/49Agents ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>最快方式是直接打开 https://app.49agents.com 体验托管版；想让终端和文件留在自己的机器上，则先确认 Node.js 18 以上、tmux 和 ttyd 已安装，再执行 `git clone https://github.com/49Agents/49Agents.git &amp;&amp; cd 49Agents &amp;&amp; ./49ctl setup &amp;&amp; ./49ctl start`，按官网说明打开 http://localhost:1071。进入后给不同项目各放一个 Agent/终端面板，拖动和缩放画布观察任务状态；再连接另一台电脑或云主机，对比多机器协作是否比终端标签页更适合长任务。仓库还提供 macOS DMG，但未签名版本首次打开可能需要按 README 处理系统拦截。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有再做一个“聊天框套终端”，而是把 Agent 的运行状态、权限请求、代码仓库和机器资源组织成空间化界面。官网明确展示工作中的面板会发光、需要许可时会改变提示色，并支持在笔记本、家用电脑和云主机间管理终端。对同时跑多个编码任务的人，核心价值不是模型更强，而是降低并行任务的观察和切换成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>同时让多个 Agent 分别处理前端、测试、文档和代码审查，并在一张画布上巡检。</li>
+    <li>把本机、家用电脑和云服务器上的长任务集中到一个控制面板中。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2105803363371630870" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenCode Go</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 Agent 编程的低价订阅，把 DeepSeek、GLM、Kimi、Qwen、MiniMax 等多种模型放进一个可切换的编码入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://opencode.ai/go" target="_blank">https://opencode.ai/go ↗</a></p>
+    <p><a href="https://opencode.ai/docs/go" target="_blank">https://opencode.ai/docs/go ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 https://opencode.ai/go 了解套餐并注册 OpenCode 账号；订阅 Go 后，在 OpenCode 中执行 `/connect`，选择 OpenCode Go 并粘贴自己的密钥，再用 `/models` 查看当前可用模型。建议先建一个没有生产凭据的测试仓库，分别用 DeepSeek V4.1 Flash 或 GLM-5.3-Flash 做大量代码阅读、测试修复和批量重构，再把 Kimi K3 或更高规格模型留给架构设计和难题；每项任务都要求 Agent 先列计划、改动后跑测试，并记录 5 小时、周和月度限额，避免“便宜”变成无人值守的失控消耗。官方说明 Go 为每月 10 美元，并可与 OpenCode 或其他 Agent 使用，具体模型和额度以页面实时信息为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把模型选择从单次 API 采购问题变成 Agent 工作流中的路由问题。官方页面同时列出模型、估计请求量和月度使用量，开发者可以用便宜的 Flash 模型覆盖高频循环，把预算留给少数困难任务；这也让 Pi、OpenCode 这类 Harness 的实际差异更容易被测试出来。需要注意，套餐额度、模型列表和峰值限制会变化，不能把一次测评当成稳定 SLA。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>个人开发者以固定月费运行代码阅读、测试生成和小步修复任务。</li>
+    <li>用不同模型承担“高频低价执行”和“低频高质量决策”两类工作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2105603829929103619" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ JEV-27B-VL</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源多模态决策模型，把图像和文本转成带概率的选择、评分或判断，区别于必须生成长文本的聊天模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/autotrust/JEV-27B-VL" target="_blank">https://huggingface.co/autotrust/JEV-27B-VL ↗</a></p>
+    <p><a href="https://github.com/yuhai-china/JEV-27B-DEMO" target="_blank">https://github.com/yuhai-china/JEV-27B-DEMO ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Hugging Face 模型卡查看在线演示、视频和限制；有 GPU 的开发者可按模型卡使用 Transformers、vLLM 或 SGLang 部署，先从短输入和小批量开始。它的 System 1 接口接收 `kind`、`state`、`question`、`options`，返回每个选项的概率；可以先用截图、页面状态和 2-4 个候选动作做离线判断，再把结果接到一个人工确认循环，而不是直接授权删除、付款或发布。想研究完整推理时，再使用同一页面说明的 System 2 图像输入能力。官方案例覆盖短视频封面推荐、Agent 轨迹评审和游戏动作选择，部署前必须用自己的数据重新校准阈值。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“模型说了什么”与“模型该选哪个动作”拆开，用一次前向推理输出结构化概率，适合路由、审核、排序和 Agent 评估。模型卡还展示了图像输入、短视频推荐和 Agent judge 等不同用途，说明视觉模型不只是 OCR 或图像问答。更重要的是概率输出便于设置拒答和人工复核阈值；但页面中的 benchmark 是项目方报告，不能直接等同于生产可靠性，尤其不能跳过最终状态验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>根据页面截图判断 Agent 是否完成任务，再决定是否进入人工复核。</li>
+    <li>在没有历史交互数据时，对短视频封面或多候选动作做零样本排序实验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2105680223547310284" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105680172255227904/img/9PwP3lVGSgKUh5PL.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105680172255227904/img/9PwP3lVGSgKUh5PL.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BuilderIO visual-edit</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Builder.io 的 Agent Skill，把正在运行的真实应用路由放进类似 Figma 的画布，支持可视检查、路由探索和把修改写回源码。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/BuilderIO/skills/tree/main/skills/visual-edit" target="_blank">https://github.com/BuilderIO/skills/tree/main/skills/visual-edit ↗</a></p>
+    <p><a href="https://design.agent-native.com" target="_blank">https://design.agent-native.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在一个本地 Web 项目目录中执行 `npx @agent-native/core@latest skills add visual-edit`，再按 README 启动目标应用和本地 bridge；不要把静态截图当成结果，而是确保应用在本机有可访问的真实路由。调用 `/visual-edit` 后，把首页、表单、移动端断点和异常状态分别作为 screen 放入画布，先检查真实组件和导航，再让编码 Agent 修改 CSS、布局或交互。每次改动后重新打开同一 URL，验证数据状态、响应式布局和源码 diff；该 Skill 的设计目标是让画布保持真实路由连接，而不是在设计工具里另起一份不可执行的 mockup。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统视觉评审容易停留在截图，Agent 也容易“看起来改好了”却没有改变真实代码。visual-edit 的关键是 URL-backed iframe screen 和 source-backed edit：它把页面状态、路由和源码修改放在一个闭环里。对 Agent-Native 应用尤其重要，因为同一界面可能既要被人操作，也要被 Agent 通过工具修改；但它要求本地应用和 bridge 正常运行，仍需要开发者用浏览器和测试对最终行为负责。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>逐屏检查 Agent 生成的后台、表单和多步骤流程，并把视觉反馈交回代码 Agent。</li>
+    <li>同时比较桌面、移动端和不同 URL 状态，减少只看首页截图造成的漏测。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2105541829081112684" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HThjHoFbUAATVAf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HThjHoFbUAATVAf?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105375234190954496/img/IpERpdxr8b9NPCAC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105375234190954496/img/IpERpdxr8b9NPCAC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ TwIL-LM3-Pro</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 3.66B 参数、专注形式逻辑的本地推理模型，官方提供约 2.09 GiB 的 Q4_K_M GGUF 量化版本。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/webAI-Official/TwIL-LM3-Pro" target="_blank">https://huggingface.co/webAI-Official/TwIL-LM3-Pro ↗</a></p>
+    <p><a href="https://github.com/angrysky56/mcp-logic" target="_blank">https://github.com/angrysky56/mcp-logic ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果本机已安装支持该模型的 llama.cpp，可直接执行 `llama-cli -hf webAI-Official/TwIL-LM3-Pro:Q4_K_M -cnv --temp 0 -n 2048`；官方模型卡说明 Q4_K_M 约 2.09 GiB，目标是 CPU 或 4 GB 显存环境。先用 20-30 道自己能判定答案的形式逻辑题做基线，观察它在条件推理、规则归纳和自然语言转逻辑表达上的表现，再把结果接入 mcp-logic 这类逻辑辅助工具。不要把它当通用聊天或代码模型：模型卡明确说明训练重点是 formal logic，代码生成和工具调用并没有因此得到保证；部署时优先固定温度、保留原始输出并做规则校验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它展示了“小模型+专业训练+量化”而非盲目堆参数的路线。官方模型卡同时公开了基础模型、LoRA、checkpoint fusion、WiSE-FT 和熵加权 GRPO 等训练链路，还给出多个 GGUF 尺寸，普通开发者可以在本地复现实验。它的价值不在于替代通用大模型，而在于把高频、可验证的逻辑判断放到低成本本地推理；边界也很清晰，专业 benchmark 的提升不能外推成通用能力。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地运行形式逻辑练习、规则检查和结构化推理实验。</li>
+    <li>在隐私敏感的规则判断前置环节中，先做候选结论生成，再交给确定性程序复核。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2105473702989295832" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTglKh0bcAAt4QS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTglKh0bcAAt4QS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTfEQFXXUAAi5nV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTfEQFXXUAAi5nV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 macOS 的开源清理与维护工具，新增了针对 AI 工具缓存、旧会话、worktree 和残留文件的整理能力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole" target="_blank">https://github.com/tw93/Mole ↗</a></p>
+    <p><a href="https://mole.fit" target="_blank">https://mole.fit ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 上可先执行 `brew install mole`，然后运行 `mo` 查看交互菜单；第一次清理不要直接确认，先用项目文档建议的 dry-run/预览方式查看将要处理的路径，再用 whitelist 保护仍在使用的缓存和项目目录。重点检查 AI 工具产生的旧 session、已合并 worktree、构建产物和卸载残留，确认没有正在运行的 Agent、重要本地模型或未提交代码后再清理。Mole 还提供 analyze/status 等功能，建议先分析磁盘占用，再按类别处理；涉及删除、卸载和 purge 的动作都应保留终端输出，出现路径不确定时停止而不是扩大扫描范围。CLI 免费开源，原生 Mac App 是另一个产品。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 编程带来了新的隐性成本：缓存、会话、临时 worktree、模型文件和多套 CLI 会持续占用磁盘，而且它们往往不在普通清理软件的显眼分类中。Mole 把清理、卸载、磁盘分析、系统维护和状态监控放进同一个工具，并在项目文档中强调路径校验、保护机制和不确定时跳过。它不是 AI Agent 本身，却直接解决 Agent 工作流的运营问题；任何自动清理都必须先预览，因为“旧”不等于“可删除”。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定期清理 Claude Code、Codex 等工具留下的缓存、会话和 worktree。</li>
+    <li>在本地模型和多项目开发环境中定位大文件，并建立白名单后再释放空间。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2105509778307080627" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HThDgqnaEAASLhN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HThDgqnaEAASLhN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Krisp Voice Isolation Benchmark</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个针对竞争说话人场景的语音隔离基准和数据集，用来测量背景中的第二个人如何破坏 STT 与语音 Agent 的轮次判断。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/datasets/Krisp-AI/VoiceIsolation-Benchmark-Dataset" target="_blank">https://huggingface.co/datasets/Krisp-AI/VoiceIsolation-Benchmark-Dataset ↗</a></p>
+    <p><a href="https://krisp.ai/developers/voice-isolation" target="_blank">https://krisp.ai/developers/voice-isolation ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 Hugging Face 下载数据集和说明，按“单人、竞争说话人、真实环境”等条件分组，不要只在安静录音上测试 STT。把同一批音频分别送进未经处理的 STT 和加入 Voice Isolation 的管线，比较 WER、误识别说话人、打断/抢话次数和响应延迟；再把评测结果接到自己的语音 Agent turn-taking 代码中。若只做概念验证，可先复现页面里的困难场景，再换成客服、会议或家庭环境录音。基准页面强调它不是单纯的模型排行榜，目标是测量隔离前后的实际影响，因此报告中应同时写清音频条件、STT 引擎和阈值。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多团队把语音 Agent 出错归因于 STT 不够强，却忽略了麦克风收到的是多人混合信号。Krisp 的公开材料把问题拆成“先隔离主要说话人，再让 STT 识别”，并提供真实房间、不同噪声、多个说话人的数据。这样评估的不是实验室里的单一 WER，而是 Agent 是否在正确的人说话时应答、是否因旁人一句话提前打断。厂商自己的数据和性能数字仍需独立复现，但数据集本身提供了更贴近生产的测试方向。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>客服、会议和车载语音 Agent 的竞争说话人鲁棒性测试。</li>
+    <li>调整 VAD、turn-taking 和 STT 前处理参数，定位到底是听错还是抢答。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2105808020186022213" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTlVORKagAAh7es?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTlVORKagAAh7es?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Dots：把 Agent 变成持续工作的云端责任人</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 官方页面介绍 Dots，可在 ChatGPT 中持续推进任务，使用自己的云电脑、记忆和连接的应用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Dots 的产品形态已经不是“问一次答一次”，而是用户交给它一个责任，让它在对话间继续拆解、执行、汇报并等待需要人的判断。官方页面展示了更新演示文稿、跟踪 API 迁移、处理客户反馈、准备销售材料等长周期工作，并强调用户可以查看进度、改变方向或暂停。它的关键基础设施是独立云电脑、连接应用、权限设置和 Auto-review，而不是单纯把模型上下文窗口做大。对开发者来说，真正要评估的是状态持久化、权限边界、失败恢复和可审计性，而不是演示里 Agent 是否会操作某个软件。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>持续 Agent 会把软件竞争从“谁的聊天回答更好”推向“谁能安全托管一项工作”。这会增加云端执行环境、连接器、身份权限、事件日志和人工审批的重要性，也会让企业重新审视敏感数据是否能进入 Agent 的长期记忆。另一方面，若 Agent 能跨 ChatGPT、Slack、Teams 和业务应用推进任务，用户入口会从单个 SaaS 页面迁移到责任分派层。官方页面也明确写出分阶段开放和权限控制，说明可靠闭环与风险治理仍是产品能否规模化的决定因素。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2105609473608049140" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105606377288921088/img/PwnT7PBVT8j5vVfB.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105606377288921088/img/PwnT7PBVT8j5vVfB.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTdiAsFaUAAIjhJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTdiAsFaUAAIjhJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 America.gov：政府信息正在尝试用一个 AI 入口重组</div>
+  <div class="section"><div class="section-label event">事件</div><p>America.gov 上线，把政府信息搜索组织成一个面向自然语言提问的统一入口，官方口号是“Just ask, and government answers”。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类项目的意义不只是做一个聊天机器人，而是把分散的政府网站、部门术语和办事路径重新包装成一个面向任务的入口。官方 How it works 页面强调“单一体验”、快速和围绕用户组织信息；X List 讨论进一步提到约 2.9 万个政府网站，但本日报不把这一数字外推成系统已经替代所有原站。真正值得观察的是回答是否能稳定给出来源、资格条件、下一步链接和办理边界，以及当不同机构页面冲突时系统如何处理。若未来从问答扩展到护照、福利等申请，验证和身份权限的要求会显著高于普通搜索。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>政府服务入口的统一会让“检索+解释+行动”成为公共数字服务的重要评估维度，也会给搜索、云、模型和身份系统带来长期订单。但错误信息的代价远高于普通消费问答：一个过期资格条件可能让用户错过期限，一个错误表格可能造成真实损失。因此产业影响不应只看访问量，还要看引用透明度、内容更新延迟、弱势用户可用性、人工转接和审计记录。对国内政务和大型企业知识库建设来说，它提供了一个警示：统一聊天入口只是表层，后面的权威内容治理和事务系统接口才是难点。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2105512898131055101" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105509091082981376/img/XQMcSdcweeIHk_PZ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105509091082981376/img/XQMcSdcweeIHk_PZ.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 语音 Agent 的瓶颈从 STT 准确率转向“听谁在说”</div>
+  <div class="section"><div class="section-label event">事件</div><p>Krisp 发布 Voice Isolation Benchmark 数据集，专门测量竞争说话人对 STT 和语音 Agent 的破坏。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>过去的语音评测经常在单人、安静或可控噪声里比较 WER，但真实客服、会议和家庭场景会出现第二个人插话。此时系统即使拥有很强的词级识别能力，也可能把旁人的话当成主说话人的内容，或在错误时机抢答。Krisp 的公开数据集包含真实环境、多个说话人和不同脚本，给出了一个更接近 Agent 体验的评测切口：既测识别文本，也测 turn-taking、打断和延迟。它把前处理、VAD、说话人隔离和 STT 重新放回一个系统问题里。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>语音 Agent 的工程投入可能从“换更大的 STT”转向端到端音频链路优化，包括麦克风布局、实时隔离、说话人跟踪、打断策略和置信度回退。对模型供应商而言，公开基准会迫使产品在复杂声音条件下披露更多数据；对应用团队而言，真实场景采样和回放测试比单一公开排行榜更重要。成本上，前处理会增加 CPU、延迟或部署复杂度，但错误转写和错误动作的业务代价可能更高，特别是在客服、医疗和金融电话中。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2105808020186022213" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2105497440862523470" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2105484978230563143" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2105476458592587927" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2105780532571496671" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2105530263950283246" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2105530261261713494" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2105803363371630870" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTlVORKagAAh7es?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTlVORKagAAh7es?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTg6wLBbUAEQyA5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTg6wLBbUAEQyA5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTg6wspb0AAmNPa?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTg6wspb0AAmNPa?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTd03X7aIAAyj0w?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTd03X7aIAAyj0w?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTgvakebcAA3xCE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTgvakebcAA3xCE?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105359438827995136/img/tZsKtNi31TGkvdj0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105359438827995136/img/tZsKtNi31TGkvdj0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105359510697369600/img/ZjyQhNUQnSjEHKyY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105359510697369600/img/ZjyQhNUQnSjEHKyY?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105359573192466432/img/FxfTSedK27Sac_P3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105359573192466432/img/FxfTSedK27Sac_P3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTgnpe-aAAA98Ij?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTgnpe-aAAA98Ij?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTfV52SWgAIlX3W?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTfV52SWgAIlX3W?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105756947442257920/img/oLyYXG6pv6p-S7eC.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105756947442257920/img/oLyYXG6pv6p-S7eC.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2105756947442257920/img/oLyYXG6pv6p-S7eC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2105756947442257920/img/oLyYXG6pv6p-S7eC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>X List 证据补齐：优先补齐本期🌱条目的官方仓库、文档和可运行入口，避免把低证据线索提前升级为可上手工具。 <a href="https://x.com/appinn/status/2105803363371630870" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
