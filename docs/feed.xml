@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 02 Oct 2026 00:46:52 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 00:55:38 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/10/02 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-02.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-02.html</guid>
-      <description>今天最值得注意的变化，是 AI Agent 正从“会聊天的模型”转向可持续运行的工作系统：一端用 49Agents、visual-edit、游戏构建 Skills 把多个 Agent、真实页面和代码放进可操作的工作台；另一端用 OpenCode Go、JEV-27B-VL、TwIL-LM3-Pro 等低成本或本地模型，把长时间自动任务、视觉决策和专业推理拉回开发者可控的环境。与此同时，语音 Agent 的瓶颈、政府 AI 入口和 Dots 的云电脑形态，说明竞争焦点正从单次回答转到“能否可靠完成闭环”。本次 Agent Reach 证据 enrichment 超时未产出文件，以下可上手条目均单...</description>
+      <description>今天最值得动手的方向，不是再换一个聊天模型，而是给 Agent 补上可复用的技能、可视化的工作台和更便宜的模型入口：从工程 Skills 到真实页面编辑，工具链正在把“会回答”推向“能完成”。与此同时，Computer Use 的成本、沙盒边界和开放权重模型的可控性，开始成为产品能否长期落地的分水岭。</description>
       <pubDate>2026-10-02T08:30:00+08:00</pubDate>
     </item>
     <item>
