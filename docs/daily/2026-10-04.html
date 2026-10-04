@@ -70,21 +70,20 @@
   <div class="date">2026-10-04</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>今天最值得动手的方向，是把 Agent 从“单个聊天窗口”推进到可切换模型、可连接外部工具、可被验收的工程系统：magpie 统一本机多个 Agent 的模型入口，Connany 把 OAuth/MCP 连接器收敛成后端服务，jevgrep 和 SmartSub 则把代码检索、音视频处理做成 Agent 可调用的工作流。Agent Reach 多源证据包本次在限定时间内未产出，以下可上手条目均改用推文加官方仓库、官网或课程页面逐项人工核验；🌱 条目明确标注证据待补。</p>
+    <p>今天最值得留意的不是又一个更大的模型，而是“把智能塞进工作流和设备里”：一边是 magpie、Connany、Claude Mods 这类把模型、账号、工具和界面重新接线的基础设施，另一边是 Whistle、Strata、Muse Gadgets 这类把推理搬到本地硬件的项目。与此同时，AI 编程正在从“会生成代码”转向“会找代码、会验收、会长期运行”，成本、隐私和可控性成为真正的产品竞争点。</p>
   </div>
 </div>
 <div class="topic">
-  <div class="topic-title">🛠️ magpie：统一多 Agent 模型与供应商的本地网关</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个菜单栏、TUI 和 CLI 工具，用一个本地网关管理 Claude Code、Codex、Gemini CLI、OpenCode、Pi 等多个 Agent 的模型选择、供应商、账号和配置文件。</p></div>
+  <div class="topic-title">🛠️ magpie：给多个 Coding Agent 统一切换模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源的模型与账号路由工具，把 Claude Code、Codex、Gemini CLI、OpenCode、Pi 等 Agent 的模型配置、登录和故障切换放到一个入口里。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/yetone/magpie" target="_blank">https://github.com/yetone/magpie ↗</a></p>
-    <p><a href="https://usemagpie.ai/docs/zh/plugins#pi" target="_blank">https://usemagpie.ai/docs/zh/plugins#pi ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub Releases 安装对应系统版本，启动 magpie 后打开 Agents 页面，确认它识别到本机已有的 Claude Code、Codex 或 OpenCode 配置；再进入 Providers 添加一个已有 API 供应商或自定义 OpenAI/Anthropic 兼容端点，刷新模型列表，把模型暴露给需要的 Agent。想验证实际切换效果，可先用 `magpie providers` 查看供应商，再用 `magpie models` 查看统一目录，最后在 TUI 或命令行里给某个 Agent 指定 `provider/model`，运行一轮短任务并检查配置是否只修改了目标字段。若要做工作场景切换，保存一个 profile，再切回原 profile 对比多个 Agent 的配置变化。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它解决的不是再造一个聊天界面，而是本机 Agent 碎片化后的“模型路由层”问题。官方 README 明确支持多个 Agent、统一本地网关、API 格式转换、共享订阅登录、配置文件原子写入和 profiles；插件文档还说明 OpenCode 插件与 pi 扩展可以复用。对同时使用自建中转、官方订阅和本地模型的人，集中管理模型与账号比逐个编辑配置更容易审计，也更容易做故障切换。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub README，按项目提供的安装方式装好 magpie；启动后先检查它识别到的 Agent 和本机配置，再给每个 Agent 建一个最小 profile，例如让 Claude Code 使用一个模型、Codex 使用另一个模型。不要一上来迁移全部账号，先在一个测试项目里验证登录、模型切换和请求是否正常；然后切换到备用 provider 做一次短任务，确认故障切换真的发生。最后查看 sessions 或配置文件，确认它没有把密钥、提示词或项目内容写进不需要的位置。推文提到的 OpenCode 插件和 Pi 扩展包尤其适合已有多套 CLI 的开发者。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它解决的不是“再造一个 Agent”，而是 Agent 生态碎片化后的配置摩擦。不同 CLI 各有配置文件、模型命名和认证流程，切换一次就要重复劳动；magpie 把这些差异收拢到统一的 profile、provider 和会话层。真正的价值在于降低试用新模型的成本，同时保留按任务选择模型的自由。不过它会接触多个账号和 provider 配置，安装前应审查权限与网络行为，不要把生产密钥直接交给未经审计的插件。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>为不同 Agent 分配不同模型，例如让编码 Agent 使用强推理模型、轻量任务使用低成本模型。</li>
-    <li>把一组 Agent 的模型配置保存成 profile，在项目开发、中文写作和日常办公之间快速切换。</li>
+    <li>在 Claude Code、Codex、Gemini CLI 间按任务切换不同模型。</li>
+    <li>给团队建立可复现的 Agent 模型 profile，并在 provider 故障时快速切换。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -95,17 +94,16 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ jevgrep：用自然语言问“代码在哪里”</div>
-  <div class="section"><div class="section-label event">一句话</div><p>面向编码代理的语义代码搜索 CLI，输入“请求到达处理程序前在哪里检查身份验证”等行为问题，返回相关文件、上下文和源码行号。</p></div>
+  <div class="topic-title">🛠️ jevgrep：用“它做什么”来找代码</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向编码 Agent 的 CLI，允许用行为问题搜索代码，返回相关文件、阅读线索和源码片段，而不是只搜精确字符串。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/dzhng/jevgrep" target="_blank">https://github.com/dzhng/jevgrep ↗</a></p>
-    <p><a href="https://www.npmjs.com/package/@dzhng/jevgrep" target="_blank">https://www.npmjs.com/package/@dzhng/jevgrep ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 22+ 和一个受支持的 Jev/模型供应商密钥，在目标项目根目录执行 `npm install -g @dzhng/jevgrep`，然后运行 `jg auth` 选择供应商并完成认证，再运行 `jg skill` 把随附的 Agent Skill 安装到 Claude Code、Codex 或其他支持 Agent Skills 的工作区。进入一个陌生仓库后，用 `jg "Where is authentication checked before a request reaches a handler?" .` 这类问题开始；把返回的文件、行号和源码片段交给编码 Agent，再让 Agent 修改并运行测试。已有明确符号时仍用直接读取或 ripgrep，避免把语义搜索当成万能索引。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方 README 给出了可复核的边界：它用 Jev 跨目录、文件和声明判断相关性，并输出原始源码上下文，而不是生成一个未经验证的答案；项目还披露了十个 SWE-bench 任务中与基线同为 8/10、成本下降的单次实验，同时明确这不是对所有仓库都成立的速度或节省保证。它的价值在于把“先定位行为，再实现”变成 Agent 可重复调用的检索步骤。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备一个不含密钥和敏感数据的代码仓库，先按 README 安装 Node.js 22+ 版本的 CLI；首次使用运行认证流程，选择支持的模型 provider。进入仓库后，不妨从“请求到达处理程序前，身份验证在哪里检查？”这类行为问题开始，让 jg 返回候选文件，再人工检查结果是否覆盖真正的入口。接着用传统 grep 或 IDE 跳转核对，避免把语义检索当成完整证明；如果结果有遗漏，缩小目录、补充问题或用 `jg files` 检查搜索范围。最后让 Agent 只阅读命中的少量文件，再执行测试，比较上下文消耗和准确率。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>编码 Agent 最大的隐性成本常常不是生成，而是在陌生仓库里反复探索。jevgrep 把“理解意图→定位候选文件→读取上下文”做成一个窄接口，项目 README 还给出十项 SWE-bench 对比中与基线相同完成数、成本更低的结果。它并非替代 grep，也不是安全审计工具；搜索会把符合条件的源码发送给所选 provider，敏感仓库必须先做目录隔离、忽略规则和凭据检查。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>接手大型 TypeScript、Python、Go 或 Rust 项目时，快速定位鉴权、重试、数据库连接等横跨多文件的行为。</li>
-    <li>给编码 Agent 安装 skill，让它在修改前先拿到带行号的证据，减少盲目搜索和无关文件读取。</li>
+    <li>接手旧项目时定位鉴权、缓存、重试等跨文件行为。</li>
+    <li>给 Coding Agent 提供更小、更相关的初始上下文。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -119,17 +117,16 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ OLMo-core：从训练脚本到推理的开源模型工程底座</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Allen AI 为 OLMo 生态提供的 PyTorch 模块化底层库，包含训练组件、官方训练脚本、示例、文档以及 Transformers/vLLM 等推理路径。</p></div>
+  <div class="topic-title">🛠️ OLMo-core：可复用的大模型训练底座</div>
+  <div class="section"><div class="section-label event">一句话</div><p>AI2 为 OLMo 生态提供的 PyTorch building blocks、训练脚本和推理支持，用来研究、训练和评估开放模型。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/allenai/OLMo-core" target="_blank">https://github.com/allenai/OLMo-core ↗</a></p>
-    <p><a href="https://olmo-core.readthedocs.io/en/latest/" target="_blank">https://olmo-core.readthedocs.io/en/latest/ ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>这不是适合普通笔记本的一键聊天应用，建议先在有 CUDA 和 PyTorch 的 Linux 环境试验。按官方 README 安装 PyTorch，再执行 `git clone https://github.com/allenai/Olmo-core.git`、`cd Olmo-core` 和 `pip install -e .[all]`，或者安装 PyPI 包 `ai2-olmo-core`。先浏览 `src/examples` 和 `src/scripts/official/`，用单卡或小规模配置理解模块结构；需要训练时再按官方示例用 `torchrun` 启动，并设置独立的 checkpoint 目录。想先做推理，可安装 Transformers 或 vLLM，加载公开 OLMo checkpoint，跑一个短 prompt，确认环境和显存后再考虑分布式训练。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多开源模型只发布权重和推理接口，复现实验仍要自行拼装训练基础设施。OLMo-core 的官方材料把训练脚本、模块、文档、示例、Docker 依赖和多种推理方式放在同一生态中，适合研究者理解从数据/训练到部署的完整链路。它的价值更偏“可读、可改、可复现的工程底座”，而不是低门槛消费级工具；官方还明确提醒 Docker 镜像依赖硬件和 CUDA 版本，使用前应先做小规模环境验证。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>它不是适合普通笔记本“一键跑大模型”的桌面应用，建议先在官方 README 和文档里确认硬件、PyTorch 与 CUDA 版本。想动手的读者可以先克隆仓库，安装匹配环境，运行官方最小测试或查看 `src/examples`；再从 OLMo-2/OLMo-3 官方脚本中挑一个小规模配置，先做数据加载、checkpoint 和单步训练的 smoke test。之后再用 Transformers 或 vLLM 对公开 checkpoint 做推理，最后比较训练配置、日志和评测输出。没有多 GPU 资源时，不要把“能安装”误解为“能完成大规模预训练”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>开放模型的瓶颈逐渐从“有没有权重”转向“能不能复现实验和继续训练”。OLMo-core 将建模组件、分布式训练、官方训练脚本、checkpoint 转换与推理路径放在同一个生态里，并采用 Apache-2.0；这给研究者提供了比黑盒 API 更可检查的实验入口。它的价值更偏基础设施而非消费级工具，真实门槛仍是 GPU 集群、数据、工程运维和复现实验的严谨性。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在研究团队内部复现实验、修改训练模块或比较不同优化器与注意力实现。</li>
-    <li>为模型工程师提供从官方训练脚本到 vLLM/Transformers 推理的统一参考实现。</li>
+    <li>教学或研究中复现开放模型训练流程。</li>
+    <li>为自有数据集搭建可检查的预训练、微调和评测基线。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -140,113 +137,99 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ SmartSub 3.9.0：本地字幕、配音与 MCP/CLI 音视频流水线</div>
-  <div class="section"><div class="section-label event">一句话</div><p>开源跨平台桌面工具，把本地转写、字幕翻译、校对、TTS 配音、声音克隆和烧录合成串成一条流水线，并在 3.9.0 中提供 AI 助手、MCP 与 CLI 自动化能力。</p></div>
+  <div class="topic-title">🛠️ Whistle：16.9 MB 的端侧语音识别</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cactus 发布的轻量语音识别模型，单文件 16.9 MB、CPU 本地运行，支持七种语言、词级时间戳和语音 embedding。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/buxuku/SmartSub" target="_blank">https://github.com/buxuku/SmartSub ↗</a></p>
-    <p><a href="https://github.com/buxuku/SmartSub/releases/tag/v3.9.0" target="_blank">https://github.com/buxuku/SmartSub/releases/tag/v3.9.0 ↗</a></p>
+    <p><a href="https://cactuscompute.com/blog/whistle" target="_blank">https://cactuscompute.com/blog/whistle ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS Apple Silicon 用户可直接下载官方 Release 的 `SmartSub_Mac_3.9.0_arm64.dmg`，安装后拖入一段本地视频或粘贴 B 站/YouTube 链接。先选本地 Whisper/FunASR 等引擎生成字幕，再在校对台修正时间轴和文本，按需选择翻译服务，最后用本地 TTS 或云端服务配音并导出。要试 Agent 工作流，可在设置中查看 MCP/CLI 接入说明，把 Cursor、Claude Code 或 Codex 指向 SmartSub 的 MCP 配置；先用一个短视频执行转写，再逐步尝试批量任务、翻译和合成，不要一开始就把长视频交给自动化流程。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方 README 明确列出本地离线转写、Apple Silicon 等多平台硬件加速、批量处理、111 个 MCP 工具及对应 CLI，而且本地转写、翻译、TTS 和 ffmpeg 可以组成不依赖 API Key 的免费路径。它把“媒体处理软件”变成了 Agent 可调度的工具箱，适合验证 Agent 是否真的能完成下载、转写、翻译、配音、封装这类长链路任务；同时也要注意云端翻译和配音仍可能产生费用或隐私边界。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在官方 Whistle 页面直接点麦克风体验浏览器沙盒，第一次会下载约 16.9 MB 模型，确认音频不会离开设备；开发者可以从 Cactus 的文档和 Hugging Face 权重开始，再按目标平台下载对应的 needle/Whistle 引擎。准备一段不超过 30 秒的 16 kHz 单声道音频，先跑转写，再打开 word timestamps 查看每个词的起止时间；如果要做唤醒词、会议切片或设备控制，再测试 embedding 和关键词偏置。部署前用自己的口音、噪声和静音样本测误识率，不要只看官方基准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>端侧 ASR 的关键不是把云端模型简单缩小，而是把模型、量化、运行时和目标设备一起设计。Whistle 用单个 16.9 MB 文件在 CPU 上运行，官方报告首 token 约 11 ms，并提供转写、词级时间戳和 embedding；页面还明确展示了本地处理路径。这样可以降低延迟、网络依赖和隐私风险，适合微控制器、穿戴设备和智能家居，但语言范围、噪声鲁棒性与商业授权仍需按项目逐项验证。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>批量把外语课程或公开视频转成双语字幕，并让 Agent 轮询任务状态。</li>
-    <li>为视频出海制作翻译字幕、外语配音和带字幕成片，保留本地处理选项。</li>
+    <li>离线语音笔记、字幕和设备语音控制。</li>
+    <li>在机器人、穿戴设备或智能家居中做低延迟语音入口。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/lxfater/status/2106339066190979100" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2106376989972005251" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTtarLEakAAq1MP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTtarLEakAAq1MP?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Strata：在单张消费级显卡上运行大 MoE</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源推理引擎，主打在 8GB 以上 NVIDIA GPU 上运行量化的 Qwen3.8-Flash-Next，并提供本地 OpenAI/Anthropic API。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Niko1221/Strata" target="_blank">https://github.com/Niko1221/Strata ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读 README 的硬件要求、模型下载和量化档位，确认自己的显存、内存、磁盘与 CUDA 环境；在 Windows 或 Linux 上按一键安装方式准备运行时，先选最保守的量化 profile 启动，再用 OpenAI SDK 或兼容客户端向 localhost 发一个短请求。记录首次加载时间、显存占用、输出速度和上下文长度，然后逐步切换更高质量的量化版本。测试长上下文、工具调用和并发前，先确认模型许可证、端口绑定和日志中没有泄露 prompt；推文里的 94 token/s 是特定机器和量化设置的实测，不是所有 12GB 显卡的保证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Strata 把“参数规模很大但激活量较小”的 MoE 模型，变成个人开发者可尝试的本地服务；它不只是量化文件，还提供推理引擎和 OpenAI/Anthropic 兼容接口，便于接入已有 Agent。意义在于把本地模型从“玩模型文件”推进到“给应用提供 API”。代价是量化损失、CPU 内存搬运、长上下文速度和硬件兼容性，实际部署必须用自己的任务集评测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地给 Coding Agent 提供低成本模型后端。</li>
+    <li>无外网或有隐私要求的原型、批处理和个人知识库实验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2106363641704366281" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Marketing Skills：给 Claude Code/Codex 的营销工作流知识库</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一套 MIT 许可的 Agent Skills，覆盖产品定位、落地页转化、文案、SEO、分析、增长和销售等营销任务，支持 Claude Code、Codex、Cursor、Windsurf 等 Agent。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/coreyhaines31/marketingskills" target="_blank">https://github.com/coreyhaines31/marketingskills ↗</a></p>
-    <p><a href="https://agentskills.io" target="_blank">https://agentskills.io ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库或下载需要的 skill 文件，先从 `product-marketing` 开始，把产品面向谁、解决什么问题、差异化定位和已有证据写入工作区背景；再按任务加载 `copywriting`、`seo-audit`、`cro`、`analytics` 或 `launch` 等 skill。打开一个产品仓库，让 Agent 先读取产品背景，再要求它输出一版落地页审计或改写建议；把建议和真实转化数据、用户访谈、搜索词一起对照，不要把 skill 当成自动增长保证。完成一轮后，把有效约束和失败案例写回项目文档，形成自己的上下文资产。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把营销工作拆成可组合、可复用的 Markdown 工作流，而不是只给一个泛化提示词。官方仓库强调 `product-marketing` 是其他 skill 的基础，后续任务会复用定位背景；同时覆盖 SEO、CRO、文案、广告、分析和销售等相互关联的模块。对会写代码但不熟悉营销的独立开发者，这种结构能让 Agent 先问清产品和受众，再产出可检查的工作物；但仓库中的框架仍需用真实用户和数据验收。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>为独立开发产品生成首版定位、落地页信息架构和 SEO 审计清单。</li>
-    <li>让 Agent 在已有产品背景上连续完成文案、转化实验和增长分析，而不是每次重新解释产品。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/lxfater/status/2106353847073481091" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ Connany：把 OAuth/MCP 连接器接入 Agent 后端</div>
-  <div class="section"><div class="section-label event">一句话</div><p>开源、多租户的连接器服务，管理用户授权、连接和凭据，让 Agent 后端通过 REST API 或 TypeScript SDK 调用 Notion、GitHub、Linear、Stripe 等外部工具。</p></div>
+  <div class="topic-title">🛠️ Connany：为 Agent 管理 OAuth 连接器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源、多租户连接器服务，替 Agent 管理用户授权、连接和凭据，并通过 REST API 或 TypeScript SDK 暴露工具。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/thinkany-ai/connany" target="_blank">https://github.com/thinkany-ai/connany ↗</a></p>
-    <p><a href="https://connany.com" target="_blank">https://connany.com ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 22+、npm 和 PostgreSQL 15+，克隆仓库后执行 `npm ci`、`npm run setup`，启动本地 PostgreSQL，再运行迁移和管理员创建命令。打开本地管理控制台，先配置一个项目和 API key，再启用需要的连接器并同步工具目录；在自己的 Agent 后端创建用户授权 session，把 hosted OAuth 页面交给用户完成授权。接入时优先使用官方 TypeScript SDK 的 `list_tools` 与 `call_tool` 两个适配器，默认保持只读；确认权限、审计和错误处理后，才显式打开写操作。生产环境必须替换默认配置、保护 API key，并设置 HTTPS 和稳定的加密密钥。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Agent Demo 把第三方 token 直接塞进应用，真正上线后却要处理授权、凭据加密、多租户隔离、重连、工具目录和撤销。Connany 的官方 README 明确提供 25 个连接器、OAuth/PKCE、`project_id + external_user_id` 隔离、AES-256-GCM 凭据保护、工具列表/调用 API 和事件流。它把“让模型调用外部服务”收敛成后端基础设施，尤其适合需要让多个用户各自连接工作区的 Agent 产品；但连接器权限和上游服务限制仍需逐项审计。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备 Node.js 22+、npm 和 PostgreSQL 15+，从仓库复制环境变量示例，使用项目的 setup 脚本生成本地配置，再用 Docker 启动开发数据库。进入管理控制台配置一个低风险连接器，创建测试项目和 external user，走完 OAuth 授权后调用 `GET /v1/tools` 或连接级工具列表，最后用 `POST /v1/connections/{id}/tools/{name}/call` 做一次只读操作。验证事件日志、租户隔离、token 加密密钥备份和回收流程，再考虑接入真实 Agent；不要直接把生产 OAuth client secret 放进示例环境。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 产品一旦要服务多用户，真正棘手的是授权生命周期而不是调用一个 API。Connany 将用户与 provider connection 绑定，统一管理 OAuth、凭据和工具调用，并支持 25 个连接器；除 GitHub 外，大多借助 provider 的官方 hosted MCP server，再由 Connany 对外提供 REST/SDK。它让“用户一键连接工具”更容易产品化，但也把安全边界集中到服务端，必须审查权限范围、审计事件、加密密钥轮换和第三方 MCP 的信任关系。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>SaaS Agent 让每个用户一键连接自己的 Notion、GitHub、Linear 或 Stripe，而后端不直接保存明文 provider token。</li>
-    <li>在多租户系统中统一记录授权、重连、工具调用和写操作审计。</li>
+    <li>给 SaaS Agent 接入 Notion、GitHub、Linear、Stripe 等用户工作区。</li>
+    <li>在多租户产品中统一处理授权、工具发现和调用审计。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/idoubicc/status/2106227061102936168" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/idoubicc/status/2106227058619883882" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
     </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTrSSVgbEAAqWsI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTrSSVgbEAAqWsI?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Stanford CS146S：面向 AI 原生软件开发的公开课程</div>
-  <div class="section"><div class="section-label event">一句话</div><p>斯坦福“现代软件开发者”课程，围绕 MCP、Agent Skills、规范驱动开发、上下文工程、循环工程和软件工厂组织公开课程材料。</p></div>
+  <div class="topic-title">🛠️ Claude Mods：用插件改造 Coding Agent 的界面和行为</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Claude Code 的 JavaScript/TypeScript 插件机制，可画面板、增加命令、观察事件，甚至拦截或改变工具调用。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://themodernsoftware.dev/" target="_blank">https://themodernsoftware.dev/ ↗</a></p>
-    <p><a href="https://x.com/shao__meng/status/2106330437467713764" target="_blank">https://x.com/shao__meng/status/2106330437467713764 ↗</a></p>
+    <p><a href="https://code.claude.com/docs/en/plugins/mods/overview" target="_blank">https://code.claude.com/docs/en/plugins/mods/overview ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从课程主页的 Course Description 和 Fall 2026 课程结构开始，不需要报名也能阅读公开材料。建议按“上下文工程 → MCP 与工具调用 → 规范驱动开发”的顺序学习：先为一个小项目写清需求、验收标准和约束，再让 Agent 根据规格实现；随后给它接一个最小 MCP 工具，并记录工具输入、输出、失败重试和人工确认点。每学完一节，挑一个真实仓库做小实验，例如把 Issue 转成可执行规格、让 Agent 运行测试，再由独立检查步骤核对结果，不要只抄课程术语。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>课程把 AI 编程从“会不会写提示词”转向工作流工程，明确讨论如何给 Agent 提供上下文和能力、如何把需求变成可执行规格，以及如何通过计划、构建、评估和改进形成闭环。官网还把 MCP、Agent Skills、spec-driven development 和 software factory 并列，说明行业关注点正在从单次代码生成转向可重复的软件生产系统。对于要搭建团队 Agent 流程的人，这比零散技巧更适合作为学习目录。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读官方 Mods overview 和安全说明，再从官方 playground 的 sample mod 开始，不要直接装来路不明的第三方插件。创建一个最小插件，只做一个可视化功能，例如在 prompt 上方显示上下文使用量；在隔离项目启动 Claude Code，观察插件加载、事件触发和卸载。随后再试一个无副作用的 command，检查权限提示和日志。由于 mod 代码在 Claude Code 进程内运行、可以读写文件、启动进程和发网络请求，安装前逐文件审查源码；涉及工具批准、请求改写或生产目录时，先做备份并保留 safe-mode 回退路径。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Mods 把“外围脚本”推进到 Agent 内部扩展：它能画 UI、重绘部分界面、在工具调用前介入、添加不用经过模型回合的命令，还能让多个 hook 共享状态。这使 Claude Code 更像可编程工作台，也意味着插件权限比普通主题高得多；官方文档明确提醒 Mods 不隔离，甚至可能批准原本需要确认的工具调用。它的亮点是可组合性，风险是信任链和权限升级必须纳入代码审查。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>为团队建立需求规格、Agent 实现、测试验收和部署的标准流程。</li>
-    <li>通过公开课程的小作业，把 MCP 和上下文工程落到自己的代码仓库。</li>
+    <li>显示上下文、token 或工具调用状态，改进长任务可观测性。</li>
+    <li>在工具执行前加入团队策略检查或人工确认。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/shao__meng/status/2106330437467713764" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2106284647328133306" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HTswSQsa0AA7WVm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTswSQsa0AA7WVm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2106284391622426624/img/f5HSSCiZyrWk61xW.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2106284391622426624/img/f5HSSCiZyrWk61xW.jpg" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Agent 正从“一次性对话”转向长期值班与心跳自治</div>
-  <div class="section"><div class="section-label event">事件</div><p>X List 上出现多条关于长期委托工作区、值班 Session、heartbeat 和多 Agent 管理层的讨论，典型设想是 Agent 在条件满足时被唤醒、执行并汇报。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这条路线把 Agent 的基本单位从一次请求改成一个持续运行的工作空间：它要保存状态、定期检查条件、决定是否行动、处理失败并向人汇报。它和“给一个 prompt 让模型做完”不同，真正的难点会转移到唤醒频率、任务幂等、权限边界、暂停与恢复、成本控制和人工拍板。今天的讨论仍以个人实践和设想为主，不能据此断言某个产品已经实现了可靠自治，但它准确暴露了下一阶段 Agent 产品的工程问题：谁负责记住任务，谁负责发现外部变化，以及谁负责在行动前拦截高风险操作。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果长期 Agent 变得普遍，产品竞争会从模型单轮回答质量扩展到调度、状态存储、审计和异常恢复。个人用户需要把“可以自动做什么”和“必须先问我”写成硬规则；企业则要为每个持续运行的 Session 配额、凭据、工具白名单和可回放日志。对开发者来说，heartbeat 不是简单的定时器，必须配合幂等设计和结果验证，否则只会把重复执行和隐性成本放大。</p></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/fankaishuoai/status/2106409627604943315" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HTt2o4xbQAE6MYu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTt2o4xbQAE6MYu?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">📡 AI 编程的瓶颈正在从生成转向独立验收</div>
-  <div class="section"><div class="section-label event">事件</div><p>一条高互动讨论明确建议先写用例，再让独立 QA 角色跑集成测试和浏览器端到端测试，不要只听实现者声称完成。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这反映了 Agent 编程的一个结构性矛盾：实现 Agent 受到“任务完成、测试通过、没有报错”等容易量化的奖励驱动，却未必理解产品边界、可维护性和真实用户路径。把验收从实现者手中分离出来，相当于给系统增加第二个视角：先把需求转成可观察的行为，再用独立环境运行测试、检查截图、读取日志，并把失败证据回传给实现者。它不是再增加一条提示词，而是改变交付协议；若没有清晰用例，所谓“独立 QA”也会退化成另一轮主观对话。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>未来的 Agent 开发平台会更重视测试夹具、浏览器自动化、回归数据、差异截图、权限隔离和发布门禁。个人开发者至少应该把“实现”和“验收”拆成两个角色或两个阶段，并保存真实命令输出和失败证据；团队则可把验收结果纳入 PR 或部署流水线。这样才能区分“代码能跑”与“产品真的完成”，也能降低 Agent 在局部指标上投机取巧的风险。</p></div>
+  <div class="topic-title">📡 AI 编程开始争夺“验收环节”</div>
+  <div class="section"><div class="section-label event">事件</div><p>社区讨论指出，AI 编程最容易漏掉的不是提示词，而是由独立 QA 角色执行集成测试和浏览器端到端测试。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>当 Agent 能快速生成代码后，瓶颈会从“写出一个实现”转移到“确认实现真的符合需求”。只跑单元测试或只听实现 Agent 自报完成，会系统性遗漏浏览器状态、权限、网络失败和跨服务集成问题。把需求先写成可执行用例，再让独立角色检查实现，实际上是在 Agent 流程里引入职责分离：生成者负责产出，验证者负责找反例，最终还需要人确认高风险行为。它不会自动消除幻觉，却能显著减少“局部通过、整体不可用”的假完成。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会推动 Coding Agent 产品从聊天窗口转向带验收门禁的工程流水线，测试报告、浏览器回放、变更范围和失败重试记录都会成为产品能力。团队如果继续只按生成速度采购工具，可能得到更多看似完成、实际返工的代码；反过来，能稳定建立 eval、集成测试和人工审批闭环的组织，才更容易把 Agent 放进生产。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -259,24 +242,39 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Personal Agent 的便利性与账号安全边界重新冲突</div>
-  <div class="section"><div class="section-label event">事件</div><p>X List 同时出现关于浏览器自动化导致 GitHub 账号风险的提醒，以及 Cursor 项目窗口异常上传流量、开启 Privacy Mode 后显著下降的个人实测。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>目前这些都是用户报告，不等同于厂商确认的普遍漏洞或默认行为，但它们共同指向一个真实边界：一旦 Agent 能读浏览器、操作账号或持续上传项目上下文，便利性就会与凭据、源代码和隐私发生直接耦合。重要账号不应只靠“提示 Agent 不要乱来”，还需要浏览器隔离、最小权限、专用测试账号、网络监控、上传范围确认和可撤销 token。对单条流量实测也应保留谨慎，先区分索引、缓存、扩展和模型请求，不能仅凭 MiB 数字认定数据泄露。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>Agent 产品的安全能力会从内容过滤扩展到进程身份、工具授权、浏览器会话隔离、数据外发可见性和细粒度审计。用户应把 X、GitHub、支付、邮箱等账号与实验性自动化隔离，默认关闭不必要的写权限；团队则需要在终端管理中记录 Agent 调用了什么工具、上传了什么数据、由哪个账号授权。安全设计若跟不上能力增长，个人 Agent 越“自主”，事故半径就越大。</p></div>
+  <div class="topic-title">📡 从模型到系统：Agent 工程教育正在成形</div>
+  <div class="section"><div class="section-label event">事件</div><p>斯坦福 CS 329Z、CS146S 等课程公开 Agent、上下文工程、MCP 与工具调用相关材料。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>课程主题的变化说明行业关注点正在从“如何调用一个 LLM”转向“如何设计一个由模型、工具、状态、评测和权限组成的系统”。上下文工程、RePPIT/SDD、MCP 工具设计和自主 Agent 被放在同一套工程语境里，意味着未来的开发者需要同时理解提示、代码、协议、数据边界和测试。公开课程降低了学习门槛，也让实践者有机会用系统化材料校正社交媒体上零散的技巧，但课程示例仍不等同于生产级安全方案。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>教育内容会反过来塑造招聘和工具市场：企业需要的不只是会写 prompt 的人，而是能定义工具 schema、控制上下文、设计 eval、处理失败和审计权限的工程师。对个人开发者来说，公开讲义是低成本建立共同语言的入口；对平台厂商来说，MCP 与 Agent harness 可能逐渐像 Web 框架一样成为基础技能层。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/HiTw93/status/2106324829104148583" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2106376989972005251" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/lxfater/status/2106363641704366281" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/op7418/status/2106219171914932515" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2106330437467713764" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HTspWRnbIAAQdO6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTspWRnbIAAQdO6?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTswSQsa0AA7WVm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTswSQsa0AA7WVm?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 本地推理的竞争点从“能跑”变成“可部署”</div>
+  <div class="section"><div class="section-label event">事件</div><p>Strata、Whistle 等项目分别把大 MoE 推理和语音识别压到个人 GPU、CPU 与嵌入式设备。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>过去本地 AI 的展示常停在“模型成功启动”，今天更有价值的项目开始交付完整运行路径：量化档位、兼容 API、平台二进制、时间戳、embedding 或设备 SDK。它们让模型能力可以嵌入应用，而不是只能在聊天界面里试用。另一方面，本地并不天然等于更好：模型质量、更新成本、硬件差异、功耗、许可证和数据清理都要纳入总成本。真正的竞争将是每瓦性能、首 token 延迟、集成难度与可观测性的综合取舍。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这会扩大端侧和私有化部署的应用空间，尤其是离线语音、隐私敏感数据、低延迟控制和个人开发者服务。云厂商不会因此消失，但需要用更好的模型更新、弹性算力和托管体验来证明云端溢价；芯片、推理运行时和量化工具则会获得更直接的产品价值。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2106376989972005251" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2106391345992519888" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2106219779006829053" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2106285713431908757" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
     <a href="https://pbs.twimg.com/media/HTtarLEakAAq1MP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTtarLEakAAq1MP?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HTrKd_2aUAAAExd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTrKd_2aUAAAExd?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HTpcRGqbYAAFg3-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTpcRGqbYAAFg3-?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTrLuFsaAAA3JyR?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTrLuFsaAAA3JyR?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTsHsb8XQAAZoYd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTsHsb8XQAAZoYd?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
@@ -284,7 +282,9 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>AI Evals 免费课程：Hamel Husain 宣传的 60 分钟线上课程，适合把评测设计、面试准备和 Agent 验收方法放在一起学习；报名与时间以活动页面为准。 <a href="https://maven.com/p/07e7c7" target="_blank">→</a></li>
+    <li>OpenCode Go：10 美元/月的低成本编码模型订阅，强调可与任意 Agent 使用；适合关注模型供应和 Agent 订阅是否继续解耦。 <a href="https://opencode.ai/go" target="_blank">→</a></li>
+    <li>CS 329Z：公开“从模型到系统”的 Agent 工程课程，适合作为系统学习入口。 <a href="https://cs329z.stanford.edu" target="_blank">→</a></li>
+    <li>Muse Gadgets：硬件 Agent SDK 已有明确仓库和设备路径，后续可观察社区插件与 Home Assistant 实例增长。 <a href="https://github.com/facebookincubator/muse-gadget-sdk" target="_blank">→</a></li>
   </ul>
 </div>
 
