@@ -70,80 +70,40 @@
   <div class="date">2026-10-05</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>今天的主线是“AI Agent 从聊天走向可执行工作台”：一边是 Codex、Computer Use、MCP 和多 Agent 图形界面争夺任务入口，另一边是本地推理与轨迹分析把成本、可观测性和隐私拉回开发者手里。证据强度不一，下面优先列出能直接试用或有明确项目线索的内容。</p>
+    <p>今天的主线不是又一个“更会聊天”的模型，而是 AI 工具开始把代理工作流做成可运行、可观测、可迁移的基础设施：一端是 Paseo、Magpie、Computer Use 和 Codex 生图，把多个 Agent、模型、桌面和资产制作能力接到同一条链上；另一端是 LiteLLM Lens、Harness Engineering，把长任务的失败原因和验证机制显式化。与此同时，Strata 把 125B 稀疏 MoE 推向普通 NVIDIA 显卡，Jev 则代表“快速结构化判断”从大模型主循环中拆出来的早期路线。</p>
   </div>
 </div>
 <div class="topic">
-  <div class="topic-title">🛠️ Spare Mac</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个通过自然语言生成 Mac 插件的开发者自荐项目，推文称可免费使用 GPT-5.6。</p></div>
+  <div class="topic-title">🛠️ Paseo：桌面、手机、Web、CLI 的多 Agent 控制台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Paseo 是一个开源的编码 Agent 运行环境，用本机守护进程统一管理 Agent，并提供桌面、手机、Web 与 CLI 客户端远程驱动工作区、终端和任务。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://x.com/appinn/status/2106822595488137389" target="_blank">https://x.com/appinn/status/2106822595488137389 ↗</a></p>
+    <p><a href="https://github.com/getpaseo/paseo" target="_blank">https://github.com/getpaseo/paseo ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开原文中的开发者入口，确认页面仍可访问、项目名称和免费额度与推文一致，再按页面提示登录或创建一个最小插件。建议从“生成一个只做单一功能的菜单栏插件”开始，例如把选中的文本转成 Markdown；生成后在 Mac 上安装或加载插件，实际点击一次并检查权限提示。若入口跳转、功能或模型版本与原文不一致，先不要投入敏感数据，把它作为待核验试用项目。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“写一个 Mac 插件”的门槛压缩成自然语言描述，适合观察 Agent 是否已经能覆盖需求、生成、安装和验证的完整闭环。当前公开证据主要来自开发者自荐推文，外部证据不足，因此应把它当作低成本早期试用，而不是成熟生产工具。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 https://paseo.sh/download 下载桌面版，打开后让它启动内置 daemon；然后在 Settings → 你的主机 → Pair Device 里配对手机。使用前要在本机先装好至少一个 provider CLI，例如 Claude Code、Codex 或 OpenCode，并确保其凭据已经可用。想走命令行，可执行 `npm install -g @getpaseo/cli paseo`；想在服务器试验，可用官方 Docker 镜像并映射 6767 端口。创建一个工作区，分别启动两个 Agent，让一个负责实现、另一个负责测试或审查，再从手机观察状态、切换会话和处理需要人工确认的步骤。不要把它当模型服务：Paseo 管理的是已有 Agent CLI，不会替你提供模型账号。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“多 Agent 编排”从 tmux 和 SSH 的个人技巧，推进成跨设备的产品界面。开源仓库同时包含 daemon、桌面端、移动端、Web、CLI 与加密 relay，说明重点不只是聊天窗口，而是工作区、远程连接、Git worktree 和多提供商协作的组合。对需要长时间跑编码任务的人，手机端查看和干预比反复登录服务器更实用；但它仍继承底层 Agent CLI 的权限和安全边界，部署前应审查 relay、沙箱与凭据配置。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>快速验证个人菜单栏工具和小型自动化想法</li>
-    <li>为重复的 Mac 操作制作一次性辅助插件</li>
+    <li>在家用 Mac 上启动多个编码 Agent，出门后用手机查看构建、测试和待确认操作。</li>
+    <li>给一个 Agent 派实现任务，给另一个 Agent 派代码审查或回归测试，集中在同一工作区管理结果。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/appinn/status/2106822595488137389" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2106712940388991225" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Codex Computer Use × Pi Agent</div>
-  <div class="section"><div class="section-label event">一句话</div><p>将 Codex App 的计算机操作能力迁移到 Pi Agent，让代理可以通过 MCP 控制桌面。</p></div>
+  <div class="topic-title">🛠️ Strata：8GB+ NVIDIA 显卡本地运行 125B Qwen3.8-Flash-Next</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Strata 是针对 Qwen3.8-Flash-Next 的专用推理引擎与本地 API/UI，利用稀疏 MoE、显卡、内存和磁盘协同，把超大模型带到消费级 NVIDIA 硬件。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://x.com/fankaishuoai/status/2106777694969176314" target="_blank">https://x.com/fankaishuoai/status/2106777694969176314 ↗</a></p>
+    <p><a href="https://github.com/Niko1221/Strata" target="_blank">https://github.com/Niko1221/Strata ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读原文并打开其中的项目或配置入口，确认 MCP 服务的名称、安装方式和权限范围；在测试 Mac 上准备一个无敏感数据的工作区，按说明把 Computer Use 暴露为 MCP 工具，再在 Pi Agent 中发出一个小任务，例如打开计算器并输入一组数字。逐步观察代理调用了哪些工具、是否需要人工确认，以及任务结束后是否留下可回滚的状态。不要直接授权文件、密码或支付操作。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这条线索把“模型会看屏幕”和“代理能执行动作”连接起来，关键价值不只是自动点击，而是把桌面能力封装成其他 Agent 可复用的工具。它也提醒开发者：MCP 的可组合性和权限边界必须同时设计，官方能力是否长期开放仍需持续核验。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Windows 或 Linux 机器、NVIDIA GPU、至少 8GB 显存；更贴近仓库推荐体验的是 12–24GB 显存加 64GB RAM。克隆仓库后按 README 的一键安装脚本下载模型和运行时，启动本地服务，再用它提供的 Web UI 对话；也可以把 OpenAI 兼容 localhost API 接到 Open WebUI、自己的脚本或编码 Agent。先从短上下文、低并发开始，观察显存、内存、磁盘读取和首 token 延迟，再逐步增加上下文。原始推文称 12GB 显存可运行，但这不等于所有 12GB 机器都能流畅运行；实际速度会受 RAM、NVMe、CUDA、量化格式和 KV cache 限制，建议先按仓库的兼容配置做小规模测试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Qwen 官方资料显示 Flash-Next 是 125B 主模型、每 token 激活约 6B 参数的稀疏 MoE，并带有额外的 n-gram 参数；Strata 把这类“总参数很大、每次只算一小部分”的结构落到消费级硬件上。它不是通用推理框架，而是围绕单一模型深度优化，因此更容易在目标设备上做内存分层和投机解码，也更容易暴露专用引擎的局限。对本地 AI 来说，真正的门槛从“能不能装下权重”转向整机内存层级、上下文策略和持续吞吐。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在桌面应用之间搬运信息、执行低风险重复操作</li>
-    <li>为本地 Agent 增加浏览器或 GUI 回归测试能力</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/fankaishuoai/status/2106777694969176314" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ LiteLLM Lens</div>
-  <div class="section"><div class="section-label event">一句话</div><p>用于分析 Agent 生产运行轨迹、聚类问题并生成带证据的改进建议，数据可自托管在 ClickHouse。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://x.com/shao__meng/status/2106709835625048265" target="_blank">https://x.com/shao__meng/status/2106709835625048265 ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 LiteLLM 官方项目或文档入口确认 Lens 的当前发布状态、依赖和数据格式；准备一小批脱敏的 Agent 日志，至少包含请求、工具调用、错误和耗时字段，再按文档写入自己的 ClickHouse。先做一个只读分析：按失败类型、模型、工具和延迟聚类，核对 Lens 给出的样本是否能回链到原始轨迹。确认结果可信后，再把改进建议转成评测用例，而不是自动改线上配置。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 的瓶颈正在从“能不能调用工具”转向“出了问题能不能解释和改进”。把轨迹留在自有 ClickHouse，并让编码 Agent 通过 SQL/API 消费证据，能降低日志外泄风险，也让模型优化从凭感觉调 Prompt 变成可复盘的工程流程。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>定位生产 Agent 的工具失败、循环调用和延迟异常</li>
-    <li>为模型、Prompt 和工作流版本建立可量化回归评测</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/shao__meng/status/2106709835625048265" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ Strata</div>
-  <div class="section"><div class="section-label event">一句话</div><p>面向低显存设备的本地推理方案，推文称可在 12GB 显存机器上运行 125B 级 Qwen3.8 模型。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://x.com/Gorden_Sun/status/2106708806721814887" target="_blank">https://x.com/Gorden_Sun/status/2106708806721814887 ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开原文中的项目入口，核对支持的操作系统、模型文件、量化格式和最低内存要求；在非生产电脑上记录 GPU 显存、系统内存、固态硬盘速度和驱动版本，然后只下载项目明确支持的模型。先运行官方基准或一个短提示，记录首 token 延迟、生成速度、内存占用和是否发生换页，再逐步增加上下文长度。不要仅凭“能启动”判断可用性，尤其要核验长上下文、并发和断电恢复。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>如果模型权重、专家模块和推理中间状态可以在显存、内存与 SSD 之间协同调度，硬件门槛就不再只由显存容量决定。它对个人开发者的意义是能在本地实验更大模型，同时保留数据隐私；但速度、稳定性和实际模型版本都需要硬件实测，不能把推文数字直接当成普遍结果。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在个人电脑上做私有文档问答和代码辅助</li>
-    <li>研究低成本大模型推理与内存调度</li>
+    <li>在不上传敏感代码或文档的情况下，测试本地长上下文和 Agent 工具调用。</li>
+    <li>用同一个本地 API 给桌面聊天、脚本和内部原型提供模型服务，比较云端成本与本地延迟。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -157,36 +117,16 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ tqllm</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个针对本地 Qwen3.8-27B 量化模型的推理引擎，推文称 RTX 3090 可达到很高的生成速度。</p></div>
+  <div class="topic-title">🛠️ LocalMaxxing：用真实硬件提交和比较本地模型速度</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LocalMaxxing 是社区驱动的本地 LLM 跑分平台，按模型、硬件、推理引擎和量化格式比较真实运行的吞吐与相关指标。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://x.com/lxfater/status/2106710930226585958" target="_blank">https://x.com/lxfater/status/2106710930226585958 ↗</a></p>
+    <p><a href="https://www.localmaxxing.com/en" target="_blank">https://www.localmaxxing.com/en ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从原文追踪 tqllm 的代码、模型文件和基准说明，确认它是否提供可复现的安装命令与测试脚本；在 RTX 3090 或相近设备上固定驱动、量化版本、上下文长度和采样参数，先跑短输出基准，再用同一提示与其他本地引擎对比。记录 tokens/s、首 token 时间、显存占用和输出质量，确认速度统计没有忽略预填充或使用特殊缓存。仅在结果稳定后再接入本地聊天前端。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>本地模型生态的竞争正在从“参数量更大”延伸到“同一硬件上每秒能产生多少有效 token”。专门的推理引擎可能通过量化布局、算子融合或硬件利用率获得收益，但单条社区实测不足以代表所有任务。它适合拿来做严谨的可复现实验，而不是直接替换生产推理栈。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网并用 GitHub 登录，在控制台创建 API key；按 Get started 或 Download CLI 的入口安装客户端，在自己的机器上选择模型、推理引擎和量化版本运行 speed test。重点记录 decode tokens/s、首 token 时间、显存占用和上下文长度，不要只看排行榜的单项峰值。测试完成后把结果提交到社区，再进入 Models、Hardware 和 Leaderboard 页面，筛选与你的显卡、系统和量化格式相同的记录。若只是选型，也可以先浏览 Qwen3.8-27B、Qwen3.8-Flash-Next 等模型的历史运行，建立“我这台机器大概能跑多快”的基线，然后用自己的短提示和长提示各跑一次验证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“某模型很快”的营销说法拆成可比较的硬件、引擎、量化和上下文条件。官网明确说明数字来自社区提交的真实硬件运行，而不是厂商速度测试；平台还把模型、硬件、基准评测、市场和租赁入口放在一起。对本地部署而言，这种可按条件过滤的经验数据库比一条脱离环境的 token/s 宣传更有用，也能帮助用户判断是换模型、换量化，还是换推理引擎。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>对比不同量化模型和推理引擎的本地性能</li>
-    <li>在断网环境中运行代码、文本或知识库助手</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/lxfater/status/2106710930226585958" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ LocalMaxxing</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个本地大模型跑分社区，可按模型、显卡、推理引擎和量化格式筛选实测结果。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://x.com/lxfater/status/2106685258275942556" target="_blank">https://x.com/lxfater/status/2106685258275942556 ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开原文中的 LocalMaxxing 入口，先按自己的 GPU 型号、模型名称和量化格式筛选已有记录，再查看测试条件是否包含显存、上下文长度、引擎版本和生成速度。若要上传自己的成绩，先用固定提示和固定输出长度重复三次，保存驱动与系统信息，并把异常值单独标注。用它来做购买硬件、选择量化版本或规划本地部署的初筛，最终决定前仍要在自己的真实工作负载上复测。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>本地 AI 的“能不能跑”正在变成“在什么条件下跑得多快、稳不稳定”。把分散在帖子里的硬件实测结构化，有助于降低模型和显卡选择成本，也能暴露营销数字与真实体验的差距。社区数据的可信度取决于测试协议和提交质量，因此比较时必须看完整条件，不要只看最高 tokens/s。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>为本地模型部署挑选显卡、量化格式和推理引擎</li>
-    <li>对比升级硬件前后的真实性能收益</li>
+    <li>为本地编码 Agent 选择能够满足交互延迟和上下文要求的模型配置。</li>
+    <li>购买或升级显卡前，用相同模型与量化的社区记录估算实际收益。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -197,30 +137,97 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ context-mode</div>
-  <div class="section"><div class="section-label event">一句话</div><p>通过把测试、日志等原始输出留在沙箱里，减少长代码 Agent 对上下文窗口的无效占用。</p></div>
+  <div class="topic-title">🛠️ 乔木 Codex 生图：把 Codex 内置图像能力接给其他 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是一个开源 MCP + CLI + Skill 项目，让 Claude Code、Cursor、Codex 或其他可执行命令的 Agent 调用 Codex 的内置生图能力，并提供模板化的封面、信息图和海报工作流。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://x.com/lxfater/status/2106592290953105771" target="_blank">https://x.com/lxfater/status/2106592290953105771 ↗</a></p>
+    <p><a href="https://github.com/joeseesun/qiaomu-codex-imagegen" target="_blank">https://github.com/joeseesun/qiaomu-codex-imagegen ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从原文中的开源项目入口确认支持的 Agent、安装命令和沙箱隔离方式；在一个可丢弃的代码仓库里安装后，让 Agent 执行会产生大量日志的测试或构建任务。比较启用前后的上下文长度、压缩次数、失败重试和最终改动，检查 Agent 是否仍能按需检索原始输出。先只允许读取日志和运行测试，不要给它删除文件、推送代码或访问生产凭据的权限。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>长上下文并不等于高效率，测试日志和构建输出如果全部塞回对话，既增加成本，也会让 Agent 更快触发压缩并丢失关键约束。把原始证据留在沙箱、按需提取摘要，是一种更接近操作系统的上下文管理思路。真正的价值要看检索是否可靠，以及隔离边界能否经受真实失败场景。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 Node 18+ 和可用的 Codex CLI，并确认 Codex 账号具备图像生成权限；克隆仓库后按 README 运行安装或注册 Skill/MCP。首次使用不要直接要求“随便生成一张图”，而是让 Agent 先执行 `suggest_directions`，比较至少四种机制不同的构图方向，再选定一个方向，由 `compose_prompt` 组织提示词并生成文件。可以从“16:9 视频封面”或“3:4 小红书配图”开始，指定标题、留白、比例和输出路径；再用参考图测试背景替换。生成后检查文字准确性、尺寸和文件路径，不要把项目内置的虚构示例当成真实人物或品牌素材。Codex 未登录、没有生图权限或调用超时，都应按 README 的排错说明处理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是简单把一个图片 API 包一层，而是把“先给方向、再组提示词、最后生成和检查”做成 Agent 可调用的工具链。项目提供 24 类模板、预设和 Mondo 海报风格，且 MCP、CLI、Skill 共用核心逻辑，降低了不同 Agent 之间的迁移成本。更重要的是，它把生图从聊天窗口里的孤立动作变成可复用的文件生产环节，适合接到内容、视频和产品原型流水线；但图片权限仍取决于 Codex 账号，第三方 Skill 也要先审查代码。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>让代码 Agent 处理大规模测试、构建和日志输出</li>
-    <li>降低长任务的上下文消耗并改善连续对话稳定性</li>
+    <li>从文章或视频脚本自动生成封面、信息图和社交媒体配图文件。</li>
+    <li>让编码 Agent 在制作网页或 README 时同步生成所需的视觉资产。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/lxfater/status/2106592290953105771" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2106679497806491714" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
     </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTxpcIvbQAAUwmN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTxpcIvbQAAUwmN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTxtisabAAAID14?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTxtisabAAAID14?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 OpenAI Codex 的 28 天连续更新承诺</div>
-  <div class="section"><div class="section-label event">事件</div><p>OpenAI 围绕 Codex 提出连续 28 天更新或重置使用额度的承诺，引发用户对模型可用性和更新质量的讨论。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这类承诺把模型产品竞争从一次性发布拉成连续交付竞赛，也把用户注意力从“榜单上谁更强”拉回到每天是否真的更好用。它的难点在于“明显改进”缺少统一标准：功能拆分、额度重置和模型质量提升对不同用户的价值完全不同。对开发者来说，真正值得观察的是更新是否改善代码修复、工具调用、速度和稳定性，而不是更新次数本身。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果按日更新成为常态，Agent 平台会更像持续部署的操作系统，生态插件、评测集和兼容层都需要更快跟进；同时，频繁变更会增加回归测试和成本管理压力。用户可能获得更多额度与功能，但企业接入必须保留版本锁定、灰度和可观测机制，避免模型行为变化直接影响生产流程。</p></div>
+  <div class="topic-title">🛠️ LiteLLM Lens：让 Agent 轨迹进入可调查的闭环</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LiteLLM Lens 是 LiteLLM 体系内的早期访问功能，用 AI Agent 分析生产轨迹，聚合重复失败并把调查结论链接回原始 trace。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docs.litellm.ai/docs/proxy/lens" target="_blank">https://docs.litellm.ai/docs/proxy/lens ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方 Lens 文档并申请 early access；部署 Lens 及 LiteLLM proxy，按部署文档准备 ClickHouse 作为 trace 存储和 PostgreSQL 作为调查结果与设置存储，再接入官方 first-trace 或 coding-agent 指南。先只记录一个可控的 Claude Code 或 Codex 工作流，明确“什么算成功”，让少量真实 trace 进入系统；然后在 Lens → Traces 检查单次运行，再在 Investigations 中按需或定时调查一组运行。把 Lens 的发现当作待验证假设：回到原始 trace 复现问题，再用测试或人工审查确认改动，不要因为聚类结果看起来合理就自动修改生产系统。涉及用户数据时，配置最小权限的读取账号、脱敏与保留策略。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>许多 Agent 团队已经能收集日志，却无法从海量轨迹中找出反复出现的失败模式。Lens 的差异在于把 trace 检索、失败调查、相似问题分组和证据链接放到同一个工作流里，且官方路径支持 Claude Code、Codex 等编码会话。它仍是 early access，不是“自动修复生产”的按钮；观测范围也取决于你实际埋点，模型请求本身不会自动覆盖所有浏览器动作、检索和外部业务结果。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对编码 Agent 的失败运行按工具调用、测试结果和任务类型聚类，定位最常见的失误。</li>
+    <li>为客服、研究或自动化 Agent 建立“期望行为—轨迹—调查—回归测试”的质量循环。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2106709835626734028" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTyJaddacAAH51z?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTyJaddacAAH51z?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HTv8guqa4AEqE1c?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HTv8guqa4AEqE1c?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Learn Harness Engineering：用环境、状态和验证让编码 Agent 更可靠</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这是一个开源、MIT 许可的项目式课程，围绕 Agent 的环境、状态管理、验证和控制机制，提供 14 个讲座、8 个项目以及可复用模板和技能。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/walkinglabs/learn-harness-engineering" target="_blank">https://github.com/walkinglabs/learn-harness-engineering ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开仓库 README，从第一个讲座开始，不要只读概念；先把课程提供的 harness skill 或模板复制到一个可以回滚的练习仓库。按照项目顺序建立清晰的任务说明、功能清单、初始化脚本、验证命令和会话间状态文件，让 Agent 先读规则再动手；每完成一个阶段就运行测试、静态检查或脚本审计，并记录“弱 harness”和“强 harness”的差异。可以先选一个小型 Web 项目，把长期任务拆成可验证的 feature list，要求每个会话留下下一步和未完成项，再用新会话接续。仓库还提供 audit-harness.sh 等审计工具，适合把检查项变成 CI 或提交前门禁。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“Agent 不可靠”从模型能力问题转成工程环境问题：上下文如何初始化、状态如何持久化、任务如何切分、结果如何验证、多个会话如何交接。课程强调真实项目对比，而不是堆提示词；仓库页面显示它已形成较大的开源社区，并包含可直接安装的 Agent skills。对希望让 Agent 连续工作数小时的人，harness 是把偶然成功变成可重复交付的关键层；不过模板不能替代领域测试，强校验也可能增加维护成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给跨多会话的编码任务建立规则、状态、测试和恢复机制。</li>
+    <li>在团队内把 Agent 的完成标准、审查流程和回归检查固化为仓库文件。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2106709348357751132" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTyI7-lagAE4ivE?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTyI7-lagAE4ivE?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Gemini 订阅分层收紧：免费用户将主要使用 Flash-Lite</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 消息称 Google 将从 10 月 9 日调整 Gemini 订阅层级，免费用户不再使用标准 Flash，Plus/Pro 获得不同模型与额度。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条信息来自 X List 的转述，目前日报没有抓到 Google 官方公告，因此应把它视为待核验的产品策略信号，而不是已经完成的官方事实。若调整按所述执行，Google 会把免费层从“可直接试用主力模型”推向更明确的引流层，同时用 Flash、Pro 和额度倍数区分付费档位。对开发者来说，影响不只是模型名称变化，还包括免费账号的回归测试、演示链接和个人自动化是否会突然降级。实际使用前应打开 Gemini 的账户页面确认当前可用模型和额度，不要仅凭社交平台截图修改生产依赖。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型能力按订阅层切分，会让个人用户更重视成本路由和多供应商备用方案；教育、内容和轻量自动化场景可能首先感受到质量或速度差异。对产品团队而言，需要把模型版本、配额和降级路径写进监控，而不是把“免费可用”当成稳定基础设施。由于缺少官方原文，本条只作为策略观察，证据待补。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2106670118881386580" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTxlTJmacAAHG6e?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTxlTJmacAAHG6e?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Codex 的“28 天持续改进或重置额度”承诺</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 多条消息称 OpenAI 为 Codex 用户提出连续 28 天的承诺：每天发布多数用户有感的改进，否则重置用量额度。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>该消息在 X List 上出现了多次转述，但本次证据包没有抓到 OpenAI 官方公告，且“什么算明显改进”“重置何种额度”都缺少公开判定标准。它更值得作为产品竞争和用户预期管理的信号观察：当编码 Agent 的差异从模型榜单转向每天的产品迭代，额度、稳定性、Computer Use、插件和客户端体验都会成为竞争变量。用户若要验证，应以 Codex 应用内的 changelog、账户额度页面和 OpenAI 官方频道为准，不要把转述直接当作计费承诺。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果承诺真实，AI 编程产品会被迫用更高频的可感知迭代争夺重度用户，但也可能把版本发布拆得过细，让“更新数量”替代真实质量。额度重置若缺乏清晰规则，会影响团队预算、任务排期和公平感；竞争对手则会获得更强的迁移和试用压力。对企业用户，稳定 API、审计和可预测配额仍比短期赠送更重要。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -230,25 +237,23 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 从 AI 到 SI：开源与主权化模型路线</div>
-  <div class="section"><div class="section-label event">事件</div><p>Yann LeCun 相关讨论认为前沿模型蒸馏成本下降，长期可能推动更开放、更便宜、更具主权性的基础模型生态。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这不是“前沿模型马上免费”的确定事实，而是一种值得跟踪的产业判断：训练最前沿模型的成本仍高，但蒸馏、量化、开源权重和专用推理硬件正在降低使用门槛。若能力持续向中小模型迁移，竞争焦点会从单一闭源模型的规模，转向数据本地化、部署效率、工具生态和谁能把模型稳定嵌入真实工作流。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>企业可能获得更多本地部署和供应商替代空间，个人开发者也能以更低成本构建专用 Agent；但开放并不自动等于安全，模型许可证、训练数据、滥用风险和算力集中仍会决定商业可行性。未来的基础设施会更重视模型可替换性、区域合规和端侧推理，而不是只追逐最大参数量。</p></div>
+  <div class="topic-title">📡 从“会调用工具”走向“能看懂轨迹”：Agent 质量工程开始产品化</div>
+  <div class="section"><div class="section-label event">事件</div><p>LiteLLM Lens、Harness Engineering、Paseo 等内容在同一天形成组合信号，分别覆盖轨迹调查、运行环境和多 Agent 工作区。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这些项目并非同一个产品，但共同指向一个变化：Agent 的瓶颈正从“能不能调用工具”转成“长任务是否可恢复、失败是否可解释、多个会话能否交接”。Harness 通过仓库文件和验证脚本改善输入与状态，Paseo 通过 daemon 和客户端解决运行与远程控制，Lens 则从 trace 中找重复故障。三者拼起来像一套分层栈：环境负责约束，运行时负责执行，观测负责反馈。它们也提醒团队不要把一个更强模型当作所有可靠性问题的替代方案。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Agent 产品的竞争会更多落在可观测性、回归测试、权限边界、会话恢复和多供应商调度上。企业采购时需要把“失败后如何定位与重试”纳入验收，而不只看一次成功率。开源项目降低了试验门槛，却增加了运维、数据保留和安全审查工作；真正可落地的系统通常需要把模型、工具、环境和验证一起版本化。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/ylecun/status/2106783662117151003" target="_blank"><span class="handle">@ylecun</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/yetone/status/2106462626285048265" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/fankaishuoai/status/2106712940388991225" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/xiaohu/status/2106605299327250688" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/lxfater/status/2106760822395638173" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/turingou/status/2106761864105664949" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/shao__meng/status/2106709835625048265" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/lxfater/status/2106685258275942556" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2106709835626734028" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yan5xu/status/2106888579247149132" target="_blank"><span class="handle">@yan5xu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2106710930226585958" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2106716222683533380" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HTx2nxxaMAAfrky?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTx2nxxaMAAfrky?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HTyJaddacAAH51z?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTyJaddacAAH51z?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HTv8guqa4AEqE1c?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HTv8guqa4AEqE1c?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2106389192825839616/img/_a0fK0AiS5JyszSY.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2106389192825839616/img/_a0fK0AiS5JyszSY.jpg" loading="lazy" /></a>
   </div>
 </div>
 
@@ -256,8 +261,9 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>LiteLLM Lens：Agent 轨迹分析与自托管可观测性方向 <a href="https://x.com/shao__meng/status/2106709835625048265" target="_blank">→</a></li>
-    <li>LocalMaxxing：本地模型硬件与量化实测数据的社区化方向 <a href="https://x.com/lxfater/status/2106685258275942556" target="_blank">→</a></li>
+    <li>Qwen3.8-Flash-Next：125B 稀疏 MoE、约 6B 激活参数和原生长上下文推动本地推理继续向“更大总参数、更小每 token 计算”发展 <a href="https://github.com/QwenLM/Qwen3.8-Flash-Next" target="_blank">→</a></li>
+    <li>Agent 轨迹与 harness 的组合：关注 LiteLLM Lens 的 early access 进展，以及 Learn Harness Engineering 是否继续补充可复用的验证模板 <a href="https://docs.litellm.ai/docs/proxy/lens" target="_blank">→</a></li>
+    <li>多模型路由而非单一 Agent：Magpie、Paseo 和本地推理运行时共同指向“按任务选择模型、按失败切换供应商”的工作方式 <a href="https://github.com/yetone/magpie" target="_blank">→</a></li>
   </ul>
 </div>
 

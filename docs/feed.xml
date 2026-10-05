@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 05 Oct 2026 00:49:38 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 00:53:44 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/10/05 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-05.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-05.html</guid>
-      <description>今天的主线是“AI Agent 从聊天走向可执行工作台”：一边是 Codex、Computer Use、MCP 和多 Agent 图形界面争夺任务入口，另一边是本地推理与轨迹分析把成本、可观测性和隐私拉回开发者手里。证据强度不一，下面优先列出能直接试用或有明确项目线索的内容。</description>
+      <description>今天的主线不是又一个“更会聊天”的模型，而是 AI 工具开始把代理工作流做成可运行、可观测、可迁移的基础设施：一端是 Paseo、Magpie、Computer Use 和 Codex 生图，把多个 Agent、模型、桌面和资产制作能力接到同一条链上；另一端是 LiteLLM Lens、Harness Engineering，把长任务的失败原因和验证机制显式化。与此同时，Strata 把 125B 稀疏 MoE 推向普通 NVIDIA 显卡，Jev 则代表“快速结构化判断”从大模型主循环中拆出来的早期路线。</description>
       <pubDate>2026-10-05T08:30:00+08:00</pubDate>
     </item>
     <item>
