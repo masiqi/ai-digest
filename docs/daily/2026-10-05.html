@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-05</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-05</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的主线是“AI Agent 从聊天走向可执行工作台”：一边是 Codex、Computer Use、MCP 和多 Agent 图形界面争夺任务入口，另一边是本地推理与轨迹分析把成本、可观测性和隐私拉回开发者手里。证据强度不一，下面优先列出能直接试用或有明确项目线索的内容。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Spare Mac</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个通过自然语言生成 Mac 插件的开发者自荐项目，推文称可免费使用 GPT-5.6。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/appinn/status/2106822595488137389" target="_blank">https://x.com/appinn/status/2106822595488137389 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开原文中的开发者入口，确认页面仍可访问、项目名称和免费额度与推文一致，再按页面提示登录或创建一个最小插件。建议从“生成一个只做单一功能的菜单栏插件”开始，例如把选中的文本转成 Markdown；生成后在 Mac 上安装或加载插件，实际点击一次并检查权限提示。若入口跳转、功能或模型版本与原文不一致，先不要投入敏感数据，把它作为待核验试用项目。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“写一个 Mac 插件”的门槛压缩成自然语言描述，适合观察 Agent 是否已经能覆盖需求、生成、安装和验证的完整闭环。当前公开证据主要来自开发者自荐推文，外部证据不足，因此应把它当作低成本早期试用，而不是成熟生产工具。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速验证个人菜单栏工具和小型自动化想法</li>
+    <li>为重复的 Mac 操作制作一次性辅助插件</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2106822595488137389" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Codex Computer Use × Pi Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>将 Codex App 的计算机操作能力迁移到 Pi Agent，让代理可以通过 MCP 控制桌面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/fankaishuoai/status/2106777694969176314" target="_blank">https://x.com/fankaishuoai/status/2106777694969176314 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读原文并打开其中的项目或配置入口，确认 MCP 服务的名称、安装方式和权限范围；在测试 Mac 上准备一个无敏感数据的工作区，按说明把 Computer Use 暴露为 MCP 工具，再在 Pi Agent 中发出一个小任务，例如打开计算器并输入一组数字。逐步观察代理调用了哪些工具、是否需要人工确认，以及任务结束后是否留下可回滚的状态。不要直接授权文件、密码或支付操作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这条线索把“模型会看屏幕”和“代理能执行动作”连接起来，关键价值不只是自动点击，而是把桌面能力封装成其他 Agent 可复用的工具。它也提醒开发者：MCP 的可组合性和权限边界必须同时设计，官方能力是否长期开放仍需持续核验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在桌面应用之间搬运信息、执行低风险重复操作</li>
+    <li>为本地 Agent 增加浏览器或 GUI 回归测试能力</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2106777694969176314" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LiteLLM Lens</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用于分析 Agent 生产运行轨迹、聚类问题并生成带证据的改进建议，数据可自托管在 ClickHouse。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/shao__meng/status/2106709835625048265" target="_blank">https://x.com/shao__meng/status/2106709835625048265 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 LiteLLM 官方项目或文档入口确认 Lens 的当前发布状态、依赖和数据格式；准备一小批脱敏的 Agent 日志，至少包含请求、工具调用、错误和耗时字段，再按文档写入自己的 ClickHouse。先做一个只读分析：按失败类型、模型、工具和延迟聚类，核对 Lens 给出的样本是否能回链到原始轨迹。确认结果可信后，再把改进建议转成评测用例，而不是自动改线上配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 的瓶颈正在从“能不能调用工具”转向“出了问题能不能解释和改进”。把轨迹留在自有 ClickHouse，并让编码 Agent 通过 SQL/API 消费证据，能降低日志外泄风险，也让模型优化从凭感觉调 Prompt 变成可复盘的工程流程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>定位生产 Agent 的工具失败、循环调用和延迟异常</li>
+    <li>为模型、Prompt 和工作流版本建立可量化回归评测</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2106709835625048265" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Strata</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向低显存设备的本地推理方案，推文称可在 12GB 显存机器上运行 125B 级 Qwen3.8 模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/Gorden_Sun/status/2106708806721814887" target="_blank">https://x.com/Gorden_Sun/status/2106708806721814887 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开原文中的项目入口，核对支持的操作系统、模型文件、量化格式和最低内存要求；在非生产电脑上记录 GPU 显存、系统内存、固态硬盘速度和驱动版本，然后只下载项目明确支持的模型。先运行官方基准或一个短提示，记录首 token 延迟、生成速度、内存占用和是否发生换页，再逐步增加上下文长度。不要仅凭“能启动”判断可用性，尤其要核验长上下文、并发和断电恢复。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>如果模型权重、专家模块和推理中间状态可以在显存、内存与 SSD 之间协同调度，硬件门槛就不再只由显存容量决定。它对个人开发者的意义是能在本地实验更大模型，同时保留数据隐私；但速度、稳定性和实际模型版本都需要硬件实测，不能把推文数字直接当成普遍结果。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在个人电脑上做私有文档问答和代码辅助</li>
+    <li>研究低成本大模型推理与内存调度</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2106708806721814887" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTyIfRmaoAAxFxU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTyIfRmaoAAxFxU?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ tqllm</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个针对本地 Qwen3.8-27B 量化模型的推理引擎，推文称 RTX 3090 可达到很高的生成速度。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/lxfater/status/2106710930226585958" target="_blank">https://x.com/lxfater/status/2106710930226585958 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从原文追踪 tqllm 的代码、模型文件和基准说明，确认它是否提供可复现的安装命令与测试脚本；在 RTX 3090 或相近设备上固定驱动、量化版本、上下文长度和采样参数，先跑短输出基准，再用同一提示与其他本地引擎对比。记录 tokens/s、首 token 时间、显存占用和输出质量，确认速度统计没有忽略预填充或使用特殊缓存。仅在结果稳定后再接入本地聊天前端。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>本地模型生态的竞争正在从“参数量更大”延伸到“同一硬件上每秒能产生多少有效 token”。专门的推理引擎可能通过量化布局、算子融合或硬件利用率获得收益，但单条社区实测不足以代表所有任务。它适合拿来做严谨的可复现实验，而不是直接替换生产推理栈。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对比不同量化模型和推理引擎的本地性能</li>
+    <li>在断网环境中运行代码、文本或知识库助手</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2106710930226585958" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LocalMaxxing</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个本地大模型跑分社区，可按模型、显卡、推理引擎和量化格式筛选实测结果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/lxfater/status/2106685258275942556" target="_blank">https://x.com/lxfater/status/2106685258275942556 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开原文中的 LocalMaxxing 入口，先按自己的 GPU 型号、模型名称和量化格式筛选已有记录，再查看测试条件是否包含显存、上下文长度、引擎版本和生成速度。若要上传自己的成绩，先用固定提示和固定输出长度重复三次，保存驱动与系统信息，并把异常值单独标注。用它来做购买硬件、选择量化版本或规划本地部署的初筛，最终决定前仍要在自己的真实工作负载上复测。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>本地 AI 的“能不能跑”正在变成“在什么条件下跑得多快、稳不稳定”。把分散在帖子里的硬件实测结构化，有助于降低模型和显卡选择成本，也能暴露营销数字与真实体验的差距。社区数据的可信度取决于测试协议和提交质量，因此比较时必须看完整条件，不要只看最高 tokens/s。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为本地模型部署挑选显卡、量化格式和推理引擎</li>
+    <li>对比升级硬件前后的真实性能收益</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2106685258275942556" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ context-mode</div>
+  <div class="section"><div class="section-label event">一句话</div><p>通过把测试、日志等原始输出留在沙箱里，减少长代码 Agent 对上下文窗口的无效占用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://x.com/lxfater/status/2106592290953105771" target="_blank">https://x.com/lxfater/status/2106592290953105771 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从原文中的开源项目入口确认支持的 Agent、安装命令和沙箱隔离方式；在一个可丢弃的代码仓库里安装后，让 Agent 执行会产生大量日志的测试或构建任务。比较启用前后的上下文长度、压缩次数、失败重试和最终改动，检查 Agent 是否仍能按需检索原始输出。先只允许读取日志和运行测试，不要给它删除文件、推送代码或访问生产凭据的权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>长上下文并不等于高效率，测试日志和构建输出如果全部塞回对话，既增加成本，也会让 Agent 更快触发压缩并丢失关键约束。把原始证据留在沙箱、按需提取摘要，是一种更接近操作系统的上下文管理思路。真正的价值要看检索是否可靠，以及隔离边界能否经受真实失败场景。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让代码 Agent 处理大规模测试、构建和日志输出</li>
+    <li>降低长任务的上下文消耗并改善连续对话稳定性</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2106592290953105771" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI Codex 的 28 天连续更新承诺</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 围绕 Codex 提出连续 28 天更新或重置使用额度的承诺，引发用户对模型可用性和更新质量的讨论。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这类承诺把模型产品竞争从一次性发布拉成连续交付竞赛，也把用户注意力从“榜单上谁更强”拉回到每天是否真的更好用。它的难点在于“明显改进”缺少统一标准：功能拆分、额度重置和模型质量提升对不同用户的价值完全不同。对开发者来说，真正值得观察的是更新是否改善代码修复、工具调用、速度和稳定性，而不是更新次数本身。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果按日更新成为常态，Agent 平台会更像持续部署的操作系统，生态插件、评测集和兼容层都需要更快跟进；同时，频繁变更会增加回归测试和成本管理压力。用户可能获得更多额度与功能，但企业接入必须保留版本锁定、灰度和可观测机制，避免模型行为变化直接影响生产流程。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2106883069504549106" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 从 AI 到 SI：开源与主权化模型路线</div>
+  <div class="section"><div class="section-label event">事件</div><p>Yann LeCun 相关讨论认为前沿模型蒸馏成本下降，长期可能推动更开放、更便宜、更具主权性的基础模型生态。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是“前沿模型马上免费”的确定事实，而是一种值得跟踪的产业判断：训练最前沿模型的成本仍高，但蒸馏、量化、开源权重和专用推理硬件正在降低使用门槛。若能力持续向中小模型迁移，竞争焦点会从单一闭源模型的规模，转向数据本地化、部署效率、工具生态和谁能把模型稳定嵌入真实工作流。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业可能获得更多本地部署和供应商替代空间，个人开发者也能以更低成本构建专用 Agent；但开放并不自动等于安全，模型许可证、训练数据、滥用风险和算力集中仍会决定商业可行性。未来的基础设施会更重视模型可替换性、区域合规和端侧推理，而不是只追逐最大参数量。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ylecun/status/2106783662117151003" target="_blank"><span class="handle">@ylecun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/yetone/status/2106462626285048265" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2106712940388991225" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2106605299327250688" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2106760822395638173" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2106761864105664949" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2106709835625048265" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2106685258275942556" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HTx2nxxaMAAfrky?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTx2nxxaMAAfrky?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>LiteLLM Lens：Agent 轨迹分析与自托管可观测性方向 <a href="https://x.com/shao__meng/status/2106709835625048265" target="_blank">→</a></li>
+    <li>LocalMaxxing：本地模型硬件与量化实测数据的社区化方向 <a href="https://x.com/lxfater/status/2106685258275942556" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
