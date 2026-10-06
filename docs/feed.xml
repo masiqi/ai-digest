@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 05 Oct 2026 00:53:44 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 00:41:22 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/06 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-06.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-06.html</guid>
+      <description>今天最值得动手的主线，是“把大模型能力从云端产品拆成可本地运行、可接入现有 Agent 的基础设施”：Strata 让 125B 级稀疏模型尝试落到消费级显卡，LCU 把 Codex 的 Computer Use 能力拆给其他 harness，Magpie 则把不同供应商和不同 Agent 统一到一个本地网关。另有 PixelUMM、Windfoil、Pipecat 等项目继续把多模态、图形渲染和实时语音做成可实验的开源组件。说明：本次 Agent Reach 证据 enrichment 在 300 秒内未生成当天证据包，因此以下🛠️条目均以 X List 原文加官方 GitHub、论文或项目...</description>
+      <pubDate>2026-10-06T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/05 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-05.html</link>
