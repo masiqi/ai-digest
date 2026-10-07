@@ -70,20 +70,20 @@
   <div class="date">2026-10-07</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>今天的高价值信号从“模型又升级了”转向“把模型变成可复用的生产系统”：一边是把视觉风格、UI 审美和工程习惯封装成 Agent Skill，另一边是用世界模型、Harness 和形式化验证把生成结果推进到可重复、可检查的工作流。X List 的 Agent Reach 多源补充本次未完成，因此下文只把推文与已核验的 GitHub、官网、arXiv、Google 官方文档作为证据；证据不足的新线索统一放在🌱，没有把猜测写成事实。</p>
+    <p>今天的信号集中在“Agent 不只是会写代码，而是开始拥有可复用的工作流、审美和验证环节”：一边是 huashu-art-motion、Waza、Pi Harness 这类可以马上装起来的技能与工具，另一边是图像编辑、层次化世界模型和 AI 数学成果公开，说明模型能力正在从单次生成走向可重复的生产系统。本次 Agent Reach/HNRSS 补充抓取超过执行时限，以下判断以 X List 与已实际核验的 GitHub、官网、arXiv、Google 官方文档为主；证据不足的候选已降级到早期信号或值得关注。</p>
   </div>
 </div>
 <div class="topic">
-  <div class="topic-title">🛠️ huashu-art-motion：把艺术风格变成可复用动画 Skill</div>
-  <div class="section"><div class="section-label event">一句话</div><p>这是一个给 coding agent 使用的艺术动画 Skill，把 35 种艺术风格、9 种解说视频语法、参数化片段和可运行的代码引擎打包起来，让“做一段会动的画”从一次性提示词变成可以继续迭代的工程资产。</p></div>
+  <div class="topic-title">🛠️ huashu-art-motion：让 coding agent 把艺术风格写成会动的画</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源艺术动画 skill，把 35 种艺术风格、9 种解说语法和参数化片段组织成可复用的代码创作流程，适合用 Claude 等 coding agent 做风格化短片、白板解释和口播动画。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/alchaincyf/huashu-art-motion" target="_blank">https://github.com/alchaincyf/huashu-art-motion ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 uv、ffmpeg 和 Playwright Chromium，再执行 `npx skills add alchaincyf/huashu-art-motion`，让 Claude Code、Codex 或其他兼容 Agent 读取仓库里的 SKILL.md。第一次不要直接追求完整成片：先从 README 的样片选一个风格，要求 Agent 只做一帧静态设计；确认构图、颜色和角色层次后，再运行对应 scene，让镜头、角色、背景和转场动起来。接着把自己的口播整理成镜头表或 JSON spec，选择白板、Vox、动态文字、财经图表等语法，最后用仓库提供的 qa.py 检查稳定性、帧效率、动感和流畅度。需要注意，完整渲染需要本机准备浏览器和字体，仓库中的角色形象与示范素材也有单独的使用边界。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的亮点不只是“用 Claude 生成动画”，而是把风格配方、镜头运动、转场机制、参考片拆解和数字化 QA 都沉淀成可复用资产。这样换题材时不必重新从零描述审美，Agent 还能沿用已经验证过的绘制与验收方法；对做科普、课程、短视频和产品演示的人，价值在于把偶然的惊艳结果变成可重复的生产管线。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备 Node.js、uv、ffmpeg 和 Playwright Chromium，在终端执行 `npx skills add alchaincyf/huashu-art-motion`；第一次运行按 README 执行 `uv run --with playwright playwright install chromium`。随后让 coding agent 读取 skill，先从仓库里的示范场景选一种风格，再把主题、角色、旁白和镜头节奏替换成自己的内容，运行脚本生成帧或动画。白板、Vox、讲解员等语法要先看对应参考代码；第九种讲解员语法需要自备角色素材，完整口播示例是代码快照，不要误认为下载后即可一键渲染。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不只是“换滤镜”，而是把画面风格、镜头运动、角色动作和口播结构拆成可重复的工程资产。README 同时给出样片、风格配方和许可证边界，适合拿来研究如何把一次性提示词沉淀成 agent skill；但仓库目前规模仍小，真实项目应先跑通一个短片，再评估素材和渲染成本。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>把一段口播快速转换成带节奏、带图形和角色动作的科普视频。</li>
-    <li>为产品发布、课程讲解或短视频账号建立可持续复用的视觉模板。</li>
+    <li>把课程、科普或产品解说稿自动拆成带动作的白板/讲解员短视频。</li>
+    <li>为 coding agent 增加一个艺术阶段，用同一套镜头语法快速试验不同视觉方向。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -97,16 +97,16 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Qiaomu UI Learn：在 Obsidian 里补齐 UI 审美与 Vibe Coding 词汇</div>
-  <div class="section"><div class="section-label event">一句话</div><p>这是一个 Obsidian 插件，把 13,500+ 个真实设计案例、双语 UI 词典、44 种风格图鉴、审美测验和可复制的复刻 Prompt 放进一个本地学习工作台。</p></div>
+  <div class="topic-title">🛠️ qiaomu-ui-learn：在 Obsidian 里训练 Vibe Coding 审美</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向网页与移动端界面学习的 Obsidian 插件，提供设计图库、UI 组件词典、风格图鉴、审美测验以及 Prompt 复制入口，目标是让描述界面时有更具体的视觉词汇。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/joeseesun/qiaomu-ui-learn" target="_blank">https://github.com/joeseesun/qiaomu-ui-learn ↗</a></p>
+    <p><a href="https://github.com/vista8/qiaomu-ui-learn" target="_blank">https://github.com/vista8/qiaomu-ui-learn ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果还没有等待社区插件审核，可以用 BRAT 添加 `joeseesun/qiaomu-ui-learn`，或者从仓库构建后把 main.js、manifest.json 和 styles.css 放到 `&lt;vault&gt;/.obsidian/plugins/qiaomu-ui-learn/`。打开插件后先从图库按分类浏览，遇到喜欢的页面用收藏和标签建立自己的参考集；再进入 UI 词典，搜索组件正式名称或自然语言描述，查看实时标本、API 速查、AI Prompt 和 Debug Prompt。想提升长期记忆，就用风格图鉴与审美测验做间隔复习；真正开始 Vibe Coding 时，在灯箱里复制“复刻 Prompt”，必要时连同 HTML 源码一起交给 Agent，并把过程保存成 Obsidian 笔记。插件说明称评分、收藏和测验进度写在本地 data.json，联网主要用于按需加载缩略图和打开原页。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 Vibe Coding 失败不是模型不会写 CSS，而是需求方无法准确说出想要的组件、间距、风格和交互。这个插件把“看得多、叫得准、说得清、能复现”串在一起，既是学习工具，也是给 Agent 提供设计上下文的素材库。它还把提示词和 HTML 复刻入口放在同一工作流里，比单纯收藏截图更容易直接转成可执行任务。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README，按当前说明把插件安装进 Obsidian，再在设置里启用 qiaomu-ui-learn。第一次不要急着复制 Prompt，可以先浏览设计图库，挑一个组件或页面，记录布局、间距、字体、颜色和交互特点；接着用组件词典和风格图鉴把“好看”改写成可执行描述，完成审美测验后，再复制 Prompt 到自己的 coding agent，让它生成一个小页面。建议每次只改一个变量，并把结果截图与原参考并排对照，逐渐建立个人风格词表；插件上架状态以仓库和 Obsidian 当前页面为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Vibe Coding 的瓶颈经常不是模型不会写 CSS，而是使用者说不清想要什么。这个项目把审美训练、组件知识和 Prompt 复用放进同一条学习路径，据项目 README 记录包含 13,500+ 设计图库、62 个 UI 组件词典和 44 种风格图鉴，并支持本地保存；它更像一个可持续积累的设计训练场，而不是又一个生成器。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>为网页、移动端或后台项目建立自己的视觉参考库与设计词汇表。</li>
-    <li>在交给 Claude Code、Codex 等 Agent 前，先用样例和复刻 Prompt 把审美要求具体化。</li>
+    <li>为产品原型、个人网站和移动端页面建立可复用的视觉参考库。</li>
+    <li>训练非设计背景开发者把模糊审美转成布局、组件和风格约束。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -123,16 +123,16 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Waza：给 Claude Code、Codex 等 Agent 加一套工程习惯</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Waza 是一个 MIT 开源的 Agent Skill 集合，把需求质疑、UI 设计、发布检查、根因调试、写作、资料学习、网页阅读和 Agent 健康审计拆成八个可调用的工程工作流。</p></div>
+  <div class="topic-title">🛠️ Waza：把工程习惯变成 Agent 可执行技能</div>
+  <div class="section"><div class="section-label event">一句话</div><p>tw93 开源的工程技能合集，把思考、界面设计、检查、调试、写作、学习、阅读和健康审计等习惯包装成 Claude、Codex、Cursor 等 Agent 可以调用的技能。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/tw93/Waza" target="_blank">https://github.com/tw93/Waza ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>在全局环境执行 `npx skills add tw93/Waza -a claude-code codex cursor -g -y`，或者只安装需要的单个 Skill。装好后不要把它当成万能规则，而是按任务阶段调用：准备开发前先用 `/think` 逼自己把目标、约束和验收标准说完整；做界面时用 `/ui`；遇到回归先用 `/hunt` 找根因，确认后再修；完成后用 `/check` 审差异、测试、发布准备和项目约束。需要快速看论文、网页或 PDF 时用 `/read`，做陌生领域调研时用 `/learn`，维护复杂 Agent 配置时用 `/health`。建议把项目自己的测试命令、目录边界和发布门禁写进项目说明，Waza 负责流程习惯而不是替代项目事实。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Waza 解决的是 Agent 输出“看起来完成、实际上不可验收”的老问题。它把工程师原本依赖经验的动作显式化，并且每个 Skill 都有明确触发时机和结果边界；八个小而清晰的入口，比堆一大套泛化规则更容易在不同 Agent、不同仓库之间迁移。对个人开发者尤其有用，因为它把审查、调试和研究也纳入了编码循环，而不是只优化生成第一版代码。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在已安装 Node.js 的环境执行 `npx skills add tw93/Waza -a claude-code codex cursor -g -y`，让共享技能目录被目标 Agent 读取；进入项目后，可以在动手前调用 `/think`，做完后调用 `/check`，遇到回归调用 `/hunt`，读 URL 或 PDF 时调用 `/read`。如果你使用 Pi，也可以按 README 执行 `pi install npm:@tw93/waza`。建议先只装一套到自己的真实项目，观察它是否会改变任务拆解、验证和交付记录，再决定是否启用全部技能；更新时使用 README 给出的 `npx skills update -g -y`。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Waza 的亮点是把“会做事”拆成了可复用的工程协议，而不是继续堆一个万能系统提示词。仓库有持续提交、测试和完整规则目录，且明确覆盖 Claude Code、Codex、Cursor 与 Pi 等入口；对个人开发者来说，最直接的收益是把设计、调试和发布前检查固定成 Agent 的工作节奏，降低只生成代码却没有验证的风险。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>给个人或小团队建立统一的 AI 编程前置思考、调试和发布检查流程。</li>
-    <li>在 Claude Code、Codex、Cursor、Pi 等多个 Agent 之间复用同一套工程习惯。</li>
+    <li>给个人或小团队建立统一的 Agent 代码审查、调试和交付习惯。</li>
+    <li>把阅读资料、学习新领域和 UI 迭代纳入同一套可调用工作流。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -146,16 +146,37 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ H-JEPA：把视觉表示学习推进到分层世界模型</div>
-  <div class="section"><div class="section-label event">一句话</div><p>H-JEPA 是一个可运行的 PyTorch 研究代码库，围绕分层 Joint-Embedding Predictive Architecture 提供 masked-patch 自监督学习、SIGReg 端到端训练和动作条件世界模型三种模式。</p></div>
+  <div class="topic-title">🛠️ Pi Harness：搭建个人多模型编程 Agent 的配置底座</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个公开的 Pi 配置、工具和提示词集合，用来组合多模型 Agent 编程工作流；作者也提醒它偏个人化、可能并不适合所有人直接照搬。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/aliou/pi-harness" target="_blank">https://github.com/aliou/pi-harness ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并阅读 README、AGENTS.md、`.pi` 相关目录和 `docs`，不要一上来把全部配置覆盖到自己的环境。确认 Pi 的安装方式和模型凭据配置后，先挑一个独立任务运行，观察 commands、hooks、tools 和 skills 如何协作；再根据自己的项目路径、代码审查方式和模型偏好，逐项迁移提示词与工具。可以从“一个模型负责实现、另一个模型负责 review”的小流程开始，并为每个步骤保留可回滚配置。仓库内容较多，适合当作架构样本研究，不宜把作者的个人目录假设成通用最佳实践。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把个人 Agent 的关键组成——模型切换、工具调用、命令、hooks、技能和审查提示——放进一个可阅读的仓库里。公开页面显示项目持续提交，说明这不是一段孤立的演示配置；更重要的是，它体现了 Agent 工程正在从“选哪个模型”转向“如何编排多个模型和验证环节”，适合作为个人自动化工作台的参考。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为自己的代码仓库搭建实现、测试、review、总结的多模型流水线。</li>
+    <li>研究如何把书签、资料和项目上下文转成每日可执行的开发输入。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/turingou/status/2107529237515386997" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ H-JEPA：面向视觉规划的层次化世界模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个公开的研究代码库，实现层次化 Joint-Embedding Predictive Architecture，覆盖 masked-patch 自监督学习、SIGReg-only 训练和动作条件世界模型，并支持 CUDA、Apple Silicon MPS 与 CPU。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/jonwiggins/H-JEPA" target="_blank">https://github.com/jonwiggins/H-JEPA ↗</a></p>
+    <p><a href="https://arxiv.org/abs/2610.06805" target="_blank">https://arxiv.org/abs/2610.06805 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读论文 https://arxiv.org/abs/2610.06805，再克隆仓库并按 README 配置 Python 3.11/3.12、PyTorch 2.0+ 与依赖；不建议一上来跑大规模训练，先执行测试子集确认环境。仓库支持 CUDA、Apple Silicon 的 MPS 和 CPU，可以从默认 masked-patch SSL 配置开始，观察多层级表示与 FPN 融合的输出；如果目标是研究预测式世界模型，再切换到 SIGReg 或 action-conditioned 配置，阅读 AdaLN-Zero predictor 和 CEM latent-space planner 的参数。官方仓库明确说明目前没有预训练权重，主要用于从头训练和研究复现，因此在 Mac 上更适合小数据集、结构验证和单元测试，不要把一次小规模运行误读成完整能力评测。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把视觉表征、长时程预测和动作规划放到同一套可切换框架里，方向上比“逐帧生成下一张画面”更接近 Agent 需要的世界模型。多尺度层级允许高层规划抽象目标、低层处理局部动态；同时支持 MPS 让更多研究者可以在消费级 Apple Silicon 上做结构实验。现阶段它仍是无预训练权重的研究代码，价值主要在可读架构和可复现实验，而不是开箱即用的机器人能力。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Python 3.11+、PyTorch 2.0+，克隆仓库后按 README 建立虚拟环境并安装依赖；先运行安装验证代码，确认设备被识别为 CUDA、MPS 或 CPU，再从 `configs/default.yaml` 的经典 masked-patch SSL 配置开始做小规模 smoke test。随后再尝试 `lewm_tier1.yaml` 或 world-model 配置，比较 SIGReg-only 与动作条件预测的差异，记录显存、训练速度和 loss。它目前没有发布预训练权重，定位是从头训练的研究代码，不适合把“下载即体验”当作产品；想快速理解方法，先读论文的层次表征和规划部分，再看配置如何映射到实现。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>H-JEPA 把表征学习、世界模型和控制规划放到一个共享编码器框架里，技术路线比单纯图像分类更接近机器人和具身 Agent 的需求。仓库明确列出 Feature Pyramid、RoPE、SIGReg、AdaLN-Zero、CEM planner、混合精度和梯度检查点等组件，并报告 1400+ 测试；即使暂时不训练，也值得观察它如何把视觉抽象与可行动预测连接起来。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>学习 JEPA、世界模型、表征学习和潜空间规划的代码实现。</li>
-    <li>在视觉控制或机器人研究中验证分层表示与动作条件预测的组合方式。</li>
+    <li>研究机器人、游戏或视频环境中的多尺度视觉表征与动作规划。</li>
+    <li>在 Apple Silicon 或 CUDA 设备上复现实验，比较不同训练 regime 的工程代价。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -169,39 +190,16 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Prompt Motion：把 Opus 5.5 动画案例变成可检索的 Prompt 素材库</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Prompt Motion 是一个展示 Claude Opus 5.5 动画视频的网页集合，案例页提供创作者、视频和部分 Prompt/Skill 入口，适合直接拆解别人如何要求模型做运动图形。</p></div>
+  <div class="topic-title">🛠️ Nano Banana 2.1：把图像生成与编辑接进 Gemini API</div>
+  <div class="section"><div class="section-label event">一句话</div><p>X List 今日高频讨论的 Google 图像模型更新；Google AI 官方文档可核验 Nano Banana 在 Gemini API 中支持文本/图像对话式生成与编辑、多轮修改，并提供不同速度与能力档位的模型入口。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://prompt-motion.com" target="_blank">https://prompt-motion.com ↗</a></p>
+    <p><a href="https://ai.google.dev/gemini-api/docs/image-generation" target="_blank">https://ai.google.dev/gemini-api/docs/image-generation ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在首页按缩略图浏览不同案例，不要只看成片效果；打开案例页，记录它使用的画幅、时长、视觉风格、镜头节奏和是否采用代码绘制。挑一个与自己目标接近的案例，把 Prompt 复制出来后，先改成“只产出分镜表和验收标准”，要求 Agent 列出每个镜头的时长、画面元素、文字、声音和转场，再让它生成第一版。第二轮只改一个变量，例如把横屏改成竖屏、将商业广告换成科普主题或加入自有品牌素材，然后对比前后结果。这个站适合用来建立自己的 Prompt 组件库，但案例是社区作品，涉及人物、音乐、品牌素材时仍要自行检查版权和可发布性。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它提供了一个比泛泛的“Opus 很强”更可操作的观察窗口：用户可以从真实成片反推提示词结构、渲染方式和工作流组合。对做内容的人，最有价值的不是照抄单条 Prompt，而是比较不同案例如何处理故事板、镜头时序、代码动画、配音和素材调用，从而形成自己的可重复模板。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 Google AI Studio 或 Gemini API 文档创建自己的开发项目和 API key，不要把 key 写进公开仓库。最小实验可以用官方 Python 示例调用 `gemini-3.1-flash-image`，给一条明确的文本提示生成图像；第二步上传一张参考图，要求只修改局部元素，第三步在同一交互中继续提出尺寸、文字或构图修改。再用一个需要实时资料的海报题目测试 Google Search grounding，并分别记录生成质量、延迟、分辨率和费用。官方文档当前列出 1K/更高分辨率等能力与 SynthID 说明，具体模型 ID、价格和可用地区应以控制台实时状态为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>图像模型的竞争已经从“能不能生成”转向局部编辑、主体一致性、文字排版、工具调用和 API 工作流能否稳定落地。官方文档把生成、输入图编辑、多轮交互和搜索工具放在同一套接口下，开发者可以把一次海报尝试扩展成可复用的内容生产链；但 X 上的横评带有主观样本，不能只凭几张对比图断言全面领先。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>为产品宣传、课程片段和短视频寻找可运行的运动图形提示词起点。</li>
-    <li>研究单次提示、分镜驱动和代码生成三种视频制作方法的差异。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/dotey/status/2107585545761157496" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2107174478845276160/img/QuEMiQF0P2B7UbVp.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107174478845276160/img/QuEMiQF0P2B7UbVp.jpg" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ Nano Banana 2.1：更适合实际编辑流程的 Gemini 图像模型更新</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Google 官方文档确认 `gemini-nano-banana-2.1` 是稳定模型 ID，支持文本、图像、视频、PDF 输入，图像和文本输出，并提供图像生成、Thinking、搜索 grounding、1K/2K/4K 等能力。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1" target="_blank">https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1 ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 Google AI for Developers 的图像生成文档，确认自己的 API 账号和配额，再用稳定模型 ID `gemini-nano-banana-2.1` 发起一个最小请求。第一轮用一张产品图做局部编辑，明确写出“保留主体、只修改背景或局部文字”；第二轮在同一对话中换比例、换背景和补充排版要求，观察多轮一致性；第三轮测试 2K 或 4K 输出，并把复杂任务拆成草图、精修、文字校正三个阶段。官方能力表还显示它支持 PDF/视频输入与搜索 grounding，但不支持 function calling、URL context 和 audio generation，接入自己的自动化管线前要按这个边界设计。免费体验则可通过 Google 相关产品入口尝试，API 生产使用需以官方当前价格和配额为准。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>图像模型真正进入工作流，关键不只是一张图“好不好看”，还包括局部编辑、主体一致性、文字渲染、输入类型和成本。2.1 的官方模型页把稳定 ID、尺寸、能力边界和批处理支持写清楚，开发者可以据此做可重复测试，而不是只凭社交平台截图下结论。尤其是多轮编辑与中文排版，适合拿真实业务素材做 A/B，而不应只用漂亮的概念图评估。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>产品图、海报、信息图和社交媒体素材的局部改图与多轮迭代。</li>
-    <li>把 PDF、视频帧或参考图片纳入图像生成和编辑流程。</li>
+    <li>做电商海报、社交媒体素材和产品概念图的多轮局部改图。</li>
+    <li>把带实时资料的说明图、信息图或营销视觉接入自动化内容流程。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -215,30 +213,33 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Pi Harness：把个人 Agent 编程环境整理成可迁移 Harness</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Pi Harness 是一个围绕 Pi Coding Agent 的个人配置仓库，包含工具、提示词、命令、Hooks、Skills 和多模型 Agent 编程相关的工程组织方式。</p></div>
+  <div class="topic-title">🛠️ Prompt Motion：直接浏览 Claude Opus 5.5 的动画案例与提示词</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个以 Claude Opus 5.5 制作的 motion 视频为主题的案例库，页面同时提供部分 Prompt/Skill 入口，适合把“看效果”快速转成可复现实验。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/aliou/pi-harness" target="_blank">https://github.com/aliou/pi-harness ↗</a></p>
+    <p><a href="https://prompt-motion.com" target="_blank">https://prompt-motion.com ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库，阅读 AGENTS.md、commands、hooks、tools 和 skills 目录，确认哪些规则依赖作者本地环境；不要直接覆盖自己的全局配置，先复制一份到独立测试项目中。选择一个最小任务，例如让 Agent 修改一个小模块、运行测试并生成 review，逐项观察它如何组织上下文、调用命令和处理失败。再把对自己有用的提示词和 Hook 单独迁移，替换模型、路径、包管理器和权限策略；每迁移一个组件都跑一次真实任务并保留日志。它的 README 已明确提示这是高度个人化、可能“不适合你”的 setup，所以正确玩法是把它当作架构样本和实验台，而不是无脑安装包。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>随着个人 Agent 从“聊天问答”走向长任务编程，决定体验的往往是上下文、命令、恢复策略、审查和多模型切换，而不是单个模型名称。Pi Harness 把这些隐含配置公开出来，方便开发者研究一个成熟个人工作台如何分层；同时它也提醒我们，Harness 的价值与本地目录、权限和工作习惯强绑定，迁移时必须逐项验证。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Prompt Motion，先按缩略图挑一个与自己目标接近的动画案例，进入详情页确认作者、视频和是否有 Prompt 入口；把提示词复制到自己的 Claude 环境后，先只替换主题、品牌色和文字，不要同时改变镜头语言。生成第一版后，对照原案例记录动效节奏、层级、转场和素材差异，再把有效约束整理成自己的 Skill 或项目说明。遇到没有公开 Prompt 的案例，只把它当视觉参考，不要假设背后的制作步骤；还要注意案例库来自社区投稿，实际效果会受模型版本、上下文和额度影响。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把散落在 X 上的炫技视频变成了可检索的案例—提示词关系，降低了从灵感到复现的门槛。对 Agent 产品设计尤其有帮助：你能观察复杂动画如何被自然语言描述，再反推哪些约束应该写进组件规范或验证清单。它不是官方模型基准，价值在于快速发现交互和视觉表达的可能性，而不是证明某个模型在所有任务上都更强。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>设计自己的多模型编程 Agent 工作台、Hooks 和代码审查命令。</li>
-    <li>研究如何把提示词、工具、恢复流程和项目上下文组合成长期可用的个人 Harness。</li>
+    <li>为产品官网、数据故事和交互原型寻找可复现的动效方向。</li>
+    <li>研究如何把动画目标、算力投入和自检标准写进 Agent 提示词。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/turingou/status/2107529237515386997" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2107585545761157496" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
     </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2107174478845276160/img/QuEMiQF0P2B7UbVp.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107174478845276160/img/QuEMiQF0P2B7UbVp.jpg" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 OpenAI 一次公开 722 篇 AI 数学稿件，形式化验证成为关注点</div>
-  <div class="section"><div class="section-label event">事件</div><p>X List 转述 OpenAI 将一个内部未发布模型产生的 722 篇数学稿件、372 组结果公开；外部报道也确认了这一数量级，OpenAI 官方仓库同时公开了十个 Lean 4 形式化证明。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这件事真正值得看的不是“论文数量”这个营销数字，而是成果是否能被数学共同体逐项阅读、复核、引用和修订。The Verge 报道称这些稿件还带有部分推理摘要、计算量估计和尝试统计，并提到数学与 AI 顾问组织曾建议实验室披露模型、提示词和计算成本。OpenAI 的 ten-proofs 仓库则把十个结果写成 Lean 4 文件，给出 Lake 构建方法和独立检查入口。两者共同说明，AI 科研的竞争点正在从“模型声称解决了多少问题”转向“能否留下机器可核验、社区可复用的证据链”；但 722 篇稿件的最终数学价值仍需要专家逐项审阅，不能把发布等同于全部结论已经被学界接受。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种开放方式持续，研究机构会更重视形式化证明、可复现实验、推理过程和计算预算的同步交付，AI 生成科研成果也可能从一次新闻发布变成可持续维护的公共仓库。反过来，稿件规模过大、作者贡献与训练数据来源不清，也会增加审稿、归因和学术伦理压力。对普通开发者而言，最现实的变化是 Lean 等形式化工具会更常出现在 AI 辅助数学和软件验证工作流中，而不是只属于理论计算机科学圈。</p></div>
+  <div class="topic-title">📡 OpenAI math：AI 数学成果开始以“论文+证明工件”公开</div>
+  <div class="section"><div class="section-label event">事件</div><p>推文称 OpenAI 将一次性公开 722 篇 AI 生成数学论文、归为 372 组结果，并放入 openai/math；仓库 README 已确认其中包含内部模型产出的数学手稿和配套证明材料。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这件事的关键不只是数量，而是公开方式从一篇新闻稿变成可浏览的 preprints、reasoning traces、Lean 文件和目录索引。仓库同时提醒不同结果处于不同验证阶段，并非所有材料都有 Lean 形式化，部分未形式化稿件可能存在问题，因此“模型写出来”与“数学界接受”之间仍有很长的审查链。对研究者而言，价值在于可以把模型产出当作候选问题空间和可复核工件来研究，而不是把仓库标题直接当成定理已被证明。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这种发布方式持续，AI 数学评测会更重视可复现、可形式化和独立检查，而不是只看一次性 benchmark 分数。它也会推动模型团队公开更多中间产物，让社区能够定位错误、补齐证明和比较不同推理策略；与此同时，海量未筛选结果会增加阅读和验证成本，研究机构需要更强的 provenance、版本管理与人类审稿机制。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -248,50 +249,41 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 量化评估从“文件精度”转向“显存里留下多少专家”</div>
-  <div class="section"><div class="section-label event">事件</div><p>MinLiBuilds 分享本地测试：同一模型、同一张 48GB 显卡、同属 Q4 档位，不同量化方案在 128K context 下速度可能相差 1.72 倍；驻留 expert 数量成为新的观察指标。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这是一条来自社区实验的工程信号，不等同于经过独立复现的通用基准，但它指出了 MoE 本地部署经常被忽略的瓶颈：量化文件能否塞进显存只是第一关，剩余显存能容纳多少常用 expert、上下文长度如何改变缓存和换入换出，都会影响实际 decode 速度。也就是说，单看 Q4、Q3 这样的名义精度，无法预测某台机器上的端到端体验。GSQ、RCO 和 IQ 系列方法的价值，需要结合模型、后端、上下文、batch 和显存布局实测，不能只凭一张速度截图下结论。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>本地模型选型会从“下载最小文件”转向“精度损失、总内存、驻留专家、上下文吞吐”四项联合优化，量化工具也可能更强调硬件感知和工作负载感知。对个人开发者而言，未来评测同一个模型应至少记录显卡、后端、上下文长度、冷启动与稳定 decode 速度；对模型发布方而言，提供多种量化与显存占用说明会比单列参数量更有决策价值。</p></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/MinLiBuilds/status/2107413972387516552" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2107410815137808384/img/G3ufa3THKfbv7OeD.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107410815137808384/img/G3ufa3THKfbv7OeD.jpg" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HT4KGzcasAAVhuv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT4KGzcasAAVhuv?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">📡 AI 订阅的价格战正在逼用户区分“会员额度”和“真实推理成本”</div>
-  <div class="section"><div class="section-label event">事件</div><p>X List 讨论 Anthropic、OpenAI 的订阅层级、Token 配额与推理成本，称高阶套餐调整后同样预算能买到的有效使用量差异明显。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这组内容来自社交平台转述，部分数字引用 SemiAnalysis 等第三方分析，但本次没有完成 Agent Reach 补充核验，因此不把“某家一定便宜五倍”当作已证实事实。可确认的行业方向是：长上下文、Agent 长任务和高推理强度正在让订阅产品出现更细的额度、速度和模型路由差异；用户看到的月费并不等于平台承担的固定成本，平台也会通过限速、模型切换、峰值限制和高价档位管理算力。比较服务时应记录实际完成的任务数、等待时间、可用模型、上下文长度和失败重试，而不是只看宣传 Token 数。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>AI 产品的竞争会从单纯比月费，转向比“每个可验收任务的成本”和“高峰期是否稳定”。个人用户应把真实工作流拆成可测样本，团队则需要把订阅额度、API 费用和本地模型的维护成本放进同一张账；对厂商来说，透明披露额度规则和模型路由会越来越影响信任。这里的具体价格与比例仍应以各家官方页面和独立实测为准。</p></div>
+  <div class="topic-title">📡 AI 订阅正在暴露“收入与推理算力不匹配”的商业问题</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 上的连续推文转述 SemiAnalysis 测试，讨论 Claude/OpenAI 不同订阅档位的 token 价值与算力消耗，并称高价套餐正在重新定价。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一个值得跟踪但本次证据等级较低的行业信号：原始素材是社交平台对分析机构内容的二次转述，不能直接当作完整财务结论。它真正提出的问题是，固定月费、重度用户、长上下文和 Agent 循环之间是否还能共用同一套套餐逻辑。当用户让模型持续调用工具、反复重试并保留大量上下文时，单位用户的推理成本会显著不同，平台最终可能按速度、上下文、并发、模型等级或任务类型分层收费，而不只是按“会员/非会员”区分。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对个人用户，重点是比较单位有效产出而不是只看每月 token 宣传；对开发者产品，订阅成本会直接影响 Agent 的默认循环次数、缓存策略、模型路由和失败重试上限。若该趋势延续，能够把简单任务下沉到便宜模型、把关键步骤交给强模型，并且记录每个工作流真实成本的团队，会比单纯追逐最大上下文更容易建立可持续的 AI 产品毛利。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
       <a class="source-link" href="https://x.com/xiaohu/status/2107385442865909928" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/vista8/status/2107620445990343143" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2107613873251733977" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/op7418/status/2107523062619054174" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2107487692888113395" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/Gorden_Sun/status/2107478588719345689" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/Gorden_Sun/status/2107474748712395014" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/MinLiBuilds/status/2107414041228709923" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/dotey/status/2107581531871236525" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/simonw/status/2107516463250821166" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2107478588719345689" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2107505854400626732" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2107471675910711438" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2107474296285077979" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2107444171510280635" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2107448380524036551" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2107456093266076102" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
     <a href="https://pbs.twimg.com/media/HT7s43Wa4AAgy3S?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT7s43Wa4AAgy3S?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HT_FnvGbIAAQqTZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT_FnvGbIAAQqTZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2107613824799186944/img/MZwtz-iQJ6NbTi7u.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107613824799186944/img/MZwtz-iQJ6NbTi7u.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2107111382588243968/img/FCdBpIoA9lzsM72l?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107111382588243968/img/FCdBpIoA9lzsM72l?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HT9tBIxaEAAtLIh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT9tBIxaEAAtLIh?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/amplify_video_thumb/2107500485091721216/img/URvMP0aSA4knN65L?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107500485091721216/img/URvMP0aSA4knN65L?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HT46mRYXwAAxTdt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT46mRYXwAAxTdt?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2107478489528193024/img/o94_yT9SrX-S2wXX.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107478489528193024/img/o94_yT9SrX-S2wXX.jpg" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/amplify_video_thumb/2107474664675307520/img/8FlPixCcoPUyPvox.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107474664675307520/img/8FlPixCcoPUyPvox.jpg" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HT8JuoEbgAAB7e1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT8JuoEbgAAB7e1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2107478489528193024/img/o94_yT9SrX-S2wXX.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107478489528193024/img/o94_yT9SrX-S2wXX.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HT9ceDpaoAAm4yL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT9ceDpaoAAm4yL?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HT5o4naWMAA6ZfI?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT5o4naWMAA6ZfI?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2107234844723802112/img/jNrxS_Hwy_rz9sFc.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2107234844723802112/img/jNrxS_Hwy_rz9sFc.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HT5o4tEWcAAGV3u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT5o4tEWcAAGV3u?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HT5qoEEXIAECgFR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT5qoEEXIAECgFR?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HT8wJTib0AAisTx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT8wJTib0AAisTx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HT8wJTpa0AEClcD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HT8wJTpa0AEClcD?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
@@ -299,9 +291,10 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>量化与 MoE 推理：关注驻留 expert、上下文长度和硬件感知量化，而不是只看 Q4/Q3 标签 <a href="https://x.com/MinLiBuilds/status/2107414041228709923" target="_blank">→</a></li>
-    <li>Agent 交付规范：让 Agent 明确“做什么、用多少推理、如何验证”，可能比继续堆一个更长的提示词更有效 <a href="https://x.com/dotey/status/2107581531871236525" target="_blank">→</a></li>
-    <li>代码生成音频与 Lilypond：Simon Willison 分享了用 Lilypond 的基准测试，适合继续观察模型在结构化音乐生成中的可验证性 <a href="https://x.com/simonw/status/2107516463250821166" target="_blank">→</a></li>
+    <li>Drawer：完全留在本地电脑里的 Windows 数字抽屉，适合关注本地优先的小工具路线 <a href="https://x.com/appinn/status/2107474296285077979" target="_blank">→</a></li>
+    <li>MultiTool Office：轻量 Windows AI 办公工作台，先观察它是否真的减少常用办公工具切换 <a href="https://x.com/appinn/status/2107444171510280635" target="_blank">→</a></li>
+    <li>GLM 5.3 Flash：社区出现“已经能跑”的短线反馈，值得等模型卡、显存要求和正式下载入口 <a href="https://x.com/lxfater/status/2107448380524036551" target="_blank">→</a></li>
+    <li>Grokbot 书签工作流：把 X 书签整理成项目技术简报，再交给代码 Agent review 的个人自动化思路，适合跟踪可复现实现 <a href="https://x.com/turingou/status/2107456093266076102" target="_blank">→</a></li>
   </ul>
 </div>
 
