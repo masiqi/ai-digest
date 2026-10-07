@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 06 Oct 2026 00:41:22 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 00:43:35 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/07 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-07.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-07.html</guid>
+      <description>今天的高价值信号从“模型又升级了”转向“把模型变成可复用的生产系统”：一边是把视觉风格、UI 审美和工程习惯封装成 Agent Skill，另一边是用世界模型、Harness 和形式化验证把生成结果推进到可重复、可检查的工作流。X List 的 Agent Reach 多源补充本次未完成，因此下文只把推文与已核验的 GitHub、官网、arXiv、Google 官方文档作为证据；证据不足的新线索统一放在🌱，没有把猜测写成事实。</description>
+      <pubDate>2026-10-07T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/06 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-06.html</link>
