@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 08 Oct 2026 00:45:28 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 00:48:42 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/10/08 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-08.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-08.html</guid>
-      <description>今天的信号集中在“低成本模型 + 本地/自托管 Agent + 可检查的工作界面”三条线上：Claude Haiku 5.5 把高频调用的成本继续往下压，GPT-6 开始把回答变成可交互界面；与此同时，NewMax、Octop、Paseo Bots 和 magpie 都在把模型、工具、记忆、定时任务与本机工作流拼成可长期运行的助手。Agent Reach 证据增强脚本本次运行超过 300 秒未生成日期化证据包，以下🛠️条目均改用推文与官方站点/GitHub/模型卡人工交叉核验；未能充分核验的线索降级到🌱，不把证据待补项写成已证实能力。</description>
+      <description>今天的主线是“把模型能力变成可运行的控制面”：一边是 Claude Haiku 5.5 这类更便宜、更适合高频调用的小模型，另一边是能直接安装的动画 skill、Grok API 示例、端侧多模态 embedding、个人 Agent Bot 和结构化判断模型。AI 产品的竞争正在从单次回答，转向成本、路由、记忆、权限、验证和本地数据闭环。本次 X List 抓到 36 条推文，证据补充包筛出 29 个候选；HNRSS 的 6 个 feed 本次均返回 502，因此早期信号主要来自 X List，已明确标注证据待补。</description>
       <pubDate>2026-10-08T08:30:00+08:00</pubDate>
     </item>
     <item>
