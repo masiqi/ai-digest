@@ -70,117 +70,21 @@
   <div class="date">2026-10-09</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>今天的信号集中在“让 Agent 真正动手，但把执行边界做得可控”：一边是本地优先、多智能体、桌面 Agent 与跨平台沙盒，另一边是把模型与 skill 接入真实工作流。值得注意的是，今天的 Agent Reach 外部证据包里 HNRSS 的 6 路补充 feed 均返回 502，因此早期信号主要来自 X List，部分项目明确标注证据待补。</p>
+    <p>今天最值得关注的不是又一个更大的聊天模型，而是 Agent 的“可运行基础设施”正在成形：腾讯云把多用户、多智能体、IM、定时任务和本地数据收进 Octop，微软把跨平台沙箱能力做成可嵌入 SDK，REA 则把逆向分析接进 Claude Code/Codex。与此同时，结构化决策模型、托管 Agent 和更细的订阅额度正在把模型从“会回答”推向“能被路由、约束、部署和审计”。本次 X List 抓到 108 条推文；证据补充摘要筛出 80 个候选，HNRSS 相关 feed 本次返回 502，早期社区线索因此主要来自 X List，已明确标注证据待补。</p>
   </div>
 </div>
 <div class="topic">
-  <div class="topic-title">🛠️ SaaS SEO Playbook：AI 工具站的 SEO/AEO 实战小册</div>
-  <div class="section"><div class="section-label event">一句话</div><p>面向 AI 工具站、SaaS 官网和独立开发者的开源 SEO 实战手册，把搜索需求、产品页面、内容、技术和运营串成可执行流程。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/JeffLi1993/saas-seo-playbook" target="_blank">https://github.com/JeffLi1993/saas-seo-playbook ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README，按“用户搜索需求→关键词与意图→网站结构→页面交付→抓取、索引、性能→效果验证”的顺序做一遍，不要一上来就批量写文章。复制仓库到自己的 GitHub，挑一个真实 AI 工具站作为练习对象，为每个页面记录目标问题、可验证答案和转化动作；上线后用 Search Console 和站内日志检查收录、曝光、点击与转化，再每周按数据回改页面。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>亮点不在又一份关键词清单，而是把产品、内容、技术、运营放在同一条交付链里，并覆盖 AEO/GEO 这类新检索场景。仓库目前只有 8 stars，仍属早期，但适合低成本实操；社区案例只能说明方法可试，不应直接当成流量或收入保证。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>给新上线的 AI 工具站搭建从搜索意图到落地页的第一版增长框架</li>
-    <li>把已有 SaaS 官网的内容、索引和转化问题整理成可复盘的执行清单</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/CoderJeffLee/status/2108236078746648693" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HUH1Te0bsAA6X1N?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUH1Te0bsAA6X1N?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUH1hUia0AAzgol?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUH1hUia0AAzgol?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUH1hVxbgAARqAK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUH1hVxbgAARqAK?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUH1hVzbUAA3tP5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUH1hVzbUAA3tP5?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUHqZ1CbcAApi7K?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUHqZ1CbcAApi7K?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUHqaaYbsAAx4hW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUHqaaYbsAAx4hW?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ Microsoft MXC：给 Agent 代码用的跨平台沙盒</div>
-  <div class="section"><div class="section-label event">一句话</div><p>微软开源的跨平台执行容器/隔离库，底层结合 processcontainer、bubblewrap、seatbelt，主打策略驱动的分层隔离与 containment。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/microsoft/mxc" target="_blank">https://github.com/microsoft/mxc ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并完整阅读 README 与示例，按项目说明准备 Rust 和当前系统的构建环境；先跑最小示例，确认一个受限进程能启动，再逐项增加文件、网络和系统调用策略。随后分别在 macOS、Windows、Linux 上做同一组测试，记录哪些权限被允许、哪些被拒绝，以及异常退出时的行为。不要直接把生产 Agent 接进去，先用无敏感数据的测试目录验证隔离边界和日志。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 一旦能够读文件、跑命令或修改项目，沙盒就不再是可选的工程装饰，而是信任模型的一部分。MXC 的 Rust 实现、跨平台目标和策略驱动设计都很适合拿来做对照实验；仓库已有约 1787 stars、105 forks，且有外部技术分析可参考，但仍应自行做威胁建模，不能把开源项目默认当成安全审计结论。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>为代码 Agent 建立最小权限的编译、测试和工具调用环境</li>
-    <li>在桌面自动化或多租户服务中隔离不完全可信的执行任务</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/simonw/status/2108216753604248000" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HUCzyBdasAEtlya?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUCzyBdasAEtlya?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ FreeToken-Bots：给 Muse 接入模型发现与切换的 skill</div>
-  <div class="section"><div class="section-label event">一句话</div><p>min-skill 仓库中的一个 Agent skill，推文展示了把 OpenRouter 上可用模型接入 Muse、并尝试自动更新模型来源的用法。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/limin112/min-skill/tree/main/skills/FreeToken-Bots" target="_blank">https://github.com/limin112/min-skill/tree/main/skills/FreeToken-Bots ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 GitHub 查看 skill 文件、README 和权限需求，理解它会读取什么配置、调用哪些外部服务，再决定是否安装。不要把主账号密钥直接贴给 Agent；建议新建一个最小权限、低额度的测试 key，放入独立测试环境，先只运行模型列表或低风险请求，并观察日志、请求量和失败回退。确认代码行为后，再按仓库说明接入 Muse，最后手工检查模型名称、价格和限额，避免把“免费”当作稳定承诺。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把模型路由、可用性探测和 Agent skill 组合到了一起，体现了“模型不是固定配置，而是可更新资源”的工作流方向。仓库约有 382 stars、55 forks，具备一定公开关注度；但免费额度、账号要求和长期可用性来自推文经验，未被官方证据充分验证，安全审查和成本上限必须由使用者自己掌握。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在个人 Agent 实验中自动发现可用模型并做低成本任务分流</li>
-    <li>为原型项目建立模型失效后的备用路由和人工确认流程</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/MinLiBuilds/status/2108204490696622091" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HUHYshfbEAAbsw1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUHYshfbEAAbsw1?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ 无线麦（remote-mic-app）：把小米蓝牙遥控器变成 Mac 语音输入设备</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个 Swift 开源 App，支持小米蓝牙遥控器 2/2 Pro，把硬件按键转成 Mac 上可用的语音输入触发器。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://github.com/HD838A/remote-mic-app" target="_blank">https://github.com/HD838A/remote-mic-app ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README，确认当前 macOS 版本、支持的遥控器型号和构建/下载方式；把小米蓝牙遥控器 2 Pro 与 Mac 配对，按说明完成蓝牙、麦克风和辅助功能权限设置。启动 App 后把按键映射到系统听写或目标输入动作，先在备忘录里测试，再接入 Raycast、豆包输入法或 TypeLess 等实际工具。连续测试短句、长句、断连重连和误触，确认录音不会在后台持续运行，再决定是否作为日常输入设备。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它没有重新发明语音识别，而是把便宜、已有的遥控器改造成更顺手的输入入口，硬件与软件组合很有“马上能试”的价值。GitHub 目前约 1684 stars、190 forks，项目使用 Swift，说明至少有较清晰的公开实现基础；但不同 macOS、输入法和权限设置可能影响体验，先按 README 验证兼容性更稳妥。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在写作、会议记录或无障碍输入中用实体按键快速触发语音输入</li>
-    <li>给 Raycast、TypeLess 等桌面工作流增加低成本的免手输入入口</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/vista8/status/2108165930102702296" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HUG071ga0AAvcvx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUG071ga0AAvcvx?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ 腾讯云 Octop：自托管、多用户、多智能体助手平台</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个面向家庭和小团队的本地优先 AI 助手平台，把后端、Web 仪表盘、CLI、IM 网关、定时任务和多智能体运行时放进完整产品中。</p></div>
+  <div class="topic-title">🛠️ 腾讯云 Octop</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个面向家庭和小团队的开源、自托管 AI 助手平台，把多用户、多智能体、Web 仪表盘、CLI、IM 通道、知识库、插件和定时任务放进同一套运行环境。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/TencentCloud/Octop" target="_blank">https://github.com/TencentCloud/Octop ↗</a></p>
+    <p><a href="https://github.com/TencentCloud/Octop#quick-start" target="_blank">https://github.com/TencentCloud/Octop#quick-start ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在独立 Python 环境中阅读仓库 README、配置项和数据目录说明，再按官方文档安装这个 pip 包及其依赖。启动本地 Web 仪表盘后，先接入一个低风险测试模型，创建两个职责不同的 Agent，给它们安排一个可回滚的小任务；随后再试 CLI、IM 网关和定时任务，逐项确认消息来源、文件权限、日志和数据是否确实留在本机。家庭或团队部署前，先做账号隔离、备份和密钥轮换测试。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Octop 的价值在于把“多 Agent”从聊天演示推进到可运行的平台形态：多用户、记忆、本地数据、IM 和定时任务都被放进同一套产品边界。仓库约有 7998 stars、965 forks，公开关注度明显高于普通早期项目；不过平台面越大，配置、升级和权限风险也越复杂，必须先读文档并用非敏感数据验证。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 或 Linux 上可以先按 README 的安装脚本部署，或者直接执行 `pip install octop`；首次运行 `octop init`，让向导创建 SQLite 数据库、JWT 密钥和管理员账号，再用 `octop run` 启动本地服务，打开 `http://127.0.0.1:8088`。第一次实验建议只配置一个低风险模型和一个只读专家，先在 Web Dashboard 中跑通知识库问答，再配置一个定时汇总任务。确认权限、工作目录和凭据隔离后，再尝试 Feishu、QQ、微信、Telegram 等通道，或通过 ACP 把任务交给 Claude Code/Codex。生产使用前应备份 `~/.octop/`，并逐项检查 shell、浏览器和远程桌面权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的独特之处是把“个人助手”扩展成一个可共享的本地控制面，而不是单一聊天窗口。官方 README 明确列出多用户 JWT 隔离、工具审批、shell 防护、PII 脱敏、可插拔工作区、RAG、插件、ACP、浏览器和远程桌面等组件；这些能力让家庭或小团队可以围绕同一份本地数据协作，但也意味着部署者必须认真做权限分层，不能把“自托管”直接等同于安全。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在家庭或小团队内搭建数据不出本机的日常助手和自动化任务</li>
-    <li>为多智能体协作、定时执行和 IM 入口做一套可自托管的原型</li>
+    <li>在本地部署一个带知识库和定时任务的家庭/小团队研究助手。</li>
+    <li>通过 IM 和 ACP 把资料整理、开发排障等任务路由给不同专家。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -194,30 +98,124 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ DeepSeek 官方桌面版：不写命令也能跑真实文件任务</div>
-  <div class="section"><div class="section-label event">一句话</div><p>推文与配套教程介绍的桌面 Agent 入口，让非程序员从官网下载预览版、登录或填 API key、选择工作区后直接处理本地文件。</p></div>
+  <div class="topic-title">🛠️ Microsoft MXC</div>
+  <div class="section"><div class="section-label event">一句话</div><p>微软开源的跨平台、策略驱动代码执行容器 SDK，用统一接口把不可信模型输出、插件和工具放进 Windows、Linux 或 macOS 的隔离环境。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://www.youtube.com/watch?v=s5YX14arslk" target="_blank">https://www.youtube.com/watch?v=s5YX14arslk ↗</a></p>
+    <p><a href="https://github.com/microsoft/mxc" target="_blank">https://github.com/microsoft/mxc ↗</a></p>
+    <p><a href="https://www.npmjs.com/package/@microsoft/mxc-sdk" target="_blank">https://www.npmjs.com/package/@microsoft/mxc-sdk ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看教程确认 macOS/Windows 预览版的官方下载入口，再从 DeepSeek 官网下载，不要从来路不明的安装包开始。首次打开后按引导登录，或在理解计费与权限后填入 API key；选择一个不含隐私的测试文件夹，让 Agent 先完成“读取文件→提取问题→生成清单”这类可检查任务。确认它访问了哪些文件、输出是否准确、额度如何消耗后，再逐步尝试代码、长文档或持续运行任务，并保留原文件备份。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 Agent 的门槛从命令行和网页聊天进一步降到桌面工作区，核心变化不是多一个聊天窗口，而是能在用户选择的文件范围内连续完成任务。教程明确演示了从安装、登录到读取真实资料的完整路径，适合作为入门样本；但这是预览形态，权限、稳定性和费用仍应先在低风险任务中验证。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 的平台后端表和 samples，再根据宿主系统选择 SDK。Node 项目可以安装 `@microsoft/mxc-sdk`，在代码中构造 `ContainerRequest`，明确写入命令、网络出口策略和超时，例如先运行一个只打印结果的无网络任务；Linux 可重点观察 Bubblewrap，macOS 重点观察 Seatbelt，Windows 再评估 ProcessContainer 或实验性后端。随后逐步加入只读目录、允许写入目录和明确的出站代理规则，用诊断模式定位访问被拒绝的路径。不要把 `--audit` 用于不可信代码，因为官方说明审计模式会关闭沙箱安全；正式集成要保留默认拒绝并为每类工作负载写最小权限策略。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI Agent 需要执行代码、访问文件和调用工具，但不同操作系统的隔离机制长期碎片化。MXC 把 ProcessContainer、Windows Sandbox、LXC、Bubblewrap、Seatbelt、MicroVM 等后端放在统一的请求和策略模型后面，并提供 Rust、.NET、Node SDK、生命周期管理和诊断能力。它更像可嵌入应用的安全基础设施，而不是一个单独的 Agent 产品；真正价值取决于策略是否默认收紧、宿主系统能力是否满足要求，以及应用有没有把凭据和网络访问单独隔离。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>让非开发者整理本地资料、会议记录和问题清单</li>
-    <li>在受控工作区里做复杂编程、文件分析和长时间任务</li>
+    <li>给 coding agent 的代码执行、测试和插件运行增加跨平台隔离层。</li>
+    <li>为 SaaS 的模型生成脚本提供文件、网络、超时和 UI 权限控制。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/fankaishuoai/status/2108183495789236608" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/simonw/status/2108216753604248000" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUCzyBdasAEtlya?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUCzyBdasAEtlya?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ REA（Reverse Engineer Anything）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个把逆向工程工具接入 Agent 的开源 MCP/CLI 项目，可分析 JavaScript、Electron 应用、APK 和原生二进制，并返回带证据与限制说明的结果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/morluto/rea" target="_blank">https://github.com/morluto/rea ↗</a></p>
+    <p><a href="https://rea.tools/" target="_blank">https://rea.tools/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>项目要求 Node.js 22.19+、24.11+ 或 26+ 以及 npm。先运行 `npx rea-agents setup`，选择要接入的 Claude Code、Codex、Cursor 或其他 Agent，审阅它将修改的配置并重启客户端；如果只想试 CLI，可以对一个自己有权分析的已解包 JavaScript/Electron 应用运行 `npx -y rea-agents@latest analyze-javascript-application /absolute/path/to/app --json`。先从模块、导入关系和 Electron 边界开始，再根据目标配置 Hopper、Ghidra 或其他原生分析提供方。把每次输出中的证据、未知项和目标版本记录下来，避免把静态分析推断当成完整行为结论，也不要分析无授权的软件或绕过访问控制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>REA 的亮点在于把“问 Agent 一个黑盒软件怎么工作”变成可追踪的分析流程，而不是让模型凭经验猜。官方仓库说明它覆盖模块、调用关系、反编译方法、字符串、符号、汇编和运行时行为，并强调结果应包含证据和限制；同时它能通过 MCP 让 Agent 继续追问，再把理解转化为实现和测试。对开发者而言，这打开了兼容性研究、迁移和安全审计的新入口，但许可证、目标授权和分析结论的可复现性仍要逐项确认。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对自有 Electron/JS 产品做兼容性、迁移和模块依赖分析。</li>
+    <li>辅助安全研究人员整理 APK 或原生二进制中的调用链和证据。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2108186507450229033" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Claude 订阅开始捆绑 API 与 Agent 预算</div>
-  <div class="section"><div class="section-label event">事件</div><p>X 上的转述称，Claude Max 5x/20x 与 Team 计划新增可用于 Messages API、Managed Agents、Agent SDK 及第三方工具的月度额度，但不用于交互式 Claude Code。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>如果信息属实，这不是简单的订阅加量，而是把个人或团队计划变成一张可编程的模型预算卡：聊天、API、托管 Agent 和第三方工具开始共享同一个产品入口。对开发者来说，试验成本可能下降；对平台来说，则能把高频用户从单纯对话引导到更深的生态调用。由于今天证据主要是 X 转述，具体额度、适用地区和限制仍应以 Anthropic 官方页面为准。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>模型厂商会更重视“订阅收入→开发调用→Agent 生态”的连续转化，独立工具也可能围绕用户已有订阅做集成。与此同时，额度归属、超额计费、密钥安全和交互式产品的边界会成为采购与合规评估的重点。</p></div>
+  <div class="topic-title">🛠️ 无线麦 SayAll</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个开源 macOS 语音输入与遥控器控制应用，把小米蓝牙语音遥控器 2/2 Pro 变成可按住说话、映射快捷键和触发本机操作的入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/HD838A/remote-mic-app" target="_blank">https://github.com/HD838A/remote-mic-app ↗</a></p>
+    <p><a href="https://sayall.app/" target="_blank">https://sayall.app/ ↗</a></p>
+    <p><a href="https://sayall.app/tutorial/" target="_blank">https://sayall.app/tutorial/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认设备和系统满足要求：Apple Silicon 需要 macOS 14+，Intel 需要 macOS 13+，并准备小米蓝牙遥控器 2 或 2 Pro。按官网或 Release 下载对应架构 DMG，打开后运行唯一的安装 PKG；首次使用在系统蓝牙设置中让遥控器进入配对状态，启动 SayAll 后授予蓝牙权限，需要自定义普通按键时再授予输入监控和辅助功能。进入“连接与语音”刷新音频设备，选择 `MiRemoteV 2ch` 或已有回环设备，在目标 App 输入框中按住遥控器语音键说话、松开结束。先用测试音确认链路，再设置普通按键；若使用 Typeless，按教程单独评估 Fn 点按模拟模式，不要把候选能力当成已完成的稳定功能。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把语音输入、物理控制器和本地 Agent 入口组合成一个很具体的端侧工作流。README 说明应用用 SwiftUI 原生开发，常驻资源占用较低，并且“回眸”记录和本地 Agent MCP 访问默认关闭、需要明确授权，MCP 通过本机 stdio 工作而不是监听 HTTP/TCP。对经常在 Mac 上口述、切换输入框或操作 AI 客户端的人，它比购买专用麦克风更容易试验；但它依赖蓝牙、音频回环和 macOS 权限，实际兼容性必须按自己的遥控器和输入法验收。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用遥控器给豆包、Typeless、Raycast 等输入工具触发免手打字。</li>
+    <li>给本机 AI 客户端提供用户明确授权的只读语音历史访问。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2108165930102702296" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUG071ga0AAvcvx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUG071ga0AAvcvx?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SaaS SEO Playbook</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 AI 工具站、SaaS 官网和独立开发者的开源 SEO 实战小册子，把搜索意图、站点规划、技术 SEO、内容、外链和 AI 搜索时代的 GEO 组织成一套执行框架。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JeffLi1993/saas-seo-playbook" target="_blank">https://github.com/JeffLi1993/saas-seo-playbook ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库或直接在线阅读 README、`OUTLINE.md` 和已经发布的章节，不要一上来批量生成文章。先为自己的产品写出目标用户、搜索意图和一个 Topic Map，再用 Keyword-to-Page 思路决定每个意图由工具页、教程、对比页还是博客承接；随后按仓库的站内基建和发布检查清单补齐 URL、内链、结构化信息与 Core Web Vitals。每完成一页就记录它交付的真实结果、来源和转化入口，用 Search Console 或同类数据复盘收录、点击和注册，而不是只追关键词排名。当前仓库仍在公开发布前整理阶段，章节未全部完成，适合当工作手册和检查框架，不应当当成完整课程或保证排名的秘籍。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的价值不在于某个“快速涨流量”技巧，而在于把 SEO 放回产品系统：产品承接需求，内容提供信息增量，技术保证可见性，外链建立信任。README 已明确列出从理想用户、搜索意图、Topic Map 到工具页、对比页、E-E-A-T、pSEO、国际化和 GEO 的章节结构。对 AI 工具站尤其有用，因为大量同质化 AI 页面缺少真实使用结果；不过本项目当前内容仍在补全，落地时要用自己的数据验证，而不是机械照抄。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为新 AI 工具站设计从关键词到页面和转化的发布顺序。</li>
+    <li>审查现有 SaaS 内容是否真正交付了搜索用户要的结果。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2108237587769106521" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Unsloth Decision Models</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Unsloth 文档展示的一条新路线：把 Qwen、Llama、Gemma 等模型微调成返回有限选项及概率的结构化决策模型，而不是继续生成长文本。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://unsloth.ai/docs/basics/train-your-own-decision-model-with-unsloth" target="_blank">https://unsloth.ai/docs/basics/train-your-own-decision-model-with-unsloth ↗</a></p>
+    <p><a href="https://github.com/unslothai/unsloth" target="_blank">https://github.com/unslothai/unsloth ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读 Unsloth 的 Decision Model 文档，明确它的输入状态、问题、允许选项和监督标签，再从一个小而边界清晰的分类任务开始，例如把工单分到 billing、technical 或 other。准备少量高质量样本，把标签和决策标准写成可审计的定义，使用文档支持的 Qwen、Llama 或 Gemma 配置进行微调；验证时同时记录选择准确率、概率校准、拒答或低置信度比例和推理延迟。不要直接把模型输出接到付款、删除或外发动作，先在 Agent router 或审批中间件里设置阈值，低置信度进入人工复核，并用越界样本做回归测试。先在本地小模型上跑通数据与评测，再考虑规模化部署。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 的很多关键节点其实不是“写一段话”，而是从有限选项中做一次可观测决定：选哪个子 Agent、是否调用工具、是否需要审批、给请求分级。把这些节点改成结构化输出，可以减少自由文本解析、降低 token 消耗，并让概率、阈值和失败分支进入普通软件测试体系。它不会取代开放式推理，效果也高度依赖标签、选项设计和校准；但这条路线有机会让 Agent 控制面更像可测试的决策服务，而不是不可预测的聊天链路。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>做多 Agent 路由、工单分流、优先级判断和低置信度升级。</li>
+    <li>在工具调用前执行安全分类、审批判断或结构化筛选。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2108198978773037422" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUHTus1a8AAsUp9?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUHTus1a8AAsUp9?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Managed Agents 与订阅 API 额度</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 已公布 Claude Managed Agents 公测，将托管 Agent 的沙箱执行、凭据、权限、追踪、长时运行和部署基础设施；X List 同时出现 Max/Team 订阅新增可用于 Messages API、Managed Agents 和 Agent SDK 的月度额度信息。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这说明模型公司正在把竞争边界从“提供一个模型 API”推进到“替开发者运行完整 Agent”。Anthropic 官方介绍的 Managed Agents 是一组用于构建和部署云端 Agent 的组合 API，内置 harness 负责工具调用、上下文管理和错误恢复，并覆盖安全沙箱、认证、工具执行、长时会话、记忆和定时部署等生产问题。订阅额度则把消费入口和开发者 API 连接起来，但具体适用范围、不可用于 Claude Code 交互式使用的边界，仍应以账户和官方条款为准，不能只按推文转述操作。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对个人开发者，原本需要自己维护的沙箱、checkpoint、凭据库、追踪和调度，可能被压缩成平台调用；对企业，采购对象会从“模型调用量”变成“运行时、会话时长、权限和数据边界”。这会降低上线门槛，也会提高供应商锁定、数据驻留、故障降级和成本预测的重要性。最稳妥的做法是先做一个可迁移的任务协议和工具层，再把托管运行时作为后端选项，而不是把业务状态全部写死在单一平台里。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -227,43 +225,51 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 云端 Agent 直接控制本机：授权边界成为产品分水岭</div>
-  <div class="section"><div class="section-label event">事件</div><p>讨论指出，Grok Bot、GPT Dots 等云端助手提供了在用户授权后控制本地电脑的选项，引发对远端执行权的担忧。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>当 Agent 只返回文本时，错误通常还能由人复核；一旦它能点击、读文件、开终端或修改本机，授权就从“允许使用一个功能”变成“允许一个远端系统代表我行动”。这会把沙盒、权限分层、可撤销授权、操作回放和审计日志推到产品核心，而不是隐藏在设置页里的安全附录。今天没有足够外部证据比较各产品实现，因此只把它视作重要行业信号。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>未来 Agent 的竞争不只看模型聪不聪明，也看它能否在不扩大爆炸半径的前提下完成任务。企业采购会更关注数据流向、凭证隔离和事件响应；个人用户则需要学会区分一次性文件权限、持续控制权和高风险系统权限。</p></div>
+  <div class="topic-title">📡 小模型定价进入 Agent 路由设计</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 多条推文围绕 Claude Haiku 5.5 的价格、长上下文阶梯和与其他模型的成本/速度比较展开，社区特别关注超过 100K 上下文后费用显著上升的情况。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>小模型价格下降并不意味着所有请求都应该无脑切换过去，真正的单位应当是“一次成功任务的总成本”。上下文是否超过价格阶梯、失败后是否重试、工具调用是否增加、模型是否需要更长解释，都会改变最终账单。对 Agent 来说，摘要、分类、压缩、批量提取和高并发子任务适合优先做路由实验；规划、代码审查和高风险决策则需要保留强模型或人工兜底。社区帖子提供的是观察线索，正式接入前还应按官方价格页、实际账号和目标区域测算。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型选择会从算法偏好变成产品毛利和系统架构问题。团队需要同时监控输入/输出 token、上下文长度、缓存命中、重试率、延迟、任务成功率和人工返工；否则一次“更便宜的模型”可能因为失败重试反而更贵。长期看，价格阶梯会推动更细的上下文裁剪、分层记忆和批处理设计，也会让供应商的计费透明度成为工程评估的一部分。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/fankaishuoai/status/2108254643063312486" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2108215552993055187" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
     </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUHiR4UXkAA-sLu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUHiR4UXkAA-sLu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUHibiUXQAA462h?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUHibiUXQAA462h?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUG9aTbXUAAjLZM?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUG9aTbXUAAjLZM?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 GPT-6 推出从聊天到界面的 Intelligent UI</div>
-  <div class="section"><div class="section-label event">事件</div><p>X List 转述称 GPT-6 面向用户推送新的 Intelligent UI 能力，官方页面将其描述为从聊天走向生成界面。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>如果生成式界面能够根据任务动态组织表单、按钮、结果视图或可交互工作流，模型输出就不再只是“下一段文字”，而是一次可操作的产品交付。这会改变 AI 应用的前端分工：开发者需要定义组件边界、状态校验和权限约束，模型负责把自然语言意图映射到界面。当前外部页面和 X 转述的细节仍需逐项核对，不能把宣传语直接等同于成熟能力。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>低代码、客服、数据分析和内部工具可能先受影响，因为它们本来就由表单和流程组成；但生成界面也会带来可访问性、状态一致性、审计和提示注入风险。真正有竞争力的产品，必须让用户看懂界面为何出现、动作会影响什么，以及如何撤销。</p></div>
+  <div class="topic-title">📡 Agent 安全从“能执行”转向“先隔离再授权”</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 同时出现远端 Agent 控制本地电脑的风险讨论，以及微软 MXC 这类跨平台沙箱项目的开源信号，反映开发者开始把执行边界当成 Agent 产品的核心能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>让云端 Agent 控制本地桌面很方便，但授权一旦覆盖文件、凭据、浏览器和输入设备，风险就不再是普通聊天隐私问题。更稳的架构应把任务拆成可撤销权限：默认只读、按目录授权、网络默认拒绝、外部写入需要审批、每次执行都有日志和超时，并在沙箱中运行不可信代码。MXC 的价值正是把这些策略抽象成可嵌入的容器请求，但它不能替应用自动完成威胁建模；开发者仍需判断哪些数据能进入模型、哪些工具必须隔离，以及失败时如何让用户接管。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业采购 Agent 时，权限模型、审计记录、凭据存储、隔离后端和降级方案会与模型效果同等重要。对个人用户，任何要求打开整机远程控制的产品都应先问清楚访问范围、持久化方式和撤销入口。未来 Agent 平台的差异化可能不只在“能完成多少任务”，还在于能否把每个副作用动作变成可解释、可审批、可回滚的操作。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/shao__meng/status/2108020232183029778" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/lxfater/status/2108186507450229033" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/appinn/status/2108187758074204272" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2108254643063312486" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/shao__meng/status/2108151581044879550" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/arnosolin/status/2108111611768480128" target="_blank"><span class="handle">@arnosolin</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/YujiaZheng9/status/2108263563097719146" target="_blank"><span class="handle">@YujiaZheng9</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2108187758074204272" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2108220096716181976" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/MinLiBuilds/status/2108347650697503087" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/op7418/status/2108148604447883464" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2108020232183029778" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/arnosolin/status/2108111611768480128" target="_blank"><span class="handle">@arnosolin</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/randall_balestr/status/2108272405236097449" target="_blank"><span class="handle">@randall_balestr</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HUExNCmaEAAA6dK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUExNCmaEAAA6dK?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HUGoq9NbwAEW8ch?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUGoq9NbwAEW8ch?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2108110045254713344/img/BIxWstz6d7Vx6QkZ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108110045254713344/img/BIxWstz6d7Vx6QkZ.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2108262997827133440/img/GonRDaN6k2Cw21gs.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108262997827133440/img/GonRDaN6k2Cw21gs.jpg" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HUJbAEDbcAAwAqb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUJbAEDbcAAwAqb?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HTgG_bQbQAA_WC7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTgG_bQbQAA_WC7?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HTgG_bFakAAb0Cv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HTgG_bFakAAb0Cv?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2108148339204382720/img/3xsxx3VnE20b3QfW.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108148339204382720/img/3xsxx3VnE20b3QfW.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUExNCmaEAAA6dK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUExNCmaEAAA6dK?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2108110045254713344/img/BIxWstz6d7Vx6QkZ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108110045254713344/img/BIxWstz6d7Vx6QkZ.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUITZ6zWAAASTnF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUITZ6zWAAASTnF?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
@@ -271,8 +277,9 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>DSReg：一种声称可在预训练模型之后通过简单正则化恢复潜在变量的研究路线，先看项目说明与实验复现 <a href="https://dsreg.github.io" target="_blank">→</a></li>
-    <li>CS 329Z：斯坦福 2026 秋季“Engineering AI Agents”课程，已公开 Tool Use 与 Frameworks &amp; Orchestration 相关讲义，适合补 Agent 工程基础 <a href="https://cs329z.stanford.edu" target="_blank">→</a></li>
+    <li>GPT-6 Intelligent UI：推文描述把聊天结果直接变成可点击、可调参数的界面，值得观察“回答”如何演变成一次性小工具；目前主要是社交平台转述 <a href="https://x.com/shao__meng/status/2108020232183029778" target="_blank">→</a></li>
+    <li>LeAVJEPA：声音与视觉的无监督联合表示路线，可能连接多模态表征与具身 Agent；本次未补齐论文和代码 <a href="https://x.com/arnosolin/status/2108111611768480128" target="_blank">→</a></li>
+    <li>金融世界模型：NeurIPS 相关推文讨论用 JEPA 处理金融数据中的噪声、非平稳和潜在状态，值得等论文与评估材料 <a href="https://x.com/randall_balestr/status/2108272405236097449" target="_blank">→</a></li>
   </ul>
 </div>
 

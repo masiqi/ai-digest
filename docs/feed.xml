@@ -5,13 +5,13 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 09 Oct 2026 00:45:39 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 00:46:53 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/10/09 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-09.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-09.html</guid>
-      <description>今天的信号集中在“让 Agent 真正动手，但把执行边界做得可控”：一边是本地优先、多智能体、桌面 Agent 与跨平台沙盒，另一边是把模型与 skill 接入真实工作流。值得注意的是，今天的 Agent Reach 外部证据包里 HNRSS 的 6 路补充 feed 均返回 502，因此早期信号主要来自 X List，部分项目明确标注证据待补。</description>
+      <description>今天最值得关注的不是又一个更大的聊天模型，而是 Agent 的“可运行基础设施”正在成形：腾讯云把多用户、多智能体、IM、定时任务和本地数据收进 Octop，微软把跨平台沙箱能力做成可嵌入 SDK，REA 则把逆向分析接进 Claude Code/Codex。与此同时，结构化决策模型、托管 Agent 和更细的订阅额度正在把模型从“会回答”推向“能被路由、约束、部署和审计”。本次 X List 抓到 108 条推文；证据补充摘要筛出 80 个候选，HNRSS 相关 feed 本次返回 502，早期社区线索因此主要来自 X List，已明确标注证据待补。</description>
       <pubDate>2026-10-09T08:30:00+08:00</pubDate>
     </item>
     <item>
