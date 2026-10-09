@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 08 Oct 2026 00:49:07 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 00:45:39 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/09 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-09.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-09.html</guid>
+      <description>今天的信号集中在“让 Agent 真正动手，但把执行边界做得可控”：一边是本地优先、多智能体、桌面 Agent 与跨平台沙盒，另一边是把模型与 skill 接入真实工作流。值得注意的是，今天的 Agent Reach 外部证据包里 HNRSS 的 6 路补充 feed 均返回 502，因此早期信号主要来自 X List，部分项目明确标注证据待补。</description>
+      <pubDate>2026-10-09T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/08 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-08.html</link>
