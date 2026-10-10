@@ -70,89 +70,44 @@
   <div class="date">2026-10-10</div>
   <div class="main-thesis">
     <div class="label">🔥 今日主线</div>
-    <p>今天最值得关注的变化，是 AI 产品从“单个智能体完成一件事”继续转向“可持久运行、能调用真实工具、还能动态拆分任务的执行系统”：Claude Managed Agents 把动态工作流推向公测，Grok Bot 把邮箱、X 与桌面应用接进长期运行的 Bot；另一条清晰主线是专用小模型和本地开源工具加速落地，从 Microsoft-Decision-1 的结构化决策，到 BaoCut、Mole、Cadenza 这类能立刻上手的桌面/开发工作流。
+    <p>AI 产品正在从“会生成”转向“能协作、能执行、能被约束”：一边是 Claude 把动态工作流和 Managed Agents 推向大规模并行，另一边是 Codex/Windows 用执行容器收紧 Agent 的权限边界。与此同时，本地语音输入、AI 资讯电视台和能直接服务编码 Agent 的 Skills 继续冒头，值得亲手试的项目比单纯模型发布更密集。
 
-本次 X List 共抓取 108 条推文；Agent Reach 多源证据补充脚本本轮运行超时，未生成证据包，因此下文只把有推文且能用官网、GitHub、官方文档或可信页面交叉支持的项目放入“可上手”，证据不足的新线索明确标为“早期信号/证据待补”。</p>
+本次 X List 共抓取 81 条推文；Agent Reach 多源证据补充脚本本轮超时，未生成证据包，因此下文只把有推文且能用官网、GitHub、官方文档或可信网页交叉支持的项目放入“可上手”，证据不足的新线索明确标为“早期信号/证据待补”。</p>
   </div>
 </div>
 <div class="topic">
-  <div class="topic-title">🛠️ Claude Managed Agents 动态工作流</div>
-  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 的托管智能体基础设施新增动态工作流，主智能体可以按阶段编排大量子智能体并行执行，再汇总和校验结果，适合长时间、异步和复杂工程任务。</p></div>
+  <div class="topic-title">🛠️ 随言 Cadenza</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款本地优先的 macOS 开源语音输入工具，按住快捷键说话、松开后把文字输入当前光标位置。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://platform.claude.com/docs/en/managed-agents/overview" target="_blank">https://platform.claude.com/docs/en/managed-agents/overview ↗</a></p>
+    <p><a href="https://github.com/DragonKingIO/Cadenza-" target="_blank">https://github.com/DragonKingIO/Cadenza- ↗</a></p>
+    <p><a href="https://meta.appinn.net/t/topic/93217" target="_blank">https://meta.appinn.net/t/topic/93217 ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 Managed Agents 文档，确认账户和平台接入条件，再从一个可拆分的任务开始，例如“审计一个仓库的身份认证、依赖和测试覆盖”。把任务写成目标、输入、验收标准和禁止修改范围，要求主智能体先给出分阶段计划，再并行安排代码阅读、测试复现和安全检查，最后只接受带证据的合并报告。不要一上来就让上千个 agent 改生产代码；先让它们只读分析，确认并行结果能收敛，再给单独的执行阶段配置最小权限、沙箱和人工审批。推文提到单次运行最多可调度 1000 个智能体，但这是能力上限，不代表每个任务都值得开满。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“多 agent”从手工写循环提升为由主 agent 动态生成的工作流，关键价值不只是并行，而是计划、分工、交叉验证和最终合并成为一体。官方文档把 agent、environment、session、events 分开建模，并支持托管或自有沙箱，这为长任务的状态管理、权限边界和异步回收提供了比临时脚本更稳定的工程接口。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从 GitHub Releases 下载适配 macOS 14+ 的版本，打开应用后按系统提示授予麦克风、辅助功能和输入监控权限；把光标放到任意编辑器、浏览器或聊天框，按住它配置的快捷键说一句完整的话，松开后检查文字是否直接插入。建议先用本地识别测试中文、英文和代码术语，再按自己的隐私需求决定是否配置云端识别服务；项目目前属于早期预览，发布包尚未 Apple 公证，首次启动可能要在“系统设置→隐私与安全性”手动允许。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把语音输入从云端黑盒拉回桌面端，默认本地识别、无账号、无统计且不保存录音，代码和数据边界都能审计。对经常写长文本、做会议记录或用语音驱动编码 Agent 的人，按住说话即输入的交互比切换窗口更接近日常工作流；但早期预览和权限要求也意味着应该先在非敏感环境试用。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>对大型代码库做并行安全审计、迁移评估和测试补全。</li>
-    <li>把研究、资料核验、实验运行和结果复核拆成可追踪的长任务。</li>
+    <li>在 IDE、终端和聊天窗口中快速口述需求、命令或回复。</li>
+    <li>为会议记录、长文初稿和移动办公建立本地隐私优先的输入入口。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/dotey/status/2108695019846619424" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2108629383644692948" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
     </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ Grok Bot</div>
-  <div class="section"><div class="section-label event">一句话</div><p>SpaceXAI 的长期运行 AI teammate，拥有独立电脑，可以登录并操作工具与应用；当前重点能力包括连接 X、邮箱、GitHub、Notion，并支持例行任务和多人协作 Bot。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://x.ai/bot" target="_blank">https://x.ai/bot ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在桌面或 iOS 安装 Grok Bot，用符合条件的 SuperGrok、Cursor 或 Teams 账号登录，创建一个职责单一的 Bot。第一轮建议只做低风险任务：让它每天读取指定 X 账号和 RSS，整理成待审清单，或读取 GitHub issue 后生成草稿，不要直接授予发帖、删库和付款权限。想申请邮箱，可先绑定 X，再在 X 上 @bot 发送类似“get me my mail name@mail.grokbot.com”的请求，按 Bot 返回的授权流程完成绑定。再给 Bot 配一个 Routine，例如每天早上生成 AI 资讯摘要；涉及发送邮件、修改 CRM 或发布内容时保留人工确认。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它和普通聊天机器人的差别在于“有自己的计算环境”和“持续运行的职责”，而不是只在对话窗口里返回文字。官方页面明确展示了并行运行、电脑保持工作、跨应用执行以及独立用量；官方设计文章还把能力、记忆和例行任务分层，这种持久身份模型更接近可交接的数字员工，但同时也要求用户认真管理登录态和审批边界。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>监控 X、邮箱和项目看板，汇总成每天的待办和预警。</li>
-    <li>读取 GitHub 项目、制作宣传材料或准备 CRM 更新草稿。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/dotey/status/2108693220674650363" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HUOVEx9XkAAo4eh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUOVEx9XkAAo4eh?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUOVSfYWEAAVjlu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUOVSfYWEAAVjlu?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">🛠️ Microsoft-Decision-1</div>
-  <div class="section"><div class="section-label event">一句话</div><p>微软推出的结构化决策模型，基于 Qwen3.5-9B 后训练，针对固定选项输出每个选项的校准概率，而不是开放式聊天或写作。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://commandline.microsoft.com/microsoft-decision-1-model-foundry" target="_blank">https://commandline.microsoft.com/microsoft-decision-1-model-foundry ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Microsoft Foundry 或 OpenRouter 查看可用性，用一个小型离线数据集做试验。把任务改写为固定选项，例如“接受、拒绝、人工复核”，同时给出明确的评分标准和少量示例；要求接口返回选项、概率和版本信息，并把低置信度样本路由给人工。可先做邮件优先级、搜索结果相关性或 AI 输出质量评分，再用几十到几百条人工标注数据检查校准，不要把模型概率直接当成事实概率。若已有 OpenAI 兼容客户端，可按 Foundry 文档接入结构化调用，并将结果记录到日志，比较它与通用大模型、规则系统的延迟和一致性。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 agent 系统真正需要的不是更长的回答，而是稳定、可审计的“选哪个”。把路由、审核、分类和评估从通用生成模型中抽成专用决策层，有望降低延迟、输出解析成本和提示词漂移风险。微软官方说明覆盖 yes/no、多选、评级与 rubric 评分，且明确提到将来会迁移到其他底座模型，这使它更像可替换的决策组件而非一次性模型发布。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>对候选工具、搜索结果、工单或销售线索做优先级排序。</li>
-    <li>对 agent 动作和生成内容做通过、拒绝、复核三路质检。</li>
-  </ul></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/dotey/status/2108669987338551776" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2108626811164999680/img/F8PiWtkxs482oQPJ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108626811164999680/img/F8PiWtkxs482oQPJ.jpg" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
   <div class="topic-title">🛠️ BaoCut</div>
-  <div class="section"><div class="section-label event">一句话</div><p>开源/源代码可用的 AI 视频 agent 与可编辑时间线工具，支持转写、字幕、翻译、配音、剪辑和动画，并提供给 Claude Code、Codex 等 coding agent 使用的 Agent Skill。</p></div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个带可编辑时间线的 AI 视频 Agent，可做转录、字幕、翻译、配音、剪辑和动画。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/JimLiu/baocut" target="_blank">https://github.com/JimLiu/baocut ↗</a></p>
+    <p><a href="https://baocut.app" target="_blank">https://baocut.app ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub README，按平台安装 BaoCut，再安装仓库提供的 agent skill 或使用本地 `bcut` CLI；准备一段自己拥有版权的 MP4，从最小任务开始，让 agent“转写 talk.mp4 并翻译成中文”，确认时间线、字幕层和导出结果，再逐步尝试修改单句字幕、调整样式、裁剪片段和导出。每一步都检查变更回执和最终视频，不要把源视频、登录凭据或商业素材直接交给陌生 skill。macOS 重点看 BaoCut.app 与 Apple silicon 路径，Windows 则先确认 CLI 版本、CPU/GPU 变体和授权条款。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把视频当成一堆一次性导出的 SRT 和 MP4，而是把转写、翻译、字幕、配音、图形和剪辑都放进一个可编辑的视频事实模型里；改一行字幕只重做必要部分，不必整条流水线重跑。GitHub 仓库同时包含 CLI、时间线、渲染图、模型 worker 和外部 agent skill，说明它正在把视频编辑从“聊天生成结果”推进到“可检查、可局部修改、可复现”的 agent 工作流。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开项目主页查看安装方式和系统要求，再克隆仓库或直接进入官网体验；准备一段短视频后，先让它完成转录和字幕，再在可编辑时间线上调整字幕样式、切点或配音，最后检查导出结果。想复现作者推文里的 Agent 工作法，可以先写一页技术方案，再让 Agent 按“原型—编码—验证—发布”推进，观察每一环如何留下可回溯的产物。首次试用建议用可公开素材，并先读清项目许可证与第三方模型、字体和媒体资产的授权边界。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是只把自然语言接到一个一次性生成器，而是把 AI 能力放进可编辑、可复核的时间线。GitHub 页面显示项目围绕 Agent Skill、Claude Code、Codex、字幕和转录组织，且已有公开的中英文 README 与持续提交；这使它更像一个能被开发者拆解和扩展的视频生产工作台，而不是只能看演示的黑盒。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>把中文课程、访谈或会议视频批量转写并生成双语字幕。</li>
-    <li>用自然语言让 coding agent 完成字幕样式、片段和配音的局部迭代。</li>
+    <li>把访谈、课程或播客快速整理成带字幕的短视频。</li>
+    <li>用 Agent 驱动从需求、实现到验证的内容生产流程。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
@@ -169,109 +124,136 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ AI 今天（AITV）</div>
-  <div class="section"><div class="section-label event">一句话</div><p>一个像电视一样持续播报 AI 新闻、产品和开源项目的开源站点，带同步旁白、字幕与原文链接，可在线收听。</p></div>
+  <div class="topic-title">🛠️ AI 今天 AITV</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个像真电视一样连续播放 AI 新闻、产品和开源项目的开源资讯台，带同步讲解、字幕和原文链接。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://aitv.qiaomu.ai/；https://github.com/joeseesun/aitv" target="_blank">https://aitv.qiaomu.ai/；https://github.com/joeseesun/aitv ↗</a></p>
+    <p><a href="https://aitv.qiaomu.ai/" target="_blank">https://aitv.qiaomu.ai/ ↗</a></p>
+    <p><a href="https://github.com/joeseesun/aitv" target="_blank">https://github.com/joeseesun/aitv ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先直接打开在线电台，观察播放、字幕和原文跳转是否同步；想自建则克隆 GitHub 仓库，阅读 README、架构文档和 `.dev.vars.example`，准备自己的新闻源、语音服务和 Cloudflare 配置。先不要急着替换所有数据源，建议用少量 Hacker News、GitHub Trending 和 Product Hunt 条目跑通“采集—摘要—双人播报—字幕—发布”链路，再用仓库现有测试验证桌面和移动端播放。若要做中文日报，可以把每条内容保留标题、原文 URL、发布时间和摘要证据，避免播报模型把推测写成事实。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 AI 资讯消费做成了连续媒体形态，而不只是列表或文章：音频、字幕、视觉播放和原文入口组成一个完整交付面。仓库公开了前端、脚本、测试与 Cloudflare 部署结构，推文还给出了由多个 Bot 协作完成选题和播报的真实路径。对想做行业监控的人来说，更重要的启发是把“发现、筛选、脚本、播报、验证”拆成可替换组件。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开在线电台，点击画面或按空格暂停，按 L 回到直播；在节目中查看“是什么、跟你有关、AI 点评”和原文链接。想自己搭建时，先 clone GitHub 仓库，阅读 README 与 docs/ARCHITECTURE.md，准备项目要求的新闻源、音频/文本和部署环境，再按示例配置 Worker 和定时任务。建议先只跑本地预览，确认时间轴、字幕、来源和自动更新都正常后，再接入自己的资讯源并设置额度限制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“抓取—补料—写稿—合成—发布”串成可持续的媒体管线，而不是一次性的 AI 视频。README 明确说明内容来自 Hacker News、GitHub Trending、Product Hunt、AIHOT 以及官方 RSS，浏览器按音频时间轴实时呈现且无需预渲染视频；MIT 许可证也让个人研究和自建更容易，但自动摘要仍需人工核对。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>自建面向团队的 AI、开源或公司内部资讯电台。</li>
-    <li>将每日新闻摘要转换成通勤可听、可回溯原文的播报产品。</li>
+    <li>边工作边收听并查看 AI 行业动态。</li>
+    <li>为团队、社区或个人站点搭建可持续更新的 AI 资讯频道。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/vista8/status/2108531822313513394" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2108532221158240614" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ min-skill：FreeToken-Bots</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Claude Code Skill 合集，其中的 freetoken-bots 会扫描 OpenRouter 免费模型并为子代理配置低成本路由。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/limin112/min-skill" target="_blank">https://github.com/limin112/min-skill ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先 clone 仓库到本地，再只把 skills/FreeToken-Bots 目录复制到对应 Agent 的 skills 目录，重启 Claude Code 让它重新加载。打开该 Skill 的 README，先查看它会扫描哪些模型、如何进行免费校验和 probe 试调用，再在隔离项目里运行一次；不要把真实密钥粘进脚本或公开日志，先用专门的低权限 key，并检查最终选择的模型和计费标签。确认 fail-closed 行为正常后，再把它接到非关键的摘要、测试或批处理子任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个项目的价值不只是“找免费模型”，而是把模型选择、参数量核验、探测调用和失败关闭写成可复用的 Agent Skill。README 明确列出免费校验与不误触收费版的设计意图，仓库还有 explain-video、公众号模板等不同 Skill；不过免费模型的可用性和上游规则会变化，任何自动路由都应保留预算、权限和输出质量的人工边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给摘要、分类、测试等低风险子任务配置低成本模型。</li>
+    <li>在 Claude Code 工作流中复用一套可审计的模型路由 Skill。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2108575750685413522" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HULudL3bMAAwEcB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HULudL3bMAAwEcB?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUMp0syagAA8o8L?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUMp0syagAA8o8L?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Mole</div>
-  <div class="section"><div class="section-label event">一句话</div><p>面向 macOS 的本地清理、应用管理和系统监视工具，新增 AI Cleanup &amp; Care，用于审查旧会话、缓存、工作树、旧版本和闲置命令行工具。</p></div>
+  <div class="topic-title">🛠️ docu.md</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个免费、开源、本地运行的 Markdown Viewer，可把 AI 生成的 Markdown 渲染并导出为 DOCX、PDF、HTML 或 EPUB。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://mole.fit；https://mole.fit/mac-cleaner" target="_blank">https://mole.fit；https://mole.fit/mac-cleaner ↗</a></p>
+    <p><a href="https://docu.md" target="_blank">https://docu.md ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 Mole 官网安装后，先运行扫描而不是直接清理；在 Clean 页进入 AI Cleanup &amp; Care，逐项查看它识别出的缓存、旧版本、已完成 worktree、闲置 CLI 和旧 session。优先处理可以重新生成的缓存与构建产物，保留仍在使用的本地模型、项目目录和聊天历史；对 Codex、Claude Code 等会话先确认项目是否已经归档，再单独取消勾选不确定项。清理前记录路径和大小，清理后检查 agent 是否还能正常启动、索引是否完整。不要使用任何不展示候选列表的一键清理脚本替代审查。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 编程工具的会话 JSONL、项目历史、缓存和 worktree 很容易在长期使用后占满磁盘，但通用清理器往往无法理解它们的语义。Mole 的设计把可再生缓存与高风险的 agent 历史分开，并强调先预览、逐项确认、默认保护个人数据和本地模型；官网还公开了针对近 30 种 AI 工具的测试结果，适合把“清空间”变成可回滚的维护流程。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官网的 GitHub Releases 或浏览器扩展入口安装，打开一个本地 .md 文件，或直接把 Markdown 拖入窗口、粘贴 URL；检查公式、代码块、表格和 Mermaid 图是否按预期渲染，然后使用导出按钮生成 DOCX、PDF 或 HTML/EPUB。可以用一篇 Claude、ChatGPT 或 Copilot 生成的技术说明做测试，重点核对分页、数学公式和图表清晰度。它主打本地处理，敏感文档仍建议断网或审查扩展权限后再使用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>AI 输出默认是 Markdown，但交付给同事、客户或论文读者时往往需要可编辑、可打印的正式文档；docu.md 正好补上这条链路。官网强调处理发生在本地、无需订阅、不上传文档，并提供多种导出目标，适合把“生成内容”和“交付格式”分开处理；但具体渲染质量仍应以自己的复杂文档实测为准。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>清理 Claude Code、Codex 等工具积累的缓存、旧构建和废弃 worktree。</li>
-    <li>在不误删会话、记忆和本地模型的前提下定位 Mac 磁盘占用。</li>
+    <li>把 AI 生成的技术方案、报告和 README 转成可交付文档。</li>
+    <li>在本地预览含公式、表格和图表的 Markdown，避免截图式交付。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/HiTw93/status/2108571284456288625" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xicilion/status/2108520458450862446" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenCode Go</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenCode 团队推出的低成本编码模型订阅，10 美元/月，可在 OpenCode 或其他 Agent 中使用一组经过测试的开源模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://opencode.ai/go" target="_blank">https://opencode.ai/go ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官网创建账号并订阅 Go，再按 setup instructions 配置登录；进入 OpenCode 后执行登录流程，在模型选择器或 `/models` 中查看当前可用列表。用一个小型、可回滚的项目测试三类任务：让便宜模型做代码解释和测试，让更强模型做实现，再比较上下文、速度、额度消耗和错误率。不要只看“模型数量”，还要阅读当前官方 limits、隐私和服务条款；把生产代码、密钥和高风险修改留在有独立审查的环境里。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把多模型试用的摩擦从“分别注册、分别充值、分别配 key”降低到一个入口，推文提到模型列表会直接增加 31 个模型，官方页面则确认 Go 的价格是每月 10 美元并可与任意 Agent 配合。对需要比较国产开源编码模型的人，固定订阅比临时寻找 API 更好上手；但额度是共享资源，模型阵容会变，实际价值必须按自己的任务和当前官方限制核算。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为日常编码、测试和重构任务提供低门槛多模型切换。</li>
+    <li>在一个小项目中对比不同开源模型的 Agent 编码表现。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2108537029143437808" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HUMmZ6GaQAArd4Q?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUMmZ6GaQAArd4Q?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2108535612462768129/img/lkO2jieTj7Qnxe-M.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108535612462768129/img/lkO2jieTj7Qnxe-M.jpg" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ Cadenza 随言</div>
-  <div class="section"><div class="section-label event">一句话</div><p>本地优先的 macOS 开源语音输入工具，按住快捷键说话、松开后把识别文字输入当前光标位置，重点解决中文口述和隐私问题。</p></div>
+  <div class="topic-title">🛠️ Claude API Credits</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Claude Max 和 Team 计划可领取每月 API credits，用于 Claude API、Managed Agents、Agent SDK 和 Playground。</p></div>
   <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://meta.appinn.net/t/topic/93217" target="_blank">https://meta.appinn.net/t/topic/93217 ↗</a></p>
+    <p><a href="https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers#claim-your-credits" target="_blank">https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers#claim-your-credits ↗</a></p>
   </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从项目页面确认最新下载方式和支持的 macOS 版本，安装后只授予麦克风、辅助功能和输入监控等必要权限。打开备忘录或文本编辑器，按住默认快捷键说一段中文，松开后检查文字是否准确插入；再在一个不含敏感信息的邮件草稿里测试标点、口语停顿和长句。若项目支持本地模型选择，先用默认配置建立识别基线，再根据 Apple silicon 内存情况调整模型。把“纯转写”和“润色/改写”分开测试，不要把语音原文自动发送到第三方 LLM，确认隐私设置、模型下载位置和快捷键冲突后再用于微信、邮件或代码注释。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>语音输入的价值不只是把声音变成文字，还在于它能否足够快地进入当前工作流、能否保留中文口语细节以及能否减少音频上传。Appinn 的介绍把它定位为本地优先、开源的 macOS 工具，适合在真实桌面环境中验证延迟、准确率和权限边界。它也代表一批“窄而实用”的本地 AI 工具：不追求万能聊天，而是把一个高频动作做得可控。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认账号属于符合条件的 Max 5x、Max 20x 或 Team 计划，并具备相应的订阅或 Console 组织权限；在 claude.ai 的 Settings→Billing，或 Team 的 Organization settings→Billing 中找到 API credits，选择要绑定的 Claude Console organization 并接受条款。绑定后进入 Console 的 Settings→Billing，检查 Promotional credits 是否到账，再创建 API key 发起一个最小请求。注意 credits 只适用于 Claude Platform，不覆盖 Claude Code 或其他云平台；每个计划和组织有绑定限制，月度额度也不会滚存。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是泛泛的“免费额度”传闻，而是官方文档明确列出资格、领取流程、金额和适用范围：Max 5x 每月 100 美元、Max 20x 每月 200 美元，Team 按席位共享且上限 500 美元。对想把 Agent 从聊天界面推进到 API、Managed Agents 或 SDK 的开发者，先用包含额度验证原型很有吸引力；但必须看清绑定组织、过期和产品边界，别把它误当成 Claude Code 的额外用量。</p></div>
   <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在微信、邮件、笔记和终端中快速输入较长中文内容。</li>
-    <li>对隐私敏感的会议草稿、需求口述和代码注释做本地转写。</li>
+    <li>用 API、Agent SDK 或 Playground 验证一个小型 Agent 原型。</li>
+    <li>为团队共享的内部自动化任务提供阶段性试用预算。</li>
   </ul></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/appinn/status/2108629383644692948" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2108622285586239619" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
     </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUNUm-gWcAA0x-7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUNUm-gWcAA0x-7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUNUrOjWYAAo_yb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUNUrOjWYAAo_yb?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUNUymbXAAAoaf3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUNUymbXAAAoaf3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUDBKlAW4AA9w9a?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUDBKlAW4AA9w9a?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">🛠️ GR00T N1.7 SSD Pick</div>
-  <div class="section"><div class="section-label event">一句话</div><p>NVIDIA 发布的机器人部署模型，在 Hugging Face 提供面向三摄像头输入的 SSD 拾取资产，用于 GR00T N1.7 的机器人抓取部署实验。</p></div>
-  <div class="section"><div class="section-label event">链接</div>
-    <p><a href="https://huggingface.co/nvidia/agile_one_s_pick_ssd_n17_58000" target="_blank">https://huggingface.co/nvidia/agile_one_s_pick_ssd_n17_58000 ↗</a></p>
-  </div>
-  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Hugging Face 模型页确认许可、文件大小和硬件要求，再下载模型仓库中完整的 ONNX `.data` 外部张量文件、配置 YAML 和已有 TensorRT engine，不要只下载一个看似完整的权重文件。按页面给出的入口配置 TensorRT 和目标 GPU，先在离线样例或仿真环境验证 ego、左腕、右腕三路输入的预处理与输出，再接入真实机器人。重点检查目标 GPU、TensorRT 版本、相机标定、坐标系和安全限位；仓库页面明确提醒，资产可用不等于机器人已经通过部署或安全认证，真实执行前必须设置急停和人工接管。</p></div>
-  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是一个只在论文里展示的通用机器人模型，而是面向部署的具体抓取 checkpoint，附带 ONNX 图、外部张量、配置和 TensorRT 计划。GR00T N1.7 本身把视觉、语言、本体状态和动作块结合起来，社区现在开始出现针对具体机器人与任务的可下载部署资产，说明 Physical AI 的竞争正从“发布 foundation model”进入“能否在一套传感器和硬件上稳定运行”的工程阶段。</p></div>
-  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
-    <li>在仿真或实验室机械臂上验证多摄像头抓取策略。</li>
-    <li>研究从通用 VLA 模型到特定机器人部署 checkpoint 的工程链路。</li>
-  </ul></div>
+  <div class="topic-title">📡 Claude Dynamic Workflows / Managed Agents</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 将 Dynamic Workflows 推向公测，主 Agent 可以按计划分阶段并行调度大量子 Agent，Managed Agents 也支持在沙箱中运行 Agent 任务。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这代表 Agent 产品的竞争重点正在从“单个模型回答得好不好”转向“复杂任务能否拆解、并发执行、汇总并验证”。官方文档将 dynamic workflow 描述为由脚本编排多个子 Agent，适合代码库级排错、迁移、研究和审计；Managed Agents 则把环境配置、工具执行和事件流纳入运行时。对开发者来说，真正需要设计的是任务边界、共享上下文、失败重试和最终验收，而不是简单把子 Agent 数量做大。并行不等于可靠，缺少去重、权限和审查时，错误也会被并行放大。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>当“编排”变成产品能力，企业 AI 平台会更像一个带预算、权限、日志和恢复机制的任务操作系统。研发团队可以把大规模代码迁移、知识库核验和多来源研究拆成可复用流程，但 token 成本、状态管理、数据隔离和结果责任也会明显上升。短期内更值得关注的是可观测性和可中断恢复，而不是“最多能调度多少 Agent”的宣传数字。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/HuggingPapers/status/2108515327105814725" target="_blank"><span class="handle">@HuggingPapers</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2108695019846619424" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
     </div>
   </div>
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 Deno 团队加入 Cloudflare，Deno Deploy 将退出</div>
-  <div class="section"><div class="section-label event">事件</div><p>X List 转述 Deno 团队加入 Cloudflare，并称 Deno 运行时进入一年维护期、Deno Deploy 再运行约半年后关闭。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这条消息对 JavaScript 基础设施用户的核心含义不是“运行时马上消失”，而是项目维护、托管平台和商业归属发生了切换。Deno 用户应把运行时版本、Deploy 配置、边缘函数、KV/数据库绑定和构建流程做一次资产盘点，并尽快准备一个不依赖单一托管平台的部署路径。由于本轮 Agent Reach 证据脚本超时，本文对时间表只按 X List 原文转述，不把未独立核验的细节扩大成官方承诺；正式迁移前应以 Deno、Cloudflare 的公告和迁移文档为准。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>对开发者而言，短期最重要的是供应链和可迁移性：锁定当前依赖、保存部署配置、导出数据并验证替代运行环境。对 Cloudflare 而言，吸收 Deno 团队可能强化 Workers、边缘运行时和开发者工具的整合，但社区也会更关注开源治理、兼容性和平台锁定风险。新项目不宜只因平台宣传就绑定尚未验证的专有能力。</p></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/dotey/status/2108583988021395671" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">📡 OpenAI Codex Windows 沙箱与 Microsoft Execution Containers</div>
-  <div class="section"><div class="section-label event">事件</div><p>Codex 面向 Windows 开发者推出基于 Microsoft Execution Containers 的沙箱模式，强调更快设置、更细粒度文件访问控制和可配置网络执行。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>coding agent 的竞争正在从“模型能不能写代码”扩展到“能不能安全地在真实操作系统里执行代码”。OpenAI 官方说明指出，Windows 缺少一个直接满足自主编码 agent 的单一隔离原语，因此需要组合受限账户、令牌、进程创建和 ACL 等机制；微软则把 Execution Containers 定位为可按策略限制文件、进程和网络范围的执行层。对使用 Codex 的 Windows 团队，正确的试用顺序应是默认沙箱、最小项目目录和无网络，再逐项放开必要权限。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>如果执行容器成为多个 agent 产品的共同底座，企业可以用更统一的策略审计模型生成代码、插件和工具，而不是每个 agent 各自实现一套隔离。代价是系统管理员需要维护 Windows 版本、容器能力、账户权限与网络策略，兼容性问题也可能让开发者倾向于关闭保护。因此“默认安全、按任务授权、可回收凭据、保留执行日志”会成为 agent 产品能否进入企业环境的关键卖点。</p></div>
+  <div class="topic-title">📡 Codex on Windows + Microsoft Execution Containers</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 为 Windows 上的 Codex 引入基于 Microsoft Execution Containers 的沙箱路径，强调文件访问、网络和执行范围的细粒度控制。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Agent 安全开始从提示词约束和人工确认，进一步下沉到操作系统与执行环境。OpenAI 的说明显示，Codex 命令从启动时就处于受限边界，子进程也继承限制；微软则把 Execution Containers 定位为面向不可信代码和模型生成工作负载的策略执行层。这样做的关键不是把 Agent 变得“不会犯错”，而是让错误最多影响被授权的项目目录、命令和网络范围。对本地编码而言，沙箱是生产力功能，也是安全基础设施。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Windows 终于在 Agent 运行环境上出现更统一的隔离层，可能降低企业批准本地编码 Agent 的门槛，也会推动其他 Agent 适配同一类执行策略。代价是安装版本、系统补丁、权限模型和工具兼容性更复杂，尤其是需要网络、容器或跨目录构建的项目。团队应把“默认受限、按任务放权、日志可审计”写进开发规范，而不是只依赖单个产品的安全承诺。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
@@ -281,55 +263,26 @@
 </div>
 
 <div class="topic">
-  <div class="topic-title">📡 《State of AI Report 2026》：AI 开始参与 AI 研发</div>
-  <div class="section"><div class="section-label event">事件</div><p>年度报告称，Anthropic 内部测量的模型研发工作中，Claude 参与并主导的比例从 2 月不足 1% 增至 8 月约 26%，同时 AI agent 进入更多真实系统。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>这个数字最值得看的地方不是“AI 已经完全自主”，而是研发任务中由模型承担的责任边界在扩大：研究人员提出问题、设定实验和监督结果，Claude 负责完成更多中间执行工作。报告同时强调尚未达到完全自治，因此应把它理解为监督下的研发自动化，而不是 AI 自己决定研究方向。对于普通团队，最可复制的部分是让 agent 修改训练或评测代码、运行短实验、整理日志、比较结果，再由人类决定是否保留改动；关键仍是可靠的评测集、预算上限和回滚机制。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>模型公司会更重视“AI 帮助开发 AI”的闭环效率，训练脚本、评测基础设施和实验编排将成为新的产品差异化。对工程团队来说，单纯增加模型调用量并不会自动带来研发收益，真正的瓶颈会转向实验选择、结果判断、数据质量和研究品味。招聘和组织形式也可能变化：能设计可验证实验、审查 agent 产物并管理失败成本的人，价值高于只会把任务交给模型的人。</p></div>
+  <div class="topic-title">📡 Microsoft-Decision-1</div>
+  <div class="section"><div class="section-label event">事件</div><p>微软发布面向固定选项决策的 Microsoft-Decision-1，基于 Qwen3.5-9B 后训练，可为选项输出概率并服务于路由、分类和校验。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>专门做“选哪个”的小模型，说明模型栈正在从一个通用大模型包打天下，转向生成模型、判断模型和执行系统的组合。微软官方介绍称它通过结构化 API 返回校准概率，覆盖 yes/no、多选、评分以及对 Agent 行为的 rubric 评估；这类输出更容易接进路由器、审核器和工作流控制器。它的价值不在于写出漂亮文字，而在于让应用知道何时自动执行、何时降级、何时把问题交给人工。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果判断模型在延迟和成本上足够低，企业可以把审批、优先级、检索重排、Agent 工具选择和安全筛选拆成可独立评估的组件，减少“让大模型顺便决定一切”的不透明性。与此同时，概率校准、标签定义、分布漂移和拒答策略会成为新工程问题；开发者不能把一个分数直接当成事实，而要保留阈值、回退和人工复核路径。</p></div>
   <div class="sources">
     <div class="label">原文链接</div>
     <div class="source-links">
-      <a class="source-link" href="https://x.com/dotey/status/2108572683453501884" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-    </div>
-  </div>
-  <div class="tweet-images">
-    <a href="https://pbs.twimg.com/media/HUMnT8jWQAE3I-f?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUMnT8jWQAE3I-f?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUMnkE8WIAAQm3G?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUMnkE8WIAAQm3G?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUMnnZwWEAAtsJZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUMnnZwWEAAtsJZ?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUMnq4eXkAAqcv0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUMnq4eXkAAqcv0?format=jpg&amp;name=medium" loading="lazy" /></a>
-  </div>
-</div>
-
-<div class="topic">
-  <div class="topic-title">📡 TypeSafe AI 的 Jev 融资</div>
-  <div class="section"><div class="section-label event">事件</div><p>媒体报道 TypeSafe AI 以 Jev 背后的非聊天型 AI 模型获得约 8.7 亿美元 A 轮融资，估值约 75 亿美元。</p></div>
-  <div class="section"><div class="section-label analysis">解读</div><p>Jev 的叙事与传统聊天模型不同：它被描述为接入软件、直接输出决策的模型，而不是聊天、写邮件或写代码。若融资和采用数据属实，市场正在为“决策基础设施”而不仅是“生成内容”定价；这与今天出现的 Microsoft-Decision-1 形成相互印证的路线信号。但目前公开报道中关于客户覆盖和使用规模的部分仍主要来自公司口径，不能简单等同于已验证的普遍生产部署。更稳妥的观察方法，是等待 API 文档、真实评测、价格和客户案例。</p></div>
-  <div class="section"><div class="section-label impact">影响评估</div><p>资本会进一步追逐能嵌入业务流程、直接影响交易和运营决策的模型公司；产品团队也会重新评估分类、路由、风控和推荐是否需要通用大模型。风险在于“概率输出”容易被业务系统误读为确定性判断，模型偏差会通过自动化流程放大。因此这类产品必须配套校准、审计、人工复核和可解释的业务规则，而不是仅凭融资规模判断技术成熟度。</p></div>
-  <div class="sources">
-    <div class="label">原文链接</div>
-    <div class="source-links">
-      <a class="source-link" href="https://x.com/MinLiBuilds/status/2108615476712775813" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/appinn/status/2108576496398843905" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/Minghao__Fu/status/2108638867326968196" target="_blank"><span class="handle">@Minghao__Fu</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/MinLiBuilds/status/2108565079021224205" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/lxfater/status/2108589875469733983" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/SmithaKolan/status/2108256222927589461" target="_blank"><span class="handle">@SmithaKolan</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/fankaishuoai/status/2108537029143437808" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2108669987338551776" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2108649243301081319" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/dotey/status/2108559440571933172" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
       <a class="source-link" href="https://x.com/dotey/status/2108701555058790506" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/dotey/status/2108622285586239619" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
-      <a class="source-link" href="https://x.com/xiaohu/status/2108541811006530031" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/dotey/status/2108583988021395671" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2108565079021224205" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
     </div>
   </div>
   <div class="tweet-images">
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2108638835383144448/img/RM9L1B0SDEYo48Ei.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108638835383144448/img/RM9L1B0SDEYo48Ei.jpg" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2108255990273695744/img/y-uO_aEiak-Bw125.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108255990273695744/img/y-uO_aEiak-Bw125.jpg" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/amplify_video_thumb/2108535612462768129/img/lkO2jieTj7Qnxe-M.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108535612462768129/img/lkO2jieTj7Qnxe-M.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2108626811164999680/img/F8PiWtkxs482oQPJ.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108626811164999680/img/F8PiWtkxs482oQPJ.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUNJGCXWsAA1hfT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUNJGCXWsAA1hfT?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/media/HUIcOONaAAAf9T5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUIcOONaAAAf9T5?format=jpg&amp;name=medium" loading="lazy" /></a>
     <a href="https://pbs.twimg.com/amplify_video_thumb/2108616285760499712/img/ESduThxQJik4m9hs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108616285760499712/img/ESduThxQJik4m9hs?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUNUm-gWcAA0x-7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUNUm-gWcAA0x-7?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUNUrOjWYAAo_yb?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUNUrOjWYAAo_yb?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUNUymbXAAAoaf3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUNUymbXAAAoaf3?format=jpg&amp;name=medium" loading="lazy" /></a>
-    <a href="https://pbs.twimg.com/media/HUDBKlAW4AA9w9a?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUDBKlAW4AA9w9a?format=jpg&amp;name=medium" loading="lazy" /></a>
   </div>
 </div>
 
@@ -337,9 +290,9 @@
 <div class="watchlist">
   <h2>🎯 值得关注</h2>
   <ul class="watch-list">
-    <li>Claude Code Projects：Pro/Max 候补用户陆续开放的公开测试功能，关注项目级上下文和长期任务管理 <a href="https://x.com/dotey/status/2108701555058790506" target="_blank">→</a></li>
-    <li>Claude API Credits：订阅用户可领取 API Credits 的使用路径，适合关注官方资格、额度和有效期变化 <a href="https://x.com/dotey/status/2108622285586239619" target="_blank">→</a></li>
-    <li>Claude Motion 与 Dashboards：值得观察从原型、仪表盘到视频交付的产品化能力和实际限制 <a href="https://x.com/xiaohu/status/2108541811006530031" target="_blank">→</a></li>
+    <li>Claude Projects：Pro/Max 候补用户开始分批获得公开测试入口，适合观察项目级上下文如何与 Claude Code 协同 <a href="https://x.com/dotey/status/2108701555058790506" target="_blank">→</a></li>
+    <li>Deno × Cloudflare：Deno 团队加入 Cloudflare、运行时和 Deploy 进入收尾期，提醒团队重新评估托管与运行时依赖 <a href="https://x.com/dotey/status/2108583988021395671" target="_blank">→</a></li>
+    <li>Qwen 3.8 Flash Next 125B 量化：社区给出了 4090、5090/5080 和 8–16G 显卡的不同量化建议，适合有本地部署条件的人继续核验 <a href="https://x.com/MinLiBuilds/status/2108565079021224205" target="_blank">→</a></li>
   </ul>
 </div>
 

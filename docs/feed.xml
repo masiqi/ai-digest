@@ -5,15 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 10 Oct 2026 00:42:28 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 00:48:26 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>📡 2026/10/10 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-10.html</link>
       <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-10.html</guid>
-      <description>今天最值得关注的变化，是 AI 产品从“单个智能体完成一件事”继续转向“可持久运行、能调用真实工具、还能动态拆分任务的执行系统”：Claude Managed Agents 把动态工作流推向公测，Grok Bot 把邮箱、X 与桌面应用接进长期运行的 Bot；另一条清晰主线是专用小模型和本地开源工具加速落地，从 Microsoft-Decision-1 的结构化决策，到 BaoCut、Mole、Cadenza 这类能立刻上手的桌面/开发工作流。
+      <description>AI 产品正在从“会生成”转向“能协作、能执行、能被约束”：一边是 Claude 把动态工作流和 Managed Agents 推向大规模并行，另一边是 Codex/Windows 用执行容器收紧 Agent 的权限边界。与此同时，本地语音输入、AI 资讯电视台和能直接服务编码 Agent 的 Skills 继续冒头，值得亲手试的项目比单纯模型发布更密集。
 
-本次 X List 共抓取 108 条推文；Agent Reach 多源证据补充脚本本轮运行超时，未生成证据包，因此下文只把有推文且能用官网、Git...</description>
+本次 X List 共抓取 81 条推文；Agent Reach 多源证据补充脚本本轮超时，未生成证据包，因此下文只把有推文且能用官网、GitHub、官方文档或可信网页交叉支持的项目放入“可上手”，证据不足的新线索明确标为“早期信号/证据...</description>
       <pubDate>2026-10-10T08:30:00+08:00</pubDate>
     </item>
     <item>
