@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 10 Oct 2026 00:48:26 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 00:45:16 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/11 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-11.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-11.html</guid>
+      <description>今天的信号集中在“把 AI 从云端聊天框搬进可控的工作流”：本地大模型开始在普通显卡上承担长上下文与 Agent 任务，桌面端 Harness、统一模型网关和可观测性则把多 Agent 的配置、额度与恢复流程收拢起来。另一条值得留意的路线是，模型输出正在从自由文本转向带概率的类型化决策，方便接入自动化系统；与此同时，AI 设计和网页生成继续从一次性草稿走向可编辑、可协作的成品。</description>
+      <pubDate>2026-10-11T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/10 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-10.html</link>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-11</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-11</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“把 AI 从云端聊天框搬进可控的工作流”：本地大模型开始在普通显卡上承担长上下文与 Agent 任务，桌面端 Harness、统一模型网关和可观测性则把多 Agent 的配置、额度与恢复流程收拢起来。另一条值得留意的路线是，模型输出正在从自由文本转向带概率的类型化决策，方便接入自动化系统；与此同时，AI 设计和网页生成继续从一次性草稿走向可编辑、可协作的成品。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ 乔木设计（Qiaomu Design）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Obsidian 桌面插件，把当前笔记、选中文字和素材直接做成可继续编辑的封面或海报，支持 AI 排版、生图/改图、图库、图层、手绘与导出。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-cover-design" target="_blank">https://github.com/joeseesun/qiaomu-cover-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Obsidian 1.11.4+ 中下载 GitHub Releases 的完整 ZIP，把插件目录放入库的 `.obsidian/plugins/qiaomu-cover-design/`，启用后打开一篇 Markdown 笔记，从命令面板运行“从当前笔记创建封面”。选择小红书、YouTube、公众号等画幅和模板，先手动改标题、图片、图层并导出 PNG/JPEG/WebP；如果要试 AI，再在“设置→模型与服务”配置自己的排版或生图服务，用一句话生成最多七个版式候选，选中后继续编辑。原始 `.qcover` 会保留在库里，后续可以再次打开修改。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把笔记丢给模型后只返回一张不可编辑的图片，而是把排版、文字、形状、图片和图层留在 Obsidian 画布中。AI 只是可选的起稿能力，基础编辑和导出不要求账号；插件还提供多平台安全区、系列风格、离线贴纸/图标和可备份的源文件，比较适合需要持续生产内容而不是偶尔生成一张图的人。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把读书笔记、课程笔记或 AI 资讯快速变成可复用的卡片和封面。</li>
+    <li>为公众号、视频号、小红书和 YouTube 同时制作不同画幅的素材，并保留可编辑源文件。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2108859881348538554" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Strata</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 MIT 开源的本地推理引擎/安装器，把 Qwen3.8-Flash-Next 这类通常需要服务器的 1250 亿参数模型搬到 Windows 或 Linux 的消费级显卡和系统内存上运行。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Niko1221/Strata" target="_blank">https://github.com/Niko1221/Strata ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Windows 10/11 或 Linux、至少 12GB 显存、32GB 以上内存和约 80GB SSD 空间；下载仓库 ZIP，Windows 双击 `START-HERE.bat`，Linux 执行 `./setup.sh`，按提示选择模型、上下文长度和是否启用图片输入，推荐值直接回车即可。首次下载模型约 70GB，启动时可能有 1—3 分钟卡顿。服务起来后访问 `http://127.0.0.1:8080`，也可以把 Claude Code、Codex 或其他客户端接到 `http://127.0.0.1:8080/v1`；需要 Anthropic 兼容接口时使用 `/v1/messages`。显存较小就选 Coder 或 Q2_0，内存更大再尝试 IQ3_S。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>关键不只是“能跑大模型”，而是把 MoE 模型的专家放在显存、内存和 SSD 的不同层级，并结合小模型猜测再由大模型校验，降低消费级硬件的进入门槛。仓库给出了 RTX 5070 12GB 上约 53—94 token/s、RX 9070 XT 16GB 上约 44—60 token/s 的实测区间，也明确列出了内存、磁盘和长上下文的代价，适合先按自己的硬件做可复现实验，而不是只看宣传语。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在不上传代码和文档的前提下，为本地 coding agent 提供 OpenAI/Anthropic 兼容模型。</li>
+    <li>给小团队搭建低成本的内部长文档问答、代码辅助或多用户本地推理服务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2108841867555049553" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUQcgPsXMAAyg2v?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUQcgPsXMAAyg2v?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DSH Desktop</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个独立社区维护的跨平台桌面壳，把 DeepSeek Harness 的本地 Agent 工作台、模型提供商、插件、工作区、手机续接和 PPT 生成整合成可安装应用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/dataelement/dsh-desktop" target="_blank">https://github.com/dataelement/dsh-desktop ↗</a></p>
+    <p><a href="https://dshdesktop.com" target="_blank">https://dshdesktop.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网下载稳定版，或从 GitHub Releases 选择预览版；macOS 支持 Apple Silicon/Intel，Windows 支持 x64，Linux 和 Windows ARM64 暂不支持。启动后添加 DeepSeek 官方模型或兼容的第三方供应商，选择工作区并直接使用 Harness 界面；打开 PPT 按钮，选模板并描述需求，可从 16 个模板、192 个布局生成可编辑 PPTX。若插件导致启动或渲染异常，选择 Harness→Restart as Safe Mode，系统会暂时屏蔽第三方插件而保留会话和模型设置；需要手机接续时从 Harness 菜单选择 Connect Phone 并扫码配对。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它解决的是 Agent 产品化中经常被忽略的“运行时和恢复”问题，而不只是套一个聊天窗口。配置、插件、会话和工作区独立于安装目录，带有安全模式、诊断日志和用户控制的更新流程；PPT、DOCX、XLSX 技能也随应用提供。需要注意它仍是基于 `@deepseek-ai/dsh@0.2.0-rc.2` 的早期预览，社区插件兼容性不能按成熟桌面软件预期。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>想试 DeepSeek Harness，但不想单独维护 Node、浏览器标签页和本地运行命令的开发者。</li>
+    <li>需要把研究材料交给 Agent，生成可继续编辑的 PPTX，并在电脑与手机之间续接任务的小团队。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2108995908688118139" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUR91GHaIAARgPm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUR91GHaIAARgPm?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ magpie</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 MIT 开源的本地模型网关和 Agent 配置中心，让 Claude Code、Codex、Gemini CLI、DeepSeek Harness 等几十个 Agent 共用供应商、订阅、路由组和额度信息。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yetone/magpie" target="_blank">https://github.com/yetone/magpie ↗</a></p>
+    <p><a href="https://usemagpie.ai" target="_blank">https://usemagpie.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网下载安装，或运行官方安装脚本；打开后到 Providers 添加 API Key、登录订阅或本地 Ollama/LM Studio，再在 Agents 页面给每个 Agent 选择模型。也可以在终端执行 `magpie provider add deepseek sk-…`，然后用 `magpie claude deepseek/deepseek-v4-pro` 或 `magpie codex moonshot/kimi-k2.5` 切换。需要自动兜底时创建 routing group，把多个模型放进去并选择 `smart`、`order`、`rotate` 或 `usage` 策略；再用 `magpie quota` 看各账号余额，用 `magpie tui` 观察请求。首次使用建议先备份 Agent 配置，并在隐私设置里确认是否允许读取本机订阅登录态。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“每个 Agent 一套 provider 配置”的碎片化问题提升成了一个本地控制面：网关同时兼容 OpenAI Chat/Responses、Anthropic Messages 和 Gemini，还能保留工具调用与流式输出。路由组可以在配额耗尽时无感切换，插件和 middleware 则允许做模型映射、系统提示词、敏感词过滤和请求改写；后续 Agent 也能以插件加入，这比维护越来越多的手工 JSON/TOML 更接近真正的 AI 基础设施。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>同时使用 Claude Code、Codex 和国产模型，想集中管理账号、模型、额度与故障切换。</li>
+    <li>在团队本地网关统一做模型别名、成本记录、请求审计或自定义中间件。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2108970031849918802" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUSQvyGbYAAtCar?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUSQvyGbYAAtCar?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUSQvyGacAAwQeA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUSQvyGacAAwQeA?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUSQvyJasAA4-ey?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUSQvyJasAA4-ey?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AnyJev</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Nokia 开源的决策层，把任意开放因果 LLM 转成能输出“选项+概率”的类型化决策器，支持选择题、是/否和有序评分；基础 L0 模式无需训练和人工标签。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nokia-applied-research/AnyJev" target="_blank">https://github.com/nokia-applied-research/AnyJev ↗</a></p>
+    <p><a href="https://arxiv.org/abs/2610.00831" target="_blank">https://arxiv.org/abs/2610.00831 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 `pip install anyjev`，如果想直接调用 Tacit 自蒸馏模型则执行 `pip install "anyjev[hf]"`，再用 `Tacit.from_pretrained("morriszjm/Tacit-9B")` 对状态、问题和有限选项调用 `decide`。想复用自己的开放模型，则用 `Decider(HFBackend("Qwen/Qwen3-8B"))` 和 `Question.choice(...)`；如果已经有 vLLM，可用 `pip install "anyjev[client]"`、`vllm serve morriszjm/Tacit-9B`，再启动 AnyJev HTTP gateway 的 `/v1/decide`。先用少量客服意图或工单路由样本验证概率分布，再决定是否启用 `adaptive=True`，不要把未经校准的概率直接当成业务风险概率。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>普通分类提示词往往受选项顺序、标签先验和自由文本解析影响，AnyJev 直接读取允许答案的 next-token 分布，并用循环移位和无标签校准减轻这些偏差。仓库报告在 BANKING77 的示例中，选项顺序翻转率从 0.230 降到 0.073，准确率从 0.747 提升到 0.803；Tacit 还可以只把低置信度的一小部分样本升级到推理路径。它更像一层可审计的决策接口，而不是又一个聊天应用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>客服工单、告警分流、审核队列和销售线索的多选路由。</li>
+    <li>在 Agent 循环里先用低成本概率决策筛选，只有不确定样本才升级到完整推理。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2108912677586395324" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HURc2nBawAA6dA9?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HURc2nBawAA6dA9?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Clef-omni media search</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个基于 Cloudflare Clef-omni 的开源视频检索示例，同时利用画面、声音和语义内容找片段，不依赖先转录字幕或单独的视觉 embedding。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/lucataco/clef-omni-media-search" target="_blank">https://github.com/lucataco/clef-omni-media-search ↗</a></p>
+    <p><a href="https://developers.cloudflare.com/workers-ai/models/clef-omni/" target="_blank">https://developers.cloudflare.com/workers-ai/models/clef-omni/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>克隆仓库后安装 Python 依赖，准备 ffmpeg 和 yt-dlp，运行 `python download.py` 下载示例视频，再运行 `python ingest.py` 切成 8 秒片段，最后 `python serve.py` 打开 `http://127.0.0.1:8790`。仓库自带预计算索引，先输入“屏幕上有代码”“有人提到 Durable Objects”等概念即可本地检索；按 Enter 才会触发对候选片段的实时深搜。要给自己的视频建索引，可清理 `media` 和 `web/media`，把 MP4 放入 `media/raw/`，修改 `concepts.py` 后重新 ingest/classify。实时搜索和重新分类需要 Cloudflare Workers AI 凭据，建议先用 `--ids` 小范围试跑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它展示了 Clef-omni 这类“状态+类型化问题→概率决策”模型在多模态检索中的具体落点：一个调用同时看视频帧、听音轨并回答一组 see/hear/say/both 问题。示例 70 分钟视频被切为 523 段，预计算索引后浏览器查询约 0.2ms；需要实时查询时才调用云端。这样既避免每次键入都请求模型，也让检索概念、概率和原片时间点都可检查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从会议、课程、产品演示或客服录音中按“看到/听到/说到”的条件找片段。</li>
+    <li>为企业视频库做低成本预索引，再把高价值查询交给多模态模型复核。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2108926990505959632" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ YouWare 网站模板</div>
+  <div class="section"><div class="section-label event">一句话</div><p>YouWare 新增网站模板入口，用户先选视觉方向和模型，再由 AI 生成真实 HTML 页面，并可分享、协作和继续编辑。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.youware.com/features/html-web-creator" target="_blank">https://www.youware.com/features/html-web-creator ↗</a></p>
+    <p><a href="https://www.youware.com" target="_blank">https://www.youware.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>登录 YouWare 后从主屏幕进入网站选项卡，先挑一个接近目标的外观，再选择可用模型并描述页面用途、受众、内容结构和交互要求，例如“做一个带价格表、案例和邮件收集的产品落地页”。生成后不要只看预览：打开代码视图检查页面结构，把品牌文案、链接、表单和移动端断点逐项修正，再邀请团队协作，最后用平台发布或导出代码部署。适合先从单页开始，明确告诉模型哪些内容必须保留、哪些交互需要真实工作；涉及登录、数据库或支付时要单独验证后端能力和权限边界。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方描述的重点不是静态图片或模板套壳，而是从提示生成浏览器真正渲染的 HTML/React 代码，再进行视觉编辑和 AI 迭代。这样可以把“想法—页面—修改—分享”压缩在同一条链路中，适合非前端用户做原型和营销页面；但网站生成器对代码可导出、后端、域名和平台锁定的实际条件仍应以当前账户和套餐为准，不能把一次生成等同于生产上线。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为产品发布、活动报名或个人作品集快速做可访问的第一版网站。</li>
+    <li>让产品、运营和设计一起从一份 brief 迭代落地页，而不是在图片稿和代码仓库之间来回搬运。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/YouWareAI/status/2108867128308957413" target="_blank"><span class="handle">@YouWareAI</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2108866740973420544/img/D4xwsR-rkFry7TbC.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108866740973420544/img/D4xwsR-rkFry7TbC.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SaaS SEO Playbook</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一份面向 AI 工具站、SaaS 官网和独立开发者的开源 SEO 实战小册子，把搜索意图、页面承接、技术 SEO、内容和外链组织成一套系统。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JeffLi1993/saas-seo-playbook" target="_blank">https://github.com/JeffLi1993/saas-seo-playbook ↗</a></p>
+    <p><a href="https://bysocket.com/saas-seo-playbook/" target="_blank">https://bysocket.com/saas-seo-playbook/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接从 GitHub 阅读 README 和 `chapters/`，先看“SEO 是一套系统”和“搜索意图与 Last-Click”，再用自己的站点做一张 Keyword-to-Page 表：每个主要意图指定一个承接页面，记录页面类型、目标用户、信息增量、内链和转化动作。接着选一篇已有文章，按仓库的发布检查补齐标题、结构化内容、内部链接与页面体验，发布后在 Search Console 或日志中观察收录和真实查询，而不是只追一个关键词排名。章节仍在补全，建议把它当作可 Fork 的工作手册，边读边把规则改成团队 checklist。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 SEO 从“堆关键词、买外链”的零散技巧，改写成产品、内容、技术可见性和站外信任共同组成的长期系统。对 AI 工具站尤其有用的是“一个主要搜索意图由一个明确页面承接”的原则，可以减少同站页面互相竞争；同时仓库采用 MIT 许可、章节和大纲分离，适合独立开发者按自身案例继续补充，但当前仍处于公开发布前整理阶段，不能把未完成章节当成完整教材。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为 AI 工具目录、SaaS 官网和独立开发项目规划页面类型与内容地图。</li>
+    <li>把 SEO 发布、内链、收录和转化检查整理成可重复的团队流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2108970725193499102" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUSRqVJbsAA2JOZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUSRqVJbsAA2JOZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUSRqVKbAAAdWE5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUSRqVKbAAAdWE5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 网易叭哥说</div>
+  <div class="section"><div class="section-label event">一句话</div><p>网易的桌面端 AI 语音输入工具，主打语音转文字、去除口头语、自动润色、语音翻译和跨应用输入，让口述内容直接变成可发送的句子。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://bug.youdao.com/" target="_blank">https://bug.youdao.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网进入下载入口，安装对应桌面客户端后先授予麦克风和跨应用输入所需权限；在任意输入框按工具提示开始说话，先测试普通中文口述，再观察它如何处理停顿、改口和口头语。随后分别试用“原样转写”“智能润色”和语音翻译，拿一段会议摘要或工作消息对比修改前后，确认专有名词、数字和隐私内容没有被错误替换，再决定是否把它设为高频快捷键。官方页面把它定位为跨应用语音输入，具体系统支持、账号和隐私条款应以下载页当前版本为准，不要直接把宣传中的准确率当作所有场景保证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它瞄准的是“输入速度”而非泛聊天：用户可以保留自然口述的速度，让模型负责去掉口头语、理顺改口和整理成可直接使用的表达。对经常写长消息、做会议记录或在手机/电脑之间切换的人，这种跨应用入口可能比打开一个聊天窗口更高频；同时语音涉及敏感工作内容，使用前应阅读官方数据留存与训练声明，并对医疗、财务和客户信息做脱敏。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>口述邮件、即时消息、会议纪要和长篇工作草稿。</li>
+    <li>把中文口述先整理成可读文本，再快速翻译成其他语言。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2108928592105316356" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Design 回到 Claude 对话中的 Artifact 能力</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 将设计、设计系统和 PPT 等能力并入 Claude 的对话与 Artifacts 工作流，而不是继续把 Claude Design 作为必须单独访问的产品入口。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方帮助中心已经把 Design、Slides、Docs 和交互式工具统一解释为可以在对话侧创建、编辑、再次打开和分享的 artifact；Anthropic 的产品说明还强调了从提示、图片、文档、表格或代码库导入，再通过画布内评论、直接编辑和调整控件迭代。这种变化把“模型回答”和“可交付文件/视觉产物”放在同一个对象里，用户不必在聊天、设计工具和文件导出之间反复搬运。需要区分的是，X 上的日期和套餐说法可能随 rollout 变化，最终可用范围应以当前账户界面与官方发布说明为准。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>AI 设计产品的竞争焦点会从一次生成的视觉效果，转向可编辑性、设计系统复用、多人协作和跨格式导出。对团队而言，artifact 若能保留结构而非只给 PNG，就更接近“可审阅的中间成果”；但它也会提高版本、权限、品牌资产和数据治理要求，设计师的价值会更多落在约束、验收和系统化审美上。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2108832696117952600" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUQUJhvasAAXpdk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUQUJhvasAAXpdk?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUIcOONaAAAf9T5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUIcOONaAAAf9T5?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 递归自我改进开始具备可审计的实验基础设施</div>
+  <div class="section"><div class="section-label event">事件</div><p>Evolvent AI 发布 RSIGym，把研究 Agent 设计数据、训练、推理、评测和执行 Harness 的实验循环，并用 RSI-Index 衡量其缩小多个基准剩余性能差距的程度。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>RSIGym 的新意不只是让 Agent“自己改自己”，而是把每次运行拆成可授权、可计费、可检查的服务：训练、模型推理、前沿模型 rollout、Benchmark、沙箱和权限预算各有接口，研究 Agent 负责选择实验，平台负责资源边界与记录。仓库披露的研究结果覆盖 SWE-bench、Terminal-Bench、AIME、GPQA 和 SkillsBench，初始系统、修改内容、轨迹、奖励和最终评估都能进入审计链。X 上关于“凭证越权调模型”的说法很吸引眼球，但它只能作为运行记录线索，不能替代对原始 trajectory 和权限配置的逐项复核。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果这类环境成熟，模型能力评测会从静态榜单转向“在明确预算和权限下能否提出有效实验并安全改进系统”。研究团队可以比较数据、Harness 和联合优化三种路线，企业也能把自动化研发放入可回放的沙箱；相应地，凭证隔离、成本上限、提交物审计和防止训练/评测泄漏会成为 Agent 研究基础设施的核心，而不是附属安全选项。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2108856349547540592" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Prefill 与 Decode 正在成为推理工程的基本分层</div>
+  <div class="section"><div class="section-label event">事件</div><p>一篇面向开发者的推理性能文档把 LLM 生成拆成“并行读入上下文”的 Prefill 和“逐 token 生成”的 Decode，并将其作为理解量化、批处理和投机解码的共同起点。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>同一个模型在读长提示和写回复时消耗的硬件资源并不相同：Prefill 更偏向大吞吐的矩阵计算，Decode 则更容易受显存带宽、KV Cache 和逐步依赖限制。对本地运行和服务端部署而言，这解释了为什么某个引擎长文档首轮很快但续写慢，或为什么量化后输出速度改善却没有同比改善首 token 延迟。把两个阶段分开测量，才能判断问题来自模型、上下文长度、批处理策略还是硬件，而不是只报一个笼统的 token/s。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>推理优化会越来越像系统工程：服务商需要分别调度 Prefill/Decode、缓存和并发，个人部署也应记录首 token、输入吞吐、输出吞吐、上下文长度和并发数。对 Agent 来说，长工具轨迹会反复支付 Prefill 成本，缓存和上下文压缩可能比盲目换更大的模型更有效；但任何“速度提升”都必须说明测的是读还是写，避免用单一指标误导选型。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2108839032939819268" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/artemZholus/status/2108983104178213096（证据待补）" target="_blank"><span class="handle">@artemZholus</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/AlchainHust/status/2108926651417682066（证据待补）" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2108832060819288235（证据待补）" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2108896410271940695（证据待补）" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2108860377148584438（证据待补）" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2108941921926382035（证据待补）" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2108867249628966992" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/xiaohu/status/2108874566906876063" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2108875675792994703" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUQZ5rrakAAPNOi?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUQZ5rrakAAPNOi?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUMNzKDWsAAKmA7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUMNzKDWsAAKmA7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2108873911157014528/img/JMikh0UyjLOYCXG_.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108873911157014528/img/JMikh0UyjLOYCXG_.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUQ7P7Oa4AA4SlD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUQ7P7Oa4AA4SlD?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUQ7P7HagAAHEuU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUQ7P7HagAAHEuU?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUQ7P7QbIAApo03?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUQ7P7QbIAApo03?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>ArXiv Hub／论桥：把论文与摘要、代码、数据等入口集中到一处，适合观察科研检索是否从“搜论文”走向“搜可复现实验” <a href="https://x.com/appinn/status/2108867249628966992" target="_blank">→</a></li>
+    <li>豆包工作画布：线索显示其尝试从一张素材扩展到角色、VI 手册、电商页和招商 Deck，值得关注中文工作流里的长画布一致性 <a href="https://x.com/xiaohu/status/2108874566906876063" target="_blank">→</a></li>
+    <li>GrokBot 移动协作：有人让 GrokBot、异地 Codex 与本地 Mac 协同开发并控制设备，值得观察多 Agent 跨设备授权是否会形成通用模式 <a href="https://x.com/turingou/status/2108875675792994703" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
