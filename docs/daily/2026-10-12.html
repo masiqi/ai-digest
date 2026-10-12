@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-12</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-12</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的信号集中在“Agent 从一次性对话走向可持续工作环境”：Termany 把多 Agent 会话、工作树、远程主机与差异审查放进同一终端，JiuwenSwarm 与密歇根大学的五阶段 Skills 则分别从运行时编排和工程流程两端补齐长期协作。与此同时，REA、Anatomy、Shotnix 等项目把“理解软件、解释概念、记录过程”做成可直接上手的本地工具。本轮 X List 共抓到 114 条推文；Agent Reach 多源证据包在限定时间内未产出，因此下列可上手项目均改用推文与官网/GitHub/文档逐项人工交叉核验，证据不足的新线索明确降级到🌱。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ REA：让编码 Agent 直接做本地逆向分析</div>
+  <div class="section"><div class="section-label event">一句话</div><p>REA 是一个开源的 MCP/CLI 逆向工程工具，让 Claude Code、Codex 等编码 Agent 检查原生二进制、JavaScript/Electron 应用、.NET 程序、网页及运行时行为，并把结论连同证据、置信度和限制条件返回。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/morluto/rea" target="_blank">https://github.com/morluto/rea ↗</a></p>
+    <p><a href="https://rea.tools/" target="_blank">https://rea.tools/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在允许分析的本地项目或应用上执行 `npx rea-agents setup`，按提示选择要接入的 Claude Code、Codex、Cursor 或 Gemini CLI，然后重启对应 Agent。接着给 Agent 一个具体问题，例如“使用 REA 分析这个 Electron 应用的登录流程，列出关键模块、调用关系和未知点”，不要一开始就要求“还原全部源码”。如果要从终端操作，可先用 `rea capabilities` 检查本机可用能力，再用 `rea analyze PATH`、`rea decompile` 或相关命令定位目标。JavaScript/Electron 静态分析不一定需要 Hopper/Ghidra；原生二进制的深度分析则要准备相应分析引擎。每次先限定目标、范围和授权边界，再让 Agent 逐步追踪字符串、符号、交叉引用和调用图，最后把 Evidence 导出留档。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把“反编译”包装成一个黑盒聊天按钮，而是把分析过程、证据链、提供者身份、置信度与限制条件纳入统一协议。对需要理解竞品行为、兼容旧格式、审计桌面应用或维护没有源码的系统来说，这比单纯让模型猜代码可靠得多；同时项目强调分析在本地完成，不把被分析的程序上传到托管服务。边界也很清楚：它不能保证恢复原始源码，动态捕获和原生深度分析仍然受权限与本机工具影响。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给没有源码的 Electron/桌面应用建立模块地图，定位某个功能的实现路径。</li>
+    <li>对二进制或旧协议做兼容性研究，把带证据的发现转成测试和替代实现。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2109281855912735135" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUWsqUdagAAxfmD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUWsqUdagAAxfmD?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Termany：把多 Agent 会话、工作树和远程开发放进一个终端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Termany 是面向 Agent 的本地优先终端，可在一个窗口同时运行 Claude、Codex、Gemini、OpenCode、Hermes 等多个会话，并统一查看文件、Git diff、工作树、端口、远程主机和 Token 使用情况。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://termany.sh/" target="_blank">https://termany.sh/ ↗</a></p>
+    <p><a href="https://github.com/thinkany-ai/termany" target="_blank">https://github.com/thinkany-ai/termany ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官网下载安装桌面版，或按仓库 README 运行项目。打开后按 workspace→page→tab→pane 组织工作：一个 workspace 放一个产品或客户，一个 page 放一个项目，再用多个 pane 并行启动不同 Agent。把一个 pane 切换到 Files 或 Git diff 视图，旁边保留 Agent 对话；需要隔离改动时为每个任务创建独立 worktree，避免多个 Agent 互相覆盖。远程开发时给 pane 配置 SSH 主机，Termany 可以把会话、端口和工作树绑定在一起。实际试用建议从“一个仓库、两个 worktree、一个 Claude、一个 Codex”开始，观察 working/done/needs attention 状态是否能减少来回找标签页的时间，再逐步加入远程 devbox。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它解决的不是“再开一个终端窗口”，而是 Agent 并行工作的可观察性和上下文隔离问题。项目把嵌套页面、持久会话、工作树、远程 SSH、文件预览、Git diff 和 Agent 状态放在一个布局模型中，适合同时推进多个分支的人。尤其是它不只显示 shell 提示符，而是根据前台任务和屏幕变化标记会话状态，这能降低长任务在后台静默结束或卡住后无人发现的概率。当前项目仍在快速演进，桌面本地 PTY、云端后端等路线需要按实际版本验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>一个产品同时让多个 Agent 分别负责修 Bug、写测试、做前端和审查 diff。</li>
+    <li>把长时间运行的编码任务移到远程机器，同时在本机查看会话、端口和工作树。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2109279537486000524" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUWmycrbIAAcmXq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUWmycrbIAAcmXq?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Shotnix：本地完成截图、录屏、OCR 和自动剪辑的 Mac 工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Shotnix 是 MIT 开源的 Mac 截图与录屏工具，支持滚动截图、标注、模糊、OCR、二维码识别、系统音频、摄像头和录制后自动缩放/字幕/光标处理，文件留在本机。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://shotnix.com/" target="_blank">https://shotnix.com/ ↗</a></p>
+    <p><a href="https://github.com/OMARVII/Shotnix" target="_blank">https://github.com/OMARVII/Shotnix ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在官网或 GitHub Releases 下载适配 Apple Silicon 的 DMG，拖入 Applications 后首次启动时授予 Screen Recording 权限；只有启用摄像头、麦克风或辅助功能时再授予对应权限。先用菜单栏或快捷键截取一块窗口，试试 OCR 复制屏幕文字、箭头/高亮/模糊和置顶截图。然后选择录制区域或窗口，打开系统声音、麦克风或摄像头，停止录制后查看自动生成的缩放和光标效果，再导出 MP4、GIF 或复制到剪贴板。做长网页或聊天记录时使用滚动截图；处理敏感资料时可直接在本地做模糊和打码。建议先用一段 30 秒产品演示验证权限、编码和导出效果，再决定是否替代系统截图工具。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“截图之后还要打开编辑器”的步骤压缩进一个轻量菜单栏应用，而且官方说明强调录制、转写、导出都在本地完成，无账号、无订阅、无水印。对教程作者和开发者来说，滚动截图、OCR、二维码读取、标注、置顶和自动镜头效果组合在一起，覆盖了从取证到发布的完整链路；MIT 许可和 Swift 原生实现也使它更容易审计或按团队需求改造。注意它主要面向 Apple Silicon，使用前要核对 macOS 版本和系统权限。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>录制一个 Agent 操作流程，自动生成带光标和缩放效果的教程视频。</li>
+    <li>从会议、网页或远程终端截图中提取文字，并在分享前本地模糊敏感信息。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2109227052293374061" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Skills Hub：一次安装，把 Agent Skills 同步到多个工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Skills Hub 是一个跨平台桌面应用，把 Agent Skills 集中管理并同步到 Claude Code、Codex、Cursor、OpenCode、Antigravity 等多个工具的全局或项目目录。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/qufei1993/skills-hub" target="_blank">https://github.com/qufei1993/skills-hub ↗</a></p>
+    <p><a href="https://skills-hub.dev/" target="_blank">https://skills-hub.dev/ ↗</a></p>
+    <p><a href="https://skills-hub.ai/" target="_blank">https://skills-hub.ai/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果想要桌面管理，先从 GitHub 仓库安装对应版本；打开后让它扫描本机已有的 skills，再把技能导入中央仓库。之后从 Git 仓库、本地目录或在线搜索添加一个 Skill，选择标签、全局/项目作用域和目标工具，执行同步。先选一个不会影响生产流程的代码审查 Skill 做实验，分别在 Claude Code 和 Codex 中检查是否出现相同的 `SKILL.md` 内容；修改中央版本后再查看哪些目标显示 drifted 或 missing。使用团队仓库时把来源固定为明确的 Git commit 或 release，定期检查更新失败记录，不要把包含密钥、Cookie 或个人提示词的目录直接纳入同步。命令行用户也可以参考 skills-hub.ai 的 CLI，用 `npx @skills-hub-ai/cli install &lt;skill&gt;` 安装到检测到的工具目录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent Skills 正从“某一个工具的隐藏提示词”变成可迁移的工作流资产，真正的痛点变成版本漂移、重复复制和多工具目录不一致。Skills Hub 以中央仓库、目标适配器、标签和内容级校验解决这一层管理问题，桌面版还支持从 Git/本地源自动更新；CLI 方向则强调一次安装到多种 Agent。它的价值不在于凭空增加模型能力，而在于让经过验证的流程更容易复用、审查和迁移。项目更新时间很新，建议先用非敏感 Skill 试同步，再评估权限与团队治理。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把团队的代码审查、发布检查和文档生成流程同步到多个编码 Agent。</li>
+    <li>在换用 Codex、Cursor 或 OpenCode 时迁移已有 Skill，减少手工复制和版本分叉。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2109225818484346977" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ JiuwenSwarm：不绑定模型的多智能体协作 Harness</div>
+  <div class="section"><div class="section-label event">一句话</div><p>JiuwenSwarm 是 openJiuwen 体系下的开源 Agent 框架，负责理解复杂意图、拆分任务、组建专家 Agent 团队、调度 Skills/工具并交付结果，项目本身不内置固定模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/openJiuwen-ai/jiuwenswarm" target="_blank">https://github.com/openJiuwen-ai/jiuwenswarm ↗</a></p>
+    <p><a href="https://github.com/openJiuwen-ai/openJiuwen" target="_blank">https://github.com/openJiuwen-ai/openJiuwen ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先克隆仓库并阅读 README、示例和配置文件，不要直接把它接到有真实写权限的生产环境。准备一个 OpenAI 兼容 API 或本地模型端点，按照项目的配置方式填入模型、工具和通信渠道；第一次试验选择“读取一个公开目录并生成项目概览”之类可回滚任务。观察 Leader 如何把任务拆成子任务、如何选择专家角色、如何调用工具以及最终如何合并结果。再为每个角色设置最小权限、独立工作目录和人工确认点，测试某个子 Agent 失败时是否能被重新调度。由于仓库说明它是纯 Harness，模型、工具适配和安全边界都要由部署者明确配置，不能把“支持多 Agent”理解成默认安全或自动拥有全部能力。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把多 Agent 系统的重点放在编排层，而不是和某个模型绑定。对需要更换 OpenAI 兼容模型、华为云 MaaS 或本地模型的团队来说，这种模型无关的 Harness 更容易作为实验底座；Leader/专家团队/Skills/工具的分层也适合将复杂任务拆成可观测步骤。Apache-2.0 许可和 GitHub 公开仓库降低了试用门槛，但它刚刚进入公开传播阶段，实际生态、稳定性和生产级权限模型仍需自行验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把研究、检索、代码修改和测试拆成不同角色，比较串行 Agent 与团队式编排的效果。</li>
+    <li>在本地模型或 OpenAI 兼容 API 之间切换，构建企业内部的可控 Agent 原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2109083154682351988" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUT38MXaQAARG_C?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUT38MXaQAARG_C?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Anatomy：把抽象技术概念生成可交互的机械图解</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anatomy 是一个 Claude Code Skill，用户用一句话描述概念，Skill 生成可旋转、可交互的等轴测机械图解，用真实部件、运动、读数和可选 WebGL/3D 来解释机制。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://skills.wheresryan.sh/anatomy" target="_blank">https://skills.wheresryan.sh/anatomy ↗</a></p>
+    <p><a href="https://three.ws/anatomy" target="_blank">https://three.ws/anatomy ↗</a></p>
+    <p><a href="https://github.com/wheresryan22/anatomy" target="_blank">https://github.com/wheresryan22/anatomy ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在项目中安装 Anatomy Skill，例如按官方示例把 `.agents/skills/anatomy` 复制到项目的 `.claude/skills/`，然后打开 Claude Code。不要先描述“画一张普通流程图”，而是给出要解释的机制和真实参数，例如“解释 Token Bucket 限流，做成一个互动的闸门和水箱，显示容量、补充速率和当前令牌数”。要求输出 standalone HTML、SVG 或 React/Next.js 组件，并明确要不要 interactive。生成后在浏览器中拖动、按键和查看 live readout，核对图中运动是否真的对应概念；如果是工程文档，补充可访问性、reduced motion 和移动端尺寸要求。复杂 Hero/Epic 图形会消耗较长构建时间，先从 Figure 规模和已有示例开始，再扩大部件数量。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“解释概念”从静态框图升级为可操作的模型：部件、运动和读数共享同一个数据模型，读者可以通过旋转、拆解和操作理解机制，而不是只看一串标签。官方示例覆盖 SVG、WebGL 和实验性的真实 3D，并提供几何审计、截图驱动和无障碍要求，说明它不只是生成一张好看的图片。对技术教育、产品文档和复杂系统演示来说，这类 Agent Skill 可能成为新的内容生产单元；但生成耗时、图形性能和事实参数仍必须人工审查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为缓存、限流、消息队列或数据库索引制作可交互的技术教学页面。</li>
+    <li>将复杂机械或系统流程变成产品官网上的可探索演示，而不是静态架构图。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2109295371105214778" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2108946813889675264/img/_dWHpXtU83mCMxS7.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108946813889675264/img/_dWHpXtU83mCMxS7.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Unsloth Decision Model：把 Qwen3.5-4B 微调成有界决策模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Unsloth 提供免费 Colab/Kaggle 笔记本，把 Qwen3.5-4B 从自由文本生成模型微调成对预定义选项打分并返回概率的 Decision Model。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://unsloth.ai/docs/basics/train-your-own-decision-model-with-unsloth" target="_blank">https://unsloth.ai/docs/basics/train-your-own-decision-model-with-unsloth ↗</a></p>
+    <p><a href="https://colab.research.google.com/" target="_blank">https://colab.research.google.com/ ↗</a></p>
+    <p><a href="https://huggingface.co/unsloth" target="_blank">https://huggingface.co/unsloth ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 Unsloth 的官方 Decision Model 文档和 Colab 笔记本，准备结构化的决策数据：每条样本包含状态、问题、允许的选项和正确答案，避免把开放式聊天数据直接塞进去。按文档加载 `unsloth/Qwen3.5-4B`，选择 Decision model，先用少量样本和短训练验证数据格式，再按建议尝试 4-bit LoRA、rank 16、学习率 2e-4 和 2 个 epoch。保留独立的 held-out/test 切分，比较训练前后准确率和概率校准，不要只看训练 loss。完成后先在离线评估集上检查错误选项、置信度和边界案例，再考虑导出或接入业务路由；医疗、金融、招聘等高风险决策必须保留人工审核，不应因为模型返回了概率就当作客观概率。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这条路线把 LLM 的一部分用途从“写一段看似合理的答案”转成“在固定选项集合中做可评估决策”，更接近分类、路由、筛选和策略选择。官方文档给出了免费 GPU 笔记本、数据准备、LoRA 和评估路径，开发者可以用自己的标签数据做小规模实验；返回选项概率也便于阈值控制和人工接管。不过概率是否校准、数据分布变化后是否失效，仍需要独立评估，不能把 demo 的准确率直接外推到业务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在客服、工单或内容审核中，从固定动作集合里选择下一步处理策略。</li>
+    <li>为 Agent 做工具路由、风险分级或有限状态决策，超过阈值时转人工。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2109193425761583419" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUVcK4racAA-Htp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUVcK4racAA-Htp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Elephant-Goldfish 五阶段 Skills：给 AI 编程加上设计、复核和实现闸门</div>
+  <div class="section"><div class="section-label event">一句话</div><p>密歇根大学 Applied Agentic Software Engineering 课程把 Agent 编程方法拆成 `/peanuts`、`/elephant`、`/goldfish`、`/egm-implement`、`/mean-review` 五个 Skills。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/eecs498-aase/materials/tree/main/egm/skills" target="_blank">https://github.com/eecs498-aase/materials/tree/main/egm/skills ↗</a></p>
+    <p><a href="https://github.com/eecs498-aase/materials" target="_blank">https://github.com/eecs498-aase/materials ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在仓库中阅读五个 Skill 的顺序和课程材料，再把它们复制或安装到一个非关键项目。面对遗留代码先运行 `/peanuts`，从叶子目录开始建立 README 层级；新功能先用 `/elephant` 写 Problem、Technical Plan、Alternatives、Detailed Implementation 四部分设计文档，暂时禁止直接写代码。随后用全新上下文运行 `/goldfish`，只给它设计文档和明确引用的文件，检查一个没有聊天记忆的 Agent 能否理解方案；不通过就补文档。通过后用 `/egm-implement` 按文件清单实现，再用 `/mean-review` 做偏严格的全文件审查，把正确性问题、可维护性问题和样式问题分级，修复后重复审查。把每一步的输出提交到项目中，保留设计文档和 review 记录，才能真正验证流程是否减少返工。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它抓住了 Agent 编程里最容易被忽视的断点：长会话里的隐含上下文没有被写进设计文档，下一次会话就会重新猜；生成代码的速度超过了人类审查速度，礼貌式“看起来没问题”又会放大缺陷。Elephant/Goldfish 把设计文档当作可序列化接口，用全新会话做理解测试，再用实现闸门和敌意审查约束代码漂移。它不是一个新模型，而是一套可复制的工程纪律，尤其适合遗留系统和多人/多 Agent 协作；代价是前期文档和人工决策时间会增加。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在大规模遗留代码库中逐层建立上下文，减少 Agent 因一次读取过多代码而产生的幻觉。</li>
+    <li>对高风险新功能实行“设计通过—冷读复核—实现—严格审查”的流水线。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2109305199357784357" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUXB4Adb0AA5RFH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUXB4Adb0AA5RFH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Codex 上下文窗口继续扩大</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 上的开发者观察称，Codex 默认上下文从约 200k–300k 提升到约 500k，最大上下文长度可到 1M。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果这一观察对应的是当前版本或灰度配置，它意味着编码 Agent 的工作方式正在从“频繁压缩摘要”转向“尽量保留更长的仓库、工具输出和会话历史”。长上下文可以减少重复解释和状态丢失，但不等于模型会自动找到关键信息：无关日志、重复代码和旧决策也会挤占注意力。对实际用户，更重要的是观察压缩频率、单次任务成本、响应延迟和长上下文下的错误率，而不是只看名义 token 上限。由于本条只有 X List 观察，具体可用额度仍应以账号和产品界面为准。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>编码工具会更容易承接跨文件、跨阶段任务，项目级 README、设计文档和长期会话的价值上升；同时上下文成本、隐私暴露面和错误累积半径也会扩大。团队需要继续做上下文裁剪、权限隔离和阶段性验证，不能因为窗口变大就取消测试与人工审查。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2109436840155697267" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 AI 正在从“调用 Agent”转向“常驻 Bot”</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 讨论把普通 Agent 描述为一次性任务会话，把 Bot 描述为拥有独立记忆、权限、技能和工作目录、可长期运行的执行环境。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是单纯的命名变化，而是运行时模型的变化：一次性 Agent 的上下文在任务结束后释放，常驻 Bot 则需要持久化状态、定时触发、失败恢复、权限边界和成本控制。常驻化后，真正的产品问题从“模型能不能回答”变成“它何时醒来、能看什么、能写什么、失败如何停机”。Termany 的 Bot/会话组织、JiuwenSwarm 的编排层以及 Yobiru 的跨设备通信，正好代表了不同的实现方向，但本日报不把这些社区描述当成统一行业标准。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来企业 Agent 竞争点可能从聊天体验转向可观测的执行基础设施，包括任务队列、工作目录、记忆、审计、审批和预算。对个人用户而言，常驻自动化很有吸引力，但后台运行也会放大误操作和账户权限风险；部署任何 7×24 Bot 前，应先限制网络、文件和外部发送能力，并用可回滚的测试任务验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2109340077285585365" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Google 试点在软件工程面试中允许候选人使用 Gemini</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 转述 Business Insider 依据 Google 内部文件的报道：候选人可在代码阅读、找 Bug 和优化环节使用 Gemini，面试官同时观察候选人能否识别 AI 的错误。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>如果试点范围和细节属实，面试考察的重点就不再是“能否在没有辅助的情况下把代码敲出来”，而是能否建立问题模型、提出有效约束、审查 AI 输出并为结果负责。它也会迫使招聘方重新定义公平性：允许使用什么工具、哪些环节可以联网、如何记录提示和修改、怎样区分候选人的判断与模型的代写，都需要明确规则。当前 X List 转述并非 Google 官方公告，本条应视为行业信号而非已全面实施的政策。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>软件工程教育和招聘评价可能更强调调试、系统设计、测试策略、代码审查和解释能力；简历中的“会用某个 Agent”本身会越来越不够。企业若采用类似面试，应提供统一工具和任务环境，保留候选人的过程证据，并把模型出错时的判断能力纳入评分，而不是把模型输出质量直接当作个人能力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2109403569279344900" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2109153922267107458" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/turingou/status/2109295035732926572" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2109423445175853163" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2109175407186735107" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/vista8/status/2109088491451900130" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/appinn/status/2109227052293374061" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUYa6unWgAAA4Bs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUYa6unWgAAA4Bs?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUQ7P7Oa4AA4SlD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUQ7P7Oa4AA4SlD?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUQ7P7HagAAHEuU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUQ7P7HagAAHEuU?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUQ7P7QbIAApo03?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUQ7P7QbIAApo03?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109174580908785664/img/kTRmpD_hqEk6PM7y.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109174580908785664/img/kTRmpD_hqEk6PM7y.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUT8OCKawAExbW2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUT8OCKawAExbW2?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109088120000102400/img/cbxA7lQGexpqjMBu.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109088120000102400/img/cbxA7lQGexpqjMBu.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Agent 跨设备通信：如果 Yobiru 一类工具能把局域网设备纳入 Agent 的受控工具边界，个人 Agent 将从云端聊天进一步接近家庭自动化，但安全与身份模型是关键 <a href="https://x.com/turingou/status/2109153922267107458" target="_blank">→</a></li>
+    <li>本地优先创作工具：Shotnix、浏览器水印和本地视频处理都在把“文件不上传”变成产品卖点，值得继续观察隐私能力是否能与云端便利性竞争 <a href="https://x.com/appinn/status/2109227052293374061" target="_blank">→</a></li>
+    <li>AI 生成交互式解释器：Anatomy 代表的不只是 3D 视觉效果，而是把可交互模型嵌入文档和教学内容，后续可关注其参数真实性、性能和生成成本 <a href="https://skills.wheresryan.sh/anatomy" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
