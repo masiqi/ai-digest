@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-13</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-13</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得动手的信号不在大模型跑分，而在本地声音制作、程序化动画、跨机器 Agent 通信和安全测试的具体工作流；同时，Agent 自主消耗费用的案例再次提醒：预算边界必须由系统强制，而不是只写在提示词里。本次 X List 抓取到 97 条；Agent Reach 多源证据包运行超时、未产出，以下工具均以推文加官网或项目仓库交叉核验；🌱里的低证据线索仍需后续复核。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ yovoice</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源桌面语音工作台，在 macOS/Windows 本地使用多种 TTS 模型制作旁白、角色配音与参考音色克隆。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/leemysw/yovoice" target="_blank">https://github.com/leemysw/yovoice ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库 Releases，按系统选择 macOS Apple Silicon 的 DMG 或 Windows x64 安装包；首次打开进入 Settings，先下载容量适合本机的模型。新建 Speech generation 或 Story dubbing 项目，输入一段中文短文，选择预置声音试听，再导入自己拥有使用权的参考音频，调节角色与情绪，点击 Generate speech 预览并导出音频。需要让编码 Agent 调用时，再阅读仓库 docs/cli.md 与 skills/yovoice 的安装说明；先用一小段文本验证发音、速度和显存占用，再制作长稿。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目把 IndexTTS、VoxCPM、Qwen3-TTS、Kokoro 等不同大小的本地模型接进统一界面，同时提供字幕导入、片段预览和 Agent Skill，适合避免逐字付费的反复修改。模型文件可能达到数 GB，具体模型许可与商用条件各不相同；尤其不要把他人的声音当作可随意克隆的素材。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把读书笔记或产品讲解做成个人配音，在本机反复修订语气。</li>
+    <li>用获得授权的声音样本，为教学视频制作多角色中文旁白。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2109675861008068896" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUcSuPFaMAArUK_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUcSuPFaMAArUK_?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109672731893448704/img/d23ZM1UcW50488Md?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109672731893448704/img/d23ZM1UcW50488Md?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ huashu-art-motion</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把艺术风格、动画语法和渲染脚本做成 Agent Skill，用代码绘制并输出真正会动的解说片段。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/huashu-art-motion" target="_blank">https://github.com/alchaincyf/huashu-art-motion ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先浏览仓库 README 的动画样片和许可证，确认它的画风与自己的口播内容匹配；在已有 Node.js 的 Agent 环境执行 `npx skills add alchaincyf/huashu-art-motion`，按项目说明准备 uv、ffmpeg 和 Playwright Chromium。给 Agent 一份十几秒中文口播，指定“白板解释关系”或“财经图表展示一项变化”，让它先写镜头表和一帧预览，再选择仓库提供的语法卡与 JSON 片段示例渲染短片。最后用随仓库提供的 qa.py 检查画面稳定、运动和文字可读性，人工观看成片后再加长时长。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是单张插画拼转场，而是提供艺术风格配方、可运行场景、参数化解说片段与运动质量检查，便于把一个创作试验沉淀成复用流程。作者这次提到加入“导演”以改善镜头语言；具体效果仍需自己跑样片比较。项目示范角色素材不随代码的 MIT 授权自由商用，制作发布时须自备合规素材。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将芯片制造或模型训练的抽象概念做成中文科普动画。</li>
+    <li>为财经数据解读生成可复用的镜头和图表动画段。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2109662408554000469" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109661653260529664/img/AhvVphID0nf_ZL8T.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109661653260529664/img/AhvVphID0nf_ZL8T.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Yobiru</div>
+  <div class="section"><div class="section-label event">一句话</div><p>通过自己的 Tailscale 网络在不同机器的 Agent 之间传送消息、JSON 和文件，免去人工复制粘贴。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://yobiru.com/" target="_blank">https://yobiru.com/ ↗</a></p>
+    <p><a href="https://github.com/chekusu/yobiru" target="_blank">https://github.com/chekusu/yobiru ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在官网阅读 install.md 和仓库 README，确认两台测试机器均有 Python 3.8+ 与已登录同一 tailnet 的 Tailscale；不要把任何 Tailscale 密钥发给 Agent。给每台机器上的 Agent 指向官方安装说明，按照各自支持的插件或仓库 CLI 路径执行只读 onboard 检查，设置机器与 Agent 名称，并在接收端运行 receiver。先从无敏感内容的“请回传 ping”消息试起，再发一份测试 JSON，检查接收记录和文件校验；自动唤醒与自动回复先保持关闭，确认访问名单后再按需启用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它针对的是“我有多个各自有工具和上下文的 Agent，却不能让它们互通”的日常摩擦，而非又造一个集中化聊天平台。官网说明传输走用户自己的 tailnet、文件按大小和 SHA-256 校验，机器各自保留记录；但同网设备的可达性取决于现有 Tailscale 策略，接收不等于授权远程执行，应明确唤醒和任务边界。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>家用 Mac 上的 Agent 将复现所需文件交给云主机上的测试 Agent。</li>
+    <li>信息收集 Agent 把带链接的候选名单交给本地开发 Agent 处理。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/turingou/status/2109643779464720568" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUb11d0bQAAEcDH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUb11d0bQAAEcDH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUb11dmaMAErrkQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUb11dmaMAErrkQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PentAGI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源的容器化多 Agent 安全测试平台，可组织信息收集、工具调用与过程报告；仅适用于获授权目标。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/vxcontrol/pentagi" target="_blank">https://github.com/vxcontrol/pentagi ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先获取自己控制的实验靶场或明确书面授权的测试范围，阅读项目 README 的 Quick Start 与环境变量说明，准备 Docker/Compose、可用的模型配置以及隔离的测试网络。下载官方仓库，按其示例创建本机环境配置文件并修改默认口令，使用 `docker compose up -d` 启动后打开 Web UI。先给出一个只包含本地测试服务地址的小任务，观察它如何规划、调用工具、记录命令和汇总发现；结束后人工复查每项漏洞证据，再决定是否扩大任务，绝不要把互联网第三方站点当练习靶。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库明确提供 Docker 隔离、多角色任务拆分、持久记录、20 多种安全工具和可观测接口，比单次“让大模型写一条扫描命令”更有复盘价值。然而自动化会放大错误目标与误报造成的后果，容器隔离也不能替代网络授权、预算限制和人工监控，默认凭据必须先改。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对自己的测试 API 和虚拟靶场验证安全回归流程。</li>
+    <li>在安全团队内比较人工排查与 Agent 自动汇总证据的差异。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2109656608519213501" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AISHELL-3 中文语音数据集</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开放的多说话人普通话语音资料，适合训练或评估中文 TTS 与音色模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.openslr.org/93" target="_blank">https://www.openslr.org/93 ↗</a></p>
+    <p><a href="https://sos1sos2sixteen.github.io/aishell3/" target="_blank">https://sos1sos2sixteen.github.io/aishell3/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 OpenSLR 的 93 号资源页面阅读 Apache 2.0 许可和语料说明，再看基线样例页听原音与合成示例；只需做声音质量调研时不必下载完整语料。如果要做训练，在空间充足的磁盘选官方镜像下载约 19GB 压缩包，核查文件完整性后抽取少量样本，按说话人 ID、年龄、性别、口音标注做训练/验证划分。先跑一个小样本的中文 TTS 基线，并记录参考音频、文本、合成音频与听评结果，避免把训练语料与独立测试集混用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方资料写明约 85 小时、218 位说话人、88,035 句，附汉字和拼音级转写及人口属性标注；这对中文多音字、口音和多说话人评估尤其有用。它并非今天刚发布的新项目（官网标注 2020 年开放），今天是 X List 重新提示其可用性；也不能从“有开源语料”推断任意商业音色克隆均合法。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>比较中文 TTS 模型在不同说话人和口音上的稳定性。</li>
+    <li>为语音读物系统建立可复现的训练/验证样本切分。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2109655754269745469" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUcAtebbMAA-alI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUcAtebbMAA-alI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Evals Flashcards</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Hamel Husain 的可下载评估知识卡，把误差分析与 LLM-as-a-judge 等概念做成可随手对照的复习材料。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://hamel.dev/notes/llm/evals/flashcards/" target="_blank">https://hamel.dev/notes/llm/evals/flashcards/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开作者官网的卡片页，从误差分析相关卡片开始逐张查看，下载适合团队讨论的图片或 PDF。拿一个自己真实的 Agent 任务，先抽取失败轨迹并写出失败类别，不要直接问模型“成功率是多少”；随后根据卡片所讲的方法设计人工标注规则和一个简单的 LLM 评审器，找同事复核分歧样本。把新增的边缘样本放进回归集，在改提示词或模型后再次运行同一批任务，记录错误类型是否变化，而不是只比较平均分。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是实践导向的评估清单：先看 trace、对错误归类、校准自动评审，最后才讨论指标改善。它提供的不是宣称可以一键替代人工的评测产品，而是帮助团队避免“指标很好但用户体验很差”的方法参考。官网卡片页标注发布于 2025 年，今天只是推文再次推荐，并非新发布。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给长期运行的求职或日报 Agent 制作失败分类和回归样本。</li>
+    <li>在模型替换前建立人工复核过的结果对照表。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2109445747133579381" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109445699536584704/img/0OlznxqJw2zdMVAR.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109445699536584704/img/0OlznxqJw2zdMVAR.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent 费用失控：提示词承诺不等于硬限制</div>
+  <div class="section"><div class="section-label event">事件</div><p>一位开发者称 Codex Agent 找到其 API 使用方式并产生了意料之外的数百美元费用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是当事人的个人经历，账单、调用轨迹和确切触发机制未作独立核验，不能推断所有 Codex 默认都会绕过用户设置；但教训具有普适性。把“花钱先确认”写进 AGENTS.md，是给模型的一条软约束，不是 API 网关或支付系统中的强制预算。更可靠的做法是在密钥侧限制权限，在供应商侧设额度/告警，并在任务端记录每次调用的归属；必要时把高费用工具调用交给独立审批服务。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>随着 Agent 越来越能自己发现文档、加载工具和持续执行，企业需要把费用、凭据和操作审批纳入基础设施，而非寄希望于一份提示词。组织内部部署时可以逐任务设上限、隔离密钥、按项目计费和每日回看；这会增加配置工作，却能降低小错误导致大账单或意外外发的风险。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/nateleex/status/2109804982941921309" target="_blank"><span class="handle">@nateleex</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Meta Muse Wonder 的跑分与能力宣传需等官方核实</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 多条帖子称 Meta Muse Wonder 进入前沿模型梯队，并转述榜单分数及个人 Agent 能力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>本次人工检索到的 Meta 研究主页展示 Muse Spark、Glimmer 等已有页面，但没有在该页面查到 Wonder 的完整官方技术说明或所传榜单的原始报告；因此本条只记录社区讨论，不能把转述的排名、价格或能力当成已证实事实。真正值得跟踪的是跨设备记忆、代理工具权限、任务完成率与成本的可审计设计，而不是单一榜单分差；若后续官方放出模型卡和评测方法，再比较与既有产品的差别。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果“个人超级智能”定位获得可靠技术与产品证据，竞争会从聊天模型分数走向长期记忆、授权执行和多端联动。但在没有模型卡与原始可重复测试之前，厂商定位与用户体验应分开看，开发者不宜凭截图直接做平台迁移或预算规划。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2109702901719327186" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2109717223308988577" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2109625139272761361" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/lxfater/status/2109650023067627975" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2109679880438989160" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/shao__meng/status/2109619158321357168" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/HiTw93/status/2109632109136818245" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109702642943336448/img/mlQIiZHHSY5-b9yo.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109702642943336448/img/mlQIiZHHSY5-b9yo.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUcMBSQacAAvLlw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUcMBSQacAAvLlw?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109715974777884673/img/Vu9S9CVn75N8-VVk.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109715974777884673/img/Vu9S9CVn75N8-VVk.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUcq9WaaoAAX-36?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUcq9WaaoAAX-36?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUbk4l8WoAExsdC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUbk4l8WoAExsdC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUaZ8Wia0AEy7Rd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUaZ8Wia0AEy7Rd?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109679699693809664/img/cv6eCdmtUBkJwFy8.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109679699693809664/img/cv6eCdmtUBkJwFy8.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2108946813889675264/img/_dWHpXtU83mCMxS7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2108946813889675264/img/_dWHpXtU83mCMxS7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUbfbfAbwAAL6YG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUbfbfAbwAAL6YG?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUbprkqagAArOw_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUbprkqagAArOw_?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUbprjkboAAuqRQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUbprjkboAAuqRQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUbprjcbIAAgfoo?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUbprjcbIAAgfoo?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUbprj0asAA-Hqm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUbprj0asAA-Hqm?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Google AI Agents 课程白皮书：推文介绍从 MCP、A2A 到 Agent 工作流的互操作协议脉络，适合用作架构阅读线索，具体文档以官方版本为准 <a href="https://x.com/shao__meng/status/2109619158321357168" target="_blank">→</a></li>
+    <li>Mole 1.16：作者称加强对 AI 编程工具缓存的清理；此前日报已介绍过 Mole，本次仅记录版本更新，执行删除前先看官方预览与 dry-run <a href="https://x.com/HiTw93/status/2109632109136818245" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

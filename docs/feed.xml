@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 12 Oct 2026 00:44:08 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 01:48:00 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/13 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-13.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-13.html</guid>
+      <description>今天值得动手的信号不在大模型跑分，而在本地声音制作、程序化动画、跨机器 Agent 通信和安全测试的具体工作流；同时，Agent 自主消耗费用的案例再次提醒：预算边界必须由系统强制，而不是只写在提示词里。本次 X List 抓取到 97 条；Agent Reach 多源证据包运行超时、未产出，以下工具均以推文加官网或项目仓库交叉核验；🌱里的低证据线索仍需后续复核。</description>
+      <pubDate>2026-10-13T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/12 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-12.html</link>
