@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-14</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-14</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手的是把 AI 从“能生成”推进到“能编辑、能验真、能交付”：本地视频工作台、浏览器端照片修复、可编程视频预演和协作 Agent 都有实际入口。另一面，模型公司的代码产量正在倒逼版本控制重构；本期 Agent Reach 全量证据脚本超时、HNRSS 返回 502，早期线索仅据 X 原帖并注明证据边界，不把未核实的演示当成正式发布。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenPixels</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在浏览器本机放大、降噪、修复老照片并显示处理前后指标的免费照片工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://openpixels.app/" target="_blank">https://openpixels.app/ ↗</a></p>
+    <p><a href="https://gitlab.com/openpixelsapp/OpenPixels" target="_blank">https://gitlab.com/openpixelsapp/OpenPixels ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开官网，先挑一张没有隐私风险的小图做测试，把图片拖入页面；选择 2× 放大或去噪、面部修复，再对比处理前后滑杆与锐度、噪声及回缩后相似度指标。效果可接受后再换旧照片；需要批量处理时下载结果 ZIP 与指标 CSV。模型首次使用会下载，离线功能须等资源加载完。不要把“画面变清晰”误认作真实细节被恢复，尤其是文字和人脸仍需人工核对。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目官网明确宣称图像不上传、无需账户，并公开模型处理代码；比只给成片的在线放大站多了量化对照，适合在本地验证模型是否过度补细节。相关隐私与效果表述来自项目方，未做独立安全审计。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给收藏的压缩截图去除 JPEG 噪声，输出可阅读版本。</li>
+    <li>修复家庭老照片并保留原图，人工比对面部细节。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2110042490866721140" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BaoCut</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把转写、字幕、翻译、剪辑和补画面放在可继续修改的时间线里的 AI 视频工作台。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/baocut" target="_blank">https://github.com/JimLiu/baocut ↗</a></p>
+    <p><a href="https://github.com/JimLiu/baocut/releases" target="_blank">https://github.com/JimLiu/baocut/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入仓库 Releases，按 macOS Apple Silicon 或 Windows x64 选择最新安装包，先用一段短视频建立项目，导入素材后试转写和逐字字幕，再让 Agent 按自然语言删除口误或调整片段，最后在时间线检查结果并导出。项目介绍还写有本地 Qwen-Image 生成静帧的入口；此功能是否在你下载的版本内以应用内菜单为准，首次加载模型会占用本机资源。重要素材先备份，不要假定一次生成的画面和字幕都准确。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的交付物不是无法局部返工的单个 MP4，而是可编辑时间线，适合内容团队反复审片。仓库许可为 BaoCut Community License，并非可随意商用再分发的软件开源许可；项目方对个人使用与产出内容另有授权条款，部署前要读 LICENSE。推文给出了 3.5 与本地图片生成的使用反馈，实际性能不能推广到所有设备。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把口播素材做成带中英双语字幕的短视频，保留返工空间。</li>
+    <li>补一张视频中的说明静帧，再让编辑复核事实与版权。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2110127384099795127" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUitKG1WIAAuuiP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUitKG1WIAAuuiP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUitMByW0AA-mra?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUitMByW0AA-mra?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUitONNXAAAKXSH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUitONNXAAAKXSH?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUitXNoXoAAYA2y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUitXNoXoAAYA2y?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Sumus</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让人和多个 AI 队友在同一个对话空间分工、交接并复核任务的浏览器服务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://sumus.im/" target="_blank">https://sumus.im/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网点 Start free，注册后先建一个没有敏感资料的测试空间，给一名 AI 队友布置“根据这份简短需求写发布公告”，让另一名队友核对客户痛点，再由自己确认最终文本。官网描述了多 Agent 并行、人与 Agent 共享上下文，也展示了接入 Codex/Claude 的可能性；接第三方账号前先核对授权范围。免费档页面标注每月 500 credits，可先用几次小任务验证消耗与交付，再考虑复杂流程。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把多人评审、Agent 分工和产物确认放在同一会话，而不是仅靠一个聊天框连发提示。可评估“谁给了依据、谁签收结果”是否在产品里真正可追溯；推文特别提到生成式 UI 与对话中连接器授权，但官网没有逐项证实这两个细节，本文不把它们当作已验证功能。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>产品发布时让文案、市场分析和人工审批在同一空间协作。</li>
+    <li>用无敏感信息的虚拟项目比较单 Agent 与多 Agent 的质量和成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2110021506013221063" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUhKxvTaAAAP4EV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUhKxvTaAAAP4EV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUhK5nWbgAEjTkj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUhK5nWbgAEjTkj?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DroidDeck</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在受支持的 Android Adreno 设备上安装 Steam 客户端并尝试本机运行部分 PC 游戏的社区项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Droid-Deck/DroidDeck" target="_blank">https://github.com/Droid-Deck/DroidDeck ↗</a></p>
+    <p><a href="https://github.com/Droid-Deck/DroidDeck/releases" target="_blank">https://github.com/Droid-Deck/DroidDeck/releases ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先对照仓库 README 的芯片和 Android 版本要求确认设备支持，留出运行时与桌面组件所需的数 GB 空间；只从 GitHub Releases 下载 APK，安装后依项目向导装 Linux 运行时，按 Play 登录自己的 Steam 账号，再先用已拥有的小体量游戏测试启动、手柄和保存。不同 GPU/游戏兼容性差异很大，别为了它购买新硬件或下载冒牌“官网”安装包；项目 README 明确表示没有独立官网且与 Valve 无关联。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>比云串流更有意思的地方是把 Steam 客户端与运行时放在安卓设备本机，给移动设备上运行桌面游戏提供实验入口。它不是“所有 Android 手机都能玩所有 Steam 游戏”，芯片与图形驱动是硬约束。此条偏跨平台开源探索，非通用 AI 生成工具，但来自当日 X List 的可复现技术项目。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在已有 Adreno 游戏掌机上试验低负载独立游戏的本地运行。</li>
+    <li>研究 ARM64 客户端、兼容层与移动图形驱动的协作边界。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2109941901868834836" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109941498641039360/img/AI8llXTRGXK5Ladc.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109941498641039360/img/AI8llXTRGXK5Ladc.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Gorden PPT Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用中文模板、结构化文本编辑与渲染脚本，让 Agent 制作可编辑的 PPTX。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/GordenSun/GordenPPTSkill" target="_blank">https://github.com/GordenSun/GordenPPTSkill ↗</a></p>
+    <p><a href="https://github.com/GordenSun/GordenPPTSkill/blob/main/SKILL.md" target="_blank">https://github.com/GordenSun/GordenPPTSkill/blob/main/SKILL.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库 LICENSE 与 SKILL.md，再选 templates/INDEX.md 里适合报告的一套模板；让自己的 Agent 阅读一个不含机密的项目说明，依据模板要求生成 edits.json 并用仓库脚本构建 PPTX，最后逐页预览、检查字体替换、文本溢出和数字。若只是第一次体验，直接把项目 GitHub 链接交给本地 Agent 并指定“做一份三页测试稿”，但安装第三方 Skill 前须先检查脚本权限和网络行为；不要将模板用于被许可明确禁止的商业场景。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>不是“文字变大纲就交稿”，而是试图在保持原生 PPT 可修改结构的条件下，提供模板选择、局部文字替换和预览闭环。仓库明确限制个人/研究用途，并警示模板版权与商业再分发边界，所以即使用户可下载，也不能把它误称为宽松商用开源库。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>个人学习时把一篇调研材料转成可编辑演示草稿。</li>
+    <li>用标准样例检查不同 Agent 对同一模板的版式稳定性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2110018507526250561" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2110018298624835584/img/tP4DdnWxtMvH3e_p.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2110018298624835584/img/tP4DdnWxtMvH3e_p.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ X 情报日报样例站</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个用 Grok Bot 整理 X 新闻并发布到 GitHub Pages 的公开样例，可作为自动化日报的对照对象。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://robbin.github.io/x-news/" target="_blank">https://robbin.github.io/x-news/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开首页，分别进入 X 新闻日报和中文 Top 20 等栏目，挑三条自己熟悉的新闻逐项核对原帖、发生时间和实际链接。若要借鉴做法，先把自己的来源名单、发布时间、去重口径、引用格式写成需求，再在自己的仓库里让 Agent 生成静态页面与 RSS，不要复制别人的抓取内容或直接信任自动摘要。发布前抽检“今天标题是否对应今天来源”，并在部署后用带随机参数的线上链接回读。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>发帖人明确描述了“Grok Bot 抓 X 热点、发布 GitHub Pages”的实作思路，公开站点也可以直接看页面组织方式。它不是现成可复用的完整开源部署仓库，本站能验证的是页面存在，不代表其采集质量、原创性或发布时间已经通过审计；适合做流程参照，不宜当作可靠新闻数据库。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>比较不同日报的来源覆盖、首条新闻新鲜度和链接可用性。</li>
+    <li>学习静态页面如何将长报告与社交平台短通知分离。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2109967621710070238" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUgcVoPawAA06FK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUgcVoPawAA06FK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Code Video Model 可视化演示</div>
+  <div class="section"><div class="section-label event">一句话</div><p>微软研究项目用可执行场景代码控制视频预演，再用视频模型把结构与参考画面结合。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://code-video-model.github.io/" target="_blank">https://code-video-model.github.io/ ↗</a></p>
+    <p><a href="https://code-video-model.github.io/gallery.html" target="_blank">https://code-video-model.github.io/gallery.html ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>不用先假定有可下载的完整权重；打开项目主页先看演示，再进 gallery 选 Gaming、Bullet Time 或 Architectural Cinematics 等案例，对照 Three.js 预演和最终视频，记录镜头运动、物体轨迹与外观是否一致。随后用自己的短脚本构思同一运动路径，检查“先代码定义运动再生成细节”的设计是否比纯文本提示更容易复现。项目网页介绍的是研究演示和方法，不应把浏览案例写成已经在本机完成视频生成。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官网把可编程预演解释为对黑箱视频生成的结构约束，并说明只在采样早期施加代理视频条件，减少最终画面复制简陋预演质感的问题。对游戏镜头、产品动效和物理运动更可解释，但展示成绩属于项目方实验结果，尚需独立复现。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>研究有明确运动轨迹的产品镜头如何先做低成本预演。</li>
+    <li>评估文本驱动视频与代码驱动预演在镜头一致性上的差别。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2109987823290065076" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2109986282718052352/img/tZEApK5Fxc2x1_BO.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2109986282718052352/img/tZEApK5Fxc2x1_BO.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 以 Scion 重构内部版本控制</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 工程文称其 monorepo 从 Git 迁往内部系统 Scion，以应对 AI 生成代码带来的超高频合并与检出压力。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方披露日均合并量从 5 月约 2,500 次升至 9 月逾 30,000 次，CI 还有约 2,500 万次日检出。Scion 转向始终在线的客户端/服务端架构、按需取文件与服务端 API；这是公司极端规模下的工程选择，不等于 Git 对普通团队已经失效，更不意味着 Scion 可以公开下载。优先借鉴的是更小的工作副本、检出缓存、审核吞吐和权限设计。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>未来 Agent 编程的瓶颈会从“写代码速度”转移到评审、合并、测试资源与访问控制。拥有大量并行 Agent 的团队可以先监测仓库大小、CI 冷启动和失败回退时间，而不是盲目改造版本控制；上文性能数据均是 Anthropic 自述，适用边界须自行测量。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2110053408531177671" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUhqXrDbQAAaOFY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUhqXrDbQAAaOFY?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Gemini 4 Argon 开放企业复杂任务入口</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 宣布 Gemini 4 Argon 在云端与部分订阅入口上线，定位长步骤编程、法律、财务与安全任务。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>Cloud 博客列举长文档、带证据的分析及 ADK 代码优化案例；公开价格是推广期每百万输入 2 美元、输出 10 美元，后续可能变化。X 帖讨论“单次输出百万 token”之类极端指标时要回到官方模型卡核对，不把上下文、输出上限或模型能力混写；实际可用区域和订阅权限也需在登录账户中核实。评估应使用自己有答案的任务集，同时记录耗时、引文正确率和运行成本。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型能力竞争会更多落在跨文件长期任务与受监管业务的可审计结果，应用方则需要设计人类确认、权限边界与失败报告，而非仅看演示分数。价格促销结束后的单位经济性尤其关键，不能因为发布日宣传就假设未来持续低价。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2110053992554238391" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2110037058651860992/img/lRklzTq-BBwr3fZ3.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2110037058651860992/img/lRklzTq-BBwr3fZ3.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Character.ai 进入 Chapter 11 出售程序</div>
+  <div class="section"><div class="section-label event">事件</div><p>Character.ai 官方公告已自愿启动美国 Chapter 11 法院监督出售流程，平台当前仍运行。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方明确称如无可行买家继续运营，平台可能关闭；预计流程在 11 月末或 12 月初结束，订阅与服务暂时维持。不能把“进入出售程序”写成“已关闭”，也不能推断所有用户数据会立刻丢失。对仍在用角色对话服务的人，更务实的是阅读官方 FAQ 与导出指引、保存自己有权备份的聊天数据，并持续观察后续实际交易公告。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>陪伴型 AI 的用户留存并不足以单独保证持续运营，法律、合规、安全和算力成本都会影响商业可持续性。采购方和个人用户选长期依赖的 AI 服务时，需要预设数据可携带、服务停止与订阅退出路径；这与具体收购是否完成仍是两回事。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2110026367962366188" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUhRe7WaYAA8snk?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUhRe7WaYAA8snk?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Obsidian 内 Agent：作者展示一句话整理 inbox 的个人试验；未见可独立安装、权限边界和项目说明，早期信号，证据待补 <a href="https://x.com/vista8/status/2109990802185433311" target="_blank">→</a></li>
+    <li>open-growth-skills：作者拟把增长工作流蒸馏为 Skill，提及 GEO 查询扩散；目前是开源计划，不是已核实的可安装版本，证据待补 <a href="https://x.com/CoderJeffLee/status/2110040893197832465" target="_blank">→</a></li>
+    <li>λ-JEPA：研究者指出仅投影表示高秩不足以保证主干表示不坍缩；值得跟踪论文与可复现实验，真实性能和代码入口待核 <a href="https://arxiv.org/abs/2609.35288" target="_blank">→</a></li>
+    <li>Google Play“个人 App”：X 称 AI Studio 生成的 Android 应用可在手机自装，独立检索到媒体报道但本轮没有核实官方发布页；别按推文直接开通或承诺适用地区，证据待补 <a href="https://x.com/dotey/status/2110106922322120937" target="_blank">→</a></li>
+    <li>手机 Agent 端侧/云端协作：Manus 与 OPPO 官方确认将在未来 Find X10 / ColorOS 17 集成，强调本地文件处理和外传前确认；尚非当前机型即装即用 <a href="https://manus.im/zh-cn/blog/manus-partners-oppo" target="_blank">→</a></li>
+    <li>RowKite：开发者自荐按自选列比对 Excel 差异；只有 X 转述，尚缺官方下载与准确操作说明，证据待补 <a href="https://x.com/appinn/status/2110023569560277018" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Qwen-Image-2.1-Turbo：本地图片生成/编辑模型卡提供 Diffusers 安装示例；本期 BaoCut 已提集成，不另算主话题 <a href="https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo" target="_blank">→</a></li>
+    <li>HomeView：X 对苹果带屏家居中控的消息值得继续核对官网规格与上市地区；未做完整独立核验，不在此承诺售价/功能 <a href="https://x.com/Gorden_Sun/status/2110022297490985242" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
