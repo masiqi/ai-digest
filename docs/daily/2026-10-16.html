@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-16</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-16</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天有两股可亲手验证的进展：一边是手写权重、插件化模型网关与微虚拟机把 Agent 的计算和运行边界做细，另一边是视频模型的工作流入口及超大开放权重模型继续扩张。自动多源证据包本次超时、HNRSS 自动汇总未生成；下面的🛠️条目均另行核对官网、仓库或官方模型卡，🌱中的社区线索仍需复核，勿把宣传指标当作实测。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Handwired：把普通 JavaScript 逻辑手工编译成可微网络</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源实验项目，用手写权重将条件、循环等程序结构变成矩阵运算和激活函数，不靠训练获取程序行为。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/chenglou/handwired" target="_blank">https://github.com/chenglou/handwired ↗</a></p>
+    <p><a href="https://chenglou.me/handwired/" target="_blank">https://chenglou.me/handwired/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开在线演示，观察同一段简单条件判断在普通 JavaScript 与矩阵运算形式中的输出是否一致；想在本机改代码，则按仓库 README 克隆项目、执行 bun install 与 bun start，随后从 docs、src 和 template 入手，把一个整数比较或小规模搜索例子改成自己的输入。记录正确性、执行耗时和资源消耗，尤其别直接假设 WebGPU 版本一定比原始 JS 快；这是研究性原型，不是把任意代码一键变成高性能神经网络的成熟编译器。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者明确展示了无需训练而保持可微的路径：用矩阵乘法和 ReLU 表达离散程序逻辑，未来或许可以连接固定规则程序与可训练模型；仓库还提到 JSON 搜索演示。它的价值在于提供可审查的技术实验，而非已经证明可以替代通用编译器或大模型。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>研究如何把确定性业务规则与可学习模块连接，同时保留单元测试。</li>
+    <li>给 WebGPU、矩阵计算和程序合成课程制作可视化实验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2110793952349577418" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2110557184501440513/img/x0Jffkz9n8ZJmFbr.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2110557184501440513/img/x0Jffkz9n8ZJmFbr.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Magpie：把模型路由和 Agent 接入变成可扩展插件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>本地网关与桌面应用，统一给 Claude Code、Codex 等 Agent 配模型和订阅，并通过社区插件扩展 provider 与中间件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yetone/magpie" target="_blank">https://github.com/yetone/magpie ↗</a></p>
+    <p><a href="https://github.com/magpie-community/plugins" target="_blank">https://github.com/magpie-community/plugins ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从项目官网或 GitHub 发布页下载适合系统的版本，打开 Providers 添加一个已有 API key 或按界面流程登录已有订阅，再到 Agents 页面为一个本机已安装的编程 Agent 指定模型。先用无敏感信息的小项目发一次请求，查看用量记录和实际 provider 是否一致；随后进入 Plugins → Discover 试一个社区网关中间件，比较启用前后请求参数或路由日志。不要未经阅读权限说明就把生产密钥交给未知插件，尤其订阅接入还需遵守服务商条款。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这次更新不只是增加一种订阅登录，而是把认证、模型列表、请求处理及网关中间件都开放给 npm 插件；仓库说明本地网关可统一多家 Agent 的模型选择及失败切换。对多个 CLI 和自建中转并存的工程团队，这种插件边界比在每个客户端复制配置更有维护价值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>同时管理多种编程 Agent 的模型路由与额度切换。</li>
+    <li>在本地网关里试验请求参数映射、系统提示词中间件，并核查副作用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2110840519156965691" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BoxLite：给个人 Agent 的持久化微虚拟机沙箱</div>
+  <div class="section"><div class="section-label event">一句话</div><p>可嵌入程序的隔离运行时，在硬件虚拟化的 Box 内运行 OCI 镜像，提供 Python、Node 等 SDK 与命令行入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/boxlite-ai/boxlite" target="_blank">https://github.com/boxlite-ai/boxlite ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 的平台要求，macOS 需 Apple Silicon；优先在测试机器上按官方 Python SDK 指南安装 boxlite，用 SimpleBox(image="python:slim") 建立一个仅运行 print 的 Box，比较 exec 的标准输出、启动耗时和退出后的资源占用。想测试持久环境，再在盒内写临时文件、停止并重连查看是否保留；将 Agent 的代码执行工具指向该实例时，先关闭不必要的出站网络并设置 CPU、内存和挂载权限，绝不把真实凭据直接复制进被执行代码。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方仓库明确把微虚拟机的独立内核、OCI 镜像和可持续的工作空间放在同一套嵌入式接口中，并列出网络允许列表及多语言 SDK。这对常驻 Agent 的隔离与状态恢复很有意义；但推文提到的价格优势和第三方默认集成，不能由仓库直接证明，需另行测成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在个人 Agent 中安全运行未知 Python 脚本与工具调用。</li>
+    <li>为长任务保存可回收的依赖、文件与构建缓存，比较冷启动开销。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2110771112607117487" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUr2Krpa0AEFsM7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUr2Krpa0AEFsM7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Termany：并排盯住多个 Coding Agent 的终端工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 Agent 原生终端，提供持久会话、多窗格、Git diff、工作树及 Agent 状态提示。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/thinkany-ai/termany" target="_blank">https://github.com/thinkany-ai/termany ↗</a></p>
+    <p><a href="https://termany.sh/" target="_blank">https://termany.sh/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>到官网下载安装包，或阅读仓库 README 决定是否从源码启动；确保本机要试的 Claude、Codex 或 OpenCode CLI 已安装且完成自身认证，再新建一个测试工作区。左窗格让 Agent 修改一处小功能，右窗格打开该仓库 Git diff，观察 Termany 的 working、done、needs attention 状态变化；再开第二个窗格比对另一 Agent 对相同需求的处理。合并代码前手工检查 diff 与测试结果，别把状态标记视为完成证明，远程连接也要单独核查权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方 README 描述的不是简单把终端标签堆起来，而是把长期会话、工作树、端口、成本、文件预览和 Agent 注意力提示集中在一个界面；对频繁切换多个 Agent 的人，减少遗漏待确认权限或未审改动是直接收益。它与 Magpie 的模型网关不同，解决的是工作现场的可见性。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>同时观察多个 Agent 在不同 Git 工作树中开发，并逐个审 diff。</li>
+    <li>在一屏内跟踪需要授权、已结束和运行中的终端任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2110728820840108223" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUrQgwqacAEAiLV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUrQgwqacAEAiLV?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2110698817758875648/img/CKbfdHrD3e9im5om?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2110698817758875648/img/CKbfdHrD3e9im5om?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kling 4.0：可灵视频生成进入时间线和 CLI/MCP 工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>快手的可灵新一代视频模型与创作界面，公开入口提供模型试用，并展示供 Agent 使用的命令行入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://kling.ai/" target="_blank">https://kling.ai/ ↗</a></p>
+    <p><a href="https://kling.ai/app/cli" target="_blank">https://kling.ai/app/cli ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问可灵官网登录并进入新版创作界面，先用不含版权人物素材的一句分镜描述生成短片，记录一次生成的时长、分辨率与实际消耗；随后在同一作品的时间线修改一处镜头或关键帧，对比重新生成和局部调整的成本。需要接入自动化时，从官网 CLI 页面查看当前安装和授权步骤，先对测试项目做一次最小生成，再检查生成文件及费用；推文说的 4K、10-bit HDR 有部分标为即将推出，不能预先承诺当前账号都可用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>当天推文由实际使用者给出了官网入口和 MCP/CLI 方向，官网也有 CLI 专页；这意味着视频创作从单次网页输入走向可编排的 Agent 工作流。至于最长时长、参考素材数量与高级输出权限，必须以用户账户可见选项为准，不把介绍视频等同于所有地区已开放的功能。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为品牌短片制作多镜头方案，逐镜头调整并记录预算。</li>
+    <li>把测试视频生成嵌入受控的 CLI/MCP 内容生产流水线。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2110766225118949717" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUrcseNbQAAYZiF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUrcseNbQAAYZiF?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Stanford CS329Z：从零构建并评估 AI Agent 的公开课程</div>
+  <div class="section"><div class="section-label event">一句话</div><p>斯坦福 2026 秋季 Agent 工程课程，公开课表、已发布讲义以及从零搭建 harness 的作业仓库。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cs329z.stanford.edu/" target="_blank">https://cs329z.stanford.edu/ ↗</a></p>
+    <p><a href="https://github.com/cs329z/assignment1-harness" target="_blank">https://github.com/cs329z/assignment1-harness ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网课表按顺序下载已公开的讲义，先做检索增强、工具调用与 Agent scaffold 三个小实验；到课程页面打开 HW1 仓库，按 README 配环境，先跑仓库自带示例和测试，再替换成自己的检索任务，记录成功率、失败样例和工具调用轨迹。10 月 14 日的 Memory 一讲可结合本机知识库做短期/长期记忆对比；注意课表明确会调整，未公开的课件与后续作业不要自行假设已经上线，也无需注册为正式学生才能阅读公开资料。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>课程官网把分解、数据、评估列为 Agent 工程的核心，并要求不仅造出一段工作演示，还要通过作业和项目比较基线与失败案例。相比追逐模型榜单，这套公开材料更适合系统梳理实际构建 Agent 的组件取舍、记忆边界与可靠性评估。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为公司 Agent 团队设计循序渐进的训练营和验收题。</li>
+    <li>用公开 harness 作业给自己的 RAG 与工具调用系统建立评估基线。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2110544704286970338" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUopI4NaAAAaTxQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUopI4NaAAAaTxQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUopN1YaYAAWbXf?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUopN1YaYAAWbXf?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HRQb8aZbgAAJQh7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HRQb8aZbgAAJQh7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Databricks Qwen 微调加速 Cookbook：拿真实 profiler 数据找瓶颈</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Databricks 分享 Qwen 3.8 27B 微调性能调优案例，并放出对应 AI Runtime 示例代码。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.databricks.com/blog/reducing-qwen-training-time-6x-ai-runtime" target="_blank">https://www.databricks.com/blog/reducing-qwen-training-time-6x-ai-runtime ↗</a></p>
+    <p><a href="https://github.com/databricks-solutions/ai-runtime-cookbook/tree/fd81d9866bf9b35522afbbd2387b68e91958958f/post-training/sft-qwen3.8-27b-fsdp2-multinode" target="_blank">https://github.com/databricks-solutions/ai-runtime-cookbook/tree/fd81d9866bf9b35522afbbd2387b68e91958958f/post-training/sft-qwen3.8-27b-fsdp2-multinode ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读原文的模型、数据集和硬件配置，进入锁定提交的 Cookbook 目录查看训练脚本与依赖；在具备相应 GPU 配额的测试环境里先用小数据集跑通 baseline，再开启 torch profiler 记录 CPU 操作次数和 GPU kernel 调用次数。按原文先试融合核，再试降低 padding 的训练数据组织方式，每次只变一项并保留每秒训练 token 数、训练损失和总成本；若没有多卡预算，也可以只阅读脚本与 trace 设计，不要直接照搬文中的绝对耗时。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方案例显示 GPU 使用率已经很高时训练仍可能被大量碎片化操作和调度拖慢；文章给出同一固定数据集从 7 小时 44 分到 1 小时 17 分的结果，且链接到代码。这是比笼统“换更贵 GPU”更可复现的性能工程方法，但加速倍数只适用于其测试配置，需自己复测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>诊断企业微调流水线的 CPU 调度、kernel 与 padding 开销。</li>
+    <li>给 GPU 资源采购或训练优化建立可审计的 token/s 对比实验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2110573261302202853" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUpDL5RacAAIUud?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUpDL5RacAAIUud?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Muse Spark Open：Meta 新发布的开放权重多模态模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Meta 开放 816B 总参数、42B 激活参数的模型权重，面向编码和长程 Agent 工作，官方模型卡列有许可和下载门槛。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B" target="_blank">https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 Meta 官方 Hugging Face 模型卡，先核对下载前的身份申请表、Muse Model License、支持的输入模态和部署建议；若已有足够显存或统一内存以及合法访问资格，再按照模型卡的 Transformers、vLLM 等部署说明在隔离机器上做最小推理。普通个人电脑不宜盲目下载全部权重，可先分析模型卡与同类模型的多步骤代码任务设计；若作为产品服务，还需阅读署名要求和模型即服务收入条款，不能把“开放权重”误解为完全不受限制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方模型卡注明 2026 年 10 月 15 日发布，给出了 1M 上下文、文本图像视频音频输入和开放权重许可文本；这为私有化长任务实验提供了明确入口。不过体积巨大，官方对安全护栏有额外建议，实际落地门槛远高于普通可下载小模型，性能宣传仍要自测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在有资源的内部环境中比较长上下文代码分析与工具调用表现。</li>
+    <li>评估开放权重模型用于高合规私有部署时的许可、硬件和安全边界。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AIatMeta/status/2110779754274292212" target="_blank"><span class="handle">@AIatMeta</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUr8TsmbIAAT-m3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUr8TsmbIAAT-m3?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUr8VZAbcAAF9yn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUr8VZAbcAAF9yn?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Opus 5.5 快速模式退出预览，速度要单独付费</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 公开文档支持 Opus 5.5 以 speed: fast 请求更快输出，X 上讨论其取消候补和溢价使用。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是另一款“更聪明的模型”，而是同一模型把响应速度作为不同服务等级售卖。对于人等代码或需要低延时互动的环节，可测实际端到端延迟；但单纯批处理或长时间后台 Agent 不一定划算。不同平台的可用性和定价说明可能更新，必须在对应平台的官方页面核对；别把订阅月费误认为高速模式已包含在内。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>团队可以把响应时延从模型质量和调用价格中拆出来管理：交互节点按需启用 fast，后台任务保持标准速率，分别监控令牌成本和任务完成时间。采购及预算要注意 provider 的兼容性差异，尤其自建中转是否透传 speed 参数，避免只是多付钱却没有真实提速。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2110846329341837698" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DeepSeek API 故障提醒：高性价比模型也需要容灾</div>
+  <div class="section"><div class="section-label event">事件</div><p>X 上转发的事故说明称，10 月 15 日北京时间上午 DeepSeek API 出现持续数小时的服务异常。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>本条依据转述和用户观察，尚未在本次证据包中拿到完整官方根因报告，因此只把事故窗口视为待复核的线索，不推断是算力、调度还是网络故障。对工程实践而言，更重要的是区分 provider HTTP 错误、代理层超时和任务本身失败：先保留原始请求时间线，再查状态页与真实调用日志，按幂等性决定是否重试，不能因为 worker 返回成功就认为业务已经成功。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>一旦单个低价主力模型成为默认依赖，自动任务、消息通知和支付等环节可能共同受影响。可提前设计跨 provider 降级、预算上限和回读验证：只有业务目标被确证时才宣布完成，结果不明的外部操作应停止盲重试。事故根因与正式恢复时刻仍以官方后续报告为准。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tianyi/status/2110663080246132855" target="_blank"><span class="handle">@tianyi</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Eve Python Agent Template：Hacker News 的 Show HN 条目指向 Vercel Labs 的 Python Agent 模板；可查看仓库是否有可运行示例，模板定位与成熟度仍待核，证据待补 <a href="https://github.com/vercel-labs/eve-agent-python-template" target="_blank">→</a></li>
+    <li>RDST：Show HN 自称本地 Agent 监视 Postgres/MySQL 查询回归，可能适合数据库变更后的持续巡检；尚未验证实际权限和报警质量，证据待补 <a href="https://github.com/readysettech/rdst" target="_blank">→</a></li>
+    <li>Imagor MCP：Show HN 发布的图像布局工具，宣称让 Agent 描述布局并编译成图片 URL；先审查仓库接口和外部图片处理风险，证据待补 <a href="https://github.com/cshum/imagor-mcp" target="_blank">→</a></li>
+    <li>server-noonien：Show HN 提出跨机器的无服务器 Agent 记忆同步；冲突解决和隐私策略未经独立验证，证据待补 <a href="https://github.com/sequico/server-noonien" target="_blank">→</a></li>
+    <li>Hazzel：Show HN 的极简终端 Coding Agent，突出撤销与自带密钥；可以关注可复现测试和权限隔离，证据待补 <a href="https://github.com/mukundzha/hazzel" target="_blank">→</a></li>
+    <li>GRILL.md 配置化访谈 Skill：推文称 /grill-me 新增配置以组合其他 Skill，作者仓库旧说明尚不足以确认新版部署；作为知识提取方法观察，证据待补 <a href="https://x.com/shao__meng/status/2110557075466260596" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Design Creativity Bench：自称专门评估 UI 设计创造力的基准，待查看论文、数据和人工标注协议后再引用排名 <a href="https://x.com/shao__meng/status/2110542220709540193" target="_blank">→</a></li>
+    <li>OmniHuman 2.0：社区转述数字人语音驱动和较长视频能力；本次未取得官方模型页，价格与能力暂不采信 <a href="https://x.com/xiaohu/status/2110739599077343507" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

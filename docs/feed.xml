@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 15 Oct 2026 00:42:59 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 00:42:17 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/16 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-16.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-16.html</guid>
+      <description>今天有两股可亲手验证的进展：一边是手写权重、插件化模型网关与微虚拟机把 Agent 的计算和运行边界做细，另一边是视频模型的工作流入口及超大开放权重模型继续扩张。自动多源证据包本次超时、HNRSS 自动汇总未生成；下面的🛠️条目均另行核对官网、仓库或官方模型卡，🌱中的社区线索仍需复核，勿把宣传指标当作实测。</description>
+      <pubDate>2026-10-16T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/15 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-15.html</link>
