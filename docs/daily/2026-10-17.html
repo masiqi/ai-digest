@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-17</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-17</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天最值得动手的不是又一个聊天壳，而是 Agent 的安全执行、可复现动效与会在执行中更新的世界模型；另一边，开放权重模型和端侧工具继续把试用门槛往下压。Anthropic 的内部用工数据提醒我们：Agent 跑得越多，人工核验与调度反而越关键。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Perplexity SPACE</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 Agent 或用户生成的代码放进隔离的 Firecracker microVM，并通过 HTTP API 管理执行与生命周期的开源平台。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/perplexityai/SPACE" target="_blank">https://github.com/perplexityai/SPACE ↗</a></p>
+    <p><a href="https://space.docs.perplexity.ai/guide/index.html" target="_blank">https://space.docs.perplexity.ai/guide/index.html ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库 docs/installation.md，准备文档要求的 Linux/Kubernetes 与虚拟化环境，再按安装指南在本地 Kind 集群部署服务并完成认证；接着跟着 docs/first-sandbox.md 创建模板和 sandbox，等待异步操作完成后建立命令会话、附着输出通道，执行一段无害的示例代码，读取退出码和输出，最后删除 sandbox。不要在未确认宿主机是否支持 Firecracker 的情况下直接把生产凭证塞进去；先在隔离测试机上检查网络权限、存储清理和并发上限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>SPACE 不是给 Agent 再包一层提示词，而是把不可信代码的实际执行搬到独立虚拟机，同时把环境模板、沙箱实例、命令会话与生命周期拆开。对于自建 Agent 平台，隔离边界、异步状态与输出回收比单次代码运行是否成功更重要；这份开源实现可以作为安全设计与故障恢复的对照样本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让代码 Agent 跑用户提交的单元测试，同时隔离工作空间与宿主机。</li>
+    <li>为多租户自动化任务提供可销毁的临时执行环境。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2111087549884379597" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUwW7SuawAAiSgf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUwW7SuawAAiSgf?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Sofatap（沙发瘫）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用 iPhone 的触控板、键盘和语音输入控制接在电视上的电脑；Google/Android TV 直连目前仍属实验预览。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://sofatap.app" target="_blank">https://sofatap.app ↗</a></p>
+    <p><a href="https://testflight.apple.com/join/e6MuKx9S" target="_blank">https://testflight.apple.com/join/e6MuKx9S ↗</a></p>
+    <p><a href="https://github.com/chekusu/sofatap" target="_blank">https://github.com/chekusu/sofatap ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>iPhone 先安装 TestFlight 并通过公测链接加入 Sofatap，电脑端从官网下载安装对应 Windows、Mac 或 Linux 的 receiver；让电脑与手机接入同一家庭网络，保持电脑唤醒且已解锁，按照电脑端的配对提示在手机上扫描二维码。配对后先用手机滑动移动鼠标、轻点点击、双指滚动，再聚焦电视上的搜索框测试手机键盘与发送。若要直接控制 Google TV，可在应用内查看实验适配器是否适配自己的设备；官方明确尚未认证具体电视型号，不要把它当成熟的电视遥控器。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这款产品把「客厅里 Agent 需要人点一下或回一句」的摩擦降到了手机侧，且桌面接收端与协议公开可查。它不是远程桌面视频流，画面仍在原电脑和电视上；免费手动操作、无需账号的路线适合低成本试用，但电视直连和不同系统的输入支持仍需按官方测试版说明逐项核对。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让连接电视的开发机跑 Agent，坐在沙发上补充指令或批准步骤。</li>
+    <li>家庭影院电脑搜索影片、暂停播放或填写短文本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/turingou/status/2110952322130116649" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2110952253419048960/img/KHCnbE8RyHhKJ3U3.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2110952253419048960/img/KHCnbE8RyHhKJ3U3.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2110952253423226880/img/4CYgtQcl5tsD0sl7.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2110952253423226880/img/4CYgtQcl5tsD0sl7.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenDesign Motion</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在开源设计工作台内用 Agent 和可选模型生成可迭代的动效短片。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/open-design" target="_blank">https://github.com/nexu-io/open-design ↗</a></p>
+    <p><a href="https://open-design.ai/solutions/video" target="_blank">https://open-design.ai/solutions/video ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从项目 GitHub Releases 下载适合 macOS 或 Windows 的桌面版，打开后按应用说明配置自己的模型密钥或可用模型；新建一个设计项目，写一段十几秒的视频分镜，例如「标题出现—三组数据逐项进入—品牌结尾」，再明确字体、颜色、节奏和导出尺寸。让 Agent 套用 Motion/视频模板生成 HTML 动画帧并渲染视频，先检查一版镜头时序，再用自然语言改慢标题入场、换掉片尾字幕并重新导出。若使用外部视频或音乐模型，先查各自额度与授权，别误以为整个链路无成本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官网明确把短片的画面组织为可版本管理的 HTML 动画而非只有不可编辑的成片，时间和布局可以重复渲染、局部改动。它更适合片头、产品功能介绍和数据动效，而不是长篇影视剪辑；今天的发布推文值得看的是开放模型选择与源码工作流，不是「一键生成任何大片」的口号。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用产品真实配色制作版本更新的十秒动态演示。</li>
+    <li>为课程或日报视频做可复用的数据标题模板。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/OpenDesignHQ/status/2111023212129829086" target="_blank"><span class="handle">@OpenDesignHQ</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2110996800614301696/img/X0cUllAy6pZXBPSE.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2110996800614301696/img/X0cUllAy6pZXBPSE.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ FLUX 3 Image Klein</div>
+  <div class="section"><div class="section-label event">一句话</div><p>黑森林实验室发布的开放权重图像模型，统一处理文生图、指令编辑与多参考图合成。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://bfl.ai/models/flux-3-image-klein" target="_blank">https://bfl.ai/models/flux-3-image-klein ↗</a></p>
+    <p><a href="https://huggingface.co/collections/black-forest-labs/flux-3-image-klein" target="_blank">https://huggingface.co/collections/black-forest-labs/flux-3-image-klein ↗</a></p>
+    <p><a href="https://docs.bfl.ml/flux_3/flux3_image_klein" target="_blank">https://docs.bfl.ml/flux_3/flux3_image_klein ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先到官方 Hugging Face 集合选蒸馏版本或基础版本，核对模型卡的许可、显存需求和配套文本编码器，再按官方文档在本地推理环境或 ComfyUI 中加载对应权重。先用一段简单英文提示生成基础图片，再输入原图并指定只改变某个区域，最后上传两张参考图尝试统一人物和背景。想精确放置元素时按文档使用 0—1000 坐标范围的边界框；导出后人工检查文字、手部和局部编辑是否改坏其他物体，商业部署前另查商用许可。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方给出的 5.6B 是图像 Transformer 参数量，文本编码器另计；它把生成、编辑和多图组合放在同一套权重上，降低多模型拼装的复杂度。开放权重不等于无限制商用，官方明确产品化自托管需要商业许可；中文提示虽有用户测试，但中文字形质量仍应以自己的样例检验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用同一批参考图做产品海报的多版构图和局部改色。</li>
+    <li>给短视频制作连续风格的封面与过场插图。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2110987998674489538" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUu8U3laIAADuUQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUu8U3laIAADuUQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Reflection Beam 1.0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向代码与 Agent 场景的开放模型，采用 501B 总参数、约 23B 激活参数的 MoE 架构。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/reflection/Beam-1.0-501B-A23B" target="_blank">https://huggingface.co/reflection/Beam-1.0-501B-A23B ↗</a></p>
+    <p><a href="https://huggingface.co/blog/reflection-beam" target="_blank">https://huggingface.co/blog/reflection-beam ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读模型卡与 Hugging Face 教程，确认许可证、支持的文本输入、聊天模板和资源开销；没有多卡推理资源时，优先在 Hugging Face Inference Providers 的模型页选可用服务商和额度，准备访问凭据后按教程提供的 OpenAI 兼容示例发送一个小型代码修改请求。把返回的补丁放进一次性测试仓库运行测试，再与常用模型比较耗时、成本和改动正确率；有硬件的团队可按文档使用 FP8/NVFP4 权重及 vLLM、SGLang 路径。不要把 23B 激活量误解为整模型只占 23B 内存。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Hugging Face 官方文章同时给出推理、微调与强化学习路径，模型卡标明文本模态及长上下文设定，使它比只有排行榜截图的新模型更容易做真实试验。其本地完整部署仍是重型基础设施任务；公开的上下文窗口属于模型能力标称值，具体服务商限制及中文效果都需要实测，不能照推文的横评结论下定论。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在相同测试集上对比开源编码模型的 Agent 修补能力。</li>
+    <li>评估团队能否在自有算力上定制长文档代码检索模型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2111105429770211617" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUwnMffakAEDiZg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUwnMffakAEDiZg?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AdaJEPA</div>
+  <div class="section"><div class="section-label event">一句话</div><p>会在规划执行后利用实际状态变化自我校准的潜在空间世界模型研究代码。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/agentic-learning-ai-lab/adajepa" target="_blank">https://github.com/agentic-learning-ai-lab/adajepa ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README 确认这是研究复现而非通用聊天工具，按 environment.yaml 创建实验环境并根据文档下载提供的检查点与迷宫等任务数据，放到仓库约定的 checkpoints/ 和 data/ 目录。按 README 的规划命令先跑冻结世界模型的基线，再启用 AdaJEPA 规划器，在相同初始条件与目标下对比轨迹、成功率及适应步骤的额外计算量。可先只查看仓库演示和配置，不必盲目下载大模型；复现前确认所需算力与数据来源。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>一般世界模型训练完后推理阶段参数不变，环境一旦变暗、模糊或布局变化，原本的预测可能失准；AdaJEPA 尝试在模型预测控制的闭环里用刚发生的状态转移作为自监督信号更新预测器。它仍是受控导航实验，不等于机器人在现实环境中已经能稳定在线学习，但路线本身值得跟踪。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>研究机器人或游戏 Agent 在视觉分布变化后的自适应规划。</li>
+    <li>给世界模型评估增加冻结与在线更新两种可比较的基线。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/NYUDataScience/status/2111176441220243663" target="_blank"><span class="handle">@NYUDataScience</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2111176012138496000/img/yJnDxx_hvyhXbty_.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2111176012138496000/img/yJnDxx_hvyhXbty_.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BothShot</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mac 原生截图与录屏工具，覆盖标注、OCR、翻译和导出动图。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://bothshot.app/en" target="_blank">https://bothshot.app/en ↗</a></p>
+    <p><a href="https://apps.apple.com/cn/app/bothshot/id6808869983" target="_blank">https://apps.apple.com/cn/app/bothshot/id6808869983 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Mac 上通过官网跳转 App Store 安装，先授予实际需要的屏幕录制权限；从一张包含英文 UI 的区域截图开始，试着加编号标注、马赛克处理账号信息，再调用设备端文字识别与翻译核查结果。接着录制一次短的产品操作，按需加入系统声音或麦克风，裁剪首尾并分别导出 MP4 与 GIF。涉及工作屏幕时先测试窗口选择和隐私遮盖效果，检查导出的文件是否真的去掉了敏感字段；不需要录音时不要随意开放麦克风权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官网把截图与录屏放进同一条工作流，且声称 OCR、翻译、截图与录制在本机处理、无需账号。相较把截图发送给在线识图服务，这种设计适合经常记录内部产品问题或做演示的人；不过隐私声明只能代表厂商描述，含敏感信息时仍应审核系统权限、更新记录与输出文件。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 Agent 自动化故障截屏标注步骤并录制最小复现。</li>
+    <li>把英文应用界面截图翻译后制作中文操作讲义。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2111027789973410128" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 密歇根大学 Subagents 公开课讲义</div>
+  <div class="section"><div class="section-label event">一句话</div><p>第 14 讲把子 Agent 的动机、机制与取舍整理成可下载的课程材料。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/eecs498-aase/materials/tree/main/lectures/L14" target="_blank">https://github.com/eecs498-aase/materials/tree/main/lectures/L14 ↗</a></p>
+    <p><a href="https://github.com/eecs498-aase/materials" target="_blank">https://github.com/eecs498-aase/materials ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开课程仓库 lectures/L14，先阅读 slides.md 了解课程逻辑，也可下载 slides.pdf 打印；拿自己的一个真实任务，比如「从网页搜集资料、核对官方原文、写 500 字结论」，分别设计单 Agent 流程和两名子 Agent 分工流程。记录谁拥有写入权、共享上下文如何交接、重复检索会增加多少调用，以及主 Agent 如何验收结果。最后把失败案例整理成委派清单和验收表；它是教学材料，不是安装后就会自动调度的框架。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多 Agent 的有效性并不来自角色数量，而在于可并行的任务边界、信息交换成本和审查责任。大学公开讲义提供了一个相对中性的学习入口，适合对照商业 Agent 框架的宣传来设计自己的分工流程；课程页面同时给出 Markdown、PDF、PPTX，有利于团队复盘和复用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为自建任务调度中心制定「何时派子 Agent」的判断规则。</li>
+    <li>培训开发团队比较顺序执行与并行检索的成本和正确性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2110922224547082692" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUuAkIoaMAALwcH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUuAkIoaMAALwcH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 内部用工：Agent 时长高于员工</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 发布内部用工研究，称截至 2026 年 8 月互动式 Agent 工作时长约为员工工作时长的六倍，同时初级技术岗位招聘占比走低。研究：https://www.anthropic.com/research/employment-at-anthropic</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一家高度采用自家 AI 的公司的内部观察，不能直接外推为所有企业的普遍失业率，也不能把工作时长比理解为等效产能比。报告强调代码、销售与合同处理产出随工具采用增加，但人类注意力成为审读 Agent 产出的瓶颈；招聘经理更看重自主性与判断力。比「Agent 替代了多少人」更可操作的问题是：输出能否被采样检查、责任边界是否清晰、每位员工承载了多少校验负荷。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>软件团队可能先调整初级岗位任务结构、培训路径与审查工具，而不是简单减少所有招聘。Agent 运维、评测、日志可见性和质量门槛会直接影响组织能否吃到效率红利；教育机构也需要让新人练习判断、验证和协作，而不只练最容易自动生成的样板代码。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2111223306061836484" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUySPZ0W0AAB8Pu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUySPZ0W0AAB8Pu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUySVCEW0AAxvZ4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUySVCEW0AAxvZ4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUySX-3XkAAegbr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUySX-3XkAAegbr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUySZ5WWQAEQDCN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUySZ5WWQAEQDCN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 更新反蒸馏防御</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 称新措施让其观察到的蒸馏者获取的数据量下降约 90%—99%，同时明确不保证该效果能长期维持。官方：https://www.anthropic.com/research/distillation-defenses</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这个百分比是 Anthropic 对自身监测结果的表述，不是独立审计结论；报告谈及其他模型公司时属于其单方指控，不能把所有相关用户请求或个人行为直接归责给企业。技术上更值得关注的是推理过程保护、账户异常识别和跨模型访问限制正在叠加，模型提供商会把能力泄漏视为服务边界问题，而不是只靠许可条款解决。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>使用多家模型的企业要重新检查中转、日志留存、模型输出再利用和服务条款，避免测试流程碰到反滥用风控；开放模型团队则可能更重视许可清晰且可合法微调的权重。反蒸馏是攻防迭代，不应据此推断任何模型的能力来源已经得到司法或技术上的最终定论。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2110923670755631111" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUuB4hlbUAA_ZxE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUuB4hlbUAA_ZxE?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Hy Memory 2.0：推文称腾讯混元推出记忆写入模型、SDK 与桌面工具；本轮检索未取得与该组合直接匹配的官方仓库，产品功能和下载入口证据待补，不按已可部署项目介绍。 <a href="https://x.com/shao__meng/status/2111082839068246301" target="_blank">→</a></li>
+    <li>Qiaomu Clipper 视频号新能力：作者预告新版将支持微信视频号 AI 解读与下载，但目前只是「敬请期待」，上架时间、实际支持范围及合规边界证据待补。 <a href="https://x.com/vista8/status/2111020804695859585" target="_blank">→</a></li>
+    <li>PandaMind：开发者自荐把 Markdown 大纲即时转换为思维导图，应用商店可见同名产品；是否同一版本及导出能力证据待补，适合继续跟踪小工具实践。 <a href="https://x.com/appinn/status/2111016354065076712" target="_blank">→</a></li>
+    <li>magpie 精简模式：作者称减少通过 Claude 订阅处理请求时的额外提示词开销；节省幅度和具体配置需按版本实测，证据待补，值得观察 Agent 中转的成本优化。 <a href="https://x.com/yetone/status/2111178943604953551" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>范凯 AI 新闻站：推文称新增中英文切换，适合观察个人化 X 信息筛选的展示方式，非独立核验的资讯来源。 <a href="https://news.fankai.me" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
