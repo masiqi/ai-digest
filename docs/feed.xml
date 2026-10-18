@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 17 Oct 2026 00:47:55 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 00:43:38 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/18 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-18.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-18.html</guid>
+      <description>今天值得动手的线索分成两路：一边是刚冒头的代码图谱、可控生图与内容发布工具，另一边是 DeepSeek 新快照和多模型网关推动 Agent 更快落地。OpenCode Console 安全事件则提醒我们：把第三方密钥交给中转平台，便利性必须与密钥轮换、用量审计一起评估。本次 Agent Reach 自动证据包超时未生成，以下工具仅采用已逐项人工核对的原推文、官方仓库或官网；早期线索按证据边界标注。</description>
+      <pubDate>2026-10-18T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/17 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-17.html</link>

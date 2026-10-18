@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-18</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-18</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得动手的线索分成两路：一边是刚冒头的代码图谱、可控生图与内容发布工具，另一边是 DeepSeek 新快照和多模型网关推动 Agent 更快落地。OpenCode Console 安全事件则提醒我们：把第三方密钥交给中转平台，便利性必须与密钥轮换、用量审计一起评估。本次 Agent Reach 自动证据包超时未生成，以下工具仅采用已逐项人工核对的原推文、官方仓库或官网；早期线索按证据边界标注。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Graphicle</div>
+  <div class="section"><div class="section-label event">一句话</div><p>刚在 Show HN 出现的 Rust 代码图谱与项目记忆工具，供编程 Agent 定位符号关系并引用源代码回答问题。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/graphicle-ai/graphicle" target="_blank">https://github.com/graphicle-ai/graphicle ↗</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=50088713" target="_blank">https://news.ycombinator.com/item?id=50088713 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS 上先在测试仓库执行 `brew install graphicle-ai/tap/graphicle`，进入仓库运行 `graphicle setup`；它会建立代码索引和图谱，并列出发现的 Agent 客户端及改动文件。随后用 `graphicle ask "失败请求在哪里重试？"` 看带文件位置的证据片段，再运行 `graphicle graph extract . --code-only` 与 `graphicle graph affected "retry()"` 观察影响范围。注意 setup 可能修改 AGENTS.md 和 Git hooks，先在可回滚仓库试，结束可用 `graphicle disconnect` 撤销。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是一个极早期的 Show HN 项目，官方仓库展示了索引、代码图谱、Agent 对接和带引用检索集中在单个 Rust 程序中的方案。它不是宣称“知道整个仓库”的聊天外壳，而是让问题落到具体文件和行号；仓库尚新、实际大型项目性能和索引质量仍须自己验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 Claude Code 或 Codex 找复杂调用链和跨文件影响点。</li>
+    <li>代码审查时追问某个函数更改会触及哪些模块，并回看源文件。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MOSS-Image</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenMOSS 刚公开的文本生成图像模型系列，支持中文文字、结构化布局与本地推理。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/OpenMOSS/MOSS-Image" target="_blank">https://github.com/OpenMOSS/MOSS-Image ↗</a></p>
+    <p><a href="https://huggingface.co/spaces/OpenMOSS-Team/MOSS-Image" target="_blank">https://huggingface.co/spaces/OpenMOSS-Team/MOSS-Image ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 Hugging Face Space，输入一张带明确中文标题的海报描述，并与纯英文提示词结果对比文字正确率；想控制元素位置，可按仓库 `USERGUIDE_ZH.md` 的 Layout JSON 样例指定画布尺寸、文字和对象位置，再贴到演示的提示词框。已有 ComfyUI 的用户可以在 Manager 中搜索 MOSS-Image，按仓库示例工作流加载；本地部署则按 README 建 Python 虚拟环境、安装 requirements，并从 Hugging Face 下载 Base 或 SFT 权重，注意 GPU 显存需求。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方仓库与模型卡同时提供权重、推理代码、中文指南和 Space，而不是只有效果图。项目把画面中文字和物体位置作为可控输入，适合测量中文排版可控性；Base 与 SFT 需分开比较，不能把演示样图直接当成稳定质量保证。原推文所说“中文不错”是个人体验，并非通用评测结论。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为中文课程、活动做需要指定标题位置的海报原型。</li>
+    <li>在 ComfyUI 或本地 GPU 测试布局控制与字体生成失败率。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2111367804981284996" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU0VxrpasAA4bUX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU0VxrpasAA4bUX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Huashu Design V3.0</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 Agent 的 HTML 原生设计 Skill，新版作者称增强动效风格并适配新 DeepSeek Flash 快照。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/huashu-design" target="_blank">https://github.com/alchaincyf/huashu-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在支持 Skills 的编程 Agent 里执行 `npx skills add alchaincyf/huashu-design`，先用仓库 demos 和 SKILL.md 了解支持的交付形态，再准备一份非敏感的品牌色板、Logo 与界面截图，提示它制作可点击产品原型或一段产品发布动效。检查生成的 HTML、资源引用和导出结果，特别在低成本模型下比较运动节奏与文字准确性；要导出视频时再按 README 的环境和导出章节安装依赖，不要把作者演示等同于你的项目效果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库实际存在 Skill、风格参考、脚本与演示，既能生成静态视觉也覆盖动画和 MP4 导出；新版关注动效与 Flash 模型适配，正好可比较“模型成本下降后能否交付可编辑设计”。版本能力来自作者推文，仓库说明提供工具支持，但具体提升幅度尚无独立基准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为新产品快速做可交互页面和演示短片。</li>
+    <li>对比不同模型生成品牌视觉时的可编辑性与重现性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2111447668652220768" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2111447196209905664/img/0dv7lOscRxdTKWFy.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2111447196209905664/img/0dv7lOscRxdTKWFy.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qiaomu Publish</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Obsidian 社区插件，让笔记在原地预览排版、制作封面并准备公众号草稿。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-publish" target="_blank">https://github.com/joeseesun/qiaomu-publish ↗</a></p>
+    <p><a href="https://community.obsidian.md/plugins/qiaomu-publish" target="_blank">https://community.obsidian.md/plugins/qiaomu-publish ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>确认 Obsidian 至少为 1.11.4，在“设置 → 第三方插件 → 浏览”搜索 Qiaomu Publish，安装启用。打开一篇无敏感信息的 Markdown 笔记，先切换内置主题、预览标题引用和代码块，试着生成封面、复制富文本或导出；这些步骤无需公众号连接。要发送到公众号草稿箱，必须另外准备合适的公众号、接口凭据及 IP 白名单，先在测试号核对预览、草稿更新而不是直接对外发布。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者推文报告今天已开源插件并修复 Chrome 插件问题；官方仓库提供 Obsidian 安装路径、功能截图与发布边界。对于已经在 Obsidian 写作的人，价值在于减少排版复制损耗；需要区分“本地预览可用”和“具备公众号 API 凭据后才能送草稿”，不要误以为无需配置即可自动群发。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 Obsidian 知识卡片快速整理成公众号图文草稿。</li>
+    <li>在本地比较 Markdown 到公众号排版的样式损耗。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2111411564867993890" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek Harness</div>
+  <div class="section"><div class="section-label event">一句话</div><p>DeepSeek 开发者预览版开源 Agent 运行框架，以插件作为功能组合单元。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank">https://github.com/deepseek-ai/deepseek-harness ↗</a></p>
+    <p><a href="https://deepseek-harness.github.io/deepseek-harness/" target="_blank">https://deepseek-harness.github.io/deepseek-harness/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 后，在隔离的测试环境执行 `npx @deepseek-ai/dsh web`，默认打开本机 `127.0.0.1:3080` 的 Web 界面；如果是远程主机，先做 SSH 端口转发并用 `--no-open` 避免错误地打开远程浏览器。按官方指南连接自己的测试模型和测试仓库，执行简单的文件读取与单元测试任务，记录插件调用与输出，再阅读仓库 SAFETY.md；官方明示开发者预览可能有破坏性兼容更改，不建议直接承载生产凭据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是把新模型换个壳，而是官方公开的 Agent Harness 工程结构；仓库将插件架构、运行界面和开发指南放在同一工程里，方便研究 Agent 的工具边界与能力扩展。今日推文提示为适配新 Flash 快照升级版本，但实际稳定性与兼容性必须按开发者预览项目来判断。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>搭建 DeepSeek 模型的可扩展代码 Agent 测试环境。</li>
+    <li>对照自己的 Agent 系统，研究插件化工具边界和升级风险。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tianyi/status/2111376782717035007" target="_blank"><span class="handle">@tianyi</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU0b65KbsAAypqr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU0b65KbsAAypqr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HU0b7UfbwAAGXNH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU0b7UfbwAAGXNH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Magpie 模型网关</div>
+  <div class="section"><div class="section-label event">一句话</div><p>多 Agent、多供应商共用的模型配置和本地网关，可给不同编程工具指定模型或路由组。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yetone/magpie" target="_blank">https://github.com/yetone/magpie ↗</a></p>
+    <p><a href="https://usemagpie.ai/docs/start" target="_blank">https://usemagpie.ai/docs/start ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网下载对应系统安装包，打开 Magpie 的 Providers 页面添加自有 API Key 或受支持账号，再在 Agents 页面为一个测试用 Codex 或 Claude Code 会话选择模型；开新会话后用低风险提示词验证实际供应商与账单。需要远程部署时再读官方 Docker 文档，先限定网关可访问地址、凭据存储和网络暴露，不要把本机网关默认配置原样放到公网。社区插件涉及其他平台登录态时，应事先核对服务条款，不推荐用绕过平台识别的方式规避限制。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方 README 明确说明一个本地网关可供多个 Agent 使用，支持 API Key、订阅账号与路由组；今天的使用者推文提出 VPS 部署拓展场景。但跨供应商兼容与额度接力仍需在自己的真实配置里验收；所谓“免费模型”取决于第三方活动及条款，不能视为永久免费或默认可商用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给个人多个 Coding Agent 集中管理模型路由和失败切换。</li>
+    <li>在测试 VPS 对照本地部署的权限、日志和密钥风险。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2111488518577180866" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU2CxMmaQAADzSY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU2CxMmaQAADzSY?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ llmspeed</div>
+  <div class="section"><div class="section-label event">一句话</div><p>按硬件和模型浏览本地 LLM 生成速度预估、先感受响应快慢的网站。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://llmspeed.dev/" target="_blank">https://llmspeed.dev/ ↗</a></p>
+    <p><a href="https://github.com/nicorobinreal/llmspeed" target="_blank">https://github.com/nicorobinreal/llmspeed ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开网站，先在硬件列表选和自己机器接近的一项，再切换到模型列表选考虑运行的模型，比较首字等待感与持续生成的速度展示；用同一个模型对比另一类 GPU 或 Mac 配置，记录差别后再决定是否下载权重。网站明示数据有社区实测，也有按相似设备推导或规格投影的估计，购买硬件前务必回到原始测量来源并在自己的上下文长度、量化版本和并发设置下复测。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Show HN 上这一小工具把难以直观理解的 tokens/s 变成了可感知的选型入口，并且提供开源代码；它适合早期筛选而不是代替严谨 benchmark。尤其个人部署时，同一模型在不同内存、量化和上下文长度下的实际体验差异很大，站点估计值应被当成假设而非承诺。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>选本地推理硬件前估算常见模型的交互手感。</li>
+    <li>为团队做候选模型与硬件组合的初步对比清单。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DeepSeek V4.1-Flash-1017 更新及搜索接口商业化</div>
+  <div class="section"><div class="section-label event">事件</div><p>多位推文作者报告 DeepSeek 推出 Flash 新快照并提供 Search &amp; Fetch API；官方 API 文档当前列出 `deepseek-flash` 模型名。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>新快照围绕速度、较短输出和任务完成展开，用户可能用更低的输出 token 完成同类工程任务；但“优于某某模型”“缓存命中率极高”等说法来自推文作者个人测试，不能替代可重复、任务一致的独立基准。官方文档确认 API 模型标识与兼容调用方式；联网搜索的价格、起计时间应以 DeepSeek 最新计费页和合约为准，本文不把社媒报价当已核实费率。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型和搜索能力进入可编程工具链，可能降低 Agent 中“先找资料再写代码”的集成成本，也让网关与开发框架更容易切换供应商。团队迁移时应保留回归集，量化输出质量、总 token、搜索调用次数与真实费用，避免只因社媒跑分或短回答就迁移生产流量。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2111487902869832182" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU0b65KbsAAypqr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU0b65KbsAAypqr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HU0b7UfbwAAGXNH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU0b7UfbwAAGXNH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenCode Console 安全事件</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenCode 官方称一次安全事件影响了 1.4% 的 Console 用户，已向受影响且连接外部供应商的用户发邮件，调查仍在继续。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是 OpenCode Console 的特定用户子集，不应泛化成所有本地 OpenCode 安装都已泄露，也不能把事件原因仅凭“蒸馏攻击”推定为某种具体漏洞。官方公开推文称受影响者已收到邮件、事件仍在处理中；若你使用 Console 并保存外部服务密钥，应检查官方通知及服务商后台用量，收到通知后尽快按官方指导轮换密钥并保留账单证据。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>BYOK 聚合平台除了模型能力，更需要分级凭据、最小权限、预算上限、日志和应急轮换。行业会重新审视平台托管密钥的边界，尤其是 Agent 长时间运行时，意外用量与账户授权风险可能早于功能异常显现；但目前没有证据支持推断全部用户或全部供应商账号受害。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/opencode/status/2111519637049319818" target="_blank"><span class="handle">@opencode</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>rStation：Show HN 出现让多个 Agent 参与研究问题讨论与论文评阅的社区；官网确有问题列表与 Agent 入口，但实际评阅质量和治理证据待补 <a href="https://rstation.ai/" target="_blank">→</a></li>
+    <li>OpenDesign Motion Design：推文展示借助新模型制作教程类动效的工作流；具体 API 能力、公开试用入口及定价证据待补，暂不列为可上手工具 <a href="https://x.com/tuturetom/status/2111442747999789204" target="_blank">→</a></li>
+    <li>Grok Bot Webhook 联动：开发者分享用 GitHub Action 事件触发云端 Bot 的自动化思路；权限隔离、配置入口和稳定性证据待补，建议只用测试仓库探索 <a href="https://x.com/fankaishuoai/status/2111361067041673452" target="_blank">→</a></li>
+    <li>Skill 清理助手：作者透露还在推进按触发性、长度和结构梳理 Skills 的工具；尚无明确发布入口与可用性证据，先保留早期信号 <a href="https://x.com/lxfater/status/2111425371874992576" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>DINQ 北京 AI 招聘地图：官网可见简历解析与岗位匹配说明，岗位有效性须回到原招聘来源核对 <a href="https://jobs.dinq.me" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
