@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 18 Oct 2026 00:43:38 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 00:42:17 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/19 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-19.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-19.html</guid>
+      <description>今天值得动手的是“让 Agent 交付具体作品，并让它的工作链条可检索、可回看、可迭代”：从发布片、图表、资料检索到多智能体派活，都有实际入口。模型侧同时出现面向视觉部署的量化权重和轻量高频任务的迭代；具体性能和成本仍应以自己的任务复测。</description>
+      <pubDate>2026-10-19T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/18 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-18.html</link>

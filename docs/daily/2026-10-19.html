@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-19</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-19</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得动手的是“让 Agent 交付具体作品，并让它的工作链条可检索、可回看、可迭代”：从发布片、图表、资料检索到多智能体派活，都有实际入口。模型侧同时出现面向视觉部署的量化权重和轻量高频任务的迭代；具体性能和成本仍应以自己的任务复测。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ huashu-motion</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把产品信息交给编码 Agent，由 Skill 生成可编辑的代码动画发布片、配乐与导出文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/huashu-motion" target="_blank">https://github.com/alchaincyf/huashu-motion ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认本机具备 Node 22 以上、Chrome 或 Chromium 与 FFmpeg；在 Claude Code、Codex 等支持 Agent Skills 的环境运行 `npx skills add alchaincyf/huashu-motion`。先让 Agent 安装后运行仓库 demo，再给它自己的产品介绍或官网，明确要做“30 秒发布片”，选择它提出的方向。预览时在编辑器按 C、点画面局部并写修改意见；完成后让它运行检查、质检和渲染，再导出 MP4。仓库说明目前主要在 macOS 实测，别把样片质量当成所有模型的保底效果。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是把一句话交给黑箱视频模型，而是让 Agent 编写可修改的 HTML 动画、在本机浏览器逐帧渲染；仓库把节奏单、镜头语言、谱面配乐、定位到画面元素的评论反馈及交付前抽帧检查放在同一条工作流中。特别适合需要反复修改文案和数字的产品演示，但需要自己验收最终画面与声音。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>新产品上线时先做一支可逐句修改的功能发布片，再剪成社媒竖屏版。</li>
+    <li>把季度数据和转化漏斗改成有节奏的讲解动画，而不是静态截图。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2111821583862161631" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2111821063369773056/img/purEXM9nYsBIv3dC.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2111821063369773056/img/purEXM9nYsBIv3dC.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Pele</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Obsidian 团队维护的 Mermaid 转 SVG 渲染库，适合把 Agent 生成的流程图嵌进网页。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/obsidianmd/pele" target="_blank">https://github.com/obsidianmd/pele ↗</a></p>
+    <p><a href="https://pele.run/playground" target="_blank">https://pele.run/playground ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>不用先安装也能到官网 playground，把 `flowchart TD A[开始] --&gt; B[验收]` 贴进去，观察生成的 SVG；如果要嵌入自己的网页，执行 `npm install pele`，按照仓库 README 导入 `render`，将 Mermaid 文本交给 `render` 并把返回的 SVG 插进页面。想让图跟随侧栏宽度和主题变化，改用面向浏览器元素的 `mount()`，再用 CSS 变量设置前景和背景色。对不可信图表输入，先读项目安全文档再开放给用户编辑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目提供同步、零运行时依赖的渲染接口，支持 Mermaid 12.1.0 内置图表类型，并把主题颜色与字体交给 CSS 变量；官网还给出了性能和体积对比，但那是项目方数据，部署前应在自己的图型与浏览器里测量。对于 Agent 自动生成的图，安全边界和容器自适应比单纯“能出图”更关键。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Obsidian 或知识库侧栏显示 Agent 绘制的系统调用链。</li>
+    <li>把项目架构图嵌入产品文档，并跟随暗色主题变换配色。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2111803276501086278" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU6hEvPbQAARPlz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU6hEvPbQAARPlz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ grokbot-local-agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让 Grok Bot 将耗时工作派给同机 Pi Agent，结束时通过 Webhook 唤醒 Bot 回来验收。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/robbin/grokbot-local-agent" target="_blank">https://github.com/robbin/grokbot-local-agent ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库的 `docs/setup-guide.md` 与 `skills/pi-agent/SKILL.md`，准备 Node 22、Pi、可工作的模型登录和 Grok Bot 环境；将仓库里的 `bin/pi-task` 与配套 `.mjs` 放到同一目录。先用一条不涉及私密数据的小任务验证同步入口，再配置 Bot 的 Webhook 通知例行任务；派活时带 `--owner`，任务结束后看 `~/.pi/tasks/&lt;任务ID&gt;/` 中状态、事件和结果，再让 Bot 复核后 `ack`。Webhook 丢失时用 `pi-task pending` 补查，不要把通知到达当成任务成功。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个项目正面处理“云端调度器派完活就休眠”的断链：任务落盘、按 owner 区分、完成事件通知和待汇报补偿都属于可恢复性设计。作者也明确提醒同机脚本不是严格隔离的沙箱；给它文件读写或网络权限前，必须检查自己的信任边界。其价值是工程模式而不是保证某个订阅一定省钱。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>手机给 Bot 派一项代码改动，结束后回读本地任务产物再决定是否合并。</li>
+    <li>把文档批处理交给较便宜的本地 Agent，同时保留失败补查与人工验收。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2111737786894336445" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Lex Fridman 中文导航站</div>
+  <div class="section"><div class="section-label event">一句话</div><p>按期号和嘉宾搜索访谈，阅读中文精读并跳到官方音频与英文文稿。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://lex.qiaomu.ai/" target="_blank">https://lex.qiaomu.ai/ ↗</a></p>
+    <p><a href="https://github.com/joeseesun/lexfridman-cn" target="_blank">https://github.com/joeseesun/lexfridman-cn ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开站点，按 `/` 或 `⌘K` 打开站内搜索，输入嘉宾名、AI 主题或期号；进入某一期，先看中文导读，再对照官方音视频链接和带时间戳的英文文稿，记下有用段落。手机 Safari 可经分享菜单添加到主屏幕；需要持续跟进可订阅站点 `feed.xml`。如果想复用开源代码，先看仓库的构建和版权说明：代码与精读内容、原始文稿并不是同一许可，不应把文章整站镜像后重新发布。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是把长访谈变成可检索、可追更资料库的一种具体实现，而非又一个摘要机器人。站点和仓库对期数及中文精读篇数的展示可能随构建进度变化，本文不把推文中的“每期都有完整中文改写”当成已核实事实；重要观点还是要回到原访谈核对，AI 导读只做索引。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>快速定位某位研究者关于 Agent 工程的讨论，再回听原句。</li>
+    <li>在英语阅读训练时用中文导读定题，借时间戳英文文稿练听力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2111869352266146010" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU7cloKbMAA3IGX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU7cloKbMAA3IGX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ToneBird</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在已有聊天与邮件输入框旁生成符合上下文的回复草稿，由用户确认后再发送。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://tonebird.ai" target="_blank">https://tonebird.ai ↗</a></p>
+    <p><a href="https://tonebird.ai/pricing" target="_blank">https://tonebird.ai/pricing ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官网按系统选择 Mac 或 Windows 安装包，先用不含敏感资料的测试对话尝试免费层。Mac 可按 Option 两次唤起，在正在回复的聊天框中看候选措辞、调整语气，再点 Insert 插入原应用草稿，自己核对事实和接收对象之后手动发送。需要利用历史聊天或文件中的约定时，先读隐私条款并确认所连模型提供商的数据处理方式；免费配额和可用 App 按官网当前页面为准，不保证每个输入框都能读取上下文。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>相比只靠一段通用提示词改写文字，它试图在现有 App 的回复现场综合联系人关系、之前承诺和相关文件，再给多个可选草稿；官网明确说 Insert 不是自动发送，这个边界对工作沟通尤其重要。代价是对话上下文可能传给模型服务，必须先评估隐私和企业合规。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>回复客户对交付时间或报价的追问，先找回上次承诺再措辞。</li>
+    <li>在跨语言邮件里生成第一版回复，人工核对日期和附件后发送。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/CoderJeffLee/status/2111817146754118111" target="_blank"><span class="handle">@CoderJeffLee</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU6ufgFaYAAj4Sv?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU6ufgFaYAAj4Sv?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ XERJ</div>
+  <div class="section"><div class="section-label event">一句话</div><p>本地索引代码、文档与日志，让 Agent 先检索相似开源实现再写代码。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/xerj-org/xerj" target="_blank">https://github.com/xerj-org/xerj ↗</a></p>
+    <p><a href="https://xerj.org/llms.txt" target="_blank">https://xerj.org/llms.txt ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库 README 的手动安装与安全章节，按自己的 macOS/Linux/Windows 架构下载发行版；在只允许本机访问的开发机上启动服务后，运行 `xerj autoindex ~/my-project` 为测试项目建索引，再用文档中的查询示例搜索一个函数及其调用位置。想试“参考式编程”，让 Agent 在获准的范围内克隆相似开源仓库、建索引，先回答具体实现及文件行号，再开始写自己的代码。README 特别提醒 `--insecure` 会关闭 TLS 和鉴权，不能把这样的端口暴露给别的机器。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统 grep 往往只给文件位置或逼 Agent 把整份源码塞进上下文；该项目提供基于文件类型识别、符号和行号的索引，还宣称可对接 Elasticsearch API。仓库中的省 token 和解题率属于作者实验及用户报告，不可直接外推到私有代码库；更值得实际比较的是同一道任务的检索命中、时间和安全成本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Agent 修改陌生 SDK 前先查相近项目的接口调用和边界处理。</li>
+    <li>给混合代码、PDF 与日志的排障资料建可定位来源的本地索引。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2111810791661781365" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Harness²</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源递归优化 Agent harness 的研究框架，把提示词、工具指导、Skill 和脚本等作为可实验的对象。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/google-research/harness2" target="_blank">https://github.com/google-research/harness2 ↗</a></p>
+    <p><a href="https://github.com/google-research/harness2/blob/main/docs/SETUP.md" target="_blank">https://github.com/google-research/harness2/blob/main/docs/SETUP.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看仓库 README 和 Setup guide；官方建议 Linux 与 Python 3.12。只想理解流程可先运行仓库所述不依赖模型凭据的本地 demo，观察任务执行、编辑候选 harness、探针和组合步骤；要做真实基准，再按文档安装 uv、Node、Google Cloud CLI 及所选 benchmark 的依赖，配置模型和评测凭据。首次只选一个小任务，先用 `--dry-run` 看任务选择，再固定 benchmark、模式、随机种子，对比原 harness 和迭代后的结果；避免在可访问标准答案的网络环境直接评测。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“改一句系统提示词看感觉是否变好”推进为任务级提案、探测、组合及跨任务经验保留，支持顺序和并行递归，也公开了多基准对比。但论文/仓库成绩来自指定模型、任务和评测设定，不能等同于自己的 Agent 一装就涨分；默认执行器网络权限和沙箱设置更要求隔离实验环境。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对团队 Agent 的 Skill、工具调用规则进行可复现的 A/B 优化。</li>
+    <li>研究新任务没有现成标准答案时，怎样积累跨任务改进证据。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2111730826308452600" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU5f-dmbsAAQn8D?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU5f-dmbsAAQn8D?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HU47wuJaQAAIraa?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU47wuJaQAAIraa?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DeepSeek V4.1 Flash 1017 迭代</div>
+  <div class="section"><div class="section-label event">事件</div><p>DeepSeek 官方称 V4.1 Flash 1017 版已在网站、App 与 API 上线，并建议 DeepSeek Harness 用户升级到 v0.2.1-rc.1。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是已有 V4.1 Flash 的一次版本迭代，不应把九月的 V4.1 首发公告直接算成此次 1017 更新的独立性能验证。官方推文主张更强基准、更快任务完成、更短输出，但没有在当前抓取证据中给出完整可复算基准表；花叔在自己动效 Skill 下的表现也只是单场景经验。用相同提示、温度、上下文长度和调用路径比较两版，才知道对自家工作负载有无实际收益。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对高频编码 Agent，响应速度、产出长度与缓存费用可能比单一榜单分数更直接影响运行成本。现有接入 Harness 或第三方路由的用户应先检查模型 ID 是否真正指向新版、升级是否改变工具调用行为，再做回归测试；不要因为一条体验贴就直接切生产流量。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/deepseek_ai/status/2111375640717033777" target="_blank"><span class="handle">@deepseek_ai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU0b65KbsAAypqr?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU0b65KbsAAypqr?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HU0b7UfbwAAGXNH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU0b7UfbwAAGXNH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 NVIDIA Nemotron 3.5 Super VL NVFP4 权重</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA 的 Hugging Face 模型卡上线 120B 总参数、12B 激活参数的 Nemotron 3.5 Super VL NVFP4 量化权重。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>模型卡给出视觉语言输入、文档和视频理解、工具调用等定位，并详细列出指定硬件上的 vLLM 服务示例；这支持“有可部署权重”，不支持“普通家用 GPU 都能跑”或某个第三方速度结论。NVFP4 与混合 MoE、Mamba-2 架构的组合值得跟踪，但量化质量、显存、并发与最长上下文需要在本地部署参数下逐项核验。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果视觉 Agent 能以更少资源部署，对视频抽帧审阅、文档抽取和本地工具调用会增加开源替代选项；但模型卡列出的部署设备包含 DGX Spark、H200、H100/GB200 等高端硬件，说明“可下载”与“低成本上线”之间仍有工程距离。采购和选型应看端到端吞吐及许可，而非只看激活参数。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2111823065789460900" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2110749075981336576/img/_CN2qjAbo_CBocnV.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2110749075981336576/img/_CN2qjAbo_CBocnV.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Renoise AI 聊天窗口制片演示</div>
+  <div class="section"><div class="section-label event">事件</div><p>Renoise 账号展示了通过 MCP 与 Claude 在聊天中串联设计图、成本检查、并行片段生成和代码剪辑的短片流程。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>推文写明一条 50 秒片段的制作过程涉及 Seedance 2.5、多次 MCP 调用与积分消耗，这更像可观察的制作日志，而非证明平台能稳定一键拍片。对创作团队有价值的是每次生成前预估消耗、并行生成后逐帧质量检查、再用代码拼接这些过程节点；由于当前仅有演示推文，实际成本、开放入口与素材版权仍需独立核验。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>视频工具竞争正在从“单次画面质量”扩展到从创意到验收的可编排工作流。若成本检查和逐帧验收能沉淀为机器可调用接口，小团队可以更清晰地控制返工；但在调用额度、合成素材归属与模型供应稳定性未核清前，不宜把演示里的积分数当成可预测报价。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/renoiseai/status/2111812039111061762" target="_blank"><span class="handle">@renoiseai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2111792786823651328/img/z-rS6JbvM2VsxdfC.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2111792786823651328/img/z-rS6JbvM2VsxdfC.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2111395482803306496/img/_ES2sjQQQLJdLClA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2111395482803306496/img/_ES2sjQQQLJdLClA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>AI 伪人评论折叠插件：开发者称正测试按概率阈值折叠 X 评论并支持手动标记；尚未放出下载地址或独立评估，证据待补，跟踪误伤率与隐私处理。 <a href="https://x.com/vista8/status/2111819519299928282" target="_blank">→</a></li>
+    <li>MAI-Base-2 训练工程分享：推文转述微软对训练规模和周期的说法；当前证据包未成功生成、未核到一手技术文章，证据待补，关注实际训练资源口径。 <a href="https://x.com/Gorden_Sun/status/2111812756236292264" target="_blank">→</a></li>
+    <li>SanFrame：发现频道转发的截图识字、资料整理与设备互传工具；仅见开发者自荐转述，证据待补，重点看 OCR 准确率与隐私边界。 <a href="https://x.com/appinn/status/2111809196865757342" target="_blank">→</a></li>
+    <li>勿追踪：安卓分享链接去追踪参数的开源应用线索；目前只有转述，证据待补，尤其需确认无障碍权限的最小化使用方式。 <a href="https://x.com/appinn/status/2111760031393652981" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Karakeep 0.34：成熟的自托管 AI 标签书签工具据社区报道更新抓取与离线阅读；先核对更新日志再升级，不把它当刚发布的新项目。 <a href="https://x.com/appinn/status/2111728270504817052" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
