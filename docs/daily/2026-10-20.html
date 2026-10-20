@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-20</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-20</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得动手的增量集中在两端：一端是把 Agent 的电脑操作、云端与本地接力做成可安装的工程组件；另一端是用轻量工具量化 API 性能、渲染图表和组织创作工作流。X List 本次抓取 108 条；Agent Reach 批量证据增强超时、HNRSS 补源返回 502，以下可上手项目改用原推文与项目仓库/官网交叉核对，早期线索保留不确定性。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenGCUA</div>
+  <div class="section"><div class="section-label event">一句话</div><p>通义 MAI-UI 团队发布的通用电脑操作 Agent 开放技术栈预览，把 GUI、代码执行和跨设备接口放在同一框架里。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tongyi-MAI/OpenGCUA" target="_blank">https://github.com/Tongyi-MAI/OpenGCUA ↗</a></p>
+    <p><a href="https://github.com/Tongyi-MAI/OpenGCUA/blob/main/QUICKSTART.md" target="_blank">https://github.com/Tongyi-MAI/OpenGCUA/blob/main/QUICKSTART.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 的开放范围与 QUICKSTART，不要把预览版当成已经发布完整模型权重的产品。macOS 14 以上准备 Python 3.11—3.14、uv、CuaDriver 和所需系统权限；若从源码装 SDK，还需 Rust/Cargo 与 Xcode 命令行工具。按仓库的示例配置一个自己有授权的模型端点，先用 OSWorld 集成示例或不涉及敏感账号的本地测试任务核对截图动作与代码动作的执行轨迹，再决定是否接入日常桌面工作。注意屏幕录制与辅助功能授权只给测试环境。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库明确把可访问性树、应用接口、Shell 与视觉界面视为同一电脑任务的多种执行路径，还提供初步 macOS harness、跨设备 SDK、评测轨迹和 OSWorld 参考实现。它不是单纯的“看图点鼠标”演示；不过当前版本标为 research preview，部署复杂度和安全边界都需要自己验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对比截图点击与代码操作解决同一桌面任务的成功率、步数和失败恢复。</li>
+    <li>为自家 Agent 设计跨浏览器、桌面与手机的统一动作接口原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2111999471588679916" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU9UUQ8akAAF68d?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU9UUQ8akAAF68d?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ api-bench</div>
+  <div class="section"><div class="section-label event">一句话</div><p>两个无第三方依赖的 Python 脚本，检测 Claude Messages / OpenAI Responses 网关的首字延迟、并发与提示词缓存。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Okkmass/api-bench" target="_blank">https://github.com/Okkmass/api-bench ↗</a></p>
+    <p><a href="https://www.okkmax.com/tools/api-speed" target="_blank">https://www.okkmax.com/tools/api-speed ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库选与真实接口模式相符的 messages_bench.py 或 responses_bench.py；先运行对应脚本的 --help，看全局参数、模型名、目标地址和四种子命令的排列，切勿把 OpenAI Chat Completions 误当 Responses 接口。用仅限自己有权测试的网关，密钥放 BENCH_API_KEY 环境变量，不要放在命令行或报告中；先用少量请求运行 bench，再试 cache 和 roll，最后以缩短采样间隔的 report 生成 HTML，对照错误分类、首字延迟及缓存命中。测试会实际扣额度，不用生产密钥大并发压测。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>中转站“快”与“便宜”不能只看单次总耗时；首字延迟、长对话滚动缓存和缓存读写是不同工程问题。仓库把两种 API 协议拆成单文件脚本，还能在本机输出独立 HTML，便于把性能退化与宣传口径分开；目前仓库列出的不是 Chat Completions 模式的完整测试器。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>比较自建中转与官方接口的首字延迟、成功率及长对话缓存表现。</li>
+    <li>改网关配置后留存同参数 HTML 报告做回归对比。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2112158994424811797" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Agent Relay</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用私有 Git 仓库中的 Markdown 任务文件，在本地与云端 Agent 之间做有状态的接力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/robbin/agent-relay" target="_blank">https://github.com/robbin/agent-relay ↗</a></p>
+    <p><a href="https://github.com/robbin/agent-relay/blob/main/README.zh-CN.md" target="_blank">https://github.com/robbin/agent-relay/blob/main/README.zh-CN.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库 README、docs/protocol.md 与 docs/security.md，准备单独的私有任务仓库，不要把令牌、简历或客户数据塞进公开仓库。按照示例建 tasks/to-cloud 与 tasks/to-local，分别配置云端 webhook 和 macOS 本地同步定时器。写一条无敏感信息的测试 Markdown 任务，观察它从 pending、accepted 到 done 或 blocked 的变化，再检查同一文件内的结果内容和 Git 历史。收到 webhook 只是提醒，不代表任务已被执行；安装和授权前审查同步脚本与权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这套参考实现把传输、接受、完成三个状态明确拆开，也承认 webhook 至少一次通知与本地定时器可能延迟的现实。对多 Agent 编排而言，可靠的任务台账常比“两个机器人能互相聊天”的演示更关键；但仓库自述并非一键托管服务，也不保证所有平台开箱可用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把云端调研结果交给本机 Agent 人工确认后继续处理。</li>
+    <li>用 Git 提交历史审计一次跨设备任务的状态与产物。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2112108703784849817" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ grokbot-local-agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>为 Grok Bot 调用同机 Pi Agent 的长任务提供落盘状态、归属隔离及完工 webhook 唤醒。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/robbin/grokbot-local-agent" target="_blank">https://github.com/robbin/grokbot-local-agent ↗</a></p>
+    <p><a href="https://github.com/robbin/grokbot-local-agent/blob/main/docs/setup-guide.md" target="_blank">https://github.com/robbin/grokbot-local-agent/blob/main/docs/setup-guide.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读 README 和 setup-guide；它要求同机可运行 Node 22 与 Pi，模型登录由本人完成，不要把 auth.json 或通知密钥给 Agent 读取。按说明放置 bin 下脚本，先用无风险提示测试同步入口；之后用 pi-task 的 run 与 --owner 提交一个可验证的小任务，观察 ~/.pi/tasks/&lt;任务ID&gt;/ 下的状态、事件、结果。核对 pending 只列出归属自己的未汇报任务，结果经人工/主 Agent 审核后再 ack；如果 webhook 丢失，仍用磁盘状态补查。不要把脚本和上条 Git 接力项目误当同一实现。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者把“通知可能丢、对话可能结束”当成设计前提：产物和任务状态持久化，webhook 只负责加快唤醒，owner 防止多个 Bot 互抢汇报。适合研究轻量调度与回读机制；它明确适用于同一机器上的第二双手，不等于安全隔离的远程执行平台。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让主 Agent 派发本地批量改文件任务，醒来后查测试与 diff。</li>
+    <li>在 webhook 丢失后按 pending 清单补报未确认的任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2112195314014949598" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU_AudmagAAOwoU?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU_AudmagAAOwoU?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Pele</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Obsidian 团队发布的 Mermaid 语法 SVG 渲染库，可同步渲染图表并支持浏览器容器自适应。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/obsidianmd/pele" target="_blank">https://github.com/obsidianmd/pele ↗</a></p>
+    <p><a href="https://pele.run/api" target="_blank">https://pele.run/api ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 pele.run 先用在线 playground 粘贴一小段 flowchart，比较自己项目中 Mermaid 图的实际布局。前端项目执行 npm install pele，然后按官方 README 从 pele 导入 render，把 render('flowchart LR\nA--&gt;B') 返回的 svg 放进可信的页面容器；需要窗口变化自动适配时看 mount API。先用流程图、时序图和中文长标签各造一张测试图，比较显示、主题和报错行为，再决定是否替换原渲染器。处理外部来源的图定义时阅读 SECURITY.md，不把报错字符串当 HTML 插入。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方仓库列出对 Mermaid 12.1.0 内建图类型的语法支持、无运行时依赖、同步 API 与 SVG 安全约束；这比只比较单张图的速度更有迁移价值。它有自己的布局和视觉样式，因此“支持语法”不代表像素级复刻，性能数据也要在自己的文档规模上复测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为 Obsidian/Markdown 知识库制作更轻的关系图预览。</li>
+    <li>在网页编辑器里同步渲染用户输入并捕获语法错误。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2112009709989548131" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HU9dl2NbkAA8P5C?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU9dl2NbkAA8P5C?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HU1sG4ubwAAx93Z?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU1sG4ubwAAx93Z?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2111462671539433472/img/1mhS6V2YrMkt8oOX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2111462671539433472/img/1mhS6V2YrMkt8oOX?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HU1zNlea8AAT1N7?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HU1zNlea8AAT1N7?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AI Canvas</div>
+  <div class="section"><div class="section-label event">一句话</div><p>本地优先的多模态创作画布，把文本、生图节点与 ComfyUI 工作流、角色资产组织在一起。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tenney95/AI-Canvas-tauri" target="_blank">https://github.com/Tenney95/AI-Canvas-tauri ↗</a></p>
+    <p><a href="https://tenney95.github.io/AI-Canvas-tauri/" target="_blank">https://tenney95.github.io/AI-Canvas-tauri/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在项目展示站打开浏览器演示，确认节点、资产库和工作区是否符合自己的创作流程；需要真实运行时再从仓库/发布页取得 Windows 或 macOS 安装包。新建一集测试画布，建立角色参考图与文字说明，把文本节点连接到生图节点，选内置 ComfyUI 工作流试一条镜头；对照生成素材保存位置、模型接口费用与本地数据备份。若要接 Blender 或 MCP，先隔离测试项目并逐项授权，不给陌生插件直接接触正式素材。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>小众软件的开发者自荐和项目仓库都指向“角色一致性 + 节点式视觉工作流”，而非只做单张图片。它把剧集画布、角色资产与 ComfyUI 串起来，对连续创作更实用。特别注意开发者称代码目前为 source-available、到达条件后才拟转 MIT，不能直接将“源码可见”理解为标准开源许可。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>短剧制作中维持角色服装、表情和场景参考的连贯性。</li>
+    <li>用节点画布复用图像生成与后期处理工作流。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2112177803781156926" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ai-job-search</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 Claude Code 的求职工作流框架，用履历资料评估岗位、定制 CV 与求职信并复核导出物。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MadsLorentzen/ai-job-search" target="_blank">https://github.com/MadsLorentzen/ai-job-search ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 的前置条件和隐私说明，项目需要 Claude Code、Python、Bun，且 Claude Code 可能产生订阅或 API 费用。Fork 到自己的私有仓库或本地副本，先用匿名化经历跑 /setup，再导入一条自己手工确认真实的 JD 测试评估与 /apply 草稿流程；人工核查事实、岗位要求、PDF 文本层和任何自动生成的措辞，最终提交必须自己明确授权。内置岗位来源偏丹麦市场，国内 BOSS/猎聘不可假定原生支持，也不要绕过现有平台登录与投递安全门。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它强调结构化匹配、写作与独立复核，而不是无限量自动投递；仓库文档也明确核心流程可迁移、招聘网站采集技能需按地区替换。对已有求职自动化而言，最有价值的是“生成后查真实性与 PDF 可读性”的审核范式，而非照搬来源或对外发送动作。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对一条北京 Agent 岗位 JD 产出可人工修订的定制简历初稿。</li>
+    <li>用审稿 Agent 和 PDF 文本层检查避免事实失真与 ATS 读取失败。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2112169810050097231" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 乔木剪藏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Chrome 扩展把网页选段、文章和媒体字幕整理为 Markdown 笔记，并可保存到 Obsidian。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://chromewebstore.google.com/detail/jniolfihillilkoajpnonlbkhfkiicoo" target="_blank">https://chromewebstore.google.com/detail/jniolfihillilkoajpnonlbkhfkiicoo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>到 Chrome 应用商店核对开发者 vista8 和扩展说明后安装；先在无隐私内容的公开文章上选一段文字，用剪藏面板查看标题、来源链接与属性，人工编辑 Markdown 草稿，再保存到自己指定的 Obsidian 文件夹。学习视频或音频时试带时间戳的字幕检索；需要本地音频获取、语音识别或下载时，先单独安装并核查可选 helper 与权限，仅保存有权保存的内容。注意推文提到下版本可能下掉视频下载功能，功能以商店当前版本与页面为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方商店页面明确文章剪藏无需 AI 账户，字幕生成既可选本地模型也可选自行配置的云语音服务；草稿能先看再保存，适合把信息收集与正式知识库分离。可选 RSS 提交一旦开启会公开提交内容，涉及付费文章或个人材料时尤其要关闭并审查扩展权限。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将 AI 技术文章的原文证据与摘要收进 Obsidian 待整理区。</li>
+    <li>按字幕时间戳给教学视频建立可回查的学习笔记。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2112170563997516076" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 美国联邦民事部门限制 DeepSeek 产品</div>
+  <div class="section"><div class="section-label event">事件</div><p>美国 DHS 的《联邦公报》待刊通知要求联邦民事机构排除 DeepSeek 及关联实体相关采购，并移除有关系统及基于 DeepSeek 实现的第三方产品服务。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>原始官方 PDF 对象是美国联邦民事行政部门的信息技术采购与现有系统，不应直接改写成“美国全面禁止任何人使用开源权重”。通知措辞覆盖 affiliated entities 与 third-party implementations，实际具体适用范围还要结合附录签署命令和执行指引看；目前仅以这份通知确认条文存在，不从推文推断全球商用禁令，也不把关联产品自动等同为违规。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>面向美国联邦民事机构提供 AI 服务的集成商可能需要建立模型来源、部署路径和供应链依赖清单，评估第三方组件是否属于通知定义范围。对其他地区的企业和个人，是否受约束不能从这份通知直接推出；仍值得留意采购合规与模型可替换架构的重要性。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2112322272992379000" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVB5xPmagAAwTle?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVB5xPmagAAwTle?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 LobsterAI 发布办公 Agent 用户行为报告</div>
+  <div class="section"><div class="section-label event">事件</div><p>网易 LobsterAI 发布第二期《中国办公 Agent 用户行为报告》，按月披露其平台用户行为变化。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一家产品自有用户的观察窗口，不是中国办公 Agent 总体抽样。推文称 9 月单次任务 Token 规模较 3 月上升，但样本选择、指标定义和任务结构改变都可能影响这个比较；如果据此判断“所有用户都交更复杂的任务”就越过了证据边界。更可取的读法是把任务分布、失败原因、交付物类型和留存一同看，区分真实工作替代与模型消耗变大。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>办公 Agent 团队若只优化聊天轮次，可能漏掉长任务可恢复、交付校验和人工审批等需求。企业采购方可借这类平台数据提出更具体的问题：每项任务到底完成了什么、成本是多少、最终结果由谁验收；但不能拿单一厂商的数据直接作为市场份额或行业平均值。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2112194237211029946" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HUvxOrVbMAAnM5a?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUvxOrVbMAAnM5a?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUvxOrmbUAAF_9y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUvxOrmbUAAF_9y?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUvxOrbboAAyM7E?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUvxOrbboAAyM7E?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUvxOrgb0AAe4Yt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUvxOrgb0AAe4Yt?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Viggle JST-2：推文称可快速生成可探索的 3D 虚拟世界；尚未核对公开试用入口、模型细节与复现条件，早期信号/证据待补 <a href="https://x.com/Gorden_Sun/status/2112222070683963861" target="_blank">→</a></li>
+    <li>pstack 形式化验证 meta-skill：推文称可依系统特性生成验证 skill 与套件；尚未核对仓库、命令及适用前提，早期信号/证据待补 <a href="https://x.com/shao__meng/status/2112001937520689587" target="_blank">→</a></li>
+    <li>SMD 多模态蒸馏路线：推文介绍少步生成的蒸馏框架；未核对论文代码及评测口径，早期信号/证据待补 <a href="https://x.com/Gorden_Sun/status/2112125837981954559" target="_blank">→</a></li>
+    <li>Magpie Auto Group 命名更新：作者称 auto/&lt;模型 id&gt; 已在 v0.1.1294 发布，便于与 models.dev 对齐；具体迁移和兼容性仍应在版本日志确认，早期信号/证据待补 <a href="https://x.com/yetone/status/2112248385378152817" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>EverOS Cloud：官网介绍 Agent 跨会话记忆与云端免费入口；本次未完整核对 SDK 上手文档与实际额度，先看官方说明再决定接入 <a href="https://evermind.ai/everos" target="_blank">→</a></li>
+    <li>PDFMathReader：开发者自荐的跨平台实时 PDF 翻译阅读器，称可保留公式表格排版；安装及真实排版效果待实测 <a href="https://meta.appinn.net/t/topic/93967" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
