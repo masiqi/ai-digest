@@ -78,7 +78,6 @@
   <div class="section"><div class="section-label event">一句话</div><p>DeepSeek 开源的高性能推理框架，本次仓库提供 DeepSeek-V4.1-Flash 离线推理与优化内核，不是现成的一键在线 API 服务。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/deepseek-ai/DeepInfer" target="_blank">https://github.com/deepseek-ai/DeepInfer ↗</a></p>
-    <p><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017）" target="_blank">https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017） ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README 的 Getting started，核对硬件门槛：目前支持 NVIDIA SM100 GPU 或华为昇腾 950 NPU，需要 Linux、Python 3.12、GCC 13 及对应 CUDA 13 或 CANN 9.2；不要在普通 Mac 上直接尝试装完整服务。在符合条件的机器上创建空 Python 环境，按 README 选择对应平台从源码构建，再运行 `python examples/offline_inference.py` 做离线样例；模型首次运行会下载，已有权重可按文档设置 `DEEPINFER_HF_MODEL_DIR`。优先检查样例的结构化输出、确定性采样与评估目录，再决定是否适配业务服务。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库列出 FlashMLA、DeepGEMM、DeepEP 等优化内核及注意力和 MoE 并行、异步调度、受限结构化输出等能力，能让基础设施团队研究生产系统怎样榨取吞吐。不过官方明确说本次不包含完整推理服务所需 KV 缓存系统、分离式服务编排和跨副本负载均衡；社媒传播的收益数字也不应当成普通硬件的可复现收益。</p></div>
@@ -99,7 +98,6 @@
   <div class="section"><div class="section-label event">一句话</div><p>Kyutai 的本地语音合成项目，官方今天展示更小参数版本的进展，仓库已有 CPU 运行、语音克隆及 CLI/网页入口。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/kyutai-labs/pocket-tts" target="_blank">https://github.com/kyutai-labs/pocket-tts ↗</a></p>
-    <p><a href="https://kyutai.org/pocket-tts）" target="_blank">https://kyutai.org/pocket-tts） ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>想先听声音，打开官方体验页输入英文文本、选一条声线后生成试听；想在本机试，在隔离环境按 README 用 `uvx pocket-tts generate` 或安装 `pocket-tts` 后运行 generate，检查生成的 `tts_output.wav`。接着运行 `uvx pocket-tts serve`，在 `http://localhost:8000` 比较几种声音；如需克隆，只上传自己拥有授权的干净 WAV，用 `--voice` 指向该文件。Linux 用户留意 README 的 PyTorch CPU wheel 安装说明以免意外拉取大体积 CUDA 依赖；现有仓库列出的语言未包括中文，别按中文配音工具推荐。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方 X 帖称正在发布 1820 万、690 万、190 万参数等更小版本，宣称最低版本单核速度远超实时；这类速度应在自己的机器和具体版本复测，不把发布帖当性能保证。仓库文档实证的亮点是无须依赖在线语音 API 的 CPU 工作流、CLI/本地服务与参考音频克隆，对隐私敏感和低资源设备原型有实际吸引力。</p></div>
@@ -123,7 +121,6 @@
   <div class="section"><div class="section-label event">一句话</div><p>Mac 屏幕录制与自动运镜应用，录制时跟踪点击并可把剪辑工作交给 Agent 辅助完成。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://apps.apple.com/sg/app/%E8%8A%B1%E5%BD%95-huastudio/id6791377155?mt=12" target="_blank">https://apps.apple.com/sg/app/%E8%8A%B1%E5%BD%95-huastudio/id6791377155?mt=12 ↗</a></p>
-    <p><a href="https://www.huasheng.ai/insights/wechat-2247491515-1）" target="_blank">https://www.huasheng.ai/insights/wechat-2247491515-1） ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Mac App Store 搜索“花录 HuaStudio”并核对开发者和应用 ID，下载后授权系统录屏和麦克风；挑一段无需暴露隐私的产品页面，先录 30 秒鼠标点击、滚动、讲解，停止后查看自动推近、拉远和鼠标轨迹。到时间轴删去开头结尾，试试提词器、画面裁剪或模糊遮挡，再导出横屏或竖屏成片；若使用作者说的“复制提示词交给 Agent 剪片”，只在你信任的 Agent 工作目录处理素材，先检查脚本和实际权限。当前免费以商店实时页面为准。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>商店说明明确写了跟随点击的自动镜头、画中画摄像头、单独音轨与本地处理，作者帖子强调“录完后复制剪辑指令给 Agent”的人机交接。与只生成最终视频相比，它把交付物保留为可继续修改的编辑过程，尤其适合经常录 Bug 复现、教程和演示的人；隐私与价格声明仍以当前版本商店条款为准。</p></div>
@@ -147,7 +144,6 @@
   <div class="section"><div class="section-label event">一句话</div><p>面向儿童的中文界面打字冒险游戏，开源版本提供本地静态站点、关卡与可选的设备端摄像头互动。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/shaom/keyboard-island" target="_blank">https://github.com/shaom/keyboard-island ↗</a></p>
-    <p><a href="https://keyboard-island-doudou.groovy-river-7567.chatgpt.site/）" target="_blank">https://keyboard-island-doudou.groovy-river-7567.chatgpt.site/） ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开试玩地址配物理 QWERTY 键盘，让孩子按剧情完成字母与拼音键位练习，观察每次正确输入如何改变场景；不想使用第三方托管页，就克隆仓库，安装 Node.js 20+，按 README 的 Quick start 在本地启动静态服务器并访问 `http://127.0.0.1:4173/`。进度存于浏览器 localStorage，换站点地址或清空浏览器数据可能丢失；可选摄像头模式要先阅读 PRIVACY.md，不能用 `file://` 直接打开代替本地 HTTP 服务。开源版不包含原试玩站的配音文件，勿随意抓取重分发。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库公开了 96 个关卡、静态资源和隐私说明，游戏不靠倒计时和失败惩罚驱动孩子练习；摄像头识别在本机 worker 中运行且无需账户。它既是亲子打字游戏，也是观察 AI 辅助产品如何交付双语文档、可测试静态站点和授权边界的案例。试玩站与开源版素材不完全一致，选用前应确认家长接受的摄像头权限。</p></div>
@@ -172,7 +168,6 @@
   <div class="section"><div class="section-label event">一句话</div><p>开源、本地优先的科学研究工作台，把文献、科研连接器、Python/R 计算和可追溯研究记录放在同一桌面项目中。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://github.com/aipoch/open-science" target="_blank">https://github.com/aipoch/open-science ↗</a></p>
-    <p><a href="https://github.com/aipoch/open-science/releases）" target="_blank">https://github.com/aipoch/open-science/releases） ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库 Releases，Mac M 系列选择 ARM64 DMG（其他系统选对应发行包），先比对同一 Release 的校验文件后安装；新建项目，写清一个可核查问题，例如“对一份公开数据做统计并给出复现步骤”。连接自己已有且获授权的模型服务商或 Codex/Claude 订阅，上传非敏感 CSV，选择审批模式，让 Agent 做资料搜索和 Notebook 计算；最后打开结果的来源记录，检查数据、代码、运行产物能否追溯，再考虑导出 `.science` 包分享。涉及敏感数据，先检查外部模型、联网连接器和权限选项。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目 README 和 v1.0 Release 都能核查到真实桌面发行包与 Claude Code、OpenCode、Codex 等后端选择，也清楚写出实验与引用可检查的工作流。比“AI 帮写论文”更重要的是把问答、代码运行、文件版本与证据捆成可复核产物。作者帖关于远程 GPU 等能力不要外推：仓库 Release 明确说云 GPU 提交与实时多人协作尚未包含于 1.0。</p></div>
@@ -193,7 +188,6 @@
   <div class="section"><div class="section-label event">一句话</div><p>Simon Willison 用 Coding Agent 反复迭代的手机/桌面浏览器即时战略游戏，含 AI 对战与多人模式。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://simonw.github.io/battledrones/" target="_blank">https://simonw.github.io/battledrones/ ↗</a></p>
-    <p><a href="https://github.com/simonw/battledrones；开发记录：https://simonwillison.net/2026/Oct/20/battledrones/）" target="_blank">https://github.com/simonw/battledrones；开发记录：https://simonwillison.net/2026/Oct/20/battledrones/） ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>在手机或电脑浏览器打开试玩地址，先选单人遭遇战，体验造基地、采集资源、部署地面与空中单位；之后试 AI vs AI 模式观察不同策略。想与朋友联机，优先按今天作者更新帖选择通过小型 WebSockets 中继的在线游戏并分享邀请链接。另有两台相邻设备借麦克风和高频声音同步的实验玩法，作者警告噪声可能令人头痛，音量和环境不适合就不要尝试。开发者可从仓库 README 的 agent battles 文档与测试目录阅读怎样让两个模型按可见信息下指令。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者不只展示“提示词写游戏”的结果，还开放演进日志、源码、对战接口与多轮迭代，提供可以检查的 Agent 工程样本。其开发日志明确说多数代码由 Agent 生成、他自己几乎没逐行审核，因此它更适合研究快速原型及测试边界，不宜直接当安全关键工程模板；今天加的在线中继也让不方便用声学配对的人能实际玩多人版。</p></div>
@@ -214,7 +208,6 @@
   <div class="section"><div class="section-label event">一句话</div><p>斯坦福公开的 Transformer 与大语言模型课程页面，适合按讲义体系学习强化学习和后续 Agent 架构。</p></div>
   <div class="section"><div class="section-label event">链接</div>
     <p><a href="https://cme295.stanford.edu/syllabus" target="_blank">https://cme295.stanford.edu/syllabus ↗</a></p>
-    <p><a href="https://cme295.stanford.edu）" target="_blank">https://cme295.stanford.edu） ↗</a></p>
   </div>
   <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 Syllabus，找到 2026 年 10 月 16 日的 Lecture 4“Reinforcement learning with LLMs”，下载同页对应的课程幻灯，按奖励设计、策略梯度、RLHF/PPO 与 RLVR/GRPO 的顺序记概念对照表；遇到数学符号再返回第一页的 Transformer、注意力与基础语言模型课程补前置。视频是否已开放以课程 syllabus 上实际链接为准，不要把推文里“都公开”当作当前站点视频可看的保证。后续按 syllabus 跟进 10 月 30 日的 LLM 系统与 11 月 6 日的 Agent 主题。</p></div>
   <div class="section"><div class="section-label analysis">为什么值得关注</div><p>对 Agent 工程师而言，理解 RL 训练与后续系统优化，比只记模型名称更利于判断新论文里“推理能力提升”究竟来自训练、采样还是运行时。课程站点公开大纲、幻灯与图解速查表，可以围绕一个具体问题反查概念；但部分讲次视频仍标注即将上线，需要避免给用户不可访问的播放链接。</p></div>
