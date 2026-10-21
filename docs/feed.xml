@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:42:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 00:42:28 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/21 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-21.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-21.html</guid>
+      <description>今天的实用线索横跨推理底座、端侧语音与可追溯研究工作台：DeepSeek 放出生产同源推理框架，Kyutai 更新低算力语音路线，独立开发者则把游戏、儿童学习与屏幕录制做成可立即试用的作品。筛选以 X List 原帖及能读到的官方仓库、产品页为准；Agent Reach 多源证据脚本本轮超时，HNRSS/Hacker News 补充证据未取得，未把未知社区反馈当成已证实事实。</description>
+      <pubDate>2026-10-21T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/20 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-20.html</link>
