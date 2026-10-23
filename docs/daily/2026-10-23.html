@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-23</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-23</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>本期只采用 2026-10-23 00:00—09:00 北京时间内抓到的 X List 帖文，而不是把 UTC 的 10 月 22 日直接排除。抓取原始 87 条，其中当日本地日历日 25 条；下文以这 25 条为线索，再逐项核对开发者原站、官方文档或项目页面。今天最值得亲手试的不是未经证实的模型传闻，而是本地 PDF 工具、原生跨平台开发方法，以及可编辑的 SVG 生成。每个条目的“怎么玩”是试用路径，不代表我们已亲自完成产品内功能测试。HNRSS 六个订阅源均返回 502，本期不把失败占位条目当新闻；自动补证出现泛相关 Reddit 命中，已改用下面列出的独立官方来源校验。产品定价、可用地区及功能以官方实际页面为准。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenPdfEdit：浏览器本地编辑 PDF，还能导出 Markdown</div>
+  <div class="section"><div class="section-label event">一句话</div><p>小众软件转发开发者自荐；官方站确认浏览器、Windows、macOS 及扩展可用，编辑/批注/合并和导出 Markdown 在本机处理，不必先上传文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://openpdfedit.com/app/" target="_blank">https://openpdfedit.com/app/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>用非敏感测试 PDF 打开网页，先加一条批注并合并两页，保存副本；再将有真实文本层的 PDF 导出 Markdown，检查标题、表格是否符合原稿。扫描件只有图片，不能期待直接还原标题层级；官网称 OCR 在网页端需首次下载识别器，扩展不支持 OCR，开发者帖称 OCR 与水印属于付费工具，试付费前核对页面。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>私密材料的快速批注与提取适合本地工作流，但“本地处理”是项目方技术说明，敏感材料仍建议先审查源码和浏览器权限。项目开源许可证是 AGPL-3.0-or-later，并非可直接嵌入软件的通用 PDF SDK。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113317876882911548" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole Windows 开发实录：在 Mac 上写 C#，在 Windows 上验 WinUI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>作者今天的长帖对应官方完整文章，公开从 Mac 开发原生 Windows 程序的代码分层、虚拟机和真机验证流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mole.fit/windows/blog/building-mole-for-windows-on-a-mac" target="_blank">https://mole.fit/windows/blog/building-mole-for-windows-on-a-mac ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>照文章把跨平台的 .NET 核心逻辑和 WinUI 视图拆开；需要 Windows API 的工程启用 EnableWindowsTargeting；在 Mac 跑跨平台单测，Parallels 共享目录跑 Windows UI 构建，再用真实 Windows 设备测高 DPI、SmartScreen 与安装签名。务必分开 Mac/Windows 的 obj 输出，避免共享目录中绝对路径互相覆盖。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>不是“在 Mac 原生编译 WinUI”捷径。作者明确说 WinUI 层仍须在 Windows 构建；工程师可以复用的是测试边界与分层法，避免把单一 VM 测试当发布验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2113420820815224904" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVKT7Kwa4AAKv3K?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVKT7Kwa4AAKv3K?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Ideogram Vector：直接生可编辑 SVG，或把图片矢量化</div>
+  <div class="section"><div class="section-label event">一句话</div><p>X List 推荐的矢量模型在 Ideogram 官方产品页有生成与图片转 SVG 的两个入口，输出用于徽标、印刷和插画。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://ideogram.ai/models/vector/" target="_blank">https://ideogram.ai/models/vector/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官方页选择 Create a vector，输入“几何风格、单色、易印刷的茶馆徽标”等明确需求，下载 SVG 并在矢量编辑器检查文字、路径、颜色能否逐项编辑；已有平面图则试 Vectorize an image。需要自动化的开发者阅读页面链接的 API 文档，先核对按图计费。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>SVG 能无损放大和编辑对象，适合把 AI 初稿转为可交付资产；但生成图形不是品牌法务审查，复杂图片转换也需人工检查路径数量与可编辑性。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2113307805767876779" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2113296571123044352/img/1xG18P44L44_k4g4.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2113296571123044352/img/1xG18P44L44_k4g4.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 有用：把 AI 提示词和工作流拆成带自测的小课</div>
+  <div class="section"><div class="section-label event">一句话</div><p>作者发布 useful.qiaomu.ai；站点公开 24 个领域、240 套内容，其中有 AI 提示词领域及“一天上手 AI 工作流”路线。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://useful.qiaomu.ai/paths/#ai-day" target="_blank">https://useful.qiaomu.ai/paths/#ai-day ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进 AI 工作流路线，先选“四要素提示词”，把同一件真实但不涉密的任务分别用普通提问与“角色、背景、任务、格式”四段提问完成，再按页面自测题核对差异；学习记录在浏览器本地保存，跨设备需自备笔记。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>比堆砌提示词模板更适合新手练习“给约束、做核查”的基本功；页面把图解、练习、自测连成可重复练习单元，不应将教学示例当作严谨科学验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2113303860580364572" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVP1VRrasAAyh7X?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVP1VRrasAAyh7X?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVP1qcTbwAAaQxm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVP1qcTbwAAaQxm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVP2QCwbcAATAe1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVP2QCwbcAATAe1?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVP2eOybIAAah9M?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVP2eOybIAAah9M?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVKuEYza4AQkPru?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVKuEYza4AQkPru?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVKuJJma4AMsRx0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVKuJJma4AMsRx0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVKuPafa4AIr_wm?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVKuPafa4AIr_wm?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVKuUX6aQAA4gRQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVKuUX6aQAA4gRQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PDF_Easy：Windows 离线 PDF 阅读与 OCR 的低视力友好选项</div>
+  <div class="section"><div class="section-label event">一句话</div><p>小众软件论坛上的开发者自荐确认 Windows 微软商店分发、离线处理、文字识别和高对比模式；它是 PDF 阅读器，不是专门的 AI 写作产品。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://apps.microsoft.com/detail/9PJ4H1WRT604" target="_blank">https://apps.microsoft.com/detail/9PJ4H1WRT604 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从微软商店核对应用名称再安装；先用不含隐私的扫描 PDF 试离线 OCR 与文字检索，再在高对比度模式检查右侧大按钮和语音读出是否满足个人需求。基础版免费，论坛帖称专业版一次性买断；准确价格和具体 OCR 权限以商店显示为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>强调本地处理与可访问性，是文本识别落地到阅读场景的实用小工具；目前可核对的详细信息主要来自开发者自荐和商店入口，未做独立实机测试。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113409716411900364" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Code Skills 目录整理：先核对官方格式，再做迁移</div>
+  <div class="section"><div class="section-label event">一句话</div><p>X List 有开发者希望 Claude Code 直接读取 .agents/skills；这是一条兼容性诉求，绝非已上线功能公告。可直接执行的是根据官方 Skills 文档盘点现有项目技能目录。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://code.claude.com/docs/en/skills" target="_blank">https://code.claude.com/docs/en/skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官方文档的“Choose where skills load”，先列出本项目现有 Skill 文件位置，与官方当前支持的项目、用户和额外目录策略逐一比对；只迁移一个无机密的测试 Skill 到文档明确支持的位置，启动新会话验证加载，再决定是否批量迁移。不要把帖子中的希望误读为“已自动兼容 .agents/skills”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>统一多个 Agent 工具的技能存储有助于少维护一套说明，但路径兼容不能靠猜；以自己安装版本和官方文档为准。此条为配置方法，不是 Claude 新发布。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2113330196401303844" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude 订阅额度：关于 A/B 调整的转述尚不能当官方定案</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 帖文转述 SemiAnalysis：部分 Claude 订阅账号的五小时额度提高、月总量降低的测试观察。我们检索到 SemiAnalysis 对订阅额度测试方法的公开说明，但未在公开材料中独立核实该帖所称的具体约 20% A/B 数字。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>额度体验取决于模型、输入输出、缓存和滚动时间窗口，不能仅用“每月能发多少次消息”对比套餐；关注自己的使用面板和服务商正式说明。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>先记录实际任务每周消耗量再做续费选择；这仍是第三方观察，不是 Anthropic 确认所有用户同时调额。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2113425021158699384" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVQ_hEnWIAAC7gi?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVQ_hEnWIAAC7gi?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Qwen4/Kalmia：社区将 Arena 匿名模型与 Qwen4 联系起来，但并无官方身份确认或发布时间；证据待补，不据此宣称“已经发布”。 <a href="https://x.com/MinLiBuilds/status/2113300986651627646" target="_blank">→</a></li>
+    <li>创作者用 Opus 5.5 生成素材：帖子声称可替代部分生成加剪辑工序，缺少公开可复验的完整工作流；证据待补，先要求交付中间资产与人工审片。 <a href="https://x.com/Gorden_Sun/status/2113325149978337318" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>组织知识维护：一线员工如何先整理文档、再让系统可持续更新，比单纯堆文件到检索库更需要流程设计；该帖是实践问题而非成熟产品发布。 <a href="https://x.com/Tumeng05/status/2113302792865771981" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

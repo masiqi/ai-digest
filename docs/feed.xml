@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 22 Oct 2026 00:43:02 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 01:18:39 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/23 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-23.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-23.html</guid>
+      <description>本期只采用 2026-10-23 00:00—09:00 北京时间内抓到的 X List 帖文，而不是把 UTC 的 10 月 22 日直接排除。抓取原始 87 条，其中当日本地日历日 25 条；下文以这 25 条为线索，再逐项核对开发者原站、官方文档或项目页面。今天最值得亲手试的不是未经证实的模型传闻，而是本地 PDF 工具、原生跨平台开发方法，以及可编辑的 SVG 生成。每个条目的“怎么玩”是试用路径，不代表我们已亲自完成产品内功能测试。HNRSS 六个订阅源均返回 502，本期不把失败占位条目当新闻；自动补证出现泛相关 Reddit 命中，已改用下面列出的独立官方来源校验。产品定价、可用...</description>
+      <pubDate>2026-10-23T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/22 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-22.html</link>
