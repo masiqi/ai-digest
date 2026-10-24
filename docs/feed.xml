@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 23 Oct 2026 01:18:39 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 00:49:38 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/24 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-24.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-24.html</guid>
+      <description>今天值得动手的不只有 Kimi K3.1 Pro：新生的 Mac 原生 Agent、恒定历史显存模型、检索重排与浏览器端小模型都给出了可操作入口。与此同时，软件工厂的“刹车”设计和训练数值稳定性提醒我们，能跑、跑得久与可信赖是三道不同的关。</description>
+      <pubDate>2026-10-24T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/23 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-23.html</link>

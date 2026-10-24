@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-24</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-24</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得动手的不只有 Kimi K3.1 Pro：新生的 Mac 原生 Agent、恒定历史显存模型、检索重排与浏览器端小模型都给出了可操作入口。与此同时，软件工厂的“刹车”设计和训练数值稳定性提醒我们，能跑、跑得久与可信赖是三道不同的关。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Limare：刚露头的 Mac 原生 Agent 工作台</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款用 SwiftUI 编写、可自带模型提供商的 macOS Agent，覆盖文件、Shell、浏览器、技能与 MCP 等操作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Maqiaogongmin/Limare" target="_blank">https://github.com/Maqiaogongmin/Limare ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库的 Releases 页面下载已签名并公证的最新版 DMG，确认机器是 Apple Silicon 且 macOS 至少 15.0；安装后在应用内配置自己有权限使用的模型提供商和凭据，新建一个不含隐私的测试项目，让它先读取测试目录、总结 README，再尝试只修改一份副本。需要桌面操作时才单独授予辅助功能权限；测试浏览器、MCP 或远程访问前分别检查权限和数据去向，不要一开始把真实工作目录全盘放开。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库目前只有很少关注，确实更像早期作品，而不是又一个成熟大厂客户端。其特色是本地优先储存与用户控制凭据，开发者说明不运营模型中转或聊天记录云服务；但模型请求仍可能发给你选定的服务，且主应用不使用 Apple App Sandbox。论坛作者也直言长任务中断、浏览器互扰等问题仍待改进，适合隔离试用而非立即托管生产任务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在自己的 Mac 上并排测试多个模型供应商对同一仓库修复任务的表现。</li>
+    <li>做个人资料整理 Agent，先从最小授权目录验证文件和浏览器工具的边界。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113548013666795561" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PDF to MD Converter：文本型 PDF 一步转 Markdown</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用浏览器里的 pdf.js 抽取 PDF 文本层，预览并复制或下载 Markdown 的免费网页工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://pdftomd.tools" target="_blank">https://pdftomd.tools ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开网页后将一份可选中文字的 PDF 拖进 Source PDF 区，等待 Markdown preview 生成；先在预览里比对标题、列表和简单表格，再复制到笔记软件或下载 .md 文件。若输出空白，先检查原 PDF 是否只有扫描图片；这个工具明确不做 OCR，扫描件要另用识别工具。含多栏排版、图表或特殊字体的文件也应按页抽查，不能把自动提取的排版直接当成可信原稿。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官网披露免费网页路径在本地标签页处理文件、不要求账号，比较适合先把文字型资料变成可检索、可版本管理的文本。隐私表述来自产品方，敏感文档仍应自行做网络和代码审查；它不导出图片、也不支持扫描件 OCR，不能替代复杂论文图表解析。对需要喂给 RAG 或 Obsidian 的文字报告，它的低门槛胜过装一整套文档流水线。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将可复制文字的政策或技术 PDF 转成知识库的 Markdown 草稿。</li>
+    <li>把旧版产品手册转成 Git 可追踪的文本，再人工校正表格。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113782188869107865" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ EdgeRock-4B：长输出时历史状态固定的开源模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>提供权重、推理代码和评估说明的 4B 多模态模型，核心路线是固定容量的持续历史状态。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/rockmatrix-ai/EdgeRock" target="_blank">https://github.com/rockmatrix-ai/EdgeRock ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库 USAGE.md 和 docs/runtime.md，确认设备与依赖，再从仓库指向的 Hugging Face 下载对应权重到磁盘空间充裕的位置；按照 USAGE.md 先装适合自己平台的 PyTorch、项目依赖，用便携 PyTorch 后端在很短的提示词上做一次生成。然后让模型处理短、中、长输入并固定输出长度，记录实际 GPU 总占用、吞吐和回答质量；有 Hopper 环境再考虑仓库给出的优化 CUDA 容器，别直接把论文最高吞吐数字套用在 Mac 上。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目给出了对固定历史状态容量的具体定义，文档称每序列持续历史约 97.76 MiB，与序列长度无关；这里说的是历史状态，不是整机显存恒定。权重、运行协议和基准测试路径公开，适合独立复现“长生成不会线性堆积 KV 历史”的工程假设。它的 Hopper 批量吞吐是特定硬件与测试配置下的报告结果，边缘端能否划算还取决于权重大小和实测任务质量。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在有限显存上研究长链推理的持续状态与普通注意力 KV 缓存的差异。</li>
+    <li>构建边缘设备多轮助手原型，测试输出长度增长时内存曲线是否稳定。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2113561067372908779" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ REA：给编码 Agent 配逆向分析工具箱</div>
+  <div class="section"><div class="section-label event">一句话</div><p>通过 MCP 把应用行为、运行时和二进制分析能力接给编码 Agent 的开源项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/morluto/rea" target="_blank">https://github.com/morluto/rea ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库 README 与 Guides，检查其支持的操作系统、Node 环境、依赖工具和 MCP 配置；不要直接把未知安装脚本交给生产电脑执行。在一份你自己写的小程序或明确授权的开源应用上做演示：记录一个功能的输入与可观察输出，按官方说明接入 REA 的 MCP 服务，让 Agent 检索运行时或二进制证据，最后自己对照源代码验证结论。不要拿没有授权的商业应用做破解目标；商业反编译工具也须独立取得合法许可证。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目把“看见某个功能”与“拿到可核验的实现线索”连接起来，而不是只让模型猜测 UI 行为；README 同时覆盖二进制、应用和运行时层面，并有中文说明。其价值更接近软件保存、兼容性排查和安全研究，不等于自动合法复制任意商业功能。尤其要区分分析工具实际提取的事实和 Agent 对实现方式的推断，保留日志与可复现实验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>分析自己编译的程序在不同平台出现异常时的运行路径。</li>
+    <li>对有授权的遗留系统做兼容性迁移，重建接口行为与测试样例。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2113646542213304759" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVUuRs_a8AAxpfX?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVUuRs_a8AAxpfX?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cohere Rerank 5：为 RAG 找文档也找段落</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cohere 的 Pro/Fast 双重排模型可对检索结果排序，选用 Context Focus 时同时标出相关文字片段。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docs.cohere.com/v2/changelog/rerank-v5" target="_blank">https://docs.cohere.com/v2/changelog/rerank-v5 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Cohere 控制台申请自己的 API 凭据，按照官方 Rerank v2 文档准备一个查询和若干段你有权上传的脱敏文档；先用 `rerank-v5.0-fast` 调用重排接口，记录前几条结果及延迟，再改为 `rerank-v5.0-pro` 做对照。最后按官方示例开启默认关闭的 Context Focus，查看每篇文档返回的字符区间，只将核对无误的相关段落送入回答模型；对中文、表格、长文档分别测试排序质量和 token 消耗，注意 API 费用与数据出境要求。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方更新明确这次不必重建向量索引，旧应用可先只替换重排模型参数。Context Focus 在同一次调用中给出片段位置，比“先重排再另写截断逻辑”更利于检查依据和控制下游上下文成本。Fast 与 Pro 的延迟质量取舍仍应在自己语料验证；不要把厂商榜单当成你的知识库效果，也不要默认免费或默认启用片段功能。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>《红楼梦》章节问答先召回原文，再按问题重排并截取证据段落。</li>
+    <li>企业制度搜索高亮命中句，减少把整篇冗长附件送进模型的开销。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2113646348394463371" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVKZyeAXEAArPk_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVKZyeAXEAArPk_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WorldTUI：浏览器里“想象”终端的 360M 小模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个通过 WebGPU 逐次预测终端画面的实验性模型，输入按键后返回看似终端的画面，但不运行真实 Shell。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://simedw.com/projects/worldtui" target="_blank">https://simedw.com/projects/worldtui ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>使用桌面 Chrome 或 Edge 打开演示页，挑选初始屏幕并加载模型，等待浏览器 WebGPU 初始化后输入几条完全无害的命令，比如 `pwd` 或 `help`，再试进入类似 vim 的全屏界面，观察它是否会自洽地更新显示。把输出与真实本地终端比较，记录在哪些按键序列出现假文件、状态漂移或不符合真实命令的结果。不要往这个页面输入账号密码、密钥或误认为命令已在机器上执行。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者明确说明它由 Qwen2.5-Coder 0.5B 微调而来，在网页标签页的 GPU 上运行，展示的是“界面状态预测”而不是 Shell 仿真器。这个方向可启发低成本 UI 沙盒、交互式训练数据和代理测试环境，不过作者也坦言一致性较弱，不能承担代码执行、文件系统核对或安全验证。正因为它会产生逼真的假终端，区分模拟与真实动作尤其重要。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给新手演示模型如何学习按键到画面变化，而不触碰系统终端。</li>
+    <li>研究 Agent 在模拟界面中是否会把视觉反馈误判为真实执行结果。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113547898751238628" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVTUnUIXYAA0feK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVTUnUIXYAA0feK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ software-factory Skill：给自动写代码流水线先装刹车</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Matt Pocock 仓库中仍在 in-progress 分支的设计型 Skill，为远程、无状态软件工厂定义任务、运行、触发器和服务槽位。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mattpocock/skills/tree/software-factory-skill/skills/in-progress/software-factory" target="_blank">https://github.com/mattpocock/skills/tree/software-factory-skill/skills/in-progress/software-factory ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开上述分支目录先读 SKILL.md，再挑一个小仓库的真实问题，例如待审 PR 或无人处理的低风险 Bug；按文档列出 ticket tracker、git host、orchestrator、runner 等槽位，并逐一写明每种任务由谁触发、读写什么、结束后触发什么、人工在哪一步重新进入，以及如何避免重复执行。然后把确定性测试、独立自动评审、人工 PR 审核三种刹车落在一页设计文档里；第一轮只对少量工单开放触发，不要误把这个术语 Skill 当成可一键部署的流水线。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这个新分支仍是设计素材，却罕见地强调“每次运行不等待人、执行机不保留状态”，并把人工审批转换成后续事件，而非在云端长时间挂起 Agent。文档直说自动触发是油门、自动检查与人审是刹车，还要求重试循环有上限。对已在用多 Agent 写代码的人，它提供的价值是提前定义失败边界，而不是又增加一个模型或脚本。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>设计 GitHub Issues → Agent PR → CI → 人工审核的最小软件工厂。</li>
+    <li>排查多个子 Agent 同时抢同一工单、反复推送或无限自修复的问题。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2113458972686713289" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVSDuGsbcAAwt6f?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVSDuGsbcAAwt6f?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kimi K3.1 Pro：先试 API，权重承诺仍待兑现</div>
+  <div class="section"><div class="section-label event">一句话</div><p>月之暗面新发布的多模态长上下文模型，现可在 Kimi 服务和 API 体验，开放权重尚未按承诺日期发布。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://kimi.com/" target="_blank">https://kimi.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 Kimi 网页版或 Kimi Code 里找 K3.1 Pro 入口，把一个你有权分享的小型项目和完整验收要求交给它，记录所改文件、执行过的测试及错误，再与现用模型做同一输入的盲对比。要接 API 时先看 Moonshot 官方平台的模型列表、价格和参数说明，以实际支持的模型 ID 为准；把短任务与长仓库问答分开测，并设预算上限。不要因为宣传里的“开放权重”就安排本地部署：官方推文说完整权重将在 11 月 4 日前放出，今天还需要等待。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方推文宣称 100 万 token 上下文、2.8T 总参数与约 104B 激活参数，并强调完整游戏项目开发和 3D 场景；第三方 Artificial Analysis 的 10 月 23 日评测称其 Intelligence Index 为 55，属于值得复测的强信号。但分数是特定配置下的比较，不代表你自己的编码 Agent 配置一定胜出；开放权重与真正可下载、可经济地部署是不同里程碑。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用同一套项目验收测试比较 Kimi Code 与现有编码模型的修复质量。</li>
+    <li>在 API 预算可控前提下测试超长文档问答与中英混合需求分解。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Kimi_Moonshot/status/2113680701770068067" target="_blank"><span class="handle">@Kimi_Moonshot</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVVMjBoaIAAZncD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVVMjBoaIAAZncD?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 SkyRL 把 GLM-5.3-Flash 长序列训练推进到百万 token</div>
+  <div class="section"><div class="section-label event">事件</div><p>SkyRL 团队披露在 64 张 B200 上对 GLM-5.3-Flash 进行最长每序列 100 万 token 的 SFT 与强化学习训练实验。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方 GitHub 追踪帖列出对 Megatron-LM 的依赖补丁、重计算、上下文并行、MoE 分发和 CPU 卸载等工程细节，并给出 1M 时每卡峰值约 144.5 GiB、约 305 秒一步的配置结果。这不是“单卡普通配置即可训练百万 token”，也不是模型推理时免费享有百万有效上下文；多个上游 PR 仍开放，复现还要核对 pinned 依赖和训练数据。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>行业关注点从模型广告的上下文窗口，转向长序列训练能否在显存、吞吐与数值一致性三方面稳定完成。对研究团队而言，这是拆解训练系统瓶颈的公开工程线索；对应用开发者而言，它还不是随手可跑的消费级方案，更不等于真实业务问题在百万 token 处都能准确检索和推理。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2113456593681756491" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVSBjlTaMAA-5OC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVSBjlTaMAA-5OC?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVP1YjsbAAAd8mq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVP1YjsbAAAd8mq?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Softmax 与交叉熵数值边界再被审视</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究者 Jon Barron 在 X 上发布针对 Softmax 和交叉熵数值问题的论文线索，提出改写以改善极端 logits 下的梯度行为。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>其公开说明提及 softmax collapse：某个 logit 极大时，相应梯度可能因浮点舍入变为零，而其他分量没有同步抵消，导致理论上应守恒的梯度和出现偏差。论文已在 arXiv 公布，但作者“所有实现都有 bug”的表述范围很广，不应直接推断 PyTorch/JAX 所有训练都失效；要结合具体 dtype、内核、损失函数实现与复现实验判断，尤其不要在生产训练中未经对照就替换核心算子。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这一线索提醒模型训练的风险不只在数据和架构，还在基础运算的数值稳定性。若独立复现成立，高置信输出附近的梯度分析、异常跳跃和长期优化轨迹可能都要重新检查；短期最实际的行动是建立边界值回归测试、记录数值精度与框架版本，而不是拿未经验证的新公式全面重训。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/jon_barron/status/2113707875290042665" target="_blank"><span class="handle">@jon_barron</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2113698124351074304/img/LFJgXhcT_P7PthYR.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2113698124351074304/img/LFJgXhcT_P7PthYR.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Strata 0.2.3：社区消息称本地 Agent 聊天新增上下文压缩；官网更新与主要仓库发布版本可见不一致，先核对正式发行包再安装，证据待补 <a href="https://x.com/appinn/status/2113560417603588334" target="_blank">→</a></li>
+    <li>云端 Grok Bot ↔ 本地 Paseo 回执桥：作者称本地 Agent 完成后可以唤醒云端 Bot 汇报，但同名 agent-relay 项目很多，尚未核对其具体仓库与权限机制，证据待补 <a href="https://x.com/fankaishuoai/status/2113611395820339518" target="_blank">→</a></li>
+    <li>8 个游戏开发 Agent Skills：推文给出从玩法到部署的方向清单，但未核实具体仓库及适配版本，先当技能设计线索而非可安装套件，证据待补 <a href="https://x.com/lxfater/status/2113634004373004324" target="_blank">→</a></li>
+    <li>Show HN Pristine：HN 上刚出现一个声称会批评并打磨 Web UI 的 Agent Skill，社区讨论与复现尚少，证据待补 <a href="https://news.ycombinator.com/item?id=50204389" target="_blank">→</a></li>
+    <li>HNRSS 补源状态：本次六条预设 feed 抓取均失败，上面 HN 信号取自单独公开讨论页；这不代表今天没有其他早期项目，证据覆盖不足 <a href="https://news.ycombinator.com/show" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Artificial Analysis Coding Agent Index：比较“模型 + Agent harness”时先核对任务集、成本与时间，不把榜单分数当裸模型智力 <a href="https://artificialanalysis.ai/agents/coding-agents" target="_blank">→</a></li>
+    <li>METR / Redwood 的 Agent 监控压力测试：X 帖提示监控覆盖与沙箱绕过路径，但在未逐条核验原报告前不扩写具体结论 <a href="https://x.com/shao__meng/status/2113452523512271165" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
