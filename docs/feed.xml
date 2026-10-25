@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 24 Oct 2026 00:49:38 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 00:43:29 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/25 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-25.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-25.html</guid>
+      <description>今天值得动手的更新落在“把 AI 能力接入日常工具”：语音输入、Obsidian 阅读、文档转换、本地大模型与更新说明都有明确入口；另一条线是隐私边界，从本地处理延伸到机密计算。X List 抓取了 107 条，其中北京时间 10 月 25 日发布的仅 9 条，以下也纳入 24 日晚间的持续发酵项目；Agent Reach 自动补证超时、HNRSS 访问出现 502，社区早期线索覆盖不足，不把未核实功能写成已验证事实。</description>
+      <pubDate>2026-10-25T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/24 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-24.html</link>

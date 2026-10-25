@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-25</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-25</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得动手的更新落在“把 AI 能力接入日常工具”：语音输入、Obsidian 阅读、文档转换、本地大模型与更新说明都有明确入口；另一条线是隐私边界，从本地处理延伸到机密计算。X List 抓取了 107 条，其中北京时间 10 月 25 日发布的仅 9 条，以下也纳入 24 日晚间的持续发酵项目；Agent Reach 自动补证超时、HNRSS 访问出现 502，社区早期线索覆盖不足，不把未核实功能写成已验证事实。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Voltip</div>
+  <div class="section"><div class="section-label event">一句话</div><p>按住快捷键说话、松开后把识别并可选润色的文字直接输入当前应用的开源语音输入工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/sunerpy/voltip" target="_blank">https://github.com/sunerpy/voltip ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开 GitHub Releases，按自己的 Windows、macOS、Linux 或 Android 系统下载发行包；优先选择安装包而非未经检查就执行远程安装脚本。桌面端首次运行后在设置里授权麦克风和输入权限，选择本地识别模型或自备云端语音服务，先在一个空白文档中按住默认 Ctrl+Alt+Space 说两句，再松开检查识别文本是否落在光标处。需要润色时再配置模型和场景预设，对人名、专业术语建立词典；处理会议、个人资料前确认是否已切换本地模式。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目 README 明确列出按键说话、本地 Qwen3-ASR／SenseVoice／Paraformer、应用场景润色以及长录音导出字幕，不只是一个语音转文字网页。它同时支持云服务和设备侧识别，适合比较隐私、延迟与转写准确率；本地模型仍需下载和设备资源，所谓“本地”只对所选择的识别及润色链路成立。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在微信、Obsidian 或 IDE 中口述长段草稿，再按应用自动套用不同润色规则。</li>
+    <li>把长录音转成文字或 SRT，给访谈和会议制作初稿字幕。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113887837888111000" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Strata 0.2.4</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让消费级电脑运行较大开源模型并向编程 Agent 暴露本地兼容 API 的推理引擎。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Niko1221/Strata" target="_blank">https://github.com/Niko1221/Strata ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 README 的硬件表，核对系统、显卡、驱动、RAM＋显存总量和磁盘空间；官方写明启动至少需要合计 32 GB 内存以及约 80 GB SSD 空间，不适合先下模型再看电脑能否运行。从 Releases 选择对应平台的 Strata 应用，运行后按界面推荐下载匹配的量化模型，再用内置聊天验证一次短问答。若要接入 Claude Code、Codex 或 OpenCode，按 README 的 Using it 指南连接本机 OpenAI／Anthropic 兼容地址，先用测试仓库跑简单任务，记录首字延迟、单路速度和实际内存占用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>README 把本地模型、图像输入和兼容 API 放在同一可运行工作流，0.2.4 又增加 DeepSeek V4.1-Flash 的终端入口。推文的速度提升是特定魔改 48GB RTX 4090 上的个体测量，不能直接外推到普通 12GB 卡或 M 系列 Mac；比看峰值 token/s 更有价值的是在自己的负载下测首字时延、稳定性和并发吞吐。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在不上传代码库的条件下，为 Coding Agent 测试本地模型后端。</li>
+    <li>对同一个提示词比较不同量化配置的延迟、质量和内存成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2114013397675319666" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVZ7krqaQAEyDUy?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVZ7krqaQAEyDUy?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUZ85X5aQAAPFJS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUZ85X5aQAAPFJS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HUZ85X1bwAA745G?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HUZ85X1bwAA745G?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qiaomu AI RSS</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 Obsidian 里读 RSS、播客与部分视频内容，并把阅读结果接回本地笔记的插件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-ai-rss" target="_blank">https://github.com/joeseesun/qiaomu-ai-rss ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认 Obsidian 版本至少为 1.13.0；在官方社区插件目录搜索 Qiaomu AI RSS，若当前客户端尚未上架，README 还提供 BRAT 安装仓库或从 Releases 手动放置 main.js、manifest.json、styles.css 的方法。开启第三方插件后点击侧栏 RSS 图标，先读一个内置频道，再从“+ → 探索”订阅感兴趣的作者或输入自己的 RSS 地址。打开一篇文章，选中一段文字摘录到今日日记，核对标题回跳和原文链接；播客转写、中文改写是否出现取决于服务端实际已有内容，不应预设每期都可用。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库 README 不仅写了订阅、OPML 导入导出，还说明摘录、文章保存、分组、已读状态和缓存的行为；这些细节决定它能否嵌进既有 Obsidian 工作流。X 推文提到“所有播客”“AI 问答”，但 README 明确部分海外节目只有源文稿、小宇宙完整逐字稿未接入，因此实际覆盖范围必须以单篇页面为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>汇总技术博客与节目更新，在 Obsidian 中留带来源的阅读摘录。</li>
+    <li>在已有节目文稿的情况下快速浏览一期长播客，再回听关键段落。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2114007659288666509" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVZ2cR6bsAA9FV_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVZ2cR6bsAA9FV_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Aitoword（aitoword.online）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 AI 回答或 Markdown 转成可继续编辑的 Word 文件的免注册浏览器工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://aitoword.online/" target="_blank">https://aitoword.online/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在浏览器打开上述网站，不需要安装或创建账户；先用一段不含个人隐私的 Markdown 测试，包含二级标题、简单表格和一条常见公式。粘贴文本或导入 .md／.txt，选择排版预设并检查页面预览，再下载生成的 Word 文件，在本地 Word 或兼容软件中逐一核对标题层级、表格与公式，必要时手动调整字体和分页。开发者在小众软件论坛说明转换正文在浏览器处理、刷新不保留内容；敏感资料仍应自行核查网页实现与浏览器网络请求，不能把自述等同独立隐私审计。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>论坛原帖是开发者自荐，给出了明确的“粘贴／导入→预览→下载”步骤和当前限制，比泛泛宣称“AI 一键排版”更适合上手验证。尤其要注意它不自动抓取图片链接，也不支持公式截图识别和全部 LaTeX 语法。网上另有 aitoword.cn 同名文档页，不能据此推断与本条 aitoword.online 是同一服务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把模型生成的课程讲义或项目说明整理成可继续批注的 Word 草稿。</li>
+    <li>将含基础表格、常见公式的 Markdown 转换成便于同事修改的文档。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113969650379759676" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cloud Mail（maillab）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>借 Cloudflare Workers、Email Routing、D1 等组件自建域名邮箱并开放 API 的开源项目。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/maillab/cloud-mail" target="_blank">https://github.com/maillab/cloud-mail ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开项目 README 与部署文档 https://docs.skymail.ink，确认自己拥有可管理 DNS 的域名，以及对应的 Cloudflare 账户、Email Routing 和所需资源权限。优先在测试域名上部署 Worker 与前端，按文档配置 D1、KV 和可选 R2，再设置收件路由；若需要发信，还要明确选择文档所列的 Cloudflare Email 或 Resend 出站路径，分别验证收信、发信、附件与权限控制。最后给一个非敏感测试邮箱发信，观察是否真的进站并可用 API 查询；不要把服务端密钥写入前端或提交仓库。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库 README 写明多邮箱、邮件管理、附件、开放 API 和 Workers AI 验证码识别等能力，适合围绕邮件触发自动化而非只做收件网页。要区分 Cloudflare 收信路由与实际外发通道：Workers 并不自动成为全功能 SMTP 服务，出站依赖指定集成。仓库需要基础设施和 DNS 配置，不是“点一个按钮免费拥有邮箱”。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为测试环境创建多个独立域名邮箱，检验应用的注册邮件流程。</li>
+    <li>用可审计 API 处理项目通知和收件归档，避免散落在个人邮箱。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113887839922319691" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ win升级报告</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Windows 托盘里的版本监控工具，仅发现新版本时才让 AI 生成中文更新说明。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://meta.appinn.net/t/topic/94352" target="_blank">https://meta.appinn.net/t/topic/94352 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看小众软件论坛开发者帖子中的下载与源码入口，确认版本、来源和压缩包后，在非生产 Windows 10／11 电脑解压绿色版，运行程序并选择自己关注的 Flight Hub 通道（如 Beta 或正式版）。在设置页按提示填写自有模型 API Key 或兼容接口，不提供 Key 时只检验版本通知部分；随后查看它的本地报告目录、通知按钮和官方 release notes 链接。可通过现有历史报告检查摘要格式；如果暂时没有微软新构建，不能据此断言 AI 生成流程已在自己的机器上跑通。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者明确把构建号比较与页面解析放在普通代码里，只有确认出现新版本才抓微软公告调用模型，这种“先确定性检测、后生成式解释”的分层可减少无效调用和误报。来源是开发者自荐页面，并非独立安全测试；后台资源、全屏静默和密钥本地保存均属作者说明，正式部署前仍需自己检查发行文件和网络行为。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>追踪 Windows Insider 通道的变动，不再每天翻看长篇英文公告。</li>
+    <li>给多台测试机制作简明中文版本变更记录，并回链微软原文核对。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113858893788987496" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Qiaomu SimpleUI（KOReader 定制版）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>为 KOReader 定制的清爽书架界面，补充微信读书入口与可恢复的图书隐藏功能。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-simpleui" target="_blank">https://github.com/joeseesun/qiaomu-simpleui ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认设备装有 KOReader v2026.03 或更新版本并启用内置 CoverBrowser；关闭阅读器，备份原有 plugins/simpleui.koplugin 和 settings/simpleui。到项目 Releases 下载明确标注的 simpleui.koplugin.zip 测试包，不要用 GitHub 自动生成的 Source code ZIP 替代安装包；解压后将插件目录放入对应设备的 KOReader plugins 目录，重启并试一次长按书籍隐藏、在“设置→书库→已隐藏的书籍与文档”恢复。若需微信读书快捷入口，先独立安装兼容的 weread 插件；遇到异常用原备份回退。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这是刚更新的开源阅读器改造，README 给出机型、版本、安装包和回滚边界；作者记录了在一台 Kindle 上的验证，但明确没有覆盖所有设备。它本身不是 AI 模型或 AI 自动阅读器，而是 X List 上“AI 助手辅助改造旧 Kindle”流程里可亲手测试的配套开源界面，因此不要把阅读器界面功能宣传成生成式 AI 功能。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给旧 Kindle 的 KOReader 增加更简洁的书架和已装微信读书插件入口。</li>
+    <li>临时隐藏不想展示的电子书封面，并保留原文件、批注与恢复能力。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2113997599644823757" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cohere Model Vault 机密计算公开测试</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cohere 官方披露 Model Vault 的机密计算能力在 Azure NVIDIA H100 环境进入公开测试。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>10 月 22 日的官方公告介绍了请求内容端到端加密、硬件可信执行与远程证明，目标是让客户验证推理环境而不是只相信云服务合同。这与本地运行大模型是两条不同路线：前者保留托管模型的运维便利，并把“处理时的明文暴露”纳入威胁模型；后者强调数据尽量不离开自有设备。该消息来自官方发布，不等于已独立通过所有法规或客户场景验收。官方：https://cohere.com/blog/introducing-confidential-computing-on-cohere-model-vault</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>金融、医疗与企业源码类负载今后会把远程证明、密钥所有权、模型侧日志保留、平台权限分离放进采购与架构评审。公开测试意味着功能可以调查，不意味着默认免费或天然合规；企业仍需亲自确认区域、计费、审计报告及终端到推理环境之间的边界。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2113865401851605399" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVV7ibvXgAAUWCD.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HVV7ibvXgAAUWCD.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 RTX 30 显卡计算路径解锁引发实测讨论</div>
+  <div class="section"><div class="section-label event">事件</div><p>社区新开源项目尝试解除部分 Ampere 显卡 Tensor Core 运算路径的限制，第三方汇总了矩阵运算和模型推理的不同结果。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>小众软件报道的 Linux GPU Unlock 与 Windows 版本显示，一些卡在特定 BF16／TF32 矩阵基准上有显著增益；但同一篇文章也列出 Strata 16K 提示词处理约提升 16%、生成速度基本不变，另有 llama.cpp 测试几乎无差别。也就是说推文所说“3090 从 75 到 135 TFLOPS”只是指定矩阵运算测量，不是所有本地 LLM 速度翻倍。延伸阅读：https://www.appinn.com/nvidia-gpu-ai-compute-unlock/</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对推理工具链而言，GPU 配置可能影响 prefill 性能，值得围绕实际模型和批量大小建立复现基准；然而此类底层修改涉及启动链与显卡配置，Windows 方案验证范围更窄。不要在主力电脑直接刷入或套用陌生项目，先看支持设备、恢复手段和独立复现。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2113926555567079716" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVYtACpW0AAgefW?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVYtACpW0AAgefW?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 单 Agent 加 Skills 与多 Agent 的分工再被讨论</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 出现“企业部署中单 Agent 加 Skills 可能更快、更省资源”的转述和工程师访谈解读。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是工程实践观点，不是所有任务适用的官方定律，也不能仅凭一条推文宣称 Anthropic 已给出普适的“两倍提升”。在问题边界清楚、工具入口稳定、上下文可控时，主 Agent 使用 Skills 可以少一次任务交接；但并行独立验证、权限隔离、长链路交接或不同专业模型协作仍可能需要多 Agent。比较时至少同时测任务完成率、成本、时延与错误传播，而不只看模型调用次数。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>团队设计 Agent 系统时应先问“为什么拆分”：若只是把一个任务换成多个角色接力，可能引入重复上下文和不透明失败；若有真实的并行性或安全隔离要求，则可保留子任务边界。先用单 Agent 基线跑可复现测试，再增加编排复杂度，是比追逐口号更稳妥的工程策略。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2114150879230304430" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>sshfs-win-tray：新开源 Windows 托盘工具，将 SSH 服务器挂成盘符；它不是 AI 项目，但可能简化远程模型数据的取用，证据待补（安全边界见仓库说明） <a href="https://github.com/huangzhenming/sshfs-win-tray" target="_blank">→</a></li>
+    <li>长卷 LongShot：开发者自荐将有重叠的 iPhone 截图拼成长图；尚未核对独立发布页和拼接效果，证据待补 <a href="https://x.com/appinn/status/2114002307218075909" target="_blank">→</a></li>
+    <li>VVV 婚礼视频工作流：推文称可向 AI 助手描述需求后按模板生成婚礼视频；本轮未定位到可核实的项目仓库与安装文档，证据待补 <a href="https://x.com/Gorden_Sun/status/2113902089978126354" target="_blank">→</a></li>
+    <li>Netflix Observability Ontology：推文描述用本体与知识图谱统一服务／集群关系以辅助排障；本轮未取到官方技术文章，不能把具体架构或效果当成已核事实，证据待补 <a href="https://x.com/shao__meng/status/2113925598443675835" target="_blank">→</a></li>
+    <li>NVIDIA 投资 Higgsfield：视频创作平台创始人提及来自 NVIDIA 的投资；额度、投资轮次和商业效果尚缺可复核公告，证据待补 <a href="https://x.com/alexmashrabov/status/2114001582719369281" target="_blank">→</a></li>
+    <li>Qiaomu Reader 的 Kindle 发送功能：推文称可把 EPUB 经 Wi-Fi 发给越狱 Kindle；与上文 SimpleUI 是不同插件，设备兼容和独立文档待核 <a href="https://x.com/vista8/status/2113936883394937223" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Magpie 本地脱敏：X 作者提到可在本地处理敏感输入；本轮缺独立功能文档，先跟踪而不建议直接用于机密生产数据 <a href="https://x.com/yetone/status/2114070661341868122" target="_blank">→</a></li>
+    <li>Claude Code 人员变动：多条推文谈到团队成员离职，涉及角色归属的二手描述不一致；跟踪官方个人声明，不据此推断产品路线 <a href="https://x.com/shao__meng/status/2113853130593239251" target="_blank">→</a></li>
+    <li>HNRSS／Hacker News 早期信号：自动多源补证运行超时且本轮访问 HNRSS 返回 502，今天没有可核对的 Show HN 条目；不以猜测项目凑数量 <a href="https://hnrss.org/newest?q=agent" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
