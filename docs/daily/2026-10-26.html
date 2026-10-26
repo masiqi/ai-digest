@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-26</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-26</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的可玩路线分成两支：一边是把 Agent 工作做成可核对的安全审计、组件规格图与可编辑视频，另一边是更可控的视觉创作与本地模型试验。X List 本次抓取成功，但自动多源证据包运行超时、未生成摘要；以下🛠️均另用项目官方仓库、模型卡或官网交叉核对，HN 线索单独标注早期证据边界。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ dimensional-drawing：把 UI 组件画成工程尺寸图</div>
+  <div class="section"><div class="section-label event">一句话</div><p>给 Agent 一个组件源码、Storybook、网页或截图，让它输出标有间距、圆角和层级的单页技术图，还可追加短动画。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/enesozturk/dimensional-drawing" target="_blank">https://github.com/enesozturk/dimensional-drawing ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库，查看 skills/dimensional-drawing/SKILL.md 与 examples；在支持 Skill 的编程 Agent 中加载该目录，指定自己的 Card 或 Dialog 组件源码，要求生成 dimensional drawing。先核对图上的 padding、gap、圆角变量与实际 CSS 是否一致；未知尺寸应保留 TBD，不能让模型编造。需要演示动画时再加载 dimensional-drawing-motion，按仓库 headless 说明用 Node 与 ffmpeg 渲染 MP4，或在支持 Motion 的 Claude 环境导出。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它并非让模型随意生成漂亮设计图，而是刻意剥去品牌和文案，强调视图、尺寸变量、爆炸图和组件相对视口位置。设计交接和代码审查时，规格图可以成为能回查源码的中间层；仓库也明确要求未知值不编造，适合把 Agent 的视觉产物纳入可核验流程。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>前端重构前把复杂弹窗的几何约束提炼成可审查规格。</li>
+    <li>设计系统迭代时制作组件结构说明和短动画演示。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2114325831317434574" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVeYIGEaYAAd8KP?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVeYIGEaYAAd8KP?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2114035442559639553/img/-3zkyo3RN0-mqOvD?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2114035442559639553/img/-3zkyo3RN0-mqOvD?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ security-audit-skill：让编程 Agent 分阶段做安全审计</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Cloudflare 发布的安全审计 Skill，以覆盖台账、独立验证和结构化发现代替一次性“帮我找漏洞”。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/cloudflare/security-audit-skill" target="_blank">https://github.com/cloudflare/security-audit-skill ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库 README、Skill 内容与安装说明，在自己拥有审计授权的测试仓库中通过 Skills CLI 加载 security-audit；让编程 Agent 对指定仓库执行 security audit，并把报告目录明确设为隔离的测试目录。先审阅 architecture.md 与 coverage-ledger.json，随后核查 findings.json 中 confirmed、needs_validation、rejected 的区别；对每条发现回看源码位置和验证记录，不要直接把 Agent 的严重性等级当作安全结论。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方流程明确分为资产和信任边界梳理、按覆盖面搜寻、候选漏洞独立复核、机器可读输出、结果二次验真和由记录生成报告。它把“模型可能看漏、也可能误报”的风险变成可检查的台账与分层结论，但并不等于自动审计就能代替专业安全测试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>新服务上线前对自有仓库做获授权的安全回归。</li>
+    <li>CI 或人工审计的准备阶段生成覆盖台账和待验证线索。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2114368700971397208" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BaoCut Skill：用可编辑时间线做史料视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>为 BaoCut 视频 Agent 提供操作步骤，配合应用完成转录、字幕、翻译、配音与剪辑。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/baocut/tree/main/skills/baocut" target="_blank">https://github.com/JimLiu/baocut/tree/main/skills/baocut ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在仓库 README 查看 BaoCut App 的安装和系统支持，再加载 skills/baocut/SKILL.md 到自己的编程 Agent。挑一段拥有使用权的短视频或公开许可音频，导入应用转录并校对时间轴；要求 Agent 依次生成双语字幕、需要时翻译和配音，再在可编辑时间线上逐段修改镜头与文字，最终导出样片。做历史人物素材时额外核对原音、来源、译文、肖像权与生成内容标注，别把模型补写台词混进史实。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推文给出了历史视频排版的实际例子，官方仓库也确认 BaoCut 提供转录、字幕、翻译、配音、剪切和可编辑时间线。重点不是“一句话全自动生成”，而是让 Agent 把粗活推进到可人工回看、返工的编辑层；仓库对软件再分发与商用托管还有限制，二次开发要核对授权。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把有授权的演讲原音整理成双语章节短片。</li>
+    <li>将教程录屏自动转写成可人工修订的课程视频。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2114375050971296135" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2114374879923273728/img/F1s7sYl2ye_xOVLU.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2114374879923273728/img/F1s7sYl2ye_xOVLU.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Every Joule：可以动手实验的 3D 物理课本</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一套浏览器里的十课“能量”交互书，用 3D 图示让学生先预测、再试验、最后核对解释。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://iamtechartist.com/every-joule" target="_blank">https://iamtechartist.com/every-joule ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接打开官网，点击 Every Joule 的 Open anyway 进入互动页面；先选择能量储存或弹簧等课，阅读题目后让学生预测结果，再拖动或操作网页中的 3D 图示观察变化，掀开解释并记录错因。浏览器需要图形加速，低性能设备可能运行较慢；家长或老师可对照站点的教师说明和数字来源，挑选与本地课程相近的知识点使用，不把 GCSE/IGCSE 课程大纲误当成中国教材。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者没有仅把课本生成成带动画的长文，而是把能量流动和立体图示放进“预测—检验—证明”的学习循环。官网明确列出十个主题和教师资料，适合检验生成式 AI 与 Three.js 是否真的能做出可探究的知识交互，而非单纯炫技视频；免费访问情况以页面实际入口为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学生直观理解动能、弹性能与热传递之间的变化。</li>
+    <li>教师制作交互课件前参考其题目、反馈与 3D 演示结构。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2114402733629268468" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2114032980767416320/img/sjTUZDlJHwyGJTl5.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2114032980767416320/img/sjTUZDlJHwyGJTl5.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Nanbeige4.3-33B：可下载的 Agent 取向稠密模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>南北阁发布的 33B 级开放权重模型，官方重点展示代码代理与工具任务表现。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/Nanbeige/Nanbeige4.3-33B" target="_blank">https://huggingface.co/Nanbeige/Nanbeige4.3-33B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Hugging Face 模型卡先读许可、权重大小与 Quickstart；有足够 GPU 的机器按官方 Transformers 示例下载权重，或照官方 vLLM/SGLang 示例启动服务。不要直接在普通笔记本上假定能流畅跑原精度 33B；先拿自己熟悉的代码修改、工具调用与长上下文任务建立对照集，同时记录显存、速度、失败率和开销。多轮工具调用可测试模型卡提到的 preserve_thinking，但先在隔离目录和最小权限下试验。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方模型卡给出了最高 512K 上下文、推理与工具调用模板开关，以及 Terminal-Bench、DeepSWE 等多项测试的比较表。不过 80.9 等分数是发布方按其条件报告的结果，不能写成独立公认排名；真正值得跟踪的是 30B 级稠密模型在自家 Agent harness 下能否有稳定的任务完成率。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对照当前编码 Agent 的真实仓库修复任务做小规模评测。</li>
+    <li>在可控本地或专用 GPU 环境试验多轮工具调用与长文档分析。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2114359080160776224" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVe2XzcaEAArxcc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVe2XzcaEAArxcc?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ArtCraft：先在 3D 里摆机位再生成图像与视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向创作者的桌面 AI 视觉工作台，在 2D 构图和 3D 布景后选择生成模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/storytold/artcraft" target="_blank">https://github.com/storytold/artcraft ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开官方仓库，从 README 指向的 getartcraft.com 下载对应 macOS 或 Windows 的稳定版；先拿简单海报做一次 2D 布局，再在 3D 视图摆好主体、背景与镜头，让同一构图产生两版图像并比较角色位置是否稳定。最后修改机位而不是反复改提示词，观察可控性是否提高。调用外部图片或视频模型前查看可用提供商、账号条件与计费；仅下载桌面应用不代表生成额度免费。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方明确将它定义为 interactive AI image/video creation IDE，提供 2D 合成、3D 场景和模型选择，瞄准“提示词抽卡”造成的机位与构图不稳定。它能把视觉意图提前固化成场景操作，便于重复修改；但模型端仍可能有费用，开源代码、客户端和托管生成服务应分开看。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>广告主视觉在多次修改中维持人物和镜头关系。</li>
+    <li>小团队用低成本预演分镜，再交给视频模型生成样片。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2114372854649418181" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2114372675317755904/img/OR9QDjEHx5yYHJvm.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2114372675317755904/img/OR9QDjEHx5yYHJvm.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 乔木 SimpleUI：给 KOReader 增加清爽书架与隐藏恢复</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 SimpleUI 的 Kindle/KOReader 定制插件，提供简化首页、微信读书快捷入口和可逆的书籍隐藏。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-simpleui" target="_blank">https://github.com/joeseesun/qiaomu-simpleui ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认设备已装 KOReader v2026.03 或更新版且启用 CoverBrowser；在仓库 Releases 下载测试版 ZIP。退出 KOReader，备份原 plugins/simpleui.koplugin 与 settings/simpleui 后，把 ZIP 解压得到的 simpleui.koplugin 放到对应设备插件目录，重启检查书架。长按一本测试书选择从书库隐藏，再到设置中的已隐藏列表恢复。微信读书快捷入口还需要另行安装并启用 weread 插件；旧 Kindle 的越狱有设备风险，先核对机型与合法操作范围，不能照推文一句话刷机。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方 README 特别说明隐藏只影响显示，不删除书籍、批注或历史，也不是加密隐私功能；还写明测试版只在一台 Kindle 上验证了部分关键交互。这样的边界很重要：它提供了真正可以回退的电子墨水屏阅读工作流，但不应把尚未完成的 AI RSS 等设想混写成这一版已有功能。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>已使用 KOReader 的旧 Kindle 改造清爽的常用书架。</li>
+    <li>需要暂时从列表移开文档又保留原文件和阅读记录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2114352058577117439" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ gpu-unlock：试验 RTX 30 系 BF16 吞吐边界</div>
+  <div class="section"><div class="section-label event">一句话</div><p>通过 Linux 内核模块调整部分 NVIDIA 30 系卡的 FP/BF16 指令发射限制，适合懂驱动和恢复流程的实验者。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Zagitta/gpu-unlock" target="_blank">https://github.com/Zagitta/gpu-unlock ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库 README、支持卡型、内核与驱动要求，并备份可恢复启动项；只在备用 Linux 主机测试，不要在生产机或唯一工作站动手。按照仓库文档安装内核头和模块、配置其启动参数，完成断电重启后检查内核日志与测试状态；用同一批 vLLM prefill、扩散模型或矩阵运算负载做前后比较，记录性能和温度。确认无异常才考虑长期使用，失败时按官方说明从内核启动参数移除配置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推文分享了不同卡型的加速观察，但这是特定任务、驱动和机器条件下的社区数据，不可承诺通用倍率。项目自身瞄准 FP/BF16 指令吞吐而不是显存带宽；以带宽为瓶颈的量化模型逐 token 输出未必加速。内核与固件级改动伴随系统稳定性和授权边界，需要先理解原理再试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用旧 RTX 30 系卡对比扩散模型生成或推理预填充速度。</li>
+    <li>在备用实验机量化具体 workload 的计算瓶颈和提升上限。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2114280866063245483" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Dessa：Block 公开纯语音训练的全双工模型演示</div>
+  <div class="section"><div class="section-label event">事件</div><p>Block 官网展示 Dessa，称其只使用人类对话音频从零训练，支持边听边说，并公开演示片段。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是对“先语音转文字、再文字模型回答、最后语音合成”串行路线的一次挑战：重音、迟疑、笑声和抢话等非文本信息可能直接进入对话建模。官网声称可在 M4 Max 或更高配置本地运行，但目前页面主要是研究演示与早期访问，并非人人都能下载权重或即时试用；音质和真实感应当用独立测试而非宣传语评价。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果纯音频训练路线证明有效，语音助手的响应时延、打断处理和情绪表达会形成不同的产品竞争维度；同时拟人对话也提高了身份告知与滥用防护要求。开发者现阶段适合观察其论文、可用性与安全评测后续进度，不要把展示视频当作开源发布。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2114217554948333812" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVc1pkgaoAA9lFQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVc1pkgaoAA9lFQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Magpie：订阅聚合工具的工作目录与额度边界被用户追问</div>
+  <div class="section"><div class="section-label event">事件</div><p>开发者发布 0.1.1552 修正 Claude Code 工作目录与新账号首轮重放问题，随后要求卡顿用户在 0.1.1559 导出 goroutines 排查；社区也反馈额度消耗差异。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>多个帖子指向不同问题，不能把所有卡顿、网关失效和额度差异混为一次已确认事故。开发者表示通过 Magpie 的请求与 claude -p 缓存表现一致，但不同 CLI 模式的计量可能不同；这是当事方观察而非 Anthropic 官方计费结论。用户若要定位问题，应记录版本、工作目录、模式、相同任务输入与额度变化，并在脱敏后提供诊断文件，而不是只看一次百分比。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>聚合多账号与命令行代理的中间层需要更可见的请求路径、计量解释和故障回退，否则表面节省成本可能换来不确定性。团队应在升级后先跑小样本回归，并确认代理实际写入目录和额度记录，避免把订阅流量或缓存争议误判为模型退化。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2114419898961248727" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Grok Bot 进入 X 聊天列表的用户侧观察</div>
+  <div class="section"><div class="section-label event">事件</div><p>用户观察到先前在 Grok Bot 建立的多个 Bot 出现在 X 的“聊天”列表，但帖子称尚无完整官方公告。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这意味着 AI 助理可能从单独的入口融入日常社交对话界面：每个 Bot 有独立会话位置，用户切换成本降低。不过这只是用户侧观察，功能覆盖范围、同步方式和隐私控制需要等产品说明或亲测，不应按一条推文断言全量上线。对开发者而言，更值得看的是多 Bot 身份如何与消息权限、历史记录及通知节奏结合。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>若这种集成持续推进，助理产品的竞争会从模型单次回答转向持续对话位置和跨端入口，第三方 Bot 的分发成本可能下降；但同样加重用户对授权、数据隔离及防误发的要求。短期内只把它当作值得观察的交互动向，不作商业化规模推断。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tonychuhai/status/2114367196831080686" target="_blank"><span class="handle">@tonychuhai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVe9vHxbkAEuZfw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVe9vHxbkAEuZfw?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>HN AI Data Footprint Tracker：Show HN 新帖自述“离线盘点 AI 工具持有的数据”，社区互动极少、功能和隐私承诺证据待补，先看演示和存储实现 <a href="https://news.ycombinator.com/item?id=50235462" target="_blank">→</a></li>
+    <li>HN AI Heat Map：Show HN 帖子称聚合 140 多个新闻 Feed 做 AI 热度图，早期信号、证据待补，重点核实来源列表与去重方式 <a href="https://news.ycombinator.com/item?id=50227984" target="_blank">→</a></li>
+    <li>过来人 MV Skills：作者预告下周开源面向 Claude、Codex 等的 MV 制作 Skill，目前是预告不是已可下载项目；证据待补 <a href="https://x.com/berryxia/status/2114377901974143028" target="_blank">→</a></li>
+    <li>Muse 与其他助理对话迁移：用户描述云电脑环境中改选连接方式接入其他 Bot，缺官方互操作文档；早期信号、证据待补 <a href="https://x.com/turingou/status/2114448821162000526" target="_blank">→</a></li>
+    <li>Raven 游戏多轮迭代：团队称用多轮自改进生成游戏及配套网站、宣传图，缺独立可复现流程和公开仓库；证据待补 <a href="https://x.com/ElliotChen/status/2114274362425827394" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Dropack：iPhone/iPad 本地打包整批照片并通过 AirDrop 传输，官方说明不提供传输加速或续传；与 AI 关联弱，作为实用工具备选 <a href="https://dropack.app" target="_blank">→</a></li>
+    <li>Lumno：单快捷键检索标签页、书签与浏览历史的浏览器命令栏；来源为应用推荐推文，安装权限与实际功能待核 <a href="https://x.com/appinn/status/2114279192204370044" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

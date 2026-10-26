@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 25 Oct 2026 00:43:29 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 00:42:20 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/26 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-26.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-26.html</guid>
+      <description>今天的可玩路线分成两支：一边是把 Agent 工作做成可核对的安全审计、组件规格图与可编辑视频，另一边是更可控的视觉创作与本地模型试验。X List 本次抓取成功，但自动多源证据包运行超时、未生成摘要；以下🛠️均另用项目官方仓库、模型卡或官网交叉核对，HN 线索单独标注早期证据边界。</description>
+      <pubDate>2026-10-26T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/25 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-25.html</link>
