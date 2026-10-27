@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-27</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-27</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今日值得动手的不是又一个聊天框，而是实时语音翻译、数字人口播与跨模型 Agent 协作真正落到开源仓库和可访问入口。另一条线是把代码知识图、进程诊断、合并风险与权限审批接进 Agent 的实际工作链；本次自动多源证据脚本超时，以下条目均以单独核对的项目原文与 X/HN 来源为准，未完成独立实测的效果不当作事实。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Hy-SimulMT</div>
+  <div class="section"><div class="section-label event">一句话</div><p>腾讯混元发布的中英双向流式同声传译模型，提供模型权重、推理服务及训练工具。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tencent-Hunyuan/Hy-SimulMT" target="_blank">https://github.com/Tencent-Hunyuan/Hy-SimulMT ↗</a></p>
+    <p><a href="https://huggingface.co/tencent/Hy-SimulMT-30B-A3B" target="_blank">https://huggingface.co/tencent/Hy-SimulMT-30B-A3B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入 GitHub 仓库查看 SimulInfer 的部署说明，在有 NVIDIA GPU、对应 Python 环境的 Linux 机器上下载 Hugging Face 权重，按照仓库的 deploy.sh 指南启动推理服务；打开默认本地网页或调用 /translate/stream，选 en-zh 或 zh-en，上传一段已获授权的音频，对照原声检查译文的延迟和错译。想输出带原音色的语音，还需要另配 TTS 服务，单纯下载模型不能自动获得克隆音色；没有可用 GPU，可先查看仓库演示或官方 App 体验入口。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>传统语音翻译常把转写、整句翻译、语音合成串行处理，本项目试图边听边译，并公布 SimulInfer/SimulTrain 以便工程复现。官方约三秒的长音频指标是 StreamLAAL 而非首字开口延迟，部分短语音基准也并非全面领先；高风险会议仍需人工复核。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给双语访谈或技术发布会建立实时字幕与译文对照，记录专有名词错译。</li>
+    <li>为跨境会议制作内部原型，比较文字输出与外接 TTS 输出的端到端延迟。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2114741076859003127" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ digital-human-koubo</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把单张获授权照片与脚本串成数字人口播短视频的开源 Agent Skill，覆盖生成、转写校对、配音统一与剪辑包装。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/andyhuo520/digital-human-koubo" target="_blank">https://github.com/andyhuo520/digital-human-koubo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从仓库下载 skills/digital-human-koubo 和 finance-explainer，把主 Skill 放入支持 Agent Skills 的本地助手；依 README 配好 Renoise MCP、ffmpeg、Python、Node 与视频编辑所需环境，先选本人照片或取得明确授权的人像。输入一段短口播需求，让 Agent 生成分镜和费用估算，明确同意额度后只生成第一段查看口型、字幕与音色；通过后批量生成，其后用仓库脚本做语音转写对照、镜头检查、Remotion 剪辑和 AI 标识。视频生成依赖第三方积分，开源不等于零成本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>亮点不是单点“照片说话”，而是把预算闸门、逐段质量检查、跨镜头声音均衡和成片包装编排在一个可读的 Skill 工作流里。仓库展示了多种画幅与编辑风格，但演示效果、所需积分和第三方平台可用性应由实际试作确认，尤其注意肖像与声音授权。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用本人的形象快速制作课程预告和产品操作讲解，统一多集视觉形象。</li>
+    <li>将中文技术周报改编成短视频，在发布前逐段核对事实和字幕。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2114579756633219416" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2114574384983838720/img/py1mU431BT9d4zYB.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2114574384983838720/img/py1mU431BT9d4zYB.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2114003580806135809/img/t8Pz6zZXATeuZOQ7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2114003580806135809/img/t8Pz6zZXATeuZOQ7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Paseo</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 Claude Code、Codex 等编码 Agent 放进跨桌面/手机的工作台，支持独立 worktree 和会话交接。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/getpaseo/paseo" target="_blank">https://github.com/getpaseo/paseo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开项目 README 的 Getting Started，确认本机至少一个已完成登录的编码 Agent CLI，然后按官方桌面版安装入口下载对应系统版本，启动 Paseo daemon；在一个测试仓库里先创建两个独立 worktree 任务，例如一个改 API、另一个写测试。比较各自 diff，再用项目文档列出的 /paseo-handoff 将规划或实现结果交给另一 Agent，最后在人类审查后合并。若需异机交接，先照 connectivity 文档配置受控连接，不把生产凭据直接贴到共享会话。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>相比在多个终端间复制一大段上下文，这里把运行时、任务、文件差异、浏览器和跨设备查看放到同一个控制面。README 也明确支持并行 worktree 与多提供方；不过跨机器交接的权限、上下文边界和实际成功率仍需用自己的项目测试，而不是仅凭一条演示推文。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>一台机器用 Claude Code 制定方案，另一台机器用 Codex 按方案实现并回传差异。</li>
+    <li>出门时用手机查看长任务状态，回到电脑再人工验收改动。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2114726494773583884" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HViwS_RbcAAVTr4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HViwS_RbcAAVTr4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HViwTwQaQAAvxrQ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HViwTwQaQAAvxrQ?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HViwW1VbIAASBEO?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HViwW1VbIAASBEO?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BAND for Developers</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向多个本地编码 Agent 的共享协作房间，提供任务板、上下文移交与人工决策入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.band.ai/use-cases/band-desktop" target="_blank">https://www.band.ai/use-cases/band-desktop ↗</a></p>
+    <p><a href="https://docs.band.ai/jam" target="_blank">https://docs.band.ai/jam ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网下载安装 BAND Desktop，先确保 Claude Code 或 Codex 等本地 CLI 自己已能登录；打开桌面客户端完成账户连接和代理发现，在 Agents 中选择预设的实现者与审查者，并设置各自的工作目录及权限。新建测试任务房间，让一个 Agent 写计划、另一 Agent 领取子任务，通过房间消息观察移交内容，再到房间统一审批关键决策。不要默认“官网展示兼容 Hermes”就代表当前本机集成可用，需根据集成页逐项核对。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Paseo 更像多端开发工作台，BAND 的侧重点是跨现有 harness 的协作房间与共同任务板。官方文档区分它代管的 Agent 和自己在终端启动并接入的会话；协调层有助于减少人肉传话，但需要额外登录与共享内容治理，尤其别把各 Agent 的权限误认为自动隔离。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>后端、前端和测试 Agent 分工，在同一房间交换阻塞信息，由人统一审批上线。</li>
+    <li>给团队做多模型编码对照实验，记录不同 Agent 的任务进度和消耗。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2114710987416961066" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVj2SVDbIAAxx7H?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVj2SVDbIAAxx7H?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Graphify</div>
+  <div class="section"><div class="section-label event">一句话</div><p>将代码及相关文档解析成可查询知识图，供编码助手按关系检索而非重复全仓 grep。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Graphify-Labs/graphify" target="_blank">https://github.com/Graphify-Labs/graphify ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先用隔离的 Python 环境从官方仓库或官方 PyPI 包 graphifyy 安装 CLI；不要装同名的其他包。进入一个不含机密的样例项目，运行 graphify install 为编码助手注册技能，再在助手中输入 /graphify . 建图，检查 graphify-out/graph.html、GRAPH_REPORT.md 与 graph.json。用 graphify explain 查询类或函数，用 graphify path 查询两个模块之间的路径，再把发现与源码逐处核对；含文档和媒体的语义处理可能调用配置的模型，不要把“代码本地解析”扩大为所有材料绝不外传。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它利用 tree-sitter 解析代码关系并标记 EXTRACTED 和 INFERRED 边，方便开发者区分源码直接证据与工具推断。对长寿命代码库，持久图可减少每轮重读；但建图维护、语言覆盖、图过期和所谓 token 节省倍数，都应在目标仓库实测，而非照搬项目自报数字。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>针对老项目追踪 API 到数据库模型的调用路径，再安排 Agent 做小范围重构。</li>
+    <li>为新成员生成模块关系概览，人工抽查关键依赖是否遗漏。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2114642398936502394" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVi4B-abEAAzZBg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVi4B-abEAAzZBg?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AgentScope Platform Beta 云端运行空间</div>
+  <div class="section"><div class="section-label event">一句话</div><p>公开测试阶段提供通过网页创建云端 Agent 的入口，第三方报道有免费体验名额。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://platform.agentscope.io/" target="_blank">https://platform.agentscope.io/ ↗</a></p>
+    <p><a href="https://www.appinn.com/agentscope-free-ai-agnet" target="_blank">https://www.appinn.com/agentscope-free-ai-agnet ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读小众软件 10 月 26 日的上手文章，再打开官方平台地址自行核实当下注册政策；若仍开放 Free Register，则登录并按页面提示绑定 GitHub，在 QwenPaw Deploy 选择新建空间，用公开测试任务而不是私人资料验证浏览器中的 Agent。记录创建时间、机器资源、停止与删除入口，并检查是否存在自动续费或使用上限。官方平台本次检索未能直接取回页面，所以“4G/30G”和免费期限仅视为第三方当天报道，不作长期承诺。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>对不愿自建服务器但想体验常驻 Agent 的人，带算力的 Beta 空间比单纯赠送聊天额度更可操作；真正的价值在于是否允许持久任务、文件管理及权限约束。注册与资源配额易变化，文章确认测试期免费但未确认结束时间，不宜用来承载唯一的生产任务。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用不含敏感数据的待办任务对比云端常驻 Agent 与本地代理体验。</li>
+    <li>快速验证浏览器访问与远程文件处理流程，再决定是否自建。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2114700442160566638" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVjs2JrXcAAlF2x?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVjs2JrXcAAlF2x?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Hob</div>
+  <div class="section"><div class="section-label event">一句话</div><p>刚在 Show HN 展示的本地离线 AI 桌面助手，自动挑选适配设备的开源权重模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/FrigadeHQ/hob" target="_blank">https://github.com/FrigadeHQ/hob ↗</a></p>
+    <p><a href="https://hob.chat" target="_blank">https://hob.chat ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开 GitHub README 核对当前要求的设备内存，仓库给出 Apple silicon Mac、Windows 与 Linux 下载入口且建议至少 8GB 内存；从仓库 release 下载匹配系统的安装包，先用不含隐私的 PDF 或普通文档测试摘要、问答与编辑，再断开网络重复一遍，观察模型下载后是否仍可完成基本操作。涉及文件写入时先在副本上试验，另检查模型占用、应用对本地文件的权限及包的发布者信息；这是早期项目，不建议直接交付不可恢复的原件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>与需要云 API 的“本地壳”不同，仓库明确主张离线运行 Gemma、gpt-oss 等开放权重模型，并提供直接下载入口。它可能降低部署本地模型的复杂度，但目前只有项目自述和早期社区讨论，模型选择、复杂文档可靠性及隐私边界仍应由用户自己验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在离线环境给个人文档和 PDF 做初步整理，不上传到第三方聊天服务。</li>
+    <li>给不懂模型部署的同事试用本地 AI，比较内存消耗和交互速度。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ proc-cli</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向人和编码 Agent 的跨平台进程/端口 CLI，能查端口占用、进程来源和残留子进程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://proc-cli.com/" target="_blank">https://proc-cli.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在官网阅读安装和命令页，macOS 可按首页说明使用 brew install yazeed/proc/proc；打开一个自己启动的临时开发服务，先运行 proc on :3000 看端口归属，再用 proc why :3000 查父进程链，必要时用 proc in . 限定当前项目范围。涉及停止进程，先运行 proc free :3000 --dry-run 预览对象并确认 PID、命令行和工作目录，确定是自己的测试服务后才执行；给 Agent 接入时优先使用 --json 并保留审批门槛，不要让它根据端口号误杀共享服务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>常见 Agent 工具调用把 lsof、ps、kill 的输出拼接起来解析，平台差异与表格解析很容易造成误判；proc 给出一致的目标语法、JSON 输出与 dry-run，让诊断和执行可以分离。网站列出返回码和受控操作，但是否能准确识别特定容器或远程进程仍要在目标环境自测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>开发端口被占时先定位旧测试进程，再安全释放端口。</li>
+    <li>排查 Agent 测试后留下的长时间运行子进程，保留机器状态证据。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ farol</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 AI 审查之后给 PR 做静态依赖波及和合并风险梳理的 CLI/GitHub Action。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/winnin/farol" target="_blank">https://github.com/winnin/farol ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>找一个公开或非敏感的 TypeScript、Go 或 Python 练习仓库，确保 Node.js 版本符合 README 要求；在项目根目录准备 farol.config.json，按使用的框架指定路由适配器或后端语言，先执行 npx @winninjs/farol routes 检查识别到的页面和 API，再对测试分支运行 README 的 analyze/report 说明生成报告。先审视风险排序、受影响入口与“未知”区域，再与现有 CI 结果对照；若要配置 GitHub Action，先核查它所需权限与是否会在每次 push 评论，勿直接授予生产仓库高权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent 给出“这几行看起来没问题”不等于知道合并后影响了哪些入口。项目声称基于静态分析提供可解释调用链，并把未能分析的部分标为未知，更契合人工最后一道审批；不过它是刚露头的小项目，风险分数不是安全保证，源码支持范围和误报率应自己量化。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>评估看似只改一行共享函数、却可能波及大量页面的 PR。</li>
+    <li>给人工审核者一份按波及范围排序的文件清单和手动回归测试线索。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GPT-6.1 Terra：电脑操作能力下沉到较低成本档</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 在开发者社区宣布 GPT-6.1 Terra 上线 ChatGPT Work、Codex 及 API，重点强调屏幕理解、跨应用操作与标准 API 降价。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方社区帖子给出了型号 gpt-6.1-terra 和定价方向，并称相比 GPT-5.6 Terra 标准 API 价格降低；帖子里的任务表现和速度均属于厂商自报评估，不能无条件外推到所有浏览器、桌面软件和真实企业网络。已有工作流建议拿同一组受控页面任务，对比动作成功率、人工接管次数、耗时与总费用，而不是单看演示视频。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>如果中价位模型足以完成多数表单和桌面重复操作，Agent 产品的成本瓶颈会从“每步推理价格”转向授权管理、失败恢复、状态回读和审计。企业采购也更需要按任务的成功交付成本定价，而不是以模型名字或单次 token 单价替代评估。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2114790675279413738" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVk3m2pW0AERTJj.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HVk3m2pW0AERTJj.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 公开提交 IPO 招股书</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 于 10 月 26 日向美国 SEC 提交 S-1，申请以 ANT 为代码在纳斯达克上市，发行价格等仍空缺。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是“已经上市”也不是“SEC 背书”；可核查的事实是 SEC 原始文件载明提交日期、发行证券、拟上市交易所和风险提示，招股书仍为初步版本。看这类事件时，应优先阅读监管文件里的收入构成、算力采购承诺和治理结构，再与媒体摘要相互印证；不能凭社交媒体预测发售价或把申报等同最终批准。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>大模型公司的资金与算力承诺被公开披露后，市场将更容易比较增长质量、资本密集程度、企业合同及安全治理约束。对开发者而言，短期 API 可用性并未因递表立即改变；真正可能传导到生态的是未来成本纪律、产品商业化节奏和平台合作安排。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2114730719255695729" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>AgentTrust：Show HN 新项目讨论给出子代理权限递减、人类审批票据和审计签名方案；仅有仓库自述，生产级安全效果证据待补 <a href="https://news.ycombinator.com/item?id=50235909" target="_blank">→</a></li>
+    <li>Agensh：微软仓库已开放多 Agent 去中心化协作实验和复现说明，但 1024 Agent 的论文/仓库成绩属于作者实验，业务适用性证据待补 <a href="https://github.com/microsoft/Agensh" target="_blank">→</a></li>
+    <li>Flatkey 图像调用成本路线：X 作者声称低价批量调用 GPT Image；实际结算、质量、上游合规和稳定性证据待补，先只作为价格观察线索 <a href="https://x.com/MinLiBuilds/status/2114649907718213668" target="_blank">→</a></li>
+    <li>Nanbeige4.3-33B 与 Qwen3.8-27B 长上下文显存对照：有作者分享单卡实验，量化方式、KV 配置和原始脚本未独立复现，证据待补 <a href="https://x.com/MinLiBuilds/status/2114762951299322293" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Company Harness 五件套：协作入口、身份边界、双层记忆、沙箱与密钥代理的企业 Agent 设计框架；目前先读讨论，不当成开箱即用软件 <a href="https://x.com/shao__meng/status/2114544704461373848" target="_blank">→</a></li>
+    <li>MOSS-Image LoRA 训练资料：社区分享日文版上手教程，想做角色一致性训练可先对照 kohya-ss 官方 MOSS-Image 文档再验证机器要求 <a href="https://x.com/MinLiBuilds/status/2114727399321661462" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
