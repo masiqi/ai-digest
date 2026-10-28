@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 27 Oct 2026 00:42:57 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:44:28 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/28 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-28.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-28.html</guid>
+      <description>今天值得动手的是“数据留在本机”与“把 Agent 工作流落在真实工具里”：浏览器端会议转写、Apple Silicon 本地模型、设计 Skill 和桌面应用框架都有明确入口。另一头，交互世界模型与 AI 辅助药物研究出现新进展，但两者仍需严守体验/临床证据边界。说明：自动 Agent Reach 证据包运行超时，以下根据 103 条 X List 推文、逐个核查的官网/仓库及单独读取的 HNRSS 编写；未得到自动聚合评分，早期信号不能视为产品验收。</description>
+      <pubDate>2026-10-28T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/27 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-27.html</link>

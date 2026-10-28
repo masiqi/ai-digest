@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-28</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-28</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得动手的是“数据留在本机”与“把 Agent 工作流落在真实工具里”：浏览器端会议转写、Apple Silicon 本地模型、设计 Skill 和桌面应用框架都有明确入口。另一头，交互世界模型与 AI 辅助药物研究出现新进展，但两者仍需严守体验/临床证据边界。说明：自动 Agent Reach 证据包运行超时，以下根据 103 条 X List 推文、逐个核查的官网/仓库及单独读取的 HNRSS 编写；未得到自动聚合评分，早期信号不能视为产品验收。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ OpenNoteTaker</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 Chrome/Edge 网页会议中录制双方声音，用浏览器本机 Whisper 转写、区分发言者并导出记录，不必让会议机器人入会。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://opennotetaker.app/zh-Hans.html#/record" target="_blank">https://opennotetaker.app/zh-Hans.html#/record ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>用 Chrome 或 Edge 打开网页录制入口，先确认参会人已同意录音；从浏览器网页版会议开始，允许标签页声音和麦克风一起采集，不要只开麦克风，否则可能漏掉对方讲话。首次转写需下载约 290 MB 的模型并等待缓存；结束后查看逐句时间戳和说话人、人工订正识别错误，导出 Markdown、SRT 或纯文本。若要保留原音频，关闭记录前先勾选“保留音频”；默认只留文字。本机能力免费，云端撰写纪要等另行付费。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把录音、Whisper WebAssembly 转写、说话人识别及抽取式要点放在浏览器本地，避免把音频送到 SaaS，适合不允许外部机器人参会的团队。但“本机”不等于绝对安全：首次模型下载需联网，会议合规、知情同意、浏览器存储清理和转写质量仍需逐项检查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将远程项目例会录成带时间戳的逐句记录，再人工校正决定与待办。</li>
+    <li>双语采访后导出字幕文件，定位原话而不是只依赖模型总结。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2115039121181733108" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Neywa Nativ</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 Apple Silicon 的本地 AI 桌面应用，可运行开放模型并向开发工具提供本机端点。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.neywalabs.ai/products/nativ" target="_blank">https://www.neywalabs.ai/products/nativ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Neywa 官网进入 Nativ 产品页，点击下载 Mac 安装包，安装后按自己的统一内存容量选择推荐的开放模型，先用聊天窗口测试一段非敏感文本与一张图片，观察 tokens/s、内存压力和首 token 时间。若要接入编码 Agent，按产品页的本机标准 API 说明配置客户端指向本地端点，先拿一个只读小仓库做基线测试；断网后再验证推理能否继续，不要误以为初次下载模型无需网络。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Neywa 强调 MLX/Apple Silicon 路线、设备端多模态和兼容开发工具的本地端点，把隐私与推理成本控制交还给用户。官网列出 Hermes 等接入对象，但这是官方兼容声明，不等于每种 Agent 的全部工具调用已被本日报实测；复杂任务还要权衡本地模型能力与内存占用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Mac 上用本地模型试验敏感文档问答而不上传原文。</li>
+    <li>为编码 Agent 做离线模型端点原型，比较延迟和工具调用表现。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Prince_Canuma/status/2115128700379566155" target="_blank"><span class="handle">@Prince_Canuma</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ MyGo</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Go 写桌面后端、可选 TypeScript/WebView 或 Go 原生 UI 的跨平台应用框架。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mygo.egoist.dev/docs/getting-started" target="_blank">https://mygo.egoist.dev/docs/getting-started ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装 Go 1.27 或更新版本；想做 Web 前端还要准备 Bun。照官网执行 go install github.com/egoist/mygo/cmd/mygo@latest，再运行 mygo doctor 检查本机依赖，随后 mygo init my-app 创建示例工程，进入目录执行 bun run dev；若选择原生界面，则用 mygo init -template native my-app，再运行 go tool mygo dev。先把 Go 中的 Greeter 方法绑定到页面，并确认生成的 TypeScript 客户端能调用，再考虑打包和签名。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它的切入点不是“又一个网页套壳”，而是 Go 方法到 TypeScript 的类型化绑定、跨平台构建与桌面窗口/托盘等 API，适合已有 Go 服务的团队快速做可交付 UI。官网所列二进制体积和内存数字仅为产品示例，实际软件包大小、平台兼容和分发签名须在目标机器独立测量。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 Go 写的本地模型管理服务包装成 Mac/Windows 桌面控制台。</li>
+    <li>制作跨平台离线数据清洗工具，界面调用类型安全的 Go 逻辑。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/localhost_5173/status/2115052723322364334" target="_blank"><span class="handle">@localhost_5173</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ qiaomu-design</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让 Claude Code/Codex 先产出可视化设计方向，再实现和验收页面的开源 Agent Skill。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-design" target="_blank">https://github.com/joeseesun/qiaomu-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js、npx 和支持 Agent Skills 的客户端，在一个可回滚的前端测试仓库中执行 npx skills add joeseesun/qiaomu-design。给 Agent 明确任务，例如“把现有产品首页改成有辨识度的中文页面，先给四个可浏览方向，不要直接覆盖生产代码”；挑选方向后再让它改真实文件，并运行项目测试、截图检查桌面/移动端、核对可访问性和表单交互。先阅读仓库中的技能权限，再决定是否用于重要项目。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“去 AI 味”从抽象审美形容词改成风格试衣间、方向确认、独立评审与验收门禁，仓库附公开横评页面供复查。公开截图只是已有案例，不保证换一个模型和项目也能同分；设计成果仍要由人确定品牌边界、检查中文排版与真实交互。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用四个实际页面样稿比较 SaaS 仪表盘的视觉方案。</li>
+    <li>对已有前端执行审计和打磨，而非推倒重写。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2115067998637875547" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 词光 Word Atlas</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源免费的雅思词汇网页，提供配图、英美发音、例句和间隔复习，并开放词库。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/designfuchen/word-atlas" target="_blank">https://github.com/designfuchen/word-atlas ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先访问项目 README 指向的在线入口 https://0xlei.tech/words/，无需注册，挑一组词测试插画联想、英美发音与 FSRS 复习节奏；用一个星期记录实际记忆效果。开发者可从仓库 data/ 下载词条，再按 README 的 Node.js 20+ 要求安装依赖、本机启动网页，或将词库加工为 Anki 卡组。词库标 CC BY 4.0，二次传播要保留署名；用于备考前抽查释义和例句，不要视为官方雅思/高考词表。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>7298 个词条、两条例句配图和发音让它不仅是背词网站，也是一套可重用的开放学习内容数据。作者坦言内容经自动结构校验而非逐条人工审校，这个边界对教育产品尤其重要：真实考试用词、音频质量和词义准确性都应抽样核验。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>雅思阅读词汇做图像联想和定期复习。</li>
+    <li>研究如何将开放词库制作成带音频的自用 Anki 牌组。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2115061564852367449" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVo0beka8AA0WIU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVo0beka8AA0WIU?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVo0m2qagAAGMvt?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVo0m2qagAAGMvt?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Digital Human Koubo</div>
+  <div class="section"><div class="section-label event">一句话</div><p>从授权人物照片和脚本生成数字人口播视频，再用 Remotion 组件完成字幕和包装的 Agent Skill。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/andyhuo520/digital-human-koubo" target="_blank">https://github.com/andyhuo520/digital-human-koubo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>阅读仓库中文 README 和 skills 目录，先看 GitHub Release 的视频样例，确认符合自己的效果要求；然后在受支持的 Claude Code、Codex 等客户端按仓库指导安装 Skill，并配置 Renoise 账号/MCP。挑本人或明确获授权的肖像，写一段包含真实价格和口播内容的短脚本，让 Agent 先给出预计 credits 与分镜，人工批准后生成口播、字幕、包装并导出视频。发布前检查嘴型、字幕、价格和“AI 数字人演绎”标注，避免模仿名人。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目把数字人生成与后期模板、字幕和视频包装串成可复用流程，不止是单段口型同步；仓库示例公开展示不同画幅和样式。代码开源不意味着视频生成免费：Renoise 额度收费、Remotion 商用许可和第三方素材授权都要分别核算，尤其不应拿未经许可的人像做广告。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用本人数字分身录制产品功能讲解的多语言草稿。</li>
+    <li>快速试做内部培训视频，再交给人工审片。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2115106100051910846" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVpdkXCa0AAXKGT?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVpdkXCa0AAXKGT?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2114574384983838720/img/py1mU431BT9d4zYB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2114574384983838720/img/py1mU431BT9d4zYB?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 乔木 RSS for DeepSeek Harness</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 DeepSeek Harness 内订阅 RSS、读原文或译文，并直接围绕当前文章与宿主 AI 对话。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-rss-dsh" target="_blank">https://github.com/joeseesun/qiaomu-rss-dsh ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>确认自己使用的是仓库 README 标明兼容的 DeepSeek Harness 版本；到 Releases 下载对应 .tgz 和同名校验文件，先校验 SHA-256，再按 README 中当前版本的 dsh plugin 命令装入隔离 profile。打开插件后添加自己的 RSS/Atom 源或导入 OPML，读一篇文章，选中段落并从工具栏打开原生 AI 会话提问。不要开启不需要的“链接收录与改写”实验室选项；该功能可能将网页链接提交给乔木服务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把 RSS 浏览、全文阅读、选段提问和 Agent 可调用的 rss_* 工具放到同一个工作区，适合构建“每天读源材料再追问”的工作流。普通订阅与 AI 翻译依赖不同组件，个人数据保存在宿主环境；安装包与 README 的版本说明可能变化，应以实际 Release 为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在 Harness 内将作者博客 RSS 与技术文章追问放进同一工作流。</li>
+    <li>用 OPML 迁移个人订阅，再对未读文章做人工选段核查。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2115085153760694388" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BothShot</div>
+  <div class="section"><div class="section-label event">一句话</div><p>macOS 原生截图、录屏、实时标注与水印工具，附本机 OCR 和贴图。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://bothshot.app/" target="_blank">https://bothshot.app/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网进入 Mac App Store 安装，确认系统为 macOS 13 或更新；首次录屏时按系统提示授权屏幕录制，若需要声音和摄像头再单独授权。先截一张应用界面，添加箭头和序号，接着录一段带麦克风讲解的演示，并试着导出 MP4 或 GIF；再用置顶贴图与 OCR 测试产品界面比对。录制客户屏幕前先遮盖隐私；设备端翻译需要 macOS 15 及相应语言资源。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>截图、录制中画重点、贴图复用、OCR 与水印归于单个原生应用，适合频繁出教程或缺陷复现的团队。官网承诺“现在获取的免费版本可持续使用”，但后续版本可能调整定价；它不提供完整多轨视频剪辑，也不提供云端分享，别把它当成视频编辑平台。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>录制带实时高亮的 App 缺陷复现视频交给研发。</li>
+    <li>给产品文档截图添加统一水印与编号。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2115032902744334637" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Genie 4：世界模型走向视听同步交互</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google DeepMind 公布 Genie 4，称可在实时交互世界中同步生成环境声和对话，目前面向可信测试者预览、开放候补名单。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方示例显示用户可用键盘控制视角，用自然语言改变天气、对象和事件，声音与场景一起生成；这和单次生成一段视频的产品逻辑不同，核心难点变成跨时间保持空间、角色行为和音画一致。应把演示与普遍可用性分开看：现阶段不是所有用户都能立即体验，更不能直接推断它已适合长时间的严肃机器人训练。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>若稳定性和成本最终达标，游戏原型、交互式教学和机器人/Agent 仿真环境可能更容易按需生成；但世界物理准确性、安全边界、运行时延及开发者 API 配额决定它能否从炫目 demo 进入生产。当前可先看官方演示或登记候补，不宜给它安排已可交付项目。
+链接：https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2115139151838478419" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVplvENXUAA-sCS.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HVplvENXUAA-sCS.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 与 Mithril Medicine：AI 辅助药物研究进入前临床讨论</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 相关技术报告披露一项针对 LAMA2 相关先天性肌营养不良症的双特异性抗体动物研究，并披露已收购 Mithril Medicine。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>报告的关键证据是细胞结合实验及小鼠模型中部分力量指标改善，属于前临床、尚未同行评审；“小鼠见效”距离人体安全性、剂量、疗效和监管批准还有很长距离。X 上把它包装成“一人医药公司已经证明 AI 能研制新药”过度外推，报告列有多位团队成员及外部合作贡献，不能把所有实验成果简单归因于一个人或 Claude。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>更值得关注的是大模型进入假设形成、文献整合、实验协作和报告撰写全流程后，生物技术公司的组织方式可能改变；但实验可重复性、知识产权、数据溯源与临床合规仍需真实科研和监管体系承担。投资或医疗判断不得依赖这则早期案例。
+链接：https://www-cdn.anthropic.com/52e1f5d50c47ca3818f56704c27cf19e59b62e77.pdf</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/oran_ge/status/2115223157464506813" target="_blank"><span class="handle">@oran_ge</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVrGg71awAAobyO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVrGg71awAAobyO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Specops：HN 上出现让编码 Agent 编码前先明确任务规格的开源尝试；社区讨论稀少，实际约束效果证据待补 <a href="https://news.ycombinator.com/item?id=50262833" target="_blank">→</a></li>
+    <li>Agent-relay：HN 新帖讨论多家编码 Agent 会话的中继方式；未验证权限隔离和断线恢复，证据待补 <a href="https://news.ycombinator.com/item?id=50262407" target="_blank">→</a></li>
+    <li>Atuin Threads：在多台机器管理 Agent 会话的方向值得关注；目前仅抓到 HN 入口，跨机同步隐私与稳定性证据待补 <a href="https://news.ycombinator.com/item?id=50264470" target="_blank">→</a></li>
+    <li>Snippet：HN 作者展示常驻、可听说的编码 Agent 原型并承认代码仍有粗糙处；是否实用及录音边界证据待补 <a href="https://news.ycombinator.com/item?id=50261234" target="_blank">→</a></li>
+    <li>Bureau：设计工作室式 Agent Skill 的早期讨论；与现有设计技能的差异和效果尚无独立横评，证据待补 <a href="https://news.ycombinator.com/item?id=50267603" target="_blank">→</a></li>
+    <li>.aamt：有人提出将模型权重、Agent 记忆与世界状态统一进 GPU 文件格式；规格和实际生态兼容性证据待补 <a href="https://news.ycombinator.com/item?id=50267356" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Coday：Windows 闭源本机代理让多种 IDE 转接自选模型；涉及安装本地 CA 和流量拦截，先在隔离机审视证书与权限 <a href="https://github.com/HyperClockUp/Coday" target="_blank">→</a></li>
+    <li>MiaoYan：原生 Markdown 笔记扩展到 iPhone/iPad，Mac 源码公开；App Store 一次购买政策按官网确认 <a href="https://miaoyan.app/" target="_blank">→</a></li>
+    <li>斯坦福 CS329Z：公开 Agent 工程课程及部分课件，从 RAG、工具使用走到编排和评测，适合按周自学 <a href="https://cs329z.stanford.edu/" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
