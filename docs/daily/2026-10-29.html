@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-29</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-29</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得动手的不是又一张模型分数表，而是可安装的 Agent 工程工作流、带出处的内容生产链，以及把阅读、远程终端和实时决策接进现有工作台。与此同时，Gemini 4 Carbon 的防御安全优先开放提醒我们：模型能力跃升与公众可用不是一回事。本次 Agent Reach 自动证据包运行超时，以下可上手条目另以项目 README、官方文档或官网逐项核对；HNRSS 仅作早期信号，未经独立验证的功能不作确定性描述。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ MCode Stack</div>
+  <div class="section"><div class="section-label event">一句话</div><p>MiniMax Code 团队公开日常使用的工程 Skills 与清单，覆盖子 Agent 拆分、长命令、上下文审计和独立代码审查。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/MiniMax-AI/mcode-stack" target="_blank">https://github.com/MiniMax-AI/mcode-stack ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库的 stacks/ronny/skills 目录看每个 SKILL.md 的触发说明，再按 README 的 Quick start 克隆仓库，将 long-command-check 子目录复制到自己的 ~/.agents/skills/。新开 MiniMax Code 会话，输入 /skills 确认被发现，试一次 /long-command-check 审查正在运行的耗时命令；若用 Claude Code，可按仓库说明添加 marketplace 并安装 ronny。先在隔离项目比较 Skill 介入前后的命令等待与审查质量，不要一次性复制整套规则覆盖既有约束。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是抽象的“最佳实践”列表，仓库列出团队实际使用的 15 项工作环节及可安装文件。特别适合把长任务监控、子任务拆分与独立评审做成可复用的触发器；不过团队经验不等于普适最优，最好拿自己的失败案例做对照。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给持续运行的编程 Agent 加入长命令等待、超时与上下文预算检查。</li>
+    <li>把大型改动切成小 PR，并对 Agent 生成的 diff 做独立审查。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2115428696672866729" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVuDJMVaAAA1NQh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVuDJMVaAAA1NQh?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Vibe 知识大赏（vibe-knowledge）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源 Claude Code Skill，从知识选题、资料核验和旁白到代码逐帧渲染、质检与发布包，生成有出处的短片。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/andyhuo520/vibe-knowledge" target="_blank">https://github.com/andyhuo520/vibe-knowledge ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先进入仓库阅读安装段和 skills/vibe-knowledge/SKILL.md，观看 Releases 中的基础档样片，选一个可以核对来源的小知识点作为试题；在 Claude Code 中按仓库说明安装 Skill，要求先列事实来源、分镜和旁白，再选择基础档的代码插画风格输出样片。逐句核对字幕与出处，对比增强档再决定是否连接 Renoise MCP；增强素材可能需要额外服务或积分，先用基础档跑通，不要将样片效果当作自己环境已实测。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>README 不仅给出 44 套视觉风格，还提供同一主题基础与增强档的成片对比，并强调每句有出处。知识视频常见问题是图像好看而事实不可复查；这个项目把引用、逐帧渲染和质检纳入同一个 Skill，更便于教育内容做审稿闭环。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把历史或科学知识点制成可复查来源的讲解视频。</li>
+    <li>在短视频投放前对比不同视觉风格及基础档成本。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2115465888594117063" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2115463987190267905/img/s5G3VelFfMDy9erw.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2115463987190267905/img/s5G3VelFfMDy9erw.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVrkOADasAAIXCy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVrkOADasAAIXCy?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kaku 远程终端</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 WezTerm 的 macOS 终端新增远程浏览器入口，可在另一台设备接续 Mac 上的终端会话。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kaku" target="_blank">https://github.com/tw93/Kaku ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从项目 Releases 下载 Kaku DMG 拖入应用程序，或按 README 使用 brew install --cask kaku；在 Mac 上启动并用 kaku --version 确认命令可用，随后在需要保留的终端里运行 kaku remote，按其显示的地址从另一台设备浏览器打开，测试触摸交互和已有 Claude Code 会话。远程链接涉及终端权限，测试时只放在可信网络、避免分享访问地址，核对远程访问设置后再用于含密钥的工作目录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这次 X 帖强调十月连续版本把远程访问和触摸操作做成终端日常功能，README 同时明确 remote 的入口和 Mac-only 边界。对人在外面仍要盯住本机 Agent 的用户，比把整块远程桌面缩放到手机上更贴近终端操作；安全边界需自行测试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>外出时从平板查看本机长时间运行的编码 Agent。</li>
+    <li>借临时浏览器会话处理终端里的确认和日志。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2115448387701182969" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVuU7-UbsAAIEsS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVuU7-UbsAAIEsS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVuU79ebkAI_eg5?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVuU79ebkAI_eg5?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVuU7-DakAAfr1o?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVuU7-DakAAfr1o?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVuU77XbYAA6xd3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVuU77XbYAA6xd3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Postrove</div>
+  <div class="section"><div class="section-label event">一句话</div><p>跨平台内容检索与稍后阅读桌面工具，可在同一个话题中对比独立来源并保存材料。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/huggon1/postrove" target="_blank">https://github.com/huggon1/postrove ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>到 GitHub Releases 选择 macOS DMG 或 Windows EXE，按照 README 安装 Chrome 和客户端；在 Settings 中配置自己的后台模型连接，在 Members 中只启用你已授权的平台账号。新建一个具体问题，让已启用的 X/Grok 成员检索，然后逐条检查回答附带的原始帖链接，把可信来源存入 Reading，切换原文与译文对照。项目也列出其他平台集成，但本日报不使用、更不要求登录小红书；自动化搜集时先关掉不需要的成员。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>其 README 把各平台成员状态区分为已集成和实验性，并列明阅读时的取材范围及平台登录条件。独立回答加来源回收的设计比单个“全网总结”更利于核验；但能否抓到原文取决于平台权限和连接状态，不应把生成摘要当作事实本身。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>比较不同 X 作者对同一开发工具的反馈并保存原帖。</li>
+    <li>为产品调研建立原文、摘要和译文可切换的资料库。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2115416645061558469" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Parallel Decisions API</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把实时网页证据与固定选项、真假判断等结构化决策整合成一次调用的服务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docs.parallel.ai/decisions/decisions-quickstart" target="_blank">https://docs.parallel.ai/decisions/decisions-quickstart ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读 Quickstart 中的 state、questions 和返回类型说明，再去官方 Playground 输入一个会随时间变化、但可人工复核的问题，例如“某产品是否正式支持某地区的数据驻留”。观察结构化答案、概率与来源，点开引用页核实，再用文档示例和自己的 API Key 尝试调用；也可按官方文档配置 Parallel MCP 的 web_decisions 工具，先在非生产数据上对比模型记忆回答与实时证据回答。不要让单次概率直接触发付款或账号操作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官网明确把“模型记忆可能过时”视为这类小决策的主要障碍，文档说明结果附来源，也提供免密 MCP 入口但有配额限制。对 Agent 流程中的路由、资格校验和供应商筛选，比每次开启一轮昂贵的长文本研究更轻；实时网页引用仍需核对时效与可信度。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>批量核对 CRM 公司属性及最新政策条件。</li>
+    <li>在 Agent 执行前检查一项会变化的公开事实并保留证据。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2115446285205651494" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVuTDGqaYAAmKvN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVuTDGqaYAAmKvN?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2115111814765969408/img/XnHeXPBChhpJQ4yy?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2115111814765969408/img/XnHeXPBChhpJQ4yy?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AI 浮生记</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源浏览器模拟游戏，用四十天生存、算力交易和工作事件讽刺 AI 行业日常。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/ai-fushengji" target="_blank">https://github.com/joeseesun/ai-fushengji ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问项目 README 中的在线入口 https://fusheng.qiaomu.ai/，选择职业身份，按页面提示先看当日新闻、安排两次行动，再收工进入下一天；试着分别采取接单、学习与交易路线，比较健康、现金和债务变化。想改造游戏可克隆仓库，按 README 使用 Node.js 24+ 执行 npm ci 与 npm run dev，改事件或文本后本地预览。游戏中模型排名和价格属于虚构机制，不要拿去当真实市场行情。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>刚发布就提供可玩的网页及完整源码，仓库清楚写出本地存档、离线玩法、可选榜单上传和不调用真实模型接口的边界。它让 Agent 产出一个可交互作品而不止静态演示，但游戏平衡与趣味仍要靠玩家真实反馈，不能以 README 自述替代试玩结论。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>体验 AI 主题小游戏，并从事件设计学习交互叙事。</li>
+    <li>克隆工程修改新闻事件与玩法，练习 Codex 协作开发。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2115353660075168054" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVs-iqiasAApsOe?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVs-iqiasAApsOe?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVs-okbbEAAr5Rw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVs-okbbEAAr5Rw?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVs-vxQa4AAMtHj?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVs-vxQa4AAMtHj?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVs-5PLasAALq38?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVs-5PLasAALq38?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HVr8i4abYAAdHX3?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVr8i4abYAAdHX3?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 乔木 AI RSS（网页版）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>聚合博客、播客、Newsletter 的中文阅读入口，也提供 Obsidian 与 DeepSeek Harness 等各自独立的工作区版本。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://airss.qiaomu.ai" target="_blank">https://airss.qiaomu.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开官网，点击网页版入口进入 rss.qiaomu.ai，不安装插件就可浏览精选订阅；选一篇外文文章，在原文、中文翻译和已有改写之间切换，记录信息是否忠于原文。若你在 Obsidian 工作，可从官网所指 GitHub Release 下载 main.js、manifest.json、styles.css 到当前库的 .obsidian/plugins/qiaomu-ai-rss/ 再启用；Harness 用户应按对应插件 README 选匹配版本、校验压缩包后再安装，勿把各版本的已读与收藏误认为自动同步。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官网明确区分网页版、笔记版和伴读版的功能及数据存储，不把已有翻译说成所有文章都能即时生成。对长期跟踪作者和开源项目，RSS 的固定来源能减少算法流噪音；但外部源若只开放摘要，翻译和改写也未必存在，重要信息仍应点开原文。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>跟踪固定的 AI 博客与播客并做中文阅读对照。</li>
+    <li>在 Obsidian 中把来源摘录进自己的笔记，而非只刷动态。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2115446064593674587" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVuSJrWaMAAN2Rz?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVuSJrWaMAAN2Rz?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Gemini 4 Carbon 先向网络安全防御团队开放</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 正式宣布 Gemini 4 Carbon，强调网络安全和长时程任务，并先向部分可信防御团队开放。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>官方博客给出 Artificial Analysis v5 综合指数 59，以及漏洞发现、利用和修补等基准成绩，但这些是官方发布时点的陈述，不代表所有真实系统都会复现。更关键的供给事实是它本周先给部分网络安全防御者，普通开发者、企业和消费者尚待逐步开放。因此今天不能写成“去控制台即可试用”，也不宜用社交平台转述的竞品成本和胜负差作为采购依据；等 API 上线后再做相同任务、相同预算的横评。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>前沿模型发布开始把高风险能力与开放节奏绑定：安全防御获得优先试点，开发者侧则需调整评估时间表。漏洞检测到修复的闭环如果稳定，安全团队会受益；但大规模自动化是否安全，还取决于验证、权限与审计，而非单项榜单分数。
+参考：https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2115508498607833290" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVu5GHmbUAAppsK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVu5GHmbUAAppsK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent 基建转向身份、隔离与急停</div>
+  <div class="section"><div class="section-label event">事件</div><p>一则对 Anthropic 平台负责人观点的转述，强调多智能体系统的身份授权、隔离、可观测与急停。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这条是从业者观点而不是 Anthropic 新产品发布；当前抓到的是转述推文，原始发言未完成独立核验。它提出的工程问题却可具体检验：子 Agent 是否共享高权限凭据、一次误操作是否能被中止、日志是否可归因到具体任务。团队可以把这些变成测试案例，而不是把“多 Agent”视为天然更快。涉及付款、注册和外部发信的流程尤其应明确人工授权门槛。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Agent 工程的竞争焦点可能从提示词效果转向运行时隔离、身份与审计。采购工具时不只看模型榜单，还应看权限粒度、重试幂等与回滚能力；若这些底座缺失，任务规模越大，误操作传播与事后追责成本越高。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2115252887882539279" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVrjR7QaoAAtuNu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVrjR7QaoAAtuNu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Delta 协作会话：推文声称可用 /delta share 让多人加入 Claude Code 同一会话；项目主页和权限模型尚未核实，证据待补，先关注是否能限制共享未提交文件 <a href="https://x.com/xiaohu/status/2115398911947088189" target="_blank">→</a></li>
+    <li>Herdr 手机端构想：作者自述在设计更原生的移动工作流，目前抓到的只是想法帖，安装入口及实现状态证据待补 <a href="https://x.com/yetone/status/2115516478254624914" target="_blank">→</a></li>
+    <li>Show HN「AI Zen Garden」：HN 新帖指向可让模型往花园中增加内容的网页；仅发现站点与讨论，玩法和活跃度证据待补，适合观察交互式生成的小实验 <a href="https://news.ycombinator.com/item?id=50277970" target="_blank">→</a></li>
+    <li>Show HN「AI Workflows」：HN 新帖称汇集多个工具的分步工作流；项目覆盖量属于作者自述、质量证据待补，可观察是否真有可复现步骤 <a href="https://news.ycombinator.com/item?id=50272242" target="_blank">→</a></li>
+    <li>Samaya Sterling：研究者称推出面向金融研究后训练的较小模型；权重、评测及复现信息未独立核验，证据待补，关注金融 Agent 的专用小模型路线 <a href="https://x.com/maithra_raghu/status/2115488643477590241" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>NVIDIA simready-assets：Hugging Face 上确有公开数据集，适合具身仿真素材研究；资源体量及具体授权需按下载条目核对 <a href="https://huggingface.co/datasets/nvidia/simready-assets" target="_blank">→</a></li>
+    <li>Claude for Legal 工具库：推文提到合同、法规相关 Artifacts，实际可用权限和功能边界应以产品页与账号界面为准 <a href="https://x.com/dotey/status/2115483616830517654" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
