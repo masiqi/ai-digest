@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-30</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-30</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的可玩性落在“把 Agent 真正接进工作流”：论文 PDF 审阅、跨平台搬迁、PHP 应用工具调用与本机设计画布都有可安装入口；本地推理、学习和私有数据工具也出现更细的应用形态。Agent Reach 自动证据包本次运行超时，以下🛠️项目另行对照项目 README/官网核验，🌱线索不等于已验证产品能力。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Papilot：在 PDF 上审阅 LaTeX 论文</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 PDF 批注定位到 LaTeX 源码，让 Agent 修改论文，并对每处排版后的变化逐条接受或拒绝。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/cu1ch3n/papilot" target="_blank">https://github.com/cu1ch3n/papilot ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先准备 Node.js 22.22+、Git 和完整 TeX 发行版，再运行 npm install -g papilot、papilot demo；浏览器访问 http://127.0.0.1:7274，在侧栏选择 PDF，先用自带的示例论文练习圈选公式、写修改意见、查看排版前后差异与 Accept/Reject。接入自己的论文时，项目必须是 Git 仓库中的 LaTeX 工程，先用 papilot doctor --repo 检查依赖，再按 README 登录 Codex 或配置 Claude API。务必先从副本试验，别把尚未审阅的改动直接合并到投稿版本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>通常的 AI 改论文只给 TeX 文本 diff，而作者真正关心的是“印出的那一页发生了什么”。Papilot 借助 SyncTeX 把 PDF 选区映射回源码，并用独立 Git worktree 隔离任务、逐条展示排版差异；这是面向论文审阅而非普通聊天的一套可核对交互。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>和导师沟通公式、图表或段落修订，逐条核对排版效果。</li>
+    <li>给长篇 LaTeX 讲义做错字与结构检查，保留可拒绝的审阅记录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2115839553701339475" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ personal-agent-dossier：Agent 搬家档案</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把个人 Agent 的职责、定时任务全文、长期记忆和依赖装进可校验的单文件档案。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/AidaShika/personal-agent-dossier" target="_blank">https://github.com/AidaShika/personal-agent-dossier ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先 git clone https://github.com/AidaShika/personal-agent-dossier，在仓库内阅读 SKILL.md 和 SPEC.md；第一次不要导出自己的真实 Agent，先执行 pip install -r requirements.txt，运行 python3 tools/dossier_check.py examples/scribe.dossier.md 检查示例结构、指纹和敏感数据扫描。之后把整个仓库交给待迁移 Agent 作为 Skill，请它导出 .dossier.md；在目标平台只做 dry-run 导入，核对职位、时区、任务提示词及记忆逐项是否降级，再决定是否真正写入。真实档案不要公开上传，绝不要复制凭据。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>迁移 Agent 不只是拷贝一段人设，最容易丢的是定时任务的完整指令、记忆类别和“不要做什么”。这个格式对 null 与空列表作严格区分，并要求导入方报告无法承接的项目；指纹只校验 name/title/role，不能代替任务与记忆的逐项比对，边界写得很清楚。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把一个已经运行多项日常任务的 Agent 从旧平台迁移至独立 profile。</li>
+    <li>团队更换 Agent 运行框架时先审计职责、任务和记忆的损失清单。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2115663206211269052" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ baoyu-design v2：本地可编辑设计画布</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把设计画布、幻灯片、设计系统与数据仪表盘做成可供编程 Agent 调用的本地 Skills。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/baoyu-design" target="_blank">https://github.com/JimLiu/baoyu-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在一个测试项目运行 npx skills add JimLiu/baoyu-design --list 查看实际提供的 Skill，按所用 Agent 选择安装，例如 npx skills add JimLiu/baoyu-design --agent codex --skill claude-design --skill claude-slides。重启 Agent 后要求它先用 claude-design-system 建立品牌色和字体，再生成一个手机/桌面双画板的设置页，并让它运行仓库的 artifact.mjs open 打开本地编辑器；手动改一处文案，检查是否保存回项目文件。仅做演示时也可以只安装 baoyu-design，避免一次铺开全部能力。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>普通生成设计图往往难以继续编辑，这个仓库把画板 JSON、HTML 组件、幻灯片和数据集留在自己的项目文件中；编辑器和 Agent 可以双向改动。它并非 Claude 官方产品，效果取决于本地 Agent 和模型，先用小样验证导出 PDF/HTML/PNG 与源文件同步是否满足需求。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>产品团队用现有编程 Agent 制作可迭代的网页原型和路演稿。</li>
+    <li>数据分析师从 CSV 生成带来源面板的交互仪表盘。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2115667965328977920" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2115667422518693888/img/Ew2fWw83XHq4r8Fd.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2115667422518693888/img/Ew2fWw83XHq4r8Fd.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 词光 Word Atlas：一词一画的词汇图鉴</div>
+  <div class="section"><div class="section-label event">一句话</div><p>以插画、英美发音、主动回忆和 FSRS 间隔复习组织雅思词汇的开源网页应用。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/designfuchen/word-atlas" target="_blank">https://github.com/designfuchen/word-atlas ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>想马上体验先打开 https://0xlei.tech/words/，不需注册，任选一个主题词卡，看插画、中文释义与例句，分别试听英音和美音，然后做看义选词、听音辨词、看图补句和拼写练习；隔天回到“今日学习”检查 FSRS 安排。开发者可按 README 使用 Node.js 20+：git clone --depth 1 https://github.com/designfuchen/word-atlas.git，进入目录 npm ci &amp;&amp; npm run dev，再打开 localhost:5188。学习记录存在浏览器本地，换设备先导出 JSON 备份。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库开放词条、原创插画、例句和发音素材，同时把图像语境与主动回忆放在学习链条中，不只是“单词+中文释义”列表。项目自己声明文字、插画和录音含 AI 生成内容、尚未逐条人工审校，也不是官方雅思词表；把它当辅助记忆工具，遇到关键释义应查权威词典。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>学生按话题用图像和听音巩固易忘词，而非机械重复翻译。</li>
+    <li>教师挑选开放数据制作自己的词卡练习，并手工审校重点词。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2115821594660786342" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2115821286861729792/img/TI8cly7kkx9iDBAu.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2115821286861729792/img/TI8cly7kkx9iDBAu.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ oMLX × LM Studio：在本机试新推理引擎</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LM Studio 宣布可下载 oMLX 引擎配合现有 MLX 模型；oMLX 自身提供 Apple Silicon 上的本地推理与热/冷 KV 缓存。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/jundot/omlx" target="_blank">https://github.com/jundot/omlx ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>已有 LM Studio 和 MLX 模型的 Mac 用户，先在 LM Studio 的引擎管理入口检查并下载官方宣布的 oMLX 引擎，选一个自己已有的 MLX 小模型做相同提示词的首 token、长对话和并发对比，注意实际 UI 入口随版本变化。若想独立试验 oMLX，可从仓库 Releases 下载 macOS DMG，启动后按欢迎页设置模型目录、开启服务、下载模型，再通过 http://localhost:8000/admin 查看模型状态；不要直接在体积有限的系统盘下载大权重。两种入口分别试，不要误认为安装独立 App 就自动装进 LM Studio。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>今天的新信号是 LM Studio 与 oMLX 的引擎整合，而不是宣称 oMLX 今天才诞生。oMLX README 介绍持续批处理、内存与 SSD 两级 KV 缓存和多模型管理，对反复执行相似上下文的本地 Agent 可能有价值；性能取决于机器内存、模型和提示词，应以本机实测为准。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>M 系列 Mac 用户比较相同 MLX 模型在不同引擎的长对话体验。</li>
+    <li>本地 Agent 频繁重复加载上下文时评估缓存收益与 SSD 占用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lmstudio/status/2115829031832830252" target="_blank"><span class="handle">@lmstudio</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVzuACZXkAIK-jJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVzuACZXkAIK-jJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 巡影 Mediary Scout：自建网盘影视追更 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>自部署的媒体库，按所需剧集搜索、转存到自己的网盘并回读确认结果。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/fancydirty/mediary-scout" target="_blank">https://github.com/fancydirty/mediary-scout ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先查看 README 的网盘支持清单和合法使用边界；最省事是在 Releases 按自己的 Mac/Windows 系统下载桌面包，启动后进入设置绑定自己的网盘，按界面配置 AI 模型，再搜索自己有权获取的一部作品，点“获取”，观察活动队列与网盘目录是否真的出现文件。常开 NAS 可以 git clone https://github.com/fancydirty/mediary-scout &amp;&amp; cd mediary-scout &amp;&amp; docker compose up -d，访问本机 3000 端口配置。Docker 实例别裸露公网，远程访问优先走 Tailscale；免费公共模型池可能接收任务上下文，敏感内容改用自己的端点。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“搜到分享链接”与“已经真实转存到盘”分开，尝试用网盘回读与缺集状态持续追踪，而不是让 Agent 口头宣称成功。桌面端适合先跑通，常开的 Docker 版才适合定时补缺；不同盘的资源、验证可靠性与服务条款均需要用户自己检查，不把索引结果视作可合法使用的授权。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>管理自己拥有合法访问权的影视媒体目录并追踪缺失集数。</li>
+    <li>借鉴其任务状态、回读验证和失败恢复设计到其他网盘 Agent。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2115712356625916281" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BOKI：本地优先的开源记账</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把复式记账、票据 OCR、语音识别和可选本地模型放到自部署财务软件中。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/edrin09/boki" target="_blank">https://github.com/edrin09/boki ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Windows 用户可从项目 Releases 选当前安装包，用无真实账务数据的测试环境安装；源码用户按最新 README 分别启动 backend 和 frontend，首次登录后立刻修改示例账户口令，再创建测试公司、录入一张借贷平衡的凭证并查看报表。若要测试离线票据与语音，按文档先获取本地 OCR/ASR 模型，拔网前检查状态接口。当前仓库 README 写有加密数据库和 vault.key，备份时必须一并保留数据库与密钥，别只拷走 financial.db；在正式账务使用前应独立审计加密及财税合规。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多“AI 财务”产品把票据和账本上传到云端，这个项目强调本机数据与可选本地模型，并用复式记账规则阻止借贷不平衡。注意第三方介绍仍有“明文 SQLite”的旧说法，而当前仓库文档描述已使用 SQLCipher 兼容加密；这里只报告仓库当前声明，未经独立安全审计，不承诺数据库绝对安全。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>小团队在断网或内网环境试用财务记账与票据识别流程。</li>
+    <li>开发者研究本地 OCR、语音输入与账务约束如何组合。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2115697301976912145" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ phpClaw：PHP 应用的 Agent 运行时</div>
+  <div class="section"><div class="section-label event">一句话</div><p>给 PHP 项目补上工具循环、记忆、默认防护与 Laravel/Symfony 等适配器的开源框架。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/phpclaw-php/phpclaw-monorepo" target="_blank">https://github.com/phpclaw-php/phpclaw-monorepo ↗</a></p>
+    <p><a href="https://news.ycombinator.com/item?id=50293361" target="_blank">https://news.ycombinator.com/item?id=50293361 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>已有 PHP 8.1+ 与 Composer 的开发者先建隔离演示工程，执行 composer require phpclaw/phpclaw，按 README 设置自己可用的模型提供方环境变量，在 PHP 脚本中调用 PhpClaw\Claw::builder()-&gt;build()-&gt;send('...') 确认基础对话；随后只注册一个只读的 FileReadTool 或受限 ShellTool，让 Agent 查询测试目录，不要立刻接生产数据库。Laravel 项目再看对应适配包与文档。比较回答、调用日志和越权拒绝路径；作者宣传的八类默认 guard 不是经过独立攻击测试的安全担保。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这条来自当天 Show HN，而不在 X List；项目 README 和 Composer 安装范例提供外部佐证。其价值不在换一个聊天 SDK，而在给 PHP 开发者提供现成 ReAct 循环、迭代上限、工具边界和 MCP 接口；正因有执行能力，部署时必须单独限制外部调用、文件范围和数据库权限。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给现有 PHP 后台加入只读问题排查助手，先跑最小权限实验。</li>
+    <li>在 CMS/框架里研究 Agent 的工具授权与执行日志设计。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 上调 Pro 与 Business Premium 用量上限</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 相关负责人称 Pro 100/200/500 与 Business Premium 各档使用上限即日起翻倍，并取消原计划对 Pro 200 的降额。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是定价与用量规则的变化，不等于所有用户或 Plus 档同步受益，也不能从推文直接推算每个模型的实际可用 token。对依赖 Codex 的开发团队，短期可以重新评估高频任务的额度预算，但仍要以账户页面显示、具体模型限制和后续官方条款为准；“翻倍”是当前公告，不应写成永久承诺。更值得看的是厂商面对高用量订阅用户反馈时对限额策略作了快速回调。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>订阅额度会直接改变 Agent 自动化任务的边际成本与排队策略，但不会消除速率限制和团队级治理需求。企业采用时仍应记录每类任务的实际消耗、失败重试量与供应商政策变化，避免把临时提升当成长期容量规划。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/thsottiaux/status/2115850175868727621" target="_blank"><span class="handle">@thsottiaux</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Mistral Large 4 开放权重，部署门槛仍高</div>
+  <div class="section"><div class="section-label event">事件</div><p>Mistral 的 Large 4 模型卡公布约 1T 总参数、约 52B 活跃参数的多模态 MoE 模型与推理部署说明。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>模型卡描述文本和图片输入、长上下文、函数调用及可配置推理强度，Hugging Face 同步介绍了 FP8/NVFP4 等权重形态。这里的“开放权重”不等于宽松无限制许可：模型卡说明 Model-as-a-Service 商业形态需要单独授权；也不等于个人电脑能轻松本地运行。X 推文里的与其他模型性能比较缺少同口径实验，本报不采纳排名。适合先读模型卡和许可证，再按实际硬件预算决定是否部署。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对需要欧盟语言、多模态和自主托管的团队，这增加了可评估的开权重选择；但算力、内存与许可的现实约束，会让大多数开发者优先从 API 或托管推理试做小样。采购时应将模型能力、授权、部署成本和数据边界分别评估。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2115815758299320515" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HVzNm_7W4AAQsZV?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HVzNm_7W4AAQsZV?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Charter：Show HN 出现面向 Agent 调用客户账户的字段级权限项目，适合跟踪“最小可见字段”治理；社区反馈少，实际权限闭环证据待补 <a href="https://news.ycombinator.com/item?id=50297053" target="_blank">→</a></li>
+    <li>Artificer by Nua：Show HN 作者介绍用视频和任务描述评估机器人任务进度的 4B 模型；独立基准和可复现入口证据待补 <a href="https://news.ycombinator.com/item?id=50296436" target="_blank">→</a></li>
+    <li>TEM：X 线程提出 Transformer 能量模型的扩展与泛化路线；目前仅见作者概述，论文和复现条件证据待补 <a href="https://x.com/AlexiGlad/status/2115888540466749536" target="_blank">→</a></li>
+    <li>Bygga：推文称尝试把家具纸质说明变成可交互 3D 拼装动画；可公开体验入口与成品质量证据待补 <a href="https://x.com/Gorden_Sun/status/2115812786626543921" target="_blank">→</a></li>
+    <li>Permaura：Show HN 提出用手表轻点代替长期暴露 API Key 来授权编程 Agent；目前仅为早期理念与站点线索，权限模型证据待补 <a href="https://news.ycombinator.com/item?id=50297971" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>42章经精读站：按节目查看中文精读与单集目录；转写可能出错，重要引语仍应回听原节目 <a href="https://42zhangjing.qiaomu.ai" target="_blank">→</a></li>
+    <li>AI Timeline：按日期和标签追踪 AI 新闻，适合与原始来源交叉核查，不替代一手公告 <a href="https://aitimeline.news" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
