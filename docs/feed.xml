@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 30 Oct 2026 00:45:07 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 00:53:58 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/10/31 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-10-31.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-10-31.html</guid>
+      <description>Agent 工具开始从桌面延伸到手机、多角色会话与统一设计工作流；与此同时，轻量文档 OCR、单图 3D 与音画同步生成给了创作者更多可亲手验证的入口。今天尤其值得把“产品展示”与“真实运行条件、模型许可、数据边界”分开看。</description>
+      <pubDate>2026-10-31T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/30 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-30.html</link>

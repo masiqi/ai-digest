@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-10-31</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-10-31</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Agent 工具开始从桌面延伸到手机、多角色会话与统一设计工作流；与此同时，轻量文档 OCR、单图 3D 与音画同步生成给了创作者更多可亲手验证的入口。今天尤其值得把“产品展示”与“真实运行条件、模型许可、数据边界”分开看。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ DSH Go</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 DeepSeek Harness 放到 Android 手机上运行，也能连接电脑上的 DSH 会话。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ccch1mneyyy/dsh-go" target="_blank">https://github.com/ccch1mneyyy/dsh-go ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库的 Releases/latest，按 Android 设备架构下载 APK，安装前阅读仓库的使用指南与权限说明；首次启动先试本机模式，在内置 Linux 环境里运行一个无敏感数据的小任务，观察过程和中途插话是否能恢复。随后在可信的自家网络环境中依官方指南连接电脑端 DSH，测试同一任务从手机接续。旧测试包签名不同不能直接覆盖，卸载前务必备份手机侧会话与环境；手机操控权限先选最严格的确认档位。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它不是给桌面终端加一个网页壳，而是把本机执行与远程电脑连接放在同一 Android 客户端，并有原生对话界面、过程折叠与确认机制。对经常离开电脑又不想中断长任务的人，这是验证移动 Agent 能否真正续行的具体样本；它是第三方社区项目，并非 DeepSeek 官方移动版。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>通勤时查看长任务进度并补充指令，回到电脑继续处理产物。</li>
+    <li>在备用 Android 手机上隔离测试低风险 Agent 自动化。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/aehyok/status/2116162032206819380" target="_blank"><span class="handle">@aehyok</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2116161923624615938/img/8gm441WBb2r_lcbb.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2116161923624615938/img/8gm441WBb2r_lcbb.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ dsh-guizang-design</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把网页 PPT、图文卡片、网页排版和中文文案修订组合成 DeepSeek Harness 插件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/op7418/dsh-guizang-design" target="_blank">https://github.com/op7418/dsh-guizang-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认自己使用的 dsh 版本处于仓库声明的兼容区间（0.2.1-rc.2 及以上、0.3.0 以下）。在桌面或网页版侧栏打开“插件”→“添加插件”，输入 dsh-guizang-design，安装后点“立即启用”；若是自行运行 dsh web，也可依 README 用 dsh plugin --profile web add dsh-guizang-design 并重启。拿同一篇短文分别调用 /guizang-page-skill 和 /guizang-social-card-skill，检查配色、字体、导出的 HTML/PNG，以及作品库能否回看；使用语气档案前先确认会话素材范围。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>多个设计 Skill 共用设计 Token，不必为 PPT、卡片和网页反复手工对齐品牌色；作品库还能登记结果并“做同款”。仓库明确区分桌面插件界面安装与 web 命令行安装，并披露会从本机会话中读取用户消息来建语气档案，适合从交付一致性和隐私边界两方面评估，而不只是看样张。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把一期技术周报同时交付网页、演讲稿和社交传播图。</li>
+    <li>用统一视觉规范批量生产课程讲义封面与长图。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2116203707318841379" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HV5EDJ6awAAnT26?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV5EDJ6awAAnT26?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenMausBot</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用聊天联系人式界面管理多个 Claude、Codex 等 Agent，并为它们配置各自工作环境。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/milind-soni/OpenMausBot" target="_blank">https://github.com/milind-soni/OpenMausBot ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入仓库 Releases/latest，按 macOS Apple Silicon/Intel、Windows 或 Ubuntu 下载对应安装包；先在自己的电脑分别安装并登录要使用的 CLI，再打开应用建立两个测试机器人，给它们不同角色和低权限任务。只在测试目录让一个整理文件、另一个检查结果，观察审批卡片与会话轨迹。云端电脑、Local VM 和宿主机控制是不同安全边界，宿主机控制要明确开启；不要一开始就接公司邮箱或真实生产账号。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库 README 把每个机器人视为真正运行的本地 Agent 进程，而不是同一个聊天窗口的不同人设；转录、密钥和事件默认保留在本机目录，也可选择隔离电脑。它给“多人协作型个人 Agent”提供可检查的权限与任务分工模型；项目自称开源替代方案，跨平台和宿主机控制能力仍有平台限制，不能视为默认全可用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>一个机器人整理需求、另一个审阅代码，人工只审批高风险步骤。</li>
+    <li>对比不同 CLI 对同一低风险任务的交付记录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2116085106800468421" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Surya 2.5</div>
+  <div class="section"><div class="section-label event">一句话</div><p>约 689M 参数的文档视觉模型，统一处理 OCR、版面和表格结构提取。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/datalab-to/surya-ocr-2.5" target="_blank">https://huggingface.co/datalab-to/surya-ocr-2.5 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在模型卡看样例、模型许可与运行需求；只想快速体验，可到卡片链接的 Datalab 公共 playground 上传一页无敏感信息的表格扫描件，对比输出结构与人工原件。要本地运行则安装 pip install surya-ocr，NVIDIA 环境准备 vllm，Apple Silicon/CPU 按文档准备 llama.cpp/llama-server，然后用 surya_ocr DATA_PATH 对一份 PDF 或图片目录测试，检查 results.json 的 blocks 与表格 HTML 是否完整。云端上传与本地识别的隐私边界不同，不要用含个人信息的试卷做公开演示。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>原始模型卡明确把版面、OCR 与表格识别合并到一套视觉语言模型，输出可以保留文档结构，适合做后续知识库输入；它同时提供 CPU/Apple Silicon 与 NVIDIA 的不同推理路径。推文所称“1B 以下最高分”属于作者宣传口径，实际中文手写、复杂公式和跨页表格质量仍应拿自己的样本回归，且代码许可与模型许可不是同一件事。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将课程讲义扫描 PDF 转成能按标题和表格检索的资料。</li>
+    <li>在文档入库前检测表格跨行、公式和阅读顺序的提取误差。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2116157329242718234" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HV4Z3meaMAA8Wt7?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV4Z3meaMAA8Wt7?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Idol</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把单张物体照片转成带补全视角的 3D Gaussian Splat .ply 文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/speridlabs/idol" target="_blank">https://huggingface.co/speridlabs/idol ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>轻量试用先打开模型卡的 Hugging Face Spaces 演示，上传一张没有人脸或敏感信息的单物体照片，旋转查看生成结果，尤其观察看不见的一侧是否凭空补错。要本地运行，先接受模型卡提示的两个门控图像编码器条款并登录 Hugging Face，再 clone github.com/speridlabs/idol-sdk、按 README 安装 Python 3.10+ 与 CUDA 环境，执行 python -m idol.sample --image photo.jpg --mode real；对渲染图改用 --mode synthetic，最后用 3DGS 查看器打开 .ply 核对纹理与轮廓。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目给出了明确的高斯点云输出、显存需求和真实图片/合成图片两类裁剪模式，比只展示“单图变 3D”视频更可复现。模型卡约 7.2GB 峰值显存的数字与秒级演示并不等于任意电脑都能秒出：首次编译、GPU 型号、输入图像及默认采样步数会显著影响耗时，卡片另有分 GPU 实测表可供核对。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给电商产品照片制作可旋转的商品概念预览。</li>
+    <li>快速生成游戏道具初稿，再由美术检查被遮挡面的错误。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2116145550672490873" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2116145435173883904/img/JYPcy6PfjMUUvbyP.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2116145435173883904/img/JYPcy6PfjMUUvbyP.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 乔木剪藏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 Chrome 中阅读网页和视频文稿、做 AI 问答，并把带来源的笔记送进 Obsidian。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://clipper.qiaomu.ai" target="_blank">https://clipper.qiaomu.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网进入 Chrome Web Store 安装自动更新的商店版，或按需要从 GitHub Releases 下载独立版；先在非敏感网页连续按三次 a 试阅读，再打开带字幕的视频按同样快捷键查看同屏文稿，用 i 连按三次记录带来源与时间点的学习笔记。若要静默写入 Obsidian 或生成本地字幕，再安装官网列出的本地助手并选择自己的笔记库。视频号链接可按推文所述在 Chrome 中打开测试，但不同站点是否能提取音频和转写需以实际页面和授权为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官网同时列出字幕时间戳、双语对照、笔记模板、本地字幕与自选模型入口，形成“看到材料—提问—保留来源—进入个人知识库”的短链路。它不替用户提供模型；调用云端提问或云端识别时内容会发送给用户选择的供应商，和本机识别的隐私成本不同。对视频号的新用法来自推文，官网通用能力是外部依据，但具体站点兼容性仍待实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把英语教学视频按知识点和时间戳整理到 Obsidian。</li>
+    <li>阅读长文章时保留原句与链接，避免只有无出处的 AI 摘要。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2116200606394384451" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HV5AfI6aYAAMsou?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV5AfI6aYAAMsou?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HV5Aj3tagAAtCKL?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV5Aj3tagAAtCKL?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kami</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 AI 生成的文字排成更可读的 PDF、PNG、可编辑演示稿或产品页面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kami" target="_blank">https://github.com/tw93/Kami ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在仓库 README 查看示例 PDF 和语言支持；使用 Claude Code、Codex 或 Cursor 时可按官方安装说明运行 npx skills add tw93/kami -a claude-code codex cursor -g -y，再在 Agent 中明确要求“把这份两页技术总结做成中文打印版一页纸”。打开生成的 PDF 实际检查中文字体、标题层级、图表来源和页边距；若只用 Claude Desktop，可从 release 下载官方的 kami.zip 并通过 Skills 界面导入。升级和缺少中文字体的补救方法以仓库文档为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>设计不是只靠一段提示词碰运气，仓库包含模板、排版规则、不同语种字体回退与展示文件，且版本说明强调图表需按数据绘制并交付前检查。它可用来把 Agent 的结果变成真正可阅读的交付件；但版面漂亮不等于事实正确，财报图表、简历经历仍需要用户逐项校对，中文字体也要注意附带的商业授权限制。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 Agent 调研结果转换成可打印的一页摘要与讲义。</li>
+    <li>为产品发布准备视觉统一的介绍页和演示稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2116163296437104926" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HV4fROWakAA7330?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV4fROWakAA7330?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AI Agent Handbook</div>
+  <div class="section"><div class="section-label event">一句话</div><p>阿里云开源的企业 Agent 全生命周期实践手册，覆盖 Harness、运行时、治理和评估。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://aliyun.github.io/ai-agent-handbook/" target="_blank">https://aliyun.github.io/ai-agent-handbook/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从在线阅读站进入“阅读指南”，做工程选型先看架构、构建与运行篇，不必按目录从头读；选自己正在做的一个 Agent，列出任务状态、工具权限、执行轨迹、失败重试与人工审批五个现实问题，再对照手册第 4、7、13、14、21 章逐条做自查。需要团队共创时到 GitHub 仓库下载 Markdown 源稿，给每个结论标上“适用于本项目/尚无证据”，并把真正的回归样本和故障日志加入内部评审，而不是直接复制所谓最佳实践。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>材料把“能构建 Agent”与“能在企业环境稳定运行、可治理、可验证”拆开讨论，并提供沙箱、异步任务、轨迹、权限与 Badcase 等可操作检查点。它尤其适合架构评审时找盲点；手册仍在持续更新，云厂商自身的工程观点不等于独立行业标准，也不能替代自己产品的测试与合规审查。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给已有 Agent 系统做发布前安全与可观测清单。</li>
+    <li>培训研发团队区分模型、Harness、工具层和组织流程的责任。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2115975663148765204" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HV10o9FbUAAWE_P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV10o9FbUAAWE_P?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Pika H3 Flex 开放音画生成推理</div>
+  <div class="section"><div class="section-label event">事件</div><p>Pika 发布基于 MiniMax-H3 的视频与音频同步生成推理仓库，并提供托管 API 入口。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>公开 README 描述六步采样、原生 480p/768p、参考图/音视频条件及同步立体声音频；但本地下载两类任务所需基础文件约 210GB，另有适配器约 5.5GB，代表性验证使用单张 H100 80GB。它“开源”主要指推理代码与可获取权重，适配器采用上游模型许可，不能直接等同于宽松商用许可；轻量体验应先看公开样片或托管服务，再决定是否自建。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>音画联合模型若能稳定控制镜头、角色与声轨，会改变短视频分镜迭代的工具链，把配音对齐工作前移到生成阶段。但高 GPU 成本、权重体积和许可限制使本地普及仍有门槛，创作团队要按自己的素材复现一致性，而不是只凭精选展示片段评估采购。
+链接：https://github.com/Pika-Labs/Pika-H3-Flex</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2116142436078780846" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2116142104430993408/img/cOA9y94vZW-gUsYu.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2116142104430993408/img/cOA9y94vZW-gUsYu.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 RAW-RAG 挑战复杂 Agent 记忆的默认选型</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究者发布论文和代码，比较原始会话检索加重排与复杂记忆系统在长程问答中的表现。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>项目 README 报告，在所列四套长程记忆基准、七种“基准×模型”设置中，RAW-RAG 在六种取得领先，另一种没有领先。这是作者提供的实验结果，并非我们独立复现，也不能推广到所有任务；其关键设计是保留带时间戳的原始历史，先检索片段再用交叉编码器重排，让阅读模型自己解释时间关系和依赖，避免入库摘要过早丢失证据。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>构建个人助手或客服知识系统时，可以先做“原始日志+检索+重排”的低复杂度基线，再衡量图谱、摘要与可变记忆是否真的增加正确率。代价是原文保留带来隐私、存储和检索成本，项目团队还需针对删除权、授权边界和长时状态更新做单独设计。
+链接：https://github.com/Litmeb/RAW-RAG</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2116177218271658167" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HV4r6oAbEAMnVqa?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV4r6oAbEAMnVqa?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Comfy 与 Higgsfield 围绕开源挑战赛出现争议</div>
+  <div class="section"><div class="section-label event">事件</div><p>X 上流传 Comfy 共同创办人称收到 Higgsfield 要求撤下“Open Source Higgsfield”挑战赛的函件。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>现阶段能确认的是 Comfy 一方公开表述及相关报道对该表述的转述；函件法律理由、双方完整沟通与最终裁决不能仅由二手帖确定。争议不仅涉及开源与闭源的价值判断，也可能涉及名称和人物肖像的使用、用户是否误认为比赛由品牌官方背书。不要把“收到函件”写成“对方已经违法”或“挑战赛必然关闭”。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>创作者在开源复刻商业产品时，应区分重现功能与使用对方商标做活动标题，提前写明非官方关系并检查素材授权。对 AI 视频赛道而言，产品竞争可能进一步延伸到品牌和社区活动治理；是否产生实际禁令仍需要后续官方文件与平台状态验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2116166699859022016" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HV4iY-kbQAEhnxp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV4iY-kbQAEhnxp?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HV1DCiCbYAEDp2s?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV1DCiCbYAEDp2s?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HV1DDnebEAAsdRd?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV1DDnebEAAsdRd?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HV1DEU4awAA-CX-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV1DEU4awAA-CX-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Weir：HN 展示的本地离线凭证泄漏测试项目，用诱饵检验 Agent 是否把敏感值带到模型或遥测链路；有仓库但缺第三方复现，早期信号/证据待补 <a href="https://news.ycombinator.com/item?id=50261335" target="_blank">→</a></li>
+    <li>phpClaw：HN 展示面向 PHP 生态的 Agent 运行时，仓库列出工具、记忆和守卫；生态集成质量尚待实测，早期信号/证据待补 <a href="https://news.ycombinator.com/item?id=50293361" target="_blank">→</a></li>
+    <li>Pidgeon：HN 讨论给 Agent 分配可编程邮箱和邮件线程，官网有 SDK 示例；邮件安全声明为产品方自述，早期信号/证据待补 <a href="https://news.ycombinator.com/item?id=50288172" target="_blank">→</a></li>
+    <li>Beolis：HN 有人展示管理多个 Coding Agent 的工作台，官网本次无法抓取，不推断实际功能或可用性，早期信号/证据待补 <a href="https://news.ycombinator.com/item?id=50304351" target="_blank">→</a></li>
+    <li>OpenDesign：官方新上帮助中心，写了自带密钥或本地 CLI 接入及交互原型的分步入口；新指引值得跟踪，具体模型成本和导出能力按文档核查 <a href="https://x.com/OpenDesignHQ/status/2116103187291865541" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>hdr-video：min-skill 仓库里的纯 ffmpeg 视频转 HLG HDR Skill；先验证显示设备、色彩标记和片源再用 <a href="https://github.com/limin112/min-skill/tree/main/skills/hdr-video" target="_blank">→</a></li>
+    <li>huashu-bird-sticker：11,064 种鸟的多语种贴纸与结构化数据集；大体积仓库建议先按需取数据，商用应查图像与参考照片许可 <a href="https://github.com/alchaincyf/huashu-bird-sticker" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
