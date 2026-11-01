@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 31 Oct 2026 00:53:58 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:48:51 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/01 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-01.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-01.html</guid>
+      <description>今天值得动手的不是又一轮模型参数竞赛，而是把 AI 接入真实工作流：自建远程中继、可评论的设计稿、能导出的像素特效、可测试的 Agent 凭据边界。同时 HN 冒出 PHP Agent 运行时等小而新的工程项目；下文区分项目文档已证实的能力与尚待验证的早期信号。素材来自本次抓取的 X List（主要发布于北京时间 10 月 31 日）及 Hacker News 补充，非声称所有项目都在 11 月 1 日首次发布。</description>
+      <pubDate>2026-11-01T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/10/31 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-10-31.html</link>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-01</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-01</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得动手的不是又一轮模型参数竞赛，而是把 AI 接入真实工作流：自建远程中继、可评论的设计稿、能导出的像素特效、可测试的 Agent 凭据边界。同时 HN 冒出 PHP Agent 运行时等小而新的工程项目；下文区分项目文档已证实的能力与尚待验证的早期信号。素材来自本次抓取的 X List（主要发布于北京时间 10 月 31 日）及 Hacker News 补充，非声称所有项目都在 11 月 1 日首次发布。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Alma Relay（自建远程中继）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>为桌面 Alma 的手机远程访问自建转发节点，把中继部署在自己的 Cloudflare Workers 或服务器上。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yetone/alma-relay" target="_blank">https://github.com/yetone/alma-relay ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在项目 README 的 Deploy 中选择 Cloudflare Workers 或 Docker 路线；前者准备 Cloudflare 账号，后者准备可用域名、DNS 和 80/443 端口，再照各自部署文档启动服务。用 HTTPS 地址访问 /healthz 检查服务状态，在桌面 Alma 的 Settings → Remote Access 选择自建中继并填入地址，随后用手机 Alma 重新扫描配对二维码。若是团队共用节点，按文档配置注册密钥，先在测试环境验证 WebSocket、重连和访问授权，再考虑放入日常远程工作流；旧配对需重新扫描。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库明确提供 Node 与 Workers/Durable Objects 两套中继实现；桌面主动连出，不要求给电脑开放公网端口。其文档称默认开启端到端加密，中继只处理密文，但自建并不等于自动完成安全审计：公开地址、注册密钥、TLS 与配对码撤销仍要自己管理。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在外用手机查看家里桌面 Alma 的 Agent 任务进度并远程处理。</li>
+    <li>团队把转发节点放到自己控制的区域，以便测试延迟和信任边界。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2116599592930488707" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ pixelfx（代码生成像素特效）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把火焰、法术、天气等像素特效做成可改色的程序，并导出游戏引擎可用的精灵表。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/patch-gg/pixelfx" target="_blank">https://github.com/patch-gg/pixelfx ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开仓库 README 的在线 gallery，在浏览器逐个预览特效、改配色与镜像参数；若做网页游戏，可按文档运行 npm i github:patch-gg/pixelfx，再从包里选效果接入渲染逻辑。非网页项目则克隆仓库，在项目目录执行 README 给出的 node tools/render.mjs ice/frost-nova --sheet 示例，生成透明 PNG 帧表及 JSON 描述，再导入 Godot、Unity 或其他支持精灵表的引擎。先从单个效果打通导出和帧率，再批量替换已有占位素材。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目 README 给出的规模为 232 个代码绘制效果，而不是一包无法改动的静态图；支持调色、导出和配套 Claude Code Skill 辅助写新效果。这让特效既能版本管理、复用，也能在原型阶段快速调整视觉统一性；但生成素材仍需要人工检查节奏、对比度与版权依赖。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>独立游戏制作战斗命中、蓄力、天气和拾取反馈。</li>
+    <li>教孩子用改参数的方式理解动画帧与程序绘图的对应关系。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2116523310456689071" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/tweet_video_thumb/HV9msYSagAAy8UP.jpg" target="_blank"><img src="https://pbs.twimg.com/tweet_video_thumb/HV9msYSagAAy8UP.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Weir（Agent 凭据泄漏测试）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用特意植入的测试凭据追踪 Agent 是否把秘密泄漏到模型请求、遥测或其他外部流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/IdoGol24/weir" target="_blank">https://github.com/IdoGol24/weir ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开仓库 README 先看 canary 工作方式，在隔离的演示项目安装文档列出的 weir-scan 与 weir-run 包，不要把真实 API Key 当测试样本。先运行 README 的 sample 演示，确认能看到测试凭据的泄漏或 clean 判定；再建立 canary.toml，把合成凭据放入待测 Agent 可读取的指定位置，运行 weir-run 对受控工作流做捕获和判定。将测试加入 CI 前，先检查哪些流被采集、哪些步骤尚未执行以及真实网络连接是否被隔离；“未检出”不能直接写成绝对安全。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它测试的是秘密在运行过程中去了哪里，不只是扫描代码仓库中像密钥的字符串；README 把模型输入、遥测和其他服务出口列为检查对象，并给出 CI 用法及不完整覆盖的判定。局限同样值得写清：分段、哈希或未覆盖编码方式的泄漏不一定能被命中，适合作为现有密钥治理的补充。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对带浏览器和 Shell 工具的 Agent 做发布前凭据外传回归测试。</li>
+    <li>团队接入新模型中转或遥测组件时，验证敏感字段不会误入日志。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ phpClaw（PHP Agent 运行时）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 PHP 应用里接入具备工具调用循环、记忆、守卫和框架适配器的 Agent 运行时。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/phpclaw-php/phpclaw-monorepo" target="_blank">https://github.com/phpclaw-php/phpclaw-monorepo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>如果现有系统是 Laravel，先到仓库 README 的适配器表核对支持版本，在独立测试分支通过 Composer 安装 phpclaw/phpclaw-laravel；非 Laravel 用户先看 phpclaw.ai/docs 的核心包与相应适配器文档，不要把 Laravel 命令直接套用到 WordPress。配置可用的模型 Provider 和最小权限测试工具，先用只读数据做一次查询任务，观察 Agent 的工具调用和迭代上限。需要向其他客户端暴露工具时，再按 MCP 文档单独安装 phpclaw/phpclaw-mcp 并审查工具权限，切勿直接开放生产数据库写操作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很多 PHP 业务系统只有 HTTP 模型客户端，Agent 迭代、工具执行和安全边界仍需自行拼装；该项目把 ReAct 循环、框架适配、默认守卫及 MCP 入口放在一个仓库。它还明确称不做 RAG/向量库，因此更适合评估已有 PHP 应用的工具化接入，而非取代完整知识检索架构。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 Laravel 内部管理系统增加有权限边界的自然语言运维查询。</li>
+    <li>为既有 PHP 工具注册表增加 MCP 访问入口供编码助手调用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ baoyu-design 的 DeepSeek Harness 插件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在 DeepSeek Harness 内生成可编辑设计画布、幻灯片与仪表板，并把针对页面元素的评论回传给 Agent。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/baoyu-design/tree/main/dsh-plugins" target="_blank">https://github.com/JimLiu/baoyu-design/tree/main/dsh-plugins ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>已有 DeepSeek Harness 的用户先打开插件目录 README，按 Discover 中的插件名选择 dsh-claude-design；希望测试幻灯片或仪表板时，分别选择 dsh-claude-slides 或 dsh-claude-dashboard，而非把它们当作另一个项目重复安装。打开同一个工作区后用 /claude-design 描述一个真实页面需求，让 Agent 写出本地设计文件并在侧栏打开编辑器；在具体元素上标注修改意见，再让 Agent 读取评论迭代。需要给同事展示时，结合 baoyu-design 新增的局域网共享入口，先确认只在受控网络开放并检查本机防火墙和访问范围。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方插件目录列出了设计、幻灯片、设计系统与仪表板四种可编辑工件，评论可直接发给 Agent；这比只输出一次性图片更接近设计评审的“定位元素—提出修改—回看结果”闭环。局域网共享是作者推文所述新能力，不应把本地可编辑误写成默认具备公网协作和细粒度权限管理。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>产品经理在设计画布上逐点评论，再要求 Agent 修改交互细节。</li>
+    <li>团队在局域网内审阅幻灯片与数据仪表板初稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2116623097839149231" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2116615708255698944/img/sCJOmvqZASferJTk.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2116615708255698944/img/sCJOmvqZASferJTk.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2116335546905624577/img/YZkunnQotYxJ2Ju2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2116335546905624577/img/YZkunnQotYxJ2Ju2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 铜匠实验室（高中 3D 科学课件）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>将高中物理、化学、生物和地理实验做成交互式 3D 单页课件，支持网页和离线打开。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/smithjohn78390/tongjiang-lab" target="_blank">https://github.com/smithjohn78390/tongjiang-lab ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>直接访问仓库 README 标出的在线课程入口 https://lab.tongjiang.app，从学科目录选一门实验，按页面引导问题和步骤拖动 3D 对象、调节控制台参数，观察变化并自己写出解释。需要在没有网络的教室使用时，到 GitHub 的 courses 目录下载对应 HTML 文件，在本机双击打开，预先测试投影设备的浏览器兼容性；不要只点 GitHub 的源码预览，源码视图不会运行课程。可把同一实验的参数设为不同值，让学生先预测再对照观察。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>README 明示目前 54 个课程，每个课件是约 1 MB 的自包含 HTML 文件，可用于断网投影与交互白板；这使实验可离线复用、可针对课堂问题反复操作。它是辅助观察的教学材料，不替代真实实验和教师核验；项目也说明并非人教社官方作品。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>高中理化生地课程中演示难以反复搭建的实验过程。</li>
+    <li>学生课后离线复习，以改变参数检验自己对现象的解释。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2116476410105929954" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2116476305122504704/img/EU16bsWyuExHl3SU.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2116476305122504704/img/EU16bsWyuExHl3SU.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ docu.md（AI Markdown 交付排版）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 AI 写出的 Markdown 预览成适合交付的文档，再导出 DOCX、PDF、HTML 或 EPUB。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docu.md/" target="_blank">https://docu.md/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>到官网 Downloads 选择自己的入口，安装 Chrome、Edge、Firefox、Obsidian 或 VS Code 对应的扩展；新手可先拿一份包含标题、长表格、代码块和 Mermaid 图的测试 Markdown，在浏览器扩展中打开检查阅读效果。把 OpenAPI/Swagger YAML 文件也作为样例测试本次 v6 宣传的 Redoc 展示；导出 PDF 和 DOCX 后逐页检查表格分页、中文字体与图表，不要因为预览正常就直接向客户发送。已有多个 Markdown 插件时，先在测试文档中比较导出结果再切换日常流程。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官网列出了跨浏览器及 Obsidian/VS Code 的入口和多格式导出；作者本次公告特别提到 OpenAPI YAML 渲染、源码视图与长表格打印分页处理。对经常由 Agent 产出 Markdown 的团队，最后一公里是交付质量而非生成速度，尤其需要实测中文字体和分页。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把 Agent 生成的项目报告加工成可打印 PDF 和可修改 DOCX。</li>
+    <li>将 OpenAPI 规范快速转为给接口调用方阅读的文档。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xicilion/status/2116460164538855777" target="_blank"><span class="handle">@xicilion</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ bg2x（本地浏览器图像超分）</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在浏览器端处理图片放大，提供多种超分模型，强调图片不上传服务器。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/isixe/bg2x" target="_blank">https://github.com/isixe/bg2x ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开在线体验 https://bg2x.itea.dev，选一张不敏感的小尺寸测试图，分别试用页面列出的 Real-ESRGAN、Swin2SR 或 Real-CUGAN 选项，记录输出尺寸、细节和运行耗时；随后下载处理结果并与原图逐处对比。对于重要原图，先在本地浏览器或按项目 README 的桌面入口离线测试，不要仅凭宣传语推断自己设备的浏览器兼容性或所有模型都能实时运行。还可查看项目 Release，按操作系统安装桌面版本作同图对照。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目 README 将浏览器端推理和隐私优先作为核心，而不是把图片默认交给在线 API；对需要处理照片、插画或素材但不能随意上传的场景很有吸引力。超分是有损推断，模型生成的纹理可能并非真实细节，正式素材需要人工对比且别覆盖原图。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对网页或游戏原型中的低分辨率素材做快速放大测试。</li>
+    <li>在不适合上传的图片上比较不同超分模型的视觉结果。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2116414527919046924" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 国产小模型 OCR 路线出现三家横向对照</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 对 MiniCPM-OCR-1.0、Xiaomi-OCR-0 与 Unlimited-OCR-2 的近期发布进行横向梳理。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>OCR 模型的价值不能只看榜单准确率或参数规模，更该看低清扫描、中文复杂版式、手写、表格结构、长页输入和推理设备约束的组合。该推文提供三款模型的比较线索，但抓取正文截断、未形成同一测试集和设备条件下的独立结果；因此不在此宣称谁是绝对冠军。实际选型可先准备十几份自有授权文档，固定分辨率、语言、表格格式和错误容忍度，再逐一比较识别质量与耗时。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>若小尺寸 OCR 模型能够在本地完成复杂文档识别，票据、试卷与企业知识库的资料入库成本可能下降，也有利于敏感材料不出本地。但落地还涉及版式重建、人审闭环和许可条款；模型发布本身不能保证端到端文档处理效果，更不等于可直接替代人工校对。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2116535521644105826" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HV9x0k6W4AAYNvq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV9x0k6W4AAYNvq?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Apple 智能国行功能预告：以官方上线条件为准</div>
+  <div class="section"><div class="section-label event">事件</div><p>X List 传播 Apple Intelligence 在中国的功能预告，提到翻译、视觉和媒体搜索等方向。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>推文存在更具体的上线日期和合作方说法，但这类地区性可用性消息容易被转述放大；这里仅把它作为待核线索，不将第三方帖子当作已经面向所有国行设备开放的证明。最重要的核验是 Apple 中国新闻稿、兼容设备清单、系统版本及每项功能在本地的实际开通状态；新版 Siri 能力尤其需要和已上线功能分开。企业若涉及数据出境或模型服务，还需核对当地隐私说明和调用路径。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>若相关功能按官方条件落地，手机端语音、翻译、照片检索等入口可能改变消费者对 AI 功能的默认预期，也给应用开发者带来系统级能力竞争。但目前不能按推文推断覆盖率、用户规模或合作方案，更不能把“即将上线”当作已经提供完整生产能力。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2116465214946421207" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Howler：HN 展示的 macOS 菜单栏一次性 AI 问答工具，仓库宣称不保存对话；适合跟踪本地隐私交互，实际数据流仍需审查 <a href="https://news.ycombinator.com/item?id=50290018" target="_blank">→</a></li>
+    <li>Junior：HN 新展示的 Mac 本地助理，拟汇总 GitHub/Slack/Linear 待办并在对外操作前请求批准；安装脚本与授权边界应先审阅 <a href="https://news.ycombinator.com/item?id=50233491" target="_blank">→</a></li>
+    <li>Nakama：HN 讨论的团队 Agent/Skill 共享工作区，值得观察团队可复用经验是否能形成持续治理流程；部署和权限实测待补 <a href="https://news.ycombinator.com/item?id=50287951" target="_blank">→</a></li>
+    <li>Specops：HN 出现的“先写规格再写代码”Agent 工作流，仓库存在但对实际代码质量收益尚无独立验证 <a href="https://news.ycombinator.com/item?id=50262833" target="_blank">→</a></li>
+    <li>Pidgeon：HN 讨论面向 AI Agent 的邮箱入口，邮件权限、隔离与垃圾信息控制等关键环节证据待补 <a href="https://news.ycombinator.com/item?id=50288172" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>MotionBricks：NVIDIA 仓库有动作生成代码与权重入口；适合关注角色动画/机器人仿真，但模型生成动作不等于可直接控制真机 <a href="https://github.com/NVlabs/GR00T-WholeBodyControl/blob/main/motionbricks/README.md" target="_blank">→</a></li>
+    <li>Strata 0.2.9：本地推理项目的 Prefill 更新与低比特模型支持值得在自己的硬件上做基准；推文的最高提速不可推广到所有设备 <a href="https://github.com/Niko1221/Strata/releases" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
