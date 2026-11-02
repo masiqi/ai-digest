@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-02</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-02</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的亮点不是又一个万能聊天框，而是能立即试用的本地处理工具、游戏测试与设计 Skill，以及把 Agent 接入实际工作流的权限边界。X List 抓取到 111 条推文；Agent Reach 多源证据脚本两次超时，未产出证据包，因此下列可上手项目均另行核对官网或 GitHub；HN 线索也仅按原始讨论与项目页保守解读，未核实的效果不作保证。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ BGX：浏览器本地 AI 抠图</div>
+  <div class="section"><div class="section-label event">一句话</div><p>免费开源的背景移除工具，基于 ONNX Runtime Web 在本机浏览器运行多种分割模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://bgx.itea.dev/" target="_blank">https://bgx.itea.dev/ ↗</a></p>
+    <p><a href="https://github.com/isixe/bgx" target="_blank">https://github.com/isixe/bgx ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先打开网页版，选择一张没有敏感信息的测试照片上传到页面中的本地处理流程，按人物、插画或通用照片切换对应模型，预览背景移除后的边缘，再保存透明背景结果；若需要离线环境，去官网桌面端下载页查看安装包，也可以从仓库拉取源码，按 README 安装 pnpm 依赖并启动本地开发服务。首次使用模型可能需要下载权重，不能把“本地推理”理解为首次加载时完全断网可用；隐私敏感素材请在浏览器网络面板自行检查请求。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目同时提供网页版与 Electron 壳，仓库列出 U2Net、ISNet、BRIA RMBG 等模型及不同体积的版本，适合在速度、画质与资源占用之间做对照。与纯云端抠图站相比，本地推理路线让个人图片不必为了抠图上传到服务端，但部署安全仍需自行审查，模型许可也应另行核对。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给课程封面和产品展示图快速生成透明背景人物或物品素材。</li>
+    <li>把同一批插画分别用轻量模型和高分辨率模型处理，比较边缘质量。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2116901472365367756" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Aura Autopilot：让 AI 玩游戏做回归测试</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源游戏测试代理，面向 Unreal、Unity 与 Godot 项目执行游玩探索和错误发现。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ramenvr/autopilot" target="_blank">https://github.com/ramenvr/autopilot ↗</a></p>
+    <p><a href="https://www.tryaura.dev/autopilot" target="_blank">https://www.tryaura.dev/autopilot ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在项目仓库阅读对应游戏引擎的安装说明；如果使用 Unreal Engine 5.8 的 Windows 项目，可从官方 Autopilot 页面跳转 GitHub Releases 下载预编译插件 ZIP，安装进测试项目并在编辑器启用。准备一张关卡和一条明确测试目标，例如“进入菜单后完成一轮购买流程”，再让代理试走并保存重现路径、截图与日志；Unity 或 Godot 不要直接套用 Unreal 插件，先按各自文档配置。测试请用副本或隔离环境，别把游戏存档或生产凭据交给未经审查的自动操作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它把“写出游戏逻辑”与“真的运行、操作并检查结果”连成闭环，适合高频回归而不只是生成测试代码。官网展示的 7 项测试成绩是项目方自己的基准，不应外推为所有游戏都更快、更准；引擎插件兼容性和可重现性仍应由团队在自己的关卡验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>检查新手引导、菜单按钮、任务触发在版本迭代后是否仍能走通。</li>
+    <li>为 Godot 或 Unity 原型设计重复游玩路线，记录卡关和交互异常。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2116856981185278258" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2116191229730082816/img/Uo143D2v4cwjCtdY.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2116191229730082816/img/Uo143D2v4cwjCtdY.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ HackerTube：由 HN 推荐反向构建的视频目录</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Karpathy 用 Hacker News 多年评论中的视频推荐，做了无需登录的 YouTube 发现界面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://hackertube.org/" target="_blank">https://hackertube.org/ ↗</a></p>
+    <p><a href="https://karpathy.bearblog.dev/hacker-tube" target="_blank">https://karpathy.bearblog.dev/hacker-tube ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>访问 HackerTube 网站，先按兴趣主题浏览社区历史推荐的视频，再试试键盘快捷键和站内的个性化推荐，比较同样关键词在普通 YouTube 首页与这里展示的片单差异。作者称站点可导出数据供个人 Agent 再制作自己的目录；若网站暂时无法打开，可以先看作者的项目说明，记录他从 HN 评论筛选、过滤噪声、按主题组织到部署界面的步骤，再选一个小型公开社区用相同方法做实验。本站网页抓取本次未成功，因此实际可用性以你访问结果为准。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>真正有趣的是把社区成员长期讨论和推荐转换成可检索的视频“策展数据”，而非继续用播放量或高点击缩略图决定发现路径。作者原文给出约 6454 个视频、150 个主题以及无账号、本地浏览器会话保存状态的设计；这些是作者披露，不等同于已独立审计整个数据集。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>找长期被工程师社区引用的技术演讲与教程。</li>
+    <li>用公开论坛引用链做小型垂类资源导航站原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/karpathy/status/2116957135661945283" target="_blank"><span class="handle">@karpathy</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWDnuuCaIAA__wa?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HWDnuuCaIAA__wa?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Stageshow：让 Coding Agent 做可信的产品插画</div>
+  <div class="section"><div class="section-label event">一句话</div><p>将产品 UI 静帧、光标演示和布局动效的设计经验封装成可安装 Skill 与 React 示例套件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/benjitaylor/skills" target="_blank">https://github.com/benjitaylor/skills ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在现有 Coding Agent 项目里先运行仓库 README 提供的 npx skills add benjitaylor/skills --skill stageshow，再阅读该 Skill 的使用边界，把一个具体产品情景交给 Agent，比如“做一个文件上传完成状态的营销页 hero 插画”。如果要自己预览示例，可以克隆仓库，进入 stageshow 对应示例目录，按 README 用 Node 20.19 或更新版本安装依赖并运行开发服务；逐一切换动效、手机宽度和 reduced-motion 模式，再拿生成结果与参考实例对照修正。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它并非泛泛的“把页面做漂亮”，而是给出可迁移的组件、金标场景和视觉检查步骤，解决 Agent 常把真实交互画成空洞假 UI 的问题。特别适合产品演示图，而不是直接替代应用的可访问性、数据流或真实业务状态测试；对外发布前仍需核对文案和版权。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为新 SaaS 产品制作落地页的功能演示和短动画。</li>
+    <li>把交互原型转为能暂停、回放、移动端检查的评审素材。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2116690844799361364" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HV__GEqXQAAwMh6?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HV__GEqXQAAwMh6?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2116591037816971264/img/646-9xgMoEXyzL8m?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2116591037816971264/img/646-9xgMoEXyzL8m?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Alma Relay：自建手机遥控 Agent 的加密中继</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Alma 的开源远程访问中继，可部署到 Cloudflare Workers 或 Docker，让手机连接桌面上的 Alma。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yetone/alma-relay" target="_blank">https://github.com/yetone/alma-relay ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认桌面端与手机端都已安装 Alma，尤其检查桌面版本是否至少为仓库安全说明要求的 0.4.329。根据 README 选 Cloudflare Workers 免费套餐或有 HTTPS 域名的 Docker 部署方案；在沙箱或自己的云账号中完成部署后，用 healthz 检查中继可访问，再在桌面 Alma 的“设置 → 远程访问”选择使用自建中继，填入 HTTPS 地址，用手机重新配对。初次只在测试会话中尝试读取状态，不要将本地命令执行权限默认交给远端代理；必要时重置连接码撤销旧设备。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>远程 Agent 的难点并不只是“外网能连”，还包括中继可信边界、端到端加密与密钥撤销。仓库说明中继不落盘内容，默认配对使用 ECDH 与 AES-256-GCM，但这些是项目文档声称；若要接入工作机，应自行审核实现、TLS 和中继配置，尤其注意旧桌面版本对明文请求的防护差异。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>从手机查看家中桌面 Alma 上正在运行的长任务。</li>
+    <li>在自控区域部署中继，比较托管服务与自建线路的可用性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2116992490050109551" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWERbBXaEAAZHyE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HWERbBXaEAAZHyE?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Magpie GitHub OIDC：给 CI 换短期网关密钥</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Magpie 新版本提供 GitHub Actions OIDC 交换短期网关密钥，减少在仓库 secrets 中长期存放网关 key。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yetone/magpie" target="_blank">https://github.com/yetone/magpie ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先安装或更新 Magpie 并在自己的测试仓库核对版本与网关配置，阅读项目 OIDC 用法示例。按作者推文提供的思路，以 magpie gateway-key oidc add --key &lt;id&gt; --repo owner/app 建立只允许指定仓库交换的规则；在测试 Actions workflow 中申请 GitHub OIDC token，再 POST 到网关的 /v1/magpie/keys/oidc 获取短期 key，仅执行一个低风险模型调用。把 workflow 日志中的令牌打印全部关掉，并测试令牌过期、错误仓库和权限范围不符时是否拒绝，而非只看正常请求能否通过。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>把长期凭据变为按仓库身份签发的短期凭据，直接面向 CI 泄漏风险，与普通“多模型代理路由”相比更接近生产可运维能力。真正安全取决于仓库绑定、有效期、可用模型范围以及网关对签名的核验；这里不声称已替你测试这些边界，先在测试仓库验证后再迁移正式流水线。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>GitHub Actions 调用内部模型网关做低权限代码检查。</li>
+    <li>多项目团队逐步清理仓库里长期有效的模型服务密钥。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2116821287624720591" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Digital Human Koubo：照片到口播短片的 Agent Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让 Coding Agent 使用 Renoise 与本地剪辑组件，把授权人物照片和一句需求做成带字幕、配音及包装的口播视频。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/andyhuo520/digital-human-koubo" target="_blank">https://github.com/andyhuo520/digital-human-koubo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在仓库中文 README 查看支持的 Agent 与依赖，准备自己拥有肖像使用权的正面人物照片及一段不含虚假宣传的短文案；配置 Renoise MCP 账户并确认积分报价，再按仓库 Skill 流程创建人物素材、分段生成口型匹配片段，使用 Remotion 选择一种剪辑风格输出测试片。先做极短样例并人工检查口型、音量、字幕、人物肖像和引用素材授权，再考虑长片；生成服务有积分消耗，仓库示例中 27 秒广告消耗 482 Renoise credits，并非免费一键出片。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>开源部分提供的不只是提示词，而是把脚本、人物一致性、分镜、字幕和版式包装编排成可重复的代理工作流，有利于判断成本出在生成还是本地剪辑。但数字人易涉及肖像权和误导性传播，应用前必须获得授权、标注 AI 生成并单独审查第三方模型、Remotion 和素材的许可证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用自有讲师形象做课程章节的短视频预告。</li>
+    <li>在测试广告中比较不同包装样式对信息清晰度的影响。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2116888910609715492" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Filee：拖拽式本地文件转换</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源桌面文件转换器，用拖拽与目标格式选择在本机转换常见文档、图片、音视频和电子书。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/KnifeLemon/Filee" target="_blank">https://github.com/KnifeLemon/Filee ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 GitHub Releases 按操作系统下载对应安装包，不要从第三方镜像拿未经校验的程序；macOS 用户按仓库说明打开 DMG 拖入应用程序，首次启动若被系统阻止，可在“系统设置 → 隐私与安全性”确认来源后再放行。先拿一份无敏感内容的 DOCX、HEIC 和音频测试：把文件拖进应用的转换入口或用右键菜单、快捷键，在界面选择输出格式，检查转换后布局和元数据。批量文档转换前用副本做抽样，特别是复杂表格、字体与嵌入媒体。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>GitHub README 表明它覆盖文档、图片、视频和音频等多类格式，并以本地处理为主要卖点，适合避免把内部文件送到在线转换站。不同平台的拖拽手势可能不一致，README 提到 Linux Wayland 应改用投放区或文件管理器右键菜单；“支持某格式”也不等于复杂排版完全无损，应以测试文件验收。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>批量把培训材料的图片和文档转成统一交付格式。</li>
+    <li>将手机拍摄的 HEIC 测试图转为适合网站上传的格式。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2116770003781587395" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2116769815650336768/img/a2M969XlZziiLjgg.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2116769815650336768/img/a2M969XlZziiLjgg.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 DeepSeek Super-agent 研究原型公开</div>
+  <div class="section"><div class="section-label event">事件</div><p>DeepSeek Harness 团队公开常驻 Agent 的设计与单仓库研究原型，强调消息路由、隔离任务与人工注意力控制。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>X List 将其概括为 Router + Worker；更关键的是阅读官方仓库时要划清“设计方向”和“已实现功能”的界限。README 明确写着这不是正式产品，也不是可直接投产的软件，而且公开版与内部实现和文章描述并不完全一致。已公开的原型监听 GitHub、可选飞书，将获授权的请求转成独立任务，并在需要人参与时通过面板暴露。它说明常驻 Agent 的问题正在从单次推理转向队列、授权、异步恢复与低打扰交付，但不等于任何群消息都应自动执行。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>组织若想让多个 Agent 并行工作，应先建立可撤销权限、事件去重、任务隔离、可追踪的产物和人工验收门槛，再评估吞吐。将原型按“完全自动修 bug 的成品”直接接入生产仓库容易产生误发 PR、越权和审计盲区；当前价值更多是架构参考和测试对象。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2116871144145875173" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWCjFUuaUAAWzE2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HWCjFUuaUAAWzE2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 小模型敏感信息打码测试暴露召回短板</div>
+  <div class="section"><div class="section-label event">事件</div><p>开发者在同一组 42 个应打码值上测试 uie-nano 与 uie-base，并与现有 Guard 管线作对照。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>推文披露 uie-nano 纯模型命中 8/42，uie-base 纯模型命中 9/42；加入规则后分别是 22/42 与 24/42，而其 Guard 对照分别给出 38/42 与 41/42。样本规模很小、阈值和规则配置也影响结果，这只是作者自建数据上的观察，不能推断模型普遍失效。值得注意的是电话号码、邮箱、英文姓名及带空格或连字符的密钥等易出现漏检，说明“只换一个轻量模型”不能替代覆盖面测试与确定性规则。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>在把工单、邮件或检索文本送给外部模型前，企业应使用脱敏测试集测召回与误杀，按类别记录回归，而不是仅依赖模型宣传的 F1。真实生产还要评估多语言、变体和格式化字段，要求失败时阻断或回退；任何转发日志或样本都须先移除真实隐私数据。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/yetone/status/2117017834480083282" target="_blank"><span class="handle">@yetone</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>SpecGuardian：HN 上新出现的形式化规格校验项目，尝试从 FizzBee 规格生成 Go 测试，用在 AI 生成实现的行为验收；当前仅支持单个 Action，成熟度待补 <a href="https://news.ycombinator.com/item?id=50325878" target="_blank">→</a></li>
+    <li>InBox Wall：HN 社区展示本地优先的邮件清洗层，试图在 AI 读邮件前处理隐藏 CSS、Unicode 混淆与提示注入；实际拦截率证据待补 <a href="https://news.ycombinator.com/item?id=50316779" target="_blank">→</a></li>
+    <li>Archwhere：HN 早期架构图协作工具，尝试把 PR 和 Agent 协作放在同一张图上；仓库早期，集成稳定性证据待补 <a href="https://news.ycombinator.com/item?id=50313522" target="_blank">→</a></li>
+    <li>Nonce：HN 上的按问题授权 Agent 访问邮件/日历等资源的产品，主张短期、最小范围通行证；公开站点功能可见，安全实现仍待独立审计 <a href="https://news.ycombinator.com/item?id=50330213" target="_blank">→</a></li>
+    <li>GEORIN：小众软件推文提及面向矿业与能源的本地空间数据治理；本次尚未拿到可信项目文档或可复现步骤，仅保留早期信号、证据待补 <a href="https://x.com/appinn/status/2117041164331200872" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>乔木 SimpleUI：KOReader 定制版提供微信读书入口和可恢复的书籍隐藏；属于已有 Kindle 插件的小范围适配，不等于完整 AI 阅读器 <a href="https://github.com/joeseesun/qiaomu-simpleui" target="_blank">→</a></li>
+    <li>岚叔无限流数字人口播：与上文单照片重新生成路线不同，尝试先制作人物母片素材库、后续复用镜头；成本与口型稳定性尚需逐片验收 <a href="https://github.com/cclank/lanshu-infinite-stream-koubo" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
