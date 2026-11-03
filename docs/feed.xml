@@ -5,8 +5,15 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 02 Nov 2026 00:55:34 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 00:48:39 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/03 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-03.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-03.html</guid>
+      <description>今天最值得动手的不是再换一个聊天模型，而是给 Agent 补上可回滚的配置、跨端入口、真实的权限边界和凭据泄漏检测；小体量开源项目与 HN 早期发布提供了比大厂口号更具体的试验入口。与此同时，Claude 长会话 API 与 Agent 钱包安全研究提醒我们：上下文传输可以变轻，但授权不能只停留在提示词或可被 Agent 读取的邮箱里。</description>
+      <pubDate>2026-11-03T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/02 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-02.html</link>
