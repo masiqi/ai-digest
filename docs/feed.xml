@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 03 Nov 2026 00:48:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 00:56:43 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/04 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-04.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-04.html</guid>
+      <description>今天值得看的是“让 Agent 的动作可验证”：小程序可在浏览器里跑 E2E、企业数据先过语义层、模型回答尝试附可验凭据；同时桌面工具继续缩短从捕获信息到执行任务的距离。FlashProve 仍是有严格边界的研究原型，不等于任何中转商今天就能证明自己卖的是指定模型。本文只选有明确线索的项目；没有把未读取到的成员内容算作无人发帖。
+本期X成员采集不完整：完成0位，部分读取45位，失败0位，未尝试0位；未读到不代表没有发帖。</description>
+      <pubDate>2026-11-04T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/03 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-03.html</link>

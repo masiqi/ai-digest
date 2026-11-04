@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-04</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-04</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得看的是“让 Agent 的动作可验证”：小程序可在浏览器里跑 E2E、企业数据先过语义层、模型回答尝试附可验凭据；同时桌面工具继续缩短从捕获信息到执行任务的距离。FlashProve 仍是有严格边界的研究原型，不等于任何中转商今天就能证明自己卖的是指定模型。本文只选有明确线索的项目；没有把未读取到的成员内容算作无人发帖。
+本期X成员采集不完整：完成0位，部分读取45位，失败0位，未尝试0位；未读到不代表没有发帖。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ wxa-runner：把微信小程序接进浏览器自动化</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用微信官方基础库运行小程序编译产物，配 Chrome DevTools 调试及 Playwright 无头测试。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://open-wxa.github.io/wxa-runner/" target="_blank">https://open-wxa.github.io/wxa-runner/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>已有 mp-weixin 编译目录时运行 npx wxa-runner dev ./dist/dev/mp-weixin；再按项目文档接 Playwright 断言页面状态和请求。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Linux CI 不必安装微信开发者工具就能跑一层回归；但浏览器模拟不能替代真机兼容性测试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给 uni-app/Taro 小程序的登录后列表页和表单提交写 E2E。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2117594873595355388" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWM1UMZX0AAOHVP.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWM1UMZX0AAOHVP.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 乔木闪记 Jot：快捷键把选中内容和截图存进 Obsidian</div>
+  <div class="section"><div class="section-label event">一句话</div><p>macOS 菜单栏工具，把文字、网页来源、截图和文件追加到今日日记或普通 Markdown 文件夹。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/joeseesun/qiaomu-jot/releases/tag/v1.4.0" target="_blank">https://github.com/joeseesun/qiaomu-jot/releases/tag/v1.4.0 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载 v1.4.0 的 Jot.dmg，指定 Obsidian 仓库；⌘⇧J 输入随手记，⌘⇧K 收录当前选中内容，并检查自动附上的来源。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>本机 OCR 和快捷入口降低收集资料的切换成本；首次授权辅助功能要明确确认。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>阅读网页或 PDF 时把摘录连同出处收进每日日记。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2117685311849509160" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWOHiyDaIAAFVxo.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWOHiyDaIAAFVxo.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ NVIDIA Auto Ontology：给企业数据 Agent 加一层业务语义</div>
+  <div class="section"><div class="section-label event">一句话</div><p>从元数据构建可核对的业务词汇和关系，通过 API、MCP 与 Text-to-SQL Agent 提供查询入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/NVIDIA/auto-ontology" target="_blank">https://github.com/NVIDIA/auto-ontology ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>阅读仓库部署和连接器说明，在测试库接入业务元数据；先人工核准指标定义，再用 MCP 查询并核对生成 SQL、结果与出处。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>比让 Agent 直接猜库表关系更可控；项目的准确性仍取决于定义治理和权限配置。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>财务分析里区分收入、净收入与不同业务线的指标口径。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2117622858696507633" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWNOwTjboAAKaU4.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWNOwTjboAAKaU4.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WeVisOne-VL：微信视觉团队开源统一视觉感知模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>2B/4B 模型把目标定位、计数、OCR、分割和抠图纳入统一接口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tencent/WeVisOne-VL" target="_blank">https://github.com/Tencent/WeVisOne-VL ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看仓库任务示例和模型权重要求，在获授权图片上分别测试文字定位和分割输出，手工复核漏检与透明边缘。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>减少多模型流水线拼接；论文和仓库指标是项目方报告，未当成独立实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>电商图片里的商品区域识别与背景抠图原型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2117627401106784739" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWNSvq4bAAAz6PF.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWNSvq4bAAAz6PF.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Strata 0.2.10：低显存本地推理的具体版本更新</div>
+  <div class="section"><div class="section-label event">一句话</div><p>新版本默认选 DFlash2；发布说明报告 8GB 显卡可启动 128K 上下文，但需要把更多负担转到内存。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Niko1221/Strata/releases/tag/v0.2.10" target="_blank">https://github.com/Niko1221/Strata/releases/tag/v0.2.10 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>终端用户执行 strata update，核对应用 0.2.10/引擎 0.1.56；在自己的硬件上比较启动成功率、内存占用和生成速度。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>与近七日已刊的 0.2.9 不同，本次 delta 是 DFlash2 默认策略和 8GB/128K 启动路径；官方测试并非所有设备的保证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>显存紧张但 RAM 充足的本地模型与编程 Agent 试验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2117461089201832420" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWK7o-JW4AAO9oC.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWK7o-JW4AAO9oC.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenMarkdown：人与 Agent 同时编辑本地 Markdown</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开发者发布跨平台编辑器，macOS/Linux 支持和编码 Agent 共编文件；Windows 当前只有编辑器功能。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://openmarkdown.dev" target="_blank">https://openmarkdown.dev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>下载对应系统版本，打开一份测试 .md，先由 Claude Code 或 Codex 修改小段，再在编辑器里核对变更和冲突处理。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>比在终端输出后手动复制回笔记更直接；共编体验和可靠性仍待独立试用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>Agent 起草说明文档，人同步审阅和修订。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2117568313081336123" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ FlashProve：验证模型推理出处的研究原型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Anthropic 发布可让验证方检查回答是否来自某组已承诺权重的密码学原型，并附 CPU 验证路线。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/anthropics/FlashProve/tree/main" target="_blank">https://github.com/anthropics/FlashProve/tree/main ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库限制；仅在受支持的 Linux 环境按文档验证仓库自带示例证明，核对可信渠道提供的承诺 ID、覆盖 token 范围与最终结果，不要直接接生产中转。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>很适合研究模型身份可验证性，但项目注明不维护；验证通过并不能单凭服务商自己给的 ID 证明“就是某正版模型”，也不保证所有回答 token 被覆盖。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>研究如何在受控推理服务上做可审计证明，而非直接解决现有商业中转验真。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2117527237457240113" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWL3w9MbgAE2Nml.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWL3w9MbgAE2Nml.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Apple 开发者预览扩展 Siri 的 App Intents / skills</div>
+  <div class="section"><div class="section-label event">事件</div><p>Apple 公布开发者预览，第三方应用可向新 Siri 提供更多意图、操作和技能能力；仍有系统、语言、地区和测试版限制。
+官方公告：https://developer.apple.com/news/?id=gdk2umrf</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>关键是把应用功能做成可调用的操作，不意味着所有 App 与所有用户已立即可用。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>做 iOS 服务的团队应评估自己的可暴露操作和确认边界，等正式开放再谈普及。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2117762184411517084" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Canva 公布组织调整，1,271 人受影响</div>
+  <div class="section"><div class="section-label event">事件</div><p>Canva CEO 的公开信说明本次重组影响 1,271 人（约 22%），包括调整岗位和要求搬迁者；未明确实际离职人数。
+官方信：https://www.canva.com/newsroom/news/canva-team-update/</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>不能把受影响人数直接写成裁员人数，也不能把公司调整全部归因于 AI 替代。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>产品、平台与增长团队的整合及用工变动值得持续观察。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2117759172125028539" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Cat Wu 确认离开 Anthropic</div>
+  <div class="section"><div class="section-label event">事件</div><p>Cat Wu 本人称上周五是她在 Anthropic 的最后一天，回顾 Claude Code 从内部工具到产品的经历。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>本人未说明离职原因和下一站；其他帖子谈 IPO 或团队变化是猜测，不作事实。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>值得观察 Claude Code 后续产品路线，不能据单人离职推断产品停摆。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2117739064455463086" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/_catwu/status/2117731934340337676" target="_blank"><span class="handle">@_catwu</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>元问桌面 Agent：开发者自荐手机派活、电脑执行与验收闸；目前主要是自述，可靠性待独立测试 <a href="https://x.com/appinn/status/2117522980305506804" target="_blank">→</a></li>
+    <li>DecisionRAG：研究者尝试让决策模型沿文档树导航而不依赖传统首轮检索；论文结论尚需复核 <a href="https://x.com/shao__meng/status/2117415296931901893" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>Code Mode 的“单工具”判断：Philipp Schmid 认为 Agent 倾向用沙箱 exec(code) 串联工具调用；这是作者的架构观点，不是所有 Agent 的既成标准 <a href="https://x.com/shao__meng/status/2117428427380957442" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
