@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 04 Nov 2026 00:56:43 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 00:39:47 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/05 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-05.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-05.html</guid>
+      <description>本期新线索集中在可落地的 Agent 接口：设计工具接入编码助手、开源模型和会议工具给出具体使用入口；同时 OpenAI 扩充 Codex 的代码存储与硬件工程链路。优先看原始发布和实际限制，不把研究自评当独立实测。
+本期X成员采集不完整：完成0位，部分读取29位，失败0位，未尝试16位；未读到不代表没有发帖。晨间采集于06:46因响应错误中止；仅部分成员的originals流被观察，replies/reposts均未尝试，逐流until各不相同，不能认为统一覆盖至07:30。</description>
+      <pubDate>2026-11-05T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/04 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-04.html</link>

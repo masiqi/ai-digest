@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-05</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-05</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>本期新线索集中在可落地的 Agent 接口：设计工具接入编码助手、开源模型和会议工具给出具体使用入口；同时 OpenAI 扩充 Codex 的代码存储与硬件工程链路。优先看原始发布和实际限制，不把研究自评当独立实测。
+本期X成员采集不完整：完成0位，部分读取29位，失败0位，未尝试16位；未读到不代表没有发帖。晨间采集于06:46因响应错误中止；仅部分成员的originals流被观察，replies/reposts均未尝试，逐流until各不相同，不能认为统一覆盖至07:30。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ TemPad Dev 1.0：Figma 设计与 Coding Agent 双向接通</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Chrome 扩展负责查看 Figma 图层，配套本地 MCP 可让 Agent 读设计、写代码及在有权限的文件里改可编辑画布。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ecomfe/tempad-dev" target="_blank">https://github.com/ecomfe/tempad-dev ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>装 Chrome Web Store 上的 TemPad Dev，在 Figma 文件中选图层先检查 CSS 与变量；需要 Agent 时，在 Preferences → Agent integration → MCP access 中按引导配置 Codex 或 Claude Code。Node.js 需 22/24/26；写画布需文件编辑权限，只读文件不要尝试修改。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>设计资产和代码实现可用同一连接反复核对，不必靠截图猜像素；项目 README 给出明确配置与权限边界，本期没有对个人环境实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用现有组件搭设置页，再对比 Figma 渲染与代码实现。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2117969787993440649" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/ecomfe/tempad-dev" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWSKScva8AAkZ77.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWSKScva8AAkZ77.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Cicada 知了：Mac 会议字幕、翻译与实时纪要</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源桌面客户端在 Mac 上从系统音频形成双语字幕、会议记录，并可接云端模型生成结构化纪要。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/wquguru/cicada" target="_blank">https://github.com/wquguru/cicada ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 Releases 下载 1.0.0 DMG，核对提供的校验值后安装；macOS 26+、Apple 芯片限定。先试无 Key 的字幕与翻译，若需实时纪要，再在设置中填自己的 Ling API Key；同声传译还会请求麦克风及虚拟音频设备权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>可给会议结论回溯到双语原话；README 说明语音识别在本机，但部分翻译/纪要文本会联网，不能把它说成完全离线。首次公开版，不冒称稳定性已实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>跨国会议同步字幕与可回溯的待办记录。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2117832419579773334" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/wquguru/cicada" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/wquguru/cicada/releases/latest" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kimi K3.1 Pro：开放权重可下载，API 可试</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Moonshot 发布多模态 MoE 模型权重和调用文档，模型卡标注百万 token 上下文及推理参数。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" target="_blank">https://huggingface.co/moonshotai/Kimi-K3.1-Pro ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读模型卡中的 License 与部署要求；轻量试验可按官方 Quickstart 选择 kimi-k3.1-pro API，对自己的长文检索和代码任务建立对照，不要在小设备上直接下载庞大权重。模型卡列总参数 2.8T，部署并非一般笔记本任务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>从仅有在线接口转为可取得权重，便于有足够资源的团队做受控评估；表格性能是发布方报告，不当作跨模型独立结论。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在固定题集里对照长上下文检索和 Agent 工具调用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2118011775849476465" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole CLI Linux 版 V0.4.0：清理工具扩展到 Linux</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mole 已有 Mac/Windows 入口，这次新增独立 Linux 分支与 V0.4.0-linux 发布页。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole/releases/tag/V0.4.0-linux" target="_blank">https://github.com/tw93/Mole/releases/tag/V0.4.0-linux ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读 Linux 分支 README 按发行版条件安装，执行 mo clean --dry-run 或 mo uninstall --dry-run 看预览，再自行确认要清理的路径。README 明确 Arch/Omarchy 与 Debian/Ubuntu 的包管理支持不同，真正删改前留备份。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>不是重复介绍 Mac 版；新 delta 是 Linux 版真实发布以及独立包管理和安全预览说明。发布页与 Linux 分支可核对，未在本机运行清理。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>清理 Linux 开发机里老旧 Agent 缓存与不用的安装包。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2117978672095514999" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/tw93/Mole/releases/tag/V0.4.0-linux" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/tw93/Mole/tree/linux" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWQ31JDasAAlrAw.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWQ31JDasAAlrAw.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 妙言 MiaoYan：把本地 Markdown 文件交给 CLI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>原生 Markdown 客户端的作者介绍移动端和 miao CLI，便于 Agent 读取、搜索及创建纯文本笔记。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://miaoyan.app" target="_blank">https://miaoyan.app ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先核对官网一次性购买与系统要求，安装后把测试笔记放在可回滚的文件夹，依 README 用 miao list、miao search、miao cat 查看，再让 Agent 仅对测试笔记调用 miao new；不要给真实笔记库未审的批量写权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>文件仍是可迁移的 .md，CLI 让自动化不必依赖模拟点击；官方说明 Mac/iPhone/iPad 同一购买，但不是免费应用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在本地笔记文件夹内做可审计的 Agent 检索与写作。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2117903730494591205" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://miaoyan.app" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/tw93/MiaoYan" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWRFgStawAAqnuK.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWRFgStawAAqnuK.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HWRFmVjaUAEMaH7.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWRFmVjaUAEMaH7.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HWRFoo1bgAAe2gY.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWRFoo1bgAAe2gY.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HWRFrLuboAAShBb.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWRFrLuboAAShBb.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LeVJEPA-1.5-Large：视频表征模型权重与用例</div>
+  <div class="section"><div class="section-label event">一句话</div><p>公开的视频编码器模型卡给出权重、16 帧视频输入和特征提取示例，适合研究视频检索表征。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/galilai-group/LeVJEPA-1.5-Large" target="_blank">https://huggingface.co/galilai-group/LeVJEPA-1.5-Large ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看模型卡中输入规范，依示例用 AutoModel 加载并把16帧裁成 224×224；trust_remote_code=True 会执行模型侧代码，应在隔离环境审查代码后再试，勿在有密钥环境中直接加载。把输出向量与现有视频标签比较，不把编码器当成视频生成器。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>模型卡报告 22 数据集均分78.76，代码仓库提供研究复现路线；这是作者自报基准，不意味着对任意真实视频最优。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>对短视频片段做相似内容聚类、检索实验。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2117941477825479148" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/galilai-group/LeVJEPA-1.5-Large" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/MLO-lab/LeVJEPA" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWRwiy0boAAUEjh.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWRwiy0boAAUEjh.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 宣布拟收购 Pierre，扩充 Codex 代码协作</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 官方公告拟收购 Pierre Computer Company；其 Trees、Diffs 库已用于 Codex，Code Storage 业务目前仍将继续服务现有客户；交割尚需满足条件。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>代码 Agent 的瓶颈不只在生成，还在并行分支、查看差异与评审；这是补齐开发工作流基础设施的动作，并非已完成收购。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>Codex 平台可能进一步整合 Git 历史与代码评审，但后续功能与交割进度要看官方公告。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2118008104227070262" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 把模型试验延伸至 CAD、PCB 与制造约束</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 披露团队用 GPT-6 Astra 设计实验设备原型，并与赛车队和马自达探索扫描转CAD及车辆空气动力学流程。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>文章明确原型进入制造前仍需多轮人工评审，公差、装配与工厂限制是现存短板；BenchCAD数字是其自测，不代表已可无监督量产。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>工程 Agent 机会从写代码延伸到实体设计，但重要图纸与安全约束仍需专业工程师审核。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2117791043693551968" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://openai.com/index/accelerating-engineering-for-the-physical-world/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWPnsY3bMAApN_J.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWPnsY3bMAApN_J.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 MIT 第七讲 Outsourced Data：先审采集与标签规则</div>
+  <div class="section"><div class="section-label event">事件</div><p>MIT Agency with AI 课程公开第七讲讲义，涵盖 C4 词表过滤、重复样本、部署分布偏移和 Agent 抓取网页漏掉赞助内容的课堂案例。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>讲义以原实验说明“结构校验通过”不等于记录完整；采什么、如何分割测试集、谁定义字段内容需可追溯。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>构建企业知识库和模型评测集时，可先写清人口范围、采集规则及抽样人工核对，避免把干净格式误认成正确语义。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2117976436577550546" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://slides.com/shensquared/agencyai-fa26-lec07" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWSQVkCa8AAKnE_.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWSQVkCa8AAKnE_.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 fal 公布 E、F 轮融资，继续投向生成媒体基础设施</div>
+  <div class="section"><div class="section-label event">事件</div><p>fal 官方博客宣布今年早些时候完成由红杉领投的 E 轮，并同时公布由 Bessemer 领投的 F 轮，NVIDIA 为战略投资者。此次读到的博客正文未列出融资总额或估值。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>融资指向推理能力与模型后训练投入；社媒帖中的16.5亿美元及160亿美元估值，未经本次所读官方正文确认，故不写作事实。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>图像、视频、音频模型分发平台竞争或更重视规模与服务可靠性。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2118005237646791031" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://fal.ai/blog/series-e-f" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Playwright 官方澄清：测试浏览器与稳定浏览器要分场景</div>
+  <div class="section"><div class="section-label event">事件</div><p>Playwright 官方账号说明 npm 包本身不附带浏览器；测试运行器安装固定版本 Chrome for Testing，而 MCP/CLI 使用本机稳定 Chrome 或 Edge。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>固定测试版本方便复现，但可能落后最新安全修复且默认关闭沙箱；处理不可信页面时官方建议用稳定版 Chrome 并启用沙箱。这里转述的是官方安全提醒，非本机漏洞扫描。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>给浏览器 Agent 制定威胁模型时区分本地可信端到端测试与不可信网页采集。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2117811571674214571" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/playwrightweb/status/2117638981454291252" target="_blank"><span class="handle">@playwrightweb</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWP6X-jacAA9Ds-.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWP6X-jacAA9Ds-.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>ScientistTwo 自动科研框架（研究自评）：项目主页声称在107道研究题中86道超越基线，评审也主要依赖自动评分；值得跟踪外部复现，目前不当作可直接部署的科学家。 <a href="https://x.com/Gorden_Sun/status/2117881047073607825" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>企业 Agent 能力“上翻”观点：作者主张把底层服务显式暴露为 MCP、CLI、Skills 再组合交付结果；按结果付费是其预测，尚非已证实的行业转型。 <a href="https://x.com/Barret_China/status/2117798934718665118" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
