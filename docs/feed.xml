@@ -5,8 +5,19 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 05 Nov 2026 00:39:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 02:10:10 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/06 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-06.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-06.html</guid>
+      <description>今天关注四种可以具体评估的入口：Claude 的只读银行账户问答、OpenAI 新图像模型的 GIF/SVG 输出，把闲置安卓屏变成 Agent 显示终端的 AiCast，以及面向外语视频学习的 uTranslate Live。研发加速和多 Agent 协作研究则提醒：能力变强之外，还要核对证据、权限和接手后的错误。工具均核对公开文档，未冒充实际安装、银行接入或模型实测。
+
+本期X成员采集不完整：完成0位，部分读取45位，失败0位，未尝试0位；未读到不代表没有发帖。
+
+采集于北京时间06:30开始、07:08停止。原推流13位完整、32位部分；回复流1位完整、24位部分、20位未尝试；转帖流4...</description>
+      <pubDate>2026-11-06T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/05 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-05.html</link>

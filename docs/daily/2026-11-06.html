@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-06</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-06</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天关注四种可以具体评估的入口：Claude 的只读银行账户问答、OpenAI 新图像模型的 GIF/SVG 输出，把闲置安卓屏变成 Agent 显示终端的 AiCast，以及面向外语视频学习的 uTranslate Live。研发加速和多 Agent 协作研究则提醒：能力变强之外，还要核对证据、权限和接手后的错误。工具均核对公开文档，未冒充实际安装、银行接入或模型实测。
+
+本期X成员采集不完整：完成0位，部分读取45位，失败0位，未尝试0位；未读到不代表没有发帖。
+
+采集于北京时间06:30开始、07:08停止。原推流13位完整、32位部分；回复流1位完整、24位部分、20位未尝试；转帖流45位均未尝试。155个已保存响应均为HTTP200，最后一个返回剩余额度为0，采集主动停止。本版复用当日产物，没有重采X。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Personal Finance：银行账户只读问答，先看权限和地区</div>
+  <div class="section"><div class="section-label event">一句话</div><p>连接自己选择的账户余额与交易记录，查询支出、订阅和账单；美国地区逐步开放的测试版，不是让 Agent 替你管钱。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://claude.com/resources/articles/introducing-personal-finance-in-claude" target="_blank">https://claude.com/resources/articles/introducing-personal-finance-in-claude ↗</a></p>
+    <p><a href="https://support.claude.com/en/articles/18185620-use-personal-finance-with-claude" target="_blank">https://support.claude.com/en/articles/18185620-use-personal-finance-with-claude ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>仅适合美国 Pro、Max、Ultra 个人订阅用户，Free、Team、Enterprise 暂不支持，符合条件也未必已开放。侧栏出现 Personal Finance 后，从一个账户开始，经 Plaid 页面自行登录银行并选择共享账户，再问“上个月订阅花了多少”，核对构成数字的交易。不要把银行密码交给聊天窗口，也不要绕过地区限制。本文仅核对官方介绍和帮助文档，没有实际绑定账户。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>读权限和操作权限被明确分开。Claude 能读银行名称、账户名称与类型、末四位、余额和信用额度，以及最长24个月交易；不能转账、管理或投资资金。投资、贷款等账户只读余额和额度，不等于能读到持仓、交易、利率或合同条款。目前也不能在定时任务、Cowork 或 Claude Code 中调用这些账户。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>复查重复扣款、订阅和月度现金流，先列出交易，再与银行App或账单核对；余额可能滞后一两天，同一账户重复连接可能重复计数，不能单独据此作投资或借贷决定。</li>
+    <li>Personal Finance hub 内的对话不用于训练，hub 外按个人隐私设置处理。解绑停止读取，不会自动删除旧聊天和 Artifact；共享聊天或 Artifact 可能暴露财务数字，重要财务决定仍应咨询持牌专业人士。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2118455489423905097" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://claude.com/resources/articles/introducing-personal-finance-in-claude" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenAI Images 2.6：把 GIF 与 SVG 输出纳入图像工作流</div>
+  <div class="section"><div class="section-label event">一句话</div><p>新图像模型提供 Flare、Sunburst 两种选择，开发者可直接请求动画 GIF 和静态 SVG；先区分“生成”和“编辑”端点的支持范围。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://openai.com/index/introducing-images-2-6/" target="_blank">https://openai.com/index/introducing-images-2-6/ ↗</a></p>
+    <p><a href="https://developers.openai.com/api/docs/guides/image-generation#gpt-image-26" target="_blank">https://developers.openai.com/api/docs/guides/image-generation#gpt-image-26 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>普通用户可在 ChatGPT 或 Codex 先试一个有权使用的角色和简短循环动作，再检查实际导出文件。开发者按文档在 POST /v1/images/generations 中选择 gpt-image-2.6-flare 或 gpt-image-2.6-sunburst，显式指定 output_format 为 gif 或 svg；GIF 可设 frame_count 和 frame_duration_ms，返回的 b64_json 解码后保存对应文件。SVG 要设 n=1。这是文档核验步骤，本文没有调用收费接口或生成样片。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>GIF 返回的是成品动画，不必把公告里的精灵表示例误当成唯一交付形式；SVG 返回可编辑的静态矢量内容。两种格式都不支持图像编辑端点，也不支持流式输出。complexity 控制规划投入，与 quality 分开；缺省为 high，多元素场景可比较不同档位，而不是一律拉满。官方称整体生成提速50%，这是厂商发布口径，不是本报同机测速，也不承诺角色连续编辑绝不走样。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为品牌吉祥物或自有角色做短循环 GIF，逐帧检查肢体、文字、首尾衔接，再放进界面或社交素材。</li>
+    <li>为网站图标、插画生成 SVG，检查路径、颜色和缩放效果后再交付；不要把静态SVG当作含脚本、外部资源的交互网页，也不要把生成结果当作无须人工审阅的成品。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2118164256093045124" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://openai.com/index/introducing-images-2-6/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AiCast：把闲置安卓屏变成局域网 Agent 面板</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Agent 生成适配屏幕的 HTML，安卓手机、平板或电视负责显示和回传交互；它不是屏幕镜像，也不是远程控制整台设备。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/hamoyy/AiCast" target="_blank">https://github.com/hamoyy/AiCast ↗</a></p>
+    <p><a href="https://aicast.lvchen.fun" target="_blank">https://aicast.lvchen.fun ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Android 7.0+ 的备用设备，与电脑接入可信局域网。从仓库 Releases 获取设备端应用，先审查仓库 skill/SKILL.md 再决定是否安装技能；电脑侧 CLI 需要 Node 18+。按 README 依次执行 node skill/bin/aicast discover、node skill/bin/aicast info &lt;dev&gt;，先看设备名、尺寸、触摸/遥控和 WebView 版本；准备不含私密信息的 page.html，再运行 node skill/bin/aicast render &lt;dev&gt; --html-file page.html --wake。最后在屏幕上核对显示与勾选回传，不把 CLI 成功等同于肉眼可用。本文核对README、官网及技能说明，未安装APK或连接实机。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>同一条需求可以按旧手机、平板、电视分别排版，Agent 不必一直占着主聊天窗口。项目采用 Apache-2.0；设备传输走局域网，但生成页面的模型与外链资源仍可能联网，不能把“无云端投送”写成“整个AI流程不出网”。公开模式允许局域网任意 Agent 投送，私密屏应选认证模式，不暴露端口到公网；关闭投送总开关后仍可发现设备，但应拒收内容。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>把无敏感信息的作业清单、生字卡或家庭待办放到备用LCD屏上，逐项勾选；OLED长期常亮有烧屏风险。</li>
+    <li>把系统状态或日报摘要做成大字号电视面板。旧 WebView 可能不支持新CSS/JS，需要按设备画像降级；定时内容由现有Agent任务负责，App本身不保证自动汇总新闻。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2118233983557218317" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/hamoyy/AiCast" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ uTranslate Live：外语视频字幕、定位问答与学习笔记</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Chrome 扩展把双语字幕、字幕上下文问答与历史导出放在同一侧栏；免账号不等于离线或没有云端记录。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://utlive.utranslate.net/" target="_blank">https://utlive.utranslate.net/ ↗</a></p>
+    <p><a href="https://chromewebstore.google.com/detail/utranslate-live/henjbgninacclibkcdogfbmhipddelln" target="_blank">https://chromewebstore.google.com/detail/utranslate-live/henjbgninacclibkcdogfbmhipddelln ↗</a></p>
+    <p><a href="https://utlive.utranslate.net/privacy" target="_blank">https://utlive.utranslate.net/privacy ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网进入 Chrome Web Store 安装，先打开一段公开、无隐私的外语课程视频，点工具栏图标，阅读数据使用说明后选择目标语言并开启字幕；有现成字幕时使用字幕，否则按播放器条件尝试实时识别。打开侧栏问一个具体术语，检查回答引用的字幕；播放器支持时可跳回对应时间点。最后导出一小段 SRT、纯文本或带摘要的 Markdown，核对时间戳、术语和原句。本文未安装实测，不承诺所有站点兼容；受保护内容、受限页面及部分播放器可能不可用，实际额度和收费按当前服务说明确认，不作永久免费承诺。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>相比单纯悬浮翻译，它把“看不懂的句子—追问—回到原字幕—保存学习材料”串起来，可按标题、原文、译文或摘要搜索设备上的历史。官网当前显示2.1.0，商店介绍仍有2.0.0小标题，本文不把动态版本号当首发证据，也不据一条评分断言准确率。与最近已刊的桌面系统音频字幕工具不同，这里聚焦Chrome网页视频的字幕定位与复习链条。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>跟看公开技术课，查术语后回听对应句子，再导出可人工校对的双语复习笔记；识别、翻译与摘要都可能延迟或出错，重要引用必须回到视频核对。</li>
+    <li>先读隐私政策再决定材料范围：音频、字幕、问题及必要上下文会发往云端，同意后还会上传页面地址/标题、AI结果和使用记录。运营方承诺相关云端内容最多留存30天、不用于其模型训练，这是政策声明而非独立审计。本地删历史不会删掉此前云端记录，隐身模式也不免除云处理；不要用未获授权的内部课程、敏感会议或学生个人信息测试。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2118173657008590902" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://utlive.utranslate.net/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 METR评估Anthropic研发加速：约两倍是高不确定性判断</div>
+  <div class="section"><div class="section-label event">事件</div><p>METR于11月5日公布评估，认为截至2026年10月，Anthropic在目标明确任务上的模型能力进步速度大约是2024年3月至2025年10月的两倍；真实值接近1.3倍或3倍都不意外。公开的AECI趋势估计为1.9倍，95%置信区间1.5—2.8倍。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>能力指数增速、AI造成的因果贡献、员工个人生产率是三件事，不能互相替换。METR认为当前加速的大部分可能与AI参与研发有关，但这是综合证据后的主观判断，不是证明“每位员工效率翻倍”的随机实验；员工自评也不能直接换算成公司整体研发速度。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>更快的能力进步会压缩评估和防护时间；同样重要的是证据可公开多少。Anthropic删去了METR认为最具信息量的大部分证据，理由是避免披露能让其他开发者加速的机密。公开读者无法独立检查所有关键材料，应把“出现加速信号”与“归因已坐实、未来没有瓶颈”分开。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2118466539510960161" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 协作智力基准：单模型会做题，不代表多Agent里能坚持正确判断</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究者发布 Collaborative Intelligence，将模型放入独自完成任务、正常团队协作、有队友制造问题三种情境；只有模型独自能解的任务才计入协作分。官网介绍覆盖八个维度，合计240个场景，其中80个保留测试。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>可操作的启发不是再排总榜，而是分别检查是否追问缺失信息、主动补位、在同伴施压时放弃团队更好的方案，以及接手已有会话时是否保留前一个Agent的作弊改动。研究者的受控结果不等于自己工作流的表现，模型说“看到了问题”也不代表已经修复。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>多Agent选型还需要会话接管、冲突、错误继承和人工审批的回归用例。原始转述讨论首发结果，当前官网已列v4.0.0，增加每题三次运行、双评审和冲突部分得分；本文不混用旧版最高分与新版动态榜单，也没有独立复现实验。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2118354048554598668" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://arxiv.org/abs/2611.02633" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://zou-group.github.io/collaborative-intelligence" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWXnvN7bwAA3fjf.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWXnvN7bwAA3fjf.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>X Island：开发者自荐把Claude Code等编码Agent的权限请求放到MacBook刘海区域，减少切窗口；客户端闭源、尚未做Apple公证，未实测授权参数展示、拒绝可靠性及会话隔离，安全证据待补，不把“更快批准”当“更安全”，也不建议盲目绕过系统保护。 <a href="https://x.com/appinn/status/2118374890428358839" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
