@@ -5,8 +5,19 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 06 Nov 2026 02:10:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 03:57:24 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/09 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-09.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-09.html</guid>
+      <description>这期补刊先把 Agent 的“输出”变成可核对的证据：代码审计要有人独立驳证，视频拆解要区分测量与推断，程序化建模要检查导出的几何结构，内容溯源则不能把“未检出”当作真人证明。另一条主线是跨会话记忆：保留原始记录、事后纠错和限制并发写入，比不加选择地积累笔记更重要。下列工具仅核对公开项目文档与官方说明，未安装、未上传样本，也未调用收费模型接口。
+
+本期X成员采集不完整：完成0位，部分读取45位，失败0位，未尝试0位；未读到不代表没有发帖。
+
+本版复用11月9日晨间产物，不重采X。北京时间06:30开始，07:07因限流停止；原推流13位完整、32位部分，回复流1位完整、24位部分、20位未尝试...</description>
+      <pubDate>2026-11-09T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/06 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-06.html</link>

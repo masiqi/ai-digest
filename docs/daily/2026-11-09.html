@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-09</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-09</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>这期补刊先把 Agent 的“输出”变成可核对的证据：代码审计要有人独立驳证，视频拆解要区分测量与推断，程序化建模要检查导出的几何结构，内容溯源则不能把“未检出”当作真人证明。另一条主线是跨会话记忆：保留原始记录、事后纠错和限制并发写入，比不加选择地积累笔记更重要。下列工具仅核对公开项目文档与官方说明，未安装、未上传样本，也未调用收费模型接口。
+
+本期X成员采集不完整：完成0位，部分读取45位，失败0位，未尝试0位；未读到不代表没有发帖。
+
+本版复用11月9日晨间产物，不重采X。北京时间06:30开始，07:07因限流停止；原推流13位完整、32位部分，回复流1位完整、24位部分、20位未尝试，转帖流均未尝试。各流窗口按实际观察水位记录，不声称统一覆盖至07:30。采到的重叠窗口材料包含此前数日内容，本文不把采集日期当项目首发日期，也不补造11月7日、8日缺刊。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Cloudflare security-audit-skill：让发现漏洞与验证漏洞分开</div>
+  <div class="section"><div class="section-label event">一句话</div><p>给支持工具和并行子代理的编码助手增加六阶段审计流程，用覆盖账本、独立复核和结构化记录替代“看完代码说安全”。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/cloudflare/security-audit-skill" target="_blank">https://github.com/cloudflare/security-audit-skill ↗</a></p>
+    <p><a href="https://blog.cloudflare.com/build-your-own-vulnerability-harness" target="_blank">https://blog.cloudflare.com/build-your-own-vulnerability-harness ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读README和技能文件，确认自己有权审计目标仓库，准备Node.js运行零依赖验证器；在隔离测试副本上按README的Skills CLI路线安装，再明确指定审计对象、输出目录和预算，请求“security audit this codebase”。先核对architecture.md与coverage-ledger.json是否真的列出输入面、信任边界和未覆盖项，再阅读findings.json中的证据路径，不要只收最终摘要。本报未安装此技能或执行目标代码。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>候选漏洞要交给新的验证者尝试推翻，最终记录还需独立回源码核验。confirmed要求完整源码链路与有限定条件的观察结果；needs_validation要写清缺失事实，不给严重性；rejected也保留驳回依据。重复运行可接着账本补漏，但这不等于自动审计完备或替代专业评审。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在发布前核对AI生成服务的鉴权、输入处理和密钥边界，要求每项问题都能对应源码、前提与结果。</li>
+    <li>必须执行目标构建、测试或浏览器时，先有操作系统级沙箱、禁外网、清洗后的环境变量、资源上限和受限写目录；缺这些条件就保留待验证，不能让“审计工具”本身接触真实凭据或生产系统。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2119441489524904147" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/cloudflare/security-audit-skill" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ rea-video：先拆镜头与证据，再决定如何重做</div>
+  <div class="section"><div class="section-label event">一句话</div><p>将视频逐镜拆成实拍、生成、代码动效或录屏等路线，交付带依据的报告与制作方案，不是找回原始剪辑工程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JuneYaooo/rea-video" target="_blank">https://github.com/JuneYaooo/rea-video ↗</a></p>
+    <p><a href="https://github.com/JuneYaooo/rea-video/blob/main/docs/cli.md" target="_blank">https://github.com/JuneYaooo/rea-video/blob/main/docs/cli.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备Python 3.10以上和ffmpeg，先读仓库安装与CLI文档，再用一段自己有权处理的短片做测试。按文档运行decompose，核对breakdown.json、report.html和storyboard.jpg；不接多模态服务时先看本地测量与低置信镜头，再用review生成逐镜复核任务，把人工或Agent看图结论并回报告。首次可能下载人声分离模型，“工具本地运行”不等于首次初始化不用联网。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>帧率、噪点、字幕、切点与音轨是测量线索，制作方式和反推提示词仍有推断成分。README的小样本自评中，平台转码视频只用工具的结果为88.6%，不能照转述写成对任意视频都超过98%。加多模态模型可补判断，但会向所选服务发送素材，并按该服务计费；本报没有复现准确率或耗时。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将自有课程宣传片分成需要重拍、生成和代码制作的部分，先审阅报告与素材清单，再决定成本；不要直接把别人的画面、音乐、角色或肖像搬来使用。</li>
+    <li>需要重做时先看当前实现边界：AI镜头可另接capsule-cinema，代码层仍主要给文字轨与版式，不会自动交付完整Remotion工程；自动质量打分未完成，拼回视频也要人工对照。收费生成须另行确认预算。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2119311344260583683" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/JuneYaooo/rea-video" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWlOaNFaoAAVDjz.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWlOaNFaoAAVDjz.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ sand3d：让模型用具名零件编写3D装配</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于Blender的bpy，用短Python程序定义形状、零件、关节和装配，再按用途导出模型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Sandflow-ai/sand3d" target="_blank">https://github.com/Sandflow-ai/sand3d ↗</a></p>
+    <p><a href="https://sand3d.sandflow.ai/quickstart.html" target="_blank">https://sand3d.sandflow.ai/quickstart.html ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先核对Python与bpy兼容性：README推荐Python 3.13，也支持3.11；3.12没有bpy wheel，Intel Mac需走3.11路线。按quickstart在独立环境安装，先选支架或小门等简单例子，让Agent读取docs/api.md生成短程序，再查看零件名称、孔位、尺寸与关节范围；导出GLB后到查看器核对，不把程序正常退出当作模型合格。本报未安装或渲染样例。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它提供命名零件、面和关节的表达方式，减少模型手算坐标；这与单图猜测背面的3D生成不同，更适合可读、可修改的程序化装配。GLB可带网格、材质及节点中的关节信息，URDF表达静止结构和关节限制，USDA承载USD树；OBJ/STL主要是当前姿态的网格，不能假定各种导出格式都保留完整运动语义。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为游戏或教学演示先做能开门、滑动抽屉的概念模型，再逐件检查运动与穿模；导出长度以米表示，要防单位误读。</li>
+    <li>为机器人仿真准备几何原型时，另行验证碰撞、惯性、装配公差和仿真环境要求。库代码是Apache-2.0，README所列数据集是CC BY 4.0，应分别核对；“10万组件”未在本次资料中独立确认，不作为选用依据。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2119251746207977952" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Sandflow-ai/sand3d" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWkYOL8akAAS44u.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWkYOL8akAAS44u.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenAI Verify：检查图片和音频的来源信号，不鉴定真假</div>
+  <div class="section"><div class="section-label event">一句话</div><p>官方网页与API检查受支持的OpenAI内容溯源信号，包括C2PA元数据和SynthID水印。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://openai.com/zh-Hans-CN/research/verify/" target="_blank">https://openai.com/zh-Hans-CN/research/verify/ ↗</a></p>
+    <p><a href="https://developers.openai.com/api/docs/guides/content-provenance" target="_blank">https://developers.openai.com/api/docs/guides/content-provenance ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>普通用户可到官方页面，先选自己有权上传的一张图片或一段非敏感音频，每次只提交一个文件，分别阅读检测出的信号。尽量用原文件而非截图、裁剪或转格式版本；网页建议音频用10至60秒片段。开发者可先读POST /v1/content_provenance_checks文档，检查组织访问资格、格式和速率上限，再决定接入，不把文档示例当成已成功调用。本报未上传样本或请求API。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>C2PA提供签名来源信息但可能被剥离，SynthID是媒体中的水印但也会受修改影响。检出意味着存在特定受支持信号，不会告诉你完整修改史、原提示词或作者身份，也不能判定内容是否误导。未检出更不能证明真人制作：旧模型、元数据丢失、信号损坏或其他公司的生成内容都可能没有结果。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>在媒体审稿或素材入库时，把检测结果、原文件出处和人工核查一起留档；不能用它单独作指控、封禁或真实性裁决。</li>
+    <li>接API时逐项读取results：图片可有C2PA和SynthID结果，音频是SynthID；没有通用的顶层“真假”字段。公开网页目前不支持文本验证，文本API需申请特定访问。上传涉及云端处理；官方称网页上传不存储、不用于训练（法律另有规定除外），这是政策声明而非本报独立审计。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2119403952777355715" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://openai.com/zh-Hans-CN/research/verify/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWmiClnbsAACraM.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWmiClnbsAACraM.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Technical Documentation Freshness Checker：先找容易过期的说法，再逐条核对</div>
+  <div class="section"><div class="section-label event">一句话</div><p>将技术PDF中的版本、接口和依赖说明抽成待核事项，用当前网页证据生成三态结果，保留原句和来源，而不是自动重写整份文档。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Sumanth077/Hands-On-AI-Engineering/tree/main/ai_agents/technical_documentation_freshness_checker" target="_blank">https://github.com/Sumanth077/Hands-On-AI-Engineering/tree/main/ai_agents/technical_documentation_freshness_checker ↗</a></p>
+    <p><a href="https://docs.parallel.ai/decisions/decisions-quickstart" target="_blank">https://docs.parallel.ai/decisions/decisions-quickstart ↗</a></p>
+    <p><a href="https://landing.ai/pricing" target="_blank">https://landing.ai/pricing ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备Python 3.10以上与uv，在独立目录读取项目README，运行uv sync --group dev，按.env.example配置VISION_AGENT_API_KEY与PARALLEL_API_KEY，再用uv run streamlit run app.py启动。先选自己有权外发的非敏感旧技术PDF，点击Check document freshness；逐条打开Document evidence和Live web evidence，确认原句与当前官方资料真的在说同一功能。本报只读了源码和文档，未安装、上传PDF或调用两个服务。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>ADE先解析PDF并抽取容易过期的技术说法，代码去重后默认最多检查25条（MAX_CLAIMS可配置），不是整份文件全量事实核查。Parallel返回CURRENT、OUTDATED或NEEDS REVIEW；作者推文曾写VALID，当前实现用CURRENT。网络调用失败会进入待复核；页面无网页引用时也明确要求人工复核，不应因显示绿色就自动改正式文档。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>检查迁移手册里的旧路由、模型名称和安装版本，把“确实被替代”与“新文档只讲另一个功能”分开。README的旧OpenAI文档示例为12条中7条过时、1条仍有效、4条需复核，是作者演示，不是本报复现或准确率评测；仓库自带测试只覆盖本地去重和条数上限，不验证外部证据判断。</li>
+    <li>私有技术文档先确认数据授权：整份PDF交LandingAI ADE，抽取后的说法、原句和上下文再交Parallel；Streamlit本地缓存抽取结果20分钟，不等于云端零留存。ADE按credits计费，零数据保留需相应方案并启用；Parallel API也需核对账户费用与限额，不能把开源界面说成免费、离线或零风险。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2118857079427649699" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Sumanth077/Hands-On-AI-Engineering/tree/main/ai_agents/technical_documentation_freshness_checker" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWexR4qbEAA-3Q3.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWexR4qbEAA-3Q3.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic agent memory：跨会话笔记也需要纠错与单写者</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic文章讨论如何把原始会话、工作笔记、整理后的知识结构与开局加载内容配合使用。这里的记忆是以后能再次读取的跨会话上下文，不包括改权重、单次上下文学习或普通会话压缩。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>dreaming会回查原始记录、纠正笔记和组织知识，不能只理解成“记更多”。合同案例中，多Agent共写一页会丢失事实；改成每份合同单独一页、单个写者负责并逐字引用条款后，关键事实覆盖由41/57变为57/57。这是该案例的组织改进，不是通用提升保证，也不能据此宣布检索已被淘汰。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>可以先用小批、可回滚的笔记整理验证“错误能否被修正”。官方Managed Agents Dreams文档目前列出异步任务：以已有memory store和过去1至100个session产生独立输出store，输入不被修改；完成后先审查输出，再用于后续会话。失败或取消可能留下不完整输出，不能直接替换正式记忆。研究预览、访问条件、模型和标准token费用以当前平台文档为准；本报没有创建dream任务，也不把它说成Hermes已有的开关。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2119269064543445168" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.anthropic.com/research/components-of-agent-memory" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://platform.claude.com/docs/en/managed-agents/dreams" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWknr2eXoAAztrQ.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWknr2eXoAAztrQ.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HWkn5NlXoAATbV_.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWkn5NlXoAATbV_.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 科研中的Claude使用：观测、调查与加速情景要分开</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic研究分析2026年8月2日至9月30日消费订阅上的207,049个科研会话，其中128,914个来自Chat/Cowork、78,135个来自Claude Code，并配合528名主要来自生命与健康科学、积极采用AI的研究者调查。数据分析和写作占比较高，构思与采集资料的使用相对不足。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>会话分类是使用行为观察，不是研究成果质量评测，更不是所有科学家的代表性普查。研究中的能力分数依赖LLM分类；未来自动化比例和成本是假设。所谓非物理任务全部自动化后部分学科可大幅加速，是模型情景，不是已经兑现的生产率，也不是对2030年的确定预测。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>做科研Agent时应先分清瓶颈是分析、写作、选题还是实际实验，分别记录人审与复核成本。这与11月6日已刊METR对Anthropic公司研发能力增速的评估不是同一数据集、对象或方法，不可将两者拼成“科研人员效率已普遍翻倍”的结论。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2119283516143776186" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.anthropic.com/research/how-researchers-use-claude" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWk1CgNW8AA0vnA.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWk1CgNW8AA0vnA.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HWk1DygWsAAQoYe.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWk1DygWsAAQoYe.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HWk1FpEXYAA-T_9.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWk1FpEXYAA-T_9.jpg" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HWk1H3xXAAAsPkH.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HWk1H3xXAAAsPkH.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
