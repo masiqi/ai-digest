@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 09 Nov 2026 03:57:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 00:34:19 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/11 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-11.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-11.html</guid>
+      <description>今天这期是覆盖不完整的短版，重点是把一条 Anthropic 地区政策传闻的生效日期核准，同时把新模型对照降级为待实测的选型线索。没有足够证据支持推荐一款新工具，故不凑数。
+覆盖不完整。本期从X List页面有界采样：采到5条记录、3位可识别作者、4次DOM观察、0次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：response_error。</description>
+      <pubDate>2026-11-11T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/09 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-09.html</link>
