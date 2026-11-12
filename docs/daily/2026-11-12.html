@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-12</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-12</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>AI 开发正在从“生成一份代码”转向“交付一个可检查、可恢复的成果”：本期优先挑出本地推理、编码终端、现代 Web 技能、游戏制作、录音转写、视频交付和持久化工作流这些能开始动手的入口，再看模型研究与大团队迁移如何验证结果。以下工具均为文档与主源核验，没有安装、运行或设备实测；旧案例按重新发现的工程资料介绍，不冒充今天发布。
+本期X List采集覆盖不完整（partial）：121条DOM记录、26位可识别作者、58次DOM观察、50次滚动，合并为101个唯一ID。仅1条真实ListLatestTweetsTimeline响应成功解析，不能把50次滚动当50页API响应；成员总数及多页完整性未知，未采到不代表没有发帖。
+采样在有界滚动上限停止；背景接口的JSON解析异常与ListByRestId的214提示保留为诊断信息，不等同于鉴权失败或429。七期去重参照实际已刊11月2、3、4、5、6、9、11日；11月7、8、10日缺刊，更早三期只是补充上下文。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Edge0：让35B MoE从SSD按需加载，先看清内存口径</div>
+  <div class="section"><div class="section-label event">一句话</div><p>edge0-infer提供命令行、聊天应用和本地OpenAI/Anthropic兼容服务，35B原生引擎通过预路由与专家预取减少等待和常驻资源压力。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Edge0-AI/Edge0/tree/main/edge0-infer" target="_blank">https://github.com/Edge0-AI/Edge0/tree/main/edge0-infer ↗</a></p>
+    <p><a href="https://github.com/Edge0-AI/Edge0/blob/main/edge0-infer/docs/getting-started.md" target="_blank">https://github.com/Edge0-AI/Edge0/blob/main/edge0-infer/docs/getting-started.md ↗</a></p>
+    <p><a href="https://github.com/Edge0-AI/Edge0/blob/main/edge0-infer/docs/benchmarking.md" target="_blank">https://github.com/Edge0-AI/Edge0/blob/main/edge0-infer/docs/benchmarking.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在隔离目录克隆Edge0，进入edge0-infer，按Getting started安装CMake、Ninja、编译器和uv；Apple Silicon可用cmake的mac-metal preset构建，再下载、转换并校验35B资产。文档要求转换阶段约42GB空闲磁盘，完成后再从run或chat试一个无敏感内容的小问题，最后才启动serve接入自己的测试客户端。比较predicted与actual路由时固定同一提示词，分别记录首token、解码速度和平台内存指标。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这不是把35B完整权重塞进2.5GB文件，而是把专家权重放在存储中按需读取。官方基准明确：macOS/iOS的physical footprint不计可丢弃的干净文件缓存，Android RSS和Windows working set也不能横比；默认predicted实际使用预测专家，输出可与actual不同。社交帖的“2.5GB”不能当作整机内存要求，更不代表任何手机都能运行。它与前期的Niko1221/Strata不是同一仓库、同一版本事件。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为本地编码代理试验低常驻内存的35B推理入口。</li>
+    <li>用自己的机器测SSD读入、首token与质量之间的取舍，不照搬项目方单台设备成绩。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2120702460927045684" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Edge0-AI/Edge0/tree/main/edge0-infer" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Edge0-AI/Edge0/blob/main/edge0-infer/docs/getting-started.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Edge0-AI/Edge0/blob/main/edge0-infer/docs/benchmarking.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW4_o5hbgAAHi6y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW4_o5hbgAAHi6y?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Modern Web Guidance：让编码代理少写一层过时的JavaScript</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Chrome团队支持的预览版技能与CLI，把现代Web API、浏览器兼容性和工程指南按需带进编码代理上下文。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/GoogleChrome/modern-web-guidance" target="_blank">https://github.com/GoogleChrome/modern-web-guidance ↗</a></p>
+    <p><a href="https://developer.chrome.com/docs/modern-web-guidance" target="_blank">https://developer.chrome.com/docs/modern-web-guidance ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在测试项目中阅读安装说明后，可用npx skills add GoogleChrome/modern-web-guidance添加技能；先选一个很小的目标，例如把旧tooltip迁移到Popover API和CSS Anchor Positioning，或让卡片按容器宽度布局。明确目标浏览器和Baseline要求，要求代理说明选用原生能力的理由，再用浏览器检查交互、键盘访问和降级策略。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它补的是生成代码时容易缺失的最新平台约束，不是又一个UI库，也不能代替性能和无障碍测试。官方仍标为early preview；命中一个现代API不代表你的目标浏览器都支持。适合先在局部组件比较代码量、依赖和可维护性，再决定是否推广到全站。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>清理老前端中可以由浏览器原生功能替代的脚本和依赖。</li>
+    <li>给AI生成页面补上CSP、WebAuthn、Core Web Vitals等明确检查任务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2120517352144199974" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/GoogleChrome/modern-web-guidance" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://developer.chrome.com/docs/modern-web-guidance" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW2XSVObkAA7DgI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW2XSVObkAA7DgI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kaku：把Mac终端、AI助手与多代理工作台放在一起</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于WezTerm的macOS终端，整合标签分屏、代理状态提示、可选AI聊天与远程终端入口。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Kaku" target="_blank">https://github.com/tw93/Kaku ↗</a></p>
+    <p><a href="https://github.com/tw93/Kaku/blob/main/docs/features.md" target="_blank">https://github.com/tw93/Kaku/blob/main/docs/features.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方仓库指向的DMG或Homebrew入口安装后，先运行kaku doctor检查shell集成；用两个无敏感项目体验分屏和代理通知。需要内置助手再运行kaku ai配置自己的服务，Cmd+L打开聊天面板，或在提示符输入“# 列出最近修改的文件”生成待审命令。远程访问需另行主动运行kaku remote并配对浏览器，不要先暴露生产终端。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>终端开始管理“哪个代理需要人”，不只是显示文本。官方说明Kaku不提供或中转模型服务；错误修复会把失败命令、退出码、工作目录和git分支发给所配置模型。远程默认关闭，文档描述了配对和加密，但本报未审计实现；危险命令仍需逐条检查。原帖提到的手机页和快捷跳转应以所装版本为准，不将README的概述当逐端实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>同时跟进几个编码代理，减少找回等待批准的会话成本。</li>
+    <li>在个人测试终端中用AI解释失败命令，但不自动执行未知修复。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2120531568179749198" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/tw93/Kaku" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/tw93/Kaku/blob/main/docs/features.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW2kMwva8AEZK1z?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW2kMwva8AEZK1z?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 归藏游戏Skill：把多轮AI做游戏的经验做成可复用流程</div>
+  <div class="section"><div class="section-label event">一句话</div><p>围绕Three.js动作游戏，把需求澄清、工具调研、战斗手感、画面检查和单HTML打包整理成技能。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/op7418/guizang-game-skill" target="_blank">https://github.com/op7418/guizang-game-skill ↗</a></p>
+    <p><a href="https://op7418.github.io/guizang-game-skill/" target="_blank">https://op7418.github.io/guizang-game-skill/ ↗</a></p>
+    <p><a href="https://github.com/op7418/guizang-game-skill/blob/main/references/packaging.md" target="_blank">https://github.com/op7418/guizang-game-skill/blob/main/references/packaging.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读SKILL.md和打包参考，用一个只有一位角色、一种攻击、一个小场景的目标开始；让代理先调查你已有的模型、音效与浏览器工具，分阶段验收移动、碰撞和受击反馈。最终再按打包文档缩贴图、压几何、内嵌资源，离线打开成品检查资源是否遗漏；浏览器能运行不代表微信等容器可运行。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>可复用的是制作与检查流程，不是“一句话就做完”的神话。作者明确说修改了很多轮，并把原帖45亿token更正为4.5亿；本报没有核账，也不把这个数字作为成本承诺。仓库许可证为AGPL-3.0，生成资产与依赖还要分别核许可；打包脚本需按自己的目录和资源清单调整。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为课程、互动展示制作小型3D浏览器原型。</li>
+    <li>练习让AI先交可玩核心，再独立验证性能与离线分发。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2120695301204005060" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2120694045299327187" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://x.com/op7418/status/2120695897956995075" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/op7418/guizang-game-skill" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://op7418.github.io/guizang-game-skill/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/op7418/guizang-game-skill/blob/main/references/packaging.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW2hj_OaEAAwtsq?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW2hj_OaEAAwtsq?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Soundcore Manager：录音豆的本地管理与可选择转写路径</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向soundcore Work D3200的第三方Flutter客户端，支持BLE控制、录音管理、Wi-Fi批量导出，以及设备端或可选云端转写。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tacshi/Soundcore" target="_blank">https://github.com/tacshi/Soundcore ↗</a></p>
+    <p><a href="https://github.com/tacshi/Soundcore/blob/main/README.md" target="_blank">https://github.com/tacshi/Soundcore/blob/main/README.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>已有D3200的开发者先读平台构建说明，在测试设备上从只读状态、电量和文件清单开始，再录一段自己的非敏感语音检查导出、播放与转写。README给出macOS调试脚本和Flutter的iOS、Android运行入口；iPhone端Apple处理要求iOS26以上且受设备、语言和资源包限制。需要Soniox时再主动配置密钥并确认上传路径，不要拿会议机密作首次测试。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>硬件音频可以接到自己的处理链，但“本地管理”不等于所有转写都本地。README写明Apple失败不会自动转云，Soniox实时路径会发送音频流、批量路径会上传文件。作者提到Qwen0.6B和豆包改造的另一条帖文，本报未核到对应发布分支，因此不列为上游已支持功能；也没有验证Typeless合作。第三方逆向协议有固件兼容与维护风险，避免对唯一录音执行删除、解绑或刷固件。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给自己的采访或学习录音做批量导出和文本整理。</li>
+    <li>比较明确授权的设备端与云端转写，不混淆音频去向。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2120529325560885364" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/tacshi/Soundcore" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/tacshi/Soundcore/blob/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW2heN3aYAAcSqU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW2heN3aYAAcSqU?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HW2hoUTa0AAwJy7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW2hoUTa0AAwJy7?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HW2hvPlagAAsSMR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW2hvPlagAAsSMR?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HW2hzKfaQAAXO0u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW2hzKfaQAAXO0u?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ AdaL：从产品代码和素材到可回退的视频版本</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向GTM的多模态代理，官方Video Producer文档描述了规划、镜头生成或剪辑、配音、混音、渲染和版本比较。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://adalagent.ai/" target="_blank">https://adalagent.ai/ ↗</a></p>
+    <p><a href="https://docs.sylph.ai/features/video-producer" target="_blank">https://docs.sylph.ai/features/video-producer ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先按官网试用和Quickstart进入一个隔离项目，提供自己有权使用的截图或录屏，要求“做一个10秒产品功能演示，同时交16:9与9:16，先给分镜计划”。在Files找到视频项目，打开Video与Canvas核时间线和版本，检查字幕、声音与素材来源；通过Export导出指定版本，不只接受代理一句“完成”。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>价值在成片交付和可回退工作流，而不只是生成几秒镜头。文档说每份资产保留来源与提示词，视频和导出文件在项目目录中；但这不证明各模型都本地运行，也不免除素材、肖像、声音授权。保存视频在Mac上要求macOS15以上，macOS14未测；费用、账户权限与实际效果需按当前服务核对。本报未安装，也未生成测试片。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给新功能做短版发布演示，并保留不同文案和节奏的可比较版本。</li>
+    <li>把已有录屏、配音和标题放进一条可追溯的制作流程。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/panda_liyin/status/2120555240898674907" target="_blank"><span class="handle">@panda_liyin</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://adalagent.ai/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.sylph.ai/features/video-producer" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2120553628289449988/img/DH3LzFAOAblq2ZK-.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2120553628289449988/img/DH3LzFAOAblq2ZK-.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Skipper：让JVM里的多步Agent业务能在故障后继续</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Airbnb开源的嵌入式Java/Kotlin工作流引擎，提供检查点、重试、等待信号和补偿，不要求另运维编排集群。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/airbnb/skipper" target="_blank">https://github.com/airbnb/skipper ↗</a></p>
+    <p><a href="https://skipper.airbnb.tech/docs/quickstart/" target="_blank">https://skipper.airbnb.tech/docs/quickstart/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在测试服务加入com.airbnb.skipper:skipper-core，按Quickstart启动runtime和scheduler，先写“读取测试数据→等待批准→写入测试结果”的工作流。注意默认是内存SQLite，进程退出就丢状态；要验证重启恢复，须给workflowStore和scheduler配置同一持久化文件，多副本再看MySQL方案。以唯一业务ID启动流程，模拟在外部调用后中断，检查结果、日志和重复执行情况。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>Agent的难点往往在模型之外：批准等待、外部失败、跨部署恢复。Skipper提供可借用的工程底座，但它不是LLM规划器，也不会替你判断工具调用是否安全。检查点不能当作外部支付、邮件等副作用天然exactly-once的保证；外部系统仍应有幂等键和对账策略。项目目前标为pre-release，先在小范围试用。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>为人工审批后才能执行的多步Agent业务保存进度。</li>
+    <li>把散落在队列、cron和自制状态机里的流程整理成可测试的JVM代码。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2120336655093735868" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/airbnb/skipper" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://skipper.airbnb.tech/docs/quickstart/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWzy7KPbwAAsy4u?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HWzy7KPbwAAsy4u?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CS329Z：从Agent Harness做到独立评测，不只看讲座</div>
+  <div class="section"><div class="section-label event">一句话</div><p>斯坦福Engineering AI Agents公开课程提供两份作业起始仓库：第一份构建Agent Harness，第二份构建评测任务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://cs329z.stanford.edu/" target="_blank">https://cs329z.stanford.edu/ ↗</a></p>
+    <p><a href="https://github.com/cs329z/assignment1-harness" target="_blank">https://github.com/cs329z/assignment1-harness ↗</a></p>
+    <p><a href="https://github.com/cs329z/assignment2-harness" target="_blank">https://github.com/cs329z/assignment2-harness ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从课程官网进入作业，先读各自PDF handout；HW1使用Python3.11以上与uv，配置自己的OpenRouter密钥后，先跑无需模型的确定性测试，按adapter接口实现邮件分类、检索和Agent循环。只有读清预算与ledger后再开live测试；起始仓库抛NotImplementedError是待完成练习，不是开箱即用助理。HW2再安装Docker和Harbor，学习任务、产物和评分如何独立于被测Agent。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>两份仓库把“能调用工具”和“证明任务做对”分开，适合补齐工程基础。API真测会花钱，HW1的priority真测会发多次请求；不要随意删缓存与账本。Windows的终端沙箱没有OS级jail，macOS/Linux也应先确认实际jail结果；课程示例不是可直接授予个人邮箱和生产目录权限的安全产品。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用可读测试学习Agent的错误处理、记忆和预算约束。</li>
+    <li>为自己的代理设计独立验收题，保留失败轨迹而不只看最终回答。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2120388990616433083" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://cs329z.stanford.edu/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/cs329z/assignment1-harness" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/cs329z/assignment2-harness" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWyFYN0aIAEP-CX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HWyFYN0aIAEP-CX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 ERNIE 5.5 Flash Base：开放的是训练起点，不等于Preview聊天能力</div>
+  <div class="section"><div class="section-label event">事件</div><p>百度官方发布页和模型卡公开ERNIE-5.5-Flash-Base，280B总参数、每token激活14B，预训练上下文到128K，并说明微调与推理支持1M；这是尚未经中后训练的基座权重。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>原帖把Preview、基座、开源协议和实际演示混在一起，成稿只采用已核到的Base事实。官方权重页列专门的Model License Agreement v1.0，不能直接照抄“全部Apache2.0”；基座也不该拿来承诺成品聊天、Agent或游戏制作表现。1M支持不代表普通个人机器的内存和吞吐足够。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>有训练资源的团队可先核FP8/BF16权重、许可和completions部署路径，在固定小样本上建立领域适配基线；普通使用者应等待或另核后训练产品，不把Base与Preview互换。我们没有下载权重或做速度评测。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2120500137483211162" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://ernie.baidu.com/release/ernie-5-5-flash-base/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/baidu/ERNIE-5.5-Flash-Base" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2120499663472316416/img/eJmi3JE9u9P0NIkT.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2120499663472316416/img/eJmi3JE9u9P0NIkT.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 ERNIE Evolve：看独立评测闭环，不把局部提速当万能RSI</div>
+  <div class="section"><div class="section-label event">事件</div><p>百度11月9日技术文章介绍Director选方向、Selector选起点、Executor在隔离环境改代码，再由独立Evaluator与Reviewer评估；结果仓库公开了部分最终代码和运行日志。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>团队报告昆仑芯P800特定低延迟场景速度达到基线623.6%，另有GPU确定性吞吐和解码优化；这些是不同任务、硬件和约束下的项目方结果，不是所有模型推理都能快六倍。公开仓库主要是研究产物，不等于完整自动研究系统已作为一键工具发布。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>可先挑自己的一个可量化瓶颈，把评测器放在被优化仓库之外，冻结正确性、改动范围和噪声阈值；同时保留失败方向和可暂停机制。要复现公开训练任务须核B200或多H100、内存、时钟和预算条件，不能只复制榜单数字。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2120500133884555362" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://ernie.baidu.com/zh/research/posts/ernie-evolve/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/ernie-research/ERNIE-Evolve-Results" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW2G1pzbUAEXAUd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW2G1pzbUAEXAUd?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 PAN 2：开源世界模型也会跳步，别把视频逼真当物理正确</div>
+  <div class="section"><div class="section-label event">事件</div><p>IFM公开PAN2代码、权重与模型卡，用概念推理和29B潜在扩散骨干，把当前观察与文字动作转成最长约20秒的预测视频。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>仓库和推理文档已给出入口，但原帖“精准预测后续”过强。官方模型卡明确：长计划经常至少漏一步，跨片段外观会漂移，也可能在违反中间物理约束时继续生成；对本该失败的计划，模拟忠实度仍未量化。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>研究者可从少量固定动作、固定种子和同一起始帧做对照，再逐帧检查动作完成与约束，而不只评画质。原生推理每个GPU worker持有完整29B模型，需核显存、offload和第三方模型许可；它不适合作为机器人安全控制或现实事实的依据。我们只读了代码文档与模型卡，没有跑推理。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2120528311361450151" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/ifm-ai/PAN2" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/ifm-ai/PAN2/blob/main/MODEL_CARD.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2120193725175595008/img/ZYlHXk8GMjTmICDo.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2120193725175595008/img/ZYlHXk8GMjTmICDo.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Shopify重建商家App：代理多写代码，团队更要定义验收</div>
+  <div class="section"><div class="section-label event">事件</div><p>Shopify工程复盘介绍把商家App从React Native迁到Swift和Kotlin，约30人用12周完成300多屏迁移；这是团队工程案例，不是所有项目的效率基准。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>文章重点不在“让Agent随便重写”，而是让双平台架构保持相同形状、用已有实现作参照、把迁移任务与可比较结果组织起来。商家Shopify App和消费者Shop App是两篇不同迁移文章，不能把两者的时延、稳定性数字混用；本报不据此宣布React Native已经过时。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>适合先选一条低风险业务流，固定行为、截图、性能与可访问性验收，再让两个平台沿同一结构迁移，CI负责发现漂移。对于已有成熟跨端团队，切换成本和维护能力仍须单独计算。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2120335490524365241" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://shopify.engineering/shopify-app-rebuild" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWzx3bLbkAA6Lyp?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HWzx3bLbkAA6Lyp?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Fable 5.2提示指南：代码归属句能改变行为，也会扩大修改范围</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic官方指南建议按任务校准effort，并说明“这份代码库是你的”会更倾向于合并重复代码和修理邻近问题。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是一句万能提效咒语。官方小任务测试也观察到更多输出token和未请求改动，且单独写“禁止顺手重构”未必抵消归属提示。对用户所有、要求最小改动的代码，指南反而建议省略这句话；不能把授权边界交给提示词暗示。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>在可回滚的个人实验仓库，可对同一任务比较有无归属句的diff、测试与成本；在生产修补中写清仅能改哪些文件、哪些操作须批准，最终审完整diff而不是只读代理摘要。这里是已核官方方法文档，不是本报运行实验。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2120029347948220500" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2#say-who-owns-the-code" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HWvbWwFaAAAyY8_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HWvbWwFaAAAyY8_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Gemini Decisions API：多位作者转述面向闭集判断的Decision 1，可用于路由、工具选择与评分；本次官方文档只返回登录入口，未核通规格与价格，不确认千题上限、150—250毫秒或每百万token0.10美元，也没有可直接安装的Claude Code自动effort集成。先等可读文档与真实调用样本 <a href="https://x.com/dotey/status/2120647659388031454" target="_blank">→</a></li>
+    <li>Grok Bot 1.0：作者描述团队共享、Slack与Teams接入，且称版本已是十天前变化；未核到对应官方版本公告与权限文档，暂作待补证线索，不写成今日发布或自动接管全部工作 <a href="https://x.com/shao__meng/status/2120668252456247316" target="_blank">→</a></li>
+    <li>小小达尔文：开发者自荐用果蝇神经连接数据做桌宠；官网来源页区分测量连接、模型假设与网页预录动作，明确MBTI只是游戏化标签、并非完整全脑或意识验证。可先看网页演示，安装签名、隐私和文件整理权限仍须自己核查，暂不当已审计工具推荐 <a href="https://x.com/appinn/status/2120682565421989940" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
