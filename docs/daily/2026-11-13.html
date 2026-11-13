@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-13</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-13</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天更值得看的是执行层：快模型、搜索上下文、按 Agent 扩容，以及能在真实 Mac 和会议中工作的入口。具身数据也不能只看宣传小时数，开放了多少、标了什么、许可允许什么，才决定能不能用。
+覆盖不完整。本期从X List页面有界采样：采到120条记录、35位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。
+本次 120 条 DOM 记录归为 102 个唯一 ID；请求门禁记录 6 次 API 响应，其中真实 List timeline 响应 2 次。50 次滚动不是 50 个 API 分页。
+编辑实际阅读全部 variants，并对照最近七份已刊正文：11月3、4、5、6、9、11、12日；七日历窗缺7、8、10日，以更早三期补充上下文。下列工具均为主源/文档核验，未安装、运行或购买实测。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ CanyonOS：只扩容堵住的 Agent，不把整条工作流复制一遍</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把普通 Python 多智能体项目拆成可独立部署、追踪和配置副本的容器，适合研究 Agent 比规划器慢、整体扩容又浪费的服务。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先按官方安装页安装 CLI，确认 Docker 正在运行且支持 Compose v2，运行 canyonos doctor，再用 canyonos quickstart 跑官方小项目。在 workflow_config.yaml 给繁忙 Agent 单独设置 replicas、CPU 和内存，先比较排队时间、失败率及费用，再决定是否搬到 EC2 或 Kubernetes。不要直接把生产项目交给自动转换。
+边界与费用：文档给出了配置而不只是架构口号：每个 Agent 声明入口、依赖和公开方法，OTel 可导出到外部。开源许可证为 AGPL-3.0，商业部署应先核义务；模型调用和云资源仍收费。默认 HTTP 端点、仪表盘及部分数据库端口会监听所有网卡，试验应置于隔离网络。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2121037264642032092" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/CanyonCodeCoreAI/canyonos" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://raw.githubusercontent.com/CanyonCodeCoreAI/canyonos/main/docs/INSTALLATION.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://raw.githubusercontent.com/CanyonCodeCoreAI/canyonos/main/docs/guides/WORKFLOW_CONFIG.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW9wJAobgAAaU05?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW9wJAobgAAaU05?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HW8m_R6boAA0nqk?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW8m_R6boAA0nqk?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Keenable 1.0：给研究 Agent 返回可引用片段，而不只是一串链接</div>
+  <div class="section"><div class="section-label event">一句话</div><p>面向 Agent 的搜索 API，提供网站与日期过滤、动态片段，以及 Python、TypeScript、Go SDK。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>读 Search API 后先用一组自己熟悉的问题做离线对照：限定官方域名、限制结果数量，保存 URL 和片段，再打开主源核对。接入 SDK 时把 key 留在环境变量；无 key 的 public 路径需要 X-Keenable-Title 应用标识并受 IP 限制，不要把网页里的免费宣传等同于无限调用。
+边界与费用：1.0 公告增加知识卡片和动态 snippets，声称研究任务可少用约一半 token；这是厂商口径，不是本报复测。公告页同时写有每月十万次免费和新账户十万次 welcome bonus 两种表述，持续额度应以控制台当前条款为准；页面列出超出后每千次搜索 4 美元。排行榜第一不代表每个中文或长尾问题都最好。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2120938579442713014" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://keenable.ai/blog/keenable-1.0" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.keenable.ai/api-reference/search" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW8WWFrbgAAsG3K?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW8WWFrbgAAsG3K?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HW8O1wsXUAAOw3z?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW8O1wsXUAAOw3z?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Meetings：会议中直接产出计划和白板，先管权限再开自动加入</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Team、Enterprise 正逐步开放的 Google Meet 测试功能；Claude 以可见参会者身份记要点、回答问题并协作创建文档。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先让组织管理员确认资格，再连接 Google Calendar，在 Meetings 选一场内部会议手动 Add Claude。提前取得所有参会者转录同意，试一句“把已确认事项整理成计划，未知项列待办”，会后在会议页面逐项核对。首轮不启用自动加入，不授权发送消息等外部动作。
+边界与费用：它保存转录、总结和屏幕描述而非音频，但产物可能被组织内受邀者查看和编辑；连接工具按个人权限并可能计入用量。测试期笔记、转录和不调用连接器的回答包含在 Team/Enterprise 内，文档白板等免费至 2027-02-10，不是所有服务永久免费；ZDR、HIPAA-ready、CMEK 等部分组织暂不可用。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2120979951599931793" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://claude.com/resources/articles/claude-meetings" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW82tOPWUAAsEFY.jpg" target="_blank"><img src="https://pbs.twimg.com/media/HW82tOPWUAAsEFY.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Maps Demo Key：不用先绑卡，也能验证真实地图和两点路线</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google Maps 的免费原型钥匙，支持有限的地图、地点、地理编码、天气和 Compute Routes 功能。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>使用个人 Google 账号领取 Demo Key，让编码助手先做“附近地点列表＋地图标记＋两点路线”的最小网页，再对照支持清单检查调用的具体 API。密钥按平台安全建议限制用途；当助手误用车队优化或未支持接口时，换回文档列明的基础功能，而不是不断重试。
+边界与费用：官方明确只用于测试和原型，不适合生产；Workspace 企业账号不符合领取资格，地域也有限制。到每日上限会暂停而非收费，支持 API 不含用户照片和评论；上线应启用计费。它并非今天首次推出：本次读到的文档更新为 10 月 22 日，属于本期新发现的实用入口。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2120856688899321922" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://mapsplatform.google.com/maps-demo-key" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://developers.google.com/maps/demo-key" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW7L6lYbsAAJxcd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW7L6lYbsAAJxcd?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HW7L6lJbQAAS4Qd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW7L6lJbQAAS4Qd?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mount Thor：给必须跑 macOS 的 Agent 租一台真 Mac 或隔离 VM</div>
+  <div class="section"><div class="section-label event">一句话</div><p>提供 Apple Silicon 专用裸机与 macOS 虚拟机，面向桌面自动化、原生应用及需要持久环境的任务。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先申请访问，审批后阅读 Quickstart 并配置预付费，再选择裸机或 VM。CLI 的 mthr bm ssh/desktop 与 mthr vm ssh/desktop 分别提供命令行和桌面入口；需要 sudo、改系统设置或测试 launch daemon 的任务应选 VM。先用空白测试账号，别一开始就上传日常登录凭据。
+边界与费用：裸机是非管理员账号，不能任意改系统；VM 有管理员权限。文档按物理 Mac 计费，裸机以 24 小时窗口计，不能把“弹性”理解成任意秒级收费。释放裸机会擦除数据，删除 VM 也删除磁盘，交付物要提前导出。本次未核具体机型库存和价格，不复述社媒的“最大机群”或 512GB 配置宣传。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/themountthor/status/2120894577284685859" target="_blank"><span class="handle">@themountthor</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.mountthor.com/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.mountthor.com/quickstart" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.mountthor.com/compute/types" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Enconvo：把选中文字、知识库和 Mac 自动化接成一条小流程</div>
+  <div class="section"><div class="section-label event">一句话</div><p>原生 Mac AI 客户端，可接自有 API 或本地模型，提供 PopBar、MCP、技能及可视化工作流。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在 macOS 14 以上机器选一个低风险流程：选中公开文字→改写摘要→人工确认后复制。再按官网教程建一个仅处理测试文件的工作流，检查每一步输出；使用本地 MLX、Ollama 或 LM Studio 时先确认该功能是否真的走本地，别把客户端支持本地模型等同于所有插件离线。
+边界与费用：官网有免费层，BYOK 不额外计量不代表供应商调用免费；免费工作流、知识库各限一个，会议录音和字幕各每月 60 分钟。页面列出 Standard 49 美元一次性、Cloud Plus 每月 10 美元，购买前以结算页为准。应用本体非开源，扩展开放；屏幕、麦克风和文件权限按需开。属于本期发现，不宣称今日新发布。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Cydiar404/status/2120781399896866834" target="_blank"><span class="handle">@Cydiar404</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.enconvo.com/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ NVIDIA PCB OpenUSD：从两块板开始做可控缺陷的 AOI 数据</div>
+  <div class="section"><div class="section-label event">一句话</div><p>两套从 KiCad 转换的 ICT、Artix 电路板资产，合计 702 个放置组件，用于合成光学检查研究。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从数据卡选一套 ZIP，读 manifest 和 provenance.json，查看元件身份、位置与哪些厚度是推导值；在 OpenUSD 渲染链路中生成一个正常样本，再引入一种受支持结构缺陷，对比图像与标注。先验证缺陷定义和真实板一致，再谈训练效果。
+边界与费用：数据是 USD 场景与元数据，不含现成渲染图像或单独的图像标注集。CC BY-4.0 允许商用但需署名，上游板设计另有 Apache-2.0 说明；资产本身不能证明生产线检测精度。原帖为 10 月 20 日、数据卡创建为 9 月 28 日，本期作为新发现旧资源收录，不写成今日发布。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HuggingPapers/status/2112426637962903897" target="_blank"><span class="handle">@HuggingPapers</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/datasets/nvidia/cdf-pcb-usd-dataset" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/datasets/nvidia/cdf-pcb-usd-dataset/raw/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Eidon Tracker POV：下载家务视频前，先按质量和人物切分</div>
+  <div class="section"><div class="section-label event">一句话</div><p>公开第一人称家务视频与七点 IMU 方向数据；数据卡列出 13,451 段、1,273.8 小时、27 位贡献者。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先只读 recordings/metadata.parquet，筛选 qc_status=valid、n_slots=7、has_chest，再抽一种任务的少量视频。IMU 在独立 tracker-pov-imu 仓库，以 recording_id 连接；按 contributor_id 划分训练和测试，避免同一人、房间和相机泄漏到两边。
+边界与费用：不是均衡动作集：叠衣服占 67.5%，原始加速度/陀螺仪/磁力计仅部分录制具备，需看 has_raw_motion，不能把方向四元数当全量原始传感器。CC BY-4.0 可商用需署名；家庭视频未打码，隐私审核不能省。原帖为 9 月 21 日，本期重新发现，未声称今日新增，也不把 27 人擅改成 27 户。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/LeRobotHF/status/2102011968026554652" target="_blank"><span class="handle">@LeRobotHF</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/datasets/eidon-ai/tracker-pov" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/datasets/eidon-ai/tracker-pov/raw/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2102011811985768448/img/l6Oyp-g6ZWRtH3mv.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2102011811985768448/img/l6Oyp-g6ZWRtH3mv.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ RoboMoCap：看第一人称，也拿得到腿脚的全身动作真值</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把头戴、腕部观察与光学全身动捕配对，重点是行走与移动操作，而非只有手物交互。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读数据卡的模态说明，选一类全身协调任务，核对相机、IMU、动作真值和物体几何的对应关系，再设计“只有视频”与“加入动捕监督”的对照。训练前明确需要下肢、足部还是手部监督，不要把不同第一人称数据集当成可直接拼接的同一格式。
+边界与费用：官方列出六个头戴与两个腕部相机、53-marker、120Hz 光学动捕，以及物体运动和纹理扫描；许可 CC BY-4.0。数据卡的代码入口仍标 coming soon，本报只确认数据说明与公开入口，不保证完整训练代码可一键运行，也不沿用“最大”未经同口径验证的比较。原始发布帖为 11 月 9 日。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/GroundedSI/status/2119826794182238602" target="_blank"><span class="handle">@GroundedSI</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/datasets/BitRobot/robomocap" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2119786140928544768/img/V177wDMdNrBrxZYq.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2119786140928544768/img/V177wDMdNrBrxZYq.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ RoboCap LiDAR-100：名字叫 100 小时，当前可用的是首批 50 小时</div>
+  <div class="section"><div class="section-label event">一句话</div><p>餐厅、修车与洗车场景的第一人称 LiDAR、RGB、IMU 数据，适合研究真实工作环境下的深度与操作识别。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先接受 Hugging Face 访问条件，读 episodes.parquet 与 calibration，按任务和 LiDAR 频率挑几个 episode，再仅下载对应 MCAP。官方示例要求处理多种点云编码；先检查深度无效值、时间轴和相机畸变，再做模型训练。整库约 3.4TB，别默认全量拉取。
+边界与费用：主源明确目前释放 50 小时、1,964 个 episode；其余 50 小时待清理后增加，不能把宣传总量当已下载量。仅非商业研究可直接使用，商用需独立许可；不许识别人员、场所或转发原始数据。原始发布帖为 11 月 9 日，本期价值在核清开放范围和可操作入口。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/BitRobotNetwork/status/2119846620334559645" target="_blank"><span class="handle">@BitRobotNetwork</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/datasets/BitRobot/RoboCap-LiDAR-100" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2119846561706590209/img/8JPQ6mIuoDNHsIkL.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2119846561706590209/img/8JPQ6mIuoDNHsIkL.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Gemini 4 Hydrogen：快模型加入多模型协作，采购别只看单 token 价格</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 11 月 12 日正式宣布 Hydrogen，定位日常编码与 Agent 执行；官方给出百万 token 上下文、每百万输入 1.50 美元、输出 7.50 美元。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>可先在 AI Studio 用一组固定仓库任务测试改动范围、测试通过率、失败恢复和总账单。四档 thinking 为 low、medium、high（默认）、xhigh；深推理模型做规划，Hydrogen 做执行与验证，是值得对照的分工，不是自动更省。
+边界：官方宣称 Antigravity Orchestrator 在特定 Terminal-Bench 任务上减少配额和耗时，不能外推到全部项目；榜单分数也不替代回归测试。Gemini App 免费用户通过自动选择获得访问，不等于能手选；Antigravity 的相关入口面向付费 Pro/Ultra。此次不采信社媒未对齐条件的速度倍数和跨模型单题费用。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2120945309714919886" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 NVIDIA 正式公告 CEO 交接：任免事实与市场猜测分开看</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA 11 月 12 日公告：黄仁勋辞去总裁、CEO 及董事职务，立即生效；CFO Colette Kress 兼任临时 CEO，Harvey C. Jones 担任首任董事长。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>董事会将从内部和外部寻找正式继任者；公司称客户承诺、运营和产品路线继续，并维持 11 月 17 日财报安排。依赖其硬件、软件栈和采购合同的团队，应继续跟踪正式路线、交付和财报披露，而不是根据评论立即改系统。
+边界：本条已读取公司公告，不以社媒转述证明任命；公告未确认的私人指控、幕后动机、股价跌幅和“行业必然崩盘”推断均不纳入。公司对业务连续性的陈述仍是公司表态，不是独立保证，也不是投资建议。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2120902632550060478" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>EgoMo3R：动作与场景联合重建：NeurIPS 2026 项目页确认以单目第一人称视频交替优化人体动作与场景，结合深度、光流、点轨迹与扩散动作先验；在 EgoExo4D、Nymeria 上的优于基线为作者报告。本次未核完整代码及权重，不当成即用服务；原帖 11 月 9 日。 <a href="https://x.com/chaitanya100100/status/2119621142000603146" target="_blank">→</a></li>
+    <li>Code2Video 多 Agent 工作台：作者称把 motion 工作流带到 Codex、DeepSeek、WorkBuddy，支持 BYOK 与多 Agent；但采到正文截断，未核公开安装入口、模板许可和实际版本。保留为发布前信号，不把“即将”写成已开源。 <a href="https://x.com/tuturetom/status/2120835451145859399" target="_blank">→</a></li>
+    <li>Renoise 手机端口播更新：相对 11 月 3 日已刊 digital-human-koubo 桌面技能，本次新说法是手机端自主完成口播；仅有作者演示帖，尚无已核更新日志、教程和费用边界，因此不升级为工具推荐。 <a href="https://x.com/berryxia/status/2120915048323600714" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

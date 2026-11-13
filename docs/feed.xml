@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 12 Nov 2026 02:51:12 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 01:27:37 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/13 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-13.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-13.html</guid>
+      <description>今天更值得看的是执行层：快模型、搜索上下文、按 Agent 扩容，以及能在真实 Mac 和会议中工作的入口。具身数据也不能只看宣传小时数，开放了多少、标了什么、许可允许什么，才决定能不能用。
+覆盖不完整。本期从X List页面有界采样：采到120条记录、35位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。
+本次 120 条 DOM 记录归为 102 个唯一 ID；请求门禁记录 6 次 API 响应，其中真实 List timeline 响应 2 次。50 次滚动不是 50 个 API 分页...</description>
+      <pubDate>2026-11-13T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/12 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-12.html</link>
