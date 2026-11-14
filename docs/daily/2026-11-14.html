@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-14</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-14</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>DeepSeek 把搜索、读链接、文件与语音能力扩成可组合 API，并给出可自托管的聊天前端示例；另一端，llama.cpp 以 v1.0.0 明确本地推理库的兼容性边界。今天优先选可以照着官方资料试用的项目，不把“读过来源”说成“已安装实测”。
+本期从X List页面有界采样：采到112条记录、33位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。采集不完整（partial）。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek chat-demo：可自托管的聊天前端样例</div>
+  <div class="section"><div class="section-label event">一句话</div><p>官方 MIT 静态网页示例，支持多会话、联网搜索引用、附件与语音输入输出，浏览器直接连接 DeepSeek API；这不是“免费托管版 DeepSeek App”。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deepseek-ai/chat-demo" target="_blank">https://github.com/deepseek-ai/chat-demo ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看在线演示或下载静态包；开发者用 Node.js 22.12+ 和 pnpm 构建后，在设置里配置自己的 API Key。官方指南示例指定 deepseek-flash，可按协议选择 Messages、Responses 或 Chat Completions；搜索与读链接使用服务端工具参数。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>前端、API 工具和示例协议同日公开，做内部知识问答原型不必从空白页面搭聊天交互。但浏览器 localStorage 存 Key，IndexedDB 存会话，发送和上传仍会流向配置的服务；公开服务须按官方文档启用安全检查并自行履行合规义务，扩展能力另计费。此处核查的是仓库与文档，未部署测试。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2121256826666975459" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/deepseek-ai/chat-demo" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://api-docs.deepseek.com/news/news261113" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXA3vsba0AAOXGE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXA3vsba0AAOXGE?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ClickPulse：键鼠活动的本地热力图</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源桌面统计工具，记录键鼠次数并展示日趋势、键盘热力图和悬浮小窗，项目声明无需账号或遥测。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/endNone/ClickPulse" target="_blank">https://github.com/endNone/ClickPulse ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从 GitHub Releases 下载对应 macOS/Windows/Linux 安装包；macOS 首次启动需在系统隐私设置中授权 Input Monitoring，选择只查看趋势而不把它当“工作质量”打分。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>离线数据减少将个人输入活动上传第三方的顾虑；但安装包尚未签名，输入监控是敏感权限，需核对来源和授权范围。已读仓库与安装文档，未安装验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2121255119673045171" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/endNone/ClickPulse" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/endNone/ClickPulse/blob/main/docs/install-macos.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ ci-proto：带不确定性区间的时间序列预测</div>
+  <div class="section"><div class="section-label event">一句话</div><p>公开权重和 Python 接口输入多变量历史序列，输出未来时点的九档分位数；“领先”和超长上下文是项目方主张，尚非本刊独立基准复现。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/continuousintelligence/ci" target="_blank">https://github.com/continuousintelligence/ci ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>按官方 README 运行 pip install continuousintelligence，加载 ContinuousIntelligence/ci-proto，传入形为[变量,时间]的张量与 horizon；先用自带共享单车样本画24小时预测，再换自己的负载数据做回测。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>同一接口可在 CPU/GPU 上处理缺失值及分位数，适合把点预测改为风险区间；长序列会换用另一 checkpoint，模型与代码采用专门许可，投入生产前核查条款和计算资源。仅核查仓库及模型卡，未下载权重实测。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>1～0.9 分位以排班和留安全余量。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2121178301100183905" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/continuousintelligence/ci" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/ContinuousIntelligence/ci-proto" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW_wQaWagAEgNcm?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW_wQaWagAEgNcm?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2120855190991482880/img/pcK56Xl0ErJUSo4n?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2120855190991482880/img/pcK56Xl0ErJUSo4n?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ UniMate：文本驱动不同骨架的 3D 动作</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源推理代码和模型权重可给人、四足动物或已绑定骨骼的物体生成短动作，不必每个角色单独训练；不是任意无骨骼图片一键变动画。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Friedrich-M/UniMate" target="_blank">https://github.com/Friedrich-M/UniMate ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>按模型卡下载推荐的 v3 checkpoint，以仓库内示例资产和英文动作描述运行采样脚本；自己的 GLB/glTF/FBX 先用 rig_preprocess 检查关节标签和朝向。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>把动画制作从固定人形模板扩到多骨架；但示例输出为60帧、30fps，代码 MIT 不等于权重可商用（CC BY-NC 4.0），Truebones 原素材也需另行授权。论文和代码早已公开，本期为首次选介，不冒充今日发布；未运行渲染。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2121187031522873414" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Friedrich-M/UniMate" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/Linzhan/UniMate" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2121184936061448192/img/CgatxXNMyzFMtZDs.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2121184936061448192/img/CgatxXNMyzFMtZDs.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ InstaBox：浏览器里开临时 Agent 云电脑</div>
+  <div class="section"><div class="section-label event">一句话</div><p>云端机器附桌面和 Chromium，免费档文档列出4 vCPU、8 GiB 内存、20 GiB 持久盘等条件，可选 Linux/Android 模板。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://instabox.sh/llms.txt" target="_blank">https://instabox.sh/llms.txt ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读官方免费计划和限制，按小众软件报道从官网以 GitHub 或 Google 注册，再开 agent-browser 模板供一次性 UI 自动化；用后检查机器是否暂停或关闭。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>可把不可信测试与本机环境隔离，小众软件报道30分钟空闲自动暂停；官方还限制免费机持续运行时长与机器数量，不能当永久在线服务器。未开机或核验剩余额度，不建议把生产密钥直接留在环境中。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2121134008020901954" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://instabox.sh/llms.txt" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.appinn.com/egg-instabox/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW_II_gX0AElnOF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW_II_gX0AElnOF?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ EverMe：让多个 Agent 共用可追溯的个人记忆</div>
+  <div class="section"><div class="section-label event">一句话</div><p>官方描述用 Memory Hub 将项目决定和笔记在不同 Agent/设备间复用，页面展示微信、飞书等通道及知识库连接。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://evermind.ai/everme" target="_blank">https://evermind.ai/everme ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看官网说明与隐私政策，仅用非敏感样本记一条项目决策，换另一个 Agent 查询是否正确提取原由，再决定是否接入真实笔记；不要盲粘官网的一键安装指令。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>跨 Agent 共享上下文有实际需求，但“限时免费”非永久价格承诺，网页展示的连接状态也不能证明个人账号已开通；涉及长期记忆应检查数据删除和共享边界。这里只读官方功能页，未安装测试。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ElliotChen/status/2121134269938679985" target="_blank"><span class="handle">@ElliotChen</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://evermind.ai/everme" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://evermind.ai/features" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HW0ChSkawAAnpsG?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HW0ChSkawAAnpsG?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LiquidCodec：可流式处理的语音编解码器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Liquid AI 提供 24kHz 语音离散编码、解码及流式缓存示例，可作为语音 Agent 输出链的一部分，并非完整语音助手。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/LiquidAI/Liquid-Codec" target="_blank">https://huggingface.co/LiquidAI/Liquid-Codec ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>按模型卡在支持的 Transformers 环境加载模型，先给短波形调用 encode/decode，再按单帧 cache 示例拼接流式输出；生产集成须核查 LFM Open License 和内存需求。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>编码器、模型端生成和解码器拆开，有利于定位语音交互延迟；流传的 M4 Max 倍速是官方单线程编解码自测，不能推断整套 TTS 的实际延迟。本刊已读模型卡和开发文档，未跑 benchmark。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2121140579572838573" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/LiquidAI/Liquid-Codec" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.liquid.ai/lfm/models/lfm3-audio-2b" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 欧拉讲题：数学题的动态板书与追问</div>
+  <div class="section"><div class="section-label event">一句话</div><p>网易有道开发的互动数学讲题应用，商店简介提到画图推演、错因分析与多轮答疑；第三方展示效果不等于本刊教学测评。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://sj.qq.com/appdetail/1112465827" target="_blank">https://sj.qq.com/appdetail/1112465827 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从应用宝开发者页核对版本和权限，再用一道自己熟悉的几何题观察其辅助线为什么这样画、追问变化条件，最后用标准解核对每步。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>把生成答案改成分步、可追问的讲解形式，适合帮助孩子发现卡点；但 AI 推导可能有错，教育效果需人工检验、未成年人数据授权需家长留意。商店页版本为0.5.2，非今天新上线。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/xiaohu/status/2121139346191286711" target="_blank"><span class="handle">@xiaohu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://sj.qq.com/appdetail/1112465827" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.pingwest.com/a/319275" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2121139129933348864/img/t5lK228IqVewoW1b.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2121139129933348864/img/t5lK228IqVewoW1b.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 llama.cpp v1.0.0：本地推理库为接口兼容立规矩</div>
+  <div class="section"><div class="section-label event">事件</div><p>ggml-org 在 GitHub 标注 v1.0.0 发布，官方公告称 libllama 与 libggml 以后以 major 版本标记公开 C API 的破坏性变化，minor 用于兼容新功能。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>对本地模型工具链的集成者，重点不是“模型突然更聪明”，而是能据版本号制定升级和二进制兼容策略；发行说明还列有清理旧 API 的提交。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>依赖底层 C 接口的应用升级前应在测试环境编译、检查移除接口；不应把 v1.0.0 解读为所有旧插件无痛兼容。
+链接：https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/julien_c/status/2121249804147732803" target="_blank"><span class="handle">@julien_c</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/blog/ggml-org/llama-cpp-v1" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Agent 单任务成本：作者建议用“每个已解决任务的成本”评估常驻 Agent 的可持续性；未取得可比的独立测试条件，不转述其比较数字 <a href="https://x.com/shao__meng/status/2121393784546267486" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="watchlist">
+  <h2>🎯 值得关注</h2>
+  <ul class="watch-list">
+    <li>会议 Agent 的外部参会者边界：一则用户反馈被转述，客户被划入外部人士可能让助手过度回避；需产品方复盘，不能把个例写成普遍故障 <a href="https://x.com/dotey/status/2121290779427520520" target="_blank">→</a></li>
+  </ul>
+</div>
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
