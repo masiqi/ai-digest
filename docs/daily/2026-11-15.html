@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-15</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-15</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>个人 Agent 正从“会回答”走向“有权限地替人办事”：Poppy 试图为企业接入建立身份、授权与发现机制；与此同时，持续运行的 Agent 必须把事件触发、权限和发件箱拆清楚。今天也有一批真正能上手或直接借鉴的工具，但“读过官方材料”不等于我们已安装实测。
+本期从X List页面有界采样：采到122条记录、29位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。覆盖不完整（partial）。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Poppy 1.0 企业实现套件：让个人 Agent 按授权找到企业服务</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Sierra 发布 Poppy v1.0，企业可发布发现文件并通过 OAuth 控制个人 Agent 的账户访问；Shopify 店铺已默认支持，Meta Muse 会优先探测。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://personalagentprotocol.org/kit/company" target="_blank">https://personalagentprotocol.org/kit/company ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>企业开发者先阅读规范和 kit，选定网站/API/MCP 的接入面，发布 poppy.json，再在测试部署中运行 kit 的校验器；不要直接把生产账户授权交给样例。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>从双边定制对接转向可复用的发现和授权协议，身份、会话与账户权限是不同层次。规范页面仍标 draft 1.0，kit 文档说明当前基于 0.4，生产接入要核对版本和用户确认边界；这里只核过来源，未部署。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2121415418854400187" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://personalagentprotocol.org/kit/company" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://sierra.ai/blog/releasing-poppy" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://personalagentprotocol.org/docs/1.0/spec" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXDICDKagAAE0jR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXDICDKagAAE0jR?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXBcKr1boAEgq2n?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXBcKr1boAEgq2n?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 达尔文.skill 3.0：评 Skill 不再只让评委读文档</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把技能优化的留存判据转到实跑输出的盲评和回归测试；官方同时发布了修正盲评输入污染的 3.0.1。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/darwin-skill/releases/tag/v3.0.0" target="_blank">https://github.com/alchaincyf/darwin-skill/releases/tag/v3.0.0 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在隔离项目中准备测试任务和基线，按项目 README 的 check/pair/tally 流程比较新版与旧版的产物，再人工决定保留或回滚；先核脚本权限和删除类操作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>技能说明写得漂亮不等于工具调用更省或结果更好；作者“多绕 33 次调用”是自报观察，非我们复现。11 月 12 日已刊的“小小达尔文”是不同实体，本项不是其升级。仅阅读发布说明，未运行。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2121744774877389261" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/alchaincyf/darwin-skill/releases/tag/v3.0.0" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/alchaincyf/darwin-skill/releases/tag/v3.0.1" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2121744268339601408/img/50yYlJnMHX2HUyKG.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2121744268339601408/img/50yYlJnMHX2HUyKG.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ FanBox v2.20.0：离开电脑时让 Agent 有节制地叫你</div>
+  <div class="section"><div class="section-label event">一句话</div><p>新增 fanbox-notify、飞书通知与微信值守，在终端 Agent 等用户、失败或完成时按条件发手机提醒。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/fanbox/releases/tag/v2.20.0" target="_blank">https://github.com/alchaincyf/fanbox/releases/tag/v2.20.0 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看 release 的平台与连接前提，升级后配置微信遥控或飞书；在终端用 fanbox-notify 发一条可测试提醒，再检查活跃抑制、夜间节流及误报。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>事件收件箱/定时/权限/发件箱把“持续体验”与模型常驻区分开；无人触发的唤醒仍可能消耗额度，电脑睡着无法无限值守。作者原帖中的新版功能与 v2.20.0 发布记录吻合，但未在本机安装。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2121535832859529725" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/alchaincyf/fanbox/releases/tag/v2.20.0" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2121535407380901888/img/K4pQm674wXsNvH83.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2121535407380901888/img/K4pQm674wXsNvH83.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mole CLI V1.71.0：清理之前先保护正在跑的构建和用户数据</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mac 新版在 mo purge 中避开仍被使用的构建目录，卸载默认保留 Buzz 模型与部分虚拟机数据；还修正 mo clean 对 Puppeteer 浏览器的误删风险。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/tw93/Mole/releases/tag/V1.71.0" target="_blank">https://github.com/tw93/Mole/releases/tag/V1.71.0 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在官方 release 核对版本和平台，使用 mo update 更新，再预览清理候选并检查保护清单，危险清理只在备份后确认；不是请你立刻一键删除。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>11 月 5 日已刊 Linux V0.4.0；这次新增的是 Mac V1.71.0 的实际安全 delta，官方发布说明可核，不是拿旧仓库根地址重复推荐。仅核发布记录，未执行清理。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2121521233221275758" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/tw93/Mole/releases/tag/V1.71.0" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXEmSUXbQAAh0vJ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXEmSUXbQAAh0vJ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DeepSeek 独立应用 API：从搜索、网页抓取到 OCR 与语音分项计费</div>
+  <div class="section"><div class="section-label event">一句话</div><p>官方定价页提供 Search/Fetch、文件解析/OCR、ASR/TTS 等服务的分项定价与指南；其中搜索和抓取列为每千次 0.75 美元。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://api-docs.deepseek.com/guides/search" target="_blank">https://api-docs.deepseek.com/guides/search ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先按官方 Search &amp; Fetch 指南用测试密钥发小规模请求，分别记录搜索、抓取、OCR/语音调用量，核对最新计费后再接入 RAG 或 Agent；不要把价格当永恒常量。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>这些是独立能力，而非 11 月 14 日已刊 chat-demo 前端；原帖跨厂商“十三分之一”的比较未核齐相同口径，不作结论。只读文档，未调用收费接口。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2121487460467421381" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://api-docs.deepseek.com/guides/search" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://api-docs.deepseek.com/quick_start/pricing?v=20260929c" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Hayabuild：让没有本地 Mac 的 Agent 走远程 iOS 构建链</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把 GitHub Actions 的 macOS runner 指向托管 Apple Silicon，支持 MCP 读日志、构建测试和经人批准的 TestFlight 发布。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://haya.build" target="_blank">https://haya.build ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>读官网 agent-setup 指引，在自己的测试仓库授权 GitHub App 并先改一个 workflow 的 runs-on，观察构建日志与缓存命中；发布环节须由账户主人自行授权签名材料、审阅发布权限。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>与租一台完整 Mac 不同，焦点是 CI 构建与发布链；官网仍是 early access、价格未公布，宣传速度不能当我们实测。签名和 TestFlight 的权限必须单独审核。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/turingou/status/2121451065782796436" target="_blank"><span class="handle">@turingou</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://haya.build" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://haya.build/agent-setup.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXDof-jbkAAN0xx?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXDof-jbkAAN0xx?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXDof9BbIAA3ZmY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXDof9BbIAA3ZmY?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXDof9NaAAAIIey?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXDof9NaAAAIIey?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ x-reply-mentioned：发帖时默认只让提及的人回复</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一款开源 Chromium 扩展，在 X 发帖框把回复权限自动设成“仅你提及的账号”。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/lijigang/x-reply-mentioned" target="_blank">https://github.com/lijigang/x-reply-mentioned ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>检查仓库源码后下载并在浏览器扩展页以开发者模式加载文件夹，打开草稿观察回复权限；真发帖前人工核对最终设置。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>减少公开发帖时反复改选项的操作；它不隐藏帖子，别人仍可转发引用，X 页面结构变化会让自动点击失效，且部分账号没有该控件。已读作者 README，未安装实测。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lijigang/status/2121443749217591365" target="_blank"><span class="handle">@lijigang</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/lijigang/x-reply-mentioned" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Shopify Cyber Chaos Monkey：生产安全测试必须有独立刹车</div>
+  <div class="section"><div class="section-label event">事件</div><p>Shopify 工程文章披露内部 Agent 利用源码和已知系统信息，在专用测试店铺对生产设施做授权攻防研究，另一监督 Agent 观察轨迹并能终止越界运行。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是 Shopify 自述的内部安全方法，不是可直接下载、对其他企业生产环境试攻的工具；隔离身份、最小权限和独立裁判比“模型更聪明”更重要。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>安全团队若借鉴，先定测试范围、实时监控、停止机制及人类审查；文章的产出与无事故说法属企业报告，未独立复核。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2121438053755683224" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://shopify.engineering/cyber-chaos-monkey" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXDcp-xaUAA5vaw?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXDcp-xaUAA5vaw?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude 安全评测：同一模型在不同接入面可差 34 个百分点</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 方法文章以 Fable 5.1 的多轮安全题为例，称 API 原始模型与 claude.ai 带系统提示的配置，其“恰当响应率”在某些评测上最多相差 34 个百分点。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是模型总体安全水平恒差 34 点；先固定样本、评分器、推理档和系统提示，再比较分数，还要报告置信区间。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>采购或自建评测时保留完整运行配置、设计贴近真实风险的题目，不能只按单轮拒绝率排名。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2121421243970990534" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.anthropic.com/research/building-strong-safety-evaluations" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXDNXiCbAAA9JIC?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXDNXiCbAAA9JIC?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 常驻 Agent 的五个原语：它睡着时系统也应继续负责</div>
+  <div class="section"><div class="section-label event">事件</div><p>Claude 官方文章按收件箱、计时器、记忆、权限、发件箱拆解“always-on”体验，Agent 大部分时候休眠，收到事件才运行。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>避免用一个常驻大模型会话承包所有可靠性；同一用户收件箱限制单活 worker，出站消息要排重与可回查。此处是架构指南，不是新托管产品的性能实测。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>定时巡检、消息提醒和长时任务都可按此设计崩溃恢复与权限控制；在合规场景须明确主动发送边界。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2121427594260398327" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://claude.com/resources/articles/building-always-on-agents" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Thinking Machines 的 4-bit 训练：关键是前后向分开处理</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究博客称 Inkling 2 Small 在 GB300 的 MoE 层前向用 NVFP4、反向用 MXFP8 与随机舍入；对比全 MXFP8，团队报告预训练墙钟时间快 8%、RL 快 20%。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>不是“全流程每一步都只用 4 bit”，也不是任意 GPU/模型都能复制该收益；通信和误差偏置仍是瓶颈。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>有大规模训练预算的团队可用作混合精度实验设计参考，需在自身硬件和质量指标上重测。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2121594565857878212" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://thinkingmachines.ai/blog/end-to-end-4-bit-training" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXFqYZEaIAAcCre?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXFqYZEaIAAcCre?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 animatic Skill：把 PR 审查讲解变成带旁白分镜，尚未稳定合并</div>
+  <div class="section"><div class="section-label event">事件</div><p>Matt Pocock 公开的 PR #1422 含 animatic 和 setup-animatic，后者配置语音、渲染和拼接工具，前者把变更写成分镜、生成视频并核验画面和声音。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>在公开 in-progress 分支可以研究、试验，但 PR 仍待合并；不能写成默认安装即可用的稳定正式版。与通常的 AI 视频生成不同，目标是让人更快看懂代码变更。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>代码审查者可关注 PR 合并状态、工具依赖和视频时长，不要拿视频替代对差异和测试的实际检查。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2121431531130617947" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/mattpocock/skills/pull/1422" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXDWue6a0AAOA20?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXDWue6a0AAOA20?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2121210624176779264/img/UY0n6nrEC1q0SaRu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2121210624176779264/img/UY0n6nrEC1q0SaRu?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Next Token 播客 Skill：主播称把九期节目做成 Agent 可检索的 Skill；未找到可独立核验的安装仓库与指引，证据待补，不宣称已试用 <a href="https://x.com/oran_ge/status/2121519358837129449" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
