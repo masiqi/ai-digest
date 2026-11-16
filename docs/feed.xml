@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Nov 2026 00:40:21 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 00:41:16 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/16 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-16.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-16.html</guid>
+      <description>AI Agent 的实用化同时向两端推进：一端是可以自己部署、改造的学习站、代码审查、浏览器操作和聊天入口；另一端是多用户协作、权限分配与代码库约束等可靠性问题。本期挑选了能核对项目页的具体工具，也保留尚未证实的早期信号。“verified”只表示编辑读过所列来源，没有安装、登录或跑通这些产品。
+本期从X List页面有界采样：采到125条记录、32位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。覆盖不完整（partial）。</description>
+      <pubDate>2026-11-16T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/15 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-15.html</link>

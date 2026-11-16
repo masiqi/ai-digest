@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-16</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-16</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>AI Agent 的实用化同时向两端推进：一端是可以自己部署、改造的学习站、代码审查、浏览器操作和聊天入口；另一端是多用户协作、权限分配与代码库约束等可靠性问题。本期挑选了能核对项目页的具体工具，也保留尚未证实的早期信号。“verified”只表示编辑读过所列来源，没有安装、登录或跑通这些产品。
+本期从X List页面有界采样：采到125条记录、32位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。覆盖不完整（partial）。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ BiliPicks：把 B 站教程编成没有推荐流的学习路线</div>
+  <div class="section"><div class="section-label event">一句话</div><p>作者公开的静态站用家长选出的 BV 视频组织关卡、动手任务和本机浏览器进度；这条 X 动态声称进一步让 Agent 参与升级，但正文被截断，新功能未能核实。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/limin112/bilipicks" target="_blank">https://github.com/limin112/bilipicks ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看公开演示，再 fork 仓库、本机打开 index.html；改 data.js 的视频清单和分阶段路径，用 update.py 检查失效视频与补元数据。电视版在仓库另有 tv.html，家长仍须人工筛选视频。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>推荐算法不负责孩子从入门到进阶的课程结构，策展人与任务设计才是关键。项目用 B 站官方嵌入，不绕过登录/会员限制；嵌入清晰度及移动端自动播放有限制。这里核对的是仓库 README，不是 Agent 新能力实测。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2122124913293291717" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/limin112/bilipicks" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2121992072597270528/img/wb6nUd_PkvXVsAAn.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2121992072597270528/img/wb6nUd_PkvXVsAAn.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ dsh-market：在 DeepSeek Harness Web 里找插件、更新插件</div>
+  <div class="section"><div class="section-label event">一句话</div><p>给 DSH Web 加一个可搜索、安装与更新社区插件的可视化市场，而不是新模型或通用插件安全认证。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://dshmarket.com" target="_blank">https://dshmarket.com ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>已经使用 DSH 的人可按项目文档执行 dsh plugin --profile web add dshmarket，重启 dsh web 后在 Plugins → Plugin Market 浏览；每次安装第三方插件前单独核对作者、来源、权限和更新记录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>减少找插件和升级的摩擦，但目录收录不等于代码安全。只读项目官网与仓库，未在本机安装、未验证任何具体插件。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Barret_China/status/2121949262942720331" target="_blank"><span class="handle">@Barret_China</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://dshmarket.com" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/dsh-market/dsh-market" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ action-fight-prompt：让 AI 打戏提示词有因果和镜头时序</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Director Skills 中的专项 Skill 把人物资产、分段时间、动作因果、环境反馈和音效约束连成打戏提示词工作流。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/kangarooking/director-skills/blob/main/action-fight-prompt/SKILL.md" target="_blank">https://github.com/kangarooking/director-skills/blob/main/action-fight-prompt/SKILL.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在仓库阅读 Skill 与 references，按打戏题材选样例，把 15 秒场景先拆成蓄力/交锋/收尾的镜头表，再用自己的模型生成短片并逐镜检查穿模、瞬移、镜头位置与衔接。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>比笼统要求“电影感”更方便定位失败镜头。转帖称有188个镜头块及检查脚本，当前核过的技能主文档不能证实该数字和脚本，故不作保证；未生成成片。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2121947751743205383" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/kangarooking/director-skills/blob/main/action-fight-prompt/SKILL.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/kangarooking/director-skills/blob/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2121938180274573313/img/pt9x1LDoTPsNUq8x.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2121938180274573313/img/pt9x1LDoTPsNUq8x.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ UU远程伴侣：手机远控 Mac 自动配一块同分辨率虚拟屏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源菜单栏小工具配合 UU远程，在手机或平板连接 Mac 时准备 HiDPI 虚拟显示器，可选临时关闭其他屏，断开后尝试恢复。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/aoyamashou/UUyc-companion" target="_blank">https://github.com/aoyamashou/UUyc-companion ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看 README 的系统要求与 Releases；在被控 Mac 上安装，授予所需辅助功能权限，从 UU远程导入设备并填写手机的物理分辨率，首次只开虚拟屏而不关闭实体屏，确认远程端选到了新屏再考虑其他选项。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方 UU远程的虚拟屏入口对手机主控端有限制，此工具针对折叠屏画面比例做自动匹配；它不是网易官方软件，用未公开的 macOS 显示接口，系统升级可能失效。先保存工作并记住恢复快捷键，未在本机实测断线恢复。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2121946496119533937" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/aoyamashou/UUyc-companion" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://uuyc.163.com/help/virtualscreen.html" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXKrF9oWgAAdR1_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXKrF9oWgAAdR1_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenCodeReview：用规则加模型审查 PR，标注到具体代码行</div>
+  <div class="section"><div class="section-label event">一句话</div><p>阿里开源的 OCR CLI 把确定性检查和 LLM 审查结合，并提供 Claude Code、Codex 等接入插件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alibaba/open-code-review" target="_blank">https://github.com/alibaba/open-code-review ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在隔离的测试仓库按 README 安装 @alibaba-group/open-code-review，配置并测试所用模型再跑 ocr review；若不想再配 OCR 模型，先读 delegation 模式的权限和费用说明，使用现有编码代理执行审查。开发机要满足文档的 Git 版本前提。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>审查意见可精确落到文件/行，并可在会话查看器里追踪处理状态；模型发现并不代替运行测试或人工判定误报。这里只核过官方仓库与插件文档，未调用 API、未跑审查。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2121934388363768062" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/alibaba/open-code-review" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/alibaba/open-code-review/blob/main/plugins/open-code-review/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXKgEpBaYAAlXmI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXKgEpBaYAAlXmI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WeClaw 网页版个人 Agent：在聊天里调度后台与可选本机设备</div>
+  <div class="section"><div class="section-label event">一句话</div><p>weclaw.im 官网展示扫码聊天、自定义角色与可选连接自己电脑的服务入口；注意不要把同名开源微信桥接仓库的版本与该云服务混为一谈。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://weclaw.im" target="_blank">https://weclaw.im ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在官网核对服务条款和账号/设备授权，选一个非敏感任务体验聊天；若连接电脑，让本地执行保持逐步授权，勿直接开放邮箱、密钥或私人目录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>把聊天前台与后面的研究、写作、本机编程协作放到单一入口；作者还提私有数据连接器，但网页材料不足以独立核对这些连接器的实现和收费。这里只读了官网，未扫码或接设备。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/idoubicc/status/2121851386040361224" target="_blank"><span class="handle">@idoubicc</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://weclaw.im" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXJPUi2bgAAfOT7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXJPUi2bgAAfOT7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mearl：浏览器动作、快照与调试信息给 Agent 同一环境</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源浏览器工作环境可连接日常 Chrome 扩展或 CDP 浏览器，让 Agent 点击、读取页面快照和检查网络/日志；真实能力取决于连接方式。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mearlhq/mearl" target="_blank">https://github.com/mearlhq/mearl ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看 README 所需 Node 版本，按 npx @mearl/setup 准备 CLI；使用日常浏览器需自己安装扩展并启用 Agent 服务，运行 mearl check 与 mearl browser_list 确认目标环境，再从只读测试页开始观察点击前后快照。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>任务执行和读回状态放在同一浏览器上下文，但不是免权限、免审核的网页代理。扩展能接触登录页和网络信息，先限定测试站点；本文未安装或连接 Chrome。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2121835206160105742" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/mearlhq/mearl" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Renoise Android 入口：手机数字人工作流有了可核应用页</div>
+  <div class="section"><div class="section-label event">一句话</div><p>继前期手机端口播演示线索后，Google Play 已能找到 Renoise: AI Image &amp; Video 应用页；官网另有 Wan 3.0 模型说明。商店页本身不证明“三步完成”或最低价。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://play.google.com/store/apps/details?id=ai.renoise.android" target="_blank">https://play.google.com/store/apps/details?id=ai.renoise.android ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>有 Android 设备的用户可从商店页核对开发者与权限，再试非隐私的素材和短片；根据 Renoise 模型页选择时长/分辨率，生成前核对当下积分价格，不要把过期促销当长期免费。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>从昨日已刊的手机口播线索走到可核安装入口，是实际新 delta；AI 数字人的肖像授权、素材上传及持续计费都要事先确认。已读商店和官网，未安装或测生成。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2121981453521350984" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://play.google.com/store/apps/details?id=ai.renoise.android" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://renoise.ai/models/wan-3" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2114574384983838720/img/py1mU431BT9d4zYB?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2114574384983838720/img/py1mU431BT9d4zYB?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Anthropic 多用户协作研究：共享资源时多个私人 Agent 未必胜过一个协调者</div>
+  <div class="section"><div class="section-label event">事件</div><p>Anthropic 研究在共享预算、诊所日历、团队订购及合并队列的模拟任务中比较每人各有 Agent 与单一协调 Agent；其文中报告各场景团队结果更差，并开放 MAMUBench 部分环境。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>不是“所有多 Agent 一定失败”。研究强调任务冲突、沟通与越权会使总结果下降；仓库说明公开基准的三类环境共74个场景，另有可运行的合并队列。论文指标和结论属于其测试设定，本报未重跑。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>多人共享 API 额度或代码发布窗口时，建立统一预算闸、明确谁能修改他人任务，并同时看群体结果和个体越权行为。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2121789847270469699" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://alignment.anthropic.com/2026/worse-together" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/safety-research/MAMUBench" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXIceGPbEAA4uM-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXIceGPbEAA4uM-?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 YC 访谈 Grok Bot 团队：Bot 要从小任务逐步获得工作权限</div>
+  <div class="section"><div class="section-label event">事件</div><p>YC Lightcone 邀 Grok Bot 的 Lauren Tan 与 Roman Ugarte 访谈；受访者说从第一行代码到上线用了约七周，描述了团队内部从小任务、目标到完整岗位逐步授予工具和预算的过程。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>身份、权限、常驻运行和团队协作是产品设计议题，不是“给机器人全权访问”的借口。转写是受访者陈述，非独立审计；与此前仅报道 Grok Bot 1.0 产品线索不同，本项聚焦团队落地经验。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>企业引入 AI 同事可先设身份/预算/最小权限和可回查日志，按实际执行证据再扩大可操作范围。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2121791852559188373" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.youtube.com/watch?v=y1-9yeYLJUo" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXIeb79a8AAHw4d?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXIeb79a8AAHw4d?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2121454850047422464/img/CD8lGxUM3ctk4OqK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2121454850047422464/img/CD8lGxUM3ctk4OqK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Lauren Tan：把代理反复犯的错写进代码库约束</div>
+  <div class="section"><div class="section-label event">事件</div><p>AI Engineer 的演讲《All Code Is Slop (Except Mine)》主张把反复出现的错误转成 API 设计、lint、类型和测试，再让 Agent 做运行验证，而不是不断向 AGENTS.md 添加劝诫。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>她举例限制特定产品代码里易被误用的 useEffect、禁止 Electron 主/渲染进程的错误导入；这是该团队的架构选择，不是所有仓库都应禁用同类 API。团队产出和回退率是自报，非对照实验。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>先把“错误选择”变得难以提交，再谈无人值守的自动合并；验收证据可用可复现测试、截图或状态图，而非只看 PR 数。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2121835140850602200" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://ai.engineer/code/2026/talks/lauren-tan" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.youtube.com/watch?v=O_zcc6Xl12g" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXJFIduW4AALFDa?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXJFIduW4AALFDa?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXJFKEZWEAAoewn?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXJFKEZWEAAoewn?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXJFLVMWcAAnsl4?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXJFLVMWcAAnsl4?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXJFNJyXIAAPXzR?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXJFNJyXIAAPXzR?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXJFOOXWsAA-Mlf?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXJFOOXWsAA-Mlf?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXJFPA_WwAArLNZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXJFPA_WwAArLNZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>豆仓录音豆：作者预告将开源 Mac 连接安克录音豆、录制系统/本机音频并接模型转录的项目；目前只见预告，仓库和兼容性待核，不要与已刊 Soundcore Manager 混同 <a href="https://x.com/berryxia/status/2121891858737446963" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
