@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 16 Nov 2026 00:41:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 00:39:24 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/17 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-17.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-17.html</guid>
+      <description>从一个能写代码的 Agent，走向可复核的交付流程与真实任务评测：腾讯 LoopForge 把角色、沙箱、审批和 PR 串起来，Together 的案例提醒团队检查工具文档、API 错误与 Skill 是否真的帮 Agent 完成任务。另一条务实路线是把散落的音频、健康记录和旧设备变成可检索、可控制的本地工作台。本期工具仅核对公开仓库和文档，未安装实测；涉及健康数据、设备权限和云模型时须单独审查边界。
+本期从X List页面有界采样，覆盖不完整：采到111条记录、33位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list...</description>
+      <pubDate>2026-11-17T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/16 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-16.html</link>

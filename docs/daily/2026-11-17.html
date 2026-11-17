@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-17</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-17</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>从一个能写代码的 Agent，走向可复核的交付流程与真实任务评测：腾讯 LoopForge 把角色、沙箱、审批和 PR 串起来，Together 的案例提醒团队检查工具文档、API 错误与 Skill 是否真的帮 Agent 完成任务。另一条务实路线是把散落的音频、健康记录和旧设备变成可检索、可控制的本地工作台。本期工具仅核对公开仓库和文档，未安装实测；涉及健康数据、设备权限和云模型时须单独审查边界。
+本期从X List页面有界采样，覆盖不完整：采到111条记录、33位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ LoopForge：把 Coding Agents 组织成可复核的团队交付流水线</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在一个自托管工作台里，让主 Bot 调度现有编码 CLI，或把 Agent、脚本与人工批准编排成可重用的 SOP，留下沙箱、产物和审查节点。
+原文：https://x.com/shao__meng/status/2122473384403710005</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Tencent/LoopForge/blob/main/README.md" target="_blank">https://github.com/Tencent/LoopForge/blob/main/README.md ↗</a></p>
+    <p><a href="https://github.com/Tencent/LoopForge/releases/tag/v0.3.9-rc.1" target="_blank">https://github.com/Tencent/LoopForge/releases/tag/v0.3.9-rc.1 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在可信环境克隆仓库，检查 compose.yaml 后执行 ./start.sh；用免模型密钥的演示项目跑“脚本+人工批准”，再连自己的模型凭据与代码仓库尝试需求→PR。为什么值得看：让测试、评审、返工和签收成为显式节点，而不是事后翻聊天记录。应用场景：多人团队反复交付相似的修 bug/前后端需求。限制：需要 Docker/网络与凭据；服务默认监听 0.0.0.0:8090，暴露公网前必须限制访问并配置 HTTPS。这里核实的是 README 与 release，不是我们跑通了交付。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>0.0.0:8090，暴露公网前必须限制访问并配置 HTTPS。这里核实的是 README 与 release，不是我们跑通了交付。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2122473384403710005" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Tencent/LoopForge/blob/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Tencent/LoopForge/releases/tag/v0.3.9-rc.1" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXSKSYKbAAAugJe?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXSKSYKbAAAugJe?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ PhoneBox：旧安卓手机变 AI 编码会话和电脑状态面板</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Android 手机配桌面 agent，通过 USB 或配对 Wi-Fi 显示系统指标、Claude/Codex 配额及本地会话，也可作为快捷操作台。
+原文：https://x.com/Gorden_Sun/status/2122341734499983739</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/ersinkoc/phonebox" target="_blank">https://github.com/ersinkoc/phonebox ↗</a></p>
+    <p><a href="https://github.com/ersinkoc/phonebox/releases/tag/v0.9.12" target="_blank">https://github.com/ersinkoc/phonebox/releases/tag/v0.9.12 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>确认手机 Android 7+，从 release 下载电脑端与 APK；先审安装脚本和权限说明，再在本机设置页选 AI sessions/系统状态模板，以 USB 或 Wi-Fi 配对。为什么值得看：把闲置手机用于看 Agent 进度和权限提示；v0.9.12 官方发布说明还修复配额读取的网络与缓存问题。应用场景：桌面上持续观察本地开发会话、系统负载和 CI。限制：USB 要授权调试，Wi-Fi 需配对；手机上的允许/拒绝权限操作要按可信设备管理，平台支持不等于所有硬件指标均可取。未实机测试。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2122341734499983739" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/ersinkoc/phonebox" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/ersinkoc/phonebox/releases/tag/v0.9.12" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2122341660743057408/img/xkjLyQeI1ZbVPfOk.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2122341660743057408/img/xkjLyQeI1ZbVPfOk.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Pake CLI：将网页封装为独立桌面应用</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用开源 CLI 把网站或本地前端打包成基于系统 WebView 的桌面窗口，不必为每个工具从零写客户端。
+原文：https://x.com/HiTw93/status/2122339080101060730</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://pake.run" target="_blank">https://pake.run ↗</a></p>
+    <p><a href="https://pake.run/docs/cli/getting-started" target="_blank">https://pake.run/docs/cli/getting-started ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>准备 Node.js 20.9+ 与 Rust 1.85+ 以及对应系统编译工具，安装 pake-cli 后按官网入门示例用 pake 命令打包一个普通网页；先用不含敏感账户的页面试。为什么值得看：已有前端可以较快产生窗口和安装包，CLI 仍免费开源。应用场景：内部看板、常用网页工具、自己的静态前端。限制：首编译需下载依赖，OAuth 与嵌入 WebView 的登录可能被网站阻断；官网图形客户端状态与原帖商业说法不能混为已验证可用。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2122339080101060730" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://pake.run" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://pake.run/docs/cli/getting-started" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2122338766065221632/img/ghqQEHFYIrrkkB5-.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2122338766065221632/img/ghqQEHFYIrrkkB5-.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mirobody：将体检、可穿戴与基因记录做成可溯源的个人健康数据底座</div>
+  <div class="section"><div class="section-label event">一句话</div><p>自托管项目将名称/单位不一致的指标标准化，回答问题时追溯到原报告，并提供 MCP 供自己的 Agent 查询。
+原文：https://x.com/Gorden_Sun/status/2122275196078063849</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/thetahealth/mirobody" target="_blank">https://github.com/thetahealth/mirobody ↗</a></p>
+    <p><a href="https://docs.mirobody.ai/en" target="_blank">https://docs.mirobody.ai/en ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先用官方 Docker 路线和合成演示数据体验报告导入、标准化与问答；确定隐私需求后再选云模型或本地 llama.cpp，并按需连接 MCP 客户端。为什么值得看：把“这次某指标比去年高了吗”的问题留在有源文件、单位和时间线的数据里。应用场景：整理多家机构体检结果与个人长期趋势。限制：这不是诊断或处方工具；自托管数据仍需备份、访问控制与模型出口评估，我们未对真实病历做准确性验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2122275196078063849" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/thetahealth/mirobody" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.mirobody.ai/en" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2122274794511228928/img/87AfZ9fN1wJ7A0au.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2122274794511228928/img/87AfZ9fN1wJ7A0au.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ BeanPod 0.1.0：昨日开源预告今天有了仓库和可下载 DMG</div>
+  <div class="section"><div class="section-label event">一句话</div><p>原生 Mac 录音整理工具可连接 Anker D3200，也支持无设备时本机录音或导入音频，本机转写并组织纪要/待办。
+原文：https://x.com/berryxia/status/2122262173842042936</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/andyhuo520/beanpod/blob/main/README.md" target="_blank">https://github.com/andyhuo520/beanpod/blob/main/README.md ↗</a></p>
+    <p><a href="https://github.com/andyhuo520/beanpod/releases/tag/v0.1.0" target="_blank">https://github.com/andyhuo520/beanpod/releases/tag/v0.1.0 ↗</a></p>
+  </div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2122262173842042936" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/andyhuo520/beanpod/blob/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/andyhuo520/beanpod/releases/tag/v0.1.0" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2121891022280196096/img/2VCjNvFFRlOPZB-L.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2121891022280196096/img/2VCjNvFFRlOPZB-L.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Together：用 Agent 实际任务回放检验开发者工具是否好用</div>
+  <div class="section"><div class="section-label event">事件</div><p>Together 发布内部 Agent 评测实践，覆盖 SDK、CLI、文档、MCP 与 Skills；发现示例输出被误认实时资源、Skill 错指营销页等失败路径，并据回放修改文档与 API。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>把真实开发任务、工具调用轨迹、完成/部分完成判定接起来，比“文档看上去完整”更接近 Agent 的实际使用障碍。影响：维护 API/Skill 的团队可先收集失败样本，再针对性改示例标记、错误信息和定价/资源查询入口。文中 67%→96% 等通过率属于其内部不同时期的配置与样本，官方明确不是严格受控比较，不能解释成普适性能增益；文中所称评测包“下周开源”尚不是现成下载项。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>维护 API/Skill 的团队可先收集失败样本，再针对性改示例标记、错误信息和定价/资源查询入口。文中 67%→96% 等通过率属于其内部不同时期的配置与样本，官方明确不是严格受控比较，不能解释成普适性能增益；文中所称评测包“下周开源”尚不是现成下载项。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2122486376981795286" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://together.ai/blog/how-we-do-agent-evals-at-together-ai" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXSWGegbAAAfovK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXSWGegbAAAfovK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Philipp Schmid 讲座：精简 Agent harness 要同时看成功率与路径成本</div>
+  <div class="section"><div class="section-label event">事件</div><p>AI Engineer 发布 Google DeepMind Philipp Schmid 的演讲整理、时间戳与录像，比较 shell、附加媒体能力和专门工具等不同 harness 方案。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>同样完成任务的 Agent，工具往返次数、token、缓存与耗时可能差很多；新模型应重新评估过去为旧模型补的复杂脚手架。影响：做编码 Agent 时可在隔离任务集上删减冗余工具、保留媒体与权限门禁，逐项记录成本/正确性。官方说明约 350 项任务各跑一次，小幅成功率差异可能是噪音；“删 90%”是演讲标题与实验经验，不是任何生产环境的安全许可。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>做编码 Agent 时可在隔离任务集上删减冗余工具、保留媒体与权限门禁，逐项记录成本/正确性。官方说明约 350 项任务各跑一次，小幅成功率差异可能是噪音；“删 90%”是演讲标题与实验经验，不是任何生产环境的安全许可。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2122211754763489767" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://ai.engineer/code/2026/talks/philipp-schmid" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 No AI Slop 宣言：把规模化生成的责任落回人类审核</div>
+  <div class="section"><div class="section-label event">事件</div><p>一个公开倡议把“提交数量、覆盖面”与“可信赖、质量和责任”相对照，呼吁对发布或部署的 AI 产物保留人审、透明标注和可追责流程。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是一份价值主张，不是新的质量认证或统计证据。影响：团队可以把“有来源、可复现、可回滚、责任人签收”写入自己项目的产出门禁，而非仅引用宣言的口号；效果需要各自量化验证。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>团队可以把“有来源、可复现、可回滚、责任人签收”写入自己项目的产出门禁，而非仅引用宣言的口号；效果需要各自量化验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2122156731300212773" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://slopmanifesto.com" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXNqP8IasAA-Cs-?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXNqP8IasAA-Cs-?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXGiF9MbAAEvNTu?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXGiF9MbAAEvNTu?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>AI 视频播客精读软件：向阳乔木预告本地转写、AI 问答与精选频道精读文章，称争取本周开源；目前只有预告，未见可核安装包，不能当成已可用工具 <a href="https://x.com/vista8/status/2122350514591711512" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
