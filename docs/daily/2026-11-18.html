@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-18</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-18</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天有两条清楚的方向：一是 GPT-6.2 Astra / Sol 进入 Work、Codex 与 API，选型要同时比较任务质量、调用成本和权限；二是开发者把 Agent 的「可控执行」变成可复用产品——命令沙箱、同仓经验复用、UI 行为约束，以及视频、播客、字体等真正可交付的工具。以下 verified 表示已核对公开产品页、仓库或官方说明，不表示本站安装或实测；模型跑分、宣传复刻率、企业财务与无原始证据的传言不作为事实。
+本期从X List页面有界采样：采到122条记录、29位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。本次采集覆盖不完整。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ SubCast 声渡：昨天的预告，今天有源码、安装包和新版本</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源桌面应用把播客/YouTube订阅、双语逐句字幕、本地语音识别和带时间点的AI问答整合在一起。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://subcast.qiaomu.ai" target="_blank">https://subcast.qiaomu.ai ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>进入官网选平台安装包；添加播客RSS或节目名，打开双语字幕，按时间点回听；要问答再配自己的模型Key。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>昨日仅有早期软件预告；今天公开下载与AGPL仓库，v0.2.8 release列出播放和长音频转写内存改进，是可核实增量。注意匿名字幕分享默认开启可关闭；云端识别/问答按服务商计费，Windows/Linux构建未由作者完整实机验证。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给海外英语播客做英语学习笔记，或把长访谈定位到某句原话。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2122712564937462241" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://subcast.qiaomu.ai" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/joeseesun/subcast/releases/tag/v0.2.8" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenMotion：参考视频到可编辑的动效工程</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源视频动效工作台把参考片、品牌素材和可复用的 MOTION.md 规则交给代理生成、编辑、渲染。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/openmotion" target="_blank">https://github.com/nexu-io/openmotion ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看中文README和示例，用自己的素材建工程；按需要接已有编码代理与自备模型密钥，再核对渲染视频和源码。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>区别于普通文生视频，它更强调镜头/字幕/转场的可编辑结构；「还原95%」「剪映平替」「300+规则」属项目方口径，未见统一独立评测，第三方素材版权和仓库内组件授权仍要逐项审阅。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>将已有品牌片的节奏改编成新品短视频，团队人工把关相似性。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/tuturetom/status/2122633782654370068" target="_blank"><span class="handle">@tuturetom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/nexu-io/openmotion" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/nexu-io/openmotion/blob/main/README.zh-CN.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2122632818870411264/img/oBaBRQiQyhwjxdDF.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2122632818870411264/img/oBaBRQiQyhwjxdDF.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Punchcutter：照片做英文字体，也能从描述设计字体</div>
+  <div class="section"><div class="section-label event">一句话</div><p>将手写纸或独立字母的照片生成可安装英文字体，附字距、字偶距和预览 Studio。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/byrishi/punchcutter" target="_blank">https://github.com/byrishi/punchcutter ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>按文档安装 Python 3.10+ 和 Skill；打印官方两页模板用深色笔写、拍清楚四角，交给 Agent 生成 proof，错字先改映射再导出。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库与手写教程可读，单张随手照缺少的字母由引擎补形，不等于忠实复刻全部手写；当前主要是拉丁字母印刷体，不能把它当中文造字服务，字体效果待自己试。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>个人英文品牌标题字体、小型海报的原创字形草稿。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2122756978216976509" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/byrishi/punchcutter" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://byrishi.github.io/punchcutter/handwriting.html" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXWL5OaasAAMUch?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXWL5OaasAAMUch?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ UI SDK：给 Agent 一组会处理焦点与键盘的界面行为</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Vercel Labs 的 beta 行为层覆盖弹窗、选择、输入联想、焦点管理与 ARIA，可在多种前端框架组装组件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/vercel-labs/ui" target="_blank">https://github.com/vercel-labs/ui ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>React 项目安装 @ui-sdk/react 和 @ui-sdk/core，给 Agent 官方 UI SDK skill 与组件文档，让它先做搜索框再验证清空按钮的焦点回归。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>核心价值不是「一键生成 Vercel 黑白灰设计」，而是把交互边界和无障碍行为做成可检验原语；React/Vue/Svelte/Solid/Web Components 有适配，beta API 可能改动。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>让编码代理在现有设计系统里写下拉菜单、表单和对话框，同时检查键盘路径。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2122749798348698021" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/vercel-labs/ui" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://ui-sdk.dev/docs" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXWEvITbkAAZNq8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXWEvITbkAAZNq8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Datasette Lite：完整 Python 数据应用搬进浏览器</div>
+  <div class="section"><div class="section-label event">一句话</div><p>作者新重写用 Service Worker 拦截资源请求，转发给运行 Pyodide 的 Web Worker，而不是旧版仅把 HTML 注入页面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://simonwillison.net/2026/Nov/17/datasette-lite" target="_blank">https://simonwillison.net/2026/Nov/17/datasette-lite ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开在线版，用支持 CORS 的 SQLite 数据文件 URL 加载；需要地图展示时在参数中加对应插件，分享包含版本号的链接复现问题。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方 11/17 技术文章给出具体 bug 的旧版/新版双链接；浏览器内试 SQL 和插件减少临时服务器成本，但大数据、外部数据库与插件兼容仍受浏览器和 WebAssembly 环境限制。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>给同事发送一个无需部署后端的数据库问题复现页面。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2122746008736276734" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://simonwillison.net/2026/Nov/17/datasette-lite" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://lite.datasette.io/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ External Sandboxes：Agent 留在 Mac，命令进受限 Linux</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Simon Willison 与 Prime Radiant 发布 v86、Apple Container、Quicksand/QEMU 三种共享协议的外部命令沙箱原型。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://blog.primeradiant.com/external-sandboxes-for-coding-agents" target="_blank">https://blog.primeradiant.com/external-sandboxes-for-coding-agents ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方教程在单独终端启动 v86，指定仅挂载目标工程并限制网络白名单；另一终端配置 Pi/Claude Code/Codex 把执行请求指向本机 localhost API。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>命令和挂载文件可被代理访问，代理本身仍在宿主机；读写挂载仍可能被破坏，实验原型未经敏感工作负载所需安全审计，不能说已消除提示注入风险。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>试跑不可信仓库的自动测试或让较弱模型试写代码时缩小可执行权限。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2122530748213411950" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://blog.primeradiant.com/external-sandboxes-for-coding-agents" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/prime-radiant-inc/external-sandbox" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXS-dWSaEAAUQ6a?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXS-dWSaEAAUQ6a?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXSiyAmbIAAgeUI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXSiyAmbIAAgeUI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ TokenEconomizer：让编码代理少重走同一个仓库的弯路</div>
+  <div class="section"><div class="section-label event">一句话</div><p>研究团队的插件从既有会话提炼微技能、收紧工具使用并阻断失败循环，不改底层模型权重。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/microsoft/TokenEconomizer" target="_blank">https://github.com/microsoft/TokenEconomizer ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在受支持的编码 Agent 上按仓库 README 安装插件，挑同一仓库几项可重复任务对照记录成功率、token和总费用；先核查当前 Agent 的适配状态。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>微软研究文章和 Apache-2.0 仓库已核；论文的节约是在特定基准、顺序任务和适配配置下测得，不是对每个仓库保证省钱，学到的内容留在本机。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>长期维护同一代码库时，减少代理反复探路和重复工具调用。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2122507586541166850" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/microsoft/TokenEconomizer" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.microsoft.com/en-us/research/blog/tokeneconomizer-learning-from-experience-to-make-ai-coding-agents-more-efficient/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXSpYiWbIAAbwNi?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXSpYiWbIAAbwNi?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXRn103WMAA7143?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXRn103WMAA7143?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Karpo Decision 31B：不生成长文，直接给候选动作打概率</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 Gemma 4 31B 的专用读出头按状态与类型化问题一次前向输出选项概率，适合路由和排序。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/MachinePulseAI/karpo-decision-31B" target="_blank">https://huggingface.co/MachinePulseAI/karpo-decision-31B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>读模型卡及推理代码，准备 Python 3.12+、GPU 与约62.5GB权重，再将工具选择描述成 choice 问题；对低置信输出保留人工复核。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>和已刊 Gemini Decisions API 不是同一实体；榜单名次来自项目卡引用，未经本期独立复测。推理代码 Apache-2.0，但权重另受 MachinePulse Community License 限制，部分商用须另议。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>多工具 Agent 的候选工具选择、安全审批前的辅助概率层。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2122698334809071942" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/MachinePulseAI/karpo-decision-31B" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/machinepulse-ai/karpo-decision" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXVWRnzbYAAoCuZ?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXVWRnzbYAAoCuZ?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2122315414076268544/img/pELju2PmuYyGR930?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2122315414076268544/img/pELju2PmuYyGR930?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Zoom Slides：把会议材料直接做成可编辑汇报稿</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Zoom 产品页与入门指南支持以会议内容、文档或提示词生成和编辑演示文稿，并可导出 PPTX。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.zoom.com/en/products/ai-slides" target="_blank">https://www.zoom.com/en/products/ai-slides ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在 Zoom Hub 选择 Slides，指定面向谁汇报、几页与保留哪些结论，再用团队品牌和原会议记录核查每张幻灯片。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>它从会后现有上下文起稿，减少重新复制纪要；AI 提炼可能漏掉决策前提，套餐/企业管理员权限与导出保真度要自行核对；帖中配音等扩展未据官方材料确认，故不作承诺。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>销售复盘、项目周会后的客户简报。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2122754446023401868" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.zoom.com/en/products/ai-slides" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.zoom.com/en/blog/zoom-slides-getting-started" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXWJDzFaEAAI2fF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXWJDzFaEAAI2fF?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GPT-6.2 Astra / Sol 发布：强模型与常用模型分层</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 11月17日宣布两款型号进入 ChatGPT Work、Codex 及 API：gpt-6.2-astra 偏复杂任务，gpt-6.2-sol 偏日常编码写作。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>先用相同任务样本对比成功率和每任务总花费，不将厂商榜单不同推理档分数机械横比；Astra 标准 API 输入/输出每百万 token 8/40 美元，Sol 2/10 美元，缓存价格和 Ultrafast 档单独计算。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>已读官方公告与 Codex 更新页；可用套餐、组织开关和速率档随账号变化。转载帖中 5.2 是笔误，不是另一型号。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2122755808689549335" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://openai.com/index/introducing-gpt-6-2-astra-sol" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://developers.openai.com/codex/whats-new/gpt-62-astra-sol" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2122746240823943168/img/osC4AgQC_BfZl2EH?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2122746240823943168/img/osC4AgQC_BfZl2EH?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Jane Street：校园软件工程师现场面试试点加入 AI Coding</div>
+  <div class="section"><div class="section-label event">事件</div><p>Jane Street 博客披露面试试验：部分环节少写代码，转向系统设计、检查代码质量/意图和用 LLM 生成代码。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是「以后都不考手写代码」；公司明确说多数轮仍是禁用 LLM 的传统编程面试。对求职者的启发是练习解释设计取舍与验收 AI 生成代码。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>影响首先限于该公司校园候选 onsite 试点，不能外推整个行业已全面改变。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2122489411086803199" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://blog.janestreet.com/software-engineering-interviews-are-changing-a-little" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXSY2_sakAEImM8?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXSY2_sakAEImM8?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>ArtCraft 演讲中的 Photoshop 复刻：开源产品存在；「24小时复刻」的功能边界和原演讲尚待核，不当作完整替代 <a href="https://x.com/shao__meng/status/2122849152648528045" target="_blank">→</a></li>
+    <li>人类写作的过程留痕：workings 与 wintertext 等尝试记录写作过程；水印不能单独证明全文由人类原创，机制待补证 <a href="https://x.com/vista8/status/2122755870593527943" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

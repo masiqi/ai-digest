@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 17 Nov 2026 00:39:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 00:41:03 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/18 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-18.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-18.html</guid>
+      <description>今天有两条清楚的方向：一是 GPT-6.2 Astra / Sol 进入 Work、Codex 与 API，选型要同时比较任务质量、调用成本和权限；二是开发者把 Agent 的「可控执行」变成可复用产品——命令沙箱、同仓经验复用、UI 行为约束，以及视频、播客、字体等真正可交付的工具。以下 verified 表示已核对公开产品页、仓库或官方说明，不表示本站安装或实测；模型跑分、宣传复刻率、企业财务与无原始证据的传言不作为事实。
+本期从X List页面有界采样：采到122条记录、29位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bound...</description>
+      <pubDate>2026-11-18T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/17 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-17.html</link>
