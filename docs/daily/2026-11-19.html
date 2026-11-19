@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-19</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-19</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的重点是“把 Agent 的能力变成可检查的工作”：搜索要有基线，构建提速要区分缓存，统一模型入口要说明故障和隐私，英语学习更新要有实际版本。Neon 与 Genie 的发布值得看，但实用入口和边界比排行榜口号更重要。
+覆盖不完整。本期从X List页面有界采样：采到108条记录、32位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。
+108条DOM记录对应87个唯一ID。门禁记录5次API响应，其中真实List timeline响应1次且已解析；50次滚动不是50个目标分页，不代表所有成员。
+本期实际阅读全部108份variants，并对照11月12日至18日七期已刊正文；日历窗无缺日。所有工具为公开主源/文档核验，未安装、未调用付费API、未购买或GPU实测。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ ABFS：Android 巨型仓库按需挂载，别把缓存命中当首次构建</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 开源 Another Build File Service，通过内容寻址文件系统和共享构建缓存缩短 Android 检出与重复构建等待。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>适合维护 AOSP 分支、多人共用 CI 缓存的团队。先读仓库安装与架构，准备隔离 Linux 开发机、Git、libcap 和 Go 工具链；审过 Makefile 的 setcap 权限后再 make。完整挂载还需 CASFS 内核模块，远端 CAS/缓存服务由管理员准备。先在同一分支比较冷缓存、热缓存及改一个文件后的构建，不要直接迁生产构建池。
+边界与费用：官方在 64 vCPU、256GB GCE、客户端与服务端同 VPC 的三次均值中，检出由 36分19秒到冷缓存挂载7.4秒；这是先得到目录、内容按需读取，不是8秒下载全部源码。构建禁缓存反而由1时20分35秒变1时39分11秒，远端缓存齐全才降到2分11秒。依赖强网络、管理员和额外存储，非确定性构建会损失命中率；Apache-2.0。只核文档，未安装。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2123208337965883873" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/google/abfs" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXcmuBSaYAAOhUU?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXcmuBSaYAAOhUU?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXWEDOYawAAIyQO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXWEDOYawAAIyQO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Parallel Search Evals：先做无搜索基线，再衡量研究 Agent 的增益</div>
+  <div class="section"><div class="section-label event">一句话</div><p>11月17日开源的搜索评测框架，将题集、模型原生工具调用、评分与调用预算拆开，便于复现实验而不只看榜单。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>按 README 克隆仓库，用 Python 3.12 和 uv sync --frozen --python 3.12 准备环境；依上游条款取得本地题集，私下配置被测模型、OpenAI 评分器与搜索所需密钥。先选相同三题分别跑 baseline 和一种 parallel 搜索模式，max_workers=1 做小规模检查，再扩大；保存原始回答、失败、费用和配置。也可让编码代理读取仓库 .agents/skills/run-search-evals。
+边界与费用：每次是一模型×一题集×一模式，API和评分都可能收费，不能把开源等同免费评测。仓库不打包或自动下载题集；失败仍留在分母。相同配置可复用终态记录，但包括失败，缺失或坏记录才重跑整题，部分轨迹不是断点。保留单目录单写者及敏感题目/日志的访问边界。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2122893742801604691" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://parallel.ai/blog/parallel-search-eval-harness" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/parallel-web/parallel-search-evals" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXYImU3XsAAUrid?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXYImU3XsAAUrid?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Agora Skills：让编码助手从官方语音 Demo 起步，而不是猜 SDK</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Agora 官方知识包与 CLI 带编码助手完成账号、项目、凭据及实时语音样例的接线，覆盖 Web、Python、移动端等。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库，确认会登录哪一个 Agora 账号；可按官方 npx skills add github:AgoraIO/skills 安装知识包，再给助手明确任务：“用 Python 做一个仅供我测试的 Web 语音对话 Demo，先列所需账号和权限”。让它选官方样例，检查环境配置后本地运行，再逐项切换 LLM、提示词和工具。不要把 App Certificate 或服务端 token 生成密钥放进浏览器。
+边界与费用：适合客服原型、AI口语老师和语音伴侣的传输接入，Skills 自身不是语音模型。仓库 MIT，Agora 通信服务与所接模型另受用量、费用和地域限制。“10分钟可用”是发布方说法，不是本报计时测试；应核录音、转录、儿童数据及麦克风权限。未安装、未调用服务。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AgoraIO/status/2123038512849031631" target="_blank"><span class="handle">@AgoraIO</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/AgoraIO/skills" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2122985423454806016/img/oyOmuoViZz_EiGeF.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2122985423454806016/img/oyOmuoViZz_EiGeF.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Perplexity Orchestrator API：统一入口之外，缓存亲和只是尽力而为</div>
+  <div class="section"><div class="section-label event">一句话</div><p>一个 Perplexity key 接入多家模型，支持 OpenAI Chat Completions、Responses 和 Anthropic Messages 格式，并由平台选择部署及处理故障转移。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>用独立测试项目和非敏感提示开始；现有 OpenAI SDK 将 base_url 改为文档所列 Orchestrator v1 根地址，模型名用目录完整前缀。首轮固定一种模型做回归，记录 usage、响应 model 和错误；需要自动选择时才用 perplexity/auto 并写明各任务路由。多轮发完整历史，稳定 x-session-id 或 prompt_cache_key 请求部署亲和，同时按模型家族设置缓存标记。
+边界与费用：统一 key 不代表可用所有模型：OpenAI/Anthropic 至少 Tier1，部分旗舰需 Tier2；不接受自带供应商 key，按其模型价扣 Perplexity 额度。亲和是 best effort，故障转移会冷缓存，auto 也不固定跨轮模型。接口无状态，不支持 previous_response_id 等服务端续接；ZDR 默认关闭需协议配置。流中断不能当完整结果。未发 API 请求，也未采信45+永久固定数量。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/denisyarats/status/2122787728672645610" target="_blank"><span class="handle">@denisyarats</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.perplexity.ai/docs/orchestrator/quickstart" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.perplexity.ai/docs/orchestrator/faq" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.perplexity.ai/docs/orchestrator/routing-and-reliability" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2122785131719245824/img/Qz9nw1bZtq_BMaru?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2122785131719245824/img/Qz9nw1bZtq_BMaru?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SubCast 0.2.9：昨日的播放器，今天多了可复习的原声生词本</div>
+  <div class="section"><div class="section-label event">一句话</div><p>相对11月18日已刊0.2.8，0.2.9新增英语学习模式、原句原声词卡、FSRS复习和 Anki/CSV 导出；官方 release 已有安装产物，不再停在“预计明天”。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>已有用户先看 release 再应用内更新；新用户选对应平台安装包。到“设置→学英语”设水平，在字幕点击生词看离线词典及句内 AI 解释，收藏后试回想或拼写复习；导出 Anki 前选保存目录，核对导出的原声与原句。适合把自己常听的一期英语节目变为小份复习材料，不要一次囤积整季词卡。
+边界与费用：版本公开时间为11月18日22:54 UTC，即上海11月19日。不是重发昨日的订阅、转写和问答介绍；增量以新 release 为证。云端 AI 解释可能产生服务商费用，音频与字幕版权需自查；作者明确 Windows/Linux 未完整真机测试，YouTube 内置登录和 Windows DPAPI 修复也未在 Windows 真机验证。本报未安装。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2123095504024437155" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/joeseesun/subcast/releases/tag/v0.2.9" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXa_1KzakAA7Sfl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXa_1KzakAA7Sfl?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXa_-LwbAAIAvlu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXa_-LwbAAIAvlu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2122711078425731072/img/fPKSnZwAZYls8YJd?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2122711078425731072/img/fPKSnZwAZYls8YJd?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Codex 的 GPT-6.2 提示指南：新增的是验收方法，不再播报一遍模型发布</div>
+  <div class="section"><div class="section-label event">一句话</div><p>OpenAI 官方指南将提示重点放到验收标准、推理档选择、独立子任务并行，以及按真实展示尺寸反复检视视觉资产。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>拿一个明确任务改写提示：“做一个24像素仍可辨识的图标，沿用现有配色；渲染到实际大小、对照参考再修改；交付可编辑源文件和检查结果。”快速摸排可用 Medium，跨系统追根因再考虑 High，多因交互才考虑 Extra High。互不依赖的研究问题可允许子代理并行；AGENTS.md 只写代码和测试无法推知的项目约束，不重复常识操作。
+边界与费用：与昨日已刊 Astra/Sol 型号和价格是不同增量：本次给出官方操作指南和可核验的工作方式，不宣称有新模型。高推理与多子代理会增加时间和token成本；子代理不能代替实际运行和最终核查。指南是建议，不保证视觉质量或任务成功，本报未付费运行示例。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2122959211487515033" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXZEIjkbQAARTop?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXZEIjkbQAARTop?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ FrontierRSI：拿公开 GPU 研究任务做可追踪的小实验</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Abundant 的递归自我改进基准包含27个开放式研究工程任务，仓库公开其中8个，横跨预训练、后训练、推理服务与GPU内核。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读一个任务的 instruction.md、task.toml、环境与测试，再决定是否租 GPU。入门可看 bulk-inference：固定 Qwen2.5-1.5B-Instruct 权重、贪心解码和输出token，优化批量推理总时长；任务环境的开发检查先 --count 10，再 --count 100，不能改模型或把少生成token算加速。先核正确性，再保存硬件、预算和原始速度。
+边界与费用：公开 bulk-inference 任务要求一张 H100、开发预算2小时；其他任务有4或8小时、部分两张卡，不适合普通笔记本直接照搬。代码任务是 Harbor 格式，但不是已安装的免费在线评测服务。评分 avg@2 相对各任务最好有效试验归一化，正确性或资源检查失败记0。仓库明确公开测试数据不再是真正 held-out；不能用公开8题证明整个27题排行或自改进失控。未跑GPU。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/quasicoh/status/2123114502065627580" target="_blank"><span class="handle">@quasicoh</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/abundant-ai/frontier-rsi" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://raw.githubusercontent.com/abundant-ai/frontier-rsi/main/tasks/inference/bulk-inference/instruction.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXbOPiGa0AAb0ao?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXbOPiGa0AAb0ao?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Gemini 4 Neon：11月18日发布，比较每任务总成本而非只看旗舰名次</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 新增位于 Carbon 与 Hydrogen 之间的 Neon，官方列出百万token上下文，标准每百万输入3美元、输出15美元、缓存输入0.15美元。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>已付费开发者可在 AI Studio 的 Gemini API 付费层先以同一仓库任务做对照，保存测试通过率、耗时和总费用；Pro/Ultra 用户的 Gemini App、Antigravity 等入口按资格逐步开放。关注其多文件修改和长时工具任务，而不是凭一张榜单立即替换现有代理。
+边界与费用：相较11月13日已刊 Hydrogen 是新型号和新价格，不是旧模型换新闻日期。公告引用的61分对应 xhigh，默认 high 与不同harness并非同条件；本文未独立复测名次和单任务优惠。防御者专用 cyber 版本面向合格 Fairwind 成员，不等于所有用户都已开放。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2123214459703267673" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXb9cQabgAAOkkn?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXb9cQabgAAOkkn?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Project Genie 新入口：Genie 4 原生音频，三分钟属于 Genie 3 更新</div>
+  <div class="section"><div class="section-label event">事件</div><p>Google 官方确认向符合资格的 AI Ultra 用户推出新 Project Genie 体验，包含首次访问 Genie 4、Genie 3升级、创建代理与社区画廊。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>需要交互世界原型的创作者，可先用自己有权使用的图片或一句场景描述试建，再在探索中通过自然语言改变天气或角色；社区作品可探索和 remix。Pro 用户可加入等待名单，不应把付费订阅本身等同获批。
+边界与费用：主源纠正了采样帖的归属：Genie 4 强调画面、交互与实时原生音频；每次最长3分钟、世界串联和360度全景种子列在 Genie 3 更新下，不能写成 Genie 4 已保证3分钟。两者仍是研究前沿世界模型，镜头延迟、精细物理、音频精度和长期场景保持有局限，不等于可直接导出完整游戏。未获权试用。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2123210170574741991" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2123104789080797184/img/JyEBeReoho12TfBT.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2123104789080797184/img/JyEBeReoho12TfBT.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Self-Improving Memory 研究：Meta RAM 团队用同一 Kimi-K2.6 先优化 LOAD/OFFLOAD 记忆提示，再蒸馏进权重。三个 Continual Learning Bench 任务上，优化提示56.0对最佳手写44.6，蒸馏43.1对普通轨迹微调37.6，都是论文团队报告；未证明所有任务持续自我改进，也不是可一键安装的记忆服务。已读研究正文，未训练或复现。 <a href="https://x.com/shao__meng/status/2122961408262635560" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

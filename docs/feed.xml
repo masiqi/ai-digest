@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 18 Nov 2026 00:41:03 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 02:14:03 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/19 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-19.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-19.html</guid>
+      <description>今天的重点是“把 Agent 的能力变成可检查的工作”：搜索要有基线，构建提速要区分缓存，统一模型入口要说明故障和隐私，英语学习更新要有实际版本。Neon 与 Genie 的发布值得看，但实用入口和边界比排行榜口号更重要。
+覆盖不完整。本期从X List页面有界采样：采到108条记录、32位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。
+108条DOM记录对应87个唯一ID。门禁记录5次API响应，其中真实List timeline响应1次且已解析；50次滚动不是50个目标分页，不代表所有...</description>
+      <pubDate>2026-11-19T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/18 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-18.html</link>
