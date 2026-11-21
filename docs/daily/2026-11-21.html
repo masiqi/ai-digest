@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-21</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-21</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>本期先看能直接解决问题的产品：提交移动应用前的规则排查、Android 按应用切输入法、把知识点做成可动手练习的课程，以及让个人 Agent 的记忆可回查。与此同时，一份 AI 自主科研报告值得看，但“AI 已证明黎曼猜想”仍只是当事人的待核主张，不能将两者混作已确证的技术突破。以下“已核”只表示编辑阅读了链接中的公开材料，没有安装或实测工具。
+本期从X List页面有界采样（覆盖不完整）：采到132条记录、35位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ app-store-compliance：提交移动应用前先排拒审风险</div>
+  <div class="section"><div class="section-label event">一句话</div><p>仓库整理 Apple App Store 和 Google Play 常见拒审模式，提供规则手册、Agent Skill 与提交前扫描；仓库标注117项，不沿用帖子“123种”口径。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mjmirza/app-store-compliance" target="_blank">https://github.com/mjmirza/app-store-compliance ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读 README 和安装/条款说明，在自己的 iOS/Android 项目上运行仓库提供的 guard，再对照具体官方指南核查权限、隐私清单、Data safety、账号删除和应用内购买。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>把“写出应用”和“符合商店审核”之间的检查流程前移；规则会变，扫描属于静态风险提示，不等于 Apple/Google 审核承诺，当前仓库许可亦需核对。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2123625468729413925" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/mjmirza/app-store-compliance" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXiiG-kWoAAO6In?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXiiG-kWoAAO6In?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXiiHCKW4AADWKX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXiiHCKW4AADWKX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ KeyboardSwitcher：按前台 Android 应用自动换输入法</div>
+  <div class="section"><div class="section-label event">一句话</div><p>为 Termux、微信等应用分别配置默认输入法，减少在语音输入和命令行英文输入之间手工切换。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/randomshit699/keyboardSwitcher" target="_blank">https://github.com/randomshit699/keyboardSwitcher ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看仓库安装与权限章节；启用无障碍服务，按说明通过 ADB 授予 WRITE_SECURE_SETTINGS，给指定应用设输入法映射；需要时可细化到 Activity。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者在源码文档中写明前台判定、去抖和权限机制；它不是同名的旧 F-Droid 键盘切换器，高权限需要先审核源码，且各厂商后台策略可能影响稳定性。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2123772985232282110" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/randomshit699/keyboardSwitcher" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ knowvori：用 Skill 生成可操作的单文件网页课</div>
+  <div class="section"><div class="section-label event">一句话</div><p>输入学习目标、当前基础和预期能力，让 Agent 做一节含交互演示、练习与反馈的 HTML 小课。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/yoruniubi/knowvori" target="_blank">https://github.com/yoruniubi/knowvori ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>审阅 SKILL.md 后按仓库安装指引接入兼容的 Agent，指定一个具体卡点，例如“用滑块理解梯度下降学习率”；生成后打开单文件课、亲自做题，再检查事实与交互逻辑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库已有课程示例与静态/浏览器审计脚本；它和此前刊过的“欧拉讲题”是不同实体。自动检查只说明页面结构/交互没有明显故障，不能证明教学内容正确或学习效果。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2123747769051472095" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/yoruniubi/knowvori" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Kamira：留下悬浮预览与贴图的轻量 Mac 截图工具</div>
+  <div class="section"><div class="section-label event">一句话</div><p>支持截图后角落预览、贴图、标注、OCR 和录屏；论坛中“后台约20MB”是开发者自述，不是本站实测。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/okayzk/Kamira" target="_blank">https://github.com/okayzk/Kamira ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在仓库核对版本与源码后从 Releases 取安装包，按安装说明授予屏幕录制权限，再用截图卡片拖入文档、悬浮对照界面或标注屏幕。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>专注截图而非截图历史/云上传；目前要求 macOS 26+，安装包尚未经过 Apple 公证，Intel 包作者也尚未实测，安全和兼容风险需自行判断。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2123755373760761877" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/okayzk/Kamira" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Alfred 6 UI Toolkit：把 Workflow 做成原生小窗口</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用 JSON 描述窗口、布局、按钮、表格等组件，将传统关键词触发的 Alfred 工作流升级为可交互界面。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.alfredapp.com/help/alfredui" target="_blank">https://www.alfredapp.com/help/alfredui ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方文档的 Try Alfred UI 示例开始，编辑 ui.json 并预览；再把输入与按钮事件接入自己的工作流逻辑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>界面由 macOS 原生 AppKit 生成，适合无需独立打包的桌面小工具；Workflow/高级功能需要 Powerpack，别把基础版免费当成全功能免费。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2123713476266758219" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.alfredapp.com/help/alfredui" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXjyJzxXIAAb2Oz?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXjyJzxXIAAb2Oz?format=png&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Linger：共享工作知识与 Agent 自身记忆分层</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源个人 Agent 的设计文档将可供多个代理检索的工作 wiki 与单代理会话经验区分，保留更新日志与原始材料回查。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/simplexai-labs/linger/blob/main/docs/wiki-and-memory.md" target="_blank">https://github.com/simplexai-labs/linger/blob/main/docs/wiki-and-memory.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读项目仓库及 wiki-and-memory 文档，评估适用的本机部署条件，再用少量非敏感资料验证实体页、来源引用和代理检索；不要直接导入真实邮件。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>知识可更正、能追溯“事实从哪里来”比无限堆摘要重要；文档是设计/实现说明，尚未测试运行效果，帖子所引竞品跑分不作为本项目能力证据。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/ElliotChen/status/2123689892056375805" target="_blank"><span class="handle">@ElliotChen</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/simplexai-labs/linger/blob/main/docs/wiki-and-memory.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXjbYXZbwAA1A3P?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXjbYXZbwAA1A3P?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2123235635670704128/img/LG6mrUqMZ_egC3p9?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2123235635670704128/img/LG6mrUqMZ_egC3p9?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ last30days：按近30天多社区讨论做主题调研</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Skill 汇集 Reddit、HN、GitHub 等可用来源，更多来源随凭据和安装条件开启，以近期讨论而非只靠 SEO 文章辅助发现线索。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/mvanhorn/last30days-skill/blob/main/README.zh-CN.md" target="_blank">https://github.com/mvanhorn/last30days-skill/blob/main/README.zh-CN.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先阅读仓库 SKILL.md 和数据处理说明，按需安装到兼容的 Agent；输入一个具体主题并逐条回看输出原帖和版本日期。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>适合快速找真实用户痛点与争议；X、YouTube 等渠道的权限、服务和费用因配置而异，互动量不能代替事实核查。本期未运行它，也未向 X 发起补证请求。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2123686205892042883" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/mvanhorn/last30days-skill/blob/main/README.zh-CN.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 妙言：Markdown 笔记补上 iPhone 和 iPad 入口</div>
+  <div class="section"><div class="section-label event">一句话</div><p>本地 Markdown 文件为底，Mac、iPhone、iPad 通过同一个 iCloud Drive 文件夹看同一批笔记。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://miaoyan.app/" target="_blank">https://miaoyan.app/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>查看官网适用系统与 App Store 页面，按需购买；将笔记放入 iCloud Drive 指定目录，在三端打开同一文件夹，先用非重要笔记确认同步。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>原生 Swift 实现、文件留在自选目录；官网明确一次购买覆盖三端，Mac 端源码开放不代表 App Store 客户端免费，iCloud 同步也不等于产品私有云。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/HiTw93/status/2123672926075732161" target="_blank"><span class="handle">@HiTw93</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://miaoyan.app/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2123671137146265600/img/yHPuYlGqBUdjaZ2Q.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2123671137146265600/img/yHPuYlGqBUdjaZ2Q.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 回声口袋：中文音视频转写后按时间轴核对</div>
+  <div class="section"><div class="section-label event">一句话</div><p>上传录音/视频或可访问的公开媒体链接，生成说话人区分、时间轴和 SRT/VTT 字幕，官方提醒自动转写可能出错。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huishengkoudai.cn/faq" target="_blank">https://huishengkoudai.cn/faq ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先用非敏感、短音频试上传与回听，核对术语和说话人，再导出 TXT、DOCX、CSV 或字幕；网站与小程序通过微信账号关联。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>比只出一段文字更适合采访和课程回听；内容需上传服务，不能直接读微信聊天语音，套餐是30天且实时价须登录购买页查看，不编造免费额度。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2123667246585110725" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huishengkoudai.cn/faq" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 alphaXiv“AI科学家社会”：看可执行审查，不把数量当成果质量</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究团队发布探索性报告，记录35个由人运行的实验室中936个 Agent 在12周内形成936项研究和相应代码/数据，并在共享空间交流与互审。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>人仍设置主题和预算；论文对审查与复现实验有方法论价值，但报告中的打分、代理审稿和可执行检查不等于全部论文经过独立学界认可。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>研究组织可借鉴“论文—代码—数据—可执行质疑”的链路，先对关键结论建立可重跑证据再谈规模化科研自动化。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2123671858541187164" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.alphaxiv.org/pdf/2611.society-ai-scientists" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2123321075501355008/img/Q0cNHtp4hRIPKuoa.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2123321075501355008/img/Q0cNHtp4hRIPKuoa.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Alpöge 与 Claude 的黎曼猜想证明主张：先看声明、再等独立验证</div>
+  <div class="section"><div class="section-label event">事件</div><p>数学家 Alpöge 在本人公开声明中表示，他“相信”与 Claude 找到了黎曼猜想证明，并称尝试形式化论证；这是作者主张，不是已被数学界认可的结论。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>公开声明可证明“作者作了这一宣称”，不能替代对形式化文件能否通过检查、目标定理是否无条件且与猜想一致的第三方核验；本期未独立运行 Lean 或证明复核。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>若未来经完整复核才可能改变数学研究判断；目前把它当待核研究线索，不用“AI 已证明”做标题。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/MinLiBuilds/status/2123827505362776270" target="_blank"><span class="handle">@MinLiBuilds</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://alpo.ge/remark.pdf" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXlZ07PaIAAT7hA?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXlZ07PaIAAT7hA?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

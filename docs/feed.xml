@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 20 Nov 2026 00:40:53 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 00:41:31 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/21 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-21.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-21.html</guid>
+      <description>本期先看能直接解决问题的产品：提交移动应用前的规则排查、Android 按应用切输入法、把知识点做成可动手练习的课程，以及让个人 Agent 的记忆可回查。与此同时，一份 AI 自主科研报告值得看，但“AI 已证明黎曼猜想”仍只是当事人的待核主张，不能将两者混作已确证的技术突破。以下“已核”只表示编辑阅读了链接中的公开材料，没有安装或实测工具。
+本期从X List页面有界采样（覆盖不完整）：采到132条记录、35位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。</description>
+      <pubDate>2026-11-21T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/20 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-20.html</link>
