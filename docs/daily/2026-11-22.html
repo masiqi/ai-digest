@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-22</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-22</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天值得关注的不是把 Agent 的工具菜单做得更长，而是让工具链更可控：browser-use 把浏览器代理的动作收束为可编程的持续会话；Stitch 与 Flow 插件把设计、视频流程接入现有代理；Langfuse 则提醒，主动代理的“决定不做”也应有评测证据。以下“已核”仅指阅读公开来源，均未安装或实测。模型基准和定价须按原作者测试条件理解。
+本期从X List页面有界采样：采到110条记录、40位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。覆盖不完整（partial）。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ browser-use 1.0：用持久 Python 会话替代 24 个浏览器动作</div>
+  <div class="section"><div class="section-label event">一句话</div><p>让浏览器代理在同一 Python REPL 里使用 helper 和原始 CDP，而不是从一长串点击、选择动作中猜操作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://browser-use.com/posts/browser-use-1-0" target="_blank">https://browser-use.com/posts/browser-use-1-0 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>参照项目 1.0 文档建立隔离浏览器任务，用自己的模型配置或官方云端账号运行；先在非敏感页面检查脚本与网络权限。与七日已刊的 Mearl 是不同项目。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目技术复盘给出工具数量变化和一次基准；14—33 分的提升与成本降低还受默认配置改变影响，不能归因于“一个工具”本身，更不能当作本机实测。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2124065414359445782" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://browser-use.com/posts/browser-use-1-0" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Stitch Skills：把设计原型接进组件开发，而不是只交一张图</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google Labs Code 的技能仓库把 Stitch 设计生成、设计系统、React 组件转换等分成可调用的 Agent Skills。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/google-labs-code/stitch-skills/blob/main/README.md" target="_blank">https://github.com/google-labs-code/stitch-skills/blob/main/README.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先配置 Stitch MCP 与相应访问权限，按仓库 README 选需要的插件；要把 Stitch 页面转组件，可从 react-components 技能开始，并运行其检查脚本。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>从原型到代码的映射及 AST 校验比单纯截图仿制更可追溯；项目注明不属于 Google 官方支持产品，不能据传言星数判断质量。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2124133258027728994" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/google-labs-code/stitch-skills/blob/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Antigravity Flow：把 Flow 影视流程交给内置浏览器代理</div>
+  <div class="section"><div class="section-label event">一句话</div><p>第三方插件把故事分镜、角色素材、生成与场景拼接组织成 Antigravity 可调用流程，不另设 Playwright 服务。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/WeZZard/antigravity-flow" target="_blank">https://github.com/WeZZard/antigravity-flow ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>有 Antigravity 和 Flow 账号后，依项目 README 安装插件，先用 flow-director 生成 storyboard，再用 flow-generate；默认 Checkpoint 模式在消耗积分前读取界面价格并让人确认。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>项目写明登录、验证码、额度/付费墙会暂停；Full-Auto 则会主动执行付费生成，只有理解积分消耗并明确授权时才使用。未验证 Google Flow UI 是否与文档当前一致。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2124124404208804306" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/WeZZard/antigravity-flow" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXn3tA6bAAAgagF?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXn3tA6bAAAgagF?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ CyIME：Android 的双拼、离线语音与字幕输入</div>
+  <div class="section"><div class="section-label event">一句话</div><p>基于 Rime 的开源输入法，把全拼/双拼纠错、SenseVoice 整句定稿和本地字幕放在手机端。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/Cyletix/CyIME" target="_blank">https://github.com/Cyletix/CyIME ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Android 9+、ARM64 手机从仓库 Releases 选完整版（内置语音等离线模型）或轻量版（相关模型再下载），安装后在系统输入法设置里启用；涉敏场景可研究仓库的无 INTERNET 权限构建方式。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>把输入和部分语音识别放到本机，有隐私和网络不可用时的实用价值；第三方 APK 安装、签名、模型许可及不同手机兼容性仍要核对。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2124142866070913321" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Cyletix/CyIME" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Logonomic：按仓库回看编程代理会话与 Git 提交</div>
+  <div class="section"><div class="section-label event">一句话</div><p>在同一桌面工作区查看已有 Codex/Claude Code 等 CLI 会话、改动、Git 历史与 CI；提交的 session trailer 可回到当时对话。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://varinomics.com/logonomic" target="_blank">https://varinomics.com/logonomic ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>保持现有 CLI 账号和配置，在 Logonomic 中选择仓库、从提交回溯会话或在代理工作时并排审查 diff；手机 Companion 需桌面端在线。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>比单独保存聊天记录更接近“这次提交为何改动”；但软件闭源，macOS 当前仅 Free 预览，收费版本和手机中继需审权限，无法从网页证明实际稳定性。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2124186984885215375" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://varinomics.com/logonomic" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Open Artifact：把 Agent 交付文件变成可编辑、可评论的本地作品</div>
+  <div class="section"><div class="section-label event">一句话</div><p>项目以一个本地 daemon、页面框架和技能承载幻灯、白板、表格、设计及动态作品，并把评论送回代理会话。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/JimLiu/open-artifact" target="_blank">https://github.com/JimLiu/open-artifact ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>按 README 的 Node.js 22.18+ 要求构建并选择对应代理插件；先生成一份小型演示或表格，在本地页面编辑/评论，再交由代理修订。不是对原帖“Neon 视频效果好”的实测背书。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>保留人可编辑的最终产物与反馈通道；构建、插件兼容、素材安全和导出仍需试用，不等同网页云端免费服务。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2124052093971624234" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/JimLiu/open-artifact" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2124051685551058944/img/YfTsi-1EMW7s61hE.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2124051685551058944/img/YfTsi-1EMW7s61hE.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Gemini 4 推理档视觉对照：用同题比较输出质量与 token 成本</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Simon Willison 做了 Carbon、Neon、Hydrogen 在各思考档生成“鹈鹕骑自行车”SVG 的并排对照。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://static.simonwillison.net/static/2026/gemini-4-carbon-neon-hydrogen-with-xhigh.html" target="_blank">https://static.simonwillison.net/static/2026/gemini-4-carbon-neon-hydrogen-with-xhigh.html ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>打开网格挑同一提示词的档位，看画面和作者页面标示的输入/输出 token 计价，再用自己的真实 SVG/编码任务重复测；Carbon 不支持 xhigh。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>提示同模型的 high/xhigh 可能带来明显成本差异；只是一个例子，输出 token 含思考 token，不能把单次价差当跨任务评测结论。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2124223349769609407" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://static.simonwillison.net/static/2026/gemini-4-carbon-neon-hydrogen-with-xhigh.html" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Langfuse：主动式 Agent 的评测单位是“是否值得行动”</div>
+  <div class="section"><div class="section-label event">事件</div><p>Langfuse 文章建议记录触发事件、取用的上下文、行动/等待/保持沉默与原因；只评最终通知会漏掉“本该提醒却没提醒”。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>可给收到邮件或日程变化的时刻做标注数据，分别追踪误打扰和漏提醒；每天固定跑的脚本本身不等于主动代理。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>给常驻 Agent 增加决策 trace 与沉默样本抽检，比盲目提高提醒频率更可控；这仍是方法建议，不是已量化成功率。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2124043580415385946" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://langfuse.com/blog/2026-11-19-evaluating-proactive-agents" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXoeXxwbsAAAOuh?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXoeXxwbsAAAOuh?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Fast-JEPA：世界模型规划尝试减少递归展开</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究者发布 Fast-JEPA 预印本，以目标导向计划引导候选动作搜索、直接预测完整候选结果；论文称 PushT、Reacher、Cube、TwoRoom 上平均成功率 96.50%，规划比 INTACT 快 2.41 倍。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>当环境在等待规划期间继续变化，延迟本身就影响执行成败；项目另设 DynaGoal 的目标切换、响应延迟场景。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>给具身代理的“成功率—行动延迟”权衡提供对照，但这些是论文任务和作者测量，非真实机器人部署保证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sofilyzia_1/status/2124049370178077159" target="_blank"><span class="handle">@Sofilyzia_1</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://arxiv.org/abs/2611.25927" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXojZ_ubAAED--Y?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXojZ_ubAAED--Y?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXojZ_vasAE7_KO?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXojZ_vasAE7_KO?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Slow SVReg：JEPA 潜在地图的平滑与内容保留不能只选一个</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究报告指出 SVReg 能在潜在空间形成较平滑的地图，却可能丢失缓慢变化、难预测的操作物体；慢通道与门控残差预测器用于保留该因素。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>只优化位置几何，导航可能好看却“看不住”桌上的方块；作者项目页给出五类视觉控制任务结果和失效案例。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>研究世界模型时应同时检验可规划的几何与可解码的任务内容；不能由模拟环境成绩推断所有实体任务适用。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/askalphaxiv/status/2124121398268559382" target="_blank"><span class="handle">@askalphaxiv</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://agenticlearning.ai/content-geometry-tradeoff" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXo7qH5a0AA0sl2?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXo7qH5a0AA0sl2?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 OpenAI 对抗性蒸馏防护：防“内部推理轨迹”泄漏</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI 官方文章称在内部自适应红队的“提取先前请求中受保护推理”任务上，旧 GPT-6 Astra 原防护的平均成功率 54.0%，更新防护的 GPT-6.2 Astra 为 0.2%。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>跨模型版本和防护组合比较，不能解释成一项措施的净效果；请求级过滤与账户/活动级调查两层并行。合法知识蒸馏和未经授权复制能力也不应混同。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>模型平台应保留提取攻击样本做回归测试，并审查工具调用参数等泄漏渠道；并非证明所有蒸馏攻击已经被阻止。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2124118436947034470" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://openai.com/index/combatting-adversarial-distillation" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXpidAdaMAAie2m?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXpidAdaMAAie2m?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 长上下文代价：频繁压缩仍可做长任务，但先验证召回</div>
+  <div class="section"><div class="section-label event">事件</div><p>论文《You don&#x27;t need long context》比较模型长任务表现与服务成本，指出部分开源模型在 256K 相对 16K 的生成成本可大幅增长，而频繁上下文压缩在研究任务上损失很小。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>适合把代码代理轨迹压成可恢复的决策、文件和待办状态，省下不必要的窗口开销；极长文档精确引用和遗漏风险仍须单独测。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>部署 Agent 时把任务完成率、丢失证据率、延迟与真实费用一起测，不把论文特定 H100 和模型的最高 7 倍成本推给所有服务。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2124128730218176985" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://arxiv.org/abs/2611.05306" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXprun5aYAAqw5d?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXprun5aYAAqw5d?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Antigravity Neon 缓存池：模型发布后的独立额度变化</div>
+  <div class="section"><div class="section-label event">事件</div><p>Antigravity 负责人称正扩大 Neon 缓存池，预计命中率提高约 4%、同等配额内完成工作量至少增加 20%，随后执行一次额度重置；独立跟踪页记录了后续重置确认。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是 11 月 19 日已刊 Neon 模型发布后的缓存/配额运营变化，不重复推荐模型本身；官方数字是估算，个人账户是否收到重置需以界面为准。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>持续写代码的用户可比较变更前后的实际任务/配额消耗，别把缓存命中变化当模型能力提升。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/_mohansolo/status/2123848516581892181" target="_blank"><span class="handle">@_mohansolo</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://geminireset.com/resets/2026-11-20-promise" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>/vector 工作流 Skill：Matt Pocock 提及面向非开发者的 VECTOR 六问流程；尚未核到正式安装入口，留作跟进，不当可用工具推荐。 <a href="https://x.com/shao__meng/status/2123948393009422679" target="_blank">→</a></li>
+    <li>Grok Bot × Obsidian：有连接器可管理笔记的转述，但官方非 X 安装页和授权范围未核实；先勿授予私人笔记库写权限。 <a href="https://x.com/xiaohu/status/2124068063826067500" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
