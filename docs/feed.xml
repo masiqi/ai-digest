@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 22 Nov 2026 00:42:14 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 00:42:25 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/23 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-23.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-23.html</guid>
+      <description>Agent 和创作工具更像“带边界的工作流”，而不只是多一个模型：Pi Bot 用本地群聊分工和审批降低多代理门槛；Huashu Design 把设计稿交给小程序开发流程；pi-H3 则把视频生成压到少步推理。但本期“已核验”只表示主编读过公开来源，不代表安装实测；性能与成片质量要按设备、环境和许可复核。
+本期从X List页面有界采样：采到106条记录、29位可识别作者、58次DOM观察、50次滚动；采集不完整，成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。</description>
+      <pubDate>2026-11-23T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/22 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-22.html</link>

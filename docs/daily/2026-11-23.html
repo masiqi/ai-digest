@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-23</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-23</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>Agent 和创作工具更像“带边界的工作流”，而不只是多一个模型：Pi Bot 用本地群聊分工和审批降低多代理门槛；Huashu Design 把设计稿交给小程序开发流程；pi-H3 则把视频生成压到少步推理。但本期“已核验”只表示主编读过公开来源，不代表安装实测；性能与成片质量要按设备、环境和许可复核。
+本期从X List页面有界采样：采到106条记录、29位可识别作者、58次DOM观察、50次滚动；采集不完整，成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Pi Bot：用本地群聊组织多名 Agent</div>
+  <div class="section"><div class="section-label event">一句话</div><p>桌面应用把不同角色的 Bot 放进群聊，由协调员拆任务、分派并收集结果；工作目录中的文件变更可供审阅。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/w01fb0ss/PiBot" target="_blank">https://github.com/w01fb0ss/PiBot ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库 User guide，下载桌面版，给测试项目建独立工作目录；配置自己的模型提供方、各 Bot 角色和权限，再在群聊提交可验收的小任务，观察审批与修改记录。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>相较纯命令行编排，群聊界面让分工和审批更直观；官网说明命令沙箱与审计日志，但这里仅核过仓库说明，未运行，也不能把“本地优先”等同于模型提供方不接收提示词。应用场景是产品调研加文案审改、多人协作开发的低风险试跑。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2124526101107994865" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/w01fb0ss/PiBot" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXvVOv-XYAElHM0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXvVOv-XYAElHM0?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2124106801998352384/img/8ZWgflSzb3oa5z9j?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2124106801998352384/img/8ZWgflSzb3oa5z9j?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Huashu Design：微信小程序设计稿加 WorkBuddy 交接</div>
+  <div class="section"><div class="section-label event">一句话</div><p>作者称 3.5 增加微信小程序设计；仓库已有专门模块，围绕胶囊区、转发卡片、原生 WXML/WXSS 可实现性与设计交付包组织工作。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/alchaincyf/huashu-design" target="_blank">https://github.com/alchaincyf/huashu-design ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>将仓库 skill 安装到支持技能的 Agent，以“小程序的群聊分享入口和四个页面”为需求生成方向稿；定稿后按 miniprogram 模块输出 screens、share 图、tokens.json 和交接说明，再在 WorkBuddy 的小程序开发任务里导入，扫码授权与上线仍需用户自己完成。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>相较已刊网页/PPT能力，这次增量是把微信平台约束和开发交接写进设计流程。仓库模块已核，公开 Releases 页面仍只见较早版本，3.5 的正式发布状态及 WorkBuddy 实际联动未经本期实测。场景是轻量活动报名、门店扫码服务的小程序原型。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AlchainHust/status/2124638737481220323" target="_blank"><span class="handle">@AlchainHust</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/alchaincyf/huashu-design" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/alchaincyf/huashu-design/blob/master/references/modules/miniprogram.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ pi-H3：少步生成带音频的 MiniMax H3 视频</div>
+  <div class="section"><div class="section-label event">一句话</div><p>公开 2/4 步适配器与 ComfyUI 工作流，用 DWD 在末步直接预测像素，减少传统 VAE 视频解码。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/Lakonik/pi-H3" target="_blank">https://huggingface.co/Lakonik/pi-H3 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>阅读 ComfyUI-piFlow 的 piH3 工作流说明，核对 ComfyUI 版本与 CUDA 13，下载基础模型、适配器、文本编码器及音频 VAE，再导入官方 DWD workflow；先用短视频比较 2/4 步的速度与画面稳定性。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>作者工作流表给解锁的 RTX 3090、模型已加载及提示词已编码条件下，1344×768 的5秒视频 38.5 秒；不是任何旧显卡即开即有，也未在本机实测。适合短片预演或带声片段草稿；适配器沿用 MiniMax H3 Community License，使用前核商用条款。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2124518514320867668" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/Lakonik/pi-H3" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Lakonik/ComfyUI-piFlow/blob/main/docs/piH3.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 漫剧老李 Skill：先锁角色资产，再做分镜和质检</div>
+  <div class="section"><div class="section-label event">一句话</div><p>多技能套装把短剧创意、剧本、角色和场景资产、文武分镜、视频模型提示词及机检串成流程。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/lixiaoxiao9888-create/manju-laoli-skill" target="_blank">https://github.com/lixiaoxiao9888-create/manju-laoli-skill ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>阅读主入口 short-drama-director/SKILL.md，按仓库说明安装总控与并列子技能；从一个15秒竖屏故事起，先给素材来源、模型、画幅和交付形态，再出角色资产表、分镜及七段式提示词，跑仓库的校验脚本后才投喂视频模型。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>跨镜头一致性靠先锁资产与审查，不是一次提示词碰运气。仓库自称测试版，输出主要是提示词与接线说明、素材图和成片仍需外部生成；原帖朋友的播放量及“抽卡成功率”只是转述，未核。适用短剧、漫剧和广告分镜试制。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2124527741613830190" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/lixiaoxiao9888-create/manju-laoli-skill" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXvVwn8bsAEzXe0?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXvVwn8bsAEzXe0?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ LeanTake 恰录：录屏时实时标注与隐形提词</div>
+  <div class="section"><div class="section-label event">一句话</div><p>原生 Mac 录屏将画笔、放大镜、光标替换和提词器放进录制现场，停录直接得到本地视频文件。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://leantake.hooosberg.com/zh" target="_blank">https://leantake.hooosberg.com/zh ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>Mac Apple Silicon 且 macOS 15+ 可从开发者官网先试免费版，录一小段教程，检查系统音、人声、画笔与导出文件；Pro 的猫爪样式、提词器等再按需求考虑。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>适合录课程和产品演示时一次讲完、减少后期标注；开发者自荐与官网均说明免费无水印不限时，Pro 一次买断。尚未安装测试“4.1MB”和低功耗，也不要把所有功能误写成免费。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2124472596469084647" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://leantake.hooosberg.com/zh" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://meta.appinn.net/t/topic/96604" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ SenseNova-Loop-9B：循环复用层权重的开放模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用32组不同解码层权重执行56次层计算，文本和图像输入、文本输出；把模型存储规模与推理计算深度拆开。</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/sensenova/SenseNova-Loop-9B" target="_blank">https://huggingface.co/sensenova/SenseNova-Loop-9B ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读模型卡和官方仓库的推理依赖与许可，选择适配版本，在隔离环境用小样本验证工具调用和长上下文，再与现有27B模型在相同任务和硬件下比较质量/时延。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方披露512K上下文及部分代理/分析任务成绩，但仅属项目方测评；56次层执行不意味着推理自动更快，模型卡也明确复杂指令、编码和长程代理有不稳定性，权重可能需接受访问条件。适用研究“以重复计算换参数存储”的本地推理取舍。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2124467774223478939" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/sensenova/SenseNova-Loop-9B" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/OpenSenseNova/SenseNova-Loop" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXugIgwaUAAj0fm?format=png&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXugIgwaUAAj0fm?format=png&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HXVaBqaaYAAZW2o?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXVaBqaaYAAZW2o?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 MemT-1.0-Pro：把跨轮记忆变成模型内部的固定状态</div>
+  <div class="section"><div class="section-label event">事件</div><p>MemTensor 的 Pro 模型卡宣布与 NVIDIA Nemotron 3 Ultra 骨干结合，动态记忆状态可跨轮更新，并给出保存、恢复会话状态的接口示例。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这不是常见的“把旧聊天塞回提示词”；记忆模块随模型计算读写。48 MiB 等口径和评测都是项目方给出的条件性主张；模型卡承认强文本记忆系统在需要细节证据的长历史上仍领先，Pro 体量巨大并有专门 CUDA 依赖。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>值得追踪长程编码 Agent 的记忆质量与成本，但不能用“固定状态”推断它能无损还原历史或在普通笔记本部署。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2124651759587238367" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/MemTensor/MemT-1.0-Pro" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXxHglhaAAAniW1?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXxHglhaAAAniW1?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Claude Code 架构拆解：循环之外是权限与恢复</div>
+  <div class="section"><div class="section-label event">事件</div><p>VILA-Lab/UCL 的报告以 Claude Code v2.1.88 为样本整理代理循环、权限、上下文压缩、子代理和会话恢复，并公开论文及分析仓库。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>报告称代码主体是确定性基础设施，1.6% AI 逻辑属于研究团队的分类口径，不是 Anthropic 对当前版本的官方度量。它给工程团队的启发是分别测试权限绕过、超时中断、上下文耗尽与恢复，而不是只评估模型答题分数。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>做自有 Agent 时可把仓库的设计问题清单变成安全审查提纲；具体代码实现随版本变化，别照搬旧版假设。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2124369057805926670" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/VILA-Lab/Dive-into-Claude-Code" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://arxiv.org/abs/2604.14228v3" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXtGY-RbsAEsLvl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXtGY-RbsAEsLvl?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent 工程随笔：工具返回要轻、任务结束要可控</div>
+  <div class="section"><div class="section-label event">事件</div><p>Parth Sharma 在11月20日文章中把核心循环概括为“调用模型—执行工具—把结果放回历史”，进一步讨论工具返回引用、流式后端、取消、幂等和载荷上限。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是作者一年半经验而非对所有 Agent 系统的实证结论；可操作的是优先让工具返回可定位结果而非整包日志，并让取消真正传到下游进程/请求。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>搭建长时任务时，把错误返回变成下一轮可利用的上下文，并预先设计超时和重启，不等出错才靠提示词救火。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2124331898772361395" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://parthshr370.github.io/blogs/its-all-a-while-loop/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HXskltnbQAAGK-J?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HXskltnbQAAGK-J?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>亚马逊洽购 Decart：金融时报公开标题为“接近75亿美元交易”；文章正文付费墙，尚未证实完成收购或原帖所称估值与协同逻辑，先跟进正式公告 <a href="https://x.com/lxfater/status/2124499423241666719" target="_blank">→</a></li>
+    <li>飞鸟电台：作者称用树莓派、BirdNET 与 Perch 做上海常驻鸟鸣识别；公开电台网址本次无法访问，运行状态与识别准确率待补证 <a href="https://x.com/Yuancheng/status/2124151562016821438" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
