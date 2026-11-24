@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-24</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-24</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天优先看可检查的工作流：图表的抽样与全量聚合分开，媒体 CLI 先 dry-run，提示词评测先有自己的题集，编码助手交付先有测试证据。GLM-5.4 是确有公告的新模型；NVIDIA 复任消息则要把任职决定与继续调查分清。
+覆盖不完整（partial）。本期从X List页面有界采样：采到108条记录、23位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。
+108条DOM记录对应89个唯一ID，本期主编逐一读过全部108份variants，并对照11月17日至23日七期实际已刊全文。请求门禁记录5次API响应，其中只有1次是真实List timeline响应且已解析；50次滚动不是50页目标分页，更不是全成员覆盖。非目标响应包含3次正文无法解析及1次服务错误，未用这些响应补全名单或正文。
+所有“已核”仅指所列公开材料/文档实读，不表示下载安装、登录购买、付费API调用或实机测试。资源发现、既有版本和新发布在各条分别注明，不把今日转帖日期当首发日。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ datasette-charts 0.1a0：自动建议图表，但还没有验证统计关系</div>
+  <div class="section"><div class="section-label event">一句话</div><p>11月23日首次 alpha 把 Datasette 的表、视图和 SQL 结果变成可选图表；图表编译成聚合 SQL，避免只画当前第一页。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从作者文章打开 Datasette Lite 示例，不上传私人数据；选 Charts 缩略图，切换时间粒度、聚合与分组，查看底层 SQL，再复制带图表状态的链接。自托管安装需在 Datasette 同一环境装插件；当前要比 1.0a43 更新的 main 分支，不能把稳定版直接安装当成保证可用。适合给开源下载量、销售或日志数据找第一张探索图。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>大表的建议可能来自最多一万行抽样，但绘图聚合仍覆盖结果集，输出封顶五千行；视图/筛选结果取前段样本可能有偏。verify 阶段尚未实现，建议排前不等于变量相关、时间序列有意义。插件 Apache-2.0，D3/Observable Plot 等依赖另有许可；无模型调用是这套启发式设计的特点，并非本报实测。仅核文档。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/simonw/status/2125007029442114041" target="_blank"><span class="handle">@simonw</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://simonwillison.net/2026/Nov/23/datasette-charts/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/datasette/datasette-charts" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://raw.githubusercontent.com/datasette/datasette-charts/main/LICENSE" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ gemini-api-cli v0.5.0：给现有编码 Agent 补媒体能力，仍要 API Key</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 的单 Go 二进制把生图、配音、音视频分析与托管 Agent 接成 shell 命令；v0.5.0 已于11月20日发布，不是今天才上线。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官方 release 选对应系统预编译包，先审安装来源，再放到 PATH；自己在私密环境准备 Gemini API Key。先看 --help/--schema，用 gemini-api generate 的 --dry-run 检查请求而不发网络；随后只挑一张有权使用的图片或短录音试 image、tts、analyze 或 transcribe，记录写出的文件路径与实际费用。适合让 Codex/Claude Code 在已有工程补产品配图、旁白或字幕。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>“单文件”不等于不用配置：需要凭据、网络及对应模型权限，调用按服务方价格计费，媒体会交给服务处理。v0.5.0 的具体增量包括 voices、TTS style/voice-prompt、静态文件处理选项及 self-hosted BYOS；不是这版才首次有全部媒体能力。CLI 是 beta，自动化应固定版本；软件 Apache-2.0，其他材料 CC BY 4.0。未安装、未发付费请求。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2124952418546806836" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/google-gemini/gemini-api-cli" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/google-gemini/gemini-api-cli/releases/tag/v0.5.0" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Claude Academy 评测课：先在自己的数据上定及格线，再换模型</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Introduction to evals 给已有单次 API 提示、但没有评分集的开发者一条小规模评测路径；本期核到课程正文，不据转帖声称今天新上线。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读课程，用自己任务准备一小组输入与人工期望答案，预先写明一次错误的代价与准确率底线；让候选模型用同一提示跑同一批例子。精确字段用代码判分，自由文本用带量规的 judge，先从失败例改提示，再比较每个完成任务的成本。最后把少量 smoke cases 接到 PR 必需检查，全量走批处理，并定期抽查线上样本。适合抽取字段、分类和小型问答，不是通用 Agent 跑分包。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>课程是四节主要课与测验；没有一份可直接下载的完整脚本，需要自己实现。官方明确不覆盖 Agent 评估，也不测延迟。学习材料可读不等于实作免费：需要 Console、Key，模型与判分都可能收费；Batch API 的渠道可用性另有约束。FDE 伙伴站也列出 Delivery Methodology 和企业采用课程，适合做试点基线、ROI 与推广计划；须注册并核账号资格，不沿用“11门9.5小时/人人可上”说法。未上完课程、未调用 API。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2124797332051128581" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://academy.claude.com/courses/introduction-to-evals" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://anthropic-partners.skilljar.com/path/claude-fde" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Superpowers：把测试与交付证据写成 Agent 的明确工作规矩</div>
+  <div class="section"><div class="section-label event">一句话</div><p>这套 MIT 技能把设计、计划、测试先行、代码审查和完成前核验拆开；值得读的是执行条件，而不是星数或“保证不跑偏”。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读 README，在隔离的低风险项目按自己的宿主安装路线启用；例如 Claude Code 可从官方插件市场安装，其他宿主有各自入口。给它一个可验收的 bug，让它先出失败测试、看见失败，再做最小修复，最后提供完整测试命令与退出码。重点读 test-driven-development 和 verification-before-completion，检查是否真运行了测试、是否回查子代理改动，而非只在回复中写“完成”。适合给团队建立一致的工程交付门槛。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>v7.0.2 实际发布于11月3日，这是近期讨论带回的资源，不是11月24日新版本；该版还修了多宿主 bootstrap 与工作目录选错等问题。规则依赖宿主加载和模型遵守，不是强制隔离或安全保证；多子代理/多轮检查会增加 token 和时间。可选视觉助手默认从官网加载带版本的标识，README 提供停用遥测的环境变量；敏感项目先核隐私。未安装实测。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2124873234289971407" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://raw.githubusercontent.com/obra/superpowers/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/obra/superpowers/releases/tag/v7.0.2" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://raw.githubusercontent.com/obra/superpowers/v7.0.2/skills/test-driven-development/SKILL.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://raw.githubusercontent.com/obra/superpowers/v7.0.2/skills/verification-before-completion/SKILL.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenFMV：把已有视频连成可选择剧情，先验证本地导出</div>
+  <div class="section"><div class="section-label event">一句话</div><p>本地优先的 MIT 编辑器将单场景时间轴、互动按钮和分支图结合，适合制作可试玩的互动视频原型；不是自动生成整部电影。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读仓库，用三段自己有版权的短片做一个二选一剧情：导入本地素材，在每个节点加视频轨和选项/暂停门，再在 Blueprint 连好分支，逐路径预览后导出本地可玩包。源码路线要求 Node.js 20+、npm，按文档 npm install、npm run dev；桌面开发另有 desktop:dev。适合培训情境、产品演示与互动短剧草稿。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>仓库明确没有账号、多人协作、云同步或第三方一键发布，AI 只辅助创作。11月23日自荐称可导出 Windows/HTML5，但当前 README 明确完整 Windows EXE 故事打包不在范围，本文按较保守边界介绍，不承诺该出口。公开最新 release v0.0.4 是6月26日，不包装成今天新发；本次是首次选入的资源发现。依赖安装和媒体版权需审；接外部模型另有费用与数据出口。未安装或导出验证。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2124876438125834392" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Comedian1926/OpenFMV" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Comedian1926/OpenFMV/releases" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/ruanyf/weekly/issues/13680" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GLM-5.4：循环增加计算深度，开放权重和通用 API 仍待发布</div>
+  <div class="section"><div class="section-label event">事件</div><p>Z.ai 11月23日公告确认首款旗舰 Loop Transformer：在750B底模中让28层跑两遍，并用门控更新、跨循环 KV 共享与稀疏索引复用控制开销。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是另一个具体型号，不是昨天已刊 SenseNova-Loop-9B 的重复新闻。可从官方 Chat、Coding Plan 或 ZCode 入口核资格；官方将通用 API 标为 coming soon，权重也只是完成安全加固后的计划，不能写“已开源可本地部署”。代码用于视频、游戏、CAD 是其展示方向，不代表全部场景都可靠。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>官方承认会陷入很长的 marathon thinking；200 tokens/s 等是发布方特定负载口径，不是本报复测。Simon 的同题 SVG 观察可帮助看输出风格，不足以替代完整模型评测；本期未据单题判优劣，也未核具体订阅价。新版本试用先固定任务、推理档、总成本与完成标准。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2124834881901646155" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://z.ai/blog/glm-5.4" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://simonwillison.net/2026/Nov/23/glm-54/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 NVIDIA 董事会确认黄仁勋复任，独立调查仍继续</div>
+  <div class="section"><div class="section-label event">事件</div><p>NVIDIA 官方新闻稿确认董事会一致恢复黄仁勋总裁、CEO 和董事职务，即时生效；不是只根据中文转述与视频推断。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>主源同时说独立董事委员会的调查会继续，并组建国家安全与出口管制委员会、寻找首席合规官；复任不等于调查结案或所有出口限制取消。临时 CEO Colette Kress 继续任 CFO，公告感谢其工作，没有支持“必遭清洗”的推断。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>正文可证明任职决定与治理安排，不能据此推算“一个人拉涨万亿美元”或证明市场因果。本期不刊未核时点的盘前涨幅，不把请愿、政治表态与决定的因果写死。网页抽取正文未携明确发布日期，因此以11月23日官方账号所链消息识别本轮事件，不照抄其他帖子11月22日的日期。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/nvidianewsroom/status/2124865060397019480" target="_blank"><span class="handle">@nvidianewsroom</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>MemTrace 接入 EverOS：作者称可追踪记忆抽取遗漏、后续覆盖等问题，并已接入 EverOS；这与已刊模型内部固定记忆、Linger 知识分层不是同一集成。当前采样正文在产品名处截断，未核安装入口、追踪字段、许可及数据去向，不当作已可用部署指南。 <a href="https://x.com/ElliotChen/status/2124880700109451407" target="_blank">→</a></li>
+    <li>Danijar Hafner 介绍 Embo：本人宣布团队面向陌生场景构建机器人智能，属于新的具身创业线索；当前采样后文截断，未核公开模型、训练数据、机器人硬件或独立测试。愿景不等于机器人已开箱适配全球环境。 <a href="https://x.com/danijar/status/2124911019562811820" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
