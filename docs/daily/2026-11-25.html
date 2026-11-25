@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-25</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-25</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天看把工具做成有边界的工作流：播客MCP/CLI、可先本地预览的海报Skill、CPU文档解析、统一小模型和可校验的售后申请；安全缓解与长会话插件都不能靠“自动”二字跳过验收。
+本期从X List页面有界采样：采到128条记录、30位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。覆盖不完整（partial）。
+128份DOM variants对应106个唯一ID，逐条闭合；对照11月18日至24日七份真实已刊正文。50次滚动不是50页API，更不代表全成员。原语义executor的失败收据仍保留blocked，本期由独立主编逐条复核补齐，不重采、不重跑。
+本报“已核”仅表示读过所列公开来源，不表示安装、调用付费API或实机评测。具体发行日期和既有资源分别注明，未把今天转帖当首发。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ SubCast 0.3.4／0.3.5：播客工具接入 MCP 和 CLI</div>
+  <div class="section"><div class="section-label event">一句话</div><p>11月24日的正式版本把节目查询、导读、字幕和剪辑接给现有 AI 助手；不是再介绍上周的播放器或生词本。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先从官网核平台并下载；设置→通用→“让 AI 助手调用 SubCast”中逐个接入，不必一键写入所有配置。命令行可先用 subcast ep list &quot;Lex Fridman&quot; 列节目，再用 subcast do &quot;Lex Fridman 最新一期总结下&quot;；剪辑前确认原节目版权和输出目录。适合把长访谈变成可回到原话的研究笔记或待人工检查的短片草稿。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>11月18日已刊0.2.8、19日已刊0.2.9；这次新增助手调用和自然语言CLI有独立release证据。0.3.5又补网络诊断、播放器使用应用内代理及PATH修复；macOS播放器代理要求14+。不要只因转帖说“剪辑不错”就认定成片合格。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用自己订阅的公开访谈测试导读和带时间点引用，再回听关键结论。</li>
+    <li>边界与费用：AGPL-3.0，模型服务自备Key并可能计费；共享字幕默认开启，会匿名上传文本，可关闭。云端识别/翻译/问答会发相关内容给服务商。Windows包未签名，Windows/Linux作者未真机验证；自动PATH操作可能修改shell配置。仅核来源，未安装。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2125244592614506880" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://subcast.qiaomu.ai" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/joeseesun/subcast" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/joeseesun/subcast/releases/tag/v0.3.4" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/joeseesun/subcast/releases/tag/v0.3.5" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2125243858107977728/img/wkG-i3sthKIs1_-X.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2125243858107977728/img/wkG-i3sthKIs1_-X.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mac 软件推荐海报 Skill：先本地挑选，分享范围另行确认</div>
+  <div class="section"><div class="section-label event">一句话</div><p>用本机应用图标和壁纸制作可分组的软件海报；可先保存PNG，再决定仅链接分享或公开画廊。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>macOS本机、Node.js 20+及可运行osascript的桌面会话，审阅SKILL.md后可用 npx skills add joeseesun/qiaomu-mac-software --skill qiaomu-mac-software。先scan到新目录，pick勾选应用和分类，再render预览；推荐理由和署名由本人给出，不让AI代造使用体验。适合年度工具分享或团队内部常用软件清单。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>同批早先帖子还说“正在沉淀”，这里已给可安装仓库。当前说明按近六个月窗口中可见的Spotlight活跃天数排序，不是完整使用时长、打开频次或全部半年历史；CLI工具可手选，不用数据空缺编数字。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>先排除不愿公开的软件、壁纸里的隐私和工作相关名称，确认图片后才上传。</li>
+    <li>边界与费用：MIT；本地扫描/成图无需模型API，但宿主Agent可能计费。分享会传海报、选中应用的名称/分类/理由/ID及缺失图标；仅链接仍可被转发。保留本机撤回凭证，不把凭证贴到聊天；撤回不能收回别人已保存的副本。未运行扫描或上传。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/vista8/status/2125215398098579626" target="_blank"><span class="handle">@vista8</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/joeseesun/qiaomu-mac-software" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://raw.githubusercontent.com/joeseesun/qiaomu-mac-software/main/SKILL.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://software.qiaomu.ai" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HX5H6gdaAAENEpS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX5H6gdaAAENEpS?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HX4UIW9akAASO3_?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX4UIW9akAASO3_?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OCRia-nano-1：日常 PDF 先走 CPU，别把权重当 Apache</div>
+  <div class="section"><div class="section-label event">一句话</div><p>LlamaIndex的810万参数组合模型在本机CPU恢复文字、布局和表格，借LiteParse导出Markdown、JSON或纯文本。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在隔离Python环境按官方路线 pip install liteparse，再 lit models pull ocria-nano，最后 lit parse doc.pdf --format markdown。先挑几张自己有权处理的合同、发票和扫描页，对照原页检查表头、跨栏、数字和缺字；低置信或复杂页转人工/更大模型。适合资料入库前的第一遍解析，不是法务或财务自动验真。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>数字PDF优先读文本层，缺失处才OCR。官方报告单核平均426毫秒/页及ParseBench-2分数，都是其测试条件，不是本站实测。nano没有图表模型，会保留图像；手写、退化扫描、数学符号和复杂图表应考虑OCRia-1，而非只追求小参数。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>用JSON坐标把检索结果回指原页，抽查表格单元格与正文顺序。</li>
+    <li>边界与费用：LiteParse是Apache-2.0，但模型及同仓Licensed Code用修改版Open RAIL-M，不是无条件开源商用。上一年总营收或累计股债融资超过200万美元的实体，除个人/研究例外外需另行授权；任何营收规模的竞争性文档解析服务也受限，研究例外另列。授权金额未公开，不编报价。只读官方模型卡与许可，未下载模型或实测。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2125317908326744410" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.llamaindex.ai/blog/introducing-ocria-nano-1" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/llamaindex/OCRia-nano-1" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/llamaindex/OCRia-nano-1/raw/main/LICENSE" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2125265678185979905/img/Akinau9R_HAONc4U.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2125265678185979905/img/Akinau9R_HAONc4U.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ WePM 1.0：用同一小模型做检索、生成和类型化决策</div>
+  <div class="section"><div class="section-label event">一句话</div><p>微信AI公开2B/4B统一多模态模型，三个任务共用视觉与语言骨干；不是给三种独立模型换一个API名。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读Tencent仓库和examples，用Python 3.10—3.13准备隔离环境；GPU路线安装适配PyTorch与项目推理运行时，CPU可走GGUF但需要Git、CMake 3.20+及C++17编译器。以少量非敏感图片/文字做检索，再让模型从已定义候选动作中选项；低置信输出仍由程序或人检查，不直接连接高权限动作。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>官方11月23日开源、24日补ModelScope入口，这是新实体而非已刊Karpo决策专用模型。约8GB与21—43GB的对比只算BF16权重，明确排除KV cache、激活、框架开销和碎片，不能说8GB内存机器就能完整跑。4B GPU建议16GiB显存，CPU FP32建议24GiB RAM；GGUF约3.19GiB是文件体积，不是运行峰值。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>本地个人资料检索加问答，或游戏画面理解后的候选操作路由，分别测三个任务质量。</li>
+    <li>边界与费用：代码Apache-2.0，权重要逐仓核查。本次2B实际模型卡和LICENSE.txt已明确Apache-2.0、第三方组件另计；一篇外部文章仍称待确认，与当前主源冲突，本文按最新实读许可，不泛化为4B/GGUF每个产物均已核。没有云API免费额度或端侧速度保证，需下载存储与硬件成本。未运行模型。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2125168042548273450" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/tencent/WePocketModel" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/tencent/WePocketModel1.0-2B" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/tencent/WePocketModel1.0-2B/raw/main/LICENSE.txt" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.orcarouter.ai/blog/wepocketmodel1-0-2b-quiet-release" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HX4dD03bkAAKyEu?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX4dD03bkAAKyEu?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HX4DJuNbcAAmvvc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX4DJuNbcAAmvvc?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ n8n 售后 Agent 样例：成功写入申请，不等于已经退款</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Sumanth的MIT示例让模型负责对话和查政策，确定性工作流核订单后只写pending_review申请。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从Hands-On-AI-Engineering的customer_resolution_agent读README，在测试n8n项目导入两份虚构CSV，上传四个知识文件，先建Process Resolution Request工作流，再接只读订单工具与自己的聊天模型。用演示订单CM-1042测试破损换货请求；逐步核返回submitted和表中记录，不连接真实退款或发货接口。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>订单邮箱匹配与可用解决方案由If节点检查，插入状态固定pending_review，拒绝路径返回未提交。官方文档也把Agent与固定工作流分开；代理说status success只是登记成功，不是商品已寄出、钱已退回或完成了人工审核。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>电商售后原型或内部审批前收件，把“请求已记录”与“业务已办成”分开显示。</li>
+    <li>边界与费用：样例仓库MIT，n8n平台和模型服务各有许可/计费，开源样例不代表云端免费。现有条件只比较邮箱与允许类型，文档未展示生产级身份验证、幂等去重及完整人工审批执行；上线前必须补，别把同意聊天当充分身份凭据。只核README、节点表达式和官方Agent说明，未导入运行。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2125198724960067785" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/Sumanth077/Hands-On-AI-Engineering/tree/main/ai_agents/customer_resolution_agent" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://raw.githubusercontent.com/Sumanth077/Hands-On-AI-Engineering/main/ai_agents/customer_resolution_agent/workflows/process_resolution_request.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.n8n.io/build/build-and-manage-agents/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HX448whaYAAsUjK?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX448whaYAAsUjK?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Better Paseo Antigravity 0.3.2：长会话结束更可辨，不静默重发</div>
+  <div class="section"><div class="section-label event">一句话</div><p>第三方Paseo provider包装官方agy acp，处理会话恢复、取消、进程清理与配额显示；新release补工具结束提示和无内容诊断。</p></div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先确认macOS/Linux、Paseo &gt;=0.17.3且&lt;0.18.0，官方agy &gt;=1.5.15并已在宿主登录；1.5.16为作者推荐而非最低要求。确认无任务依赖当前运行时后，在Paseo启用插件并以仓库Git源安装，另建测试Agent选择Better Paseo Antigravity。现有用户可按release用 paseo plugin update better-paseo-antigravity，但不要在生产任务中途热换。</p></div>
+  <div class="section"><div class="section-label analysis">为什么值得关注</div><p>11月20日已刊的是Paseo多Agent入口，本次是另一个provider及11月24日0.3.2具体更新：前台工具做完但没有后续文本时提供信息提示，保留真正空输出警告，并仅记元数据。作者报告169项自动化测试通过，同时明确本版没有新实账号/UI验证；不是本站测试，更不等于所有断线可自动恢复。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>经常遇到agy长会话取消卡住、历史回放或配额不易辨认的开发者，先在隔离项目验证停止后能否继续。</li>
+    <li>边界与费用：不支持Windows、Paseo 0.18及内置provider会话自动迁移；Full access仍需自愿开启，复杂表单未验证。15分钟无进展处理仍保留，前台工具/待审批不单凭安静就杀；不会自动重发提示。Paseo免费Apache-2.0，插件README仅明确派生部分沿用Apache，不扩大为全仓统一授权，模型订阅照常。未安装或重启任何本机服务。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/fankaishuoai/status/2125234996571156954" target="_blank"><span class="handle">@fankaishuoai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/robbin/paseo-antigravity" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/robbin/paseo-antigravity/releases/tag/v0.3.2" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://paseo.sh" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HX3hPLdacAA2SHY?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX3hPLdacAA2SHY?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HX3hPvybUAAbHDg?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX3hPvybUAAbHDg?format=jpg&amp;name=medium" loading="lazy" /></a>
+    <a href="https://pbs.twimg.com/media/HX3hQXibEAA8diE?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX3hQXibEAA8diE?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Shirudo：在线缓解是补丁过渡层，不是服务器免重启万能盾</div>
+  <div class="section"><div class="section-label event">事件</div><p>OpenAI与Cisco于11月23日宣布开源Linux运行时安全平台，用签名BPF upatch限制已知脆弱代码路径，并以TPM记录、核验变更。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>项目目前pre-release，生产目标需带signed-loader ABI和项目补丁的Linux内核及TPM 2.0。部署/启动前置改造并不等于任意现有Linux装个程序就立即“无需重启防住所有漏洞”；上线后可用缓解等待正式修复，仍不能代替内核修补。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>适合安全/平台工程团队先在官方本地测试VM看签名、加载、卸载和TPM核验，再评估分发及密钥管理；不要直接在生产内核试。威胁模型明确：若攻击者已取得内核任意写/执行，内核内检查也可能被绕过。核心BSD-2-Clause，BPF组件双BSD/GPL，第三方另有许可。来源已读，未编译/运行或检验任何漏洞缓解效果。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2125260283799359867" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://openai.com/index/introducing-shirudo" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://isovalent.com/blog/post/cisco-openai-shirudo" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/shirudo-dev/shirudo" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docs.shirudo.dev" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HX1vOUNXwAESQQN?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX1vOUNXwAESQQN?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GEO 大会资料页：现有入口可读，资料公开不等于效果已验证</div>
+  <div class="section"><div class="section-label event">事件</div><p>原帖所指geohui.com/ziyuan已实际可读，页面列出11月21—22日深圳会议的嘉宾材料、在线阅读及下载入口，包括AI原生研发、超级Agent、AI产品海外增长等。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这是资源开放线索，不是新的模型或“AI搜索排名必涨”服务。可先按问题挑一个讲题，再用原始数据验证建议；本文只读合集目录，没有逐一下载全部课件，不对各讲稿结论作背书。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>做AI应用和内容研究的人可用作议题索引，尤其注意页面同时列有伦理、作弊风险与治理主题；公开可访问不等于全部材料可随意再分发或商用，具体课件授权与第三方服务费未统一核明。未登录课程、未实操GEO效果。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/berryxia/status/2125146338929279106" target="_blank"><span class="handle">@berryxia</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://geohui.com/ziyuan" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HX3U7Zra4AAO4RS?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HX3U7Zra4AAO4RS?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>Claude Artifact 的 Install as app 线索：作者称Mac/Windows可把Artifact放到独立窗口，并判断仍需联网与账号。现有双variants末尾截断，补搜没有取得官方新功能说明；不把它写成离线原生程序，也不与已刊Open Artifact或Pake混为同一产品。待核资格、权限及可用范围。 <a href="https://x.com/dotey/status/2125368995746308453" target="_blank">→</a></li>
+    <li>小豆邀请制公测与生态上下文：体验者称可连接抖音、飞书和手机本地能力；同批另帖给出邀请路径和收藏进memory用法，但官方资格、授权范围、保留/撤回规则尚未核实。只报告体验者线索，不保证所有人可用，不买卖邀请码，也不先把真实健康数据和工作文档授权给代理。 <a href="https://x.com/op7418/status/2125163207304139041" target="_blank">→</a></li>
+    <li>grow-me／grow-loop 把需求沟通搬出聊天框：作者介绍两项Skill将追问需求和工作进度移出聊天框；采样在实现处截断。定向搜索返回的是营销增长循环等同名近似项目，不能拿这些仓库补成安装地址；暂不发布安装命令，待核原项目与数据存储。 <a href="https://x.com/lxfater/status/2125133630133404031" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>

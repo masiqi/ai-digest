@@ -5,8 +5,17 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 24 Nov 2026 01:39:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:02:01 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/25 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-25.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-25.html</guid>
+      <description>今天看把工具做成有边界的工作流：播客MCP/CLI、可先本地预览的海报Skill、CPU文档解析、统一小模型和可校验的售后申请；安全缓解与长会话插件都不能靠“自动”二字跳过验收。
+本期从X List页面有界采样：采到128条记录、30位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。覆盖不完整（partial）。
+128份DOM variants对应106个唯一ID，逐条闭合；对照11月18日至24日七份真实已刊正文。50次滚动不是50页API，更不代表全成员。原语义executor的失败收...</description>
+      <pubDate>2026-11-25T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/24 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-24.html</link>
