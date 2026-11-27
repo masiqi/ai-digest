@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-27</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-27</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天的共同线索是：给智能体一层更合适、可检查的操作界面，而不是让它反复猜屏幕和工具。UI SDK 将界面交互拆为行为原语，Antigravity 的 Orchestrator 把计划与执行分给两个模型，研究团队则试着让代理从程序二进制构建自己的 MCP。它们是不同成熟度的方案，均不等于已经在你的项目中实测有效。
+本期从X List页面有界采样：采到118条记录、32位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。本次覆盖不完整。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ UI SDK：把弹窗与焦点交给可组合的行为原语</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Vercel Labs 的 beta TypeScript 库将键盘导航、焦点恢复、选择、弹窗、拖拽与 ARIA 逻辑放在 @ui-sdk/core，上层适配 React、Vue、Svelte、Solid 和 Web Components。
+原文：https://x.com/dotey/status/2126070816534151538</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/vercel-labs/ui" target="_blank">https://github.com/vercel-labs/ui ↗</a></p>
+    <p><a href="https://www.infoq.com/news/2026/11/vercel-ui-sdk" target="_blank">https://www.infoq.com/news/2026/11/vercel-ui-sdk ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>在隔离的前端小项目先用 npm install @ui-sdk/react @ui-sdk/core，做一个弹窗或搜索框，把原先散落在组件里的键盘与焦点逻辑改为 createPopup/createFocusRecovery 后做可访问性回归。为什么：代理组装界面时可复用经过定义的交互规则，而不只是生成可看的样式；适合跨框架设计系统和需要让代理读取组件状态的后台。限制：官方仍标 beta，样式要自行提供；InfoQ 是独立报道而非我们的运行测试，本文未安装。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/dotey/status/2126070816534151538" target="_blank"><span class="handle">@dotey</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/vercel-labs/ui" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.infoq.com/news/2026/11/vercel-ui-sdk" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2126030160692391936/img/pEzXLPmn24EKevBX?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2126030160692391936/img/pEzXLPmn24EKevBX?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ OpenGame：本地代码与游戏模板，不把宣传模板数当现货</div>
+  <div class="section"><div class="section-label event">一句话</div><p>公开仓库当前写明 25 个内置可玩模板、22 种本地代理接入，提供本地 Studio 和 stdio MCP，面向小游戏混搭、测试与导出。
+原文：https://x.com/maybemaisieee/status/2125941507865919516</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/nexu-io/opengame" target="_blank">https://github.com/nexu-io/opengame ↗</a></p>
+    <p><a href="https://github.com/nexu-io/opengame/blob/main/skills/opengame/SKILL.md" target="_blank">https://github.com/nexu-io/opengame/blob/main/skills/opengame/SKILL.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先看仓库 Setup、模板源码和目标平台；准备 Node/Git LFS，按官方指南在独立工作目录建本地 Studio，再用同一数据目录连接代理，先 remix 一个模板并检查实际可玩性和导出。为什么：本地源码与可审查的测试流程比黑箱演示更适合做内部互动原型或微信小游戏预研。限制：安装 Skill 只是说明书，并不完成 Studio/MCP 接线；仓库的 25 个内置模板不能被帖子里的 100+/300+ 说法替代，赚钱能力未证实；本文未安装运行。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/maybemaisieee/status/2125941507865919516" target="_blank"><span class="handle">@maybemaisieee</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/nexu-io/opengame" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/nexu-io/opengame/blob/main/skills/opengame/SKILL.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2125882685008875520/img/q7JE2PjO5RSXWnQZ?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2125882685008875520/img/q7JE2PjO5RSXWnQZ?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Lemo-Opuscar：99 种代码制片风格，商业复用先看许可</div>
+  <div class="section"><div class="section-label event">一句话</div><p>项目 README 列 99 种风格与画廊，可交给编码代理选一种，为品牌故事或产品介绍生成代码渲染的短片。
+原文：https://x.com/lemomo_ai/status/2125907421805609084</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/lemomo-ai/lemo-opuscar/blob/main/README.md" target="_blank">https://github.com/lemomo-ai/lemo-opuscar/blob/main/README.md ↗</a></p>
+    <p><a href="https://github.com/lemomo-ai/lemo-opuscar/blob/main/LICENSE" target="_blank">https://github.com/lemomo-ai/lemo-opuscar/blob/main/LICENSE ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在画廊挑一种风格和示例，看对应 STYLE.md；再在独立目录告诉代理主题、片长、配音与素材授权，先看分镜再做短片。为什么：比从空白提示词起步更容易稳定视觉语言，适合课件动效、产品介绍或自己的栏目片头。限制：README 要求 Node 20+、ffmpeg 7+、Python 3.11+，一次制片约需 30–60 分钟和较多 token；代码 MIT，风格文档 CC BY-NC 附额外自制影片许可，转售风格库等商业复用另需授权，第三方素材/语音各有条款。20K star 是作者当期说法，不代表质量验收；未运行。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lemomo_ai/status/2125907421805609084" target="_blank"><span class="handle">@lemomo_ai</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/lemomo-ai/lemo-opuscar/blob/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/lemomo-ai/lemo-opuscar/blob/main/LICENSE" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2125883457549246464/img/k9eqNfmM-lzU8vWG.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2125883457549246464/img/k9eqNfmM-lzU8vWG.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Mirasim：把多个编码代理与多人协作放进一个空间</div>
+  <div class="section"><div class="section-label event">一句话</div><p>供应商文档给出安装、登录和选择已有 Claude Code/Codex/OpenCode 的流程；其对比页定位为可让多人共同操控同一会话与共享工作空间。
+原文：https://x.com/shao__meng/status/2125779600320217439</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://mirasim.ai/docs" target="_blank">https://mirasim.ai/docs ↗</a></p>
+    <p><a href="https://mirasim.ai/writing/mirasim-vs-t3-code" target="_blank">https://mirasim.ai/writing/mirasim-vs-t3-code ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>独立测试项目先装对应平台客户端、登录，选一名已安装的代理与自己的订阅/API key；在 Sessions 做一个低风险改动，检查文件 diff 和账单，再决定是否用团队空间。为什么：适合开发者从手机跟进并让同事参与代理任务；原 T3 Code 也可继续用于个人工作。限制：登录不可跳过，个人 Claude/ChatGPT 订阅不能给团队共用；迁移完整性、计费和并行表现都未实测，比较页为厂商立场。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2125779600320217439" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://mirasim.ai/docs" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://mirasim.ai/writing/mirasim-vs-t3-code" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HYBJRPUbcAABIEI?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HYBJRPUbcAABIEI?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Antigravity Orchestrator：一个代理两种模型，不等于多代理 Swarm</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Google 文档说明规划模型负责分析和复核、执行模型负责搜索改代码与测试；默认 Neon 规划、Hydrogen 执行，遇问题交回规划模型。
+原文：https://x.com/AxtonLiu/status/2126111272035115455</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://antigravity.google/docs/models" target="_blank">https://antigravity.google/docs/models ↗</a></p>
+    <p><a href="https://discuss.ai.google.dev/t/gemini-4-neon-and-orchestrator-neon-are-now-available-in-google-antigravity/202301" target="_blank">https://discuss.ai.google.dev/t/gemini-4-neon-and-orchestrator-neon-are-now-available-in-google-antigravity/202301 ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>有资格的 Antigravity 用户在模型选择器里选 Orchestrator，对小型多文件修改明确验收标准，保留实际测试结果和额度记录；只有互不依赖的多个子任务才进一步评估 Swarm。为什么：把难题的判断和日常文件操作分层，可能节约对高阶模型的使用。限制：免费与 Plus 方案没有该模式；Pro 的试用资格也取决于设备条件。它仍是单代理会话，不承诺一定节省额度；这是使用区分，不重复报道已刊 Neon 新型号。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/AxtonLiu/status/2126111272035115455" target="_blank"><span class="handle">@AxtonLiu</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://antigravity.google/docs/models" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://discuss.ai.google.dev/t/gemini-4-neon-and-orchestrator-neon-are-now-available-in-google-antigravity/202301" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 拾卡 SubCard：订阅与绑定账号一起记，仍是 iPhone 内测</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开发者的论坛原帖提供 TestFlight 入口，记录会员续费日期和与之关联的邮箱/手机号，另有导入导出备份的介绍。
+原文：https://x.com/appinn/status/2125958522273747219</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://meta.appinn.net/t/topic/96981" target="_blank">https://meta.appinn.net/t/topic/96981 ↗</a></p>
+    <p><a href="https://talk.appinn.net/posts/19081" target="_blank">https://talk.appinn.net/posts/19081 ↗</a></p>
+  </div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2125958522273747219" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://meta.appinn.net/t/topic/96981" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://talk.appinn.net/posts/19081" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GUARD：改智能体框架前先检查旧能力是否被改坏</div>
+  <div class="section"><div class="section-label event">事件</div><p>GUARD 论文研究冻结模型权重、只编辑提示词/技能/工具规则等 harness；执行前自检、方向性 regret 与候选编辑相对比较，最后由 Soft-HURT 门控决定是否提升新版本。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>团队若做长期自改进 Agent，可把“新改动修了什么、弄坏了什么”分开记，并用留存任务门禁，而非只看总评分。论文自述在若干评测改善表现和部署 token 使用；门禁保证的是给定缓冲集上的分数条件，不是所有真实任务零回退。未独立复现。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2125962676786647392" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://arxiv.org/abs/2611.23476" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HYDvv73agAASogs?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HYDvv73agAASogs?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Rat NCAP：虚拟大鼠用脊髓回路先验学出不同步态</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究团队提出 Rat v2 生物力学身体和含细胞类型连接的脊髓控制架构；用速度相关奖励训练，在虚拟环境中形成走、跑等步态，不依赖动作模仿。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>这是用可解释的神经结构先验约束具身控制，而非单纯让通用模型猜动作。项目页介绍细胞类型的虚拟消融与步态变化，适合关注具身智能和神经科学交叉研究；结果属于作者模拟实验，不等于生物实验验证或机器人部署。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/NXBhattasali/status/2125590343848509690" target="_blank"><span class="handle">@NXBhattasali</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://arxiv.org/abs/2611.23364" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://rat-ncap.github.io" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/amplify_video_thumb/2125357742785261568/img/ok6cfsCe8EdkaXX3.jpg" target="_blank"><img src="https://pbs.twimg.com/amplify_video_thumb/2125357742785261568/img/ok6cfsCe8EdkaXX3.jpg" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 Agent-Native Computer Use：让代理从二进制构建自己的 MCP</div>
+  <div class="section"><div class="section-label event">事件</div><p>研究团队提供编译程序和逆向工具，让代理分析运行态并构建 MCP 服务；以 FreeCAD 五项任务与截图鼠标路线比较，另测 Fruit Ninja。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>对于可以安全改造、充分授权的软件，代理可调用更接近业务动作的函数，减少低层鼠标动作；其中 lid-vent 任务报告 55 倍更快、35 倍少 token，但排除了每个程序 37/30/85 分钟的首次构建成本。逆向与进程注入有合规和安全边界，不能把该单项数字泛化所有软件；仅核研究页，未复现。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2125794440963035505" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://mit-mi.github.io/Agent-Native-Computer-Use" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/MIT-MI/Agent-Native-Computer-Use-Code" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HYBWvccbkAAX36M?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HYBWvccbkAAX36M?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="opportunities">
+  <h2>🌱 刚露头/早期信号</h2>
+  <ul class="opp-list">
+    <li>SubCast 安卓首版：作者称已上线、iOS 仍待 TestFlight；已刊桌面端 0.3.x，当前所读仓库与 releases 仍主要列桌面包，安卓安装页未核到，不当作已验收可下载版本 <a href="https://x.com/vista8/status/2125983288254988508" target="_blank">→</a></li>
+    <li>ELY Office × Cindy 插件：作者展示编码代理通过 CLI 在窗口建文档并与人协作，独立插件入口、权限和可运行版本仍待查，不与 OfficeCLI 混同 <a href="https://x.com/ZacharyZhang/status/2125665711720718838" target="_blank">→</a></li>
+    <li>网络安全数据集口径：作者帖称 95GB/507 文件，Hugging Face 卡片同时写 16GB 与约95GB、访问文件需同意条件；未取得文件清单与第三方材料再分发许可，暂不作为可直接用于训练的数据包推荐 <a href="https://x.com/Gorden_Sun/status/2125959027809264121" target="_blank">→</a></li>
+  </ul>
+</div>
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
