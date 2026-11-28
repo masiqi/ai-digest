@@ -5,8 +5,16 @@
     <link>https://masiqi.github.io/ai-digest/</link>
     <description>每日深度解析AI圈动态，从技术本质到商业影响。数据来源 X List，由小赫自动生成。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 27 Nov 2026 00:44:35 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 00:42:41 GMT</lastBuildDate>
     <atom:link href="https://masiqi.github.io/ai-digest/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>📡 2026/11/28 AI 资讯日报</title>
+      <link>https://masiqi.github.io/ai-digest/daily/2026-11-28.html</link>
+      <guid isPermaLink="true">https://masiqi.github.io/ai-digest/daily/2026-11-28.html</guid>
+      <description>今天更值得投入时间的不是“又一项跑分”，而是给 Agent 找到可检验的工作闭环：Hurdle 测它会不会正确使用产品接口，Utopia 给变更中的事实留时间与来源，语音工具把降噪与轮次判定拆成具体模块；设计与创作工具则要看部署成本、许可和人工复核。以下“核实”仅指阅读了项目来源，不代表本报安装、生成或复现性能。
+本期从X List页面有界采样：采到120条记录、29位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。本次覆盖不完整。</description>
+      <pubDate>2026-11-28T08:30:00+08:00</pubDate>
+    </item>
     <item>
       <title>📡 2026/11/27 AI 资讯日报</title>
       <link>https://masiqi.github.io/ai-digest/daily/2026-11-27.html</link>

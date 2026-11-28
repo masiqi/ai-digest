@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="AI 资讯日报 RSS" href="../feed.xml">
+<title>📡 AI 资讯日报 | 2026-11-28</title>
+<style>
+  :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3; --text2: #8b949e; --accent: #58a6ff; --accent2: #f78166; --green: #3fb950; --purple: #bc8cff; --yellow: #d29922; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f6f8fa; --card: #ffffff; --border: #d0d7de; --text: #1f2328; --text2: #656d76; --accent: #0969da; --accent2: #cf222e; --green: #1a7f37; --purple: #8250df; --yellow: #9a6700; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+  .header h1 { font-size: 34px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; color: var(--text2); }
+  .header .main-thesis { margin-top: 20px; padding: 16px 20px; background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(188,140,255,0.1)); border: 1px solid rgba(88,166,255,0.2); border-radius: 10px; font-size: 17px; text-align: left; line-height: 1.8; }
+  .header .main-thesis .label { font-size: 14px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+  .topic { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .topic-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .section { margin-bottom: 14px; }
+  .section-label { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: inline-block; }
+  .section-label.event { color: var(--accent); }
+  .section-label.analysis { color: var(--purple); }
+  .section-label.usecase { color: var(--green); }
+  .section-label.impact { color: var(--yellow); }
+  .section p { font-size: 17px; color: var(--text); line-height: 1.8; }
+  .usecase-list { list-style: none; padding: 0; }
+  .usecase-list li { font-size: 16px; padding: 6px 0 6px 20px; position: relative; line-height: 1.7; }
+  .usecase-list li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+  .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .sources .label { font-size: 14px; color: var(--text2); margin-bottom: 4px; }
+  .source-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .source-link { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); border-radius: 20px; font-size: 14px; color: var(--accent); transition: background 0.2s; }
+  .source-link:hover { background: rgba(88,166,255,0.18); text-decoration: none; }
+  .source-link .handle { font-weight: 600; }
+  .topic-link { display: block; padding: 4px 0; word-break: break-all; }
+  .tweet-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .tweet-images img { max-width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid var(--border); }
+  @media (prefers-color-scheme: light) {
+    .header .main-thesis { background: linear-gradient(135deg, rgba(9,105,218,0.06), rgba(130,80,223,0.06)); border-color: rgba(9,105,218,0.2); }
+    .source-link { background: rgba(9,105,218,0.06); border-color: rgba(9,105,218,0.2); }
+    .source-link:hover { background: rgba(9,105,218,0.12); }
+    .opp-list li, .watch-list li { border-bottom-color: rgba(208,215,222,0.5); }
+    .tweet-images img { border-color: var(--border); }
+  }
+  @media (prefers-color-scheme: dark) {
+    .tweet-images img { border: 1px solid rgba(139,148,158,0.4); }
+  }
+  .opportunities, .watchlist { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .opportunities h2, .watchlist h2 { font-size: 18px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .opp-list, .watch-list { list-style: none; padding: 0; }
+  .opp-list li, .watch-list li { font-size: 16px; padding: 8px 0 8px 20px; position: relative; line-height: 1.7; border-bottom: 1px solid rgba(48,54,61,0.5); }
+  .opp-list li:last-child, .watch-list li:last-child { border-bottom: none; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .nav .brand { font-size: 16px; font-weight: 700; }
+  .nav .brand a { color: var(--text); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 12px; color: var(--text2); }
+</style>
+</head>
+<body>
+<div class="nav">
+  <div class="brand"><a href="../index.html">📡 AI 资讯日报</a></div>
+</div>
+<div class="header">
+  <h1>📡 AI 资讯日报</h1>
+  <div class="date">2026-11-28</div>
+  <div class="main-thesis">
+    <div class="label">🔥 今日主线</div>
+    <p>今天更值得投入时间的不是“又一项跑分”，而是给 Agent 找到可检验的工作闭环：Hurdle 测它会不会正确使用产品接口，Utopia 给变更中的事实留时间与来源，语音工具把降噪与轮次判定拆成具体模块；设计与创作工具则要看部署成本、许可和人工复核。以下“核实”仅指阅读了项目来源，不代表本报安装、生成或复现性能。
+本期从X List页面有界采样：采到120条记录、29位可识别作者、58次DOM观察、50次滚动；成员总数与逐成员覆盖未核验，未读到不代表没有发帖。停止原因：bounded_list_observation。本次覆盖不完整。</p>
+  </div>
+</div>
+<div class="topic">
+  <div class="topic-title">🛠️ Hurdle：测编码 Agent 是否真能用好你的 API、文档与 Skills</div>
+  <div class="section"><div class="section-label event">一句话</div><p>把真实开发请求写成任务，以代码检查、禁止动作守卫和模型评判评分，比较 Claude Code/Codex 在不同模型或技能配置下的表现。
+原文：https://x.com/shao__meng/status/2126257135197778248</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs" target="_blank">https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs ↗</a></p>
+    <p><a href="https://github.com/togethercomputer/hurdle/blob/main/README.md" target="_blank">https://github.com/togethercomputer/hurdle/blob/main/README.md ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>参照官方 README 在隔离项目中配置一个只读/低额度的测试 API，先写“找出最便宜实例但不能购买”这样的任务与自动检查，再重复运行比较通过率和失败轨迹。为什么：把“Agent 好不好用”落到可重放的请求和产物，而非一次演示。应用场景：开发者平台上线 SDK、MCP 或 Skills 前做回归。限制：本地运行没有 API 拦截能力且会接触本机凭据；危险用例需沙箱及专用密钥，沙箱使用可能计费；未运行评测。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/shao__meng/status/2126257135197778248" target="_blank"><span class="handle">@shao__meng</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://www.together.ai/blog/introducing-hurdle-run-agent-evals-on-your-api-skills-and-docs" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/togethercomputer/hurdle/blob/main/README.md" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HYH7lp9aQAAvI4c?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HYH7lp9aQAAvI4c?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Blob0：在 Mac 上管理 R2/S3，并让 Agent 先预演再改对象</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Mac 桌面客户端提供对象浏览、上传、预览、预签名链接和配套 JSON CLI，支持 Cloudflare R2、S3 与兼容存储。
+原文：https://x.com/appinn/status/2126332312853905539</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://blob0.com/zh/" target="_blank">https://blob0.com/zh/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网确认系统和许可，用非生产桶配置一个连接；先在 CLI 用 find 查看目标文件，再以 --dry-run 检查移动计划，审阅后才执行。为什么：把对象存储常用工作流放进桌面和可审阅的 Agent 操作。应用场景：清理旧备份、交付限时下载链接。限制：官网称免费版永久一连接，更多连接需付费；访问密钥保存在 macOS 钥匙串，删除无法撤回；本报未安装，也未验证实际兼容性。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2126332312853905539" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://blob0.com/zh/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ 歸藏 Game Skill：让编程 Agent 按阶段做浏览器 3D 动作游戏</div>
+  <div class="section"><div class="section-label event">一句话</div><p>仓库提供需求澄清、素材、角色动作、战斗手感、自测与打包的 Skill，并附《雾锁山门》网页演示。
+原文：https://x.com/op7418/status/2126315318293430730</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/op7418/guizang-game-skill" target="_blank">https://github.com/op7418/guizang-game-skill ↗</a></p>
+    <p><a href="https://op7418.github.io/guizang-game-skill/" target="_blank">https://op7418.github.io/guizang-game-skill/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先读 SKILL.md 并审阅脚本，再让 Claude Code/Codex 制作“一场景、一波小怪、一场 Boss”的小原型；有 Tripo/出图工具可交给它制作素材，逐轮试玩纠正手感。为什么：把容易遗漏的验证、打击反馈及打包列成工作检查点。应用场景：游戏原型和 Agent 创作流程研究。限制：作者明确仅一个项目完整走通，效果依赖外部素材与人工多轮反馈；Skill 是 AGPL-3.0，演示游戏内容另有保留权利；网页存在不等于本报已玩通。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>0，演示游戏内容另有保留权利；网页存在不等于本报已玩通。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/op7418/status/2126315318293430730" target="_blank"><span class="handle">@op7418</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/op7418/guizang-game-skill" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://op7418.github.io/guizang-game-skill/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ animation-principles：为网页微交互挑一套动效 Skill</div>
+  <div class="section"><div class="section-label event">一句话</div><p>项目 README 将经典 12 条动画原则组织成 12 组、共 144 个 Claude Code 技能，按场景、框架、角色等角度选用。
+原文：https://x.com/lxfater/status/2126311051536867595</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/dylantarre/animation-principles" target="_blank">https://github.com/dylantarre/animation-principles ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在仓库挑选 web-motion-design 或 micro-interactions 相关技能，要求 Agent 为一个按钮写出过渡与减速方案，再自己检查键盘操作和减少动态效果设置。为什么：设计原则可以变成具体 UI 反馈，而非随手加弹跳。应用场景：仪表盘交互、加载状态、游戏 UI。限制：数量为项目 README 自述；技能引导不保证符合无障碍或品牌规范，本报未生成示例。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/lxfater/status/2126311051536867595" target="_blank"><span class="handle">@lxfater</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/dylantarre/animation-principles" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Utopia：让企业知识库保存“事实何时成立、我们何时知道”</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开源项目把文档与数据源转为双时态知识图谱，保存事实来源和更正历史，并给 Agent 提供只读 MCP 接口。
+原文：https://x.com/Sumanth_077/status/2126269287811940610</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/deeplethe/utopia" target="_blank">https://github.com/deeplethe/utopia ↗</a></p>
+    <p><a href="https://github.com/deeplethe/utopia/blob/main/LICENSE" target="_blank">https://github.com/deeplethe/utopia/blob/main/LICENSE ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>按仓库说明在隔离环境部署 Docker/Postgres，先用几份带日期的合同及补充协议测试“某日适用哪条款”；核对引用和更正路径后再考虑业务资料。为什么：普通向量检索容易把新旧规定混成一条，双时间线有助于审计。应用场景：合同变更、项目责任人更替、历史政策问答。限制：仓库标为 v0.1，数据库迁移只向前、无回滚；仍须配置聊天/嵌入模型和人工复核，不声称已在生产验证准确率。许可页为 Apache-2.0。</p></div>
+  <div class="section"><div class="section-label usecase">应用场景</div><ul class="usecase-list">
+    <li>1，数据库迁移只向前、无回滚；仍须配置聊天/嵌入模型和人工复核，不声称已在生产验证准确率。许可页为 Apache-2.0。</li>
+  </ul></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Sumanth_077/status/2126269287811940610" target="_blank"><span class="handle">@Sumanth_077</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/deeplethe/utopia" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/deeplethe/utopia/blob/main/LICENSE" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HYIGnJmasAA-Qd7?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HYIGnJmasAA-Qd7?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Inworld 语音组件：降噪与说话结束判断分开选</div>
+  <div class="section"><div class="section-label event">一句话</div><p>Voice Isolator 有录音离线与实时两种语音隔离模型；SAVA 同时输出语音活动和轮次结束概率；TTS 仓库提供训练代码。
+原文：https://x.com/Gorden_Sun/status/2126265050881257784</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://github.com/inworld-ai/voice-isolator" target="_blank">https://github.com/inworld-ai/voice-isolator ↗</a></p>
+    <p><a href="https://github.com/inworld-ai/sava" target="_blank">https://github.com/inworld-ai/sava ↗</a></p>
+    <p><a href="https://github.com/inworld-ai/tts" target="_blank">https://github.com/inworld-ai/tts ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>先在非敏感样本上按官方 README 试 voice-isolate 清理噪音录音；做语音助手时另用 SAVA 的 16 kHz 流式输入判断发言结束，再人工对照误切轮次。为什么：语音流水线的两个问题可以分开定位。应用场景：会议录音预处理、实时语音客服的轮次控制。限制：Voice Isolator 不负责指定说话人或修复已丢失语音；SAVA 会把部分噪声误判为发言；TTS 仓库是训练/建模代码，不等于附带一键可用 TTS 权重；本报未实测性能。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2126265050881257784" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/inworld-ai/voice-isolator" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/inworld-ai/sava" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/inworld-ai/tts" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ DoCube：跨三端统一整理 PDF、网页和视频字幕</div>
+  <div class="section"><div class="section-label event">一句话</div><p>开发者网站介绍 Mac/iPhone/iPad 本地优先资料库，结合标注、搜索、位置链接和间隔复习。
+原文：https://x.com/appinn/status/2126240496469131688</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://docube.venglyph.com/" target="_blank">https://docube.venglyph.com/ ↗</a></p>
+  </div>
+  <div class="section"><div class="section-label analysis">怎么玩</div><p>从官网 App Store 入口安装，以不敏感的 PDF/EPUB 建立资料库，标记段落并测试从笔记跳回原文；需要字幕时评估本地 Whisper 转录。为什么：把文档位置、视频时间点和个人阅读痕迹放在同一回查链。应用场景：课程精读、项目资料积累。限制：免费体验最多建立 5 个文档，之后需一次购买；通过用户 iCloud 同步，使用自行配置的在线 AI 服务时部分文档文本会发送给服务商，不能笼统宣称零外传；未安装实测。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/appinn/status/2126240496469131688" target="_blank"><span class="handle">@appinn</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://docube.venglyph.com/" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">🛠️ Ming-Image-0.2-Design：开权重设计出图，先看显存与文字效果</div>
+  <div class="section"><div class="section-label event">一句话</div><p>inclusionAI 模型卡介绍设计图、网页布局及电商主图生成，给出权重、示例提示和公开 Space 入口。
+原文：https://x.com/Gorden_Sun/status/2126347428031045979</p></div>
+  <div class="section"><div class="section-label event">链接</div>
+    <p><a href="https://huggingface.co/inclusionAI/Ming-Image-0.2-Design" target="_blank">https://huggingface.co/inclusionAI/Ming-Image-0.2-Design ↗</a></p>
+    <p><a href="https://huggingface.co/spaces/inclusionAI/ming-image-0-2-design" target="_blank">https://huggingface.co/spaces/inclusionAI/ming-image-0-2-design ↗</a></p>
+  </div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2126347428031045979" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/inclusionAI/Ming-Image-0.2-Design" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/spaces/inclusionAI/ming-image-0-2-design" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HYJNtWnaMAA_Txc?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HYJNtWnaMAA_Txc?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+<div class="topic">
+  <div class="topic-title">📡 GigaChat 4 发布权重：708B 总参数、41B 激活，但不等于轻量本地模型</div>
+  <div class="section"><div class="section-label event">事件</div><p>ai-sage 的 708B FP8 模型卡及官方仓库列出 41B/token 激活、最终模型约百万 token 上下文，并在同一指令模型内支持即时/推理模式；另有 37B 变体。</p></div>
+  <div class="section"><div class="section-label analysis">解读</div><p>这给长文档与工具调用场景带来可研究的开权重路线，不等于只需 41B 权重就能部署 708B 模型。影响：评估服务成本时分清总权重与激活参数、模型卡自报成绩与独立基准；仓库注明 708B 为 MIT、37B 为个人非商用许可，本报未下载或测榜。</p></div>
+  <div class="section"><div class="section-label impact">影响评估</div><p>评估服务成本时分清总权重与激活参数、模型卡自报成绩与独立基准；仓库注明 708B 为 MIT、37B 为个人非商用许可，本报未下载或测榜。</p></div>
+  <div class="sources">
+    <div class="label">原文链接</div>
+    <div class="source-links">
+      <a class="source-link" href="https://x.com/Gorden_Sun/status/2126273697946484867" target="_blank"><span class="handle">@Gorden_Sun</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://huggingface.co/ai-sage/GigaChat4-708B-A41B" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+      <a class="source-link" href="https://github.com/salute-developers/gigachat4" target="_blank"><span class="handle">@</span> 查看原文 ↗</a>
+    </div>
+  </div>
+  <div class="tweet-images">
+    <a href="https://pbs.twimg.com/media/HYIKpq7aIAAZYXl?format=jpg&amp;name=medium" target="_blank"><img src="https://pbs.twimg.com/media/HYIKpq7aIAAZYXl?format=jpg&amp;name=medium" loading="lazy" /></a>
+  </div>
+</div>
+
+
+
+<div class="footer">
+  由小赫自动生成 · 数据来源 <a href="https://x.com/i/lists/2029123995598258668">X List</a> · <a href="https://github.com/masiqi/ai-digest">GitHub</a>
+</div>
+</body>
+</html>
